@@ -1,0 +1,1928 @@
+{
+  "asrc_cadmag_spline_40env": {
+    "aggregate": 0.13968253968253969,
+    "by_category": {
+      "Background Textures": 0.2,
+      "Camera Viewpoints": 0.022222222222222223,
+      "Language Instructions": 0.1111111111111111,
+      "Light Conditions": 0.4,
+      "Objects Layout": 0.2222222222222222,
+      "Robot Initial States": 0.0,
+      "Sensor Noise": 0.022222222222222223
+    },
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_s0/checkpoints/8300",
+      "env_freq": 40,
+      "head_rate": 20,
+      "model": "asrc",
+      "n_tasks_verified": 2402,
+      "per_category": 45,
+      "replan": 20,
+      "steps": 440,
+      "transform": "spline+magscale+cadence",
+      "wallclock_s": 11.0
+    },
+    "counters": {
+      "last": null,
+      "mag": 0,
+      "n": 0,
+      "phase": -1,
+      "queries": 0,
+      "resolved": 0,
+      "spline": 0,
+      "starved": 0
+    },
+    "per_task": {
+      "0": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_1",
+        "steps": 440,
+        "success": false
+      },
+      "1001": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_language_20_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1010": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_language_30_view_0_0_100_0_0_initstate_0",
+        "steps": 343,
+        "success": true
+      },
+      "1018": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_language_39_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1027": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_language_48_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "103": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_12",
+        "steps": 197,
+        "success": true
+      },
+      "1036": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_language_8_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1044": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_language_24_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1053": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_language_36_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1062": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_language_1_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1070": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_language_16_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1079": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_language_32_view_0_0_100_0_0_initstate_0",
+        "steps": 184,
+        "success": true
+      },
+      "108": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_9",
+        "steps": 213,
+        "success": true
+      },
+      "1088": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_language_48_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1096": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_language_7_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "11": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_21",
+        "steps": 440,
+        "success": false
+      },
+      "1105": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_language_20_view_0_0_100_0_0_initstate_0",
+        "steps": 190,
+        "success": true
+      },
+      "1114": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_language_31_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1122": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_language_40_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1131": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_language_49_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "114": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_18",
+        "steps": 440,
+        "success": false
+      },
+      "1140": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_language_12_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1148": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_language_24_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1157": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_language_36_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1166": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_language_46_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1174": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_language_13_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1183": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_language_25_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1192": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_language_35_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "120": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_9",
+        "steps": 440,
+        "success": false
+      },
+      "1200": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_language_50_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1209": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_language_11_view_0_0_100_0_0_initstate_0",
+        "steps": 211,
+        "success": true
+      },
+      "1217": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_language_19_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1226": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_language_28_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1235": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_language_37_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1244": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_language_46_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1252": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_language_7_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "126": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_7",
+        "steps": 440,
+        "success": false
+      },
+      "1261": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_language_18_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1270": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_language_33_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1278": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_language_47_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1287": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_language_6_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1296": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_language_16_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1304": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_language_24_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "131": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_3",
+        "steps": 440,
+        "success": false
+      },
+      "1313": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_language_34_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1322": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_language_46_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1330": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_language_4_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1339": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_language_14_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1348": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_language_24_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1356": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_language_32_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "1365": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_language_42_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "137": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_11",
+        "steps": 440,
+        "success": false
+      },
+      "1374": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_3",
+        "steps": 440,
+        "success": false
+      },
+      "1381": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_10",
+        "steps": 440,
+        "success": false
+      },
+      "1389": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_20",
+        "steps": 440,
+        "success": false
+      },
+      "1397": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_40",
+        "steps": 440,
+        "success": false
+      },
+      "1405": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_50",
+        "steps": 440,
+        "success": false
+      },
+      "1413": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_10",
+        "steps": 440,
+        "success": false
+      },
+      "1420": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_19",
+        "steps": 440,
+        "success": false
+      },
+      "1428": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_36",
+        "steps": 440,
+        "success": false
+      },
+      "143": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_25",
+        "steps": 440,
+        "success": false
+      },
+      "1436": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_47",
+        "steps": 440,
+        "success": false
+      },
+      "1444": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_7",
+        "steps": 440,
+        "success": false
+      },
+      "1452": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_16",
+        "steps": 440,
+        "success": false
+      },
+      "1459": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_28",
+        "steps": 440,
+        "success": false
+      },
+      "1467": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_43",
+        "steps": 440,
+        "success": false
+      },
+      "1475": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_5",
+        "steps": 440,
+        "success": false
+      },
+      "1483": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_15",
+        "steps": 440,
+        "success": false
+      },
+      "149": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_10",
+        "steps": 440,
+        "success": false
+      },
+      "1491": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_29",
+        "steps": 440,
+        "success": false
+      },
+      "1498": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_43",
+        "steps": 440,
+        "success": false
+      },
+      "1506": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_4",
+        "steps": 440,
+        "success": false
+      },
+      "1514": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_12",
+        "steps": 440,
+        "success": false
+      },
+      "1522": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_20",
+        "steps": 440,
+        "success": false
+      },
+      "1530": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_29",
+        "steps": 440,
+        "success": false
+      },
+      "1537": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_41",
+        "steps": 440,
+        "success": false
+      },
+      "154": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_15",
+        "steps": 172,
+        "success": true
+      },
+      "1545": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_50",
+        "steps": 440,
+        "success": false
+      },
+      "1553": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_10",
+        "steps": 440,
+        "success": false
+      },
+      "1561": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_19",
+        "steps": 440,
+        "success": false
+      },
+      "1569": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_37",
+        "steps": 440,
+        "success": false
+      },
+      "1576": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_44",
+        "steps": 440,
+        "success": false
+      },
+      "1584": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_3",
+        "steps": 440,
+        "success": false
+      },
+      "1592": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_14",
+        "steps": 440,
+        "success": false
+      },
+      "160": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_21",
+        "steps": 440,
+        "success": false
+      },
+      "1600": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_29",
+        "steps": 440,
+        "success": false
+      },
+      "1608": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_41",
+        "steps": 289,
+        "success": true
+      },
+      "1615": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_49",
+        "steps": 440,
+        "success": false
+      },
+      "1623": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_8",
+        "steps": 440,
+        "success": false
+      },
+      "1631": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_17",
+        "steps": 440,
+        "success": false
+      },
+      "1639": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_26",
+        "steps": 440,
+        "success": false
+      },
+      "1647": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_39",
+        "steps": 440,
+        "success": false
+      },
+      "1654": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_47",
+        "steps": 440,
+        "success": false
+      },
+      "166": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_8",
+        "steps": 440,
+        "success": false
+      },
+      "1662": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_9",
+        "steps": 440,
+        "success": false
+      },
+      "1670": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_20",
+        "steps": 440,
+        "success": false
+      },
+      "1678": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_40",
+        "steps": 440,
+        "success": false
+      },
+      "1686": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_4",
+        "steps": 440,
+        "success": false
+      },
+      "1693": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_12",
+        "steps": 440,
+        "success": false
+      },
+      "17": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_8",
+        "steps": 440,
+        "success": false
+      },
+      "1701": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_20",
+        "steps": 440,
+        "success": false
+      },
+      "1709": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_32",
+        "steps": 440,
+        "success": false
+      },
+      "1717": {
+        "category": "Sensor Noise",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_0_noise_43",
+        "steps": 440,
+        "success": false
+      },
+      "172": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_15",
+        "steps": 440,
+        "success": false
+      },
+      "1725": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_add_10",
+        "steps": 162,
+        "success": true
+      },
+      "1733": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_add_19",
+        "steps": 176,
+        "success": true
+      },
+      "1742": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_add_28",
+        "steps": 440,
+        "success": false
+      },
+      "1750": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_level1_sample2",
+        "steps": 440,
+        "success": false
+      },
+      "1759": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_level3_sample3",
+        "steps": 440,
+        "success": false
+      },
+      "1767": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_level5_sample3",
+        "steps": 440,
+        "success": false
+      },
+      "177": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_2",
+        "steps": 440,
+        "success": false
+      },
+      "1776": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_add_21",
+        "steps": 307,
+        "success": true
+      },
+      "1784": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_add_3",
+        "steps": 440,
+        "success": false
+      },
+      "1793": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_level1_sample4",
+        "steps": 179,
+        "success": true
+      },
+      "1802": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_level4_sample2",
+        "steps": 440,
+        "success": false
+      },
+      "1810": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_add_12",
+        "steps": 440,
+        "success": false
+      },
+      "1819": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_add_22",
+        "steps": 440,
+        "success": false
+      },
+      "1827": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_add_3",
+        "steps": 243,
+        "success": true
+      },
+      "183": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_3",
+        "steps": 440,
+        "success": false
+      },
+      "1836": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_level1_sample4",
+        "steps": 440,
+        "success": false
+      },
+      "1844": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_level3_sample4",
+        "steps": 440,
+        "success": false
+      },
+      "1853": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_add_13",
+        "steps": 213,
+        "success": true
+      },
+      "1861": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_add_23",
+        "steps": 219,
+        "success": true
+      },
+      "1870": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_add_9",
+        "steps": 233,
+        "success": true
+      },
+      "1879": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_level4_sample3",
+        "steps": 215,
+        "success": true
+      },
+      "1887": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_add_24",
+        "steps": 440,
+        "success": false
+      },
+      "189": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_11",
+        "steps": 440,
+        "success": false
+      },
+      "1896": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_level1_sample4",
+        "steps": 440,
+        "success": false
+      },
+      "1904": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_level4_sample1",
+        "steps": 440,
+        "success": false
+      },
+      "1913": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_add_11",
+        "steps": 440,
+        "success": false
+      },
+      "1921": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_add_22",
+        "steps": 440,
+        "success": false
+      },
+      "1930": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_level1_sample3",
+        "steps": 440,
+        "success": false
+      },
+      "1938": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_level3_sample3",
+        "steps": 440,
+        "success": false
+      },
+      "194": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_18",
+        "steps": 440,
+        "success": false
+      },
+      "1947": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_level5_sample4",
+        "steps": 440,
+        "success": false
+      },
+      "1956": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_add_19",
+        "steps": 440,
+        "success": false
+      },
+      "1964": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_add_27",
+        "steps": 440,
+        "success": false
+      },
+      "1973": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_level1_sample1",
+        "steps": 440,
+        "success": false
+      },
+      "1981": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_level3_sample1",
+        "steps": 440,
+        "success": false
+      },
+      "1990": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_level5_sample2",
+        "steps": 440,
+        "success": false
+      },
+      "1998": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_add_14",
+        "steps": 440,
+        "success": false
+      },
+      "200": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_6",
+        "steps": 440,
+        "success": false
+      },
+      "2007": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_add_25",
+        "steps": 440,
+        "success": false
+      },
+      "2015": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_add_8",
+        "steps": 440,
+        "success": false
+      },
+      "2024": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_level3_sample3",
+        "steps": 440,
+        "success": false
+      },
+      "2033": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_add_12",
+        "steps": 440,
+        "success": false
+      },
+      "2041": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_add_21",
+        "steps": 440,
+        "success": false
+      },
+      "2050": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_add_8",
+        "steps": 440,
+        "success": false
+      },
+      "2058": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_level2_sample4",
+        "steps": 440,
+        "success": false
+      },
+      "206": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_12",
+        "steps": 440,
+        "success": false
+      },
+      "2067": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_add_1",
+        "steps": 440,
+        "success": false
+      },
+      "2075": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_add_2",
+        "steps": 440,
+        "success": false
+      },
+      "2084": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_add_30",
+        "steps": 440,
+        "success": false
+      },
+      "2092": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_level1_sample2",
+        "steps": 339,
+        "success": true
+      },
+      "2101": {
+        "category": "Objects Layout",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_level3_sample4",
+        "steps": 440,
+        "success": false
+      },
+      "2110": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_light_1",
+        "steps": 169,
+        "success": true
+      },
+      "2116": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_light_15",
+        "steps": 440,
+        "success": false
+      },
+      "212": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_20",
+        "steps": 440,
+        "success": false
+      },
+      "2122": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_light_20",
+        "steps": 164,
+        "success": true
+      },
+      "2129": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_light_29",
+        "steps": 440,
+        "success": false
+      },
+      "2135": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_light_35",
+        "steps": 440,
+        "success": false
+      },
+      "2142": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_light_45",
+        "steps": 166,
+        "success": true
+      },
+      "2148": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_light_50",
+        "steps": 169,
+        "success": true
+      },
+      "2155": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_light_12",
+        "steps": 440,
+        "success": false
+      },
+      "2161": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_light_18",
+        "steps": 190,
+        "success": true
+      },
+      "2168": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_light_24",
+        "steps": 192,
+        "success": true
+      },
+      "217": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_25",
+        "steps": 440,
+        "success": false
+      },
+      "2174": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_light_3",
+        "steps": 186,
+        "success": true
+      },
+      "2181": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_light_36",
+        "steps": 440,
+        "success": false
+      },
+      "2187": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_light_41",
+        "steps": 201,
+        "success": true
+      },
+      "2194": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_light_48",
+        "steps": 194,
+        "success": true
+      },
+      "22": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_20",
+        "steps": 152,
+        "success": true
+      },
+      "2200": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_light_8",
+        "steps": 182,
+        "success": true
+      },
+      "2207": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_light_14",
+        "steps": 267,
+        "success": true
+      },
+      "2213": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_light_2",
+        "steps": 440,
+        "success": false
+      },
+      "2220": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_light_26",
+        "steps": 252,
+        "success": true
+      },
+      "2226": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_light_32",
+        "steps": 440,
+        "success": false
+      },
+      "223": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_9",
+        "steps": 440,
+        "success": false
+      },
+      "2233": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_light_39",
+        "steps": 263,
+        "success": true
+      },
+      "2239": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_light_46",
+        "steps": 440,
+        "success": false
+      },
+      "2246": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_light_1",
+        "steps": 440,
+        "success": false
+      },
+      "2252": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_light_2",
+        "steps": 215,
+        "success": true
+      },
+      "2259": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_light_31",
+        "steps": 214,
+        "success": true
+      },
+      "2265": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_light_38",
+        "steps": 440,
+        "success": false
+      },
+      "2272": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_light_46",
+        "steps": 440,
+        "success": false
+      },
+      "2278": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_light_15",
+        "steps": 179,
+        "success": true
+      },
+      "2285": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_light_39",
+        "steps": 440,
+        "success": false
+      },
+      "229": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_15",
+        "steps": 440,
+        "success": false
+      },
+      "2291": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_light_1",
+        "steps": 440,
+        "success": false
+      },
+      "2298": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_light_25",
+        "steps": 440,
+        "success": false
+      },
+      "2304": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_light_39",
+        "steps": 440,
+        "success": false
+      },
+      "2311": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_light_50",
+        "steps": 440,
+        "success": false
+      },
+      "2317": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_light_12",
+        "steps": 440,
+        "success": false
+      },
+      "2324": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_light_2",
+        "steps": 440,
+        "success": false
+      },
+      "2330": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_light_26",
+        "steps": 440,
+        "success": false
+      },
+      "2337": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_light_36",
+        "steps": 440,
+        "success": false
+      },
+      "2343": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_light_49",
+        "steps": 440,
+        "success": false
+      },
+      "235": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_21",
+        "steps": 440,
+        "success": false
+      },
+      "2350": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_light_11",
+        "steps": 440,
+        "success": false
+      },
+      "2356": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_light_19",
+        "steps": 440,
+        "success": false
+      },
+      "2363": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_light_32",
+        "steps": 440,
+        "success": false
+      },
+      "2369": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_light_38",
+        "steps": 440,
+        "success": false
+      },
+      "2376": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_light_48",
+        "steps": 440,
+        "success": false
+      },
+      "2382": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_light_11",
+        "steps": 273,
+        "success": true
+      },
+      "2389": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_light_22",
+        "steps": 440,
+        "success": false
+      },
+      "2395": {
+        "category": "Light Conditions",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_light_30",
+        "steps": 272,
+        "success": true
+      },
+      "240": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_6",
+        "steps": 440,
+        "success": false
+      },
+      "246": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_17",
+        "steps": 440,
+        "success": false
+      },
+      "252": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_4",
+        "steps": 440,
+        "success": false
+      },
+      "258": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_1",
+        "steps": 440,
+        "success": false
+      },
+      "265": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_161",
+        "steps": 440,
+        "success": false
+      },
+      "273": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_291",
+        "steps": 440,
+        "success": false
+      },
+      "28": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_9",
+        "steps": 440,
+        "success": false
+      },
+      "281": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_401",
+        "steps": 440,
+        "success": false
+      },
+      "289": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_491",
+        "steps": 440,
+        "success": false
+      },
+      "296": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_152",
+        "steps": 440,
+        "success": false
+      },
+      "304": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_252",
+        "steps": 440,
+        "success": false
+      },
+      "312": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_332",
+        "steps": 440,
+        "success": false
+      },
+      "320": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_412",
+        "steps": 440,
+        "success": false
+      },
+      "328": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_13",
+        "steps": 440,
+        "success": false
+      },
+      "335": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_153",
+        "steps": 440,
+        "success": false
+      },
+      "34": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_16",
+        "steps": 183,
+        "success": true
+      },
+      "343": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_273",
+        "steps": 440,
+        "success": false
+      },
+      "351": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_353",
+        "steps": 440,
+        "success": false
+      },
+      "359": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_453",
+        "steps": 440,
+        "success": false
+      },
+      "366": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_194",
+        "steps": 440,
+        "success": false
+      },
+      "374": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_344",
+        "steps": 440,
+        "success": false
+      },
+      "382": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_454",
+        "steps": 440,
+        "success": false
+      },
+      "390": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_105",
+        "steps": 440,
+        "success": false
+      },
+      "398": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_195",
+        "steps": 440,
+        "success": false
+      },
+      "40": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_22",
+        "steps": 440,
+        "success": false
+      },
+      "405": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_265",
+        "steps": 440,
+        "success": false
+      },
+      "413": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_355",
+        "steps": 440,
+        "success": false
+      },
+      "421": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_445",
+        "steps": 440,
+        "success": false
+      },
+      "429": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_116",
+        "steps": 440,
+        "success": false
+      },
+      "436": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_236",
+        "steps": 440,
+        "success": false
+      },
+      "444": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_336",
+        "steps": 440,
+        "success": false
+      },
+      "45": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_27",
+        "steps": 440,
+        "success": false
+      },
+      "452": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_426",
+        "steps": 440,
+        "success": false
+      },
+      "460": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_47",
+        "steps": 440,
+        "success": false
+      },
+      "468": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_257",
+        "steps": 440,
+        "success": false
+      },
+      "475": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_367",
+        "steps": 440,
+        "success": false
+      },
+      "483": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_477",
+        "steps": 440,
+        "success": false
+      },
+      "491": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_118",
+        "steps": 440,
+        "success": false
+      },
+      "499": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_208",
+        "steps": 440,
+        "success": false
+      },
+      "5": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_15",
+        "steps": 440,
+        "success": false
+      },
+      "506": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_278",
+        "steps": 440,
+        "success": false
+      },
+      "51": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_8",
+        "steps": 196,
+        "success": true
+      },
+      "514": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_358",
+        "steps": 440,
+        "success": false
+      },
+      "522": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_438",
+        "steps": 440,
+        "success": false
+      },
+      "530": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_89",
+        "steps": 440,
+        "success": false
+      },
+      "538": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_169",
+        "steps": 440,
+        "success": false
+      },
+      "545": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_269",
+        "steps": 440,
+        "success": false
+      },
+      "553": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_349",
+        "steps": 440,
+        "success": false
+      },
+      "561": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_439",
+        "steps": 440,
+        "success": false
+      },
+      "569": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_90",
+        "steps": 440,
+        "success": false
+      },
+      "57": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_14",
+        "steps": 181,
+        "success": true
+      },
+      "576": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_160",
+        "steps": 440,
+        "success": false
+      },
+      "584": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_270",
+        "steps": 440,
+        "success": false
+      },
+      "592": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_350",
+        "steps": 440,
+        "success": false
+      },
+      "600": {
+        "category": "Robot Initial States",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_430",
+        "steps": 440,
+        "success": false
+      },
+      "608": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_2_352_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "616": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_120_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "624": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_17_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "63": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_2",
+        "steps": 440,
+        "success": false
+      },
+      "633": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_21_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "641": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_25_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "649": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_30_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "658": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_0_0_100_6_350_initstate_0",
+        "steps": 261,
+        "success": true
+      },
+      "666": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_34_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "674": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_39_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "68": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_3",
+        "steps": 440,
+        "success": false
+      },
+      "683": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_44_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "691": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_0_0_136_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "699": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_8_10_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "708": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_47_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "716": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_51_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "724": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_55_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "733": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_view_60_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "74": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_9",
+        "steps": 440,
+        "success": false
+      },
+      "741": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_147_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "750": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_10_350_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "758": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_63_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "766": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_67_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "775": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_view_72_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "783": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_151_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "791": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_160_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "80": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_22",
+        "steps": 255,
+        "success": true
+      },
+      "800": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_0_0_100_350_358_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "808": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_289_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "816": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_293_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "825": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_view_298_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "833": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_165_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "841": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_0_0_100_352_352_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "850": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_304_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "858": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_308_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "86": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_3",
+        "steps": 440,
+        "success": false
+      },
+      "867": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_view_313_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "875": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_175_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "883": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_0_0_100_354_354_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "892": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_318_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "900": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_322_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "908": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_view_326_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "91": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_9",
+        "steps": 440,
+        "success": false
+      },
+      "917": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_0_0_184_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "925": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_0_0_100_356_8_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "933": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_332_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "942": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_view_338_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "950": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_194_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "958": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_0_0_100_358_8_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "967": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_346_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "97": {
+        "category": "Background Textures",
+        "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_21",
+        "steps": 243,
+        "success": true
+      },
+      "975": {
+        "category": "Camera Viewpoints",
+        "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_view_351_15_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "984": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_language_1_view_0_0_100_0_0_initstate_0",
+        "steps": 440,
+        "success": false
+      },
+      "992": {
+        "category": "Language Instructions",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_language_9_view_0_0_100_0_0_initstate_0",
+        "steps": 190,
+        "success": true
+      }
+    }
+  }
+}

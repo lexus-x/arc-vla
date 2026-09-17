@@ -1,0 +1,1095 @@
+{
+  "v2_spatial_native_20env": {
+    "aggregate": 0.835,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/From_Blackwell/Ayush PH test/DeepONet PH/v2/deeponet_results/Spatial/runs/m3_s0/checkpoints/30000",
+      "deeponet_head": "deeponet",
+      "env_freq": 20,
+      "fourier": 16,
+      "head_rate": 20,
+      "model": "v2_spatial",
+      "replan": 5,
+      "settle_steps": 10,
+      "steps": 520,
+      "suite": "libero_spatial",
+      "trained_on": "libero_spatial",
+      "transform": null,
+      "wallclock_s": 26.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": null,
+      "cap": 520,
+      "fail_at_cap": 33,
+      "fail_early": 0,
+      "magscale_applied": null,
+      "n": 200,
+      "n_success": 167,
+      "spline_applied": null,
+      "success_steps_max": 412,
+      "success_steps_median": 101.0
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 74,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 85,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 80,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 75,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 77,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 73,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 83,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 84,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 74,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 68,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 76,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 74,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 76,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 78,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 87,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 80,
+            "success": true
+          }
+        ],
+        "success_rate": 0.85,
+        "task": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 119,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 112,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 104,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 100,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 100,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 109,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 412,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 110,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 104,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 102,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 100,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 103,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 101,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "pick up the black bowl next to the ramekin and place it on the plate"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 95,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 98,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 95,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 91,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 123,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1016,
+            "steps": 97,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 102,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1019,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.7,
+        "task": "pick up the black bowl from table center and place it on the plate"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 76,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 80,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 87,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 82,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 91,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 83,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 78,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 85,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 88,
+            "success": true
+          }
+        ],
+        "success_rate": 0.85,
+        "task": "pick up the black bowl on the cookie box and place it on the plate"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 125,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 129,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 129,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 121,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 123,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 124,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 123,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 134,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 125,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 122,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 232,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 368,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 98,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 93,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1016,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1017,
+            "steps": 93,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1019,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.45,
+        "task": "pick up the black bowl on the ramekin and place it on the plate"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 104,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 102,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 109,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 114,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 100,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 108,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 103,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 103,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 97,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 97,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 104,
+            "success": true
+          }
+        ],
+        "success_rate": 0.95,
+        "task": "pick up the black bowl next to the cookie box and place it on the plate"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 99,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 109,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 114,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 109,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 107,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 114,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 119,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 109,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 107,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 112,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 114,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 121,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "pick up the black bowl on the stove and place it on the plate"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 165,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 95,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 87,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 97,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 103,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 93,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 93,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 302,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 93,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 93,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 91,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 99,
+            "success": true
+          }
+        ],
+        "success_rate": 0.9,
+        "task": "pick up the black bowl next to the plate and place it on the plate"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 117,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 121,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 123,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 154,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 126,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 136,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 119,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 128,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 119,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 119,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 114,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 126,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1017,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1018,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 127,
+            "success": true
+          }
+        ],
+        "success_rate": 0.85,
+        "task": "pick up the black bowl on the wooden cabinet and place it on the plate"
+      }
+    }
+  }
+}

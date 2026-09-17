@@ -1,0 +1,168 @@
+[suite] libero_goal -> matched8300_goal_out/multirate_libero_goal.json
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+
+============================================================
+ARM asrc_goal_native_20env
+============================================================
+[stats] asrc_goal_native_20env: normalizing with lerobot/libero_goal_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 108942.96it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 7981.13it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8465.96it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[asrc_goal_native_20env] variant=asrc n_fourier=6 re-integrates at 20.0 Hz (native ODE re-integration, NOT alias folding)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[asrc_goal_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[asrc_goal_native_20env] task 0 trial 00: OK (123/300 steps)
+[asrc_goal_native_20env] task 0 trial 01: OK (127/300 steps)
+[asrc_goal_native_20env] task 0 trial 02: OK (125/300 steps)
+[asrc_goal_native_20env] task 0 trial 03: OK (121/300 steps)
+[asrc_goal_native_20env] task 0 trial 04: OK (119/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_goal_native_20env] task 1 trial 00: OK (87/300 steps)
+[asrc_goal_native_20env] task 1 trial 01: OK (85/300 steps)
+[asrc_goal_native_20env] task 1 trial 02: OK (85/300 steps)
+[asrc_goal_native_20env] task 1 trial 03: OK (85/300 steps)
+[asrc_goal_native_20env] task 1 trial 04: OK (83/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_goal_native_20env] task 2 trial 00: OK (80/300 steps)
+[asrc_goal_native_20env] task 2 trial 01: OK (85/300 steps)
+[asrc_goal_native_20env] task 2 trial 02: OK (91/300 steps)
+[asrc_goal_native_20env] task 2 trial 03: OK (89/300 steps)
+[asrc_goal_native_20env] task 2 trial 04: OK (93/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_goal_native_20env] task 3 trial 00: OK (180/300 steps)
+[asrc_goal_native_20env] task 3 trial 01: OK (297/300 steps)
+[asrc_goal_native_20env] task 3 trial 02: OK (179/300 steps)
+[asrc_goal_native_20env] task 3 trial 03: OK (184/300 steps)
+[asrc_goal_native_20env] task 3 trial 04: OK (227/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_goal_native_20env] task 4 trial 00: OK (99/300 steps)
+[asrc_goal_native_20env] task 4 trial 01: OK (94/300 steps)
+[asrc_goal_native_20env] task 4 trial 02: OK (92/300 steps)
+[asrc_goal_native_20env] task 4 trial 03: OK (97/300 steps)
+[asrc_goal_native_20env] task 4 trial 04: OK (95/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_goal_native_20env] task 5 trial 00: OK (123/300 steps)
+[asrc_goal_native_20env] task 5 trial 01: OK (140/300 steps)
+[asrc_goal_native_20env] task 5 trial 02: OK (140/300 steps)
+[asrc_goal_native_20env] task 5 trial 03: OK (135/300 steps)
+[asrc_goal_native_20env] task 5 trial 04: OK (122/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_goal_native_20env] task 6 trial 00: x (300/300 steps)
+[asrc_goal_native_20env] task 6 trial 01: x (300/300 steps)
+[asrc_goal_native_20env] task 6 trial 02: x (300/300 steps)
+[asrc_goal_native_20env] task 6 trial 03: OK (85/300 steps)
+[asrc_goal_native_20env] task 6 trial 04: x (300/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_goal_native_20env] task 7 trial 00: OK (83/300 steps)
+[asrc_goal_native_20env] task 7 trial 01: OK (134/300 steps)
+[asrc_goal_native_20env] task 7 trial 02: OK (74/300 steps)
+[asrc_goal_native_20env] task 7 trial 03: OK (77/300 steps)
+[asrc_goal_native_20env] task 7 trial 04: OK (67/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_goal_native_20env] task 8 trial 00: OK (76/300 steps)
+[asrc_goal_native_20env] task 8 trial 01: OK (74/300 steps)
+[asrc_goal_native_20env] task 8 trial 02: OK (78/300 steps)
+[asrc_goal_native_20env] task 8 trial 03: OK (73/300 steps)
+[asrc_goal_native_20env] task 8 trial 04: OK (70/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_goal_native_20env] task 9 trial 00: OK (149/300 steps)
+[asrc_goal_native_20env] task 9 trial 01: OK (149/300 steps)
+[asrc_goal_native_20env] task 9 trial 02: x (300/300 steps)
+[asrc_goal_native_20env] task 9 trial 03: OK (149/300 steps)
+[asrc_goal_native_20env] task 9 trial 04: OK (143/300 steps)
+[asrc_goal_native_20env] diagnostics: 45/50 ok | fail_at_cap=5 fail_early=0 | succ_median=95.0/300
+--> asrc_goal_native_20env: 90.0% (300 steps @ 20 Hz = 11.0 s, replan every 10)
+
+
+============================================================
+ARM flow8300_goal_native_20env
+============================================================
+[stats] flow8300_goal_native_20env: normalizing with lerobot/libero_goal_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 128070.35it/s]
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8858.49it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_goal_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[flow8300_goal_native_20env] task 0 trial 00: OK (120/300 steps)
+[flow8300_goal_native_20env] task 0 trial 01: OK (119/300 steps)
+[flow8300_goal_native_20env] task 0 trial 02: OK (118/300 steps)
+[flow8300_goal_native_20env] task 0 trial 03: OK (126/300 steps)
+[flow8300_goal_native_20env] task 0 trial 04: OK (124/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_goal_native_20env] task 1 trial 00: OK (77/300 steps)
+[flow8300_goal_native_20env] task 1 trial 01: OK (85/300 steps)
+[flow8300_goal_native_20env] task 1 trial 02: OK (83/300 steps)
+[flow8300_goal_native_20env] task 1 trial 03: OK (83/300 steps)
+[flow8300_goal_native_20env] task 1 trial 04: OK (89/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_goal_native_20env] task 2 trial 00: OK (94/300 steps)
+[flow8300_goal_native_20env] task 2 trial 01: OK (92/300 steps)
+[flow8300_goal_native_20env] task 2 trial 02: OK (96/300 steps)
+[flow8300_goal_native_20env] task 2 trial 03: OK (94/300 steps)
+[flow8300_goal_native_20env] task 2 trial 04: OK (93/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_goal_native_20env] task 3 trial 00: OK (169/300 steps)
+[flow8300_goal_native_20env] task 3 trial 01: OK (164/300 steps)
+[flow8300_goal_native_20env] task 3 trial 02: OK (181/300 steps)
+[flow8300_goal_native_20env] task 3 trial 03: OK (192/300 steps)
+[flow8300_goal_native_20env] task 3 trial 04: OK (231/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_goal_native_20env] task 4 trial 00: OK (91/300 steps)
+[flow8300_goal_native_20env] task 4 trial 01: OK (88/300 steps)
+[flow8300_goal_native_20env] task 4 trial 02: OK (85/300 steps)
+[flow8300_goal_native_20env] task 4 trial 03: OK (89/300 steps)
+[flow8300_goal_native_20env] task 4 trial 04: OK (91/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_goal_native_20env] task 5 trial 00: OK (144/300 steps)
+[flow8300_goal_native_20env] task 5 trial 01: OK (124/300 steps)
+[flow8300_goal_native_20env] task 5 trial 02: OK (118/300 steps)
+[flow8300_goal_native_20env] task 5 trial 03: OK (118/300 steps)
+[flow8300_goal_native_20env] task 5 trial 04: OK (131/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_goal_native_20env] task 6 trial 00: OK (79/300 steps)
+[flow8300_goal_native_20env] task 6 trial 01: x (300/300 steps)
+[flow8300_goal_native_20env] task 6 trial 02: OK (103/300 steps)
+[flow8300_goal_native_20env] task 6 trial 03: OK (93/300 steps)
+[flow8300_goal_native_20env] task 6 trial 04: OK (77/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_goal_native_20env] task 7 trial 00: OK (93/300 steps)
+[flow8300_goal_native_20env] task 7 trial 01: OK (69/300 steps)
+[flow8300_goal_native_20env] task 7 trial 02: OK (73/300 steps)
+[flow8300_goal_native_20env] task 7 trial 03: OK (70/300 steps)
+[flow8300_goal_native_20env] task 7 trial 04: OK (74/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_goal_native_20env] task 8 trial 00: OK (75/300 steps)
+[flow8300_goal_native_20env] task 8 trial 01: OK (72/300 steps)
+[flow8300_goal_native_20env] task 8 trial 02: OK (85/300 steps)
+[flow8300_goal_native_20env] task 8 trial 03: OK (73/300 steps)
+[flow8300_goal_native_20env] task 8 trial 04: OK (75/300 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_goal_native_20env] task 9 trial 00: OK (141/300 steps)
+[flow8300_goal_native_20env] task 9 trial 01: x (300/300 steps)
+[flow8300_goal_native_20env] task 9 trial 02: OK (146/300 steps)
+[flow8300_goal_native_20env] task 9 trial 03: x (300/300 steps)
+[flow8300_goal_native_20env] task 9 trial 04: OK (138/300 steps)
+[flow8300_goal_native_20env] diagnostics: 47/50 ok | fail_at_cap=3 fail_early=0 | succ_median=93.0/300
+--> flow8300_goal_native_20env: 94.0% (300 steps @ 20 Hz = 11.0 s, replan every 10)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  asrc_goal_native_20env  90.0%
+  flow8300_goal_native_20env  94.0%

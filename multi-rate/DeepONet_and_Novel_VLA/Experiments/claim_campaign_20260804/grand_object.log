@@ -1,0 +1,523 @@
+[suite] libero_object -> grand_object_out/multirate_libero_object.json
+
+============================================================
+ARM v2_object_native_20env
+============================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+[stats] v2_object_native_20env: normalizing with lerobot/libero_object_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 4995.80it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 5460.87it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[v2_object_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[v2_object_native_20env] task 0 trial 00: OK (139/280 steps)
+[v2_object_native_20env] task 0 trial 01: OK (128/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_native_20env] task 1 trial 00: OK (129/280 steps)
+[v2_object_native_20env] task 1 trial 01: OK (121/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_native_20env] task 2 trial 00: OK (116/280 steps)
+[v2_object_native_20env] task 2 trial 01: OK (114/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_native_20env] task 3 trial 00: OK (122/280 steps)
+[v2_object_native_20env] task 3 trial 01: x (280/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_native_20env] task 4 trial 00: OK (138/280 steps)
+[v2_object_native_20env] task 4 trial 01: OK (132/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_native_20env] task 5 trial 00: OK (129/280 steps)
+[v2_object_native_20env] task 5 trial 01: OK (130/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_native_20env] task 6 trial 00: OK (130/280 steps)
+[v2_object_native_20env] task 6 trial 01: OK (141/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_native_20env] task 7 trial 00: OK (121/280 steps)
+[v2_object_native_20env] task 7 trial 01: x (280/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_native_20env] task 8 trial 00: OK (150/280 steps)
+[v2_object_native_20env] task 8 trial 01: OK (150/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_native_20env] task 9 trial 00: OK (200/280 steps)
+[v2_object_native_20env] task 9 trial 01: x (280/280 steps)
+[v2_object_native_20env] diagnostics: 17/20 ok | fail_at_cap=3 fail_early=0 | succ_median=130.0/280
+--> v2_object_native_20env: 85.0% (280 steps @ 20 Hz = 11.0 s, replan every 10)
+
+
+============================================================
+ARM v2_object_dec2_tacfold_10env
+============================================================
+[stats] v2_object_dec2_tacfold_10env: normalizing with lerobot/libero_object_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  90%|████████▉ | 438/489 [00:00<00:00, 4379.73it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 4561.69it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  97%|█████████▋| 475/489 [00:00<00:00, 4738.70it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 4791.15it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[v2_object_dec2_tacfold_10env] v2: decimate k=2 -> tac_fold -> 25 steps (RAW space, integral-preserving, no delta rescale)
+[v2_object_dec2_tacfold_10env] magscale: raw pose deltas x0.5 (restores native per-step travel)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_10env] settle window scaled to 5 steps (0.50 s at 10 Hz)
+[v2_object_dec2_tacfold_10env] task 0 trial 00: OK (75/140 steps)
+[v2_object_dec2_tacfold_10env] task 0 trial 01: OK (70/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_10env] task 1 trial 00: OK (71/140 steps)
+[v2_object_dec2_tacfold_10env] task 1 trial 01: OK (66/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_10env] task 2 trial 00: OK (64/140 steps)
+[v2_object_dec2_tacfold_10env] task 2 trial 01: OK (59/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_10env] task 3 trial 00: OK (67/140 steps)
+[v2_object_dec2_tacfold_10env] task 3 trial 01: x (140/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_10env] task 4 trial 00: OK (75/140 steps)
+[v2_object_dec2_tacfold_10env] task 4 trial 01: OK (74/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_10env] task 5 trial 00: OK (66/140 steps)
+[v2_object_dec2_tacfold_10env] task 5 trial 01: OK (69/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_10env] task 6 trial 00: OK (79/140 steps)
+[v2_object_dec2_tacfold_10env] task 6 trial 01: OK (80/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_10env] task 7 trial 00: OK (69/140 steps)
+[v2_object_dec2_tacfold_10env] task 7 trial 01: OK (62/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_10env] task 8 trial 00: OK (80/140 steps)
+[v2_object_dec2_tacfold_10env] task 8 trial 01: OK (81/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_10env] task 9 trial 00: x (140/140 steps)
+[v2_object_dec2_tacfold_10env] task 9 trial 01: OK (140/140 steps)
+[v2_object_dec2_tacfold_10env] v2 inertness check: 331 calls, 331 coarsened (50 -> 25 -> 25), k=2, resampler=tac_fold
+[v2_object_dec2_tacfold_10env] diagnostics: 18/20 ok | fail_at_cap=2 fail_early=0 | succ_median=70.5/140
+--> v2_object_dec2_tacfold_10env: 90.0% (140 steps @ 10 Hz = 11.0 s, replan every 5)
+
+
+============================================================
+ARM v2_object_dec2_tacfold_40env
+============================================================
+[stats] v2_object_dec2_tacfold_40env: normalizing with lerobot/libero_object_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 5257.64it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  19%|█▊        | 91/489 [00:00<00:00, 866.80it/s]Loading weights:  47%|████▋     | 232/489 [00:00<00:00, 1173.25it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1801.78it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[v2_object_dec2_tacfold_40env] v2: decimate k=2 -> tac_fold -> 100 steps (RAW space, integral-preserving, no delta rescale)
+[v2_object_dec2_tacfold_40env] magscale: raw pose deltas x2 (restores native per-step travel)
+[v2_object_dec2_tacfold_40env] resolved-cadence: 20 Hz decisions in a 40 Hz sim (1 query per 2 env steps); intermediates taken from the plan
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_40env] settle window scaled to 20 steps (0.50 s at 40 Hz)
+[v2_object_dec2_tacfold_40env] task 0 trial 00: OK (250/560 steps)
+[v2_object_dec2_tacfold_40env] task 0 trial 01: OK (307/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_40env] task 1 trial 00: OK (380/560 steps)
+[v2_object_dec2_tacfold_40env] task 1 trial 01: OK (244/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_40env] task 2 trial 00: OK (240/560 steps)
+[v2_object_dec2_tacfold_40env] task 2 trial 01: OK (203/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_40env] task 3 trial 00: OK (256/560 steps)
+[v2_object_dec2_tacfold_40env] task 3 trial 01: x (560/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_40env] task 4 trial 00: OK (272/560 steps)
+[v2_object_dec2_tacfold_40env] task 4 trial 01: OK (268/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_40env] task 5 trial 00: OK (242/560 steps)
+[v2_object_dec2_tacfold_40env] task 5 trial 01: OK (263/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_40env] task 6 trial 00: OK (279/560 steps)
+[v2_object_dec2_tacfold_40env] task 6 trial 01: OK (293/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_40env] task 7 trial 00: x (560/560 steps)
+[v2_object_dec2_tacfold_40env] task 7 trial 01: x (560/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_40env] task 8 trial 00: OK (280/560 steps)
+[v2_object_dec2_tacfold_40env] task 8 trial 01: OK (297/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_40env] task 9 trial 00: OK (427/560 steps)
+[v2_object_dec2_tacfold_40env] task 9 trial 01: x (560/560 steps)
+[v2_object_dec2_tacfold_40env] cadence check: 3371 policy queries, 3360 resolved intermediates, 10 starved of 6741 env steps
+[v2_object_dec2_tacfold_40env] v2 inertness check: 344 calls, 344 coarsened (50 -> 25 -> 100), k=2, resampler=tac_fold
+[v2_object_dec2_tacfold_40env] diagnostics: 16/20 ok | fail_at_cap=4 fail_early=0 | succ_median=270.0/560
+--> v2_object_dec2_tacfold_40env: 80.0% (560 steps @ 40 Hz = 11.0 s, replan every 20)
+
+
+============================================================
+ARM v2_object_dec2_tacfold_100env
+============================================================
+[stats] v2_object_dec2_tacfold_100env: normalizing with lerobot/libero_object_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  72%|███████▏  | 351/489 [00:00<00:00, 3508.80it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 3951.08it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  62%|██████▏   | 304/489 [00:00<00:00, 3024.66it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 3510.57it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[v2_object_dec2_tacfold_100env] v2: decimate k=2 -> tac_fold -> 250 steps (RAW space, integral-preserving, no delta rescale)
+[v2_object_dec2_tacfold_100env] magscale: raw pose deltas x5 (restores native per-step travel)
+[v2_object_dec2_tacfold_100env] resolved-cadence: 20 Hz decisions in a 100 Hz sim (1 query per 5 env steps); intermediates taken from the plan
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_100env] settle window scaled to 50 steps (0.50 s at 100 Hz)
+[v2_object_dec2_tacfold_100env] task 0 trial 00: OK (569/1400 steps)
+[v2_object_dec2_tacfold_100env] task 0 trial 01: OK (747/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_100env] task 1 trial 00: OK (1101/1400 steps)
+[v2_object_dec2_tacfold_100env] task 1 trial 01: OK (611/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_100env] task 2 trial 00: OK (562/1400 steps)
+[v2_object_dec2_tacfold_100env] task 2 trial 01: OK (525/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_100env] task 3 trial 00: OK (579/1400 steps)
+[v2_object_dec2_tacfold_100env] task 3 trial 01: x (1400/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_100env] task 4 trial 00: OK (652/1400 steps)
+[v2_object_dec2_tacfold_100env] task 4 trial 01: OK (645/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_100env] task 5 trial 00: OK (598/1400 steps)
+[v2_object_dec2_tacfold_100env] task 5 trial 01: OK (540/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_100env] task 6 trial 00: OK (657/1400 steps)
+[v2_object_dec2_tacfold_100env] task 6 trial 01: x (1400/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_100env] task 7 trial 00: OK (566/1400 steps)
+[v2_object_dec2_tacfold_100env] task 7 trial 01: OK (866/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_100env] task 8 trial 00: OK (640/1400 steps)
+[v2_object_dec2_tacfold_100env] task 8 trial 01: OK (650/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_tacfold_100env] task 9 trial 00: x (1400/1400 steps)
+[v2_object_dec2_tacfold_100env] task 9 trial 01: x (1400/1400 steps)
+[v2_object_dec2_tacfold_100env] cadence check: 3222 policy queries, 12845 resolved intermediates, 41 starved of 16108 env steps
+[v2_object_dec2_tacfold_100env] v2 inertness check: 329 calls, 329 coarsened (50 -> 25 -> 250), k=2, resampler=tac_fold
+[v2_object_dec2_tacfold_100env] diagnostics: 16/20 ok | fail_at_cap=4 fail_early=0 | succ_median=625.5/1400
+--> v2_object_dec2_tacfold_100env: 80.0% (1400 steps @ 100 Hz = 11.0 s, replan every 50)
+
+
+============================================================
+ARM v2_object_dec2_bspline_10env
+============================================================
+[stats] v2_object_dec2_bspline_10env: normalizing with lerobot/libero_object_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  26%|██▌       | 128/489 [00:00<00:00, 1232.21it/s]Loading weights:  52%|█████▏    | 252/489 [00:00<00:00, 1156.32it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1621.06it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  24%|██▍       | 119/489 [00:00<00:00, 1170.44it/s]Loading weights:  50%|█████     | 245/489 [00:00<00:00, 1210.60it/s]Loading weights:  91%|█████████ | 445/489 [00:00<00:00, 1524.30it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1522.72it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[v2_object_dec2_bspline_10env] v2: decimate k=2 -> bspline_cum -> 25 steps (RAW space, integral-preserving, no delta rescale)
+[v2_object_dec2_bspline_10env] magscale: raw pose deltas x0.5 (restores native per-step travel)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_10env] settle window scaled to 5 steps (0.50 s at 10 Hz)
+[v2_object_dec2_bspline_10env] task 0 trial 00: OK (75/140 steps)
+[v2_object_dec2_bspline_10env] task 0 trial 01: OK (70/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_10env] task 1 trial 00: OK (71/140 steps)
+[v2_object_dec2_bspline_10env] task 1 trial 01: OK (66/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_10env] task 2 trial 00: OK (64/140 steps)
+[v2_object_dec2_bspline_10env] task 2 trial 01: OK (59/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_10env] task 3 trial 00: OK (67/140 steps)
+[v2_object_dec2_bspline_10env] task 3 trial 01: x (140/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_10env] task 4 trial 00: OK (75/140 steps)
+[v2_object_dec2_bspline_10env] task 4 trial 01: OK (74/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_10env] task 5 trial 00: OK (66/140 steps)
+[v2_object_dec2_bspline_10env] task 5 trial 01: OK (69/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_10env] task 6 trial 00: OK (79/140 steps)
+[v2_object_dec2_bspline_10env] task 6 trial 01: OK (80/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_10env] task 7 trial 00: OK (69/140 steps)
+[v2_object_dec2_bspline_10env] task 7 trial 01: OK (62/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_10env] task 8 trial 00: OK (80/140 steps)
+[v2_object_dec2_bspline_10env] task 8 trial 01: OK (81/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_10env] task 9 trial 00: x (140/140 steps)
+[v2_object_dec2_bspline_10env] task 9 trial 01: OK (140/140 steps)
+[v2_object_dec2_bspline_10env] v2 inertness check: 331 calls, 331 coarsened (50 -> 25 -> 25), k=2, resampler=bspline_cum
+[v2_object_dec2_bspline_10env] diagnostics: 18/20 ok | fail_at_cap=2 fail_early=0 | succ_median=70.5/140
+--> v2_object_dec2_bspline_10env: 90.0% (140 steps @ 10 Hz = 11.0 s, replan every 5)
+
+
+============================================================
+ARM v2_object_dec2_bspline_40env
+============================================================
+[stats] v2_object_dec2_bspline_40env: normalizing with lerobot/libero_object_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  29%|██▉       | 142/489 [00:00<00:00, 1398.11it/s]Loading weights:  66%|██████▌   | 321/489 [00:00<00:00, 1616.91it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1831.44it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  45%|████▌     | 221/489 [00:00<00:00, 2156.22it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 2631.80it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[v2_object_dec2_bspline_40env] v2: decimate k=2 -> bspline_cum -> 100 steps (RAW space, integral-preserving, no delta rescale)
+[v2_object_dec2_bspline_40env] magscale: raw pose deltas x2 (restores native per-step travel)
+[v2_object_dec2_bspline_40env] resolved-cadence: 20 Hz decisions in a 40 Hz sim (1 query per 2 env steps); intermediates taken from the plan
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_40env] settle window scaled to 20 steps (0.50 s at 40 Hz)
+[v2_object_dec2_bspline_40env] task 0 trial 00: OK (240/560 steps)
+[v2_object_dec2_bspline_40env] task 0 trial 01: OK (284/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_40env] task 1 trial 00: OK (410/560 steps)
+[v2_object_dec2_bspline_40env] task 1 trial 01: OK (236/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_40env] task 2 trial 00: OK (239/560 steps)
+[v2_object_dec2_bspline_40env] task 2 trial 01: x (560/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_40env] task 3 trial 00: OK (228/560 steps)
+[v2_object_dec2_bspline_40env] task 3 trial 01: OK (242/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_40env] task 4 trial 00: OK (267/560 steps)
+[v2_object_dec2_bspline_40env] task 4 trial 01: OK (279/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_40env] task 5 trial 00: OK (263/560 steps)
+[v2_object_dec2_bspline_40env] task 5 trial 01: OK (385/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_40env] task 6 trial 00: OK (281/560 steps)
+[v2_object_dec2_bspline_40env] task 6 trial 01: OK (287/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_40env] task 7 trial 00: OK (225/560 steps)
+[v2_object_dec2_bspline_40env] task 7 trial 01: x (560/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_40env] task 8 trial 00: OK (274/560 steps)
+[v2_object_dec2_bspline_40env] task 8 trial 01: OK (275/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_40env] task 9 trial 00: x (560/560 steps)
+[v2_object_dec2_bspline_40env] task 9 trial 01: OK (318/560 steps)
+[v2_object_dec2_bspline_40env] cadence check: 3207 policy queries, 3197 resolved intermediates, 9 starved of 6413 env steps
+[v2_object_dec2_bspline_40env] v2 inertness check: 328 calls, 328 coarsened (50 -> 25 -> 100), k=2, resampler=bspline_cum
+[v2_object_dec2_bspline_40env] diagnostics: 17/20 ok | fail_at_cap=3 fail_early=0 | succ_median=274.0/560
+--> v2_object_dec2_bspline_40env: 85.0% (560 steps @ 40 Hz = 11.0 s, replan every 20)
+
+
+============================================================
+ARM v2_object_dec2_bspline_100env
+============================================================
+[stats] v2_object_dec2_bspline_100env: normalizing with lerobot/libero_object_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  31%|███       | 150/489 [00:00<00:00, 1485.68it/s]Loading weights:  61%|██████    | 299/489 [00:00<00:00, 1331.34it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1669.45it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  30%|██▉       | 146/489 [00:00<00:00, 1418.82it/s]Loading weights:  59%|█████▉    | 288/489 [00:00<00:00, 1352.86it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1735.58it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[v2_object_dec2_bspline_100env] v2: decimate k=2 -> bspline_cum -> 250 steps (RAW space, integral-preserving, no delta rescale)
+[v2_object_dec2_bspline_100env] magscale: raw pose deltas x5 (restores native per-step travel)
+[v2_object_dec2_bspline_100env] resolved-cadence: 20 Hz decisions in a 100 Hz sim (1 query per 5 env steps); intermediates taken from the plan
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_100env] settle window scaled to 50 steps (0.50 s at 100 Hz)
+[v2_object_dec2_bspline_100env] task 0 trial 00: OK (574/1400 steps)
+[v2_object_dec2_bspline_100env] task 0 trial 01: OK (662/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_100env] task 1 trial 00: OK (847/1400 steps)
+[v2_object_dec2_bspline_100env] task 1 trial 01: OK (575/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_100env] task 2 trial 00: OK (568/1400 steps)
+[v2_object_dec2_bspline_100env] task 2 trial 01: OK (467/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_100env] task 3 trial 00: OK (591/1400 steps)
+[v2_object_dec2_bspline_100env] task 3 trial 01: x (1400/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_100env] task 4 trial 00: OK (649/1400 steps)
+[v2_object_dec2_bspline_100env] task 4 trial 01: OK (624/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_100env] task 5 trial 00: OK (555/1400 steps)
+[v2_object_dec2_bspline_100env] task 5 trial 01: OK (575/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_100env] task 6 trial 00: OK (646/1400 steps)
+[v2_object_dec2_bspline_100env] task 6 trial 01: x (1400/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_100env] task 7 trial 00: OK (537/1400 steps)
+[v2_object_dec2_bspline_100env] task 7 trial 01: OK (887/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_100env] task 8 trial 00: OK (677/1400 steps)
+[v2_object_dec2_bspline_100env] task 8 trial 01: OK (670/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_bspline_100env] task 9 trial 00: OK (1073/1400 steps)
+[v2_object_dec2_bspline_100env] task 9 trial 01: x (1400/1400 steps)
+[v2_object_dec2_bspline_100env] cadence check: 3076 policy queries, 12261 resolved intermediates, 40 starved of 15377 env steps
+[v2_object_dec2_bspline_100env] v2 inertness check: 315 calls, 315 coarsened (50 -> 25 -> 250), k=2, resampler=bspline_cum
+[v2_object_dec2_bspline_100env] diagnostics: 17/20 ok | fail_at_cap=3 fail_early=0 | succ_median=624.0/1400
+--> v2_object_dec2_bspline_100env: 85.0% (1400 steps @ 100 Hz = 11.0 s, replan every 50)
+
+
+============================================================
+ARM v2_object_dec2_spline_10env
+============================================================
+[stats] v2_object_dec2_spline_10env: normalizing with lerobot/libero_object_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  30%|███       | 147/489 [00:00<00:00, 1466.87it/s]Loading weights:  60%|██████    | 294/489 [00:00<00:00, 1434.17it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1736.00it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  26%|██▋       | 129/489 [00:00<00:00, 1287.15it/s]Loading weights:  53%|█████▎    | 259/489 [00:00<00:00, 1292.40it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1678.62it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[v2_object_dec2_spline_10env] v2: decimate k=2 -> spline_cum -> 25 steps (RAW space, integral-preserving, no delta rescale)
+[v2_object_dec2_spline_10env] magscale: raw pose deltas x0.5 (restores native per-step travel)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_10env] settle window scaled to 5 steps (0.50 s at 10 Hz)
+[v2_object_dec2_spline_10env] task 0 trial 00: OK (75/140 steps)
+[v2_object_dec2_spline_10env] task 0 trial 01: OK (70/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_10env] task 1 trial 00: OK (71/140 steps)
+[v2_object_dec2_spline_10env] task 1 trial 01: OK (66/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_10env] task 2 trial 00: OK (64/140 steps)
+[v2_object_dec2_spline_10env] task 2 trial 01: OK (59/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_10env] task 3 trial 00: OK (67/140 steps)
+[v2_object_dec2_spline_10env] task 3 trial 01: x (140/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_10env] task 4 trial 00: OK (75/140 steps)
+[v2_object_dec2_spline_10env] task 4 trial 01: OK (74/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_10env] task 5 trial 00: OK (66/140 steps)
+[v2_object_dec2_spline_10env] task 5 trial 01: OK (69/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_10env] task 6 trial 00: OK (79/140 steps)
+[v2_object_dec2_spline_10env] task 6 trial 01: OK (80/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_10env] task 7 trial 00: OK (69/140 steps)
+[v2_object_dec2_spline_10env] task 7 trial 01: OK (62/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_10env] task 8 trial 00: OK (80/140 steps)
+[v2_object_dec2_spline_10env] task 8 trial 01: OK (81/140 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_10env] task 9 trial 00: x (140/140 steps)
+[v2_object_dec2_spline_10env] task 9 trial 01: OK (140/140 steps)
+[v2_object_dec2_spline_10env] v2 inertness check: 331 calls, 331 coarsened (50 -> 25 -> 25), k=2, resampler=spline_cum
+[v2_object_dec2_spline_10env] diagnostics: 18/20 ok | fail_at_cap=2 fail_early=0 | succ_median=70.5/140
+--> v2_object_dec2_spline_10env: 90.0% (140 steps @ 10 Hz = 11.0 s, replan every 5)
+
+
+============================================================
+ARM v2_object_dec2_spline_40env
+============================================================
+[stats] v2_object_dec2_spline_40env: normalizing with lerobot/libero_object_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  30%|██▉       | 146/489 [00:00<00:00, 1324.56it/s]Loading weights:  57%|█████▋    | 279/489 [00:00<00:00, 1225.21it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1608.17it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  28%|██▊       | 135/489 [00:00<00:00, 1327.98it/s]Loading weights:  55%|█████▍    | 268/489 [00:00<00:00, 1071.06it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1501.76it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[v2_object_dec2_spline_40env] v2: decimate k=2 -> spline_cum -> 100 steps (RAW space, integral-preserving, no delta rescale)
+[v2_object_dec2_spline_40env] magscale: raw pose deltas x2 (restores native per-step travel)
+[v2_object_dec2_spline_40env] resolved-cadence: 20 Hz decisions in a 40 Hz sim (1 query per 2 env steps); intermediates taken from the plan
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_40env] settle window scaled to 20 steps (0.50 s at 40 Hz)
+[v2_object_dec2_spline_40env] task 0 trial 00: OK (250/560 steps)
+[v2_object_dec2_spline_40env] task 0 trial 01: OK (285/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_40env] task 1 trial 00: OK (320/560 steps)
+[v2_object_dec2_spline_40env] task 1 trial 01: OK (246/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_40env] task 2 trial 00: OK (241/560 steps)
+[v2_object_dec2_spline_40env] task 2 trial 01: OK (211/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_40env] task 3 trial 00: x (560/560 steps)
+[v2_object_dec2_spline_40env] task 3 trial 01: x (560/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_40env] task 4 trial 00: OK (277/560 steps)
+[v2_object_dec2_spline_40env] task 4 trial 01: OK (265/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_40env] task 5 trial 00: OK (264/560 steps)
+[v2_object_dec2_spline_40env] task 5 trial 01: OK (226/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_40env] task 6 trial 00: OK (275/560 steps)
+[v2_object_dec2_spline_40env] task 6 trial 01: OK (396/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_40env] task 7 trial 00: x (560/560 steps)
+[v2_object_dec2_spline_40env] task 7 trial 01: x (560/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_40env] task 8 trial 00: OK (279/560 steps)
+[v2_object_dec2_spline_40env] task 8 trial 01: OK (297/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_40env] task 9 trial 00: OK (351/560 steps)
+[v2_object_dec2_spline_40env] task 9 trial 01: x (560/560 steps)
+[v2_object_dec2_spline_40env] cadence check: 3492 policy queries, 3480 resolved intermediates, 11 starved of 6983 env steps
+[v2_object_dec2_spline_40env] v2 inertness check: 355 calls, 355 coarsened (50 -> 25 -> 100), k=2, resampler=spline_cum
+[v2_object_dec2_spline_40env] diagnostics: 15/20 ok | fail_at_cap=5 fail_early=0 | succ_median=275.0/560
+--> v2_object_dec2_spline_40env: 75.0% (560 steps @ 40 Hz = 11.0 s, replan every 20)
+
+
+============================================================
+ARM v2_object_dec2_spline_100env
+============================================================
+[stats] v2_object_dec2_spline_100env: normalizing with lerobot/libero_object_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  26%|██▋       | 129/489 [00:00<00:00, 1283.85it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 2643.56it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  83%|████████▎ | 405/489 [00:00<00:00, 3874.64it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 4145.52it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[v2_object_dec2_spline_100env] v2: decimate k=2 -> spline_cum -> 250 steps (RAW space, integral-preserving, no delta rescale)
+[v2_object_dec2_spline_100env] magscale: raw pose deltas x5 (restores native per-step travel)
+[v2_object_dec2_spline_100env] resolved-cadence: 20 Hz decisions in a 100 Hz sim (1 query per 5 env steps); intermediates taken from the plan
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_100env] settle window scaled to 50 steps (0.50 s at 100 Hz)
+[v2_object_dec2_spline_100env] task 0 trial 00: OK (568/1400 steps)
+[v2_object_dec2_spline_100env] task 0 trial 01: OK (726/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_100env] task 1 trial 00: OK (736/1400 steps)
+[v2_object_dec2_spline_100env] task 1 trial 01: OK (592/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_100env] task 2 trial 00: OK (570/1400 steps)
+[v2_object_dec2_spline_100env] task 2 trial 01: x (1400/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_100env] task 3 trial 00: OK (582/1400 steps)
+[v2_object_dec2_spline_100env] task 3 trial 01: OK (676/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_100env] task 4 trial 00: OK (641/1400 steps)
+[v2_object_dec2_spline_100env] task 4 trial 01: OK (634/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_100env] task 5 trial 00: OK (594/1400 steps)
+[v2_object_dec2_spline_100env] task 5 trial 01: OK (654/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_100env] task 6 trial 00: OK (647/1400 steps)
+[v2_object_dec2_spline_100env] task 6 trial 01: x (1400/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_100env] task 7 trial 00: OK (532/1400 steps)
+[v2_object_dec2_spline_100env] task 7 trial 01: OK (893/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_100env] task 8 trial 00: OK (707/1400 steps)
+[v2_object_dec2_spline_100env] task 8 trial 01: OK (708/1400 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[v2_object_dec2_spline_100env] task 9 trial 00: x (1400/1400 steps)
+[v2_object_dec2_spline_100env] task 9 trial 01: x (1400/1400 steps)
+[v2_object_dec2_spline_100env] cadence check: 3212 policy queries, 12822 resolved intermediates, 26 starved of 16060 env steps
+[v2_object_dec2_spline_100env] v2 inertness check: 328 calls, 328 coarsened (50 -> 25 -> 250), k=2, resampler=spline_cum
+[v2_object_dec2_spline_100env] diagnostics: 16/20 ok | fail_at_cap=4 fail_early=0 | succ_median=644.0/1400
+--> v2_object_dec2_spline_100env: 80.0% (1400 steps @ 100 Hz = 11.0 s, replan every 50)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  v2_object_native_20env  85.0%
+  v2_object_dec2_tacfold_10env  90.0%
+  v2_object_dec2_tacfold_40env  80.0%
+  v2_object_dec2_tacfold_100env  80.0%
+  v2_object_dec2_bspline_10env  90.0%
+  v2_object_dec2_bspline_40env  85.0%
+  v2_object_dec2_bspline_100env  85.0%
+  v2_object_dec2_spline_10env  90.0%
+  v2_object_dec2_spline_40env  75.0%
+  v2_object_dec2_spline_100env  80.0%

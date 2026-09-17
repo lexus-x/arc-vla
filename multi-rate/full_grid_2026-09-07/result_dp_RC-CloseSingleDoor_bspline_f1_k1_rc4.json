@@ -1,0 +1,35 @@
+{
+  "task": "RC-CloseSingleDoor",
+  "policy": "dp",
+  "k": 1,
+  "n": 15,
+  "train_steps": 15000,
+  "arms": [
+    "native"
+  ],
+  "success": {
+    "native": [
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.006525967115047575
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

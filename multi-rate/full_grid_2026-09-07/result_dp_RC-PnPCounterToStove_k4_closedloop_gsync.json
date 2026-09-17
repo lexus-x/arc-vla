@@ -1,0 +1,105 @@
+{
+  "task": "RC-PnPCounterToStove",
+  "policy": "dp",
+  "k": 4,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 15,
+  "train_steps": 15000,
+  "arms": [
+    "native",
+    "zoh",
+    "gripper_sync"
+  ],
+  "success": {
+    "native": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "zoh": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "gripper_sync": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.0,
+    "zoh": 0.0,
+    "gripper_sync": 0.0
+  },
+  "contrasts": {
+    "native": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "zoh": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "gripper_sync": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    }
+  }
+}

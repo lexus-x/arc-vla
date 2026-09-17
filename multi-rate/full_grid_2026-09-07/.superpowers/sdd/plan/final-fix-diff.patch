@@ -1,0 +1,214 @@
+# Final review fix wave scoped diff
+# Base: /tmp/stage1-final-fixbase.DDLogu
+--- /tmp/stage1-final-fixbase.DDLogu/stage1_vision.py	2026-09-10 11:01:51.843733636 +0900
++++ stage1_vision.py	2026-09-10 11:04:28.977029398 +0900
+@@ -121,8 +121,12 @@
+             raise ValueError(f"invalid {key} range")
+ 
+ 
++def default_max_steps(task):
++    return 300 if task == "CoffeePressButton" else 500
++
++
+ def experiment_request(task, metadata, n_train, n_eval, steps, batch_size, microbatch,
+-                       training_seed, eval_seed):
++                       training_seed, eval_seed, max_steps=None):
+     """Canonical requested experiment identity used by direct eval and campaigns."""
+     if metadata.get("task") != task:
+         raise ValueError(f"requested task {task} does not match dataset task {metadata.get('task')}")
+@@ -137,9 +141,10 @@
+         "microbatch": microbatch,
+         "training_seed": training_seed,
+         "eval_seed": eval_seed,
++        "max_steps": default_max_steps(task) if max_steps is None else max_steps,
+     }
+     if (any(type(requested[key]) is not int or requested[key] < 1
+-            for key in ("steps", "batch_size", "microbatch")) or
++            for key in ("steps", "batch_size", "microbatch", "max_steps")) or
+             type(training_seed) is not int or training_seed < 0 or
+             type(eval_seed) is not int or eval_seed < 0):
+         raise ValueError("requested budget and seeds must be valid integers")
+@@ -199,6 +204,8 @@
+         mismatches.append("training budget")
+     if result.get("eval_seed") != requested["eval_seed"]:
+         mismatches.append("evaluation seed")
++    if result.get("max_steps") != requested["max_steps"]:
++        mismatches.append("evaluation max steps")
+     episodes = result.get("episodes")
+     episode_count = result.get("episode_count")
+     if type(result.get("complete")) is not bool:
+@@ -362,7 +369,7 @@
+     try:
+         requested = experiment_request(
+             args.task, data.metadata, args.n_train, args.n_eval, args.steps, args.batch_size,
+-            args.microbatch, args.seed, args.eval_seed,
++            args.microbatch, args.seed, args.eval_seed, args.max_steps,
+         )
+         if args.check_artifacts:
+             result_path = args.output_dir / f"{args.task}_native.json"
+@@ -402,7 +409,7 @@
+             np.random.seed(args.eval_seed)
+             client = VisionClient(args.task, args.port)
+             episodes = []
+-            max_steps = args.max_steps or (300 if args.task == "CoffeePressButton" else 500)
++            max_steps = requested["max_steps"]
+             try:
+                 if client.request("metadata")["metadata"] != data.metadata:
+                     raise ValueError("bridge/client dataset metadata mismatch")
+--- /tmp/stage1-final-fixbase.DDLogu/robocasa_vision_bridge.py	2026-09-10 11:01:51.843733636 +0900
++++ robocasa_vision_bridge.py	2026-09-10 11:05:35.383720931 +0900
+@@ -47,10 +47,17 @@
+         raise ValueError(f"unknown vision command: {cmd}")
+ 
+     def close(self):
++        wrapper, self.env = self.env, None
+         try:
+-            if self.env is not None:
+-                self.env.close()
+-        finally:
++            if wrapper is not None:
++                wrapper.env.close()
++        except BaseException as simulator_error:
++            try:
++                self.data.close()
++            except BaseException as data_error:
++                raise simulator_error from data_error
++            raise
++        else:
+             self.data.close()
+ 
+ 
+--- /tmp/stage1-final-fixbase.DDLogu/run_stage1_vision_campaign.sh	2026-09-10 11:01:51.843733636 +0900
++++ run_stage1_vision_campaign.sh	2026-09-10 11:07:26.476193324 +0900
+@@ -18,10 +18,11 @@
+ N_EVAL="${N_EVAL:-15}"
+ SEED="${SEED:-0}"
+ EVAL_SEED="${EVAL_SEED:-0}"
++MAX_STEPS="${MAX_STEPS:-}"
+ FORCE="${FORCE:-0}"
+ 
+ usage() {
+-    echo "Usage: [POLICY_PY=...] [BRIDGE_PY=...] [PORT=8766] [FORCE=0|1] $0"
++    echo "Usage: [POLICY_PY=...] [BRIDGE_PY=...] [PORT=8766] [MAX_STEPS=...] [FORCE=0|1] $0"
+     echo "Runs only the four Stage 1 visual-policy tasks, sequentially. Other defaults may also be overridden by environment variable."
+     echo "FORCE=1 re-evaluates a compatible completed checkpoint; incompatible artifacts require a distinct OUTPUT_DIR."
+ }
+@@ -77,6 +78,10 @@
+ }
+ 
+ TASKS=(TurnOffSinkFaucet CoffeePressButton TurnOffMicrowave CloseSingleDoor)
++MAX_STEPS_ARGS=()
++if [[ -n "$MAX_STEPS" ]]; then
++    MAX_STEPS_ARGS=(--max-steps "$MAX_STEPS")
++fi
+ MODES=()
+ RUNNABLE=0
+ for task in "${TASKS[@]}"; do
+@@ -84,7 +89,8 @@
+     status=$("$POLICY_PY" "$ROOT/stage1_vision.py" "$task" --check-artifacts \
+         --data-dir "$DATA_DIR" --output-dir "$OUTPUT_DIR" --checkpoint "$checkpoint" \
+         --steps "$STEPS" --batch-size "$BATCH_SIZE" --microbatch "$MICROBATCH" \
+-        --n-train "$N_TRAIN" --n-eval "$N_EVAL" --seed "$SEED" --eval-seed "$EVAL_SEED")
++        --n-train "$N_TRAIN" --n-eval "$N_EVAL" --seed "$SEED" --eval-seed "$EVAL_SEED" \
++        "${MAX_STEPS_ARGS[@]}")
+     case "$status" in
+         train-eval|eval|skip) ;;
+         *) echo "[campaign] invalid artifact status for $task: $status" >&2; exit 2 ;;
+@@ -135,7 +141,7 @@
+     result="$OUTPUT_DIR/${task}_native.json"
+     CURRENT_LOG="$LOG_DIR/$task.log"
+     if [[ "$mode" == skip ]]; then
+-        echo "[skip] $task has a complete result matching data, checkpoint, split, budgets, and seeds: $result"
++        echo "[skip] $task has a complete result matching data, checkpoint, split, budgets, seeds, and max steps: $result"
+         continue
+     fi
+     echo "[start] $task mode=$mode $(date --iso-8601=seconds); log=$CURRENT_LOG"
+@@ -144,6 +150,7 @@
+         --checkpoint "$checkpoint" --port "$PORT" --steps "$STEPS" \
+         --batch-size "$BATCH_SIZE" --microbatch "$MICROBATCH" \
+         --n-train "$N_TRAIN" --n-eval "$N_EVAL" --seed "$SEED" --eval-seed "$EVAL_SEED" \
++        "${MAX_STEPS_ARGS[@]}" \
+         >>"$CURRENT_LOG" 2>&1 &
+     CURRENT_PID=$!
+     wait "$CURRENT_PID"
+--- /tmp/stage1-final-fixbase.DDLogu/test_stage1_vision.py	2026-09-10 11:01:51.843733636 +0900
++++ test_stage1_vision.py	2026-09-10 11:05:35.487720443 +0900
+@@ -12,6 +12,7 @@
+ from dp_min import DiffusionPolicy, MinMax, VisualDiffusionPolicy, prepare_rgb
+ from download_robocasa_vision_data import dataset_path
+ from robocasa_vision_data import EpisodeWindows, PAPER, PROPRIO_KEYS, VisionDataset, split_demos
++from robocasa_vision_bridge import VisionTaskState
+ from stage1_vision import (
+     campaign_artifact_status,
+     comparison_result,
+@@ -290,10 +291,10 @@
+ 
+ 
+ def requested_experiment(data, *, n_train=2, n_eval=2, steps=15_000, batch_size=256,
+-                         microbatch=16, training_seed=0, eval_seed=0):
++                         microbatch=16, training_seed=0, eval_seed=0, max_steps=None):
+     return experiment_request(
+         data.metadata["task"], data.metadata, n_train, n_eval, steps, batch_size,
+-        microbatch, training_seed, eval_seed)
++        microbatch, training_seed, eval_seed, max_steps)
+ 
+ 
+ def test_campaign_artifact_status_covers_fresh_eval_and_skip(tmp_path: Path):
+@@ -358,6 +359,57 @@
+         campaign_artifact_status(checkpoint_path, result_path, data, requested_experiment(data))
+ 
+ 
++def test_campaign_rejects_short_horizon_result_for_default_request(tmp_path: Path):
++    checkpoint_path, result_path, data, checkpoint = artifact_fixture(tmp_path)
++    write_result(result_path, checkpoint_path, data, checkpoint, 2)
++    result = json.loads(result_path.read_text())
++    result["max_steps"] = 1
++    result_path.write_text(json.dumps(result))
++
++    with pytest.raises(ValueError, match="evaluation max steps"):
++        campaign_artifact_status(checkpoint_path, result_path, data, requested_experiment(data))
++
++
++def test_task_specific_max_steps_defaults_and_override():
++    sink = checkpoint_metadata()
++    coffee = dict(checkpoint_metadata(), task="CoffeePressButton")
++    args = (2, 2, 15_000, 256, 16, 0, 0)
++
++    assert experiment_request("TurnOffSinkFaucet", sink, *args)["max_steps"] == 500
++    assert experiment_request("CoffeePressButton", coffee, *args)["max_steps"] == 300
++    assert experiment_request("CoffeePressButton", coffee, *args, max_steps=17)["max_steps"] == 17
++
++
++class CloseTracker:
++    def __init__(self, failure=None):
++        self.closed = False
++        self.failure = failure
++
++    def close(self):
++        self.closed = True
++        if self.failure is not None:
++            raise self.failure
++
++
++def test_vision_task_cleanup_closes_underlying_sim_and_hdf5_without_masking_failure():
++    expected = RuntimeError("simulator close failed")
++    simulator = CloseTracker(expected)
++    data_failure = RuntimeError("HDF5 close failed")
++    data = CloseTracker(data_failure)
++    state = VisionTaskState.__new__(VisionTaskState)
++    state.env = SimpleNamespace(env=simulator)
++    state.data = data
++
++    with pytest.raises(RuntimeError, match="simulator close failed") as raised:
++        state.close()
++
++    assert raised.value is expected
++    assert raised.value.__cause__ is data_failure
++    assert simulator.closed
++    assert data.closed
++    assert state.env is None
++
++
+ class FakePolicy:
+     n_obs = 2
+     n_action_steps = 8

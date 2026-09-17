@@ -1,0 +1,41 @@
+--- /tmp/task1_pre_download.py	2026-09-10 09:42:21.652036024 +0900
++++ download_robocasa_vision_data.py	2026-09-10 09:41:31.350705650 +0900
+@@ -210,6 +210,8 @@
+     partial_path = final_path.with_suffix(final_path.suffix + ".partial")
+     if final_path.exists():
+         return validate_dataset(final_path)
++    if verify_only:
++        raise FileNotFoundError(f"missing completed dataset: {final_path}")
+     # A prior process may have finished receiving the bytes but stopped before
+     # finalization. Avoid an unnecessary Range request (which some servers
+     # answer with 416 for a complete local file) in that case.
+@@ -221,8 +223,6 @@
+         else:
+             os.rename(partial_path, final_path)
+             return DatasetSummary(final_path, summary.demo_count, summary.image_keys, summary.rgb_image_keys)
+-    if verify_only:
+-        raise FileNotFoundError(f"missing completed dataset: {final_path}")
+ 
+     print(f"[download] {task} -> {partial_path}", flush=True)
+     download_to_partial(TASK_URLS[task], partial_path)
+--- /tmp/task1_pre_test.py	2026-09-10 09:42:21.654035998 +0900
++++ test_download_robocasa_vision_data.py	2026-09-10 09:41:31.484703835 +0900
+@@ -135,6 +135,18 @@
+     assert acquisition.main(["--verify", "--task", "CloseSingleDoor", "--output-dir", str(tmp_path)]) == 1
+ 
+ 
++def test_verify_mode_does_not_finalize_or_inspect_a_valid_partial(tmp_path: Path) -> None:
++    task = "CloseSingleDoor"
++    partial = acquisition.dataset_path(tmp_path, task).with_suffix(".hdf5.partial")
++    make_dataset(partial)
++    before = partial.read_bytes()
++
++    assert acquisition.main(["--verify", "--task", task, "--output-dir", str(tmp_path)]) == 1
++    assert partial.exists()
++    assert partial.read_bytes() == before
++    assert not acquisition.dataset_path(tmp_path, task).exists()
++
++
+ def test_refuses_state_only_directory_as_destination() -> None:
+     with pytest.raises(ValueError, match="state-only"):
+         acquisition._ensure_safe_output_dir(acquisition.STATE_ONLY_DATA_DIR)

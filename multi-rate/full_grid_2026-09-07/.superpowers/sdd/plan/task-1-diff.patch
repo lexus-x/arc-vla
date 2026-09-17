@@ -1,0 +1,427 @@
+--- /dev/null	2026-08-17 03:48:18.012999965 +0900
++++ download_robocasa_vision_data.py	2026-09-10 09:38:10.931647478 +0900
+@@ -0,0 +1,281 @@
++#!/usr/bin/env python3
++"""Download and validate the Stage 1 RoboCasa ``human_im`` datasets.
++
++The downloader deliberately keeps its state in ``*.partial`` files.  A final
++HDF5 path is created only after the file has passed the same validation used by
++``--verify``.  This makes it safe to stop and resume a download without
++mistaking a truncated file for a usable dataset.
++"""
++
++from __future__ import annotations
++
++import argparse
++from dataclasses import dataclass
++import json
++import os
++from pathlib import Path
++import sys
++from typing import Callable, Iterable
++from urllib.error import HTTPError, URLError
++from urllib.request import Request, urlopen
++
++import h5py
++
++
++ROOT = Path(__file__).resolve().parent
++DEFAULT_OUTPUT_DIR = ROOT / "robocasa_data_vision"
++STATE_ONLY_DATA_DIR = ROOT / "robocasa_data"
++USER_AGENT = "Mozilla/5.0"
++TASK_URLS: dict[str, str] = {
++    "TurnOffSinkFaucet": "https://utexas.box.com/shared/static/ceewfn4ydhprupdcdppfe8wu4x61oxdg.hdf5",
++    "CoffeePressButton": "https://utexas.box.com/shared/static/l5dnmcfd0r36vhdqgjchxo20vajt7ohl.hdf5",
++    "TurnOffMicrowave": "https://utexas.box.com/shared/static/0drm2h7fgd5857x8xgcj1lph23srpbj1.hdf5",
++    "CloseSingleDoor": "https://utexas.box.com/shared/static/2wnm0u1x9fp9ni02pmzqzhpjsb1kgfrr.hdf5",
++}
++
++
++class DatasetValidationError(ValueError):
++    """Raised when an HDF5 file is not a usable RoboCasa vision dataset."""
++
++
++@dataclass(frozen=True)
++class DatasetSummary:
++    path: Path
++    demo_count: int
++    image_keys: tuple[str, ...]
++    rgb_image_keys: tuple[str, ...]
++
++
++def dataset_path(output_dir: Path, task: str) -> Path:
++    """Return the stable, descriptive local file name for a task."""
++    return output_dir / f"{task}_human_im.hdf5"
++
++
++def _decode_env_args(value: object) -> dict[str, object]:
++    if isinstance(value, bytes):
++        value = value.decode("utf-8")
++    # numpy string scalars have an ``item`` method but importing numpy only for
++    # this conversion would be unnecessary.
++    if not isinstance(value, str) and hasattr(value, "item"):
++        value = value.item()  # type: ignore[union-attr]
++        if isinstance(value, bytes):
++            value = value.decode("utf-8")
++    if not isinstance(value, str):
++        raise DatasetValidationError("data.attrs['env_args'] is not a JSON string")
++    try:
++        parsed = json.loads(value)
++    except json.JSONDecodeError as exc:
++        raise DatasetValidationError("data.attrs['env_args'] is not valid JSON") from exc
++    if not isinstance(parsed, dict):
++        raise DatasetValidationError("data.attrs['env_args'] must decode to a JSON object")
++    return parsed
++
++
++def _iter_datasets(group: h5py.Group) -> Iterable[tuple[str, h5py.Dataset]]:
++    found: list[tuple[str, h5py.Dataset]] = []
++
++    def collect(name: str, item: h5py.Group | h5py.Dataset) -> None:
++        if isinstance(item, h5py.Dataset):
++            found.append((name, item))
++
++    group.visititems(collect)
++    return found
++
++
++def _is_image_key(name: str) -> bool:
++    lowered = name.lower()
++    return "image" in lowered or "rgb" in lowered
++
++
++def _is_rgb_observation(dataset: h5py.Dataset) -> bool:
++    """Recognize common RoboMimic HWC and CHW RGB trajectory layouts."""
++    shape = dataset.shape
++    if len(shape) < 3:
++        return False
++    # Typical RoboMimic data is (time, height, width, channels).  The second
++    # form supports channel-first data, (time, channels, height, width).
++    return shape[-1] == 3 or (len(shape) >= 4 and shape[1] == 3)
++
++
++def validate_dataset(path: Path) -> DatasetSummary:
++    """Validate a completed human_im HDF5 and return its useful metadata."""
++    try:
++        with h5py.File(path, "r") as h5file:
++            if "data" not in h5file or not isinstance(h5file["data"], h5py.Group):
++                raise DatasetValidationError("missing top-level 'data' group")
++            data = h5file["data"]
++            if "env_args" not in data.attrs:
++                raise DatasetValidationError("missing data.attrs['env_args']")
++            env_args = _decode_env_args(data.attrs["env_args"])
++            # RoboCasa records runtime settings inside ``env_kwargs``. Accept
++            # the top-level form too, since it is a valid robomimic-style
++            # serialization, while checking the actual setting rather than
++            # merely the presence of a camera-like dataset.
++            env_kwargs = env_args.get("env_kwargs", {})
++            camera_enabled = env_args.get("use_camera_obs")
++            if camera_enabled is None and isinstance(env_kwargs, dict):
++                camera_enabled = env_kwargs.get("use_camera_obs")
++            if camera_enabled is not True:
++                raise DatasetValidationError("env_args must contain use_camera_obs: true")
++
++            demo_names = list(data.keys())
++            image_keys: set[str] = set()
++            rgb_image_keys: set[str] = set()
++            demos_without_rgb: list[str] = []
++            for demo_name in demo_names:
++                demo = data[demo_name]
++                if not isinstance(demo, h5py.Group) or "obs" not in demo:
++                    raise DatasetValidationError(f"demo {demo_name!r} has no obs group")
++                obs = demo["obs"]
++                if not isinstance(obs, h5py.Group):
++                    raise DatasetValidationError(f"demo {demo_name!r} obs is not a group")
++                demo_has_rgb = False
++                for name, dataset in _iter_datasets(obs):
++                    if _is_image_key(name):
++                        image_keys.add(name)
++                        if _is_rgb_observation(dataset):
++                            rgb_image_keys.add(name)
++                            demo_has_rgb = True
++                if not demo_has_rgb:
++                    demos_without_rgb.append(demo_name)
++
++            if not rgb_image_keys:
++                raise DatasetValidationError("no RGB image observations found under demo obs")
++            if demos_without_rgb:
++                preview = ", ".join(sorted(demos_without_rgb)[:3])
++                raise DatasetValidationError(f"RGB image observations missing from demo(s): {preview}")
++            return DatasetSummary(
++                path=path,
++                demo_count=len(demo_names),
++                image_keys=tuple(sorted(image_keys)),
++                rgb_image_keys=tuple(sorted(rgb_image_keys)),
++            )
++    except OSError as exc:
++        raise DatasetValidationError(f"cannot open as HDF5: {exc}") from exc
++
++
++def download_to_partial(
++    url: str,
++    partial_path: Path,
++    *,
++    timeout: float = 60.0,
++    opener: Callable[..., object] = urlopen,
++    chunk_size: int = 1024 * 1024,
++) -> None:
++    """Fetch *url* into *partial_path*, appending only after a valid Range reply.
++
++    ``urllib`` follows HTTP redirects by default.  Servers that ignore a Range
++    request are handled by safely restarting the partial file rather than
++    appending a second complete response to it.
++    """
++    partial_path.parent.mkdir(parents=True, exist_ok=True)
++    offset = partial_path.stat().st_size if partial_path.exists() else 0
++    headers = {"User-Agent": USER_AGENT}
++    if offset:
++        headers["Range"] = f"bytes={offset}-"
++    request = Request(url, headers=headers)
++    response = opener(request, timeout=timeout)
++    try:
++        status = getattr(response, "status", None)
++        if status is None:
++            status = response.getcode()  # type: ignore[union-attr]
++        content_range = response.headers.get("Content-Range", "")  # type: ignore[union-attr]
++        append = offset > 0 and status == 206 and content_range.startswith(f"bytes {offset}-")
++        mode = "ab" if append else "wb"
++        with partial_path.open(mode) as destination:
++            while chunk := response.read(chunk_size):  # type: ignore[union-attr]
++                destination.write(chunk)
++    finally:
++        response.close()  # type: ignore[union-attr]
++
++
++def _print_summary(task: str, summary: DatasetSummary) -> None:
++    print(f"[valid] {task}: {summary.path}")
++    print(f"        demos: {summary.demo_count}")
++    print(f"        camera image keys: {', '.join(summary.image_keys)}")
++    print(f"        RGB image keys: {', '.join(summary.rgb_image_keys)}")
++
++
++def _ensure_safe_output_dir(output_dir: Path) -> None:
++    resolved_output = output_dir.resolve()
++    resolved_state_only = STATE_ONLY_DATA_DIR.resolve()
++    if resolved_output == resolved_state_only or resolved_state_only in resolved_output.parents:
++        raise ValueError(
++            f"refusing output directory inside state-only data directory: {resolved_state_only}"
++        )
++
++
++def run_task(task: str, output_dir: Path, verify_only: bool) -> DatasetSummary:
++    final_path = dataset_path(output_dir, task)
++    partial_path = final_path.with_suffix(final_path.suffix + ".partial")
++    if final_path.exists():
++        return validate_dataset(final_path)
++    # A prior process may have finished receiving the bytes but stopped before
++    # finalization. Avoid an unnecessary Range request (which some servers
++    # answer with 416 for a complete local file) in that case.
++    if partial_path.exists():
++        try:
++            summary = validate_dataset(partial_path)
++        except DatasetValidationError:
++            pass
++        else:
++            os.rename(partial_path, final_path)
++            return DatasetSummary(final_path, summary.demo_count, summary.image_keys, summary.rgb_image_keys)
++    if verify_only:
++        raise FileNotFoundError(f"missing completed dataset: {final_path}")
++
++    print(f"[download] {task} -> {partial_path}", flush=True)
++    download_to_partial(TASK_URLS[task], partial_path)
++    summary = validate_dataset(partial_path)
++    # ``rename`` is atomic within the output directory.  A pre-existing final
++    # path was validated and returned above, so interrupted downloads can only
++    # leave the resumable partial file behind.
++    os.rename(partial_path, final_path)
++    return DatasetSummary(final_path, summary.demo_count, summary.image_keys, summary.rgb_image_keys)
++
++
++def build_parser() -> argparse.ArgumentParser:
++    parser = argparse.ArgumentParser(
++        description="Download or verify RoboCasa Stage 1 human_im vision datasets."
++    )
++    parser.add_argument(
++        "--task",
++        choices=tuple(TASK_URLS),
++        action="append",
++        help="Task to process; may be repeated. Defaults to all four tasks.",
++    )
++    parser.add_argument(
++        "--verify",
++        action="store_true",
++        help="Validate completed local files only; never download.",
++    )
++    parser.add_argument(
++        "--output-dir",
++        type=Path,
++        default=DEFAULT_OUTPUT_DIR,
++        help=f"Destination directory (default: {DEFAULT_OUTPUT_DIR}).",
++    )
++    return parser
++
++
++def main(argv: list[str] | None = None) -> int:
++    args = build_parser().parse_args(argv)
++    try:
++        _ensure_safe_output_dir(args.output_dir)
++        tasks = args.task or list(TASK_URLS)
++        failures = 0
++        for task in tasks:
++            try:
++                summary = run_task(task, args.output_dir, args.verify)
++                _print_summary(task, summary)
++            except (DatasetValidationError, FileNotFoundError, HTTPError, URLError, OSError) as exc:
++                failures += 1
++                print(f"[error] {task}: {exc}", file=sys.stderr)
++        return 1 if failures else 0
++    except ValueError as exc:
++        print(f"[error] {exc}", file=sys.stderr)
++        return 2
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
+--- /dev/null	2026-08-17 03:48:18.012999965 +0900
++++ test_download_robocasa_vision_data.py	2026-09-10 09:38:11.067645307 +0900
+@@ -0,0 +1,140 @@
++import io
++import json
++from pathlib import Path
++
++import h5py
++import pytest
++
++import download_robocasa_vision_data as acquisition
++
++
++def make_dataset(path: Path, *, camera: bool = True, camera_enabled: bool = True, demos: int = 2) -> None:
++    with h5py.File(path, "w") as h5file:
++        data = h5file.create_group("data")
++        data.attrs["env_args"] = json.dumps({"env_kwargs": {"use_camera_obs": camera_enabled}})
++        for index in range(demos):
++            obs = data.create_group(f"demo_{index}").create_group("obs")
++            obs.create_dataset("robot0_eef_pos", data=[[0.0, 0.0, 0.0]])
++            if camera:
++                obs.create_dataset("agentview_image", data=[[[[0, 0, 0]]]], dtype="uint8")
++
++
++def test_validate_dataset_reports_camera_keys_and_demo_count(tmp_path: Path) -> None:
++    path = tmp_path / "vision.hdf5"
++    make_dataset(path)
++
++    summary = acquisition.validate_dataset(path)
++
++    assert summary.demo_count == 2
++    assert summary.image_keys == ("agentview_image",)
++    assert summary.rgb_image_keys == ("agentview_image",)
++
++
++@pytest.mark.parametrize(
++    ("camera", "camera_enabled", "message"),
++    [
++        (False, True, "no RGB image observations"),
++        (True, False, "use_camera_obs"),
++    ],
++)
++def test_validate_dataset_rejects_nonvision_files(
++    tmp_path: Path, camera: bool, camera_enabled: bool, message: str
++) -> None:
++    path = tmp_path / "invalid.hdf5"
++    make_dataset(path, camera=camera, camera_enabled=camera_enabled)
++
++    with pytest.raises(acquisition.DatasetValidationError, match=message):
++        acquisition.validate_dataset(path)
++
++
++class FakeResponse:
++    def __init__(self, payload: bytes, *, status: int, content_range: str = "") -> None:
++        self._body = io.BytesIO(payload)
++        self.status = status
++        self.headers = {"Content-Range": content_range}
++
++    def read(self, size: int) -> bytes:
++        return self._body.read(size)
++
++    def close(self) -> None:
++        self._body.close()
++
++
++def test_download_resumes_only_after_matching_range_response(tmp_path: Path) -> None:
++    partial = tmp_path / "dataset.hdf5.partial"
++    partial.write_bytes(b"first-")
++    requests = []
++
++    def opener(request, *, timeout: float):
++        requests.append(request)
++        return FakeResponse(b"second", status=206, content_range="bytes 6-11/12")
++
++    acquisition.download_to_partial("https://example.invalid/file", partial, opener=opener)
++
++    assert requests[0].get_header("User-agent") == "Mozilla/5.0"
++    assert requests[0].get_header("Range") == "bytes=6-"
++    assert partial.read_bytes() == b"first-second"
++
++
++def test_download_restarts_when_server_ignores_range(tmp_path: Path) -> None:
++    partial = tmp_path / "dataset.hdf5.partial"
++    partial.write_bytes(b"old-")
++
++    def opener(request, *, timeout: float):
++        return FakeResponse(b"replacement", status=200)
++
++    acquisition.download_to_partial("https://example.invalid/file", partial, opener=opener)
++
++    assert partial.read_bytes() == b"replacement"
++
++
++def test_run_task_validates_partial_before_atomic_finalization(
++    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
++) -> None:
++    source = tmp_path / "source.hdf5"
++    make_dataset(source)
++
++    def fake_download(url: str, partial_path: Path) -> None:
++        partial_path.write_bytes(source.read_bytes())
++
++    monkeypatch.setattr(acquisition, "download_to_partial", fake_download)
++    summary = acquisition.run_task("CoffeePressButton", tmp_path, verify_only=False)
++    final_path = acquisition.dataset_path(tmp_path, "CoffeePressButton")
++
++    assert summary.path == final_path
++    assert final_path.exists()
++    assert not final_path.with_suffix(final_path.suffix + ".partial").exists()
++
++
++def test_run_task_finalizes_a_valid_existing_partial_without_network(
++    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
++) -> None:
++    task = "TurnOffMicrowave"
++    partial = acquisition.dataset_path(tmp_path, task).with_suffix(".hdf5.partial")
++    make_dataset(partial)
++
++    def fail_if_called(*args, **kwargs) -> None:
++        raise AssertionError("a valid partial must not be downloaded again")
++
++    monkeypatch.setattr(acquisition, "download_to_partial", fail_if_called)
++    summary = acquisition.run_task(task, tmp_path, verify_only=False)
++
++    assert summary.demo_count == 2
++    assert acquisition.dataset_path(tmp_path, task).exists()
++
++
++def test_verify_mode_is_network_free_and_task_selectable(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
++    task = "CoffeePressButton"
++    make_dataset(acquisition.dataset_path(tmp_path, task))
++
++    assert acquisition.main(["--verify", "--task", task, "--output-dir", str(tmp_path)]) == 0
++    assert "demos: 2" in capsys.readouterr().out
++
++
++def test_verify_mode_fails_for_missing_dataset(tmp_path: Path) -> None:
++    assert acquisition.main(["--verify", "--task", "CloseSingleDoor", "--output-dir", str(tmp_path)]) == 1
++
++
++def test_refuses_state_only_directory_as_destination() -> None:
++    with pytest.raises(ValueError, match="state-only"):
++        acquisition._ensure_safe_output_dir(acquisition.STATE_ONLY_DATA_DIR)

@@ -1,0 +1,9 @@
+[start] dp_RC-OpenDrawer_k4 23:52:13
+[end] dp_RC-OpenDrawer_k4 rc=0 00:19:11
+[start] dp_RC-OpenDrawer 00:19:11
+[end] dp_RC-OpenDrawer rc=0 00:46:19
+[start] dp_RC-PnPCounterToStove_k4 00:46:19
+[end] dp_RC-PnPCounterToStove_k4 rc=0 01:26:57
+[start] dp_RC-PnPCounterToStove 01:26:57
+[end] dp_RC-PnPCounterToStove rc=0 01:57:58
+[robocasa-qp] ALL DONE 01:57:58

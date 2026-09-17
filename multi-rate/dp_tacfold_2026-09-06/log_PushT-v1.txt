@@ -1,0 +1,46 @@
+[harvest] 50/200
+[harvest] 100/200
+[harvest] 150/200
+[harvest] 200/200
+[data] 200 demos harvested in 1048s
+[data] 13352 windows, obs_dim=31, act_dim=6, raw |a|>1 frac=0.128
+[train] step 1/30000 loss=1.18843
+[train] step 2000/30000 loss=0.03644
+[train] step 4000/30000 loss=0.03358
+[train] step 6000/30000 loss=0.02293
+[train] step 8000/30000 loss=0.01734
+[train] step 10000/30000 loss=0.01481
+[train] step 12000/30000 loss=0.01389
+[train] step 14000/30000 loss=0.01198
+[train] step 16000/30000 loss=0.00712
+[train] step 18000/30000 loss=0.00519
+[train] step 20000/30000 loss=0.00473
+[train] step 22000/30000 loss=0.00480
+[train] step 24000/30000 loss=0.00443
+[train] step 26000/30000 loss=0.00321
+[train] step 28000/30000 loss=0.00399
+[train] step 30000/30000 loss=0.00205
+[train] saved /home/user/Desktop/multi-rate/dp_tacfold_2026-09-06/dp_PushT-v1.pt
+[eval] [10/100] native=3 zoh=3 spline=3 spline_satfix=3 pchip=2 pchip_satfix=3 tac_fold=5 tac_fold_satfix=3
+[eval] [20/100] native=5 zoh=4 spline=6 spline_satfix=4 pchip=2 pchip_satfix=5 tac_fold=6 tac_fold_satfix=4
+[eval] [30/100] native=7 zoh=6 spline=7 spline_satfix=6 pchip=5 pchip_satfix=6 tac_fold=7 tac_fold_satfix=6
+[eval] [40/100] native=10 zoh=7 spline=10 spline_satfix=10 pchip=8 pchip_satfix=6 tac_fold=7 tac_fold_satfix=8
+[eval] [50/100] native=12 zoh=8 spline=14 spline_satfix=15 pchip=12 pchip_satfix=7 tac_fold=8 tac_fold_satfix=11
+[eval] [60/100] native=14 zoh=9 spline=18 spline_satfix=19 pchip=17 pchip_satfix=11 tac_fold=11 tac_fold_satfix=14
+[eval] [70/100] native=16 zoh=10 spline=20 spline_satfix=23 pchip=21 pchip_satfix=13 tac_fold=15 tac_fold_satfix=19
+[eval] [80/100] native=20 zoh=12 spline=26 spline_satfix=30 pchip=26 pchip_satfix=18 tac_fold=18 tac_fold_satfix=25
+[eval] [90/100] native=25 zoh=14 spline=29 spline_satfix=33 pchip=28 pchip_satfix=23 tac_fold=21 tac_fold_satfix=27
+[eval] [100/100] native=26 zoh=16 spline=32 spline_satfix=38 pchip=30 pchip_satfix=25 tac_fold=24 tac_fold_satfix=30
+[eval] wall 4770s for 100 eps x 8 arms
+
+=== PushT-v1 closed-loop DP, k=2, n=100 ===
+  native             26.0% (26/100)  | vs zoh:  +10.0pp p=0.0525
+  zoh                16.0% (16/100)  | vs native:  -10.0pp p=0.0525
+  spline             32.0% (32/100)  | vs zoh:  +16.0pp p=0.0113  | vs native:   +6.0pp p=0.362
+  spline_satfix      38.0% (38/100)  | vs zoh:  +22.0pp p=5.95e-05  | vs native:  +12.0pp p=0.0357
+  pchip              30.0% (30/100)  | vs zoh:  +14.0pp p=0.0161  | vs native:   +4.0pp p=0.585
+  pchip_satfix       25.0% (25/100)  | vs zoh:   +9.0pp p=0.0784  | vs native:   -1.0pp p=1
+  tac_fold           24.0% (24/100)  | vs zoh:   +8.0pp p=0.115  | vs native:   -2.0pp p=0.845
+  tac_fold_satfix    30.0% (30/100)  | vs zoh:  +14.0pp p=0.00661  | vs native:   +4.0pp p=0.541
+  policy raw |a|>1 frac (pre-clip): 0.073
+[saved] /home/user/Desktop/multi-rate/dp_tacfold_2026-09-06/result_PushT-v1.json

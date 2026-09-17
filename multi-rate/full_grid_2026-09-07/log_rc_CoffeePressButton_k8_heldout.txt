@@ -1,0 +1,5 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-CoffeePressButton_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 4652 windows, obs_dim=82, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CoffeePressButton_f0.pt
+[eval] [10/15] native=3 tac_fold=3 tac_fold_satfix=3 qp=3 qp_anchor=3 bspline_eps_raw=3 bspline=3

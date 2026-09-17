@@ -1,0 +1,55 @@
+{
+  "k": 4,
+  "horizon": 8,
+  "n_hold": 6,
+  "tasks": {
+    "RC-CloseSingleDoor": {
+      "episodes": 54,
+      "windows": 13502,
+      "windows_changed_by_hold": 0,
+      "gripper_steps": 108016,
+      "accuracy": {
+        "zoh": 1.0,
+        "spline_satfix": 1.0,
+        "bspline_eps_satfix": 1.0,
+        "gripper_sync": 1.0
+      }
+    },
+    "RC-CoffeePressButton": {
+      "episodes": 54,
+      "windows": 6462,
+      "windows_changed_by_hold": 628,
+      "gripper_steps": 51696,
+      "accuracy": {
+        "zoh": 0.9755880532342928,
+        "spline_satfix": 0.9755880532342928,
+        "bspline_eps_satfix": 0.9755880532342928,
+        "gripper_sync": 1.0
+      }
+    },
+    "RC-TurnOffMicrowave": {
+      "episodes": 54,
+      "windows": 11827,
+      "windows_changed_by_hold": 155,
+      "gripper_steps": 94616,
+      "accuracy": {
+        "zoh": 0.9965650629914602,
+        "spline_satfix": 0.9965650629914602,
+        "bspline_eps_satfix": 0.9965650629914602,
+        "gripper_sync": 1.0
+      }
+    },
+    "RC-TurnOffSinkFaucet": {
+      "episodes": 54,
+      "windows": 10171,
+      "windows_changed_by_hold": 0,
+      "gripper_steps": 81368,
+      "accuracy": {
+        "zoh": 1.0,
+        "spline_satfix": 1.0,
+        "bspline_eps_satfix": 1.0,
+        "gripper_sync": 1.0
+      }
+    }
+  }
+}

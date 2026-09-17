@@ -1,0 +1,27 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] 200 demos harvested in 0s
+[data] 23207 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_can.pt
+[eval] [10/100] native=10 zoh=10 bspline_eps_raw=10 bspline_eps05_raw=10 qp_eps05=10 qp_eps10=10
+[eval] [20/100] native=20 zoh=20 bspline_eps_raw=20 bspline_eps05_raw=20 qp_eps05=20 qp_eps10=20
+[eval] [30/100] native=30 zoh=30 bspline_eps_raw=30 bspline_eps05_raw=30 qp_eps05=30 qp_eps10=30
+[eval] [40/100] native=40 zoh=40 bspline_eps_raw=40 bspline_eps05_raw=40 qp_eps05=40 qp_eps10=40
+[eval] [50/100] native=50 zoh=50 bspline_eps_raw=50 bspline_eps05_raw=50 qp_eps05=50 qp_eps10=50
+[eval] [60/100] native=59 zoh=59 bspline_eps_raw=59 bspline_eps05_raw=59 qp_eps05=59 qp_eps10=60
+[eval] [70/100] native=68 zoh=68 bspline_eps_raw=68 bspline_eps05_raw=68 qp_eps05=68 qp_eps10=69
+[eval] [80/100] native=78 zoh=78 bspline_eps_raw=78 bspline_eps05_raw=78 qp_eps05=78 qp_eps10=79
+[eval] [90/100] native=88 zoh=88 bspline_eps_raw=88 bspline_eps05_raw=88 qp_eps05=88 qp_eps10=89
+[eval] [100/100] native=98 zoh=98 bspline_eps_raw=98 bspline_eps05_raw=98 qp_eps05=98 qp_eps10=99
+[eval] wall 1097s for 100 eps x 6 arms
+
+=== can closed-loop DP, k=1, n=100 ===
+  native             98.0% (98/100)  | vs zoh:   +0.0pp p=1
+  zoh                98.0% (98/100)  | vs native:   +0.0pp p=1
+  bspline_eps_raw    98.0% (98/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  bspline_eps05_raw   98.0% (98/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp_eps05           98.0% (98/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp_eps10           99.0% (99/100)  | vs zoh:   +1.0pp p=1  | vs native:   +1.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_can_k1.json

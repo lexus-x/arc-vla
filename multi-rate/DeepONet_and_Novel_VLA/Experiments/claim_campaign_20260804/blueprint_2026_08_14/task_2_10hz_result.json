@@ -1,0 +1,10 @@
+{
+  "task_idx": 2,
+  "task_name": "StackCube-v1",
+  "n_episodes": 50,
+  "ours_success": 0,
+  "spline_success": 0,
+  "ours_sr": 0.0,
+  "spline_sr": 0.0,
+  "delta_pp": 0.0
+}

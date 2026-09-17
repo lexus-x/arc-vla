@@ -1,0 +1,88 @@
+{
+  "policy": "lerobot/diffusion_pusht",
+  "k": 2,
+  "n_episodes": 2,
+  "start_seed": 1000,
+  "arms": {
+    "native": {
+      "avg_max_reward": 1.0,
+      "pc_success": 100.0,
+      "avg_sum_reward": 84.05205206722,
+      "n_success": 2,
+      "n_episodes": 2,
+      "wall_s": 26.778390884399414,
+      "max_rewards": [
+        1.0,
+        1.0
+      ],
+      "successes": [
+        true,
+        true
+      ]
+    },
+    "zoh": {
+      "avg_max_reward": 0.9966098898126602,
+      "pc_success": 50.0,
+      "avg_sum_reward": 77.65357854314651,
+      "n_success": 1,
+      "n_episodes": 2,
+      "wall_s": 30.69026827812195,
+      "max_rewards": [
+        1.0,
+        0.9932197796253204
+      ],
+      "successes": [
+        true,
+        false
+      ]
+    },
+    "spline": {
+      "avg_max_reward": 0.9782560202101045,
+      "pc_success": 0.0,
+      "avg_sum_reward": 133.3970764291832,
+      "n_success": 0,
+      "n_episodes": 2,
+      "wall_s": 29.822301149368286,
+      "max_rewards": [
+        0.9965224541717728,
+        0.9599895862484363
+      ],
+      "successes": [
+        false,
+        false
+      ]
+    },
+    "tac_fold": {
+      "avg_max_reward": 1.0,
+      "pc_success": 100.0,
+      "avg_sum_reward": 87.64637022553413,
+      "n_success": 2,
+      "n_episodes": 2,
+      "wall_s": 25.07474160194397,
+      "max_rewards": [
+        1.0,
+        1.0
+      ],
+      "successes": [
+        true,
+        true
+      ]
+    },
+    "bspline_eps_raw": {
+      "avg_max_reward": 0.9885662655981471,
+      "pc_success": 0.0,
+      "avg_sum_reward": 141.3676128517894,
+      "n_success": 0,
+      "n_episodes": 2,
+      "wall_s": 30.420758962631226,
+      "max_rewards": [
+        0.9829394799904099,
+        0.9941930512058843
+      ],
+      "successes": [
+        false,
+        false
+      ]
+    }
+  }
+}

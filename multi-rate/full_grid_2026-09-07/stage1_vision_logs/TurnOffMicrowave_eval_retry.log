@@ -1,0 +1,17 @@
+[eval] TurnOffMicrowave 1/15 success=True steps=282
+[eval] TurnOffMicrowave 2/15 success=False steps=500
+[eval] TurnOffMicrowave 3/15 success=True steps=1
+[eval] TurnOffMicrowave 4/15 success=False steps=500
+[eval] TurnOffMicrowave 5/15 success=False steps=500
+[eval] TurnOffMicrowave 6/15 success=False steps=500
+[eval] TurnOffMicrowave 7/15 success=False steps=500
+[eval] TurnOffMicrowave 8/15 success=False steps=500
+[eval] TurnOffMicrowave 9/15 success=True steps=255
+[eval] TurnOffMicrowave 10/15 success=True steps=262
+[eval] TurnOffMicrowave 11/15 success=False steps=500
+[eval] TurnOffMicrowave 12/15 success=False steps=500
+[eval] TurnOffMicrowave 13/15 success=False steps=500
+[eval] TurnOffMicrowave 14/15 success=False steps=500
+[eval] TurnOffMicrowave 15/15 success=True steps=299
+[paper] Microwave: 5/15 (33.3%) vs 77%; gap -43.7 percentage points. If results remain far below the paper, demo count is the next likely cause. Stage 1 uses 35 training demos by default. Stage 2 is not started.
+EVAL_EXIT=0

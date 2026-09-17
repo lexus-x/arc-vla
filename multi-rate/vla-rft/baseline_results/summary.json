@@ -1,0 +1,30 @@
+{
+  "checkpoint": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_s0/checkpoints/8300",
+  "suite": "libero_spatial",
+  "trials_per_task": 10,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "per_seed": {
+    "0": {
+      "aggregate": 0.72,
+      "n": 100,
+      "source": "baseline_results/seed0/multirate_honest.json"
+    },
+    "1": {
+      "aggregate": 0.8200000000000001,
+      "n": 100,
+      "source": "baseline_results/seed1/multirate_honest.json"
+    },
+    "2": {
+      "aggregate": 0.78,
+      "n": 100,
+      "source": "baseline_results/seed2/multirate_honest.json"
+    }
+  },
+  "mean": 0.7733333333333334,
+  "std": 0.050332229568471706,
+  "std_ddof1_n_seeds": 3
+}

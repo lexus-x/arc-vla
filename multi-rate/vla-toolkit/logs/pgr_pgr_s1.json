@@ -1,0 +1,212 @@
+[
+  {
+    "update": 0,
+    "success_rate": 0.8285681121051311,
+    "n_episodes": 8,
+    "elapsed_s": 865.0118088722229,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1230,
+    "loss": -0.01320356392278904,
+    "grad_norm": 153.22012329101562
+  },
+  {
+    "update": 1,
+    "success_rate": 0.9579386506229639,
+    "n_episodes": 8,
+    "elapsed_s": 1651.5686514377594,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1113,
+    "loss": 0.3361142762373507,
+    "grad_norm": 137.6522216796875
+  },
+  {
+    "update": 2,
+    "success_rate": 0.8250210639089346,
+    "n_episodes": 8,
+    "elapsed_s": 2526.5172021389008,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1232,
+    "loss": -0.0026047010633900953,
+    "grad_norm": 166.62686157226562
+  },
+  {
+    "update": 3,
+    "success_rate": 0.8239427227526903,
+    "n_episodes": 8,
+    "elapsed_s": 3392.2633163928986,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1233,
+    "loss": -0.0378927587979418,
+    "grad_norm": 177.52947998046875
+  },
+  {
+    "update": 4,
+    "success_rate": 0.9899043757468462,
+    "n_episodes": 8,
+    "elapsed_s": 4179.171380281448,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1110,
+    "loss": 0.36080806934618737,
+    "grad_norm": 133.71156311035156
+  },
+  {
+    "update": 5,
+    "success_rate": 0.9785579424351454,
+    "n_episodes": 8,
+    "elapsed_s": 4963.880181312561,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1107,
+    "loss": 0.3563652415208808,
+    "grad_norm": 129.34178161621094
+  },
+  {
+    "update": 6,
+    "success_rate": 0.8017670558765531,
+    "n_episodes": 8,
+    "elapsed_s": 5828.7790241241455,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1226,
+    "loss": 0.007284712152734861,
+    "grad_norm": 159.1927947998047
+  },
+  {
+    "update": 7,
+    "success_rate": 0.827649561688304,
+    "n_episodes": 8,
+    "elapsed_s": 6699.050722837448,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1228,
+    "loss": -0.031232539200336227,
+    "grad_norm": 165.95071411132812
+  },
+  {
+    "update": 8,
+    "success_rate": 0.8115646317601204,
+    "n_episodes": 8,
+    "elapsed_s": 7571.8386261463165,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1241,
+    "loss": -0.00018754164409867994,
+    "grad_norm": 157.04579162597656
+  },
+  {
+    "update": 9,
+    "success_rate": 0.7796604335308075,
+    "n_episodes": 8,
+    "elapsed_s": 8352.15297293663,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1376,
+    "loss": 0.34467155854542586,
+    "grad_norm": 191.13832092285156
+  },
+  {
+    "update": 10,
+    "success_rate": 0.8049600962549448,
+    "n_episodes": 8,
+    "elapsed_s": 8919.458458423615,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1239,
+    "loss": -0.029961920053945424,
+    "grad_norm": 153.91253662109375
+  },
+  {
+    "update": 11,
+    "success_rate": 0.688162649050355,
+    "n_episodes": 8,
+    "elapsed_s": 9572.468403100967,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1363,
+    "loss": 0.3070044677010351,
+    "grad_norm": 169.87757873535156
+  },
+  {
+    "update": 12,
+    "success_rate": 0.813937671482563,
+    "n_episodes": 8,
+    "elapsed_s": 10169.712614297867,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1235,
+    "loss": -0.008086967239013086,
+    "grad_norm": 152.9065704345703
+  },
+  {
+    "update": 13,
+    "success_rate": 0.8488129992038012,
+    "n_episodes": 8,
+    "elapsed_s": 10775.159057378769,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1252,
+    "loss": 0.6388244943354077,
+    "grad_norm": 179.9088897705078
+  },
+  {
+    "update": 14,
+    "success_rate": 0.8183102989569306,
+    "n_episodes": 8,
+    "elapsed_s": 11375.40819144249,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.5,
+    "n_transitions": 1243,
+    "loss": -0.052752248217574266,
+    "grad_norm": 160.69711303710938
+  }
+]

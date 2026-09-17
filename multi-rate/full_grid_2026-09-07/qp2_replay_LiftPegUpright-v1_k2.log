@@ -1,0 +1,24 @@
+[LiftPegUpright-v1] k=2 eligible=941 arms=['original', 'exact_integral', 'cubic_spline_satfix', 'tac_fold_satfix', 'bspline_eps_satfix', 'qp']
+[LiftPegUpright-v1] k=2 [100/941] original=97 exact_integral=48 cubic_spline_satfix=55 tac_fold_satfix=58 bspline_eps_satfix=50 qp=56 (153s)
+[LiftPegUpright-v1] k=2 [200/941] original=196 exact_integral=93 cubic_spline_satfix=105 tac_fold_satfix=105 bspline_eps_satfix=91 qp=106 (317s)
+[LiftPegUpright-v1] k=2 [300/941] original=296 exact_integral=141 cubic_spline_satfix=165 tac_fold_satfix=163 bspline_eps_satfix=147 qp=163 (450s)
+[LiftPegUpright-v1] k=2 [400/941] original=394 exact_integral=185 cubic_spline_satfix=215 tac_fold_satfix=215 bspline_eps_satfix=194 qp=214 (537s)
+[LiftPegUpright-v1] k=2 [500/941] original=494 exact_integral=238 cubic_spline_satfix=278 tac_fold_satfix=283 bspline_eps_satfix=246 qp=275 (619s)
+[LiftPegUpright-v1] k=2 [600/941] original=593 exact_integral=290 cubic_spline_satfix=336 tac_fold_satfix=342 bspline_eps_satfix=303 qp=335 (699s)
+[LiftPegUpright-v1] k=2 [700/941] original=693 exact_integral=348 cubic_spline_satfix=396 tac_fold_satfix=403 bspline_eps_satfix=359 qp=393 (780s)
+[LiftPegUpright-v1] k=2 [800/941] original=793 exact_integral=390 cubic_spline_satfix=443 tac_fold_satfix=455 bspline_eps_satfix=403 qp=440 (864s)
+[LiftPegUpright-v1] k=2 [900/941] original=892 exact_integral=438 cubic_spline_satfix=498 tac_fold_satfix=518 bspline_eps_satfix=455 qp=496 (948s)
+[LiftPegUpright-v1] k=2 [941/941] original=932 exact_integral=464 cubic_spline_satfix=524 tac_fold_satfix=544 bspline_eps_satfix=481 qp=523 (984s)
+
+=== [LiftPegUpright-v1] k=2 n=941 ===
+  original                99.04% (932/941)  saturated_elems=0.00%
+  exact_integral          49.31% (464/941)  saturated_elems=0.00%
+  cubic_spline_satfix     55.69% (524/941)  saturated_elems=0.00%
+  tac_fold_satfix         57.81% (544/941)  saturated_elems=0.00%
+  bspline_eps_satfix      51.12% (481/941)  saturated_elems=0.00%
+  qp                      55.58% (523/941)  saturated_elems=0.00%
+  qp vs exact_integral      : +6.27pp  wins 94/35  p=2.04e-07  CI=[3.93,8.61]
+  qp vs cubic_spline_satfix : -0.11pp  wins 37/38  p=1  CI=[-1.91,1.70]
+  qp vs tac_fold_satfix     : -2.23pp  wins 26/47  p=0.0186  CI=[-4.04,-0.43]
+  qp vs bspline_eps_satfix  : +4.46pp  wins 90/48  p=0.000441  CI=[2.02,6.91]
+saved -> /home/user/Desktop/multi-rate/full_grid_2026-09-07/qp2_replay_LiftPegUpright-v1_k2.json

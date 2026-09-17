@@ -1,0 +1,18 @@
+[start] PickCube-v1 step s0 k1 14:43:49
+[end] rc=0 15:07:38
+[start] PickCube-v1 step s0 k2 15:07:38
+[end] rc=0 15:24:48
+[start] PickCube-v1 step s0 k4 15:24:48
+[end] rc=0 15:59:49
+[start] PickCube-v1 bspline s0 k1 15:59:49
+[end] rc=0 16:39:52
+[start] PickCube-v1 bspline s0 k2 16:39:52
+[end] rc=0 17:10:36
+[start] PickCube-v1 bspline s0 k4 17:10:36
+[end] rc=0 17:35:34
+[start] PickCube-v1 blocksum s0 k1 17:35:34
+[end] rc=0 18:31:35
+[start] PickCube-v1 blocksum s0 k2 18:31:35
+[end] rc=0 19:16:54
+[start] PickCube-v1 blocksum s0 k4 19:16:54
+[end] rc=0 20:24:40

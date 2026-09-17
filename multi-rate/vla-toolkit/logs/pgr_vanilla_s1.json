@@ -1,0 +1,212 @@
+[
+  {
+    "update": 0,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 488.2963299751282,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 1,
+    "success_rate": 0.625,
+    "n_episodes": 8,
+    "elapsed_s": 1167.8498017787933,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 751,
+    "loss": 0.5491421748096552,
+    "grad_norm": 102.23432159423828
+  },
+  {
+    "update": 2,
+    "success_rate": 0.375,
+    "n_episodes": 8,
+    "elapsed_s": 1840.561351776123,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 473,
+    "loss": 0.9297731569151042,
+    "grad_norm": 119.70108795166016
+  },
+  {
+    "update": 3,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 2328.9205601215363,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 4,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 2818.1161267757416,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 5,
+    "success_rate": 0.625,
+    "n_episodes": 8,
+    "elapsed_s": 3488.3070271015167,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 749,
+    "loss": 0.5712473489175015,
+    "grad_norm": 105.56092834472656
+  },
+  {
+    "update": 6,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 3975.4329760074615,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 7,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 4464.423867464066,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 8,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 4957.495220422745,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 9,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 5438.341912269592,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 10,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 5936.937388420105,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 11,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 6435.906657934189,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 12,
+    "success_rate": 0.625,
+    "n_episodes": 8,
+    "elapsed_s": 7120.451956748962,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 773,
+    "loss": 0.4645661993137769,
+    "grad_norm": 94.1734619140625
+  },
+  {
+    "update": 13,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 7614.0350568294525,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 14,
+    "success_rate": 0.5,
+    "n_episodes": 8,
+    "elapsed_s": 8086.744980096817,
+    "task_ids": [
+      5,
+      3
+    ],
+    "lambda_progress": 0.0,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  }
+]

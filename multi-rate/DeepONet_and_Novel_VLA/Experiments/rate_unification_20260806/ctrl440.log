@@ -1,0 +1,70 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 10845.00it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6543.13it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[20Hz task3] t00 OK steps=91/440 dz=-0.0057
+[20Hz task3] t01 OK steps=90/440 dz=-0.0057
+[20Hz task3] t02 OK steps=78/440 dz=+0.0002
+[20Hz task3] t03 OK steps=87/440 dz=-0.0064
+[20Hz task3] t04 OK steps=86/440 dz=-0.0051
+[20Hz task3] t05 OK steps=82/440 dz=-0.0029
+[20Hz task3] t06 OK steps=89/440 dz=-0.0089
+[20Hz task3] t07 OK steps=93/440 dz=+0.0016
+[20Hz task3] t08 OK steps=87/440 dz=-0.0057
+[20Hz task3] t09 x steps=440/440 dz=-0.0000
+[20Hz task3] t10 OK steps=81/440 dz=-0.0054
+[20Hz task3] t11 OK steps=81/440 dz=+0.0074
+[20Hz task3] t12 OK steps=87/440 dz=-0.0027
+[20Hz task3] t13 OK steps=82/440 dz=+0.0061
+[20Hz task3] t14 OK steps=83/440 dz=+0.0002
+[20Hz task3] t15 OK steps=80/440 dz=-0.0049
+[20Hz task3] t16 OK steps=81/440 dz=-0.0043
+[20Hz task3] t17 OK steps=86/440 dz=-0.0058
+[20Hz task3] t18 OK steps=82/440 dz=-0.0096
+[20Hz task3] t19 OK steps=80/440 dz=-0.0045
+[20Hz task3] t20 OK steps=88/440 dz=-0.0073
+[20Hz task3] t21 OK steps=82/440 dz=-0.0037
+[20Hz task3] t22 OK steps=82/440 dz=+0.0027
+[20Hz task3] t23 OK steps=83/440 dz=-0.0050
+[20Hz task3] t24 OK steps=82/440 dz=-0.0060
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[20Hz task5] t00 x steps=440/440 dz=-0.0229
+[20Hz task5] t01 x steps=440/440 dz=-0.0347
+[20Hz task5] t02 x steps=440/440 dz=-0.0254
+[20Hz task5] t03 x steps=440/440 dz=-0.0301
+[20Hz task5] t04 x steps=440/440 dz=-0.0267
+[20Hz task5] t05 x steps=440/440 dz=-0.0014
+[20Hz task5] t06 x steps=440/440 dz=-0.0444
+[20Hz task5] t07 x steps=440/440 dz=-0.0024
+[20Hz task5] t08 x steps=440/440 dz=-0.0200
+[20Hz task5] t09 x steps=440/440 dz=-0.0024
+[20Hz task5] t10 x steps=440/440 dz=-0.0140
+[20Hz task5] t11 x steps=440/440 dz=-0.0250
+[20Hz task5] t12 x steps=440/440 dz=-0.0097
+[20Hz task5] t13 x steps=440/440 dz=-0.0279
+[20Hz task5] t14 OK steps=94/440 dz=-0.0329
+[20Hz task5] t15 x steps=440/440 dz=-0.0143
+[20Hz task5] t16 x steps=440/440 dz=-0.0130
+[20Hz task5] t17 x steps=440/440 dz=-0.0024
+[20Hz task5] t18 x steps=440/440 dz=-0.0298
+[20Hz task5] t19 x steps=440/440 dz=-0.0024
+[20Hz task5] t20 x steps=440/440 dz=-0.0151
+[20Hz task5] t21 OK steps=103/440 dz=-0.0350
+[20Hz task5] t22 x steps=440/440 dz=+0.0142
+[20Hz task5] t23 x steps=440/440 dz=-0.0418
+[20Hz task5] t24 x steps=440/440 dz=-0.0136
+
+=== SR by rate x task ===
+  task3  20Hz: SR=96.0% dz_fail=-0.0000
+  task5  20Hz: SR= 8.0% dz_fail=-0.0151

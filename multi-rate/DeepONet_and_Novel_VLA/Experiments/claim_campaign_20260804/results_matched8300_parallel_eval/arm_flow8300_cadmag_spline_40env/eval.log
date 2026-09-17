@@ -1,0 +1,93 @@
+[suite] libero_spatial -> /home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/results_matched8300_parallel_eval/arm_flow8300_cadmag_spline_40env/multirate_honest.json
+
+============================================================
+ARM flow8300_cadmag_spline_40env
+============================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+[stats] flow8300_cadmag_spline_40env: normalizing with lerobot/libero_spatial_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 81442.80it/s]
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  41%|████      | 199/489 [00:00<00:00, 1953.13it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 2734.55it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[flow8300_cadmag_spline_40env] spline resample -> 100 steps, pose deltas rescaled
+[flow8300_cadmag_spline_40env] magscale: raw pose deltas x2 (restores native per-step travel)
+[flow8300_cadmag_spline_40env] resolved-cadence: 20 Hz decisions in a 40 Hz sim (1 query per 2 env steps); intermediates taken from the plan
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[flow8300_cadmag_spline_40env] settle window scaled to 20 steps (0.50 s at 40 Hz)
+[flow8300_cadmag_spline_40env] task 0 trial 00: OK (202/440 steps)
+[flow8300_cadmag_spline_40env] task 0 trial 01: OK (153/440 steps)
+[flow8300_cadmag_spline_40env] task 0 trial 02: x (440/440 steps)
+[flow8300_cadmag_spline_40env] task 0 trial 03: OK (145/440 steps)
+[flow8300_cadmag_spline_40env] task 0 trial 04: OK (147/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_cadmag_spline_40env] task 1 trial 00: OK (227/440 steps)
+[flow8300_cadmag_spline_40env] task 1 trial 01: OK (214/440 steps)
+[flow8300_cadmag_spline_40env] task 1 trial 02: OK (229/440 steps)
+[flow8300_cadmag_spline_40env] task 1 trial 03: OK (216/440 steps)
+[flow8300_cadmag_spline_40env] task 1 trial 04: x (440/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_cadmag_spline_40env] task 2 trial 00: OK (203/440 steps)
+[flow8300_cadmag_spline_40env] task 2 trial 01: OK (199/440 steps)
+[flow8300_cadmag_spline_40env] task 2 trial 02: OK (192/440 steps)
+[flow8300_cadmag_spline_40env] task 2 trial 03: OK (191/440 steps)
+[flow8300_cadmag_spline_40env] task 2 trial 04: OK (191/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_cadmag_spline_40env] task 3 trial 00: OK (162/440 steps)
+[flow8300_cadmag_spline_40env] task 3 trial 01: OK (175/440 steps)
+[flow8300_cadmag_spline_40env] task 3 trial 02: OK (170/440 steps)
+[flow8300_cadmag_spline_40env] task 3 trial 03: OK (167/440 steps)
+[flow8300_cadmag_spline_40env] task 3 trial 04: OK (170/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_cadmag_spline_40env] task 4 trial 00: OK (256/440 steps)
+[flow8300_cadmag_spline_40env] task 4 trial 01: x (440/440 steps)
+[flow8300_cadmag_spline_40env] task 4 trial 02: OK (264/440 steps)
+[flow8300_cadmag_spline_40env] task 4 trial 03: OK (244/440 steps)
+[flow8300_cadmag_spline_40env] task 4 trial 04: OK (264/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_cadmag_spline_40env] task 5 trial 00: x (440/440 steps)
+[flow8300_cadmag_spline_40env] task 5 trial 01: x (440/440 steps)
+[flow8300_cadmag_spline_40env] task 5 trial 02: x (440/440 steps)
+[flow8300_cadmag_spline_40env] task 5 trial 03: x (440/440 steps)
+[flow8300_cadmag_spline_40env] task 5 trial 04: x (440/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_cadmag_spline_40env] task 6 trial 00: OK (191/440 steps)
+[flow8300_cadmag_spline_40env] task 6 trial 01: OK (197/440 steps)
+[flow8300_cadmag_spline_40env] task 6 trial 02: OK (198/440 steps)
+[flow8300_cadmag_spline_40env] task 6 trial 03: OK (202/440 steps)
+[flow8300_cadmag_spline_40env] task 6 trial 04: OK (184/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_cadmag_spline_40env] task 7 trial 00: OK (220/440 steps)
+[flow8300_cadmag_spline_40env] task 7 trial 01: OK (236/440 steps)
+[flow8300_cadmag_spline_40env] task 7 trial 02: OK (237/440 steps)
+[flow8300_cadmag_spline_40env] task 7 trial 03: OK (226/440 steps)
+[flow8300_cadmag_spline_40env] task 7 trial 04: OK (233/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_cadmag_spline_40env] task 8 trial 00: OK (181/440 steps)
+[flow8300_cadmag_spline_40env] task 8 trial 01: x (440/440 steps)
+[flow8300_cadmag_spline_40env] task 8 trial 02: OK (184/440 steps)
+[flow8300_cadmag_spline_40env] task 8 trial 03: OK (190/440 steps)
+[flow8300_cadmag_spline_40env] task 8 trial 04: x (440/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_cadmag_spline_40env] task 9 trial 00: OK (232/440 steps)
+[flow8300_cadmag_spline_40env] task 9 trial 01: OK (222/440 steps)
+[flow8300_cadmag_spline_40env] task 9 trial 02: OK (238/440 steps)
+[flow8300_cadmag_spline_40env] task 9 trial 03: OK (226/440 steps)
+[flow8300_cadmag_spline_40env] task 9 trial 04: x (440/440 steps)
+[flow8300_cadmag_spline_40env] cadence check: 6409 policy queries, 6380 resolved intermediates, 29 starved of 12818 env steps
+[flow8300_cadmag_spline_40env] diagnostics: 39/50 ok | fail_at_cap=11 fail_early=0 | succ_median=202.0/440
+--> flow8300_cadmag_spline_40env: 78.0% (440 steps @ 40 Hz = 11.0 s, replan every 20)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  flow8300_cadmag_spline_40env  78.0%

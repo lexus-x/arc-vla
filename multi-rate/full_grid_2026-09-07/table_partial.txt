@@ -1,0 +1,32 @@
+
+### Closed-loop success, Diffusion Policy, k=2
+| Configuration | PushT (n=100) | PickCube (n=100) | Lift (n=100) | Can (n=100) | Square (n=100) | RC OpenDrawer (n=15) | RC PnPStove (n=15) |
+|---|---|---|---|---|---|---|---|
+| Diff. 1X Base (native) | 26% | 90% | 100% | 98% | 89% | 40% | 7% |
+| Diff. + ZOH | 16% | 85% | 100% | 98% | 86% | 33% | 7% |
+| Diff. + spline+satfix | 38% | 87% | 100% | 98% | 89% | 40% | 7% |
+| Diff. + TAC-Fold+satfix | 30% | 88% | 100% | 98% | 88% | — | — |
+| Diff. + B-spline (Alg.1)+satfix | — | — | 100% | 98% | 85% | — | — |
+| Diff. + QP (ours) | — | — | 100% | 97% | 90% | 33% | 7% |
+
+QP paired exact McNemar, k=2 (Δpp, qp-only/ref-only, p):
+  Lift           vs zoh +0pp 0/0 p=1 | vs native +0pp 0/0 p=1 | vs spline_satfix +0pp 0/0 p=1 | vs tac_fold_satfix +0pp 0/0 p=1 | vs bspline_eps_satfix +0pp 0/0 p=1
+  Can            vs zoh -1pp 0/1 p=1 | vs native -1pp 0/1 p=1 | vs spline_satfix -1pp 0/1 p=1 | vs tac_fold_satfix -1pp 0/1 p=1 | vs bspline_eps_satfix -1pp 0/1 p=1
+  Square         vs zoh +4pp 5/1 p=0.22 | vs native +1pp 4/3 p=1 | vs spline_satfix +1pp 3/2 p=1 | vs tac_fold_satfix +2pp 4/2 p=0.69 | vs bspline_eps_satfix +5pp 6/1 p=0.12
+  RC OpenDrawer  vs zoh +0pp 0/0 p=1 | vs native -7pp 0/1 p=1 | vs spline_satfix -7pp 0/1 p=1
+  RC PnPStove    vs zoh +0pp 0/0 p=1 | vs native +0pp 0/0 p=1 | vs spline_satfix +0pp 0/0 p=1
+
+### Closed-loop success, Diffusion Policy, k=4
+| Configuration | PushT (—) | PickCube (n=100) | Lift (—) | Can (—) | Square (—) | RC OpenDrawer (n=15) | RC PnPStove (n=15) |
+|---|---|---|---|---|---|---|---|
+| Diff. 1X Base (native) | — | 90% | — | — | — | 40% | 7% |
+| Diff. + ZOH | — | 40% | — | — | — | 27% | 7% |
+| Diff. + spline+satfix | — | 48% | — | — | — | 27% | 7% |
+| Diff. + TAC-Fold+satfix | — | 48% | — | — | — | — | — |
+| Diff. + B-spline (Alg.1)+satfix | — | — | — | — | — | — | — |
+| Diff. + QP (ours) | — | 52% | — | — | — | 27% | 7% |
+
+QP paired exact McNemar, k=4 (Δpp, qp-only/ref-only, p):
+  PickCube       vs zoh +12pp 13/1 p=0.0018 | vs native -38pp 1/39 p=7.5e-11 | vs spline_satfix +4pp 6/2 p=0.29 | vs tac_fold_satfix +4pp 6/2 p=0.29
+  RC OpenDrawer  vs zoh +0pp 0/0 p=1 | vs native -13pp 0/2 p=0.5 | vs spline_satfix +0pp 0/0 p=1
+  RC PnPStove    vs zoh +0pp 0/0 p=1 | vs native +0pp 0/0 p=1 | vs spline_satfix +0pp 0/0 p=1

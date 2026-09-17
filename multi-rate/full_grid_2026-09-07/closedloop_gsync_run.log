@@ -1,0 +1,30 @@
+=== RC-OpenDrawer gripper_sync ===
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-OpenDrawer_39.npz
+[data] 39 demos harvested in 0s
+[data] 8151 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-OpenDrawer.pt
+[eval] [10/15] native=3 zoh=2 gripper_sync=2
+[eval] [15/15] native=6 zoh=4 gripper_sync=4
+[eval] wall 1117s for 15 eps x 3 arms
+
+=== RC-OpenDrawer closed-loop DP, k=4, n=15 ===
+  native             40.0% (6/15)  | vs zoh:  +13.3pp p=0.5
+  zoh                26.7% (4/15)  | vs native:  -13.3pp p=0.5
+  gripper_sync       26.7% (4/15)  | vs zoh:   +0.0pp p=1  | vs native:  -13.3pp p=0.5
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-OpenDrawer_k4_closedloop_gsync.json
+=== RC-PnPCounterToStove gripper_sync ===
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-PnPCounterToStove_39.npz
+[data] 39 demos harvested in 0s
+[data] 11955 windows, obs_dim=110, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-PnPCounterToStove.pt
+[eval] [10/15] native=0 zoh=0 gripper_sync=0
+[eval] [15/15] native=1 zoh=1 gripper_sync=1
+[eval] wall 1284s for 15 eps x 3 arms
+
+=== RC-PnPCounterToStove closed-loop DP, k=4, n=15 ===
+  native              6.7% (1/15)  | vs zoh:   +0.0pp p=1
+  zoh                 6.7% (1/15)  | vs native:   +0.0pp p=1
+  gripper_sync        6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-PnPCounterToStove_k4_closedloop_gsync.json

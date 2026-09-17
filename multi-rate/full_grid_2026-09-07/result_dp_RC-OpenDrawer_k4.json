@@ -1,0 +1,135 @@
+{
+  "task": "RC-OpenDrawer",
+  "policy": "dp",
+  "k": 4,
+  "n": 15,
+  "train_steps": 15000,
+  "arms": [
+    "native",
+    "zoh",
+    "spline_satfix",
+    "qp"
+  ],
+  "success": {
+    "native": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true
+    ],
+    "zoh": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "spline_satfix": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "qp": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.0,
+    "zoh": 0.0,
+    "spline_satfix": 0.0,
+    "qp": 0.0
+  },
+  "contrasts": {
+    "native": {
+      "vs_zoh": {
+        "delta_pp": 13.333333333333336,
+        "p": 0.5,
+        "a_only": 2,
+        "ref_only": 0
+      }
+    },
+    "zoh": {
+      "vs_native": {
+        "delta_pp": -13.333333333333336,
+        "p": 0.5,
+        "a_only": 0,
+        "ref_only": 2
+      }
+    },
+    "spline_satfix": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": -13.333333333333336,
+        "p": 0.5,
+        "a_only": 0,
+        "ref_only": 2
+      }
+    },
+    "qp": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": -13.333333333333336,
+        "p": 0.5,
+        "a_only": 0,
+        "ref_only": 2
+      }
+    }
+  }
+}

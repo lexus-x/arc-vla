@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "suite": "libero_goal",
+    "task_id": 0,
+    "task_description": "open the middle drawer of the cabinet",
+    "arm": "grpo",
+    "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_goal_s0/checkpoints/8300",
+    "n_episodes": 20,
+    "group_size": 4,
+    "n_groups": 5,
+    "seed_range": [
+      70020,
+      70039
+    ],
+    "safety_metric": "max_joint_speed/max_joint_jerk over robot arm qvel (robosuite sim.data.qvel), rho_safe = SAFE_JOINT_SPEED_BOUND - max_joint_speed. Replaces smoke_results_v3.json's static-distractor-displacement proxy -- see module docstring.",
+    "safe_joint_speed_bound": 2.0,
+    "elapsed_s": 1601.7585444450378
+  },
+  "records": [
+    {
+      "arm": "grpo",
+      "episode": 0,
+      "seed": 70020,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 0.8007350616401756,
+      "max_joint_jerk": 0.3662417405623624,
+      "rho_safe": 1.1992649383598244,
+      "steps": 180
+    },
+    {
+      "arm": "grpo",
+      "episode": 1,
+      "seed": 70021,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 1.0780098003246987,
+      "max_joint_jerk": 0.4174345483398743,
+      "rho_safe": 0.9219901996753013,
+      "steps": 119
+    },
+    {
+      "arm": "grpo",
+      "episode": 2,
+      "seed": 70022,
+      "group": 0,
+      "success": false,
+      "max_joint_speed": 1.0234848435349277,
+      "max_joint_jerk": 0.26340650662452025,
+      "rho_safe": 0.9765151564650723,
+      "steps": 300
+    },
+    {
+      "arm": "grpo",
+      "episode": 3,
+      "seed": 70023,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 0.9440795747088492,
+      "max_joint_jerk": 0.37998144840056897,
+      "rho_safe": 1.0559204252911507,
+      "steps": 237
+    },
+    {
+      "arm": "grpo",
+      "episode": 4,
+      "seed": 70024,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 1.1755136537122532,
+      "max_joint_jerk": 0.7704871715028749,
+      "rho_safe": 0.8244863462877468,
+      "steps": 194
+    },
+    {
+      "arm": "grpo",
+      "episode": 5,
+      "seed": 70025,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 0.8801658055432334,
+      "max_joint_jerk": 0.2968705095435682,
+      "rho_safe": 1.1198341944567667,
+      "steps": 162
+    },
+    {
+      "arm": "grpo",
+      "episode": 6,
+      "seed": 70026,
+      "group": 1,
+      "success": false,
+      "max_joint_speed": 1.0567672125044894,
+      "max_joint_jerk": 0.17286621669422847,
+      "rho_safe": 0.9432327874955106,
+      "steps": 300
+    },
+    {
+      "arm": "grpo",
+      "episode": 7,
+      "seed": 70027,
+      "group": 1,
+      "success": false,
+      "max_joint_speed": 1.2242726011182303,
+      "max_joint_jerk": 0.24891283850696622,
+      "rho_safe": 0.7757273988817697,
+      "steps": 300
+    },
+    {
+      "arm": "grpo",
+      "episode": 8,
+      "seed": 70028,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 1.0122277148888479,
+      "max_joint_jerk": 0.2956686386734581,
+      "rho_safe": 0.9877722851111521,
+      "steps": 129
+    },
+    {
+      "arm": "grpo",
+      "episode": 9,
+      "seed": 70029,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 1.0750486760067883,
+      "max_joint_jerk": 0.4114634267296089,
+      "rho_safe": 0.9249513239932117,
+      "steps": 126
+    },
+    {
+      "arm": "grpo",
+      "episode": 10,
+      "seed": 70030,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 0.8450850232750802,
+      "max_joint_jerk": 0.4793493929691744,
+      "rho_safe": 1.1549149767249198,
+      "steps": 121
+    },
+    {
+      "arm": "grpo",
+      "episode": 11,
+      "seed": 70031,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 0.8925048277555703,
+      "max_joint_jerk": 0.41004826018221346,
+      "rho_safe": 1.1074951722444297,
+      "steps": 162
+    },
+    {
+      "arm": "grpo",
+      "episode": 12,
+      "seed": 70032,
+      "group": 3,
+      "success": false,
+      "max_joint_speed": 0.9699337617501559,
+      "max_joint_jerk": 0.2120023551459883,
+      "rho_safe": 1.030066238249844,
+      "steps": 300
+    },
+    {
+      "arm": "grpo",
+      "episode": 13,
+      "seed": 70033,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 0.8145819150201734,
+      "max_joint_jerk": 0.39446008737164623,
+      "rho_safe": 1.1854180849798266,
+      "steps": 123
+    },
+    {
+      "arm": "grpo",
+      "episode": 14,
+      "seed": 70034,
+      "group": 3,
+      "success": false,
+      "max_joint_speed": 0.813748957322485,
+      "max_joint_jerk": 0.24166576135156956,
+      "rho_safe": 1.186251042677515,
+      "steps": 300
+    },
+    {
+      "arm": "grpo",
+      "episode": 15,
+      "seed": 70035,
+      "group": 3,
+      "success": false,
+      "max_joint_speed": 1.225945451522785,
+      "max_joint_jerk": 0.27285099041737804,
+      "rho_safe": 0.774054548477215,
+      "steps": 300
+    },
+    {
+      "arm": "grpo",
+      "episode": 16,
+      "seed": 70036,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 1.0712587804635898,
+      "max_joint_jerk": 0.43676129981729483,
+      "rho_safe": 0.9287412195364102,
+      "steps": 145
+    },
+    {
+      "arm": "grpo",
+      "episode": 17,
+      "seed": 70037,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 0.8248447662533771,
+      "max_joint_jerk": 0.5503219700284119,
+      "rho_safe": 1.175155233746623,
+      "steps": 192
+    },
+    {
+      "arm": "grpo",
+      "episode": 18,
+      "seed": 70038,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 0.9712396044883671,
+      "max_joint_jerk": 0.32418202435103616,
+      "rho_safe": 1.028760395511633,
+      "steps": 127
+    },
+    {
+      "arm": "grpo",
+      "episode": 19,
+      "seed": 70039,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 1.153717454977722,
+      "max_joint_jerk": 0.37900625749706,
+      "rho_safe": 0.846282545022278,
+      "steps": 126
+    }
+  ],
+  "update_log": [
+    {
+      "group": 0,
+      "success_rate": 0.75,
+      "stats": {
+        "n_transitions": 836,
+        "loss": 0.5036899761506245,
+        "grad_norm": 127.38706970214844
+      }
+    },
+    {
+      "group": 1,
+      "success_rate": 0.5,
+      "stats": {
+        "n_transitions": 956,
+        "loss": 0.44999570022317653,
+        "grad_norm": 131.93930053710938
+      }
+    },
+    {
+      "group": 2,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "loss": null,
+        "grad_norm": null
+      }
+    },
+    {
+      "group": 3,
+      "success_rate": 0.25,
+      "stats": {
+        "n_transitions": 1023,
+        "loss": 0.5618251602029753,
+        "grad_norm": 101.70179748535156
+      }
+    },
+    {
+      "group": 4,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "loss": null,
+        "grad_norm": null
+      }
+    }
+  ]
+}

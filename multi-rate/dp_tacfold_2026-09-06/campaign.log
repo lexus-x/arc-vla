@@ -1,0 +1,11 @@
+[start] PushT-v1 03:42:45
+[start] lift 03:42:45
+[end] lift rc=0 04:01:39
+[start] can 04:01:39
+[end] can rc=0 04:40:28
+[start] square 04:40:28
+[end] square rc=0 05:21:41
+[end] PushT-v1 rc=0 05:39:35
+[start] PickCube-v1 05:39:35
+[end] PickCube-v1 rc=0 06:09:11
+[campaign] ALL DONE 06:09:11

@@ -1,0 +1,7 @@
+{
+  "suite": "libero_10",
+  "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_10_s0/checkpoints/8300",
+  "aggregate": 0.13,
+  "n": 100,
+  "source": "baseline_results/libero_10_seed0/multirate_libero_10.json"
+}

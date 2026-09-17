@@ -1,0 +1,2604 @@
+{
+  "_manifest": {
+    "code_sha256": {
+      "deeponet_head_v2.py": "a391e2623d73ab27847bcd2bffd0b9bf1b5761c0b32804da993c4e51fe99a1da",
+      "evaluate_libero_standard.py": "03cdae506dcd99308ce7b7b96e825adfd7d8772282053ec788f53fefa7a1480c",
+      "modeling_smolvla_deeponet_v2.py": "0fc2260a1e8d97b58eddd3a138f4636e3e3e954b93d70bb408c3b807fb459109",
+      "ncde_style_deeponet.py": "aa9bc001126617af8d0f37e0ccabdab2a0d1e3983692fa770ab6f2a587d12c7d",
+      "rate_integrated_deeponet.py": "de4cfeaccbaacb6450db1d2b3e7ac58506643e95562f2e98a92182bed2c2ab68",
+      "state_history.py": "7220766c35bde08e45051a8105226bd0089b4da8b52d53181d0b3388421f2afd",
+      "tempo_vsta.py": "626e06f2e4b782dca903db4c13b3906e603912ceb04a70c4075baa281af4a01b"
+    },
+    "dataset": "lerobot/libero_spatial_image",
+    "models": {
+      "asrc": {
+        "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_s0/checkpoints/8300",
+        "head": "deeponet",
+        "model_sha256": "3a1bdcdbf19520e3df3aba7ffcedef5bdf22bdea23737ccf0666c7f165d32f70"
+      }
+    },
+    "protocol": {
+      "control_freq": 20,
+      "max_steps": 220,
+      "n_tasks": 10,
+      "replan": 1,
+      "rollout_reset_seed": "1000 + trial_index",
+      "suite": "libero_spatial",
+      "trials_per_task": 50,
+      "videos": false
+    },
+    "runtime": {
+      "DEEPONET_FOURIER": "6",
+      "DEEPONET_HEAD": "asrc",
+      "DEEPONET_P": "256",
+      "DEEPONET_STATE_HISTORY_STEPS": "8"
+    },
+    "stats_path": null,
+    "stats_sha256": null
+  },
+  "asrc": {
+    "average": 0.658,
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 75,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 72,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 69,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 67,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 73,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 77,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 71,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 67,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 84,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 78,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 77,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 68,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 72,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 73,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 85,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 77,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 82,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 79,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1023,
+            "steps": 78,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1025,
+            "steps": 77,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 76,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 76,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 166,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1030,
+            "steps": 80,
+            "success": true
+          },
+          {
+            "seed": 1031,
+            "steps": 75,
+            "success": true
+          },
+          {
+            "seed": 1032,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1033,
+            "steps": 83,
+            "success": true
+          },
+          {
+            "seed": 1034,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1035,
+            "steps": 79,
+            "success": true
+          },
+          {
+            "seed": 1036,
+            "steps": 66,
+            "success": true
+          },
+          {
+            "seed": 1037,
+            "steps": 88,
+            "success": true
+          },
+          {
+            "seed": 1038,
+            "steps": 73,
+            "success": true
+          },
+          {
+            "seed": 1039,
+            "steps": 70,
+            "success": true
+          },
+          {
+            "seed": 1040,
+            "steps": 72,
+            "success": true
+          },
+          {
+            "seed": 1041,
+            "steps": 75,
+            "success": true
+          },
+          {
+            "seed": 1042,
+            "steps": 88,
+            "success": true
+          },
+          {
+            "seed": 1043,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1044,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1045,
+            "steps": 72,
+            "success": true
+          },
+          {
+            "seed": 1046,
+            "steps": 73,
+            "success": true
+          },
+          {
+            "seed": 1047,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1048,
+            "steps": 69,
+            "success": true
+          },
+          {
+            "seed": 1049,
+            "steps": 76,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 103,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 115,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 109,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 108,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 104,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 102,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1017,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1020,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1021,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1022,
+            "steps": 108,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 107,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 117,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1028,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 117,
+            "success": true
+          },
+          {
+            "seed": 1030,
+            "steps": 104,
+            "success": true
+          },
+          {
+            "seed": 1031,
+            "steps": 107,
+            "success": true
+          },
+          {
+            "seed": 1032,
+            "steps": 115,
+            "success": true
+          },
+          {
+            "seed": 1033,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1034,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1035,
+            "steps": 104,
+            "success": true
+          },
+          {
+            "seed": 1036,
+            "steps": 117,
+            "success": true
+          },
+          {
+            "seed": 1037,
+            "steps": 109,
+            "success": true
+          },
+          {
+            "seed": 1038,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1039,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1040,
+            "steps": 103,
+            "success": true
+          },
+          {
+            "seed": 1041,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1042,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1043,
+            "steps": 112,
+            "success": true
+          },
+          {
+            "seed": 1044,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1045,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1046,
+            "steps": 115,
+            "success": true
+          },
+          {
+            "seed": 1047,
+            "steps": 112,
+            "success": true
+          },
+          {
+            "seed": 1048,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1049,
+            "steps": 220,
+            "success": false
+          }
+        ],
+        "success_rate": 0.72,
+        "task": "pick up the black bowl next to the ramekin and place it on the plate"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 98,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 93,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 100,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 99,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 95,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 91,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1019,
+            "steps": 98,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1021,
+            "steps": 103,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 86,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 93,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1026,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1027,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 100,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 97,
+            "success": true
+          },
+          {
+            "seed": 1030,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1031,
+            "steps": 104,
+            "success": true
+          },
+          {
+            "seed": 1032,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1033,
+            "steps": 107,
+            "success": true
+          },
+          {
+            "seed": 1034,
+            "steps": 97,
+            "success": true
+          },
+          {
+            "seed": 1035,
+            "steps": 102,
+            "success": true
+          },
+          {
+            "seed": 1036,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1037,
+            "steps": 91,
+            "success": true
+          },
+          {
+            "seed": 1038,
+            "steps": 88,
+            "success": true
+          },
+          {
+            "seed": 1039,
+            "steps": 99,
+            "success": true
+          },
+          {
+            "seed": 1040,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1041,
+            "steps": 86,
+            "success": true
+          },
+          {
+            "seed": 1042,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1043,
+            "steps": 107,
+            "success": true
+          },
+          {
+            "seed": 1044,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1045,
+            "steps": 220,
+            "success": true
+          },
+          {
+            "seed": 1046,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1047,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1048,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1049,
+            "steps": 97,
+            "success": true
+          }
+        ],
+        "success_rate": 0.84,
+        "task": "pick up the black bowl from table center and place it on the plate"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 88,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 83,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1016,
+            "steps": 88,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1018,
+            "steps": 85,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 87,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 80,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1024,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1025,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1028,
+            "steps": 84,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1030,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1031,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1032,
+            "steps": 157,
+            "success": true
+          },
+          {
+            "seed": 1033,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1034,
+            "steps": 85,
+            "success": true
+          },
+          {
+            "seed": 1035,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1036,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1037,
+            "steps": 86,
+            "success": true
+          },
+          {
+            "seed": 1038,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1039,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1040,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1041,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1042,
+            "steps": 87,
+            "success": true
+          },
+          {
+            "seed": 1043,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1044,
+            "steps": 84,
+            "success": true
+          },
+          {
+            "seed": 1045,
+            "steps": 97,
+            "success": true
+          },
+          {
+            "seed": 1046,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1047,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1048,
+            "steps": 179,
+            "success": true
+          },
+          {
+            "seed": 1049,
+            "steps": 83,
+            "success": true
+          }
+        ],
+        "success_rate": 0.54,
+        "task": "pick up the black bowl on the cookie box and place it on the plate"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 132,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 142,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 129,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 136,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 131,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 135,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 149,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 140,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 140,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 140,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 134,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 136,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 128,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 131,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1021,
+            "steps": 135,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 144,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1024,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1025,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1026,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1027,
+            "steps": 149,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1029,
+            "steps": 148,
+            "success": true
+          },
+          {
+            "seed": 1030,
+            "steps": 139,
+            "success": true
+          },
+          {
+            "seed": 1031,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1032,
+            "steps": 146,
+            "success": true
+          },
+          {
+            "seed": 1033,
+            "steps": 145,
+            "success": true
+          },
+          {
+            "seed": 1034,
+            "steps": 143,
+            "success": true
+          },
+          {
+            "seed": 1035,
+            "steps": 140,
+            "success": true
+          },
+          {
+            "seed": 1036,
+            "steps": 122,
+            "success": true
+          },
+          {
+            "seed": 1037,
+            "steps": 139,
+            "success": true
+          },
+          {
+            "seed": 1038,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1039,
+            "steps": 139,
+            "success": true
+          },
+          {
+            "seed": 1040,
+            "steps": 124,
+            "success": true
+          },
+          {
+            "seed": 1041,
+            "steps": 135,
+            "success": true
+          },
+          {
+            "seed": 1042,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1043,
+            "steps": 152,
+            "success": true
+          },
+          {
+            "seed": 1044,
+            "steps": 134,
+            "success": true
+          },
+          {
+            "seed": 1045,
+            "steps": 130,
+            "success": true
+          },
+          {
+            "seed": 1046,
+            "steps": 135,
+            "success": true
+          },
+          {
+            "seed": 1047,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1048,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1049,
+            "steps": 134,
+            "success": true
+          }
+        ],
+        "success_rate": 0.72,
+        "task": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 96,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 85,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 104,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1016,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1017,
+            "steps": 102,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1019,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1020,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1021,
+            "steps": 87,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1023,
+            "steps": 100,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1025,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1026,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1027,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1028,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1029,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1030,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1031,
+            "steps": 100,
+            "success": true
+          },
+          {
+            "seed": 1032,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1033,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1034,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1035,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1036,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1037,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1038,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1039,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1040,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1041,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1042,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1043,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1044,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1045,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1046,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1047,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1048,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1049,
+            "steps": 220,
+            "success": false
+          }
+        ],
+        "success_rate": 0.16,
+        "task": "pick up the black bowl on the ramekin and place it on the plate"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 103,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 107,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 128,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 108,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 110,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1017,
+            "steps": 119,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 110,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 101,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 108,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1024,
+            "steps": 104,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 115,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 107,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 103,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1029,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1030,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1031,
+            "steps": 110,
+            "success": true
+          },
+          {
+            "seed": 1032,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1033,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1034,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1035,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1036,
+            "steps": 110,
+            "success": true
+          },
+          {
+            "seed": 1037,
+            "steps": 114,
+            "success": true
+          },
+          {
+            "seed": 1038,
+            "steps": 105,
+            "success": true
+          },
+          {
+            "seed": 1039,
+            "steps": 102,
+            "success": true
+          },
+          {
+            "seed": 1040,
+            "steps": 108,
+            "success": true
+          },
+          {
+            "seed": 1041,
+            "steps": 112,
+            "success": true
+          },
+          {
+            "seed": 1042,
+            "steps": 112,
+            "success": true
+          },
+          {
+            "seed": 1043,
+            "steps": 119,
+            "success": true
+          },
+          {
+            "seed": 1044,
+            "steps": 106,
+            "success": true
+          },
+          {
+            "seed": 1045,
+            "steps": 109,
+            "success": true
+          },
+          {
+            "seed": 1046,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1047,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1048,
+            "steps": 107,
+            "success": true
+          },
+          {
+            "seed": 1049,
+            "steps": 110,
+            "success": true
+          }
+        ],
+        "success_rate": 0.78,
+        "task": "pick up the black bowl next to the cookie box and place it on the plate"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 128,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 130,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 150,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 141,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 117,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 139,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 146,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 129,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1016,
+            "steps": 124,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 130,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1020,
+            "steps": 125,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 132,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1024,
+            "steps": 123,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1026,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1028,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1029,
+            "steps": 123,
+            "success": true
+          },
+          {
+            "seed": 1030,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1031,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1032,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1033,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1034,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1035,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1036,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1037,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1038,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1039,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1040,
+            "steps": 125,
+            "success": true
+          },
+          {
+            "seed": 1041,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1042,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1043,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1044,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1045,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1046,
+            "steps": 124,
+            "success": true
+          },
+          {
+            "seed": 1047,
+            "steps": 146,
+            "success": true
+          },
+          {
+            "seed": 1048,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1049,
+            "steps": 220,
+            "success": false
+          }
+        ],
+        "success_rate": 0.5,
+        "task": "pick up the black bowl on the stove and place it on the plate"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 97,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 95,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 95,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 87,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 95,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 93,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 88,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 87,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 92,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 86,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1030,
+            "steps": 144,
+            "success": true
+          },
+          {
+            "seed": 1031,
+            "steps": 91,
+            "success": true
+          },
+          {
+            "seed": 1032,
+            "steps": 94,
+            "success": true
+          },
+          {
+            "seed": 1033,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1034,
+            "steps": 86,
+            "success": true
+          },
+          {
+            "seed": 1035,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1036,
+            "steps": 87,
+            "success": true
+          },
+          {
+            "seed": 1037,
+            "steps": 88,
+            "success": true
+          },
+          {
+            "seed": 1038,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1039,
+            "steps": 88,
+            "success": true
+          },
+          {
+            "seed": 1040,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1041,
+            "steps": 90,
+            "success": true
+          },
+          {
+            "seed": 1042,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1043,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1044,
+            "steps": 93,
+            "success": true
+          },
+          {
+            "seed": 1045,
+            "steps": 187,
+            "success": true
+          },
+          {
+            "seed": 1046,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1047,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1048,
+            "steps": 89,
+            "success": true
+          },
+          {
+            "seed": 1049,
+            "steps": 116,
+            "success": true
+          }
+        ],
+        "success_rate": 0.72,
+        "task": "pick up the black bowl next to the plate and place it on the plate"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 123,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 157,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 130,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 121,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 125,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 131,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 135,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 135,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 123,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 126,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 131,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 126,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 129,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 145,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1022,
+            "steps": 139,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 122,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 136,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 128,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 124,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 143,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1029,
+            "steps": 130,
+            "success": true
+          },
+          {
+            "seed": 1030,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1031,
+            "steps": 126,
+            "success": true
+          },
+          {
+            "seed": 1032,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1033,
+            "steps": 136,
+            "success": true
+          },
+          {
+            "seed": 1034,
+            "steps": 124,
+            "success": true
+          },
+          {
+            "seed": 1035,
+            "steps": 191,
+            "success": true
+          },
+          {
+            "seed": 1036,
+            "steps": 128,
+            "success": true
+          },
+          {
+            "seed": 1037,
+            "steps": 132,
+            "success": true
+          },
+          {
+            "seed": 1038,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1039,
+            "steps": 131,
+            "success": true
+          },
+          {
+            "seed": 1040,
+            "steps": 132,
+            "success": true
+          },
+          {
+            "seed": 1041,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1042,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1043,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1044,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1045,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1046,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1047,
+            "steps": 121,
+            "success": true
+          },
+          {
+            "seed": 1048,
+            "steps": 134,
+            "success": true
+          },
+          {
+            "seed": 1049,
+            "steps": 141,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "pick up the black bowl on the wooden cabinet and place it on the plate"
+      }
+    }
+  }
+}

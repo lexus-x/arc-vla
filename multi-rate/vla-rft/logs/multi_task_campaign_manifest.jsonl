@@ -1,0 +1,127 @@
+{"event":"CAMPAIGN_LAUNCH","workers":4,"ts":"2026-09-01T03:15:49+09:00"}
+{"event": "RUN_START", "ts": "2026-09-01T03:15:53.810123+09:00", "tag": "task1_grpo"}
+{"event": "RUN_START", "ts": "2026-09-01T03:15:53.811587+09:00", "tag": "task1_ppo"}
+{"event": "RUN_START", "ts": "2026-09-01T03:15:53.812317+09:00", "tag": "task2_frozen"}
+{"event": "RUN_START", "ts": "2026-09-01T03:15:53.887603+09:00", "tag": "task1_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T03:25:50.802478+09:00", "tag": "task2_frozen", "rc": 0, "success": 19, "n": 20, "elapsed_s": 596.976146697998}
+{"event": "RUN_START", "ts": "2026-09-01T03:25:50.810350+09:00", "tag": "task4_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T03:27:41.066593+09:00", "tag": "task1_frozen", "rc": 0, "success": 18, "n": 20, "elapsed_s": 707.1643857955933}
+{"event": "RUN_START", "ts": "2026-09-01T03:27:41.074333+09:00", "tag": "task2_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T03:36:14.306507+09:00", "tag": "task1_grpo", "rc": 0, "success": 16, "n": 20, "elapsed_s": 1220.4827575683594}
+{"event": "RUN_START", "ts": "2026-09-01T03:36:14.314601+09:00", "tag": "task2_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T03:45:32.665269+09:00", "tag": "task2_grpo", "rc": 0, "success": 17, "n": 20, "elapsed_s": 1071.5736231803894}
+{"event": "RUN_START", "ts": "2026-09-01T03:45:32.673942+09:00", "tag": "task4_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T03:47:58.014511+09:00", "tag": "task2_ppo", "rc": 0, "success": 20, "n": 20, "elapsed_s": 703.6839756965637}
+{"event": "RUN_START", "ts": "2026-09-01T03:47:58.023020+09:00", "tag": "task6_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T03:54:29.366228+09:00", "tag": "task1_ppo", "rc": 0, "success": 17, "n": 20, "elapsed_s": 2315.5326223373413}
+{"event": "RUN_START", "ts": "2026-09-01T03:54:29.374438+09:00", "tag": "task4_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T03:55:22.009222+09:00", "tag": "task4_grpo", "rc": 0, "success": 14, "n": 20, "elapsed_s": 1771.1000845432281}
+{"event": "RUN_START", "ts": "2026-09-01T03:55:22.017903+09:00", "tag": "task6_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T04:02:01.477898+09:00", "tag": "task6_frozen", "rc": 0, "success": 16, "n": 20, "elapsed_s": 843.4404807090759}
+{"event": "WORKER_DONE", "ts": "2026-09-01T04:02:01.488054+09:00", "worker": 1}
+{"event": "RUN_END", "ts": "2026-09-01T04:10:03.210053+09:00", "tag": "task4_frozen", "rc": 0, "success": 13, "n": 20, "elapsed_s": 933.8189041614532}
+{"event": "RUN_START", "ts": "2026-09-01T04:10:03.218008+09:00", "tag": "task6_grpo"}
+{"event": "RUN_START", "ts": "2026-09-01T04:17:46.516915+09:00", "tag": "libero_object_task3_ppo"}
+{"event": "RUN_START", "ts": "2026-09-01T04:17:46.518066+09:00", "tag": "libero_object_task3_frozen"}
+{"event": "RUN_START", "ts": "2026-09-01T04:17:46.519603+09:00", "tag": "libero_object_task3_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T04:20:21.665956+09:00", "tag": "task6_grpo", "rc": 0, "success": 20, "n": 20, "elapsed_s": 618.4348237514496}
+{"event": "WORKER_DONE", "ts": "2026-09-01T04:20:21.679285+09:00", "worker": 2}
+{"event": "RUN_END", "ts": "2026-09-01T04:21:35.905839+09:00", "tag": "task6_ppo", "rc": 0, "success": 18, "n": 20, "elapsed_s": 1573.7814056873322}
+{"event": "WORKER_DONE", "ts": "2026-09-01T04:21:35.914817+09:00", "worker": 3}
+{"event": "RUN_END", "ts": "2026-09-01T04:37:55.289910+09:00", "tag": "libero_object_task3_frozen", "rc": 0, "success": 10, "n": 20, "elapsed_s": 1208.757865190506}
+{"event": "RUN_START", "ts": "2026-09-01T04:37:55.301789+09:00", "tag": "libero_goal_task3_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T04:41:43.590575+09:00", "tag": "libero_object_task3_grpo", "rc": 0, "success": 17, "n": 20, "elapsed_s": 1437.0544729232788}
+{"event": "RUN_START", "ts": "2026-09-01T04:41:43.598641+09:00", "tag": "libero_goal_task3_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T04:47:33.260548+09:00", "tag": "task4_ppo", "rc": 0, "success": 14, "n": 20, "elapsed_s": 3720.5702469348907}
+{"event": "WORKER_DONE", "ts": "2026-09-01T04:47:33.269379+09:00", "worker": 0}
+{"event": "RUN_END", "ts": "2026-09-01T04:56:38.832573+09:00", "tag": "libero_goal_task3_frozen", "rc": 0, "success": 11, "n": 20, "elapsed_s": 1123.5161526203156}
+{"event": "RUN_START", "ts": "2026-09-01T04:56:38.840082+09:00", "tag": "libero_10_task6_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T05:02:18.490263+09:00", "tag": "libero_goal_task3_grpo", "rc": 0, "success": 17, "n": 20, "elapsed_s": 1234.8726153373718}
+{"event": "RUN_START", "ts": "2026-09-01T05:02:18.499495+09:00", "tag": "libero_10_task6_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T05:10:43.617696+09:00", "tag": "libero_object_task3_ppo", "rc": 0, "success": 14, "n": 20, "elapsed_s": 3177.087026119232}
+{"event": "RUN_START", "ts": "2026-09-01T05:10:43.630185+09:00", "tag": "libero_goal_task3_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T05:22:45.569636+09:00", "tag": "libero_10_task6_frozen", "rc": 0, "success": 12, "n": 20, "elapsed_s": 1566.7145013809204}
+{"event": "WORKER_DONE", "ts": "2026-09-01T05:22:45.577285+09:00", "worker": 0, "start_idx": 12}
+{"event": "RUN_END", "ts": "2026-09-01T05:41:33.346876+09:00", "tag": "libero_10_task6_grpo", "rc": 0, "success": 13, "n": 20, "elapsed_s": 2354.830586194992}
+{"event": "WORKER_DONE", "ts": "2026-09-01T05:41:33.355557+09:00", "worker": 1, "start_idx": 12}
+{"event": "SKIP_DONE", "ts": "2026-09-01T05:54:34.523887+09:00", "tag": "libero_goal_task3_frozen"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T05:54:34.523999+09:00", "tag": "libero_10_task6_grpo"}
+{"event": "WORKER_DONE", "ts": "2026-09-01T05:54:34.524027+09:00", "worker": 3, "start_idx": 12}
+{"event": "RUN_END", "ts": "2026-09-01T05:59:05.305895+09:00", "tag": "libero_goal_task3_ppo", "rc": 0, "success": 12, "n": 20, "elapsed_s": 2901.660061120987}
+{"event": "RUN_START", "ts": "2026-09-01T05:59:05.314691+09:00", "tag": "libero_10_task6_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T07:23:39.717738+09:00", "tag": "libero_10_task6_ppo", "rc": 0, "success": 10, "n": 20, "elapsed_s": 5074.384945631027}
+{"event": "WORKER_DONE", "ts": "2026-09-01T07:23:39.726976+09:00", "worker": 2, "start_idx": 12}
+{"event":"CAMPAIGN_LAUNCH","workers":4,"ts":"2026-09-01T09:19:41+09:00"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:45.960561+09:00", "tag": "libero_spatial_task1_ppo"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:45.960676+09:00", "tag": "libero_spatial_task4_frozen"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:45.960715+09:00", "tag": "libero_spatial_task6_grpo"}
+{"event": "RUN_START", "ts": "2026-09-01T09:19:45.960767+09:00", "tag": "libero_spatial_task7_ppo"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:46.071302+09:00", "tag": "libero_spatial_task1_grpo"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:46.071411+09:00", "tag": "libero_spatial_task2_ppo"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:46.071447+09:00", "tag": "libero_spatial_task6_frozen"}
+{"event": "RUN_START", "ts": "2026-09-01T09:19:46.071486+09:00", "tag": "libero_spatial_task7_grpo"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:46.098669+09:00", "tag": "libero_spatial_task2_frozen"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:46.098772+09:00", "tag": "libero_spatial_task4_grpo"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:46.098810+09:00", "tag": "libero_spatial_task6_ppo"}
+{"event": "RUN_START", "ts": "2026-09-01T09:19:46.098847+09:00", "tag": "libero_spatial_task8_frozen"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:46.108623+09:00", "tag": "libero_spatial_task1_frozen"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:46.108722+09:00", "tag": "libero_spatial_task2_grpo"}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:19:46.108765+09:00", "tag": "libero_spatial_task4_ppo"}
+{"event": "RUN_START", "ts": "2026-09-01T09:19:46.108803+09:00", "tag": "libero_spatial_task7_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T09:30:56.901436+09:00", "tag": "libero_spatial_task8_frozen", "rc": 0, "success": 16, "n": 20, "elapsed_s": 670.789472579956}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:30:56.908534+09:00", "tag": "libero_object_task3_grpo"}
+{"event": "RUN_START", "ts": "2026-09-01T09:30:56.908635+09:00", "tag": "libero_object_task0_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T09:31:49.988071+09:00", "tag": "libero_spatial_task7_frozen", "rc": 0, "success": 19, "n": 20, "elapsed_s": 723.8650200366974}
+{"event": "RUN_START", "ts": "2026-09-01T09:31:49.995220+09:00", "tag": "libero_spatial_task8_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T09:33:31.876016+09:00", "tag": "libero_spatial_task7_grpo", "rc": 0, "success": 19, "n": 20, "elapsed_s": 825.7885849475861}
+{"event": "RUN_START", "ts": "2026-09-01T09:33:31.883795+09:00", "tag": "libero_spatial_task8_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T09:47:49.504415+09:00", "tag": "libero_spatial_task8_grpo", "rc": 0, "success": 17, "n": 20, "elapsed_s": 959.4949805736542}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:47:49.512725+09:00", "tag": "libero_object_task3_ppo"}
+{"event": "RUN_START", "ts": "2026-09-01T09:47:49.512931+09:00", "tag": "libero_object_task1_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T09:47:52.356092+09:00", "tag": "libero_spatial_task7_ppo", "rc": 0, "success": 18, "n": 20, "elapsed_s": 1686.3658728599548}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:47:52.364549+09:00", "tag": "libero_object_task3_frozen"}
+{"event": "RUN_START", "ts": "2026-09-01T09:47:52.364682+09:00", "tag": "libero_object_task0_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T09:55:34.373997+09:00", "tag": "libero_object_task0_ppo", "rc": 0, "success": 19, "n": 20, "elapsed_s": 1477.449728012085}
+{"event": "SKIP_DONE", "ts": "2026-09-01T09:55:34.382412+09:00", "tag": "libero_goal_task3_frozen"}
+{"event": "RUN_START", "ts": "2026-09-01T09:55:34.382783+09:00", "tag": "libero_goal_task0_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T10:05:51.802768+09:00", "tag": "libero_object_task1_frozen", "rc": 0, "success": 14, "n": 20, "elapsed_s": 1082.271558046341}
+{"event": "SKIP_DONE", "ts": "2026-09-01T10:05:51.811644+09:00", "tag": "libero_goal_task3_grpo"}
+{"event": "RUN_START", "ts": "2026-09-01T10:05:51.811854+09:00", "tag": "libero_goal_task0_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T10:10:20.200919+09:00", "tag": "libero_object_task0_grpo", "rc": 0, "success": 16, "n": 20, "elapsed_s": 1347.8185522556305}
+{"event": "RUN_START", "ts": "2026-09-01T10:10:20.209344+09:00", "tag": "libero_object_task1_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T10:17:00.696819+09:00", "tag": "libero_spatial_task8_ppo", "rc": 0, "success": 14, "n": 20, "elapsed_s": 2608.797618150711}
+{"event": "RUN_START", "ts": "2026-09-01T10:17:00.705486+09:00", "tag": "libero_object_task0_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T10:22:16.227727+09:00", "tag": "libero_goal_task0_grpo", "rc": 0, "success": 14, "n": 20, "elapsed_s": 1601.7585444450378}
+{"event": "RUN_START", "ts": "2026-09-01T10:22:16.238488+09:00", "tag": "libero_goal_task1_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T10:33:43.990303+09:00", "tag": "libero_object_task0_frozen", "rc": 0, "success": 17, "n": 20, "elapsed_s": 1003.2668924331665}
+{"event": "RUN_START", "ts": "2026-09-01T10:33:43.999038+09:00", "tag": "libero_object_task1_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T10:39:39.407897+09:00", "tag": "libero_goal_task1_ppo", "rc": 0, "success": 19, "n": 20, "elapsed_s": 1043.1537010669708}
+{"event": "RUN_START", "ts": "2026-09-01T10:39:39.418001+09:00", "tag": "libero_10_task0_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T11:02:56.581960+09:00", "tag": "libero_goal_task0_ppo", "rc": 0, "success": 16, "n": 20, "elapsed_s": 3424.753338575363}
+{"event": "SKIP_DONE", "ts": "2026-09-01T11:02:56.591972+09:00", "tag": "libero_10_task6_frozen"}
+{"event": "RUN_START", "ts": "2026-09-01T11:02:56.592116+09:00", "tag": "libero_10_task0_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T11:09:05.637527+09:00", "tag": "libero_object_task1_grpo", "rc": 0, "success": 9, "n": 20, "elapsed_s": 2121.6211347579956}
+{"event": "SKIP_DONE", "ts": "2026-09-01T11:09:05.646140+09:00", "tag": "libero_goal_task3_ppo"}
+{"event": "RUN_START", "ts": "2026-09-01T11:09:05.646792+09:00", "tag": "libero_goal_task1_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T11:18:07.457161+09:00", "tag": "libero_goal_task1_frozen", "rc": 0, "success": 20, "n": 20, "elapsed_s": 541.790801525116}
+{"event": "SKIP_DONE", "ts": "2026-09-01T11:18:07.465485+09:00", "tag": "libero_10_task6_grpo"}
+{"event": "RUN_START", "ts": "2026-09-01T11:18:07.466098+09:00", "tag": "libero_10_task0_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T11:18:38.406383+09:00", "tag": "libero_10_task0_frozen", "rc": 0, "success": 7, "n": 20, "elapsed_s": 2338.971216440201}
+{"event": "RUN_START", "ts": "2026-09-01T11:18:38.414269+09:00", "tag": "libero_10_task1_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T11:21:44.115968+09:00", "tag": "libero_object_task1_ppo", "rc": 0, "success": 13, "n": 20, "elapsed_s": 4283.889574050903}
+{"event": "RUN_START", "ts": "2026-09-01T11:21:44.124476+09:00", "tag": "libero_goal_task0_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T11:37:33.962578+09:00", "tag": "libero_goal_task0_frozen", "rc": 0, "success": 16, "n": 20, "elapsed_s": 949.8142075538635}
+{"event": "RUN_START", "ts": "2026-09-01T11:37:33.970788+09:00", "tag": "libero_goal_task1_grpo"}
+{"event": "RUN_END", "ts": "2026-09-01T11:49:11.332852+09:00", "tag": "libero_goal_task1_grpo", "rc": 0, "success": 19, "n": 20, "elapsed_s": 697.2806055545807}
+{"event": "SKIP_DONE", "ts": "2026-09-01T11:49:11.341630+09:00", "tag": "libero_10_task6_ppo"}
+{"event": "RUN_START", "ts": "2026-09-01T11:49:11.342239+09:00", "tag": "libero_10_task1_frozen"}
+{"event": "RUN_END", "ts": "2026-09-01T12:02:05.170032+09:00", "tag": "libero_10_task0_grpo", "rc": 0, "success": 4, "n": 20, "elapsed_s": 3548.5614025592804}
+{"event": "RUN_START", "ts": "2026-09-01T12:02:05.178516+09:00", "tag": "libero_10_task1_ppo"}
+{"event": "RUN_END", "ts": "2026-09-01T12:03:42.280719+09:00", "tag": "libero_10_task1_grpo", "rc": 0, "success": 15, "n": 20, "elapsed_s": 2703.8480308055878}
+{"event": "WORKER_DONE", "ts": "2026-09-01T12:03:42.289480+09:00", "worker": 3, "start_idx": 0}
+{"event": "RUN_END", "ts": "2026-09-01T12:17:35.691282+09:00", "tag": "libero_10_task1_frozen", "rc": 0, "success": 14, "n": 20, "elapsed_s": 1704.3328127861023}
+{"event": "WORKER_DONE", "ts": "2026-09-01T12:17:35.699588+09:00", "worker": 2, "start_idx": 0}
+{"event": "RUN_END", "ts": "2026-09-01T12:36:53.393994+09:00", "tag": "libero_10_task0_ppo", "rc": 0, "success": 2, "n": 20, "elapsed_s": 4725.912083148956}
+{"event": "WORKER_DONE", "ts": "2026-09-01T12:36:53.402378+09:00", "worker": 1, "start_idx": 0}
+{"event": "RUN_END", "ts": "2026-09-01T13:11:10.546378+09:00", "tag": "libero_10_task1_ppo", "rc": 0, "success": 14, "n": 20, "elapsed_s": 4145.351331233978}
+{"event": "WORKER_DONE", "ts": "2026-09-01T13:11:10.555355+09:00", "worker": 0, "start_idx": 0}

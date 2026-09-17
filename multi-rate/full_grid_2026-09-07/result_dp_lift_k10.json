@@ -1,0 +1,75 @@
+{
+  "task": "lift",
+  "policy": "dp",
+  "k": 10,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 5,
+  "train_steps": 30000,
+  "arms": [
+    "native",
+    "zoh",
+    "qp"
+  ],
+  "success": {
+    "native": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "zoh": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "qp": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.0,
+    "zoh": 0.0,
+    "qp": 0.0
+  },
+  "contrasts": {
+    "native": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "zoh": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "qp": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    }
+  }
+}

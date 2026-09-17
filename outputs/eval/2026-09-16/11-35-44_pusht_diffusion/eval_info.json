@@ -1,0 +1,68 @@
+{
+  "per_task": [
+    {
+      "task_group": "pusht",
+      "task_id": 0,
+      "metrics": {
+        "sum_rewards": [
+          0.3464089731355956,
+          0.0,
+          1.4320435281207868,
+          153.89878204853065,
+          3.087735222603166
+        ],
+        "max_rewards": [
+          0.016161635587489693,
+          0.0,
+          0.11702233430453556,
+          0.9395000030022505,
+          0.12256928104008086
+        ],
+        "successes": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "video_paths": [
+          "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_0.mp4",
+          "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_1.mp4",
+          "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_2.mp4",
+          "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_3.mp4",
+          "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_4.mp4"
+        ]
+      }
+    }
+  ],
+  "per_group": {
+    "pusht": {
+      "avg_sum_reward": 31.75299395447804,
+      "avg_max_reward": 0.23905065078687132,
+      "pc_success": 0.0,
+      "n_episodes": 5,
+      "video_paths": [
+        "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_0.mp4",
+        "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_1.mp4",
+        "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_2.mp4",
+        "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_3.mp4",
+        "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_4.mp4"
+      ]
+    }
+  },
+  "overall": {
+    "avg_sum_reward": 31.75299395447804,
+    "avg_max_reward": 0.23905065078687132,
+    "pc_success": 0.0,
+    "n_episodes": 5,
+    "eval_s": 23.494215726852417,
+    "eval_ep_s": 4.698843240737915,
+    "video_paths": [
+      "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_0.mp4",
+      "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_1.mp4",
+      "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_2.mp4",
+      "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_3.mp4",
+      "outputs/eval/2026-09-16/11-35-44_pusht_diffusion/videos/pusht_0/eval_episode_4.mp4"
+    ]
+  }
+}

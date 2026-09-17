@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/user/lerobot/src/lerobot/scripts/lerobot_train.py", line 563, in main
+    train()
+  File "/home/user/lerobot/src/lerobot/configs/parser.py", line 232, in wrapper_inner
+    cfg = draccus.parse(config_class=argtype, config_path=config_path, args=cli_args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/draccus/argparsing.py", line 211, in parse
+    return parser.parse_args(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/draccus/argparsing.py", line 102, in parse_args
+    args, _ = self.parse_known_args(args, namespace, is_parse_args=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/draccus/argparsing.py", line 136, in parse_known_args
+    parsed_t = self._postprocessing(parsed_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/draccus/argparsing.py", line 180, in _postprocessing
+    cfg = decoding.decode(self.config_class, deflat_d)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/draccus/parsers/registry_utils.py", line 78, in wrapper
+    return base_func(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/draccus/parsers/decoding.py", line 48, in decode
+    return get_decoding_fn(cls)(raw_value, ())  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/draccus/parsers/decoding.py", line 157, in decode_dataclass
+    raise DecodingError(path, f"Missing required field(s) {formatted_keys} for {stringify_type(cls)}")
+draccus.utils.DecodingError: Missing required field(s) `dataset` for TrainPipelineConfig

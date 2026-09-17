@@ -1,0 +1,14 @@
+[data] 39 demos harvested in 25s
+[data] 11955 windows, obs_dim=110, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-PnPCounterToStove.pt
+[eval] [10/15] native=0 zoh=0 spline_satfix=0 qp=0
+[eval] [15/15] native=1 zoh=1 spline_satfix=1 qp=1
+[eval] wall 2407s for 15 eps x 4 arms
+
+=== RC-PnPCounterToStove closed-loop DP, k=4, n=15 ===
+  native              6.7% (1/15)  | vs zoh:   +0.0pp p=1
+  zoh                 6.7% (1/15)  | vs native:   +0.0pp p=1
+  spline_satfix       6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp                  6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-PnPCounterToStove_k4.json

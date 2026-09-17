@@ -1,0 +1,9 @@
+Split-half replication of the pre-registered open-loop result (PickCube, n=993 -> halves by episode order):
+k=2 H1 n=496: qp=73.2 cubic_sf=71.6 tac_sf=76.6 zoh=55.6 | qp-cubic +1.6pp 10/2 p=0.0386 | qp-tac -3.4pp 8/25 p=0.00455 | qp-zoh +17.5pp p=1.7e-22
+k=2 H2 n=497: qp=75.1 cubic_sf=73.8 tac_sf=78.5 zoh=60.4 | qp-cubic +1.2pp 7/1 p=0.0703 | qp-tac -3.4pp 7/24 p=0.00333 | qp-zoh +14.7pp p=8.3e-17
+k=3 H1 n=496: qp=44.4 cubic_sf=42.1 tac_sf=46.0 zoh=28.2 | qp-cubic +2.2pp 19/8 p=0.0522 | qp-tac -1.6pp 20/28 p=0.312 | qp-zoh +16.1pp p=3.1e-17
+k=3 H2 n=497: qp=46.9 cubic_sf=44.3 tac_sf=47.3 zoh=30.8 | qp-cubic +2.6pp 16/3 p=0.00443 | qp-tac -0.4pp 24/26 p=0.888 | qp-zoh +16.1pp p=2.7e-21
+k=4 H1 n=496: qp=36.1 cubic_sf=31.5 tac_sf=30.6 zoh=21.0 | qp-cubic +4.6pp 33/10 p=0.000606 | qp-tac +5.4pp 46/19 p=0.00109 | qp-zoh +15.1pp p=2.2e-16
+k=4 H2 n=497: qp=33.4 cubic_sf=30.4 tac_sf=29.6 zoh=21.1 | qp-cubic +3.0pp 27/12 p=0.0237 | qp-tac +3.8pp 38/19 p=0.0163 | qp-zoh +12.3pp p=7.8e-13
+k=5 H1 n=496: qp=39.9 cubic_sf=37.5 tac_sf=38.9 zoh=29.0 | qp-cubic +2.4pp 27/15 p=0.0884 | qp-tac +1.0pp 27/22 p=0.568 | qp-zoh +10.9pp p=1.1e-09
+k=5 H2 n=497: qp=39.8 cubic_sf=35.2 tac_sf=35.2 zoh=26.6 | qp-cubic +4.6pp 39/16 p=0.00267 | qp-tac +4.6pp 42/19 p=0.00444 | qp-zoh +13.3pp p=5.2e-13

@@ -1,0 +1,237 @@
+SKIP (already done): /home/user/Desktop/multi-rate/vla-rft/logs/campaign_task1_frozen.json
+SKIP (already done): /home/user/Desktop/multi-rate/vla-rft/logs/campaign_task2_grpo.json
+SKIP (already done): /home/user/Desktop/multi-rate/vla-rft/logs/campaign_task4_ppo.json
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 29641.72it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  69%|██████▊   | 336/489 [00:00<00:00, 3359.67it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 3682.23it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[frozen ep0 seed=50700] success=True max_joint_speed=1.1025 steps=163
+[frozen ep1 seed=50701] success=True max_joint_speed=1.1353 steps=132
+[frozen ep2 seed=50702] success=True max_joint_speed=0.9519 steps=140
+[frozen ep3 seed=50703] success=True max_joint_speed=1.1798 steps=116
+[frozen ep4 seed=50704] success=True max_joint_speed=0.9764 steps=130
+[frozen ep5 seed=50705] success=True max_joint_speed=1.0723 steps=140
+[frozen ep6 seed=50706] success=True max_joint_speed=1.0437 steps=110
+[frozen ep7 seed=50707] success=True max_joint_speed=1.1466 steps=127
+[frozen ep8 seed=50708] success=True max_joint_speed=1.0511 steps=119
+[frozen ep9 seed=50709] success=False max_joint_speed=1.0838 steps=220
+[frozen ep10 seed=50710] success=True max_joint_speed=1.0322 steps=145
+[frozen ep11 seed=50711] success=True max_joint_speed=1.1140 steps=120
+[frozen ep12 seed=50712] success=True max_joint_speed=1.1872 steps=135
+[frozen ep13 seed=50713] success=True max_joint_speed=0.9802 steps=110
+[frozen ep14 seed=50714] success=True max_joint_speed=1.0142 steps=127
+[frozen ep15 seed=50715] success=True max_joint_speed=1.0032 steps=129
+[frozen ep16 seed=50716] success=True max_joint_speed=1.1260 steps=134
+[frozen ep17 seed=50717] success=True max_joint_speed=1.1776 steps=115
+[frozen ep18 seed=50718] success=True max_joint_speed=1.1009 steps=124
+[frozen ep19 seed=50719] success=True max_joint_speed=1.0113 steps=122
+=== libero_spatial_task7_frozen DONE: success=19/20 elapsed=724s -> /home/user/Desktop/multi-rate/vla-rft/logs/campaign_task7_frozen.json ===
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 64280.52it/s]
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6395.99it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[grpo group0 ep0 seed=50820] success=True max_joint_speed=1.0166 steps=95
+[grpo group0 ep1 seed=50821] success=False max_joint_speed=1.0729 steps=220
+[grpo group0 ep2 seed=50822] success=True max_joint_speed=1.0302 steps=98
+[grpo group0 ep3 seed=50823] success=True max_joint_speed=1.0653 steps=97
+===== grpo group 0 update: success_rate=0.750 =====
+[grpo group1 ep4 seed=50824] success=False max_joint_speed=1.1058 steps=220
+[grpo group1 ep5 seed=50825] success=True max_joint_speed=1.1864 steps=92
+[grpo group1 ep6 seed=50826] success=True max_joint_speed=1.0317 steps=101
+[grpo group1 ep7 seed=50827] success=True max_joint_speed=1.1957 steps=99
+===== grpo group 1 update: success_rate=0.750 =====
+[grpo group2 ep8 seed=50828] success=True max_joint_speed=1.1370 steps=106
+[grpo group2 ep9 seed=50829] success=True max_joint_speed=1.1282 steps=98
+[grpo group2 ep10 seed=50830] success=True max_joint_speed=1.0899 steps=104
+[grpo group2 ep11 seed=50831] success=True max_joint_speed=1.1172 steps=92
+===== grpo group 2 update: success_rate=1.000 =====
+[grpo group3 ep12 seed=50832] success=True max_joint_speed=1.0998 steps=88
+[grpo group3 ep13 seed=50833] success=True max_joint_speed=1.1557 steps=99
+[grpo group3 ep14 seed=50834] success=True max_joint_speed=1.0285 steps=97
+[grpo group3 ep15 seed=50835] success=True max_joint_speed=1.1520 steps=111
+===== grpo group 3 update: success_rate=1.000 =====
+[grpo group4 ep16 seed=50836] success=True max_joint_speed=1.0470 steps=94
+[grpo group4 ep17 seed=50837] success=True max_joint_speed=1.1666 steps=96
+[grpo group4 ep18 seed=50838] success=False max_joint_speed=1.0120 steps=220
+[grpo group4 ep19 seed=50839] success=True max_joint_speed=1.0152 steps=96
+===== grpo group 4 update: success_rate=0.750 =====
+=== libero_spatial_task8_grpo DONE: success=17/20 elapsed=959s -> /home/user/Desktop/multi-rate/vla-rft/logs/campaign_task8_grpo.json ===
+SKIP (already done): /home/user/Desktop/multi-rate/vla-rft/logs/campaign_libero_object_task3_ppo.json
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 101067.57it/s]
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6320.29it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[frozen ep0 seed=60100] success=False max_joint_speed=1.1084 steps=280
+[frozen ep1 seed=60101] success=True max_joint_speed=0.7908 steps=199
+[frozen ep2 seed=60102] success=False max_joint_speed=0.8354 steps=280
+[frozen ep3 seed=60103] success=True max_joint_speed=0.9765 steps=158
+[frozen ep4 seed=60104] success=True max_joint_speed=0.8559 steps=192
+[frozen ep5 seed=60105] success=True max_joint_speed=0.9915 steps=254
+[frozen ep6 seed=60106] success=False max_joint_speed=0.9825 steps=280
+[frozen ep7 seed=60107] success=True max_joint_speed=0.9441 steps=134
+[frozen ep8 seed=60108] success=True max_joint_speed=0.9282 steps=153
+[frozen ep9 seed=60109] success=True max_joint_speed=0.9606 steps=182
+[frozen ep10 seed=60110] success=True max_joint_speed=0.8611 steps=144
+[frozen ep11 seed=60111] success=True max_joint_speed=1.0072 steps=170
+[frozen ep12 seed=60112] success=True max_joint_speed=0.9938 steps=181
+[frozen ep13 seed=60113] success=True max_joint_speed=0.9608 steps=138
+[frozen ep14 seed=60114] success=True max_joint_speed=0.9734 steps=196
+[frozen ep15 seed=60115] success=True max_joint_speed=0.9838 steps=145
+[frozen ep16 seed=60116] success=False max_joint_speed=0.8559 steps=280
+[frozen ep17 seed=60117] success=False max_joint_speed=0.9821 steps=280
+[frozen ep18 seed=60118] success=True max_joint_speed=0.9603 steps=201
+[frozen ep19 seed=60119] success=False max_joint_speed=0.7999 steps=280
+=== libero_object_task1_frozen DONE: success=14/20 elapsed=1082s -> /home/user/Desktop/multi-rate/vla-rft/logs/campaign_libero_object_task1_frozen.json ===
+SKIP (already done): /home/user/Desktop/multi-rate/vla-rft/logs/campaign_libero_goal_task3_grpo.json
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 112598.77it/s]
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6345.92it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[ppo group0 ep0 seed=70040] success=True max_joint_speed=0.9648 steps=143
+[ppo group0 ep1 seed=70041] success=True max_joint_speed=1.0288 steps=128
+[ppo group0 ep2 seed=70042] success=True max_joint_speed=0.8830 steps=173
+[ppo group0 ep3 seed=70043] success=False max_joint_speed=1.1936 steps=300
+===== ppo group 0 update: success_rate=0.750 =====
+[ppo group1 ep4 seed=70044] success=True max_joint_speed=1.1506 steps=126
+[ppo group1 ep5 seed=70045] success=True max_joint_speed=0.7761 steps=138
+[ppo group1 ep6 seed=70046] success=True max_joint_speed=0.8523 steps=183
+[ppo group1 ep7 seed=70047] success=True max_joint_speed=1.0001 steps=162
+===== ppo group 1 update: success_rate=1.000 =====
+[ppo group2 ep8 seed=70048] success=False max_joint_speed=0.8455 steps=300
+[ppo group2 ep9 seed=70049] success=True max_joint_speed=0.9165 steps=126
+[ppo group2 ep10 seed=70050] success=True max_joint_speed=0.8263 steps=169
+[ppo group2 ep11 seed=70051] success=True max_joint_speed=0.9183 steps=178
+===== ppo group 2 update: success_rate=0.750 =====
+[ppo group3 ep12 seed=70052] success=True max_joint_speed=0.8152 steps=127
+[ppo group3 ep13 seed=70053] success=True max_joint_speed=0.7940 steps=203
+[ppo group3 ep14 seed=70054] success=True max_joint_speed=1.1717 steps=170
+[ppo group3 ep15 seed=70055] success=False max_joint_speed=0.7427 steps=300
+===== ppo group 3 update: success_rate=0.750 =====
+[ppo group4 ep16 seed=70056] success=True max_joint_speed=0.8783 steps=115
+[ppo group4 ep17 seed=70057] success=False max_joint_speed=1.1545 steps=300
+[ppo group4 ep18 seed=70058] success=True max_joint_speed=1.0536 steps=137
+[ppo group4 ep19 seed=70059] success=True max_joint_speed=0.9695 steps=141
+===== ppo group 4 update: success_rate=0.750 =====
+=== libero_goal_task0_ppo DONE: success=16/20 elapsed=3425s -> /home/user/Desktop/multi-rate/vla-rft/logs/campaign_libero_goal_task0_ppo.json ===
+SKIP (already done): /home/user/Desktop/multi-rate/vla-rft/logs/campaign_libero_10_task6_frozen.json
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 74565.40it/s]
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6168.54it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[grpo group0 ep0 seed=80020] success=True max_joint_speed=1.1011 steps=272
+[grpo group0 ep1 seed=80021] success=False max_joint_speed=0.9553 steps=520
+[grpo group0 ep2 seed=80022] success=False max_joint_speed=0.9267 steps=520
+[grpo group0 ep3 seed=80023] success=False max_joint_speed=1.0432 steps=520
+===== grpo group 0 update: success_rate=0.250 =====
+[grpo group1 ep4 seed=80024] success=False max_joint_speed=0.5930 steps=520
+[grpo group1 ep5 seed=80025] success=False max_joint_speed=0.9134 steps=520
+[grpo group1 ep6 seed=80026] success=False max_joint_speed=0.8909 steps=520
+[grpo group1 ep7 seed=80027] success=False max_joint_speed=1.0809 steps=520
+===== grpo group 1 update: success_rate=0.000 =====
+[grpo group2 ep8 seed=80028] success=False max_joint_speed=1.0926 steps=520
+[grpo group2 ep9 seed=80029] success=False max_joint_speed=1.2041 steps=520
+[grpo group2 ep10 seed=80030] success=False max_joint_speed=1.3391 steps=520
+[grpo group2 ep11 seed=80031] success=True max_joint_speed=1.0191 steps=285
+===== grpo group 2 update: success_rate=0.250 =====
+[grpo group3 ep12 seed=80032] success=False max_joint_speed=1.1191 steps=520
+[grpo group3 ep13 seed=80033] success=False max_joint_speed=1.1581 steps=520
+[grpo group3 ep14 seed=80034] success=False max_joint_speed=1.0738 steps=520
+[grpo group3 ep15 seed=80035] success=False max_joint_speed=0.9268 steps=520
+===== grpo group 3 update: success_rate=0.000 =====
+[grpo group4 ep16 seed=80036] success=False max_joint_speed=0.5652 steps=520
+[grpo group4 ep17 seed=80037] success=True max_joint_speed=1.2506 steps=403
+[grpo group4 ep18 seed=80038] success=True max_joint_speed=1.2764 steps=295
+[grpo group4 ep19 seed=80039] success=False max_joint_speed=0.9909 steps=520
+===== grpo group 4 update: success_rate=0.500 =====
+=== libero_10_task0_grpo DONE: success=4/20 elapsed=3549s -> /home/user/Desktop/multi-rate/vla-rft/logs/campaign_libero_10_task0_grpo.json ===
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 50686.45it/s]
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6440.09it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[ppo group0 ep0 seed=80140] success=False max_joint_speed=0.9171 steps=520
+[ppo group0 ep1 seed=80141] success=False max_joint_speed=0.9823 steps=520
+[ppo group0 ep2 seed=80142] success=True max_joint_speed=0.9375 steps=251
+[ppo group0 ep3 seed=80143] success=True max_joint_speed=0.8935 steps=317
+===== ppo group 0 update: success_rate=0.500 =====
+[ppo group1 ep4 seed=80144] success=True max_joint_speed=1.0519 steps=278
+[ppo group1 ep5 seed=80145] success=False max_joint_speed=0.9852 steps=520
+[ppo group1 ep6 seed=80146] success=True max_joint_speed=0.9446 steps=287
+[ppo group1 ep7 seed=80147] success=True max_joint_speed=0.8940 steps=287
+===== ppo group 1 update: success_rate=0.750 =====
+[ppo group2 ep8 seed=80148] success=True max_joint_speed=0.9001 steps=237
+[ppo group2 ep9 seed=80149] success=True max_joint_speed=0.9995 steps=268
+[ppo group2 ep10 seed=80150] success=True max_joint_speed=0.8698 steps=301
+[ppo group2 ep11 seed=80151] success=True max_joint_speed=0.9826 steps=304
+===== ppo group 2 update: success_rate=1.000 =====
+[ppo group3 ep12 seed=80152] success=True max_joint_speed=0.9254 steps=264
+[ppo group3 ep13 seed=80153] success=False max_joint_speed=0.9149 steps=520
+[ppo group3 ep14 seed=80154] success=False max_joint_speed=0.8877 steps=520
+[ppo group3 ep15 seed=80155] success=True max_joint_speed=0.9410 steps=278
+===== ppo group 3 update: success_rate=0.500 =====
+[ppo group4 ep16 seed=80156] success=True max_joint_speed=1.0357 steps=275
+[ppo group4 ep17 seed=80157] success=True max_joint_speed=0.9926 steps=291
+[ppo group4 ep18 seed=80158] success=True max_joint_speed=0.8979 steps=301
+[ppo group4 ep19 seed=80159] success=False max_joint_speed=0.8981 steps=520
+===== ppo group 4 update: success_rate=0.750 =====
+=== libero_10_task1_ppo DONE: success=14/20 elapsed=4145s -> /home/user/Desktop/multi-rate/vla-rft/logs/campaign_libero_10_task1_ppo.json ===
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d7f90171580>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d7ec2268e50>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7d7f901166d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7d7f901166d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d7f901165d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d7f90171440>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d7ec2268e50>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7d7f901166d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7d7f901166d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d7f901165d0>,
+	),
+	result = 0
+)

@@ -1,0 +1,93 @@
+[suite] libero_object -> suiteeval_object_asrc_object_native_20env_out/multirate_libero_object.json
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+
+============================================================
+ARM asrc_object_native_20env
+============================================================
+[stats] asrc_object_native_20env: normalizing with lerobot/libero_object_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 97541.95it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 7346.78it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8020.99it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[asrc_object_native_20env] variant=asrc n_fourier=6 re-integrates at 20.0 Hz (native ODE re-integration, NOT alias folding)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[asrc_object_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[asrc_object_native_20env] task 0 trial 00: x (280/280 steps)
+[asrc_object_native_20env] task 0 trial 01: OK (134/280 steps)
+[asrc_object_native_20env] task 0 trial 02: OK (144/280 steps)
+[asrc_object_native_20env] task 0 trial 03: x (280/280 steps)
+[asrc_object_native_20env] task 0 trial 04: x (280/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_native_20env] task 1 trial 00: OK (201/280 steps)
+[asrc_object_native_20env] task 1 trial 01: OK (156/280 steps)
+[asrc_object_native_20env] task 1 trial 02: x (280/280 steps)
+[asrc_object_native_20env] task 1 trial 03: OK (200/280 steps)
+[asrc_object_native_20env] task 1 trial 04: x (280/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_native_20env] task 2 trial 00: OK (116/280 steps)
+[asrc_object_native_20env] task 2 trial 01: OK (116/280 steps)
+[asrc_object_native_20env] task 2 trial 02: OK (115/280 steps)
+[asrc_object_native_20env] task 2 trial 03: OK (118/280 steps)
+[asrc_object_native_20env] task 2 trial 04: OK (112/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_native_20env] task 3 trial 00: OK (119/280 steps)
+[asrc_object_native_20env] task 3 trial 01: OK (122/280 steps)
+[asrc_object_native_20env] task 3 trial 02: OK (120/280 steps)
+[asrc_object_native_20env] task 3 trial 03: OK (122/280 steps)
+[asrc_object_native_20env] task 3 trial 04: OK (129/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_native_20env] task 4 trial 00: OK (133/280 steps)
+[asrc_object_native_20env] task 4 trial 01: OK (133/280 steps)
+[asrc_object_native_20env] task 4 trial 02: OK (131/280 steps)
+[asrc_object_native_20env] task 4 trial 03: OK (137/280 steps)
+[asrc_object_native_20env] task 4 trial 04: OK (132/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_native_20env] task 5 trial 00: OK (125/280 steps)
+[asrc_object_native_20env] task 5 trial 01: OK (116/280 steps)
+[asrc_object_native_20env] task 5 trial 02: OK (126/280 steps)
+[asrc_object_native_20env] task 5 trial 03: OK (127/280 steps)
+[asrc_object_native_20env] task 5 trial 04: OK (119/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_native_20env] task 6 trial 00: OK (152/280 steps)
+[asrc_object_native_20env] task 6 trial 01: OK (154/280 steps)
+[asrc_object_native_20env] task 6 trial 02: OK (146/280 steps)
+[asrc_object_native_20env] task 6 trial 03: OK (148/280 steps)
+[asrc_object_native_20env] task 6 trial 04: OK (145/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_native_20env] task 7 trial 00: x (280/280 steps)
+[asrc_object_native_20env] task 7 trial 01: x (280/280 steps)
+[asrc_object_native_20env] task 7 trial 02: OK (194/280 steps)
+[asrc_object_native_20env] task 7 trial 03: x (280/280 steps)
+[asrc_object_native_20env] task 7 trial 04: OK (135/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_native_20env] task 8 trial 00: x (280/280 steps)
+[asrc_object_native_20env] task 8 trial 01: OK (145/280 steps)
+[asrc_object_native_20env] task 8 trial 02: x (280/280 steps)
+[asrc_object_native_20env] task 8 trial 03: OK (150/280 steps)
+[asrc_object_native_20env] task 8 trial 04: OK (154/280 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_native_20env] task 9 trial 00: OK (116/280 steps)
+[asrc_object_native_20env] task 9 trial 01: OK (130/280 steps)
+[asrc_object_native_20env] task 9 trial 02: OK (127/280 steps)
+[asrc_object_native_20env] task 9 trial 03: OK (133/280 steps)
+[asrc_object_native_20env] task 9 trial 04: OK (144/280 steps)
+[asrc_object_native_20env] diagnostics: 40/50 ok | fail_at_cap=10 fail_early=0 | succ_median=132.5/280
+--> asrc_object_native_20env: 80.0% (280 steps @ 20 Hz = 11.0 s, replan every 10)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  asrc_object_native_20env  80.0%

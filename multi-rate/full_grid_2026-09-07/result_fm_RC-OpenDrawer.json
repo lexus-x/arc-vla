@@ -1,0 +1,333 @@
+{
+  "task": "RC-OpenDrawer",
+  "policy": "fm",
+  "k": 2,
+  "n": 15,
+  "train_steps": 15000,
+  "arms": [
+    "native",
+    "zoh",
+    "spline",
+    "spline_satfix",
+    "pchip",
+    "pchip_satfix",
+    "tac_fold",
+    "tac_fold_satfix",
+    "bspline",
+    "bspline_satfix"
+  ],
+  "success": {
+    "native": [
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    "zoh": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    "spline": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    "spline_satfix": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    "pchip": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    "pchip_satfix": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    "tac_fold": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    "tac_fold_satfix": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    "bspline": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    "bspline_satfix": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.0,
+    "zoh": 0.0,
+    "spline": 0.0,
+    "spline_satfix": 0.0,
+    "pchip": 0.0,
+    "pchip_satfix": 0.0,
+    "tac_fold": 0.0,
+    "tac_fold_satfix": 0.0,
+    "bspline": 0.0,
+    "bspline_satfix": 0.0
+  },
+  "contrasts": {
+    "native": {
+      "vs_zoh": {
+        "delta_pp": 6.666666666666665,
+        "p": 1.0,
+        "a_only": 1,
+        "ref_only": 0
+      }
+    },
+    "zoh": {
+      "vs_native": {
+        "delta_pp": -6.666666666666665,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    },
+    "spline": {
+      "vs_zoh": {
+        "delta_pp": -6.666666666666665,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      },
+      "vs_native": {
+        "delta_pp": -13.33333333333333,
+        "p": 0.5,
+        "a_only": 0,
+        "ref_only": 2
+      }
+    },
+    "spline_satfix": {
+      "vs_zoh": {
+        "delta_pp": -6.666666666666665,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      },
+      "vs_native": {
+        "delta_pp": -13.33333333333333,
+        "p": 0.5,
+        "a_only": 0,
+        "ref_only": 2
+      }
+    },
+    "pchip": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": -6.666666666666665,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    },
+    "pchip_satfix": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": -6.666666666666665,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    },
+    "tac_fold": {
+      "vs_zoh": {
+        "delta_pp": -6.666666666666665,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      },
+      "vs_native": {
+        "delta_pp": -13.33333333333333,
+        "p": 0.5,
+        "a_only": 0,
+        "ref_only": 2
+      }
+    },
+    "tac_fold_satfix": {
+      "vs_zoh": {
+        "delta_pp": -6.666666666666665,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      },
+      "vs_native": {
+        "delta_pp": -13.33333333333333,
+        "p": 0.5,
+        "a_only": 0,
+        "ref_only": 2
+      }
+    },
+    "bspline": {
+      "vs_zoh": {
+        "delta_pp": -6.666666666666665,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      },
+      "vs_native": {
+        "delta_pp": -13.33333333333333,
+        "p": 0.5,
+        "a_only": 0,
+        "ref_only": 2
+      }
+    },
+    "bspline_satfix": {
+      "vs_zoh": {
+        "delta_pp": -6.666666666666665,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      },
+      "vs_native": {
+        "delta_pp": -13.33333333333333,
+        "p": 0.5,
+        "a_only": 0,
+        "ref_only": 2
+      }
+    }
+  }
+}

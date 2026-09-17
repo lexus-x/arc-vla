@@ -1,0 +1,28 @@
+[harvest] 50/200
+[harvest] 100/200
+[harvest] 150/200
+[harvest] 200/200
+[data] 200 demos harvested in 348s
+[data] 13352 windows, obs_dim=31, act_dim=6, raw |a|>1 frac=0.128
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PushT-v1.pt
+[eval] [10/100] native=3 zoh=0 spline_satfix=0 tac_fold_satfix=0 bspline_eps_satfix=0 qp=0
+[eval] [20/100] native=5 zoh=0 spline_satfix=0 tac_fold_satfix=0 bspline_eps_satfix=0 qp=0
+[eval] [30/100] native=7 zoh=1 spline_satfix=0 tac_fold_satfix=0 bspline_eps_satfix=1 qp=0
+[eval] [40/100] native=10 zoh=1 spline_satfix=0 tac_fold_satfix=0 bspline_eps_satfix=1 qp=0
+[eval] [50/100] native=12 zoh=1 spline_satfix=0 tac_fold_satfix=2 bspline_eps_satfix=1 qp=1
+[eval] [60/100] native=14 zoh=1 spline_satfix=0 tac_fold_satfix=2 bspline_eps_satfix=1 qp=2
+[eval] [70/100] native=16 zoh=2 spline_satfix=0 tac_fold_satfix=2 bspline_eps_satfix=2 qp=2
+[eval] [80/100] native=20 zoh=2 spline_satfix=1 tac_fold_satfix=2 bspline_eps_satfix=2 qp=3
+[eval] [90/100] native=25 zoh=2 spline_satfix=1 tac_fold_satfix=2 bspline_eps_satfix=2 qp=3
+[eval] [100/100] native=26 zoh=2 spline_satfix=1 tac_fold_satfix=2 bspline_eps_satfix=2 qp=3
+[eval] wall 3039s for 100 eps x 6 arms
+
+=== PushT-v1 closed-loop DP, k=4, n=100 ===
+  native             26.0% (26/100)  | vs zoh:  +24.0pp p=3.03e-06
+  zoh                 2.0% (2/100)  | vs native:  -24.0pp p=3.03e-06
+  spline_satfix       1.0% (1/100)  | vs zoh:   -1.0pp p=1  | vs native:  -25.0pp p=5.96e-08
+  tac_fold_satfix     2.0% (2/100)  | vs zoh:   +0.0pp p=1  | vs native:  -24.0pp p=3.03e-06
+  bspline_eps_satfix    2.0% (2/100)  | vs zoh:   +0.0pp p=1  | vs native:  -24.0pp p=3.03e-06
+  qp                  3.0% (3/100)  | vs zoh:   +1.0pp p=1  | vs native:  -23.0pp p=5.65e-06
+  policy raw |a|>1 frac (pre-clip): 0.073
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PushT-v1_k4.json

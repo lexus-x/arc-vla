@@ -1,0 +1,71 @@
+=== SUCCESS RATE, PickCube-v1 open-loop paired replay, n=993 per k ===
+arm                          k=2       k=3       k=4       k=5
+original                  92.45%    92.45%    92.45%    92.45%
+exact_integral            58.01%    29.51%    21.05%    27.79%
+cubic_spline_satfix       72.71%    43.20%    30.92%    36.35%
+pchip_satfix              62.54%    35.95%    26.69%    33.64%
+tac_fold_satfix           77.54%    46.63%    30.11%    37.06%
+qp                        74.12%    45.62%    34.74%    39.88%
+
+=== qp contrasts (delta pp, wins/losses, raw p, 95% CI) ===
+k=2 qp vs exact_integral       +16.11pp  171/ 11  p=4.65e-38  CI=[+13.70,+18.63]
+k=2 qp vs cubic_spline_satfix   +1.41pp   17/  3  p=0.00258  CI=[+0.60,+2.32]
+k=2 qp vs tac_fold_satfix       -3.42pp   15/ 49  p=2.44e-05  CI=[-5.04,-1.91]
+k=2 qp vs pchip_satfix         +11.58pp  123/  8  p=1.36e-27  CI=[+9.47,+13.70]
+k=3 qp vs exact_integral       +16.11pp  173/ 13  p=7.34e-37  CI=[+13.70,+18.63]
+k=3 qp vs cubic_spline_satfix   +2.42pp   35/ 11  p=0.000536  CI=[+1.11,+3.73]
+k=3 qp vs tac_fold_satfix       -1.01pp   44/ 54  p=0.363  CI=[-2.92,+1.01]
+k=3 qp vs pchip_satfix          +9.67pp  112/ 16  p=6.38e-19  CI=[+7.55,+11.78]
+k=4 qp vs exact_integral       +13.70pp  154/ 18  p=4.07e-28  CI=[+11.28,+16.21]
+k=4 qp vs cubic_spline_satfix   +3.83pp   60/ 22  p=3.23e-05  CI=[+2.11,+5.64]
+k=4 qp vs tac_fold_satfix       +4.63pp   84/ 38  p=3.79e-05  CI=[+2.52,+6.75]
+k=4 qp vs pchip_satfix          +8.06pp   99/ 19  p=3.06e-14  CI=[+5.94,+10.17]
+k=5 qp vs exact_integral       +12.08pp  146/ 26  p=1.82e-21  CI=[+9.57,+14.60]
+k=5 qp vs cubic_spline_satfix   +3.52pp   66/ 31  p=0.00049  CI=[+1.61,+5.54]
+k=5 qp vs tac_fold_satfix       +2.82pp   69/ 41  p=0.00972  CI=[+0.81,+4.83]
+k=5 qp vs pchip_satfix          +6.24pp   88/ 26  p=4.59e-09  CI=[+4.13,+8.36]
+
+=== P1 PRIMARY: qp vs cubic_spline_satfix @k=4 (need >= +3pp AND Holm m=3) ===
+  k=3: raw p=0.000536 Holm p=0.00098 survives=True
+  k=4: raw p=3.23e-05 Holm p=9.7e-05 survives=True
+  k=5: raw p=0.00049 Holm p=0.00098 survives=True
+  delta@k=4 = +3.83pp  ->  P1 HOLDS
+
+=== SECONDARY FAMILY Holm m=16 ===
+  k=2 qp_vs_exact_integral         +16.11pp raw p=4.65e-38 Holm p=7.45e-37 SURVIVES
+  k=3 qp_vs_exact_integral         +16.11pp raw p=7.34e-37 Holm p=1.1e-35 SURVIVES
+  k=4 qp_vs_exact_integral         +13.70pp raw p=4.07e-28 Holm p=5.7e-27 SURVIVES
+  k=2 qp_vs_pchip_satfix           +11.58pp raw p=1.36e-27 Holm p=1.76e-26 SURVIVES
+  k=5 qp_vs_exact_integral         +12.08pp raw p=1.82e-21 Holm p=2.19e-20 SURVIVES
+  k=3 qp_vs_pchip_satfix            +9.67pp raw p=6.38e-19 Holm p=7.02e-18 SURVIVES
+  k=4 qp_vs_pchip_satfix            +8.06pp raw p=3.06e-14 Holm p=3.06e-13 SURVIVES
+  k=5 qp_vs_pchip_satfix            +6.24pp raw p=4.59e-09 Holm p=4.13e-08 SURVIVES
+  k=2 qp_vs_tac_fold_satfix         -3.42pp raw p=2.44e-05 Holm p=0.000195 SURVIVES
+  k=4 qp_vs_cubic_spline_satfix     +3.83pp raw p=3.23e-05 Holm p=0.000226 SURVIVES
+  k=4 qp_vs_tac_fold_satfix         +4.63pp raw p=3.79e-05 Holm p=0.000228 SURVIVES
+  k=5 qp_vs_cubic_spline_satfix     +3.52pp raw p=0.00049 Holm p=0.00245 SURVIVES
+  k=3 qp_vs_cubic_spline_satfix     +2.42pp raw p=0.000536 Holm p=0.00245 SURVIVES
+  k=2 qp_vs_cubic_spline_satfix     +1.41pp raw p=0.00258 Holm p=0.00773 SURVIVES
+  k=5 qp_vs_tac_fold_satfix         +2.82pp raw p=0.00972 Holm p=0.0194 SURVIVES
+  k=3 qp_vs_tac_fold_satfix         -1.01pp raw p=0.363 Holm p=0.363 
+
+=== P2: qp beats ZOH at every k (Holm) ===
+  k=2: +16.11pp Holm p=7.45e-37 -> ok
+  k=3: +16.11pp Holm p=1.1e-35 -> ok
+  k=4: +13.70pp Holm p=5.7e-27 -> ok
+  k=5: +12.08pp Holm p=2.19e-20 -> ok
+
+=== P3 @k=2: qp vs cubic +1.41pp p=0.00258 (need |d|<=2, n.s.); qp vs tac_fold -3.42pp (need <0) ===
+=== P4: qp >= tac_fold_satfix at k>=3, margin growing ===
+  k=3: -1.01pp p=0.363
+  k=4: +4.63pp p=3.79e-05
+  k=5: +2.82pp p=0.00972
+=== P5: MSE ranking (ksweep) vs success ranking, per k ===
+  k=2 MSE best->worst: ['tac_fold_satfix', 'qp', 'spline_satfix', 'pchip_satfix', 'zoh']
+       SR  best->worst: ['tac_fold_satfix', 'qp', 'spline_satfix', 'pchip_satfix', 'zoh']  match=True
+  k=3 MSE best->worst: ['qp', 'tac_fold_satfix', 'spline_satfix', 'pchip_satfix', 'zoh']
+       SR  best->worst: ['tac_fold_satfix', 'qp', 'spline_satfix', 'pchip_satfix', 'zoh']  match=False
+  k=4 MSE best->worst: ['qp', 'spline_satfix', 'tac_fold_satfix', 'pchip_satfix', 'zoh']
+       SR  best->worst: ['qp', 'spline_satfix', 'tac_fold_satfix', 'pchip_satfix', 'zoh']  match=True
+  k=5 MSE best->worst: ['qp', 'spline_satfix', 'tac_fold_satfix', 'pchip_satfix', 'zoh']
+       SR  best->worst: ['qp', 'tac_fold_satfix', 'spline_satfix', 'pchip_satfix', 'zoh']  match=False

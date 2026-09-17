@@ -1,0 +1,27 @@
+[harvest] 50/200
+[harvest] 100/200
+[harvest] 150/200
+[harvest] 200/200
+[data] 200 demos harvested in 171s
+[data] 3890 windows, obs_dim=42, act_dim=8, raw |a|>1 frac=0.303
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PickCube-v1.pt
+[eval] [10/100] native=8 zoh=3 spline_satfix=3 tac_fold_satfix=3 qp=3
+[eval] [20/100] native=17 zoh=8 spline_satfix=8 tac_fold_satfix=8 qp=8
+[eval] [30/100] native=27 zoh=12 spline_satfix=12 tac_fold_satfix=12 qp=12
+[eval] [40/100] native=35 zoh=19 spline_satfix=19 tac_fold_satfix=19 qp=19
+[eval] [50/100] native=44 zoh=26 spline_satfix=26 tac_fold_satfix=26 qp=26
+[eval] [60/100] native=53 zoh=32 spline_satfix=32 tac_fold_satfix=32 qp=32
+[eval] [70/100] native=62 zoh=39 spline_satfix=39 tac_fold_satfix=39 qp=39
+[eval] [80/100] native=72 zoh=47 spline_satfix=47 tac_fold_satfix=47 qp=47
+[eval] [90/100] native=81 zoh=55 spline_satfix=55 tac_fold_satfix=55 qp=55
+[eval] [100/100] native=90 zoh=60 spline_satfix=60 tac_fold_satfix=60 qp=60
+[eval] wall 1474s for 100 eps x 5 arms
+
+=== PickCube-v1 closed-loop DP, k=5, n=100 ===
+  native             90.0% (90/100)  | vs zoh:  +30.0pp p=6.94e-08
+  zoh                60.0% (60/100)  | vs native:  -30.0pp p=6.94e-08
+  spline_satfix      60.0% (60/100)  | vs zoh:   +0.0pp p=1  | vs native:  -30.0pp p=6.94e-08
+  tac_fold_satfix    60.0% (60/100)  | vs zoh:   +0.0pp p=1  | vs native:  -30.0pp p=6.94e-08
+  qp                 60.0% (60/100)  | vs zoh:   +0.0pp p=1  | vs native:  -30.0pp p=6.94e-08
+  policy raw |a|>1 frac (pre-clip): 0.266
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PickCube-v1_k5.json

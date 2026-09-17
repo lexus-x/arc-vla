@@ -1,0 +1,4 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-TurnOffMicrowave_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 8612 windows, obs_dim=96, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-TurnOffMicrowave_f0.pt

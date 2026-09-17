@@ -1,0 +1,14 @@
+### FM PickCube k=4 n=100 raw_sat=0.263
+  native                89.0%
+  zoh                   40.0%
+  spline_satfix         51.0%
+  tac_fold_satfix       51.0%
+  bspline_eps_satfix    40.0%
+  qp                    50.0%
+  qp vs zoh                 +10.0pp 14/ 4 p=0.0309
+  qp vs native              -39.0pp  3/42 p=8.65e-10
+  qp vs spline_satfix        -1.0pp  1/ 2 p=1
+  qp vs tac_fold_satfix      -1.0pp  1/ 2 p=1
+  qp vs bspline_eps_satfix  +10.0pp 14/ 4 p=0.0309
+  ordering: spline_satfix(51) > tac_fold_satfix(51) > qp(50) > bspline_eps_satfix(40) > zoh(40)
+  PREREG B (qp >= satfix arms > ZOH in direction): False

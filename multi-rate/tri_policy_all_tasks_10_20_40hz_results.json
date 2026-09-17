@@ -1,0 +1,164 @@
+{
+  "benchmark": "LIBERO-Spatial (All 10 Tasks)",
+  "rates": {
+    "10hz": {
+      "operator_fold_arc": {
+        "success": 28,
+        "total": 50,
+        "per_task": {
+          "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate": 0.4,
+          "push_the_plate_to_the_front_of_the_stove": 0.6,
+          "put_the_bowl_on_the_stove": 0.6,
+          "turn_on_the_stove": 0.6,
+          "put_the_wine_bottle_on_top_of_the_cabinet": 0.6,
+          "open_the_middle_drawer_of_the_cabinet": 0.4
+        },
+        "average_success_rate": 0.56
+      },
+      "cubic_spline": {
+        "success": 34,
+        "total": 50,
+        "per_task": {
+          "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate": 0.4,
+          "push_the_plate_to_the_front_of_the_stove": 0.8,
+          "put_the_bowl_on_the_stove": 0.6,
+          "turn_on_the_stove": 0.8,
+          "put_the_wine_bottle_on_top_of_the_cabinet": 0.6,
+          "open_the_middle_drawer_of_the_cabinet": 0.6
+        },
+        "average_success_rate": 0.68
+      },
+      "b_spline": {
+        "success": 31,
+        "total": 50,
+        "per_task": {
+          "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate": 0.4,
+          "push_the_plate_to_the_front_of_the_stove": 0.6,
+          "put_the_bowl_on_the_stove": 0.6,
+          "turn_on_the_stove": 0.6,
+          "put_the_wine_bottle_on_top_of_the_cabinet": 0.6,
+          "open_the_middle_drawer_of_the_cabinet": 0.6
+        },
+        "average_success_rate": 0.62
+      }
+    },
+    "20hz": {
+      "operator_fold_arc": {
+        "success": 34,
+        "total": 50,
+        "per_task": {
+          "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate": 0.4,
+          "push_the_plate_to_the_front_of_the_stove": 0.8,
+          "put_the_bowl_on_the_stove": 0.6,
+          "turn_on_the_stove": 0.8,
+          "put_the_wine_bottle_on_top_of_the_cabinet": 0.6,
+          "open_the_middle_drawer_of_the_cabinet": 0.6
+        },
+        "average_success_rate": 0.68
+      },
+      "cubic_spline": {
+        "success": 34,
+        "total": 50,
+        "per_task": {
+          "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate": 0.4,
+          "push_the_plate_to_the_front_of_the_stove": 0.8,
+          "put_the_bowl_on_the_stove": 0.6,
+          "turn_on_the_stove": 0.8,
+          "put_the_wine_bottle_on_top_of_the_cabinet": 0.6,
+          "open_the_middle_drawer_of_the_cabinet": 0.6
+        },
+        "average_success_rate": 0.68
+      },
+      "b_spline": {
+        "success": 31,
+        "total": 50,
+        "per_task": {
+          "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate": 0.4,
+          "push_the_plate_to_the_front_of_the_stove": 0.6,
+          "put_the_bowl_on_the_stove": 0.6,
+          "turn_on_the_stove": 0.6,
+          "put_the_wine_bottle_on_top_of_the_cabinet": 0.6,
+          "open_the_middle_drawer_of_the_cabinet": 0.6
+        },
+        "average_success_rate": 0.62
+      }
+    },
+    "40hz": {
+      "operator_fold_arc": {
+        "success": 31,
+        "total": 50,
+        "per_task": {
+          "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate": 0.4,
+          "push_the_plate_to_the_front_of_the_stove": 0.6,
+          "put_the_bowl_on_the_stove": 0.6,
+          "turn_on_the_stove": 0.6,
+          "put_the_wine_bottle_on_top_of_the_cabinet": 0.6,
+          "open_the_middle_drawer_of_the_cabinet": 0.6
+        },
+        "average_success_rate": 0.62
+      },
+      "cubic_spline": {
+        "success": 31,
+        "total": 50,
+        "per_task": {
+          "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate": 0.4,
+          "push_the_plate_to_the_front_of_the_stove": 0.6,
+          "put_the_bowl_on_the_stove": 0.6,
+          "turn_on_the_stove": 0.6,
+          "put_the_wine_bottle_on_top_of_the_cabinet": 0.6,
+          "open_the_middle_drawer_of_the_cabinet": 0.6
+        },
+        "average_success_rate": 0.62
+      },
+      "b_spline": {
+        "success": 30,
+        "total": 50,
+        "per_task": {
+          "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": 0.8,
+          "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate": 0.6,
+          "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate": 0.4,
+          "push_the_plate_to_the_front_of_the_stove": 0.6,
+          "put_the_bowl_on_the_stove": 0.6,
+          "turn_on_the_stove": 0.6,
+          "put_the_wine_bottle_on_top_of_the_cabinet": 0.6,
+          "open_the_middle_drawer_of_the_cabinet": 0.4
+        },
+        "average_success_rate": 0.6
+      }
+    }
+  }
+}

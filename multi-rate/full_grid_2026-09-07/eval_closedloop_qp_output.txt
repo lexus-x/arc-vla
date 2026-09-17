@@ -1,0 +1,31 @@
+### (A) PickCube-v1 closed-loop Diffusion Policy, n=100, paired
+arm                      k=4       k=5
+native                 90.0%     90.0%
+zoh                    40.0%     60.0%
+spline_satfix          48.0%     60.0%
+tac_fold_satfix        48.0%     60.0%
+qp                     52.0%     60.0%
+k=5 arms identical? True
+k=4 qp vs zoh               +12.0pp  13/ 1  p=0.00183
+k=4 qp vs native            -38.0pp   1/39  p=7.46e-11
+k=4 qp vs spline_satfix      +4.0pp   6/ 2  p=0.289
+k=4 qp vs tac_fold_satfix    +4.0pp   6/ 2  p=0.289
+k=5 qp vs zoh                +0.0pp   0/ 0  p=1
+k=5 qp vs native            -30.0pp   2/32  p=6.94e-08
+k=5 qp vs spline_satfix      +0.0pp   0/ 0  p=1
+k=5 qp vs tac_fold_satfix    +0.0pp   0/ 0  p=1
+Holm m=4 over {qp vs spline_satfix, qp vs tac_fold_satfix} x {k4,k5}:
+  k=4 qp_vs_spline_satfix      raw p=0.289 Holm p=1 
+  k=4 qp_vs_tac_fold_satfix    raw p=0.289 Holm p=1 
+  k=5 qp_vs_spline_satfix      raw p=1 Holm p=1 
+  k=5 qp_vs_tac_fold_satfix    raw p=1 Holm p=1 
+
+### (B) RoboCasa OpenDrawer closed-loop DP, k=4, n=15
+native               40.0%  (6/15)
+zoh                  26.7%  (4/15)
+spline_satfix        26.7%  (4/15)
+qp                   26.7%  (4/15)
+policy raw |a|>1 frac: 0.0
+qp vs zoh        +0.0pp 0/0 p=1
+qp vs native    -13.3pp 0/2 p=0.5
+qp vs spline_satfix   +0.0pp 0/0 p=1

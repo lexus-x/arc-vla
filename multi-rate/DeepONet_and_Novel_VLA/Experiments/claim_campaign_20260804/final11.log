@@ -1,0 +1,6 @@
+[q11] 19:29 starting -- 40 Hz OPEN LOOP (replan_steps=100), folding vs spline, asrc_s0@8300
+[q11] 19:57 asrc_cadmag_folding_40env exit=0
+[q11] 19:57 asrc_cadmag_spline_40env exit=0
+[q11] 19:57 OK json asrc_cadmag_folding_40env
+[q11] 19:57 OK json asrc_cadmag_spline_40env
+[q11] 19:57 Q11 DONE

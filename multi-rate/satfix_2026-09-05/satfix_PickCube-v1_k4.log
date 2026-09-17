@@ -1,0 +1,2 @@
+[PickCube-v1] eligible=993 arms=['original', 'exact_integral', 'exact_integral_satfix', 'cubic_spline', 'cubic_spline_satfix', 'pchip', 'pchip_satfix', 'tac_fold', 'tac_fold_satfix']
+[PickCube-v1] [100/993] original=96 exact_integral=18 exact_integral_satfix=18 cubic_spline=4 cubic_spline_satfix=29 pchip=4 pchip_satfix=26 tac_fold=10 tac_fold_satfix=32

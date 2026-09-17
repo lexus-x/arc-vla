@@ -1,0 +1,464 @@
+{
+  "asrc_goal_dec2_spline_10env": {
+    "aggregate": 0.9,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_goal_s0/checkpoints/8300",
+      "deeponet_head": "asrc",
+      "env_freq": 10,
+      "fourier": 6,
+      "head_rate": 20,
+      "model": "asrc_goal",
+      "replan": 5,
+      "settle_steps": 5,
+      "steps": 150,
+      "suite": "libero_goal",
+      "trained_on": "libero_spatial",
+      "transform": "decimate2+spline_cum+magscale",
+      "wallclock_s": 15.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": null,
+      "cap": 150,
+      "fail_at_cap": 1,
+      "fail_early": 0,
+      "magscale_applied": 146,
+      "n": 10,
+      "n_success": 9,
+      "spline_applied": null,
+      "success_steps_max": 95,
+      "success_steps_median": 54.0,
+      "v2_transform": {
+        "coarsened": 146,
+        "dec_len": 25,
+        "in_len": 50,
+        "k": 2,
+        "n": 146,
+        "out_len": 25,
+        "resampler": "spline_cum"
+      }
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 81,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "open the middle drawer of the cabinet"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 52,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the bowl on the stove"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 52,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the wine bottle on top of the cabinet"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 150,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "open the top drawer and put the bowl inside"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 60,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the bowl on top of the cabinet"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 77,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "push the plate to the front of the stove"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 50,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the cream cheese in the bowl"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 54,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "turn on the stove"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 45,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the bowl on the plate"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 95,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the wine bottle on the rack"
+      }
+    }
+  },
+  "asrc_goal_dec2_spline_20env": {
+    "aggregate": 0.9,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_goal_s0/checkpoints/8300",
+      "deeponet_head": "asrc",
+      "env_freq": 20,
+      "fourier": 6,
+      "head_rate": 20,
+      "model": "asrc_goal",
+      "replan": 10,
+      "settle_steps": 10,
+      "steps": 300,
+      "suite": "libero_goal",
+      "trained_on": "libero_spatial",
+      "transform": "decimate2+spline_cum",
+      "wallclock_s": 15.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": null,
+      "cap": 300,
+      "fail_at_cap": 1,
+      "fail_early": 0,
+      "magscale_applied": null,
+      "n": 10,
+      "n_success": 9,
+      "spline_applied": null,
+      "success_steps_max": 179,
+      "success_steps_median": 102.0,
+      "v2_transform": {
+        "coarsened": 135,
+        "dec_len": 25,
+        "in_len": 50,
+        "k": 2,
+        "n": 135,
+        "out_len": 50,
+        "resampler": "spline_cum"
+      }
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 122,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "open the middle drawer of the cabinet"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 85,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the bowl on the stove"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 83,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the wine bottle on top of the cabinet"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 179,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "open the top drawer and put the bowl inside"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 102,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the bowl on top of the cabinet"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 122,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "push the plate to the front of the stove"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 300,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put the cream cheese in the bowl"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 87,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "turn on the stove"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 76,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the bowl on the plate"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 150,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the wine bottle on the rack"
+      }
+    }
+  },
+  "asrc_goal_dec2_spline_40env": {
+    "aggregate": 0.9,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_goal_s0/checkpoints/8300",
+      "deeponet_head": "asrc",
+      "env_freq": 40,
+      "fourier": 6,
+      "head_rate": 20,
+      "model": "asrc_goal",
+      "replan": 20,
+      "settle_steps": 20,
+      "steps": 600,
+      "suite": "libero_goal",
+      "trained_on": "libero_spatial",
+      "transform": "decimate2+spline_cum+magscale+cadence",
+      "wallclock_s": 15.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": {
+        "n": 2519,
+        "phase": 1259,
+        "queries": 1260,
+        "resolved": 1253,
+        "starved": 6
+      },
+      "cap": 600,
+      "fail_at_cap": 1,
+      "fail_early": 0,
+      "magscale_applied": 131,
+      "n": 10,
+      "n_success": 9,
+      "spline_applied": null,
+      "success_steps_max": 323,
+      "success_steps_median": 204.0,
+      "v2_transform": {
+        "coarsened": 131,
+        "dec_len": 25,
+        "in_len": 50,
+        "k": 2,
+        "n": 131,
+        "out_len": 100,
+        "resampler": "spline_cum"
+      }
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 244,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "open the middle drawer of the cabinet"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 165,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the bowl on the stove"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 160,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the wine bottle on top of the cabinet"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 600,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "open the top drawer and put the bowl inside"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 204,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the bowl on top of the cabinet"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 249,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "push the plate to the front of the stove"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 249,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the cream cheese in the bowl"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 176,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "turn on the stove"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 149,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the bowl on the plate"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 323,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the wine bottle on the rack"
+      }
+    }
+  }
+}

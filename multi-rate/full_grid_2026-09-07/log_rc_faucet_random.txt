@@ -1,0 +1,81 @@
+[19:43:30] TurnOffSinkFaucet random n=100 k=2 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-TurnOffSinkFaucet_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 7038 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-TurnOffSinkFaucet_f0.pt
+[eval] [10/100] native=2 zoh=2 spline=2 bspline_eps_raw=2 tac_fold_satfix=2 qp=2 qp_anchor=2
+[eval] [20/100] native=4 zoh=4 spline=4 bspline_eps_raw=5 tac_fold_satfix=4 qp=4 qp_anchor=4
+[eval] [30/100] native=8 zoh=8 spline=8 bspline_eps_raw=9 tac_fold_satfix=8 qp=8 qp_anchor=8
+[eval] [40/100] native=12 zoh=12 spline=12 bspline_eps_raw=13 tac_fold_satfix=12 qp=12 qp_anchor=12
+[eval] [50/100] native=14 zoh=13 spline=13 bspline_eps_raw=14 tac_fold_satfix=13 qp=13 qp_anchor=13
+[eval] [60/100] native=18 zoh=17 spline=17 bspline_eps_raw=17 tac_fold_satfix=17 qp=17 qp_anchor=17
+[eval] [70/100] native=21 zoh=20 spline=20 bspline_eps_raw=21 tac_fold_satfix=20 qp=20 qp_anchor=20
+[eval] [80/100] native=23 zoh=22 spline=22 bspline_eps_raw=23 tac_fold_satfix=22 qp=22 qp_anchor=22
+[eval] [90/100] native=28 zoh=26 spline=28 bspline_eps_raw=28 tac_fold_satfix=27 qp=26 qp_anchor=27
+[eval] [100/100] native=33 zoh=31 spline=33 bspline_eps_raw=33 tac_fold_satfix=32 qp=31 qp_anchor=32
+[eval] wall 14590s for 100 eps x 7 arms
+
+=== RC-TurnOffSinkFaucet closed-loop DP, k=2, n=100 ===
+  native             33.0% (33/100)  | vs zoh:   +2.0pp p=0.5
+  zoh                31.0% (31/100)  | vs native:   -2.0pp p=0.5
+  spline             33.0% (33/100)  | vs zoh:   +2.0pp p=0.5  | vs native:   +0.0pp p=1
+  bspline_eps_raw    33.0% (33/100)  | vs zoh:   +2.0pp p=0.688  | vs native:   +0.0pp p=1
+  tac_fold_satfix    32.0% (32/100)  | vs zoh:   +1.0pp p=1  | vs native:   -1.0pp p=1
+  qp                 31.0% (31/100)  | vs zoh:   +0.0pp p=1  | vs native:   -2.0pp p=0.5
+  qp_anchor          32.0% (32/100)  | vs zoh:   +1.0pp p=1  | vs native:   -1.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-TurnOffSinkFaucet_f0_random_n100.json
+[23:46:43] TurnOffSinkFaucet random n=100 k=4 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-TurnOffSinkFaucet_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 7038 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-TurnOffSinkFaucet_f0.pt
+[eval] [10/100] native=2 zoh=2 spline=2 bspline_eps_raw=2 tac_fold_satfix=2 qp=2 qp_anchor=2
+[eval] [20/100] native=4 zoh=4 spline=4 bspline_eps_raw=4 tac_fold_satfix=4 qp=4 qp_anchor=4
+[eval] [30/100] native=8 zoh=8 spline=8 bspline_eps_raw=8 tac_fold_satfix=8 qp=8 qp_anchor=8
+[eval] [40/100] native=12 zoh=12 spline=13 bspline_eps_raw=12 tac_fold_satfix=13 qp=12 qp_anchor=12
+[eval] [50/100] native=14 zoh=13 spline=15 bspline_eps_raw=13 tac_fold_satfix=15 qp=14 qp_anchor=14
+[eval] [60/100] native=18 zoh=17 spline=18 bspline_eps_raw=17 tac_fold_satfix=18 qp=18 qp_anchor=17
+[eval] [70/100] native=21 zoh=20 spline=21 bspline_eps_raw=20 tac_fold_satfix=21 qp=21 qp_anchor=20
+[eval] [80/100] native=23 zoh=21 spline=23 bspline_eps_raw=21 tac_fold_satfix=23 qp=23 qp_anchor=22
+[eval] [90/100] native=28 zoh=26 spline=28 bspline_eps_raw=26 tac_fold_satfix=28 qp=28 qp_anchor=27
+[eval] [100/100] native=33 zoh=31 spline=33 bspline_eps_raw=31 tac_fold_satfix=33 qp=33 qp_anchor=32
+[eval] wall 15487s for 100 eps x 7 arms
+
+=== RC-TurnOffSinkFaucet closed-loop DP, k=4, n=100 ===
+  native             33.0% (33/100)  | vs zoh:   +2.0pp p=0.625
+  zoh                31.0% (31/100)  | vs native:   -2.0pp p=0.625
+  spline             33.0% (33/100)  | vs zoh:   +2.0pp p=0.688  | vs native:   +0.0pp p=1
+  bspline_eps_raw    31.0% (31/100)  | vs zoh:   +0.0pp p=1  | vs native:   -2.0pp p=0.625
+  tac_fold_satfix    33.0% (33/100)  | vs zoh:   +2.0pp p=0.688  | vs native:   +0.0pp p=1
+  qp                 33.0% (33/100)  | vs zoh:   +2.0pp p=0.625  | vs native:   +0.0pp p=1
+  qp_anchor          32.0% (32/100)  | vs zoh:   +1.0pp p=1  | vs native:   -1.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-TurnOffSinkFaucet_f0_k4_random_n100.json
+[04:04:52] TurnOffSinkFaucet random n=100 k=8 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-TurnOffSinkFaucet_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 7038 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-TurnOffSinkFaucet_f0.pt
+[eval] [10/100] native=2 zoh=3 spline=3 bspline_eps_raw=3 tac_fold_satfix=3 qp=3 qp_anchor=3
+[eval] [20/100] native=4 zoh=4 spline=4 bspline_eps_raw=4 tac_fold_satfix=4 qp=4 qp_anchor=4
+[eval] [30/100] native=8 zoh=8 spline=8 bspline_eps_raw=8 tac_fold_satfix=8 qp=8 qp_anchor=8
+[eval] [40/100] native=12 zoh=12 spline=12 bspline_eps_raw=12 tac_fold_satfix=12 qp=12 qp_anchor=12
+[eval] [50/100] native=14 zoh=13 spline=13 bspline_eps_raw=13 tac_fold_satfix=13 qp=13 qp_anchor=13
+[eval] [60/100] native=18 zoh=18 spline=18 bspline_eps_raw=18 tac_fold_satfix=18 qp=18 qp_anchor=18
+[eval] [70/100] native=21 zoh=22 spline=22 bspline_eps_raw=22 tac_fold_satfix=22 qp=22 qp_anchor=22
+[eval] [80/100] native=23 zoh=26 spline=26 bspline_eps_raw=26 tac_fold_satfix=26 qp=26 qp_anchor=26
+[eval] [90/100] native=28 zoh=31 spline=31 bspline_eps_raw=31 tac_fold_satfix=31 qp=31 qp_anchor=31
+[eval] [100/100] native=33 zoh=36 spline=36 bspline_eps_raw=36 tac_fold_satfix=36 qp=36 qp_anchor=36
+[eval] wall 13753s for 100 eps x 7 arms
+
+=== RC-TurnOffSinkFaucet closed-loop DP, k=8, n=100 ===
+  native             33.0% (33/100)  | vs zoh:   -3.0pp p=0.581
+  zoh                36.0% (36/100)  | vs native:   +3.0pp p=0.581
+  spline             36.0% (36/100)  | vs zoh:   +0.0pp p=1  | vs native:   +3.0pp p=0.581
+  bspline_eps_raw    36.0% (36/100)  | vs zoh:   +0.0pp p=1  | vs native:   +3.0pp p=0.581
+  tac_fold_satfix    36.0% (36/100)  | vs zoh:   +0.0pp p=1  | vs native:   +3.0pp p=0.581
+  qp                 36.0% (36/100)  | vs zoh:   +0.0pp p=1  | vs native:   +3.0pp p=0.581
+  qp_anchor          36.0% (36/100)  | vs zoh:   +0.0pp p=1  | vs native:   +3.0pp p=0.581
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-TurnOffSinkFaucet_f0_k8_random_n100.json

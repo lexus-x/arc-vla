@@ -1,0 +1,439 @@
+{
+  "meta": {
+    "suite": "libero_spatial",
+    "task_id": 3,
+    "task_description": "pick up the black bowl on the cookie box and place it on the plate",
+    "primary_obj_name": "akita_black_bowl_1",
+    "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_s0/checkpoints/8300",
+    "knock_bound": 0.15,
+    "lr_naive": 1e-05,
+    "group_size": 4,
+    "n_groups": 5,
+    "n_episodes_per_arm": 20,
+    "safety_proxy_note": "rho_safe/max_obj_speed are a simplified proxy for a full STL spec, adapted from CASTLE's G(d_goal<=d_goal(0)+delta) knock-away clause -- intentional smoke-test scope cut."
+  },
+  "arm_A_frozen": [
+    {
+      "arm": "A_frozen",
+      "episode": 0,
+      "seed": 2000,
+      "success": true,
+      "rho_safe": -0.006069167264159792,
+      "max_obj_speed": 0.13787764685583234,
+      "max_disp": 0.15606916726415979,
+      "steps": 94
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 1,
+      "seed": 2001,
+      "success": false,
+      "rho_safe": -0.02463453845715219,
+      "max_obj_speed": 0.012617009199405711,
+      "max_disp": 0.17463453845715218,
+      "steps": 220
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 2,
+      "seed": 2002,
+      "success": true,
+      "rho_safe": -0.03480314113720065,
+      "max_obj_speed": 0.1633441473896218,
+      "max_disp": 0.18480314113720064,
+      "steps": 87
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 3,
+      "seed": 2003,
+      "success": true,
+      "rho_safe": -0.02208922724472892,
+      "max_obj_speed": 0.14758826590145666,
+      "max_disp": 0.17208922724472892,
+      "steps": 87
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 4,
+      "seed": 2004,
+      "success": true,
+      "rho_safe": -0.0040776047892914224,
+      "max_obj_speed": 0.15344602449312106,
+      "max_disp": 0.15407760478929142,
+      "steps": 88
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 5,
+      "seed": 2005,
+      "success": true,
+      "rho_safe": -0.01626133470650895,
+      "max_obj_speed": 0.174860542433832,
+      "max_disp": 0.16626133470650895,
+      "steps": 81
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 6,
+      "seed": 2006,
+      "success": true,
+      "rho_safe": -0.014627060197956815,
+      "max_obj_speed": 0.1621876584488551,
+      "max_disp": 0.1646270601979568,
+      "steps": 83
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 7,
+      "seed": 2007,
+      "success": true,
+      "rho_safe": -0.016547986370881784,
+      "max_obj_speed": 0.1796478843434339,
+      "max_disp": 0.16654798637088178,
+      "steps": 89
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 8,
+      "seed": 2008,
+      "success": true,
+      "rho_safe": -0.011305286405991544,
+      "max_obj_speed": 0.17043425718500796,
+      "max_disp": 0.16130528640599154,
+      "steps": 91
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 9,
+      "seed": 2009,
+      "success": true,
+      "rho_safe": -0.04406003537452044,
+      "max_obj_speed": 0.1913925784839362,
+      "max_disp": 0.19406003537452043,
+      "steps": 89
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 10,
+      "seed": 2010,
+      "success": true,
+      "rho_safe": -0.024245445139123384,
+      "max_obj_speed": 0.1791627117038437,
+      "max_disp": 0.17424544513912338,
+      "steps": 86
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 11,
+      "seed": 2011,
+      "success": true,
+      "rho_safe": -0.02259604959809408,
+      "max_obj_speed": 0.16210266292966102,
+      "max_disp": 0.17259604959809408,
+      "steps": 81
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 12,
+      "seed": 2012,
+      "success": true,
+      "rho_safe": -0.042119348187016376,
+      "max_obj_speed": 0.19973218040821578,
+      "max_disp": 0.19211934818701637,
+      "steps": 89
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 13,
+      "seed": 2013,
+      "success": true,
+      "rho_safe": -0.014863818751188501,
+      "max_obj_speed": 0.17694623062073161,
+      "max_disp": 0.1648638187511885,
+      "steps": 83
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 14,
+      "seed": 2014,
+      "success": true,
+      "rho_safe": -0.011724746166557415,
+      "max_obj_speed": 0.1609389332247139,
+      "max_disp": 0.1617247461665574,
+      "steps": 113
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 15,
+      "seed": 2015,
+      "success": true,
+      "rho_safe": -0.02023078223068378,
+      "max_obj_speed": 0.1706004603311133,
+      "max_disp": 0.17023078223068377,
+      "steps": 87
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 16,
+      "seed": 2016,
+      "success": true,
+      "rho_safe": -0.006645269328858006,
+      "max_obj_speed": 0.16320611730711368,
+      "max_disp": 0.156645269328858,
+      "steps": 81
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 17,
+      "seed": 2017,
+      "success": true,
+      "rho_safe": -0.0035997721349744216,
+      "max_obj_speed": 0.15650514634843743,
+      "max_disp": 0.15359977213497442,
+      "steps": 83
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 18,
+      "seed": 2018,
+      "success": true,
+      "rho_safe": -0.008240204781180926,
+      "max_obj_speed": 0.17239454235280108,
+      "max_disp": 0.15824020478118092,
+      "steps": 88
+    },
+    {
+      "arm": "A_frozen",
+      "episode": 19,
+      "seed": 2019,
+      "success": true,
+      "rho_safe": -0.019719717319648195,
+      "max_obj_speed": 0.14254557016442443,
+      "max_disp": 0.1697197173196482,
+      "steps": 82
+    }
+  ],
+  "arm_B_naive_ttt": [
+    {
+      "arm": "B_naive_ttt",
+      "episode": 0,
+      "seed": 3000,
+      "group": 0,
+      "success": true,
+      "rho_safe": -0.010178205029794968,
+      "max_obj_speed": 0.14240791902400307,
+      "max_disp": 0.16017820502979496,
+      "steps": 88
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 1,
+      "seed": 3001,
+      "group": 0,
+      "success": true,
+      "rho_safe": -0.010140085567548446,
+      "max_obj_speed": 0.16319201944551073,
+      "max_disp": 0.16014008556754844,
+      "steps": 81
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 2,
+      "seed": 3002,
+      "group": 0,
+      "success": true,
+      "rho_safe": -0.021809709822039502,
+      "max_obj_speed": 0.18544943991615392,
+      "max_disp": 0.1718097098220395,
+      "steps": 90
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 3,
+      "seed": 3003,
+      "group": 0,
+      "success": true,
+      "rho_safe": -0.011894077584891666,
+      "max_obj_speed": 0.15008078510326994,
+      "max_disp": 0.16189407758489166,
+      "steps": 88
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 4,
+      "seed": 3004,
+      "group": 1,
+      "success": true,
+      "rho_safe": -0.0037310784584189405,
+      "max_obj_speed": 0.1519220050887851,
+      "max_disp": 0.15373107845841893,
+      "steps": 87
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 5,
+      "seed": 3005,
+      "group": 1,
+      "success": true,
+      "rho_safe": -0.021322244386636602,
+      "max_obj_speed": 0.1743216418708822,
+      "max_disp": 0.1713222443866366,
+      "steps": 83
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 6,
+      "seed": 3006,
+      "group": 1,
+      "success": true,
+      "rho_safe": -0.02070604917822444,
+      "max_obj_speed": 0.16438381545093103,
+      "max_disp": 0.17070604917822443,
+      "steps": 90
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 7,
+      "seed": 3007,
+      "group": 1,
+      "success": true,
+      "rho_safe": -0.03252920468931489,
+      "max_obj_speed": 0.1698667668153376,
+      "max_disp": 0.18252920468931488,
+      "steps": 86
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 8,
+      "seed": 3008,
+      "group": 2,
+      "success": true,
+      "rho_safe": -0.030212480661501367,
+      "max_obj_speed": 0.18142482157135534,
+      "max_disp": 0.18021248066150136,
+      "steps": 85
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 9,
+      "seed": 3009,
+      "group": 2,
+      "success": true,
+      "rho_safe": -0.03476735280814108,
+      "max_obj_speed": 0.17966399698469396,
+      "max_disp": 0.18476735280814108,
+      "steps": 85
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 10,
+      "seed": 3010,
+      "group": 2,
+      "success": true,
+      "rho_safe": -0.03390111297853057,
+      "max_obj_speed": 0.18388170341709378,
+      "max_disp": 0.18390111297853057,
+      "steps": 92
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 11,
+      "seed": 3011,
+      "group": 2,
+      "success": true,
+      "rho_safe": -0.01842903351810113,
+      "max_obj_speed": 0.16099388897947622,
+      "max_disp": 0.16842903351810112,
+      "steps": 87
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 12,
+      "seed": 3012,
+      "group": 3,
+      "success": true,
+      "rho_safe": -0.04249841211527966,
+      "max_obj_speed": 0.17098382462993575,
+      "max_disp": 0.19249841211527965,
+      "steps": 89
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 13,
+      "seed": 3013,
+      "group": 3,
+      "success": true,
+      "rho_safe": -0.02345537399358799,
+      "max_obj_speed": 0.15146285094027728,
+      "max_disp": 0.17345537399358799,
+      "steps": 75
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 14,
+      "seed": 3014,
+      "group": 3,
+      "success": true,
+      "rho_safe": -0.02191633666406889,
+      "max_obj_speed": 0.17480182935833985,
+      "max_disp": 0.1719163366640689,
+      "steps": 85
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 15,
+      "seed": 3015,
+      "group": 3,
+      "success": true,
+      "rho_safe": -0.028883904940430777,
+      "max_obj_speed": 0.16865374032514852,
+      "max_disp": 0.17888390494043077,
+      "steps": 93
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 16,
+      "seed": 3016,
+      "group": 4,
+      "success": true,
+      "rho_safe": -0.01725462136362796,
+      "max_obj_speed": 0.16083005764284855,
+      "max_disp": 0.16725462136362795,
+      "steps": 83
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 17,
+      "seed": 3017,
+      "group": 4,
+      "success": true,
+      "rho_safe": -0.00220809446811035,
+      "max_obj_speed": 0.1439911845568425,
+      "max_disp": 0.15220809446811034,
+      "steps": 79
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 18,
+      "seed": 3018,
+      "group": 4,
+      "success": true,
+      "rho_safe": -0.017735716626842868,
+      "max_obj_speed": 0.17684070950154868,
+      "max_disp": 0.16773571662684286,
+      "steps": 80
+    },
+    {
+      "arm": "B_naive_ttt",
+      "episode": 19,
+      "seed": 3019,
+      "group": 4,
+      "success": true,
+      "rho_safe": -0.002570105528008626,
+      "max_obj_speed": 0.161653220031268,
+      "max_disp": 0.15257010552800862,
+      "steps": 87
+    }
+  ]
+}

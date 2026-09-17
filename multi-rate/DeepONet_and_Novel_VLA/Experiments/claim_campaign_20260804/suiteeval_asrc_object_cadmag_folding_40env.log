@@ -1,0 +1,96 @@
+[suite] libero_object -> suiteeval_object_asrc_object_cadmag_folding_40env_out/multirate_libero_object.json
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+
+============================================================
+ARM asrc_object_cadmag_folding_40env
+============================================================
+[stats] asrc_object_cadmag_folding_40env: normalizing with lerobot/libero_object_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 104206.31it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8076.83it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8449.12it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[asrc_object_cadmag_folding_40env] variant=asrc n_fourier=6 re-integrates at 40.0 Hz (native ODE re-integration, NOT alias folding)
+[asrc_object_cadmag_folding_40env] magscale: raw pose deltas x2 (restores native per-step travel)
+[asrc_object_cadmag_folding_40env] resolved-cadence: 20 Hz decisions in a 40 Hz sim (1 query per 2 env steps); intermediates taken from the plan
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[asrc_object_cadmag_folding_40env] settle window scaled to 20 steps (0.50 s at 40 Hz)
+[asrc_object_cadmag_folding_40env] task 0 trial 00: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] task 0 trial 01: OK (268/560 steps)
+[asrc_object_cadmag_folding_40env] task 0 trial 02: OK (269/560 steps)
+[asrc_object_cadmag_folding_40env] task 0 trial 03: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] task 0 trial 04: OK (280/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_folding_40env] task 1 trial 00: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] task 1 trial 01: OK (325/560 steps)
+[asrc_object_cadmag_folding_40env] task 1 trial 02: OK (318/560 steps)
+[asrc_object_cadmag_folding_40env] task 1 trial 03: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] task 1 trial 04: OK (388/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_folding_40env] task 2 trial 00: OK (225/560 steps)
+[asrc_object_cadmag_folding_40env] task 2 trial 01: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] task 2 trial 02: OK (243/560 steps)
+[asrc_object_cadmag_folding_40env] task 2 trial 03: OK (235/560 steps)
+[asrc_object_cadmag_folding_40env] task 2 trial 04: OK (217/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_folding_40env] task 3 trial 00: OK (244/560 steps)
+[asrc_object_cadmag_folding_40env] task 3 trial 01: OK (247/560 steps)
+[asrc_object_cadmag_folding_40env] task 3 trial 02: OK (248/560 steps)
+[asrc_object_cadmag_folding_40env] task 3 trial 03: OK (247/560 steps)
+[asrc_object_cadmag_folding_40env] task 3 trial 04: OK (262/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_folding_40env] task 4 trial 00: OK (272/560 steps)
+[asrc_object_cadmag_folding_40env] task 4 trial 01: OK (271/560 steps)
+[asrc_object_cadmag_folding_40env] task 4 trial 02: OK (524/560 steps)
+[asrc_object_cadmag_folding_40env] task 4 trial 03: OK (274/560 steps)
+[asrc_object_cadmag_folding_40env] task 4 trial 04: OK (271/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_folding_40env] task 5 trial 00: OK (255/560 steps)
+[asrc_object_cadmag_folding_40env] task 5 trial 01: OK (233/560 steps)
+[asrc_object_cadmag_folding_40env] task 5 trial 02: OK (260/560 steps)
+[asrc_object_cadmag_folding_40env] task 5 trial 03: OK (281/560 steps)
+[asrc_object_cadmag_folding_40env] task 5 trial 04: OK (251/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_folding_40env] task 6 trial 00: OK (290/560 steps)
+[asrc_object_cadmag_folding_40env] task 6 trial 01: OK (389/560 steps)
+[asrc_object_cadmag_folding_40env] task 6 trial 02: OK (288/560 steps)
+[asrc_object_cadmag_folding_40env] task 6 trial 03: OK (302/560 steps)
+[asrc_object_cadmag_folding_40env] task 6 trial 04: OK (295/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_folding_40env] task 7 trial 00: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] task 7 trial 01: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] task 7 trial 02: OK (367/560 steps)
+[asrc_object_cadmag_folding_40env] task 7 trial 03: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] task 7 trial 04: OK (270/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_folding_40env] task 8 trial 00: OK (545/560 steps)
+[asrc_object_cadmag_folding_40env] task 8 trial 01: OK (294/560 steps)
+[asrc_object_cadmag_folding_40env] task 8 trial 02: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] task 8 trial 03: OK (294/560 steps)
+[asrc_object_cadmag_folding_40env] task 8 trial 04: OK (298/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_folding_40env] task 9 trial 00: OK (333/560 steps)
+[asrc_object_cadmag_folding_40env] task 9 trial 01: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] task 9 trial 02: OK (252/560 steps)
+[asrc_object_cadmag_folding_40env] task 9 trial 03: OK (259/560 steps)
+[asrc_object_cadmag_folding_40env] task 9 trial 04: x (560/560 steps)
+[asrc_object_cadmag_folding_40env] cadence check: 8772 policy queries, 8749 resolved intermediates, 23 starved of 17544 env steps
+[asrc_object_cadmag_folding_40env] diagnostics: 39/50 ok | fail_at_cap=11 fail_early=0 | succ_median=271.0/560
+--> asrc_object_cadmag_folding_40env: 78.0% (560 steps @ 40 Hz = 11.0 s, replan every 20)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  asrc_object_cadmag_folding_40env  78.0%

@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "suite": "libero_spatial",
+    "task_id": 0,
+    "task_description": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_s0/checkpoints/8300",
+    "backbone": "policy.model.vlm_with_expert.embed_image (frozen, no_grad)",
+    "head_arch": "1928 -> 512 -> 128 -> 1, ReLU, sigmoid output",
+    "label": "self-supervised t/(T-1) on LIBERO expert demos",
+    "total_wall_time_s": 190.10316467285156
+  },
+  "training": {
+    "train_time_s": 0.39721226692199707,
+    "n_train_frames": 3617,
+    "n_val_frames": 870,
+    "n_train_episodes": 36,
+    "n_val_episodes": 9,
+    "held_out_overall_pearson_r": 0.9696812011894782,
+    "held_out_per_episode_pearson_r_mean": 0.980733669321945,
+    "held_out_per_episode_pearson_r_n": 9,
+    "held_out_val_mse": 0.005080990493297577
+  },
+  "rollout_validation": {
+    "per_rollout": [
+      {
+        "seed": 2000,
+        "orig_label_success": true,
+        "fresh_success": true,
+        "steps": 83,
+        "pred_progress_start": 0.06444679945707321,
+        "pred_progress_end": 0.8608257174491882,
+        "pred_progress_delta": 0.7963789105415344,
+        "pred_progress_mean_first_half": 0.20636679232120514,
+        "pred_progress_mean_second_half": 0.6123482584953308,
+        "corr_pred_vs_timestep": 0.9835213611585353
+      },
+      {
+        "seed": 2001,
+        "orig_label_success": true,
+        "fresh_success": false,
+        "steps": 220,
+        "pred_progress_start": 0.061954766511917114,
+        "pred_progress_end": 0.4565685987472534,
+        "pred_progress_delta": 0.3946138322353363,
+        "pred_progress_mean_first_half": 0.4273512363433838,
+        "pred_progress_mean_second_half": 0.6022905111312866,
+        "corr_pred_vs_timestep": 0.6573046139362468
+      },
+      {
+        "seed": 2003,
+        "orig_label_success": true,
+        "fresh_success": true,
+        "steps": 84,
+        "pred_progress_start": 0.07279021292924881,
+        "pred_progress_end": 0.8739122152328491,
+        "pred_progress_delta": 0.8011220097541809,
+        "pred_progress_mean_first_half": 0.24888622760772705,
+        "pred_progress_mean_second_half": 0.7267957329750061,
+        "corr_pred_vs_timestep": 0.9861251441373237
+      },
+      {
+        "seed": 2002,
+        "orig_label_success": false,
+        "fresh_success": false,
+        "steps": 220,
+        "pred_progress_start": 0.045783959329128265,
+        "pred_progress_end": 0.8885513544082642,
+        "pred_progress_delta": 0.8427674174308777,
+        "pred_progress_mean_first_half": 0.46296921372413635,
+        "pred_progress_mean_second_half": 0.8756014704704285,
+        "corr_pred_vs_timestep": 0.91463244700761
+      },
+      {
+        "seed": 2005,
+        "orig_label_success": false,
+        "fresh_success": true,
+        "steps": 78,
+        "pred_progress_start": 0.03125986456871033,
+        "pred_progress_end": 0.8348797559738159,
+        "pred_progress_delta": 0.8036198616027832,
+        "pred_progress_mean_first_half": 0.21025601029396057,
+        "pred_progress_mean_second_half": 0.6100916266441345,
+        "corr_pred_vs_timestep": 0.9937165041556204
+      },
+      {
+        "seed": 2007,
+        "orig_label_success": false,
+        "fresh_success": true,
+        "steps": 79,
+        "pred_progress_start": 0.050822287797927856,
+        "pred_progress_end": 0.8909772634506226,
+        "pred_progress_delta": 0.8401550054550171,
+        "pred_progress_mean_first_half": 0.215839222073555,
+        "pred_progress_mean_second_half": 0.6413715481758118,
+        "corr_pred_vs_timestep": 0.9900312630245164
+      },
+      {
+        "seed": 2004,
+        "orig_label_success": true,
+        "fresh_success": true,
+        "steps": 82,
+        "pred_progress_start": 0.06392831355333328,
+        "pred_progress_end": 0.8749885559082031,
+        "pred_progress_delta": 0.8110602498054504,
+        "pred_progress_mean_first_half": 0.18617869913578033,
+        "pred_progress_mean_second_half": 0.6257471442222595,
+        "corr_pred_vs_timestep": 0.991191817153356
+      },
+      {
+        "seed": 2006,
+        "orig_label_success": true,
+        "fresh_success": false,
+        "steps": 220,
+        "pred_progress_start": 0.0604613795876503,
+        "pred_progress_end": 0.5467118620872498,
+        "pred_progress_delta": 0.48625048995018005,
+        "pred_progress_mean_first_half": 0.45941731333732605,
+        "pred_progress_mean_second_half": 0.6772550940513611,
+        "corr_pred_vs_timestep": 0.6960722245735576
+      },
+      {
+        "seed": 2010,
+        "orig_label_success": false,
+        "fresh_success": true,
+        "steps": 84,
+        "pred_progress_start": 0.04904807731509209,
+        "pred_progress_end": 0.84959477186203,
+        "pred_progress_delta": 0.8005467057228088,
+        "pred_progress_mean_first_half": 0.22603264451026917,
+        "pred_progress_mean_second_half": 0.7003695964813232,
+        "corr_pred_vs_timestep": 0.9899940849385898
+      },
+      {
+        "seed": 2012,
+        "orig_label_success": false,
+        "fresh_success": true,
+        "steps": 82,
+        "pred_progress_start": 0.04652206599712372,
+        "pred_progress_end": 0.8999302387237549,
+        "pred_progress_delta": 0.85340815782547,
+        "pred_progress_mean_first_half": 0.23384471237659454,
+        "pred_progress_mean_second_half": 0.6382716298103333,
+        "corr_pred_vs_timestep": 0.9894764020277851
+      }
+    ],
+    "summary": {
+      "n_success": 7,
+      "n_fail": 3,
+      "success_mean_delta": 0.8151844143867493,
+      "fail_mean_delta": 0.5745439132054647,
+      "success_mean_end": 0.8693012169429234,
+      "fail_mean_end": 0.6306106050809225,
+      "fail_end_values": [
+        0.4565685987472534,
+        0.8885513544082642,
+        0.5467118620872498
+      ],
+      "success_end_values": [
+        0.8608257174491882,
+        0.8739122152328491,
+        0.8348797559738159,
+        0.8909772634506226,
+        0.8749885559082031,
+        0.84959477186203,
+        0.8999302387237549
+      ],
+      "note": "extended from n=6 to n=10 via scratch_extend_rollout_val.py to check whether the n=6 near-miss false positive (seed 2002) was a one-off."
+    }
+  }
+}

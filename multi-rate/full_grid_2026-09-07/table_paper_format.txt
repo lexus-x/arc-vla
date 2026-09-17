@@ -1,0 +1,16 @@
+| Configuration | PushT | Lift | PickCube | Can | Square | RC OpenDrawer | RC PnPStove |
+|---|---|---|---|---|---|---|---|
+| Diff. 1X Base | 26% | 100% | 90% | 98% | 89% | 40% | 7% |
+| Diff. 1X +B-spline post-hoc (eps .005 / .05) | 30% / 34% | 100% / 100% | — | — | — | — | — |
+| Diff. 2X +TAC-Fold+satfix | 30% | 100% | 88% | 98% | 88% | — | — |
+| Diff. 2X +QP (ours) | 20% | 100% | 87% | 97% | 90% | 33% | 7% |
+| Diff. 4X +TAC-Fold+satfix | 2% | — | 50% | — | — | — | — |
+| Diff. 4X +QP (ours) | 3% | — | 52% | — | — | 27% | 7% |
+| FM 1X Base | 30% | 100% | 89% | 100% | 84% | 53% | 13% |
+| FM 2X +TAC-Fold+satfix | 25% | 100% | 84% | 100% | 87% | 40% | 7% |
+| FM 2X +QP (ours) | — | — | — | — | — | — | — |
+| FM 4X +TAC-Fold+satfix | — | — | 51% | — | — | — | — |
+| FM 4X +QP (ours) | — | — | 50% | — | — | — | — |
+
+n per cell: Diff. RC-OpenDrawer k2=15, Diff. RC-PnPCounterToStove k2=15, Diff. PickCube-v1 k4=400, Diff. RC-OpenDrawer k4=15, Diff. RC-PnPCounterToStove k4=15, FM RC-OpenDrawer k2=15, FM RC-PnPCounterToStove k2=15
+all other cells n=100. "kX" = k-step decimation then resample (our analog of the paper's kX speedup); at 1X TAC-Fold+satfix and QP equal Base by construction.

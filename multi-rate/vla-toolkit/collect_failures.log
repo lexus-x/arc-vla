@@ -1,0 +1,167 @@
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 56679.78it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 5554.06it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[task0 ep0] seed=20000000 success=True steps=501 n_frames=501
+[task0 ep1] seed=20000001 success=False steps=520 n_frames=520
+[task0 ep2] seed=20000002 success=False steps=520 n_frames=520
+[task0 ep3] seed=20000003 success=False steps=520 n_frames=520
+[task0 ep4] seed=20000004 success=False steps=520 n_frames=520
+[task0 ep5] seed=20000005 success=False steps=520 n_frames=520
+[task0 ep6] seed=20000006 success=False steps=520 n_frames=520
+[task0 ep7] seed=20000007 success=False steps=520 n_frames=520
+[task0 ep8] seed=20000008 success=True steps=506 n_frames=506
+[task0 ep9] seed=20000009 success=False steps=520 n_frames=520
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task1 ep0] seed=20001000 success=True steps=258 n_frames=258
+[task1 ep1] seed=20001001 success=True steps=259 n_frames=259
+[task1 ep2] seed=20001002 success=True steps=256 n_frames=256
+[task1 ep3] seed=20001003 success=True steps=398 n_frames=398
+[task1 ep4] seed=20001004 success=False steps=520 n_frames=520
+[task1 ep5] seed=20001005 success=True steps=282 n_frames=282
+[task1 ep6] seed=20001006 success=True steps=325 n_frames=325
+[task1 ep7] seed=20001007 success=True steps=261 n_frames=261
+[task1 ep8] seed=20001008 success=True steps=277 n_frames=277
+[task1 ep9] seed=20001009 success=False steps=520 n_frames=520
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task2 ep0] seed=20002000 success=True steps=235 n_frames=235
+[task2 ep1] seed=20002001 success=True steps=248 n_frames=248
+[task2 ep2] seed=20002002 success=True steps=246 n_frames=246
+[task2 ep3] seed=20002003 success=True steps=264 n_frames=264
+[task2 ep4] seed=20002004 success=True steps=274 n_frames=274
+[task2 ep5] seed=20002005 success=True steps=258 n_frames=258
+[task2 ep6] seed=20002006 success=True steps=253 n_frames=253
+[task2 ep7] seed=20002007 success=True steps=277 n_frames=277
+[task2 ep8] seed=20002008 success=True steps=269 n_frames=269
+[task2 ep9] seed=20002009 success=True steps=302 n_frames=302
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task3 ep0] seed=20003000 success=True steps=271 n_frames=271
+[task3 ep1] seed=20003001 success=True steps=337 n_frames=337
+[task3 ep2] seed=20003002 success=True steps=243 n_frames=243
+[task3 ep3] seed=20003003 success=True steps=249 n_frames=249
+[task3 ep4] seed=20003004 success=True steps=232 n_frames=232
+[task3 ep5] seed=20003005 success=True steps=252 n_frames=252
+[task3 ep6] seed=20003006 success=True steps=270 n_frames=270
+[task3 ep7] seed=20003007 success=True steps=239 n_frames=239
+[task3 ep8] seed=20003008 success=True steps=238 n_frames=238
+[task3 ep9] seed=20003009 success=True steps=241 n_frames=241
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task4 ep0] seed=20004000 success=True steps=336 n_frames=336
+[task4 ep1] seed=20004001 success=False steps=520 n_frames=520
+[task4 ep2] seed=20004002 success=False steps=520 n_frames=520
+[task4 ep3] seed=20004003 success=True steps=272 n_frames=272
+[task4 ep4] seed=20004004 success=True steps=249 n_frames=249
+[task4 ep5] seed=20004005 success=True steps=258 n_frames=258
+[task4 ep6] seed=20004006 success=True steps=365 n_frames=365
+[task4 ep7] seed=20004007 success=True steps=300 n_frames=300
+[task4 ep8] seed=20004008 success=True steps=270 n_frames=270
+[task4 ep9] seed=20004009 success=True steps=251 n_frames=251
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task5 ep0] seed=20005000 success=True steps=196 n_frames=196
+[task5 ep1] seed=20005001 success=False steps=520 n_frames=520
+[task5 ep2] seed=20005002 success=True steps=190 n_frames=190
+[task5 ep3] seed=20005003 success=True steps=203 n_frames=203
+[task5 ep4] seed=20005004 success=True steps=209 n_frames=209
+[task5 ep5] seed=20005005 success=True steps=199 n_frames=199
+[task5 ep6] seed=20005006 success=True steps=216 n_frames=216
+[task5 ep7] seed=20005007 success=True steps=162 n_frames=162
+[task5 ep8] seed=20005008 success=False steps=520 n_frames=520
+[task5 ep9] seed=20005009 success=True steps=234 n_frames=234
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task6 ep0] seed=20006000 success=False steps=520 n_frames=520
+[task6 ep1] seed=20006001 success=True steps=269 n_frames=269
+[task6 ep2] seed=20006002 success=True steps=268 n_frames=268
+[task6 ep3] seed=20006003 success=True steps=251 n_frames=251
+[task6 ep4] seed=20006004 success=False steps=520 n_frames=520
+[task6 ep5] seed=20006005 success=True steps=299 n_frames=299
+[task6 ep6] seed=20006006 success=False steps=520 n_frames=520
+[task6 ep7] seed=20006007 success=True steps=316 n_frames=316
+[task6 ep8] seed=20006008 success=False steps=520 n_frames=520
+[task6 ep9] seed=20006009 success=False steps=520 n_frames=520
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task7 ep0] seed=20007000 success=False steps=520 n_frames=520
+[task7 ep1] seed=20007001 success=True steps=275 n_frames=275
+[task7 ep2] seed=20007002 success=True steps=309 n_frames=309
+[task7 ep3] seed=20007003 success=False steps=520 n_frames=520
+[task7 ep4] seed=20007004 success=False steps=520 n_frames=520
+[task7 ep5] seed=20007005 success=False steps=520 n_frames=520
+[task7 ep6] seed=20007006 success=False steps=520 n_frames=520
+[task7 ep7] seed=20007007 success=False steps=520 n_frames=520
+[task7 ep8] seed=20007008 success=False steps=520 n_frames=520
+[task7 ep9] seed=20007009 success=False steps=520 n_frames=520
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task8 ep0] seed=20008000 success=True steps=395 n_frames=395
+[task8 ep1] seed=20008001 success=True steps=368 n_frames=368
+[task8 ep2] seed=20008002 success=False steps=520 n_frames=520
+[task8 ep3] seed=20008003 success=False steps=520 n_frames=520
+[task8 ep4] seed=20008004 success=False steps=520 n_frames=520
+[task8 ep5] seed=20008005 success=False steps=520 n_frames=520
+[task8 ep6] seed=20008006 success=False steps=520 n_frames=520
+[task8 ep7] seed=20008007 success=False steps=520 n_frames=520
+[task8 ep8] seed=20008008 success=False steps=520 n_frames=520
+[task8 ep9] seed=20008009 success=False steps=520 n_frames=520
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task9 ep0] seed=20009000 success=True steps=274 n_frames=274
+[task9 ep1] seed=20009001 success=False steps=520 n_frames=520
+[task9 ep2] seed=20009002 success=True steps=290 n_frames=290
+[task9 ep3] seed=20009003 success=False steps=520 n_frames=520
+[task9 ep4] seed=20009004 success=False steps=520 n_frames=520
+[task9 ep5] seed=20009005 success=False steps=520 n_frames=520
+[task9 ep6] seed=20009006 success=False steps=520 n_frames=520
+[task9 ep7] seed=20009007 success=True steps=250 n_frames=250
+[task9 ep8] seed=20009008 success=False steps=520 n_frames=520
+[task9 ep9] seed=20009009 success=False steps=520 n_frames=520
+
+Collected 42 failures across 10 tasks.
+Manifest: /home/user/Desktop/multi-rate/vla-toolkit/failure_manifest.json
+Exception ignored in: <function MjRenderContext.__del__ at 0x7c075c4618a0>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7c0686345450>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7c075c414250>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7c075c414250>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7c075c414150>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7c075c461760>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7c0686345450>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7c075c414250>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7c075c414250>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7c075c414150>,
+	),
+	result = 0
+)

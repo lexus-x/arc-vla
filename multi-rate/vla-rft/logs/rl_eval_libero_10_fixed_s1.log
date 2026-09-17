@@ -1,0 +1,147 @@
+===== RL EVAL suite=libero_10 ckpt=rl_checkpoint_libero_10_fixed_s1 =====
+[suite] libero_10 -> baseline_results/rl_libero_10_fixed_s1/multirate_libero_10.json
+
+============================================================
+ARM rl_pilot_libero_10_native_20env
+============================================================
+[stats] rl_pilot_libero_10_native_20env: normalizing with lerobot/libero_10_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[rl_pilot_libero_10_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[rl_pilot_libero_10_native_20env] task 0 trial 00: OK (249/520 steps)
+[rl_pilot_libero_10_native_20env] task 0 trial 01: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 0 trial 02: OK (489/520 steps)
+[rl_pilot_libero_10_native_20env] task 0 trial 03: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 0 trial 04: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 0 trial 05: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 0 trial 06: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 0 trial 07: OK (401/520 steps)
+[rl_pilot_libero_10_native_20env] task 0 trial 08: OK (246/520 steps)
+[rl_pilot_libero_10_native_20env] task 0 trial 09: OK (419/520 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[rl_pilot_libero_10_native_20env] task 1 trial 00: OK (237/520 steps)
+[rl_pilot_libero_10_native_20env] task 1 trial 01: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 1 trial 02: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 1 trial 03: OK (249/520 steps)
+[rl_pilot_libero_10_native_20env] task 1 trial 04: OK (228/520 steps)
+[rl_pilot_libero_10_native_20env] task 1 trial 05: OK (227/520 steps)
+[rl_pilot_libero_10_native_20env] task 1 trial 06: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 1 trial 07: OK (337/520 steps)
+[rl_pilot_libero_10_native_20env] task 1 trial 08: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 1 trial 09: OK (224/520 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[rl_pilot_libero_10_native_20env] task 2 trial 00: OK (225/520 steps)
+[rl_pilot_libero_10_native_20env] task 2 trial 01: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 2 trial 02: OK (216/520 steps)
+[rl_pilot_libero_10_native_20env] task 2 trial 03: OK (249/520 steps)
+[rl_pilot_libero_10_native_20env] task 2 trial 04: OK (254/520 steps)
+[rl_pilot_libero_10_native_20env] task 2 trial 05: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 2 trial 06: OK (238/520 steps)
+[rl_pilot_libero_10_native_20env] task 2 trial 07: OK (242/520 steps)
+[rl_pilot_libero_10_native_20env] task 2 trial 08: OK (219/520 steps)
+[rl_pilot_libero_10_native_20env] task 2 trial 09: OK (227/520 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[rl_pilot_libero_10_native_20env] task 3 trial 00: OK (238/520 steps)
+[rl_pilot_libero_10_native_20env] task 3 trial 01: OK (234/520 steps)
+[rl_pilot_libero_10_native_20env] task 3 trial 02: OK (245/520 steps)
+[rl_pilot_libero_10_native_20env] task 3 trial 03: OK (238/520 steps)
+[rl_pilot_libero_10_native_20env] task 3 trial 04: OK (301/520 steps)
+[rl_pilot_libero_10_native_20env] task 3 trial 05: OK (232/520 steps)
+[rl_pilot_libero_10_native_20env] task 3 trial 06: OK (228/520 steps)
+[rl_pilot_libero_10_native_20env] task 3 trial 07: OK (205/520 steps)
+[rl_pilot_libero_10_native_20env] task 3 trial 08: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 3 trial 09: OK (231/520 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[rl_pilot_libero_10_native_20env] task 4 trial 00: OK (254/520 steps)
+[rl_pilot_libero_10_native_20env] task 4 trial 01: OK (216/520 steps)
+[rl_pilot_libero_10_native_20env] task 4 trial 02: OK (242/520 steps)
+[rl_pilot_libero_10_native_20env] task 4 trial 03: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 4 trial 04: OK (278/520 steps)
+[rl_pilot_libero_10_native_20env] task 4 trial 05: OK (260/520 steps)
+[rl_pilot_libero_10_native_20env] task 4 trial 06: OK (222/520 steps)
+[rl_pilot_libero_10_native_20env] task 4 trial 07: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 4 trial 08: OK (225/520 steps)
+[rl_pilot_libero_10_native_20env] task 4 trial 09: x (520/520 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[rl_pilot_libero_10_native_20env] task 5 trial 00: OK (174/520 steps)
+[rl_pilot_libero_10_native_20env] task 5 trial 01: OK (258/520 steps)
+[rl_pilot_libero_10_native_20env] task 5 trial 02: OK (183/520 steps)
+[rl_pilot_libero_10_native_20env] task 5 trial 03: OK (178/520 steps)
+[rl_pilot_libero_10_native_20env] task 5 trial 04: OK (181/520 steps)
+[rl_pilot_libero_10_native_20env] task 5 trial 05: OK (153/520 steps)
+[rl_pilot_libero_10_native_20env] task 5 trial 06: OK (172/520 steps)
+[rl_pilot_libero_10_native_20env] task 5 trial 07: OK (162/520 steps)
+[rl_pilot_libero_10_native_20env] task 5 trial 08: OK (157/520 steps)
+[rl_pilot_libero_10_native_20env] task 5 trial 09: OK (181/520 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[rl_pilot_libero_10_native_20env] task 6 trial 00: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 6 trial 01: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 6 trial 02: OK (229/520 steps)
+[rl_pilot_libero_10_native_20env] task 6 trial 03: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 6 trial 04: OK (218/520 steps)
+[rl_pilot_libero_10_native_20env] task 6 trial 05: OK (203/520 steps)
+[rl_pilot_libero_10_native_20env] task 6 trial 06: OK (214/520 steps)
+[rl_pilot_libero_10_native_20env] task 6 trial 07: OK (203/520 steps)
+[rl_pilot_libero_10_native_20env] task 6 trial 08: OK (216/520 steps)
+[rl_pilot_libero_10_native_20env] task 6 trial 09: x (520/520 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[rl_pilot_libero_10_native_20env] task 7 trial 00: OK (251/520 steps)
+[rl_pilot_libero_10_native_20env] task 7 trial 01: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 7 trial 02: OK (266/520 steps)
+[rl_pilot_libero_10_native_20env] task 7 trial 03: OK (247/520 steps)
+[rl_pilot_libero_10_native_20env] task 7 trial 04: OK (283/520 steps)
+[rl_pilot_libero_10_native_20env] task 7 trial 05: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 7 trial 06: OK (364/520 steps)
+[rl_pilot_libero_10_native_20env] task 7 trial 07: OK (246/520 steps)
+[rl_pilot_libero_10_native_20env] task 7 trial 08: OK (260/520 steps)
+[rl_pilot_libero_10_native_20env] task 7 trial 09: x (520/520 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[rl_pilot_libero_10_native_20env] task 8 trial 00: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 8 trial 01: OK (363/520 steps)
+[rl_pilot_libero_10_native_20env] task 8 trial 02: OK (354/520 steps)
+[rl_pilot_libero_10_native_20env] task 8 trial 03: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 8 trial 04: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 8 trial 05: OK (367/520 steps)
+[rl_pilot_libero_10_native_20env] task 8 trial 06: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 8 trial 07: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 8 trial 08: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 8 trial 09: OK (358/520 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[rl_pilot_libero_10_native_20env] task 9 trial 00: OK (276/520 steps)
+[rl_pilot_libero_10_native_20env] task 9 trial 01: OK (307/520 steps)
+[rl_pilot_libero_10_native_20env] task 9 trial 02: OK (230/520 steps)
+[rl_pilot_libero_10_native_20env] task 9 trial 03: OK (363/520 steps)
+[rl_pilot_libero_10_native_20env] task 9 trial 04: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 9 trial 05: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 9 trial 06: OK (255/520 steps)
+[rl_pilot_libero_10_native_20env] task 9 trial 07: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 9 trial 08: x (520/520 steps)
+[rl_pilot_libero_10_native_20env] task 9 trial 09: OK (258/520 steps)
+[rl_pilot_libero_10_native_20env] diagnostics: 68/100 ok | fail_at_cap=32 fail_early=0 | succ_median=238.0/520
+--> rl_pilot_libero_10_native_20env: 68.0% (520 steps @ 20 Hz = 11.0 s, replan every 10)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  rl_pilot_libero_10_native_20env  68.0%
+RESULT suite=libero_10 RL=68.00% baseline=55.00% delta=+13.00pp (n=100)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 105517.08it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6416.84it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+

@@ -1,0 +1,17 @@
+--- /tmp/plan-eval-crash-base/robocasa_vision_bridge.py	2026-09-10 11:05:35.383720931 +0900
++++ robocasa_vision_bridge.py	2026-09-10 15:57:57.460723585 +0900
+@@ -8,6 +8,14 @@
+ import signal
+ import socket
+ import numpy as np
++import sys
++
++if not hasattr(np, "_core"):
++    sys.modules["numpy._core"] = np.core
++    for name in ("multiarray", "numeric", "_multiarray_umath", "umath"):
++        mod = getattr(np.core, name, None)
++        if mod is not None:
++            sys.modules[f"numpy._core.{name}"] = mod
+ 
+ from robocasa_bridge import recv_msg, send_msg
+ from robocasa_vision_data import VisionDataset

@@ -1,0 +1,97 @@
+[suite] libero_object -> suiteeval_object_asrc_object_cadmag_spline_40env_out/multirate_libero_object.json
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+
+============================================================
+ARM asrc_object_cadmag_spline_40env
+============================================================
+[stats] asrc_object_cadmag_spline_40env: normalizing with lerobot/libero_object_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 106184.91it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 7044.72it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 7878.34it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[asrc_object_cadmag_spline_40env] variant=asrc n_fourier=6 re-integrates at 20.0 Hz (native ODE re-integration, NOT alias folding)
+[asrc_object_cadmag_spline_40env] spline resample -> 100 steps, pose deltas rescaled
+[asrc_object_cadmag_spline_40env] magscale: raw pose deltas x2 (restores native per-step travel)
+[asrc_object_cadmag_spline_40env] resolved-cadence: 20 Hz decisions in a 40 Hz sim (1 query per 2 env steps); intermediates taken from the plan
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[asrc_object_cadmag_spline_40env] settle window scaled to 20 steps (0.50 s at 40 Hz)
+[asrc_object_cadmag_spline_40env] task 0 trial 00: x (560/560 steps)
+[asrc_object_cadmag_spline_40env] task 0 trial 01: OK (264/560 steps)
+[asrc_object_cadmag_spline_40env] task 0 trial 02: OK (283/560 steps)
+[asrc_object_cadmag_spline_40env] task 0 trial 03: OK (342/560 steps)
+[asrc_object_cadmag_spline_40env] task 0 trial 04: OK (321/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_spline_40env] task 1 trial 00: x (560/560 steps)
+[asrc_object_cadmag_spline_40env] task 1 trial 01: OK (312/560 steps)
+[asrc_object_cadmag_spline_40env] task 1 trial 02: OK (310/560 steps)
+[asrc_object_cadmag_spline_40env] task 1 trial 03: x (560/560 steps)
+[asrc_object_cadmag_spline_40env] task 1 trial 04: OK (458/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_spline_40env] task 2 trial 00: OK (224/560 steps)
+[asrc_object_cadmag_spline_40env] task 2 trial 01: x (560/560 steps)
+[asrc_object_cadmag_spline_40env] task 2 trial 02: OK (235/560 steps)
+[asrc_object_cadmag_spline_40env] task 2 trial 03: OK (234/560 steps)
+[asrc_object_cadmag_spline_40env] task 2 trial 04: OK (215/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_spline_40env] task 3 trial 00: OK (242/560 steps)
+[asrc_object_cadmag_spline_40env] task 3 trial 01: OK (246/560 steps)
+[asrc_object_cadmag_spline_40env] task 3 trial 02: OK (241/560 steps)
+[asrc_object_cadmag_spline_40env] task 3 trial 03: OK (247/560 steps)
+[asrc_object_cadmag_spline_40env] task 3 trial 04: OK (250/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_spline_40env] task 4 trial 00: OK (272/560 steps)
+[asrc_object_cadmag_spline_40env] task 4 trial 01: OK (270/560 steps)
+[asrc_object_cadmag_spline_40env] task 4 trial 02: OK (267/560 steps)
+[asrc_object_cadmag_spline_40env] task 4 trial 03: OK (274/560 steps)
+[asrc_object_cadmag_spline_40env] task 4 trial 04: OK (271/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_spline_40env] task 5 trial 00: OK (251/560 steps)
+[asrc_object_cadmag_spline_40env] task 5 trial 01: OK (231/560 steps)
+[asrc_object_cadmag_spline_40env] task 5 trial 02: OK (253/560 steps)
+[asrc_object_cadmag_spline_40env] task 5 trial 03: OK (328/560 steps)
+[asrc_object_cadmag_spline_40env] task 5 trial 04: x (560/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_spline_40env] task 6 trial 00: OK (298/560 steps)
+[asrc_object_cadmag_spline_40env] task 6 trial 01: OK (371/560 steps)
+[asrc_object_cadmag_spline_40env] task 6 trial 02: OK (290/560 steps)
+[asrc_object_cadmag_spline_40env] task 6 trial 03: OK (283/560 steps)
+[asrc_object_cadmag_spline_40env] task 6 trial 04: OK (293/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_spline_40env] task 7 trial 00: x (560/560 steps)
+[asrc_object_cadmag_spline_40env] task 7 trial 01: x (560/560 steps)
+[asrc_object_cadmag_spline_40env] task 7 trial 02: OK (288/560 steps)
+[asrc_object_cadmag_spline_40env] task 7 trial 03: x (560/560 steps)
+[asrc_object_cadmag_spline_40env] task 7 trial 04: OK (272/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_spline_40env] task 8 trial 00: x (560/560 steps)
+[asrc_object_cadmag_spline_40env] task 8 trial 01: OK (287/560 steps)
+[asrc_object_cadmag_spline_40env] task 8 trial 02: OK (368/560 steps)
+[asrc_object_cadmag_spline_40env] task 8 trial 03: OK (295/560 steps)
+[asrc_object_cadmag_spline_40env] task 8 trial 04: OK (306/560 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_object_cadmag_spline_40env] task 9 trial 00: OK (413/560 steps)
+[asrc_object_cadmag_spline_40env] task 9 trial 01: OK (338/560 steps)
+[asrc_object_cadmag_spline_40env] task 9 trial 02: OK (254/560 steps)
+[asrc_object_cadmag_spline_40env] task 9 trial 03: OK (236/560 steps)
+[asrc_object_cadmag_spline_40env] task 9 trial 04: OK (340/560 steps)
+[asrc_object_cadmag_spline_40env] cadence check: 8407 policy queries, 8387 resolved intermediates, 19 starved of 16813 env steps
+[asrc_object_cadmag_spline_40env] diagnostics: 41/50 ok | fail_at_cap=9 fail_early=0 | succ_median=274.0/560
+--> asrc_object_cadmag_spline_40env: 82.0% (560 steps @ 40 Hz = 11.0 s, replan every 20)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  asrc_object_cadmag_spline_40env  82.0%

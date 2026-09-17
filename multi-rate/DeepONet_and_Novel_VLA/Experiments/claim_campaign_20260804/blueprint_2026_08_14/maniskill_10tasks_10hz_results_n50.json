@@ -1,0 +1,112 @@
+{
+  "rate_hz": 10,
+  "n_total": 500,
+  "ours_success_rate": 0.002,
+  "spline_success_rate": 0.002,
+  "delta_pp": 0.0,
+  "ours_success_count": 1,
+  "spline_success_count": 1,
+  "task_breakdown": [
+    {
+      "task_name": "LiftPegUpright-v1",
+      "n_episodes": 50,
+      "ours_success": 0,
+      "spline_success": 0,
+      "ours_sr": 0.0,
+      "spline_sr": 0.0,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "PickCube-v1",
+      "n_episodes": 50,
+      "ours_success": 1,
+      "spline_success": 1,
+      "ours_sr": 0.02,
+      "spline_sr": 0.02,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "StackCube-v1",
+      "n_episodes": 50,
+      "ours_success": 0,
+      "spline_success": 0,
+      "ours_sr": 0.0,
+      "spline_sr": 0.0,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "PokeCube-v1",
+      "n_episodes": 50,
+      "ours_success": 0,
+      "spline_success": 0,
+      "ours_sr": 0.0,
+      "spline_sr": 0.0,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "PullCube-v1",
+      "n_episodes": 50,
+      "ours_success": 0,
+      "spline_success": 0,
+      "ours_sr": 0.0,
+      "spline_sr": 0.0,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "PushCube-v1",
+      "n_episodes": 50,
+      "ours_success": 0,
+      "spline_success": 0,
+      "ours_sr": 0.0,
+      "spline_sr": 0.0,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "RollBall-v1",
+      "n_episodes": 50,
+      "ours_success": 0,
+      "spline_success": 0,
+      "ours_sr": 0.0,
+      "spline_sr": 0.0,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "PegInsertionSide-v1",
+      "n_episodes": 50,
+      "ours_success": 0,
+      "spline_success": 0,
+      "ours_sr": 0.0,
+      "spline_sr": 0.0,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "PushT-v1",
+      "n_episodes": 50,
+      "ours_success": 0,
+      "spline_success": 0,
+      "ours_sr": 0.0,
+      "spline_sr": 0.0,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "DrawTriangle-v1",
+      "n_episodes": 50,
+      "ours_success": 0,
+      "spline_success": 0,
+      "ours_sr": 0.0,
+      "spline_sr": 0.0,
+      "delta_pp": 0.0,
+      "frames": null
+    }
+  ],
+  "video_path": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/maniskill_10tasks_10hz_ours_master.mp4"
+}

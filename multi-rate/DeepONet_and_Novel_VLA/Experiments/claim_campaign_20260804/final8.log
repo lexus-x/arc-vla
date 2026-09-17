@@ -1,0 +1,18 @@
+[q8] 13:31 GPU clear -- open-loop run, replan_steps=50 (= full chunk)
+[q8] 13:58 v2_spatial_native_20env exit=0
+[q8] 13:58 flow30_spatial_native_20env exit=0
+[q8] 14:11 v2_long_native_20env exit=0
+[q8] 14:12 flow30_long_native_20env exit=0
+[q8] 14:12 OK json v2_spatial_native_20env
+[q8] 14:12 OK json flow30_spatial_native_20env
+[q8] 14:12 OK json v2_long_native_20env
+[q8] 14:12 OK json flow30_long_native_20env
+[q8] 14:12 === batch done ===
+[q8] 14:34 v2_object_native_20env exit=0
+[q8] 14:34 flow30_object_native_20env exit=0
+[q8] 14:34 OK json v2_object_native_20env
+[q8] 14:34 OK json flow30_object_native_20env
+[q8] 14:34 === batch done ===
+[q8] 14:34 Q8 DONE
+[calib] 14:37 v2 replan=5 wc=26s(520 steps) exit=0
+[calib2] 15:00 v2 statehist=1 replan=5 exit=0

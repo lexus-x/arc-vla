@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "suite": "libero_spatial",
+    "task_id": 7,
+    "task_description": "pick up the black bowl on the stove and place it on the plate",
+    "arm": "ppo",
+    "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_s0/checkpoints/8300",
+    "n_episodes": 20,
+    "group_size": 4,
+    "n_groups": 5,
+    "seed_range": [
+      50740,
+      50759
+    ],
+    "safety_metric": "max_joint_speed/max_joint_jerk over robot arm qvel (robosuite sim.data.qvel), rho_safe = SAFE_JOINT_SPEED_BOUND - max_joint_speed. Replaces smoke_results_v3.json's static-distractor-displacement proxy -- see module docstring.",
+    "safe_joint_speed_bound": 2.0,
+    "elapsed_s": 1686.3658728599548
+  },
+  "records": [
+    {
+      "arm": "ppo",
+      "episode": 0,
+      "seed": 50740,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 1.0686836323827391,
+      "max_joint_jerk": 0.28546564507150446,
+      "rho_safe": 0.9313163676172609,
+      "steps": 121
+    },
+    {
+      "arm": "ppo",
+      "episode": 1,
+      "seed": 50741,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 1.1177071271886891,
+      "max_joint_jerk": 0.4852190197849944,
+      "rho_safe": 0.8822928728113109,
+      "steps": 121
+    },
+    {
+      "arm": "ppo",
+      "episode": 2,
+      "seed": 50742,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 1.0524869781482233,
+      "max_joint_jerk": 0.3340555120836333,
+      "rho_safe": 0.9475130218517767,
+      "steps": 129
+    },
+    {
+      "arm": "ppo",
+      "episode": 3,
+      "seed": 50743,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 1.277873369763654,
+      "max_joint_jerk": 0.8847368635876681,
+      "rho_safe": 0.722126630236346,
+      "steps": 120
+    },
+    {
+      "arm": "ppo",
+      "episode": 4,
+      "seed": 50744,
+      "group": 1,
+      "success": false,
+      "max_joint_speed": 1.0371696268267632,
+      "max_joint_jerk": 0.2189944938095446,
+      "rho_safe": 0.9628303731732368,
+      "steps": 220
+    },
+    {
+      "arm": "ppo",
+      "episode": 5,
+      "seed": 50745,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 1.0439157586787022,
+      "max_joint_jerk": 0.22683703793158147,
+      "rho_safe": 0.9560842413212978,
+      "steps": 132
+    },
+    {
+      "arm": "ppo",
+      "episode": 6,
+      "seed": 50746,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 1.1453312313774904,
+      "max_joint_jerk": 0.7244512364987781,
+      "rho_safe": 0.8546687686225096,
+      "steps": 136
+    },
+    {
+      "arm": "ppo",
+      "episode": 7,
+      "seed": 50747,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 1.0928289380117238,
+      "max_joint_jerk": 0.30325466537738544,
+      "rho_safe": 0.9071710619882762,
+      "steps": 117
+    },
+    {
+      "arm": "ppo",
+      "episode": 8,
+      "seed": 50748,
+      "group": 2,
+      "success": false,
+      "max_joint_speed": 0.9864954792336117,
+      "max_joint_jerk": 0.27842190784674625,
+      "rho_safe": 1.0135045207663884,
+      "steps": 220
+    },
+    {
+      "arm": "ppo",
+      "episode": 9,
+      "seed": 50749,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 0.990394435488116,
+      "max_joint_jerk": 0.2868788809058371,
+      "rho_safe": 1.009605564511884,
+      "steps": 129
+    },
+    {
+      "arm": "ppo",
+      "episode": 10,
+      "seed": 50750,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 1.085591068138981,
+      "max_joint_jerk": 0.27577491814304345,
+      "rho_safe": 0.9144089318610189,
+      "steps": 118
+    },
+    {
+      "arm": "ppo",
+      "episode": 11,
+      "seed": 50751,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 1.0904445233882947,
+      "max_joint_jerk": 0.3870606087127491,
+      "rho_safe": 0.9095554766117053,
+      "steps": 120
+    },
+    {
+      "arm": "ppo",
+      "episode": 12,
+      "seed": 50752,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 1.0173814091005728,
+      "max_joint_jerk": 0.7874447604907711,
+      "rho_safe": 0.9826185908994272,
+      "steps": 158
+    },
+    {
+      "arm": "ppo",
+      "episode": 13,
+      "seed": 50753,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 1.1638724818489623,
+      "max_joint_jerk": 0.5949457358065429,
+      "rho_safe": 0.8361275181510377,
+      "steps": 116
+    },
+    {
+      "arm": "ppo",
+      "episode": 14,
+      "seed": 50754,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 0.9692606537502456,
+      "max_joint_jerk": 0.23903759851080275,
+      "rho_safe": 1.0307393462497543,
+      "steps": 159
+    },
+    {
+      "arm": "ppo",
+      "episode": 15,
+      "seed": 50755,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 1.2059524532045138,
+      "max_joint_jerk": 0.24484212034375374,
+      "rho_safe": 0.7940475467954862,
+      "steps": 132
+    },
+    {
+      "arm": "ppo",
+      "episode": 16,
+      "seed": 50756,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 1.1368962174170854,
+      "max_joint_jerk": 0.20715520475909407,
+      "rho_safe": 0.8631037825829146,
+      "steps": 116
+    },
+    {
+      "arm": "ppo",
+      "episode": 17,
+      "seed": 50757,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 1.079442100977666,
+      "max_joint_jerk": 0.49559517881295007,
+      "rho_safe": 0.920557899022334,
+      "steps": 119
+    },
+    {
+      "arm": "ppo",
+      "episode": 18,
+      "seed": 50758,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 1.0309697709525134,
+      "max_joint_jerk": 0.30847667224247866,
+      "rho_safe": 0.9690302290474866,
+      "steps": 135
+    },
+    {
+      "arm": "ppo",
+      "episode": 19,
+      "seed": 50759,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 1.0314441966645795,
+      "max_joint_jerk": 0.25111743133032516,
+      "rho_safe": 0.9685558033354205,
+      "steps": 137
+    }
+  ],
+  "update_log": [
+    {
+      "group": 0,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "epochs": []
+      }
+    },
+    {
+      "group": 1,
+      "success_rate": 0.75,
+      "stats": {
+        "n_transitions": 605,
+        "epochs": [
+          {
+            "epoch": 0,
+            "n_transitions": 605,
+            "loss": 0.26243193583054975,
+            "grad_norm": 126.838623046875
+          },
+          {
+            "epoch": 1,
+            "n_transitions": 605,
+            "loss": 0.24707205000666865,
+            "grad_norm": 415.2012634277344
+          },
+          {
+            "epoch": 2,
+            "n_transitions": 605,
+            "loss": 0.2377205167156642,
+            "grad_norm": 469.05975341796875
+          },
+          {
+            "epoch": 3,
+            "n_transitions": 605,
+            "loss": 0.22753015903155666,
+            "grad_norm": 384.30291748046875
+          }
+        ]
+      }
+    },
+    {
+      "group": 2,
+      "success_rate": 0.75,
+      "stats": {
+        "n_transitions": 587,
+        "epochs": [
+          {
+            "epoch": 0,
+            "n_transitions": 587,
+            "loss": 0.28818334895463776,
+            "grad_norm": 120.96802520751953
+          },
+          {
+            "epoch": 1,
+            "n_transitions": 587,
+            "loss": 0.27911049444894775,
+            "grad_norm": 729.4431762695312
+          },
+          {
+            "epoch": 2,
+            "n_transitions": 587,
+            "loss": 0.2667095076286407,
+            "grad_norm": 570.5680541992188
+          },
+          {
+            "epoch": 3,
+            "n_transitions": 587,
+            "loss": 0.2591784590164808,
+            "grad_norm": 619.5786743164062
+          }
+        ]
+      }
+    },
+    {
+      "group": 3,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "epochs": []
+      }
+    },
+    {
+      "group": 4,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "epochs": []
+      }
+    }
+  ]
+}

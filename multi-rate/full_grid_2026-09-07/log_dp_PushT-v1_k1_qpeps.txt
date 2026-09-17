@@ -1,0 +1,25 @@
+[harvest] 50/200
+[harvest] 100/200
+[harvest] 150/200
+[harvest] 200/200
+[data] 200 demos harvested in 761s
+[data] 13352 windows, obs_dim=31, act_dim=6, raw |a|>1 frac=0.128
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PushT-v1.pt
+[eval] [10/100] native=3 qp_eps05=5 qp_eps10=2
+[eval] [20/100] native=5 qp_eps05=5 qp_eps10=3
+[eval] [30/100] native=7 qp_eps05=8 qp_eps10=5
+[eval] [40/100] native=10 qp_eps05=11 qp_eps10=7
+[eval] [50/100] native=12 qp_eps05=15 qp_eps10=9
+[eval] [60/100] native=14 qp_eps05=20 qp_eps10=11
+[eval] [70/100] native=16 qp_eps05=23 qp_eps10=14
+[eval] [80/100] native=20 qp_eps05=29 qp_eps10=17
+[eval] [90/100] native=25 qp_eps05=30 qp_eps10=18
+[eval] [100/100] native=26 qp_eps05=31 qp_eps10=20
+[eval] wall 2418s for 100 eps x 3 arms
+
+=== PushT-v1 closed-loop DP, k=1, n=100 ===
+  native             26.0% (26/100)
+  qp_eps05           31.0% (31/100)  | vs native:   +5.0pp p=0.405
+  qp_eps10           20.0% (20/100)  | vs native:   -6.0pp p=0.307
+  policy raw |a|>1 frac (pre-clip): 0.073
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PushT-v1_k1_qpeps.json

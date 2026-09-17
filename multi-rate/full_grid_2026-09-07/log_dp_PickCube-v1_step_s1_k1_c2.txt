@@ -1,0 +1,39 @@
+[harvest] 50/200
+[harvest] 100/200
+[harvest] 150/200
+[harvest] 200/200
+[data] 200 demos harvested in 421s
+[data] 3890 windows, obs_dim=42, act_dim=8, raw |a|>1 frac=0.303
+[train] step 1/30000 loss=1.13051
+[train] step 2000/30000 loss=0.01050
+[train] step 4000/30000 loss=0.00657
+[train] step 6000/30000 loss=0.00705
+[train] step 8000/30000 loss=0.00325
+[train] step 10000/30000 loss=0.00290
+[train] step 12000/30000 loss=0.00170
+[train] step 14000/30000 loss=0.00179
+[train] step 16000/30000 loss=0.00088
+[train] step 18000/30000 loss=0.00110
+[train] step 20000/30000 loss=0.00083
+[train] step 22000/30000 loss=0.00040
+[train] step 24000/30000 loss=0.00026
+[train] step 26000/30000 loss=0.00019
+[train] step 28000/30000 loss=0.00014
+[train] step 30000/30000 loss=0.00014
+[train] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PickCube-v1_s1.pt
+[eval] [10/100] native=7
+[eval] [20/100] native=15
+[eval] [30/100] native=25
+[eval] [40/100] native=33
+[eval] [50/100] native=42
+[eval] [60/100] native=52
+[eval] [70/100] native=62
+[eval] [80/100] native=72
+[eval] [90/100] native=81
+[eval] [100/100] native=90
+[eval] wall 289s for 100 eps x 1 arms
+
+=== PickCube-v1 closed-loop DP, k=1, n=100 ===
+  native             90.0% (90/100)
+  policy raw |a|>1 frac (pre-clip): 0.263
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PickCube-v1_s1_k1_c2.json

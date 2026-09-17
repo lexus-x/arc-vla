@@ -1,0 +1,202 @@
+{
+  "task": "RC-CoffeePressButton",
+  "policy": "dp",
+  "k": 1,
+  "head": "step",
+  "seed": 0,
+  "fold": 0,
+  "n": 15,
+  "train_steps": 15000,
+  "arms": [
+    "native",
+    "tac_fold",
+    "tac_fold_satfix",
+    "qp",
+    "qp_anchor",
+    "bspline_eps_raw",
+    "bspline"
+  ],
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "tac_fold": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "tac_fold_satfix": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "qp": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "qp_anchor": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "bspline_eps_raw": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "bspline": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.0,
+    "tac_fold": 0.0,
+    "tac_fold_satfix": 0.0,
+    "qp": 0.0,
+    "qp_anchor": 0.0,
+    "bspline_eps_raw": 0.0,
+    "bspline": 0.0
+  },
+  "contrasts": {
+    "native": {},
+    "tac_fold": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "tac_fold_satfix": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "qp": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "qp_anchor": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "bspline_eps_raw": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "bspline": {
+      "vs_native": {
+        "delta_pp": -6.666666666666665,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    }
+  }
+}

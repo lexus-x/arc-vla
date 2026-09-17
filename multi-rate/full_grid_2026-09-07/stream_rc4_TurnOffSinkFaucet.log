@@ -1,0 +1,12 @@
+[start] TurnOffSinkFaucet step f0 14:24:13
+[end] rc=0 15:04:22
+[start] TurnOffSinkFaucet bspline f0 15:04:22
+[end] rc=0 15:29:29
+[start] TurnOffSinkFaucet step f1 15:29:29
+[end] rc=0 16:03:42
+[start] TurnOffSinkFaucet bspline f1 16:03:42
+[end] rc=0 16:19:57
+[start] TurnOffSinkFaucet step f2 16:19:57
+[end] rc=0 16:55:06
+[start] TurnOffSinkFaucet bspline f2 16:55:06
+[end] rc=0 17:09:20

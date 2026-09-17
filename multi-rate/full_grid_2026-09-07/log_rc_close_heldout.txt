@@ -1,0 +1,57 @@
+[17:17:49] CloseSingleDoor heldout n=15 k=2 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-CloseSingleDoor_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 9814 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CloseSingleDoor_f0.pt
+[eval] [10/15] native=8 zoh=8 spline=8 bspline_eps_raw=8 tac_fold_satfix=8 qp=8 qp_anchor=8
+[eval] [15/15] native=12 zoh=12 spline=12 bspline_eps_raw=12 tac_fold_satfix=12 qp=12 qp_anchor=12
+[eval] wall 2624s for 15 eps x 7 arms
+
+=== RC-CloseSingleDoor closed-loop DP, k=2, n=15 ===
+  native             80.0% (12/15)  | vs zoh:   +0.0pp p=1
+  zoh                80.0% (12/15)  | vs native:   +0.0pp p=1
+  spline             80.0% (12/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  bspline_eps_raw    80.0% (12/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold_satfix    80.0% (12/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp                 80.0% (12/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp_anchor          80.0% (12/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-CloseSingleDoor_f0_heldout_n15.json
+[18:01:42] CloseSingleDoor heldout n=15 k=4 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-CloseSingleDoor_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 9814 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CloseSingleDoor_f0.pt
+[eval] [10/15] native=8 zoh=7 spline=8 bspline_eps_raw=7 tac_fold_satfix=8 qp=8 qp_anchor=8
+[eval] [15/15] native=12 zoh=11 spline=12 bspline_eps_raw=11 tac_fold_satfix=12 qp=12 qp_anchor=12
+[eval] wall 2581s for 15 eps x 7 arms
+
+=== RC-CloseSingleDoor closed-loop DP, k=4, n=15 ===
+  native             80.0% (12/15)  | vs zoh:   +6.7pp p=1
+  zoh                73.3% (11/15)  | vs native:   -6.7pp p=1
+  spline             80.0% (12/15)  | vs zoh:   +6.7pp p=1  | vs native:   +0.0pp p=1
+  bspline_eps_raw    73.3% (11/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  tac_fold_satfix    80.0% (12/15)  | vs zoh:   +6.7pp p=1  | vs native:   +0.0pp p=1
+  qp                 80.0% (12/15)  | vs zoh:   +6.7pp p=1  | vs native:   +0.0pp p=1
+  qp_anchor          80.0% (12/15)  | vs zoh:   +6.7pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-CloseSingleDoor_f0_k4_heldout_n15.json
+[18:44:46] CloseSingleDoor heldout n=15 k=8 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-CloseSingleDoor_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 9814 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CloseSingleDoor_f0.pt
+[eval] [10/15] native=8 zoh=8 spline=8 bspline_eps_raw=8 tac_fold_satfix=8 qp=8 qp_anchor=8
+[eval] [15/15] native=12 zoh=12 spline=12 bspline_eps_raw=12 tac_fold_satfix=12 qp=12 qp_anchor=12
+[eval] wall 2393s for 15 eps x 7 arms
+
+=== RC-CloseSingleDoor closed-loop DP, k=8, n=15 ===
+  native             80.0% (12/15)  | vs zoh:   +0.0pp p=1
+  zoh                80.0% (12/15)  | vs native:   +0.0pp p=1
+  spline             80.0% (12/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  bspline_eps_raw    80.0% (12/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold_satfix    80.0% (12/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp                 80.0% (12/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp_anchor          80.0% (12/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-CloseSingleDoor_f0_k8_heldout_n15.json

@@ -1,0 +1,24 @@
+[PickCube-v1] k=3 eligible=993 arms=['original', 'exact_integral', 'cubic_spline_satfix', 'pchip_satfix', 'tac_fold_satfix', 'qp']
+[PickCube-v1] k=3 [100/993] original=96 exact_integral=34 cubic_spline_satfix=46 pchip_satfix=38 tac_fold_satfix=54 qp=49 (267s)
+[PickCube-v1] k=3 [200/993] original=188 exact_integral=67 cubic_spline_satfix=92 pchip_satfix=79 tac_fold_satfix=102 qp=95 (525s)
+[PickCube-v1] k=3 [300/993] original=277 exact_integral=94 cubic_spline_satfix=130 pchip_satfix=108 tac_fold_satfix=144 qp=132 (798s)
+[PickCube-v1] k=3 [400/993] original=370 exact_integral=116 cubic_spline_satfix=167 pchip_satfix=139 tac_fold_satfix=183 qp=174 (1067s)
+[PickCube-v1] k=3 [500/993] original=462 exact_integral=141 cubic_spline_satfix=210 pchip_satfix=172 tac_fold_satfix=229 qp=221 (1347s)
+[PickCube-v1] k=3 [600/993] original=556 exact_integral=174 cubic_spline_satfix=252 pchip_satfix=208 tac_fold_satfix=277 qp=266 (1613s)
+[PickCube-v1] k=3 [700/993] original=650 exact_integral=210 cubic_spline_satfix=305 pchip_satfix=256 tac_fold_satfix=333 qp=320 (1875s)
+[PickCube-v1] k=3 [800/993] original=739 exact_integral=237 cubic_spline_satfix=343 pchip_satfix=286 tac_fold_satfix=370 qp=362 (2154s)
+[PickCube-v1] k=3 [900/993] original=835 exact_integral=265 cubic_spline_satfix=383 pchip_satfix=317 tac_fold_satfix=417 qp=405 (2412s)
+[PickCube-v1] k=3 [993/993] original=918 exact_integral=293 cubic_spline_satfix=429 pchip_satfix=357 tac_fold_satfix=463 qp=453 (2568s)
+
+=== [PickCube-v1] k=3 n=993 ===
+  original                92.45% (918/993)  saturated_elems=0.00%
+  exact_integral          29.51% (293/993)  saturated_elems=0.00%
+  cubic_spline_satfix     43.20% (429/993)  saturated_elems=0.00%
+  pchip_satfix            35.95% (357/993)  saturated_elems=0.00%
+  tac_fold_satfix         46.63% (463/993)  saturated_elems=0.00%
+  qp                      45.62% (453/993)  saturated_elems=0.00%
+  qp vs exact_integral      : +16.11pp  wins 173/13  p=7.34e-37  CI=[13.70,18.63]
+  qp vs cubic_spline_satfix : +2.42pp  wins 35/11  p=0.000536  CI=[1.11,3.73]
+  qp vs tac_fold_satfix     : -1.01pp  wins 44/54  p=0.363  CI=[-2.92,1.01]
+  qp vs pchip_satfix        : +9.67pp  wins 112/16  p=6.38e-19  CI=[7.55,11.78]
+saved -> /home/user/Desktop/multi-rate/full_grid_2026-09-07/qp_replay_PickCube-v1_k3.json

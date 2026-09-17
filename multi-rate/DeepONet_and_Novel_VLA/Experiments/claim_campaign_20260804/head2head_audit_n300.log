@@ -1,0 +1,277 @@
+[suite] libero_spatial -> head2head_audit_out/multirate_honest.json
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Extending asrc_native_20env from n=200 to 300
+
+============================================================
+ARM asrc_native_20env
+============================================================
+[stats] asrc_native_20env: normalizing with lerobot/libero_spatial_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 5280.84it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8496.83it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8291.12it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[asrc_native_20env] variant=asrc n_fourier=6 re-integrates at 20.0 Hz (native ODE re-integration, NOT alias folding)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[asrc_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[asrc_native_20env] task 0 trial 20: OK (88/220 steps)
+[asrc_native_20env] task 0 trial 21: OK (81/220 steps)
+[asrc_native_20env] task 0 trial 22: OK (73/220 steps)
+[asrc_native_20env] task 0 trial 23: OK (83/220 steps)
+[asrc_native_20env] task 0 trial 24: x (220/220 steps)
+[asrc_native_20env] task 0 trial 25: OK (78/220 steps)
+[asrc_native_20env] task 0 trial 26: OK (77/220 steps)
+[asrc_native_20env] task 0 trial 27: OK (75/220 steps)
+[asrc_native_20env] task 0 trial 28: OK (82/220 steps)
+[asrc_native_20env] task 0 trial 29: OK (71/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_native_20env] task 1 trial 20: OK (111/220 steps)
+[asrc_native_20env] task 1 trial 21: OK (114/220 steps)
+[asrc_native_20env] task 1 trial 22: OK (109/220 steps)
+[asrc_native_20env] task 1 trial 23: OK (107/220 steps)
+[asrc_native_20env] task 1 trial 24: OK (107/220 steps)
+[asrc_native_20env] task 1 trial 25: OK (108/220 steps)
+[asrc_native_20env] task 1 trial 26: x (220/220 steps)
+[asrc_native_20env] task 1 trial 27: x (220/220 steps)
+[asrc_native_20env] task 1 trial 28: OK (114/220 steps)
+[asrc_native_20env] task 1 trial 29: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_native_20env] task 2 trial 20: OK (94/220 steps)
+[asrc_native_20env] task 2 trial 21: OK (95/220 steps)
+[asrc_native_20env] task 2 trial 22: OK (88/220 steps)
+[asrc_native_20env] task 2 trial 23: OK (95/220 steps)
+[asrc_native_20env] task 2 trial 24: OK (95/220 steps)
+[asrc_native_20env] task 2 trial 25: x (220/220 steps)
+[asrc_native_20env] task 2 trial 26: OK (92/220 steps)
+[asrc_native_20env] task 2 trial 27: x (220/220 steps)
+[asrc_native_20env] task 2 trial 28: OK (100/220 steps)
+[asrc_native_20env] task 2 trial 29: OK (94/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_native_20env] task 3 trial 20: OK (87/220 steps)
+[asrc_native_20env] task 3 trial 21: OK (85/220 steps)
+[asrc_native_20env] task 3 trial 22: OK (93/220 steps)
+[asrc_native_20env] task 3 trial 23: OK (87/220 steps)
+[asrc_native_20env] task 3 trial 24: x (220/220 steps)
+[asrc_native_20env] task 3 trial 25: OK (86/220 steps)
+[asrc_native_20env] task 3 trial 26: OK (83/220 steps)
+[asrc_native_20env] task 3 trial 27: x (220/220 steps)
+[asrc_native_20env] task 3 trial 28: OK (85/220 steps)
+[asrc_native_20env] task 3 trial 29: OK (81/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_native_20env] task 4 trial 20: OK (120/220 steps)
+[asrc_native_20env] task 4 trial 21: OK (126/220 steps)
+[asrc_native_20env] task 4 trial 22: OK (122/220 steps)
+[asrc_native_20env] task 4 trial 23: x (220/220 steps)
+[asrc_native_20env] task 4 trial 24: OK (129/220 steps)
+[asrc_native_20env] task 4 trial 25: x (220/220 steps)
+[asrc_native_20env] task 4 trial 26: OK (133/220 steps)
+[asrc_native_20env] task 4 trial 27: OK (141/220 steps)
+[asrc_native_20env] task 4 trial 28: OK (126/220 steps)
+[asrc_native_20env] task 4 trial 29: OK (138/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_native_20env] task 5 trial 20: x (220/220 steps)
+[asrc_native_20env] task 5 trial 21: x (220/220 steps)
+[asrc_native_20env] task 5 trial 22: x (220/220 steps)
+[asrc_native_20env] task 5 trial 23: OK (92/220 steps)
+[asrc_native_20env] task 5 trial 24: x (220/220 steps)
+[asrc_native_20env] task 5 trial 25: x (220/220 steps)
+[asrc_native_20env] task 5 trial 26: x (220/220 steps)
+[asrc_native_20env] task 5 trial 27: x (220/220 steps)
+[asrc_native_20env] task 5 trial 28: x (220/220 steps)
+[asrc_native_20env] task 5 trial 29: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_native_20env] task 6 trial 20: OK (106/220 steps)
+[asrc_native_20env] task 6 trial 21: OK (109/220 steps)
+[asrc_native_20env] task 6 trial 22: OK (103/220 steps)
+[asrc_native_20env] task 6 trial 23: OK (105/220 steps)
+[asrc_native_20env] task 6 trial 24: OK (108/220 steps)
+[asrc_native_20env] task 6 trial 25: OK (108/220 steps)
+[asrc_native_20env] task 6 trial 26: OK (106/220 steps)
+[asrc_native_20env] task 6 trial 27: OK (99/220 steps)
+[asrc_native_20env] task 6 trial 28: x (220/220 steps)
+[asrc_native_20env] task 6 trial 29: OK (105/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_native_20env] task 7 trial 20: OK (113/220 steps)
+[asrc_native_20env] task 7 trial 21: OK (115/220 steps)
+[asrc_native_20env] task 7 trial 22: OK (121/220 steps)
+[asrc_native_20env] task 7 trial 23: OK (127/220 steps)
+[asrc_native_20env] task 7 trial 24: x (220/220 steps)
+[asrc_native_20env] task 7 trial 25: OK (123/220 steps)
+[asrc_native_20env] task 7 trial 26: OK (121/220 steps)
+[asrc_native_20env] task 7 trial 27: x (220/220 steps)
+[asrc_native_20env] task 7 trial 28: x (220/220 steps)
+[asrc_native_20env] task 7 trial 29: OK (124/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_native_20env] task 8 trial 20: OK (93/220 steps)
+[asrc_native_20env] task 8 trial 21: x (220/220 steps)
+[asrc_native_20env] task 8 trial 22: OK (89/220 steps)
+[asrc_native_20env] task 8 trial 23: OK (94/220 steps)
+[asrc_native_20env] task 8 trial 24: OK (136/220 steps)
+[asrc_native_20env] task 8 trial 25: OK (92/220 steps)
+[asrc_native_20env] task 8 trial 26: OK (107/220 steps)
+[asrc_native_20env] task 8 trial 27: OK (94/220 steps)
+[asrc_native_20env] task 8 trial 28: OK (93/220 steps)
+[asrc_native_20env] task 8 trial 29: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_native_20env] task 9 trial 20: OK (123/220 steps)
+[asrc_native_20env] task 9 trial 21: OK (131/220 steps)
+[asrc_native_20env] task 9 trial 22: OK (116/220 steps)
+[asrc_native_20env] task 9 trial 23: OK (122/220 steps)
+[asrc_native_20env] task 9 trial 24: OK (130/220 steps)
+[asrc_native_20env] task 9 trial 25: OK (131/220 steps)
+[asrc_native_20env] task 9 trial 26: x (220/220 steps)
+[asrc_native_20env] task 9 trial 27: OK (129/220 steps)
+[asrc_native_20env] task 9 trial 28: OK (178/220 steps)
+[asrc_native_20env] task 9 trial 29: x (220/220 steps)
+[asrc_native_20env] diagnostics: 225/300 ok | fail_at_cap=75 fail_early=0 | succ_median=106.0/220
+--> asrc_native_20env: 75.0% (220 steps @ 20 Hz = 11.0 s, replan every 10)
+
+Extending asrc_cadmag_folding_40env from n=200 to 300
+
+============================================================
+ARM asrc_cadmag_folding_40env
+============================================================
+[stats] asrc_cadmag_folding_40env: normalizing with lerobot/libero_spatial_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 111848.11it/s]
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8969.20it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8940.47it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[asrc_cadmag_folding_40env] variant=asrc n_fourier=6 re-integrates at 40.0 Hz (native ODE re-integration, NOT alias folding)
+[asrc_cadmag_folding_40env] magscale: raw pose deltas x2 (restores native per-step travel)
+[asrc_cadmag_folding_40env] resolved-cadence: 20 Hz decisions in a 40 Hz sim (1 query per 2 env steps); intermediates taken from the plan
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_cadmag_folding_40env] settle window scaled to 20 steps (0.50 s at 40 Hz)
+[asrc_cadmag_folding_40env] task 0 trial 20: OK (167/440 steps)
+[asrc_cadmag_folding_40env] task 0 trial 21: OK (155/440 steps)
+[asrc_cadmag_folding_40env] task 0 trial 22: OK (152/440 steps)
+[asrc_cadmag_folding_40env] task 0 trial 23: OK (159/440 steps)
+[asrc_cadmag_folding_40env] task 0 trial 24: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 0 trial 25: OK (153/440 steps)
+[asrc_cadmag_folding_40env] task 0 trial 26: OK (160/440 steps)
+[asrc_cadmag_folding_40env] task 0 trial 27: OK (156/440 steps)
+[asrc_cadmag_folding_40env] task 0 trial 28: OK (162/440 steps)
+[asrc_cadmag_folding_40env] task 0 trial 29: OK (143/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_cadmag_folding_40env] task 1 trial 20: OK (217/440 steps)
+[asrc_cadmag_folding_40env] task 1 trial 21: OK (221/440 steps)
+[asrc_cadmag_folding_40env] task 1 trial 22: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 1 trial 23: OK (215/440 steps)
+[asrc_cadmag_folding_40env] task 1 trial 24: OK (206/440 steps)
+[asrc_cadmag_folding_40env] task 1 trial 25: OK (225/440 steps)
+[asrc_cadmag_folding_40env] task 1 trial 26: OK (412/440 steps)
+[asrc_cadmag_folding_40env] task 1 trial 27: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 1 trial 28: OK (246/440 steps)
+[asrc_cadmag_folding_40env] task 1 trial 29: x (440/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_cadmag_folding_40env] task 2 trial 20: OK (197/440 steps)
+[asrc_cadmag_folding_40env] task 2 trial 21: OK (184/440 steps)
+[asrc_cadmag_folding_40env] task 2 trial 22: OK (178/440 steps)
+[asrc_cadmag_folding_40env] task 2 trial 23: OK (191/440 steps)
+[asrc_cadmag_folding_40env] task 2 trial 24: OK (185/440 steps)
+[asrc_cadmag_folding_40env] task 2 trial 25: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 2 trial 26: OK (178/440 steps)
+[asrc_cadmag_folding_40env] task 2 trial 27: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 2 trial 28: OK (202/440 steps)
+[asrc_cadmag_folding_40env] task 2 trial 29: OK (184/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_cadmag_folding_40env] task 3 trial 20: OK (175/440 steps)
+[asrc_cadmag_folding_40env] task 3 trial 21: OK (168/440 steps)
+[asrc_cadmag_folding_40env] task 3 trial 22: OK (185/440 steps)
+[asrc_cadmag_folding_40env] task 3 trial 23: OK (179/440 steps)
+[asrc_cadmag_folding_40env] task 3 trial 24: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 3 trial 25: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 3 trial 26: OK (174/440 steps)
+[asrc_cadmag_folding_40env] task 3 trial 27: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 3 trial 28: OK (173/440 steps)
+[asrc_cadmag_folding_40env] task 3 trial 29: OK (165/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_cadmag_folding_40env] task 4 trial 20: OK (254/440 steps)
+[asrc_cadmag_folding_40env] task 4 trial 21: OK (265/440 steps)
+[asrc_cadmag_folding_40env] task 4 trial 22: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 4 trial 23: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 4 trial 24: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 4 trial 25: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 4 trial 26: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 4 trial 27: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 4 trial 28: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 4 trial 29: OK (268/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_cadmag_folding_40env] task 5 trial 20: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 5 trial 21: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 5 trial 22: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 5 trial 23: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 5 trial 24: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 5 trial 25: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 5 trial 26: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 5 trial 27: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 5 trial 28: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 5 trial 29: x (440/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_cadmag_folding_40env] task 6 trial 20: OK (205/440 steps)
+[asrc_cadmag_folding_40env] task 6 trial 21: OK (212/440 steps)
+[asrc_cadmag_folding_40env] task 6 trial 22: OK (206/440 steps)
+[asrc_cadmag_folding_40env] task 6 trial 23: OK (208/440 steps)
+[asrc_cadmag_folding_40env] task 6 trial 24: OK (214/440 steps)
+[asrc_cadmag_folding_40env] task 6 trial 25: OK (222/440 steps)
+[asrc_cadmag_folding_40env] task 6 trial 26: OK (216/440 steps)
+[asrc_cadmag_folding_40env] task 6 trial 27: OK (200/440 steps)
+[asrc_cadmag_folding_40env] task 6 trial 28: OK (224/440 steps)
+[asrc_cadmag_folding_40env] task 6 trial 29: OK (210/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_cadmag_folding_40env] task 7 trial 20: OK (225/440 steps)
+[asrc_cadmag_folding_40env] task 7 trial 21: OK (231/440 steps)
+[asrc_cadmag_folding_40env] task 7 trial 22: OK (248/440 steps)
+[asrc_cadmag_folding_40env] task 7 trial 23: OK (250/440 steps)
+[asrc_cadmag_folding_40env] task 7 trial 24: OK (242/440 steps)
+[asrc_cadmag_folding_40env] task 7 trial 25: OK (250/440 steps)
+[asrc_cadmag_folding_40env] task 7 trial 26: OK (238/440 steps)
+[asrc_cadmag_folding_40env] task 7 trial 27: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 7 trial 28: OK (258/440 steps)
+[asrc_cadmag_folding_40env] task 7 trial 29: OK (250/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_cadmag_folding_40env] task 8 trial 20: OK (185/440 steps)
+[asrc_cadmag_folding_40env] task 8 trial 21: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 8 trial 22: OK (179/440 steps)
+[asrc_cadmag_folding_40env] task 8 trial 23: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 8 trial 24: OK (191/440 steps)
+[asrc_cadmag_folding_40env] task 8 trial 25: OK (183/440 steps)
+[asrc_cadmag_folding_40env] task 8 trial 26: OK (259/440 steps)
+[asrc_cadmag_folding_40env] task 8 trial 27: OK (212/440 steps)
+[asrc_cadmag_folding_40env] task 8 trial 28: OK (188/440 steps)
+[asrc_cadmag_folding_40env] task 8 trial 29: x (440/440 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[asrc_cadmag_folding_40env] task 9 trial 20: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 9 trial 21: OK (256/440 steps)
+[asrc_cadmag_folding_40env] task 9 trial 22: OK (238/440 steps)
+[asrc_cadmag_folding_40env] task 9 trial 23: OK (245/440 steps)
+[asrc_cadmag_folding_40env] task 9 trial 24: OK (253/440 steps)
+[asrc_cadmag_folding_40env] task 9 trial 25: OK (260/440 steps)
+[asrc_cadmag_folding_40env] task 9 trial 26: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 9 trial 27: OK (264/440 steps)
+[asrc_cadmag_folding_40env] task 9 trial 28: x (440/440 steps)
+[asrc_cadmag_folding_40env] task 9 trial 29: OK (251/440 steps)
+[asrc_cadmag_folding_40env] cadence check: 14324 policy queries, 14279 resolved intermediates, 44 starved of 28647 env steps
+[asrc_cadmag_folding_40env] diagnostics: 209/300 ok | fail_at_cap=91 fail_early=0 | succ_median=211.0/440
+--> asrc_cadmag_folding_40env: 69.7% (440 steps @ 40 Hz = 11.0 s, replan every 20)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  asrc_native_20env       75.0%
+  asrc_cadmag_folding_40env  69.7%

@@ -1,0 +1,185 @@
+{
+  "n_per_task": 50,
+  "rate_hz": 40,
+  "n_episodes_total": 500,
+  "aggregate": {
+    "align_success_total": 194,
+    "spline_success_total": 197,
+    "align_success_rate": 0.388,
+    "spline_success_rate": 0.394,
+    "delta_pp": -0.6000000000000005
+  },
+  "task_breakdown": [
+    {
+      "task_idx": 1,
+      "task_name": "LiftPegUpright-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "align_success": 19,
+      "spline_success": 20,
+      "align_rate": 0.38,
+      "spline_rate": 0.4,
+      "delta_pp": -2.0000000000000018,
+      "mcnemar": {
+        "align_only": 8,
+        "spline_only": 9,
+        "p_value": 1.0
+      },
+      "frames": null
+    },
+    {
+      "task_idx": 2,
+      "task_name": "PickCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "align_success": 22,
+      "spline_success": 22,
+      "align_rate": 0.44,
+      "spline_rate": 0.44,
+      "delta_pp": 0.0,
+      "mcnemar": {
+        "align_only": 3,
+        "spline_only": 3,
+        "p_value": 1.0
+      },
+      "frames": null
+    },
+    {
+      "task_idx": 3,
+      "task_name": "StackCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "align_success": 13,
+      "spline_success": 19,
+      "align_rate": 0.26,
+      "spline_rate": 0.38,
+      "delta_pp": -12.0,
+      "mcnemar": {
+        "align_only": 3,
+        "spline_only": 9,
+        "p_value": 0.14599609375
+      },
+      "frames": null
+    },
+    {
+      "task_idx": 4,
+      "task_name": "PokeCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "align_success": 36,
+      "spline_success": 34,
+      "align_rate": 0.72,
+      "spline_rate": 0.68,
+      "delta_pp": 3.9999999999999925,
+      "mcnemar": {
+        "align_only": 3,
+        "spline_only": 1,
+        "p_value": 0.625
+      },
+      "frames": null
+    },
+    {
+      "task_idx": 5,
+      "task_name": "PullCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "align_success": 47,
+      "spline_success": 43,
+      "align_rate": 0.94,
+      "spline_rate": 0.86,
+      "delta_pp": 7.9999999999999964,
+      "mcnemar": {
+        "align_only": 5,
+        "spline_only": 1,
+        "p_value": 0.21875
+      },
+      "frames": null
+    },
+    {
+      "task_idx": 6,
+      "task_name": "PushCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "align_success": 48,
+      "spline_success": 50,
+      "align_rate": 0.96,
+      "spline_rate": 1.0,
+      "delta_pp": -4.0000000000000036,
+      "mcnemar": {
+        "align_only": 0,
+        "spline_only": 2,
+        "p_value": 0.5
+      },
+      "frames": null
+    },
+    {
+      "task_idx": 7,
+      "task_name": "RollBall-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "align_success": 6,
+      "spline_success": 6,
+      "align_rate": 0.12,
+      "spline_rate": 0.12,
+      "delta_pp": 0.0,
+      "mcnemar": {
+        "align_only": 2,
+        "spline_only": 2,
+        "p_value": 1.0
+      },
+      "frames": null
+    },
+    {
+      "task_idx": 8,
+      "task_name": "PegInsertionSide-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "align_success": 3,
+      "spline_success": 3,
+      "align_rate": 0.06,
+      "spline_rate": 0.06,
+      "delta_pp": 0.0,
+      "mcnemar": {
+        "align_only": 2,
+        "spline_only": 2,
+        "p_value": 1.0
+      },
+      "frames": null
+    },
+    {
+      "task_idx": 9,
+      "task_name": "PushT-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "align_success": 0,
+      "spline_success": 0,
+      "align_rate": 0.0,
+      "spline_rate": 0.0,
+      "delta_pp": 0.0,
+      "mcnemar": {
+        "align_only": 0,
+        "spline_only": 0,
+        "p_value": 1.0
+      },
+      "frames": null
+    },
+    {
+      "task_idx": 10,
+      "task_name": "DrawTriangle-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "align_success": 0,
+      "spline_success": 0,
+      "align_rate": 0.0,
+      "spline_rate": 0.0,
+      "delta_pp": 0.0,
+      "mcnemar": {
+        "align_only": 0,
+        "spline_only": 0,
+        "p_value": 1.0
+      },
+      "frames": null
+    }
+  ],
+  "master_video": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/maniskill_10tasks_40hz_align_fold_master.mp4"
+}

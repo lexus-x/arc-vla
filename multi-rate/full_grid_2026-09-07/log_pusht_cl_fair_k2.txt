@@ -1,0 +1,17 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_PushT-v1_200.npz
+[data] 200 demos harvested in 0s
+[data] 13352 windows, obs_dim=31, act_dim=6, raw |a|>1 frac=0.128
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PushT-v1.pt
+[eval] [10/400] native=3 zoh=3 spline=3 bspline_eps_raw=1 tac_fold_satfix=3 qp=3 qp_anchor=3
+[eval] [20/400] native=5 zoh=4 spline=6 bspline_eps_raw=1 tac_fold_satfix=4 qp=5 qp_anchor=4
+[eval] [30/400] native=7 zoh=6 spline=7 bspline_eps_raw=2 tac_fold_satfix=6 qp=6 qp_anchor=5
+[eval] [40/400] native=10 zoh=7 spline=10 bspline_eps_raw=2 tac_fold_satfix=8 qp=6 qp_anchor=8
+[eval] [50/400] native=12 zoh=8 spline=14 bspline_eps_raw=2 tac_fold_satfix=11 qp=9 qp_anchor=10
+[eval] [60/400] native=14 zoh=9 spline=18 bspline_eps_raw=5 tac_fold_satfix=14 qp=10 qp_anchor=13
+[eval] [70/400] native=16 zoh=10 spline=20 bspline_eps_raw=6 tac_fold_satfix=19 qp=11 qp_anchor=16
+[eval] [80/400] native=20 zoh=12 spline=26 bspline_eps_raw=9 tac_fold_satfix=25 qp=17 qp_anchor=21
+[eval] [90/400] native=25 zoh=14 spline=29 bspline_eps_raw=10 tac_fold_satfix=27 qp=19 qp_anchor=25
+[eval] [100/400] native=26 zoh=16 spline=32 bspline_eps_raw=11 tac_fold_satfix=30 qp=20 qp_anchor=28
+[eval] [110/400] native=27 zoh=18 spline=33 bspline_eps_raw=13 tac_fold_satfix=32 qp=22 qp_anchor=29
+[eval] [120/400] native=29 zoh=19 spline=34 bspline_eps_raw=15 tac_fold_satfix=32 qp=24 qp_anchor=30
+[eval] [130/400] native=33 zoh=19 spline=36 bspline_eps_raw=17 tac_fold_satfix=34 qp=27 qp_anchor=32

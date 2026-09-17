@@ -1,0 +1,35 @@
+{
+  "task": "RC-CoffeePressButton",
+  "policy": "dp",
+  "k": 1,
+  "n": 15,
+  "train_steps": 15000,
+  "arms": [
+    "native"
+  ],
+  "success": {
+    "native": [
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      false,
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.1064834897071739
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

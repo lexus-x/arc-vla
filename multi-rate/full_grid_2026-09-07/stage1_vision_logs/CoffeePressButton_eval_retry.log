@@ -1,0 +1,17 @@
+[eval] CoffeePressButton 1/15 success=False steps=300
+[eval] CoffeePressButton 2/15 success=False steps=300
+[eval] CoffeePressButton 3/15 success=False steps=300
+[eval] CoffeePressButton 4/15 success=False steps=300
+[eval] CoffeePressButton 5/15 success=False steps=300
+[eval] CoffeePressButton 6/15 success=False steps=300
+[eval] CoffeePressButton 7/15 success=False steps=300
+[eval] CoffeePressButton 8/15 success=False steps=300
+[eval] CoffeePressButton 9/15 success=False steps=300
+[eval] CoffeePressButton 10/15 success=False steps=300
+[eval] CoffeePressButton 11/15 success=False steps=300
+[eval] CoffeePressButton 12/15 success=False steps=300
+[eval] CoffeePressButton 13/15 success=False steps=300
+[eval] CoffeePressButton 14/15 success=False steps=300
+[eval] CoffeePressButton 15/15 success=True steps=111
+[paper] CoffeePressButton: 1/15 (6.7%) vs 93%; gap -86.3 percentage points. If results remain far below the paper, demo count is the next likely cause. Stage 1 uses 35 training demos by default. Stage 2 is not started.
+EVAL_EXIT=0

@@ -1,0 +1,27 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] 200 demos harvested in 0s
+[data] 30154 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_square.pt
+[eval] [10/100] native=10 zoh=8 spline_satfix=8 tac_fold_satfix=9 bspline_eps_satfix=9 qp=8
+[eval] [20/100] native=19 zoh=17 spline_satfix=17 tac_fold_satfix=19 bspline_eps_satfix=19 qp=18
+[eval] [30/100] native=27 zoh=26 spline_satfix=26 tac_fold_satfix=28 bspline_eps_satfix=28 qp=27
+[eval] [40/100] native=37 zoh=36 spline_satfix=36 tac_fold_satfix=37 bspline_eps_satfix=38 qp=37
+[eval] [50/100] native=46 zoh=45 spline_satfix=45 tac_fold_satfix=46 bspline_eps_satfix=47 qp=46
+[eval] [60/100] native=54 zoh=53 spline_satfix=54 tac_fold_satfix=55 bspline_eps_satfix=55 qp=55
+[eval] [70/100] native=63 zoh=62 spline_satfix=62 tac_fold_satfix=64 bspline_eps_satfix=61 qp=64
+[eval] [80/100] native=72 zoh=70 spline_satfix=71 tac_fold_satfix=72 bspline_eps_satfix=68 qp=72
+[eval] [90/100] native=80 zoh=77 spline_satfix=79 tac_fold_satfix=80 bspline_eps_satfix=76 qp=80
+[eval] [100/100] native=89 zoh=86 spline_satfix=89 tac_fold_satfix=88 bspline_eps_satfix=85 qp=90
+[eval] wall 1357s for 100 eps x 6 arms
+
+=== square closed-loop DP, k=2, n=100 ===
+  native             89.0% (89/100)  | vs zoh:   +3.0pp p=0.549
+  zoh                86.0% (86/100)  | vs native:   -3.0pp p=0.549
+  spline_satfix      89.0% (89/100)  | vs zoh:   +3.0pp p=0.453  | vs native:   +0.0pp p=1
+  tac_fold_satfix    88.0% (88/100)  | vs zoh:   +2.0pp p=0.688  | vs native:   -1.0pp p=1
+  bspline_eps_satfix   85.0% (85/100)  | vs zoh:   -1.0pp p=1  | vs native:   -4.0pp p=0.388
+  qp                 90.0% (90/100)  | vs zoh:   +4.0pp p=0.219  | vs native:   +1.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_square.json

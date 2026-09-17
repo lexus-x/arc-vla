@@ -1,0 +1,32 @@
+[bridge] started pid=2836098, waiting for it to listen...
+[start] dp_PushT-v1 03:03:40
+[start] dp_lift 03:03:40
+[start] dp_RC-OpenDrawer 03:03:41
+[end] dp_RC-OpenDrawer rc=1 03:04:02
+[start] fm_RC-OpenDrawer 03:04:02
+[end] fm_RC-OpenDrawer rc=1 03:04:16
+[start] dp_RC-PnPCounterToStove 03:04:16
+Terminated
+[end] dp_RC-PnPCounterToStove rc=143 03:06:12
+[start] fm_RC-PnPCounterToStove 03:06:12
+[end] fm_RC-PnPCounterToStove rc=1 03:06:13
+[end] dp_lift rc=0 03:13:50
+[start] fm_lift 03:13:50
+[end] fm_lift rc=0 03:36:33
+[start] dp_can 03:36:33
+[end] dp_can rc=0 03:59:45
+[start] fm_can 03:59:45
+[end] fm_can rc=0 04:35:42
+[start] dp_square 04:35:42
+[end] dp_square rc=0 05:12:40
+[start] fm_square 05:12:40
+[end] dp_PushT-v1 rc=0 05:35:10
+[start] fm_PushT-v1 05:35:10
+[end] fm_square rc=0 06:06:56
+[end] fm_PushT-v1 rc=0 07:26:43
+[start] dp_PickCube-v1 07:26:43
+[end] dp_PickCube-v1 rc=0 07:53:21
+[start] fm_PickCube-v1 07:53:21
+[end] fm_PickCube-v1 rc=0 08:30:43
+[campaign] ALL DONE 08:30:43
+[bridge] stopped

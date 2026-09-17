@@ -1,0 +1,29 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[can] eligible=100/200 arms=['original', 'exact_integral', 'exact_integral_satfix', 'cubic_spline', 'cubic_spline_satfix', 'pchip', 'pchip_satfix', 'tac_fold', 'tac_fold_satfix'] k=2
+[can] [20/100] original=18 exact_integral=19 exact_integral_satfix=18 cubic_spline=19 cubic_spline_satfix=17 pchip=20 pchip_satfix=19 tac_fold=17 tac_fold_satfix=19
+[can] [40/100] original=38 exact_integral=38 exact_integral_satfix=38 cubic_spline=37 cubic_spline_satfix=36 pchip=39 pchip_satfix=38 tac_fold=36 tac_fold_satfix=38
+[can] [60/100] original=58 exact_integral=56 exact_integral_satfix=56 cubic_spline=55 cubic_spline_satfix=55 pchip=58 pchip_satfix=56 tac_fold=54 tac_fold_satfix=56
+[can] [80/100] original=77 exact_integral=73 exact_integral_satfix=72 cubic_spline=74 cubic_spline_satfix=74 pchip=78 pchip_satfix=76 tac_fold=72 tac_fold_satfix=76
+[can] [100/100] original=97 exact_integral=92 exact_integral_satfix=91 cubic_spline=93 cubic_spline_satfix=93 pchip=97 pchip_satfix=93 tac_fold=91 tac_fold_satfix=95
+
+=== [can] k=2 n=100 ===
+  original                97.00% (97/100)  saturated_elems=0.00%
+  exact_integral          92.00% (92/100)  saturated_elems=0.00%
+  exact_integral_satfix   91.00% (91/100)  saturated_elems=0.00%
+  cubic_spline            93.00% (93/100)  saturated_elems=3.34%
+  cubic_spline_satfix     93.00% (93/100)  saturated_elems=0.00%
+  pchip                   97.00% (97/100)  saturated_elems=1.09%
+  pchip_satfix            93.00% (93/100)  saturated_elems=0.00%
+  tac_fold                91.00% (91/100)  saturated_elems=0.32%
+  tac_fold_satfix         95.00% (95/100)  saturated_elems=0.00%
+--- paired contrasts vs ZOH (exact_integral) (exact McNemar, 95% CI pp) ---
+  exact_integral_satfix  vs ZOH:  -1.00pp  McNemar p=1  95%CI=[-5.02,3.00]pp
+  cubic_spline           vs ZOH:  +1.00pp  McNemar p=1  95%CI=[-5.00,7.00]pp
+  cubic_spline_satfix    vs ZOH:  +1.00pp  McNemar p=1  95%CI=[-6.00,8.00]pp
+  pchip                  vs ZOH:  +5.00pp  McNemar p=0.1797  95%CI=[0.00,11.00]pp
+  pchip_satfix           vs ZOH:  +1.00pp  McNemar p=1  95%CI=[-5.00,7.00]pp
+  tac_fold               vs ZOH:  -1.00pp  McNemar p=1  95%CI=[-7.00,5.00]pp
+  tac_fold_satfix        vs ZOH:  +3.00pp  McNemar p=0.5488  95%CI=[-3.00,10.00]pp
+[saved] /tmp/claude-1000/-home-user-Desktop/84eef76b-33e3-4b02-8c76-473993217a1e/scratchpad/robomimic_satfix_can_k2.json

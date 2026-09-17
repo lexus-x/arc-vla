@@ -1,0 +1,186 @@
+ft40 pid 3843296
+flow10_rp5 pid 3843297
+flow10_rp10 pid 3843298
+[replan] OVERRIDE: 10 env steps (default would be 10 at 20 Hz)
+[suite] libero_spatial -> flow10_rp10_out/multirate_honest.json
+[suite] libero_spatial -> flow10_rp5_out/multirate_honest.json
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+14
+ROUND4_LAUNCHED
+
+============================================================
+ARM flow30_spline_10env
+============================================================
+[stats] flow30_spline_10env: normalizing with lerobot/libero_spatial_image
+
+============================================================
+ARM flow30_spline_10env
+============================================================
+[stats] flow30_spline_10env: normalizing with lerobot/libero_spatial_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 90200.09it/s]
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 87838.83it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  81%|████████  | 394/489 [00:00<00:00, 3911.94it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 3994.52it/s]
+Loading weights:  86%|████████▋ | 422/489 [00:00<00:00, 4184.64it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 4334.45it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[flow30_spline_10env] spline resample -> 25 steps, pose deltas rescaled
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[flow30_spline_10env] settle window scaled to 5 steps (0.50 s at 10 Hz)
+[flow30_spline_10env] task 0 trial 00: OK (39/110 steps)
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[flow30_spline_10env] spline resample -> 25 steps, pose deltas rescaled
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[flow30_spline_10env] settle window scaled to 5 steps (0.50 s at 10 Hz)
+[flow30_spline_10env] task 0 trial 00: OK (40/110 steps)
+[flow30_spline_10env] task 0 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 0 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 0 trial 02: OK (65/110 steps)
+[flow30_spline_10env] task 0 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 0 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 0 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 0 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 0 trial 04: OK (36/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 1 trial 00: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 1 trial 00: OK (50/110 steps)
+[flow30_spline_10env] task 1 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 1 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 1 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 1 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 1 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 1 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 1 trial 03: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 2 trial 00: x (110/110 steps)
+[flow30_spline_10env] task 1 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 2 trial 01: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 2 trial 00: x (110/110 steps)
+[flow30_spline_10env] task 2 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 2 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 2 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 2 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 2 trial 02: OK (43/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 3 trial 00: OK (43/110 steps)
+[flow30_spline_10env] task 2 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 3 trial 01: OK (43/110 steps)
+[flow30_spline_10env] task 2 trial 04: OK (44/110 steps)
+[flow30_spline_10env] task 3 trial 02: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 3 trial 00: OK (43/110 steps)
+[flow30_spline_10env] task 3 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 3 trial 01: OK (42/110 steps)
+[flow30_spline_10env] task 3 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 3 trial 02: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 4 trial 00: x (110/110 steps)
+[flow30_spline_10env] task 3 trial 03: OK (42/110 steps)
+[flow30_spline_10env] task 4 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 3 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 4 trial 02: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 4 trial 00: x (110/110 steps)
+[flow30_spline_10env] task 4 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 4 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 4 trial 01: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 5 trial 00: x (110/110 steps)
+[flow30_spline_10env] task 4 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 5 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 4 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 5 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 4 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 5 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 5 trial 04: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 5 trial 00: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 6 trial 00: OK (43/110 steps)
+[flow30_spline_10env] task 5 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 6 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 6 trial 02: OK (46/110 steps)
+[flow30_spline_10env] task 5 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 6 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 5 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 6 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 5 trial 04: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 7 trial 00: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 6 trial 00: OK (44/110 steps)
+[flow30_spline_10env] task 7 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 6 trial 01: OK (46/110 steps)
+[flow30_spline_10env] task 7 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 6 trial 02: OK (41/110 steps)
+[flow30_spline_10env] task 7 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 6 trial 03: OK (47/110 steps)
+[flow30_spline_10env] task 6 trial 04: OK (43/110 steps)
+[flow30_spline_10env] task 7 trial 04: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 8 trial 00: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 7 trial 00: x (110/110 steps)
+[flow30_spline_10env] task 8 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 7 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 8 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 7 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 8 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 8 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 7 trial 03: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 9 trial 00: x (110/110 steps)
+[flow30_spline_10env] task 7 trial 04: x (110/110 steps)
+[flow30_spline_10env] task 9 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 9 trial 02: OK (59/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 8 trial 00: x (110/110 steps)
+[flow30_spline_10env] task 9 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 8 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 9 trial 04: x (110/110 steps)
+[flow30_spline_10env] diagnostics: 7/50 ok | fail_at_cap=43 fail_early=0 | succ_median=43.0/110
+--> flow30_spline_10env: 14.0% (110 steps @ 10 Hz = 11.0 s, replan every 10)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  flow30_spline_10env     14.0%
+[flow30_spline_10env] task 8 trial 02: x (110/110 steps)
+[flow30_spline_10env] task 8 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 8 trial 04: x (110/110 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow30_spline_10env] task 9 trial 00: x (110/110 steps)
+[flow30_spline_10env] task 9 trial 01: x (110/110 steps)
+[flow30_spline_10env] task 9 trial 02: OK (58/110 steps)
+[flow30_spline_10env] task 9 trial 03: x (110/110 steps)
+[flow30_spline_10env] task 9 trial 04: x (110/110 steps)
+[flow30_spline_10env] diagnostics: 14/50 ok | fail_at_cap=36 fail_early=0 | succ_median=43.0/110
+--> flow30_spline_10env: 28.0% (110 steps @ 10 Hz = 11.0 s, replan every 5)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  flow30_spline_10env     28.0%

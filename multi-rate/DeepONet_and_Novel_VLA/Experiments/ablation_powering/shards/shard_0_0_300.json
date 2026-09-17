@@ -1,0 +1,3616 @@
+{
+  "start_idx": 0,
+  "end_idx": 300,
+  "native_20hz": {
+    "task_scores": [
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_1",
+        "idx": 0,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_10",
+        "idx": 1,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_12",
+        "idx": 2,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_13",
+        "idx": 3,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_14",
+        "idx": 4,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_15",
+        "idx": 5,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_16",
+        "idx": 6,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_17",
+        "idx": 7,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_18",
+        "idx": 8,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_19",
+        "idx": 9,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_2",
+        "idx": 10,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_21",
+        "idx": 11,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_22",
+        "idx": 12,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_24",
+        "idx": 13,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_27",
+        "idx": 14,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_28",
+        "idx": 15,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_5",
+        "idx": 16,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_8",
+        "idx": 17,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_9",
+        "idx": 18,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_12",
+        "idx": 19,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_18",
+        "idx": 20,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_2",
+        "idx": 21,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_20",
+        "idx": 22,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_21",
+        "idx": 23,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_22",
+        "idx": 24,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_5",
+        "idx": 25,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_6",
+        "idx": 26,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_7",
+        "idx": 27,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_9",
+        "idx": 28,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_11",
+        "idx": 29,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_12",
+        "idx": 30,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_13",
+        "idx": 31,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_14",
+        "idx": 32,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_15",
+        "idx": 33,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_16",
+        "idx": 34,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_17",
+        "idx": 35,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_18",
+        "idx": 36,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_19",
+        "idx": 37,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_20",
+        "idx": 38,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_21",
+        "idx": 39,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_22",
+        "idx": 40,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_23",
+        "idx": 41,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_24",
+        "idx": 42,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_25",
+        "idx": 43,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_26",
+        "idx": 44,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_27",
+        "idx": 45,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_3",
+        "idx": 46,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_4",
+        "idx": 47,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_5",
+        "idx": 48,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_6",
+        "idx": 49,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_7",
+        "idx": 50,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_8",
+        "idx": 51,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_1",
+        "idx": 52,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_10",
+        "idx": 53,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_11",
+        "idx": 54,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_12",
+        "idx": 55,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_13",
+        "idx": 56,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_14",
+        "idx": 57,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_15",
+        "idx": 58,
+        "successes": 10,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_16",
+        "idx": 59,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_17",
+        "idx": 60,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_18",
+        "idx": 61,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_19",
+        "idx": 62,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_2",
+        "idx": 63,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_20",
+        "idx": 64,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_21",
+        "idx": 65,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_22",
+        "idx": 66,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_23",
+        "idx": 67,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_3",
+        "idx": 68,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_4",
+        "idx": 69,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_5",
+        "idx": 70,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_6",
+        "idx": 71,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_7",
+        "idx": 72,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_8",
+        "idx": 73,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_9",
+        "idx": 74,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_12",
+        "idx": 75,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_15",
+        "idx": 76,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_17",
+        "idx": 77,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_19",
+        "idx": 78,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_2",
+        "idx": 79,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_22",
+        "idx": 80,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_23",
+        "idx": 81,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_24",
+        "idx": 82,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_25",
+        "idx": 83,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_26",
+        "idx": 84,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_27",
+        "idx": 85,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_3",
+        "idx": 86,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_4",
+        "idx": 87,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_5",
+        "idx": 88,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_7",
+        "idx": 89,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_8",
+        "idx": 90,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_9",
+        "idx": 91,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_1",
+        "idx": 92,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_12",
+        "idx": 93,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_16",
+        "idx": 94,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_17",
+        "idx": 95,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_19",
+        "idx": 96,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_21",
+        "idx": 97,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_22",
+        "idx": 98,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_7",
+        "idx": 99,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_9",
+        "idx": 100,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_1",
+        "idx": 101,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_10",
+        "idx": 102,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_12",
+        "idx": 103,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_13",
+        "idx": 104,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_21",
+        "idx": 105,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_22",
+        "idx": 106,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_23",
+        "idx": 107,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_9",
+        "idx": 108,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_10",
+        "idx": 109,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_12",
+        "idx": 110,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_14",
+        "idx": 111,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_15",
+        "idx": 112,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_17",
+        "idx": 113,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_18",
+        "idx": 114,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_19",
+        "idx": 115,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_2",
+        "idx": 116,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_20",
+        "idx": 117,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_21",
+        "idx": 118,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_3",
+        "idx": 119,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_9",
+        "idx": 120,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_1",
+        "idx": 121,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_12",
+        "idx": 122,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_16",
+        "idx": 123,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_24",
+        "idx": 124,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_3",
+        "idx": 125,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_7",
+        "idx": 126,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_1",
+        "idx": 127,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_10",
+        "idx": 128,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_12",
+        "idx": 129,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_13",
+        "idx": 130,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_3",
+        "idx": 131,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_9",
+        "idx": 132,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_tb_19",
+        "idx": 133,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_tb_20",
+        "idx": 134,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_tb_21",
+        "idx": 135,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_tb_3",
+        "idx": 136,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_11",
+        "idx": 137,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_12",
+        "idx": 138,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_13",
+        "idx": 139,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_16",
+        "idx": 140,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_22",
+        "idx": 141,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_23",
+        "idx": 142,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_25",
+        "idx": 143,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_26",
+        "idx": 144,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_27",
+        "idx": 145,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_4",
+        "idx": 146,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_5",
+        "idx": 147,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_1",
+        "idx": 148,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_10",
+        "idx": 149,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_11",
+        "idx": 150,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_12",
+        "idx": 151,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_13",
+        "idx": 152,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_14",
+        "idx": 153,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_15",
+        "idx": 154,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_16",
+        "idx": 155,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_17",
+        "idx": 156,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_18",
+        "idx": 157,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_19",
+        "idx": 158,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_2",
+        "idx": 159,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_21",
+        "idx": 160,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_22",
+        "idx": 161,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_23",
+        "idx": 162,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_3",
+        "idx": 163,
+        "successes": 8,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_5",
+        "idx": 164,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_6",
+        "idx": 165,
+        "successes": 9,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_8",
+        "idx": 166,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_9",
+        "idx": 167,
+        "successes": 7,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_1",
+        "idx": 168,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_10",
+        "idx": 169,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_12",
+        "idx": 170,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_13",
+        "idx": 171,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_15",
+        "idx": 172,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_16",
+        "idx": 173,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_17",
+        "idx": 174,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_18",
+        "idx": 175,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_19",
+        "idx": 176,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_2",
+        "idx": 177,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_20",
+        "idx": 178,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_23",
+        "idx": 179,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_24",
+        "idx": 180,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_25",
+        "idx": 181,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_26",
+        "idx": 182,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_3",
+        "idx": 183,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_5",
+        "idx": 184,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_6",
+        "idx": 185,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_8",
+        "idx": 186,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_9",
+        "idx": 187,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_1",
+        "idx": 188,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_11",
+        "idx": 189,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_12",
+        "idx": 190,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_14",
+        "idx": 191,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_16",
+        "idx": 192,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_17",
+        "idx": 193,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_18",
+        "idx": 194,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_19",
+        "idx": 195,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_22",
+        "idx": 196,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_3",
+        "idx": 197,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_4",
+        "idx": 198,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_5",
+        "idx": 199,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_6",
+        "idx": 200,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_8",
+        "idx": 201,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_9",
+        "idx": 202,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_1",
+        "idx": 203,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_10",
+        "idx": 204,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_11",
+        "idx": 205,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_12",
+        "idx": 206,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_14",
+        "idx": 207,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_15",
+        "idx": 208,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_18",
+        "idx": 209,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_19",
+        "idx": 210,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_2",
+        "idx": 211,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_20",
+        "idx": 212,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_21",
+        "idx": 213,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_22",
+        "idx": 214,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_23",
+        "idx": 215,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_24",
+        "idx": 216,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_25",
+        "idx": 217,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_26",
+        "idx": 218,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_3",
+        "idx": 219,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_4",
+        "idx": 220,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_6",
+        "idx": 221,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_7",
+        "idx": 222,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_9",
+        "idx": 223,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_1",
+        "idx": 224,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_10",
+        "idx": 225,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_11",
+        "idx": 226,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_12",
+        "idx": 227,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_14",
+        "idx": 228,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_15",
+        "idx": 229,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_16",
+        "idx": 230,
+        "successes": 6,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_18",
+        "idx": 231,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_19",
+        "idx": 232,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_2",
+        "idx": 233,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_20",
+        "idx": 234,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_21",
+        "idx": 235,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_22",
+        "idx": 236,
+        "successes": 5,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_23",
+        "idx": 237,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_3",
+        "idx": 238,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_5",
+        "idx": 239,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_6",
+        "idx": 240,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_7",
+        "idx": 241,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_8",
+        "idx": 242,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_9",
+        "idx": 243,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_1",
+        "idx": 244,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_14",
+        "idx": 245,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_17",
+        "idx": 246,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_2",
+        "idx": 247,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_23",
+        "idx": 248,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_27",
+        "idx": 249,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_28",
+        "idx": 250,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_3",
+        "idx": 251,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_4",
+        "idx": 252,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_tb_1",
+        "idx": 253,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_tb_12",
+        "idx": 254,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_tb_17",
+        "idx": 255,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_tb_2",
+        "idx": 256,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_tb_6",
+        "idx": 257,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_1",
+        "idx": 258,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_11",
+        "idx": 259,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_101",
+        "idx": 260,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_121",
+        "idx": 261,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_131",
+        "idx": 262,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_141",
+        "idx": 263,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_151",
+        "idx": 264,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_161",
+        "idx": 265,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_171",
+        "idx": 266,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_211",
+        "idx": 267,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_221",
+        "idx": 268,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_231",
+        "idx": 269,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_241",
+        "idx": 270,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_271",
+        "idx": 271,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_281",
+        "idx": 272,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_291",
+        "idx": 273,
+        "successes": 4,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_301",
+        "idx": 274,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_311",
+        "idx": 275,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_331",
+        "idx": 276,
+        "successes": 3,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_341",
+        "idx": 277,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_351",
+        "idx": 278,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_361",
+        "idx": 279,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_371",
+        "idx": 280,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_401",
+        "idx": 281,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_411",
+        "idx": 282,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_421",
+        "idx": 283,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_431",
+        "idx": 284,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_441",
+        "idx": 285,
+        "successes": 2,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_451",
+        "idx": 286,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_471",
+        "idx": 287,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_481",
+        "idx": 288,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_491",
+        "idx": 289,
+        "successes": 1,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_42",
+        "idx": 290,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_62",
+        "idx": 291,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_102",
+        "idx": 292,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_112",
+        "idx": 293,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_132",
+        "idx": 294,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_142",
+        "idx": 295,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_152",
+        "idx": 296,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_162",
+        "idx": 297,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_192",
+        "idx": 298,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_202",
+        "idx": 299,
+        "successes": 0,
+        "total": 10
+      }
+    ],
+    "successes": 1106,
+    "total": 3000
+  },
+  "spline_40hz": {
+    "task_scores": [
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_1",
+        "idx": 0,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_10",
+        "idx": 1,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_12",
+        "idx": 2,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_13",
+        "idx": 3,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_14",
+        "idx": 4,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_15",
+        "idx": 5,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_16",
+        "idx": 6,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_17",
+        "idx": 7,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_18",
+        "idx": 8,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_19",
+        "idx": 9,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_2",
+        "idx": 10,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_21",
+        "idx": 11,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_22",
+        "idx": 12,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_24",
+        "idx": 13,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_27",
+        "idx": 14,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_28",
+        "idx": 15,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_5",
+        "idx": 16,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_8",
+        "idx": 17,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_table_9",
+        "idx": 18,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_12",
+        "idx": 19,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_18",
+        "idx": 20,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_2",
+        "idx": 21,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_20",
+        "idx": 22,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_21",
+        "idx": 23,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_22",
+        "idx": 24,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_5",
+        "idx": 25,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_6",
+        "idx": 26,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_7",
+        "idx": 27,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_tb_9",
+        "idx": 28,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_11",
+        "idx": 29,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_12",
+        "idx": 30,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_13",
+        "idx": 31,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_14",
+        "idx": 32,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_15",
+        "idx": 33,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_16",
+        "idx": 34,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_17",
+        "idx": 35,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_18",
+        "idx": 36,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_19",
+        "idx": 37,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_20",
+        "idx": 38,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_21",
+        "idx": 39,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_22",
+        "idx": 40,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_23",
+        "idx": 41,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_24",
+        "idx": 42,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_25",
+        "idx": 43,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_26",
+        "idx": 44,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_27",
+        "idx": 45,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_3",
+        "idx": 46,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_4",
+        "idx": 47,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_5",
+        "idx": 48,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_6",
+        "idx": 49,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_7",
+        "idx": 50,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_table_8",
+        "idx": 51,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_1",
+        "idx": 52,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_10",
+        "idx": 53,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_11",
+        "idx": 54,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_12",
+        "idx": 55,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_13",
+        "idx": 56,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_14",
+        "idx": 57,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_15",
+        "idx": 58,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_16",
+        "idx": 59,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_17",
+        "idx": 60,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_18",
+        "idx": 61,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_19",
+        "idx": 62,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_2",
+        "idx": 63,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_20",
+        "idx": 64,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_21",
+        "idx": 65,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_22",
+        "idx": 66,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_23",
+        "idx": 67,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_3",
+        "idx": 68,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_4",
+        "idx": 69,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_5",
+        "idx": 70,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_6",
+        "idx": 71,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_7",
+        "idx": 72,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_8",
+        "idx": 73,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_tb_9",
+        "idx": 74,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_12",
+        "idx": 75,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_15",
+        "idx": 76,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_17",
+        "idx": 77,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_19",
+        "idx": 78,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_2",
+        "idx": 79,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_22",
+        "idx": 80,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_23",
+        "idx": 81,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_24",
+        "idx": 82,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_25",
+        "idx": 83,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_26",
+        "idx": 84,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_27",
+        "idx": 85,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_3",
+        "idx": 86,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_4",
+        "idx": 87,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_5",
+        "idx": 88,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_7",
+        "idx": 89,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_8",
+        "idx": 90,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_table_9",
+        "idx": 91,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_1",
+        "idx": 92,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_12",
+        "idx": 93,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_16",
+        "idx": 94,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_17",
+        "idx": 95,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_19",
+        "idx": 96,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_21",
+        "idx": 97,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_22",
+        "idx": 98,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_7",
+        "idx": 99,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_tb_9",
+        "idx": 100,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_1",
+        "idx": 101,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_10",
+        "idx": 102,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_12",
+        "idx": 103,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_13",
+        "idx": 104,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_21",
+        "idx": 105,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_22",
+        "idx": 106,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_23",
+        "idx": 107,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_table_9",
+        "idx": 108,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_10",
+        "idx": 109,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_12",
+        "idx": 110,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_14",
+        "idx": 111,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_15",
+        "idx": 112,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_17",
+        "idx": 113,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_18",
+        "idx": 114,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_19",
+        "idx": 115,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_2",
+        "idx": 116,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_20",
+        "idx": 117,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_21",
+        "idx": 118,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_3",
+        "idx": 119,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_tb_9",
+        "idx": 120,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_1",
+        "idx": 121,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_12",
+        "idx": 122,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_16",
+        "idx": 123,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_24",
+        "idx": 124,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_3",
+        "idx": 125,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_table_7",
+        "idx": 126,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_1",
+        "idx": 127,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_10",
+        "idx": 128,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_12",
+        "idx": 129,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_13",
+        "idx": 130,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_3",
+        "idx": 131,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_table_9",
+        "idx": 132,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_tb_19",
+        "idx": 133,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_tb_20",
+        "idx": 134,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_tb_21",
+        "idx": 135,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_tb_3",
+        "idx": 136,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_11",
+        "idx": 137,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_12",
+        "idx": 138,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_13",
+        "idx": 139,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_16",
+        "idx": 140,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_22",
+        "idx": 141,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_23",
+        "idx": 142,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_25",
+        "idx": 143,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_26",
+        "idx": 144,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_27",
+        "idx": 145,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_4",
+        "idx": 146,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_table_5",
+        "idx": 147,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_1",
+        "idx": 148,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_10",
+        "idx": 149,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_11",
+        "idx": 150,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_12",
+        "idx": 151,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_13",
+        "idx": 152,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_14",
+        "idx": 153,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_15",
+        "idx": 154,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_16",
+        "idx": 155,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_17",
+        "idx": 156,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_18",
+        "idx": 157,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_19",
+        "idx": 158,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_2",
+        "idx": 159,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_21",
+        "idx": 160,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_22",
+        "idx": 161,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_23",
+        "idx": 162,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_3",
+        "idx": 163,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_5",
+        "idx": 164,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_6",
+        "idx": 165,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_8",
+        "idx": 166,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_tb_9",
+        "idx": 167,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_1",
+        "idx": 168,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_10",
+        "idx": 169,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_12",
+        "idx": 170,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_13",
+        "idx": 171,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_15",
+        "idx": 172,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_16",
+        "idx": 173,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_17",
+        "idx": 174,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_18",
+        "idx": 175,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_19",
+        "idx": 176,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_2",
+        "idx": 177,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_20",
+        "idx": 178,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_23",
+        "idx": 179,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_24",
+        "idx": 180,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_25",
+        "idx": 181,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_26",
+        "idx": 182,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_3",
+        "idx": 183,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_5",
+        "idx": 184,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_6",
+        "idx": 185,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_8",
+        "idx": 186,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_table_9",
+        "idx": 187,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_1",
+        "idx": 188,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_11",
+        "idx": 189,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_12",
+        "idx": 190,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_14",
+        "idx": 191,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_16",
+        "idx": 192,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_17",
+        "idx": 193,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_18",
+        "idx": 194,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_19",
+        "idx": 195,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_22",
+        "idx": 196,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_3",
+        "idx": 197,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_4",
+        "idx": 198,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_5",
+        "idx": 199,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_6",
+        "idx": 200,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_8",
+        "idx": 201,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_tb_9",
+        "idx": 202,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_1",
+        "idx": 203,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_10",
+        "idx": 204,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_11",
+        "idx": 205,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_12",
+        "idx": 206,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_14",
+        "idx": 207,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_15",
+        "idx": 208,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_18",
+        "idx": 209,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_19",
+        "idx": 210,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_2",
+        "idx": 211,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_20",
+        "idx": 212,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_21",
+        "idx": 213,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_22",
+        "idx": 214,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_23",
+        "idx": 215,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_24",
+        "idx": 216,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_25",
+        "idx": 217,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_26",
+        "idx": 218,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_3",
+        "idx": 219,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_4",
+        "idx": 220,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_6",
+        "idx": 221,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_7",
+        "idx": 222,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_table_9",
+        "idx": 223,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_1",
+        "idx": 224,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_10",
+        "idx": 225,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_11",
+        "idx": 226,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_12",
+        "idx": 227,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_14",
+        "idx": 228,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_15",
+        "idx": 229,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_16",
+        "idx": 230,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_18",
+        "idx": 231,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_19",
+        "idx": 232,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_2",
+        "idx": 233,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_20",
+        "idx": 234,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_21",
+        "idx": 235,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_22",
+        "idx": 236,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_23",
+        "idx": 237,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_3",
+        "idx": 238,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_5",
+        "idx": 239,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_6",
+        "idx": 240,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_7",
+        "idx": 241,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_8",
+        "idx": 242,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_9",
+        "idx": 243,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_1",
+        "idx": 244,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_14",
+        "idx": 245,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_17",
+        "idx": 246,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_2",
+        "idx": 247,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_23",
+        "idx": 248,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_27",
+        "idx": 249,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_28",
+        "idx": 250,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_3",
+        "idx": 251,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_4",
+        "idx": 252,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_tb_1",
+        "idx": 253,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_tb_12",
+        "idx": 254,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_tb_17",
+        "idx": 255,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_tb_2",
+        "idx": 256,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_tb_6",
+        "idx": 257,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_1",
+        "idx": 258,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_11",
+        "idx": 259,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_101",
+        "idx": 260,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_121",
+        "idx": 261,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_131",
+        "idx": 262,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_141",
+        "idx": 263,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_151",
+        "idx": 264,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_161",
+        "idx": 265,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_171",
+        "idx": 266,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_211",
+        "idx": 267,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_221",
+        "idx": 268,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_231",
+        "idx": 269,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_241",
+        "idx": 270,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_271",
+        "idx": 271,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_281",
+        "idx": 272,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_291",
+        "idx": 273,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_301",
+        "idx": 274,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_311",
+        "idx": 275,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_331",
+        "idx": 276,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_341",
+        "idx": 277,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_351",
+        "idx": 278,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_361",
+        "idx": 279,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_371",
+        "idx": 280,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_401",
+        "idx": 281,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_411",
+        "idx": 282,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_421",
+        "idx": 283,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_431",
+        "idx": 284,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_441",
+        "idx": 285,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_451",
+        "idx": 286,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_471",
+        "idx": 287,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_481",
+        "idx": 288,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_491",
+        "idx": 289,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_42",
+        "idx": 290,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_62",
+        "idx": 291,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_102",
+        "idx": 292,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_112",
+        "idx": 293,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_132",
+        "idx": 294,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_142",
+        "idx": 295,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_152",
+        "idx": 296,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_162",
+        "idx": 297,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_192",
+        "idx": 298,
+        "successes": 0,
+        "total": 10
+      },
+      {
+        "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_202",
+        "idx": 299,
+        "successes": 0,
+        "total": 10
+      }
+    ],
+    "successes": 0,
+    "total": 3000
+  }
+}

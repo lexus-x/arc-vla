@@ -1,0 +1,118 @@
+{
+  "flow30_spatial_native_20env": {
+    "aggregate": null,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/From_Blackwell/Ayush PH test/DeepONet PH/paper_repro/Spatial/runs/flow_s0/checkpoints/30000",
+      "deeponet_head": null,
+      "env_freq": 20,
+      "fourier": null,
+      "head_rate": null,
+      "model": "flow30_spatial",
+      "replan": 5,
+      "settle_steps": 10,
+      "steps": 220,
+      "suite": "libero_spatial",
+      "trained_on": "libero_spatial",
+      "transform": null,
+      "wallclock_s": 11.0
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 77,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 82,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 74,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 72,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 76,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 73,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 76,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 78,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 72,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 77,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 78,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 73,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 75,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 75,
+            "success": true
+          }
+        ],
+        "success_rate": 0.7777777777777778,
+        "task": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+      }
+    }
+  }
+}

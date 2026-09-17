@@ -1,0 +1,19 @@
+[driver] arm=zoh server pid=1580775 waiting for ready...
+[driver] arm=zoh task=OpenDrawer_PandaOmron_Env n_episodes=10
+[driver] arm=zoh task=OpenDrawer_PandaOmron_Env DONE, see /tmp/claude-1000/-home-user-Desktop/84eef76b-33e3-4b02-8c76-473993217a1e/scratchpad/robocasa_eval_zoh_OpenDrawer_PandaOmron_Env.log
+[driver] arm=zoh task=PnPCounterToStove_PandaOmron_Env n_episodes=10
+[driver] arm=zoh task=PnPCounterToStove_PandaOmron_Env DONE, see /tmp/claude-1000/-home-user-Desktop/84eef76b-33e3-4b02-8c76-473993217a1e/scratchpad/robocasa_eval_zoh_PnPCounterToStove_PandaOmron_Env.log
+[driver] arm=zoh server stopped
+[driver] arm=tac_fold server pid=1586047 waiting for ready...
+[driver] arm=tac_fold task=OpenDrawer_PandaOmron_Env n_episodes=10
+[driver] arm=tac_fold task=OpenDrawer_PandaOmron_Env DONE, see /tmp/claude-1000/-home-user-Desktop/84eef76b-33e3-4b02-8c76-473993217a1e/scratchpad/robocasa_eval_tac_fold_OpenDrawer_PandaOmron_Env.log
+[driver] arm=tac_fold task=PnPCounterToStove_PandaOmron_Env n_episodes=10
+[driver] arm=tac_fold task=PnPCounterToStove_PandaOmron_Env DONE, see /tmp/claude-1000/-home-user-Desktop/84eef76b-33e3-4b02-8c76-473993217a1e/scratchpad/robocasa_eval_tac_fold_PnPCounterToStove_PandaOmron_Env.log
+[driver] arm=tac_fold server stopped
+[driver] arm=tac_fold_satfix server pid=1590698 waiting for ready...
+[driver] arm=tac_fold_satfix task=OpenDrawer_PandaOmron_Env n_episodes=10
+[driver] arm=tac_fold_satfix task=OpenDrawer_PandaOmron_Env DONE, see /tmp/claude-1000/-home-user-Desktop/84eef76b-33e3-4b02-8c76-473993217a1e/scratchpad/robocasa_eval_tac_fold_satfix_OpenDrawer_PandaOmron_Env.log
+[driver] arm=tac_fold_satfix task=PnPCounterToStove_PandaOmron_Env n_episodes=10
+[driver] arm=tac_fold_satfix task=PnPCounterToStove_PandaOmron_Env DONE, see /tmp/claude-1000/-home-user-Desktop/84eef76b-33e3-4b02-8c76-473993217a1e/scratchpad/robocasa_eval_tac_fold_satfix_PnPCounterToStove_PandaOmron_Env.log
+[driver] arm=tac_fold_satfix server stopped
+[driver] ALL ARMS COMPLETE

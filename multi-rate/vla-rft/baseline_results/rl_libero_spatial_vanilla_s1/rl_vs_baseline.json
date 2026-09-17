@@ -1,0 +1,11 @@
+{
+  "suite": "libero_spatial",
+  "rl_ckpt": "rl_checkpoint_libero_spatial_vanilla_s1",
+  "rl_aggregate": 0.74,
+  "rl_n": 100,
+  "baseline_aggregate": 0.7733333333333334,
+  "baseline_source": "baseline_results/libero_spatial_seed0_v2/summary.json",
+  "delta_pp": -3.3333333333333437,
+  "note": "1-seed preliminary, no significance claim possible (no baseline stddev for this suite)",
+  "source": "baseline_results/rl_libero_spatial_vanilla_s1/multirate_honest.json"
+}

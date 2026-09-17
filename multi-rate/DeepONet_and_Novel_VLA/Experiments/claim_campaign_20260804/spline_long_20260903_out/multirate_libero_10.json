@@ -1,0 +1,464 @@
+{
+  "asrc_long_dec2_spline_10env": {
+    "aggregate": 0.4,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_long_s0/checkpoints/8300",
+      "deeponet_head": "asrc",
+      "env_freq": 10,
+      "fourier": 6,
+      "head_rate": 20,
+      "model": "asrc_long",
+      "replan": 5,
+      "settle_steps": 5,
+      "steps": 260,
+      "suite": "libero_10",
+      "trained_on": "libero_spatial",
+      "transform": "decimate2+spline_cum+magscale",
+      "wallclock_s": 26.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": null,
+      "cap": 260,
+      "fail_at_cap": 6,
+      "fail_early": 0,
+      "magscale_applied": 427,
+      "n": 10,
+      "n_success": 4,
+      "spline_applied": null,
+      "success_steps_max": 154,
+      "success_steps_median": 141.0,
+      "v2_transform": {
+        "coarsened": 427,
+        "dec_len": 25,
+        "in_len": 50,
+        "k": 2,
+        "n": 427,
+        "out_len": 25,
+        "resampler": "spline_cum"
+      }
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 154,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put both the alphabet soup and the tomato sauce in the basket"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 260,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put both the cream cheese box and the butter in the basket"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 134,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "turn on the stove and put the moka pot on it"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 134,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the black bowl in the bottom drawer of the cabinet and close it"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 260,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 260,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "pick up the book and place it in the back compartment of the caddy"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 260,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 148,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put both the alphabet soup and the cream cheese box in the basket"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 260,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put both moka pots on the stove"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 260,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put the yellow and white mug in the microwave and close it"
+      }
+    }
+  },
+  "asrc_long_dec2_spline_20env": {
+    "aggregate": 0.6,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_long_s0/checkpoints/8300",
+      "deeponet_head": "asrc",
+      "env_freq": 20,
+      "fourier": 6,
+      "head_rate": 20,
+      "model": "asrc_long",
+      "replan": 10,
+      "settle_steps": 10,
+      "steps": 520,
+      "suite": "libero_10",
+      "trained_on": "libero_spatial",
+      "transform": "decimate2+spline_cum",
+      "wallclock_s": 26.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": null,
+      "cap": 520,
+      "fail_at_cap": 4,
+      "fail_early": 0,
+      "magscale_applied": null,
+      "n": 10,
+      "n_success": 6,
+      "spline_applied": null,
+      "success_steps_max": 367,
+      "success_steps_median": 236.0,
+      "v2_transform": {
+        "coarsened": 364,
+        "dec_len": 25,
+        "in_len": 50,
+        "k": 2,
+        "n": 364,
+        "out_len": 50,
+        "resampler": "spline_cum"
+      }
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 261,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put both the alphabet soup and the tomato sauce in the basket"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put both the cream cheese box and the butter in the basket"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 220,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "turn on the stove and put the moka pot on it"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 218,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the black bowl in the bottom drawer of the cabinet and close it"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "pick up the book and place it in the back compartment of the caddy"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 214,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 252,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put both the alphabet soup and the cream cheese box in the basket"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 367,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put both moka pots on the stove"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put the yellow and white mug in the microwave and close it"
+      }
+    }
+  },
+  "asrc_long_dec2_spline_40env": {
+    "aggregate": 0.5,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_long_s0/checkpoints/8300",
+      "deeponet_head": "asrc",
+      "env_freq": 40,
+      "fourier": 6,
+      "head_rate": 20,
+      "model": "asrc_long",
+      "replan": 20,
+      "settle_steps": 20,
+      "steps": 1040,
+      "suite": "libero_10",
+      "trained_on": "libero_spatial",
+      "transform": "decimate2+spline_cum+magscale+cadence",
+      "wallclock_s": 26.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": {
+        "n": 7592,
+        "phase": 3795,
+        "queries": 3796,
+        "resolved": 3792,
+        "starved": 4
+      },
+      "cap": 1040,
+      "fail_at_cap": 5,
+      "fail_early": 0,
+      "magscale_applied": 382,
+      "n": 10,
+      "n_success": 5,
+      "spline_applied": null,
+      "success_steps_max": 539,
+      "success_steps_median": 471.0,
+      "v2_transform": {
+        "coarsened": 382,
+        "dec_len": 25,
+        "in_len": 50,
+        "k": 2,
+        "n": 382,
+        "out_len": 100,
+        "resampler": "spline_cum"
+      }
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 539,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put both the alphabet soup and the tomato sauce in the basket"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 1040,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put both the cream cheese box and the butter in the basket"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 446,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "turn on the stove and put the moka pot on it"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 471,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the black bowl in the bottom drawer of the cabinet and close it"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 1040,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 1040,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "pick up the book and place it in the back compartment of the caddy"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 429,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 507,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "put both the alphabet soup and the cream cheese box in the basket"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 1040,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put both moka pots on the stove"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 1040,
+            "success": false
+          }
+        ],
+        "success_rate": 0.0,
+        "task": "put the yellow and white mug in the microwave and close it"
+      }
+    }
+  }
+}

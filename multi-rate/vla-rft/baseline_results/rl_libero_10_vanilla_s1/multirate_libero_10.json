@@ -1,0 +1,596 @@
+{
+  "rl_pilot_libero_10_native_20env": {
+    "aggregate": 0.56,
+    "config": {
+      "checkpoint": "rl_checkpoint_libero_10_vanilla_s1",
+      "deeponet_head": null,
+      "env_freq": 20,
+      "fourier": null,
+      "head_rate": null,
+      "model": "rl_pilot_libero_10",
+      "replan": 10,
+      "settle_steps": 10,
+      "steps": 520,
+      "suite": "libero_10",
+      "trained_on": "libero_spatial",
+      "transform": null,
+      "wallclock_s": 26.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": null,
+      "cap": 520,
+      "fail_at_cap": 44,
+      "fail_early": 0,
+      "magscale_applied": null,
+      "n": 100,
+      "n_success": 56,
+      "spline_applied": null,
+      "success_steps_max": 489,
+      "success_steps_median": 236.5,
+      "v2_transform": null
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 327,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 252,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.2,
+        "task": "put both the alphabet soup and the tomato sauce in the basket"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 233,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 226,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 467,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 236,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 239,
+            "success": true
+          }
+        ],
+        "success_rate": 0.5,
+        "task": "put both the cream cheese box and the butter in the basket"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 210,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 223,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 261,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 233,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 210,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 254,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 229,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 234,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "turn on the stove and put the moka pot on it"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 242,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 277,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 227,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 234,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 209,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 234,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 228,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 269,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 231,
+            "success": true
+          }
+        ],
+        "success_rate": 0.9,
+        "task": "put the black bowl in the bottom drawer of the cabinet and close it"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 248,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 225,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.2,
+        "task": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 175,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 198,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 177,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 155,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 158,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 159,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 163,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 237,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 444,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.9,
+        "task": "pick up the book and place it in the back compartment of the caddy"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 489,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 228,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 216,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 216,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 404,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 209,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 300,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 232,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 281,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 281,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 246,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 428,
+            "success": true
+          }
+        ],
+        "success_rate": 0.4,
+        "task": "put both the alphabet soup and the cream cheese box in the basket"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 375,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 426,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 391,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.3,
+        "task": "put both moka pots on the stove"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 255,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 322,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 252,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 255,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 263,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 269,
+            "success": true
+          }
+        ],
+        "success_rate": 0.6,
+        "task": "put the yellow and white mug in the microwave and close it"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-CoffeePressButton_39_f1.npz
+[data] 39 demos harvested in 0s
+[data] 4631 windows, obs_dim=82, act_dim=12, raw |a|>1 frac=0.000
+[train] step 1/15000 loss=1.11802
+[train] step 2000/15000 loss=0.01019
+[train] step 4000/15000 loss=0.00638
+[train] step 6000/15000 loss=0.00445
+[train] step 8000/15000 loss=0.00282
+[train] step 10000/15000 loss=0.00198
+[train] step 12000/15000 loss=0.00100
+[train] step 14000/15000 loss=0.00052
+[train] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CoffeePressButton_bspline_f1.pt
+[eval] [10/15] native=7
+[eval] [15/15] native=10
+[eval] wall 263s for 15 eps x 1 arms
+
+=== RC-CoffeePressButton closed-loop DP, k=1, n=15 ===
+  native             66.7% (10/15)
+  policy raw |a|>1 frac (pre-clip): 0.106
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-CoffeePressButton_bspline_f1_k1_rc4.json

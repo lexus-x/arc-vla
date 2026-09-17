@@ -1,0 +1,36 @@
+{
+  "task": "PickCube-v1",
+  "policy": "dp",
+  "k": 4,
+  "n": 2,
+  "train_steps": 50,
+  "arms": [
+    "zoh",
+    "qp"
+  ],
+  "success": {
+    "zoh": [
+      false,
+      false
+    ],
+    "qp": [
+      false,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "zoh": 0.8819047619047619,
+    "qp": 0.0
+  },
+  "contrasts": {
+    "zoh": {},
+    "qp": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    }
+  }
+}

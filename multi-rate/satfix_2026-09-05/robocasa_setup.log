@@ -1,0 +1,314 @@
++++ dirname gr00t/eval/sim/robocasa/setup_RoboCasa.sh
+++ cd gr00t/eval/sim/robocasa
+++ pwd
++ SCRIPT_DIR=/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa
++ PROJECT_REPO=/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/../../../..
++ ROBOCASA_REPO=/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/../../../../external_dependencies/robocasa
++ UV_ENV=/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv
++ git submodule update --init /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/../../../../external_dependencies/robocasa
+Submodule 'external_dependencies/robocasa' (https://github.com/squarefk/robocasa) registered for path 'external_dependencies/robocasa'
+Cloning into '/home/user/Isaac-GR00T/external_dependencies/robocasa'...
+Submodule path 'external_dependencies/robocasa': checked out 'd89d481ce9c76da7f179466981676e268aa842e5'
++ rm -rf /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv
++ mkdir -p /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv
++ uv venv /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv --python 3.10
+Using CPython 3.10.12 interpreter at: /usr/bin/python3.10
+Creating virtual environment at: gr00t/eval/sim/robocasa/robocasa_uv/.venv
+Activate with: source gr00t/eval/sim/robocasa/robocasa_uv/.venv/bin/activate
++ source /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/bin/activate
+++ '[' -z '' ']'
+++ '[' -n x ']'
+++ SCRIPT_PATH=/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/bin/activate
+++ '[' /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/bin/activate = gr00t/eval/sim/robocasa/setup_RoboCasa.sh ']'
+++ deactivate nondestructive
+++ unset -f pydoc
+++ '[' -z '' ']'
+++ '[' -z '' ']'
+++ hash -r
+++ '[' -z '' ']'
+++ unset VIRTUAL_ENV
+++ unset VIRTUAL_ENV_PROMPT
+++ '[' '!' nondestructive = nondestructive ']'
+++ VIRTUAL_ENV=/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv
+++ '[' linux-gnu = cygwin ']'
+++ '[' linux-gnu = msys ']'
+++ export VIRTUAL_ENV
+++ '[' -z '' ']'
+++ unset SCRIPT_PATH
+++ _OLD_VIRTUAL_PATH=/home/user/.local/bin:/home/user/.local/bin:/usr/local/cuda/bin:/home/user/.npm-global/bin:/home/user/.antigravity-ide-server/bin/2.5.5-ecfbad74d93962fc8ca485d93ab9b4f3d4cb6cf8/bin/remote-cli:/home/user/.local/bin:/home/user/.local/bin:/home/user/.local/bin:/usr/local/cuda/bin:/home/user/.npm-global/bin:/home/user/anaconda3/bin:/home/user/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/user/.claude/plugins/cache/claude-plugins-official/superpowers/6.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/code-review/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/context7/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/code-simplifier/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/playwright/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/github/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/claude-md-management/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/feature-dev/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/agent-sdk-dev/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/clangd-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/claude-code-setup/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/claude-security/0.11.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/code-modernization/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/commit-commands/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/csharp-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cwc-makers/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/explanatory-output-style/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/frontend-design/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/gopls-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/hookify/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/jdtls-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/kotlin-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/learning-output-style/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/lua-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/math-olympiad/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mcp-server-dev/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mcp-tunnels/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/php-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/playground/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/plugin-dev/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/project-artifact/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pyright-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ralph-loop/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/receipts/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ruby-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/rust-analyzer-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/security-guidance/2.0.7/bin:/home/user/.claude/plugins/cache/claude-plugins-official/session-report/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/skill-creator/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/swift-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/typescript-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/asana/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/discord/0.0.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/fakechat/0.0.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/firebase/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/gitlab/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/greptile/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/imessage/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/laravel-boost/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/linear/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/serena/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/telegram/0.0.7/bin:/home/user/.claude/plugins/cache/claude-plugins-official/terraform/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/42crunch-api-security-testing/1.15.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/activecampaign/0.3.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/adobe-for-creativity/2.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/agentforce-adlc/0.11.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ai-plugins/2de00883bd2b/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aikido/1.2.7/bin:/home/user/.claude/plugins/cache/claude-plugins-official/airtable/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/airwallex-agentos/0.2.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/airwallex-dev/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aiven/1.0.6/bin:/home/user/.claude/plugins/cache/claude-plugins-official/alloydb/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/alloydb-omni/0.2.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/altimate-code/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/amazon-location-service/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/amd-skills/0a8a3e52b3f9-32c1cf49/bin:/home/user/.claude/plugins/cache/claude-plugins-official/amplitude/7dcd19575c50-f37d92d1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/apollo/0.1.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/apollo-skills/1.2.9/bin:/home/user/.claude/plugins/cache/claude-plugins-official/appwrite/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/astronomer-data-agents/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/atlan/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/atlassian/06403d54c6c0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/atlassian-twg-cli/1.0.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/atomic-agents/b15ca449a812/bin:/home/user/.claude/plugins/cache/claude-plugins-official/auth0/2.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-agents/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-agents-for-devsecops/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-amplify/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-core/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-data-analytics/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-serverless/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-startup-advisor/2.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-transform/1.7.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/azure/1.2.34/bin:/home/user/.claude/plugins/cache/claude-plugins-official/azure-cosmos-db-assistant/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/azure-sql-developer/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/base44/1.0.0-beta.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/bigdata-com/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/bigquery-data-analytics/0.2.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/boltz/0.1.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/box/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/brightdata-plugin/1.8.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/browser-use/a25f0a262928-035549a4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/build-with-wordpress/0.0.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/buildkite/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/canva/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/carbone-skill/1.6.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/carta-cap-table/6.62.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/carta-crm/1.9.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/carta-investors/3.98.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/catalyst-by-zoho/0.0.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cds-mcp/0.0.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.8.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/circle-skills/1.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/circleback/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ckeditor/0.1.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/clickhouse/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/clickhouse-best-practices/0.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cloud-sql-mysql/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cloud-sql-postgresql/0.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cloud-sql-sqlserver/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cloudinary/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cockroachdb/0.1.10/bin:/home/user/.claude/plugins/cache/claude-plugins-official/coderabbit/1.1.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/codspeed/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/confidence/0.7.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/convex/1.14.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/crowdsec/0.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/crowdstrike-falcon-foundry/1.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/crowdstrike-falcon-fusion/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/dash0/0.1.24/bin:/home/user/.claude/plugins/cache/claude-plugins-official/data/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/data-agent-kit-starter-pack/0.10.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/data-engineering/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/databases-on-aws/1.7.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/databricks/0.2.12/bin:/home/user/.claude/plugins/cache/claude-plugins-official/datadog/0.7.17/bin:/home/user/.claude/plugins/cache/claude-plugins-official/datahub-skills/1.4.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/dataproc/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/datarobot-agent-skills/1.8.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/dataverse/1.11.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/deepeval/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/deploy-on-aws/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/desktop-commander/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/dominodatalab/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/dropbox/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/duckdb-skills/0.2.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/duende-skills/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/exa/3.4.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/expo/1.12.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/fastly-agent-toolkit/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/fiftyone/1.0.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/figma/2.2.107/bin:/home/user/.claude/plugins/cache/claude-plugins-official/firecrawl/1.0.9/bin:/home/user/.claude/plugins/cache/claude-plugins-official/firestore-native/0.3.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/forge-skills/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/fullstory/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/gitkraken/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/google-cloud-storage/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/grafana-assistant/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/grafana-cloud-mcp/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/grafana-mcp/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/growthbook/2.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/honeycomb/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/hostinger/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/huggingface-skills/1.0.26/bin:/home/user/.claude/plugins/cache/claude-plugins-official/hunter/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/hyperframes/0.8.6/bin:/home/user/.claude/plugins/cache/claude-plugins-official/idmp-plugin/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/intercom/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/jfrog/0.3.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/knowledge-catalog/0.5.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/langfuse/1.6.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/langfuse-observability/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/learn-with-coursera/ac28fd6ebf85-32c1cf49/bin:/home/user/.claude/plugins/cache/claude-plugins-official/legalzoom/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/liquid-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/liquid-skills/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/logfire/0.1.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/logrocket/2e44dbb47faf-ad876ecb/bin:/home/user/.claude/plugins/cache/claude-plugins-official/looker/0.3.10/bin:/home/user/.claude/plugins/cache/claude-plugins-official/lovable/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/lumen/0.0.42/bin:/home/user/.claude/plugins/cache/claude-plugins-official/lusha/0.1.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mapbox/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mattpocock-skills/1.2.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mcp-apps/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mercadopago/4.3.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mergify/727ce50b8fb3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/microsoft-docs/0.3.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/migration-to-aws/1.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mintlify/acd6d2e0128c/bin:/home/user/.claude/plugins/cache/claude-plugins-official/miro/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mlflow/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/modern-web-guidance/0.0.185/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mongodb/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mongodb-atlas/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/neon/1.1.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/netlify-skills/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/netsuite-ai-companion/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/netsuite-finance-analyst/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/netsuite-suitecloud/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/newrelic/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/nightvision/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/nimble/1.7.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/noibu/5e696fc88ef0-25a66342/bin:/home/user/.claude/plugins/cache/claude-plugins-official/notion/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/nvidia-skills/1.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/oracle-ai-data-platform-workbench-databricks-migrator/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/oracle-ai-data-platform-workbench-engineer-agent/0.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/oracle-ai-data-platform-workbench-spark-connectors/0.7.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/oracledb/0.2.6/bin:/home/user/.claude/plugins/cache/claude-plugins-official/outputai/0.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pagerduty/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/paypal/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pigment/1.0.12/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pinecone/1.6.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pixeltable/2.6.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/planetscale/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/posthog/1.1.59/bin:/home/user/.claude/plugins/cache/claude-plugins-official/postiz/2.0.16/bin:/home/user/.claude/plugins/cache/claude-plugins-official/postman/1.3.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/preset-cli-skills/0.4.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/prisma/815dbc4a045a/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pydantic-ai/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/qdrant-skills/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/qodo/0.6.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/qt-development-skills/1.6.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/quarkus-agent/1.2.6/bin:/home/user/.claude/plugins/cache/claude-plugins-official/railway/1.3.7/bin:/home/user/.claude/plugins/cache/claude-plugins-official/rc/2.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/redis-development/1.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/remember/0.21.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/render/0.2.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/resend/1.0.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/revenuecat/2.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/rill/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/rootly/2.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/runway-api/3.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sagemaker-ai/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/salesforce-development/2.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sanity/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sap-cds-mcp/0.0.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sap-fiori-mcp-server/1.11.15/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sap-hana-cli/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sap-mdk-server/0.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/save-to-spotify/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/scandit-sdk/2f0731a090eb/bin:/home/user/.claude/plugins/cache/claude-plugins-official/semgrep/2.1.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sentry/1.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sentry-cli/0.44.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/servicenow-sdk/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/shippo/1.5.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/shopify-ai-toolkit/1.7.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/slack/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/snowflake-cortex-code/3.3.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sonarqube/2.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sonatype-guide/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sourcegraph/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/spanner/0.3.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/spotify-ads-api/1.8.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/stackhawk-api/2.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/stackhawk-hawkscan/2.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/streaming-skills-plugin/1.2.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/stripe/0.6.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sumup/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/supabase/0.1.15/bin:/home/user/.claude/plugins/cache/claude-plugins-official/superdesign/0.6.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/synthflow/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/tavily/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/teamcity-cli/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/togetherai-skills/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/twilio-developer-kit/0.3.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ui-theme-designer/2.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ui5/0.1.8/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ui5-modernization/0.1.8/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ui5-typescript-conversion/0.1.8/bin:/home/user/.claude/plugins/cache/claude-plugins-official/unity/0.1.1-beta/bin:/home/user/.claude/plugins/cache/claude-plugins-official/unreal-engine-skills-for-claude-code/3.0.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/valtown/0.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/vanta/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/vanta-mcp-plugin/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/vercel/0.48.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/vibe-prospecting/0.1.107/bin:/home/user/.claude/plugins/cache/claude-plugins-official/vsql-extension-builder/ba7bbb6de1b7/bin:/home/user/.claude/plugins/cache/claude-plugins-official/windsor-ai/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/wix/1.16.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/workos/0.7.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/youdotcom-agent-skills/0.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zapier/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zilliz/768d3db5fdb6/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zoom-plugin/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zoominfo/1.0.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zscaler/0.15.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zyte-web-data/0.2.3/bin:/home/user/.claude/plugins/cache/ponytail/ponytail/4.9.0/bin
+++ PATH=/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/bin:/home/user/.local/bin:/home/user/.local/bin:/usr/local/cuda/bin:/home/user/.npm-global/bin:/home/user/.antigravity-ide-server/bin/2.5.5-ecfbad74d93962fc8ca485d93ab9b4f3d4cb6cf8/bin/remote-cli:/home/user/.local/bin:/home/user/.local/bin:/home/user/.local/bin:/usr/local/cuda/bin:/home/user/.npm-global/bin:/home/user/anaconda3/bin:/home/user/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/user/.claude/plugins/cache/claude-plugins-official/superpowers/6.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/code-review/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/context7/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/code-simplifier/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/playwright/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/github/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/claude-md-management/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/feature-dev/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/agent-sdk-dev/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/clangd-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/claude-code-setup/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/claude-security/0.11.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/code-modernization/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/commit-commands/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/csharp-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cwc-makers/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/explanatory-output-style/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/frontend-design/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/gopls-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/hookify/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/jdtls-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/kotlin-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/learning-output-style/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/lua-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/math-olympiad/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mcp-server-dev/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mcp-tunnels/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/php-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/playground/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/plugin-dev/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/project-artifact/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pyright-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ralph-loop/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/receipts/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ruby-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/rust-analyzer-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/security-guidance/2.0.7/bin:/home/user/.claude/plugins/cache/claude-plugins-official/session-report/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/skill-creator/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/swift-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/typescript-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/asana/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/discord/0.0.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/fakechat/0.0.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/firebase/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/gitlab/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/greptile/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/imessage/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/laravel-boost/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/linear/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/serena/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/telegram/0.0.7/bin:/home/user/.claude/plugins/cache/claude-plugins-official/terraform/1dd995193ba2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/42crunch-api-security-testing/1.15.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/activecampaign/0.3.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/adobe-for-creativity/2.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/agentforce-adlc/0.11.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ai-plugins/2de00883bd2b/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aikido/1.2.7/bin:/home/user/.claude/plugins/cache/claude-plugins-official/airtable/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/airwallex-agentos/0.2.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/airwallex-dev/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aiven/1.0.6/bin:/home/user/.claude/plugins/cache/claude-plugins-official/alloydb/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/alloydb-omni/0.2.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/altimate-code/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/amazon-location-service/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/amd-skills/0a8a3e52b3f9-32c1cf49/bin:/home/user/.claude/plugins/cache/claude-plugins-official/amplitude/7dcd19575c50-f37d92d1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/apollo/0.1.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/apollo-skills/1.2.9/bin:/home/user/.claude/plugins/cache/claude-plugins-official/appwrite/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/astronomer-data-agents/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/atlan/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/atlassian/06403d54c6c0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/atlassian-twg-cli/1.0.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/atomic-agents/b15ca449a812/bin:/home/user/.claude/plugins/cache/claude-plugins-official/auth0/2.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-agents/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-agents-for-devsecops/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-amplify/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-core/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-data-analytics/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-serverless/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-startup-advisor/2.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/aws-transform/1.7.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/azure/1.2.34/bin:/home/user/.claude/plugins/cache/claude-plugins-official/azure-cosmos-db-assistant/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/azure-sql-developer/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/base44/1.0.0-beta.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/bigdata-com/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/bigquery-data-analytics/0.2.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/boltz/0.1.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/box/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/brightdata-plugin/1.8.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/browser-use/a25f0a262928-035549a4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/build-with-wordpress/0.0.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/buildkite/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/canva/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/carbone-skill/1.6.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/carta-cap-table/6.62.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/carta-crm/1.9.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/carta-investors/3.98.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/catalyst-by-zoho/0.0.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cds-mcp/0.0.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.8.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/circle-skills/1.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/circleback/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ckeditor/0.1.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/clickhouse/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/clickhouse-best-practices/0.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cloud-sql-mysql/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cloud-sql-postgresql/0.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cloud-sql-sqlserver/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cloudinary/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/cockroachdb/0.1.10/bin:/home/user/.claude/plugins/cache/claude-plugins-official/coderabbit/1.1.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/codspeed/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/confidence/0.7.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/convex/1.14.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/crowdsec/0.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/crowdstrike-falcon-foundry/1.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/crowdstrike-falcon-fusion/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/dash0/0.1.24/bin:/home/user/.claude/plugins/cache/claude-plugins-official/data/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/data-agent-kit-starter-pack/0.10.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/data-engineering/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/databases-on-aws/1.7.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/databricks/0.2.12/bin:/home/user/.claude/plugins/cache/claude-plugins-official/datadog/0.7.17/bin:/home/user/.claude/plugins/cache/claude-plugins-official/datahub-skills/1.4.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/dataproc/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/datarobot-agent-skills/1.8.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/dataverse/1.11.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/deepeval/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/deploy-on-aws/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/desktop-commander/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/dominodatalab/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/dropbox/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/duckdb-skills/0.2.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/duende-skills/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/exa/3.4.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/expo/1.12.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/fastly-agent-toolkit/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/fiftyone/1.0.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/figma/2.2.107/bin:/home/user/.claude/plugins/cache/claude-plugins-official/firecrawl/1.0.9/bin:/home/user/.claude/plugins/cache/claude-plugins-official/firestore-native/0.3.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/forge-skills/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/fullstory/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/gitkraken/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/google-cloud-storage/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/grafana-assistant/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/grafana-cloud-mcp/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/grafana-mcp/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/growthbook/2.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/honeycomb/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/hostinger/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/huggingface-skills/1.0.26/bin:/home/user/.claude/plugins/cache/claude-plugins-official/hunter/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/hyperframes/0.8.6/bin:/home/user/.claude/plugins/cache/claude-plugins-official/idmp-plugin/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/intercom/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/jfrog/0.3.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/knowledge-catalog/0.5.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/langfuse/1.6.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/langfuse-observability/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/learn-with-coursera/ac28fd6ebf85-32c1cf49/bin:/home/user/.claude/plugins/cache/claude-plugins-official/legalzoom/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/liquid-lsp/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/liquid-skills/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/logfire/0.1.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/logrocket/2e44dbb47faf-ad876ecb/bin:/home/user/.claude/plugins/cache/claude-plugins-official/looker/0.3.10/bin:/home/user/.claude/plugins/cache/claude-plugins-official/lovable/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/lumen/0.0.42/bin:/home/user/.claude/plugins/cache/claude-plugins-official/lusha/0.1.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mapbox/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mattpocock-skills/1.2.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mcp-apps/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mercadopago/4.3.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mergify/727ce50b8fb3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/microsoft-docs/0.3.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/migration-to-aws/1.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mintlify/acd6d2e0128c/bin:/home/user/.claude/plugins/cache/claude-plugins-official/miro/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mlflow/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/modern-web-guidance/0.0.185/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mongodb/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/mongodb-atlas/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/neon/1.1.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/netlify-skills/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/netsuite-ai-companion/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/netsuite-finance-analyst/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/netsuite-suitecloud/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/newrelic/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/nightvision/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/nimble/1.7.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/noibu/5e696fc88ef0-25a66342/bin:/home/user/.claude/plugins/cache/claude-plugins-official/notion/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/nvidia-skills/1.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/oracle-ai-data-platform-workbench-databricks-migrator/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/oracle-ai-data-platform-workbench-engineer-agent/0.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/oracle-ai-data-platform-workbench-spark-connectors/0.7.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/oracledb/0.2.6/bin:/home/user/.claude/plugins/cache/claude-plugins-official/outputai/0.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pagerduty/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/paypal/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pigment/1.0.12/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pinecone/1.6.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pixeltable/2.6.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/planetscale/1.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/posthog/1.1.59/bin:/home/user/.claude/plugins/cache/claude-plugins-official/postiz/2.0.16/bin:/home/user/.claude/plugins/cache/claude-plugins-official/postman/1.3.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/preset-cli-skills/0.4.3/bin:/home/user/.claude/plugins/cache/claude-plugins-official/prisma/815dbc4a045a/bin:/home/user/.claude/plugins/cache/claude-plugins-official/pydantic-ai/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/qdrant-skills/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/qodo/0.6.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/qt-development-skills/1.6.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/quarkus-agent/1.2.6/bin:/home/user/.claude/plugins/cache/claude-plugins-official/railway/1.3.7/bin:/home/user/.claude/plugins/cache/claude-plugins-official/rc/2.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/redis-development/1.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/remember/0.21.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/render/0.2.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/resend/1.0.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/revenuecat/2.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/rill/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/rootly/2.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/runway-api/3.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sagemaker-ai/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/salesforce-development/2.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sanity/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sap-cds-mcp/0.0.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sap-fiori-mcp-server/1.11.15/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sap-hana-cli/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sap-mdk-server/0.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/save-to-spotify/0.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/scandit-sdk/2f0731a090eb/bin:/home/user/.claude/plugins/cache/claude-plugins-official/semgrep/2.1.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sentry/1.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sentry-cli/0.44.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/servicenow-sdk/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/shippo/1.5.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/shopify-ai-toolkit/1.7.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/slack/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/snowflake-cortex-code/3.3.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sonarqube/2.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sonatype-guide/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sourcegraph/0.1.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/spanner/0.3.5/bin:/home/user/.claude/plugins/cache/claude-plugins-official/spotify-ads-api/1.8.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/stackhawk-api/2.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/stackhawk-hawkscan/2.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/streaming-skills-plugin/1.2.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/stripe/0.6.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/sumup/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/supabase/0.1.15/bin:/home/user/.claude/plugins/cache/claude-plugins-official/superdesign/0.6.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/synthflow/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/tavily/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/teamcity-cli/1.3.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/togetherai-skills/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/twilio-developer-kit/0.3.2/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ui-theme-designer/2.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ui5/0.1.8/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ui5-modernization/0.1.8/bin:/home/user/.claude/plugins/cache/claude-plugins-official/ui5-typescript-conversion/0.1.8/bin:/home/user/.claude/plugins/cache/claude-plugins-official/unity/0.1.1-beta/bin:/home/user/.claude/plugins/cache/claude-plugins-official/unreal-engine-skills-for-claude-code/3.0.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/valtown/0.4.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/vanta/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/vanta-mcp-plugin/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/vercel/0.48.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/vibe-prospecting/0.1.107/bin:/home/user/.claude/plugins/cache/claude-plugins-official/vsql-extension-builder/ba7bbb6de1b7/bin:/home/user/.claude/plugins/cache/claude-plugins-official/windsor-ai/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/wix/1.16.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/workos/0.7.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/youdotcom-agent-skills/0.5.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zapier/1.0.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zilliz/768d3db5fdb6/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zoom-plugin/1.2.0/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zoominfo/1.0.1/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zscaler/0.15.4/bin:/home/user/.claude/plugins/cache/claude-plugins-official/zyte-web-data/0.2.3/bin:/home/user/.claude/plugins/cache/ponytail/ponytail/4.9.0/bin
+++ export PATH
+++ '[' x '!=' x ']'
++++ basename /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv
+++ VIRTUAL_ENV_PROMPT=.venv
+++ export VIRTUAL_ENV_PROMPT
+++ '[' -z '' ']'
+++ '[' -z '' ']'
+++ _OLD_VIRTUAL_PS1=
+++ PS1='(.venv) '
+++ export PS1
+++ alias pydoc
+++ true
+++ hash -r
++ uv pip install setuptools wheel
+Using Python 3.10.12 environment at: gr00t/eval/sim/robocasa/robocasa_uv/.venv
+Resolved 3 packages in 128ms
+Prepared 1 package in 19ms
+Installed 3 packages in 14ms
+ + packaging==26.3
+ + setuptools==84.0.0
+ + wheel==0.48.0
++ uv pip install torch==2.5.1 torchvision==0.20.1
+Using Python 3.10.12 environment at: gr00t/eval/sim/robocasa/robocasa_uv/.venv
+Resolved 25 packages in 198ms
+Downloading pillow (6.6MiB)
+Downloading sympy (5.9MiB)
+Downloading numpy (16.0MiB)
+Downloading networkx (1.6MiB)
+Downloading triton (199.8MiB)
+Downloading nvidia-nvjitlink-cu12 (20.1MiB)
+Downloading nvidia-cudnn-cu12 (634.0MiB)
+Downloading nvidia-curand-cu12 (53.7MiB)
+Downloading nvidia-cufft-cu12 (201.7MiB)
+Downloading nvidia-nccl-cu12 (179.9MiB)
+Downloading nvidia-cuda-nvrtc-cu12 (23.5MiB)
+Downloading nvidia-cuda-cupti-cu12 (13.2MiB)
+Downloading nvidia-cusparse-cu12 (197.8MiB)
+Downloading torchvision (6.9MiB)
+Downloading nvidia-cusolver-cu12 (122.0MiB)
+Downloading torch (864.5MiB)
+Downloading nvidia-cublas-cu12 (346.6MiB)
+ Downloaded networkx
+ Downloaded sympy
+ Downloaded pillow
+ Downloaded torchvision
+ Downloaded nvidia-cuda-cupti-cu12
+ Downloaded numpy
+ Downloaded nvidia-nvjitlink-cu12
+ Downloaded nvidia-cuda-nvrtc-cu12
+ Downloaded nvidia-curand-cu12
+ Downloaded nvidia-cusolver-cu12
+ Downloaded nvidia-nccl-cu12
+ Downloaded triton
+ Downloaded nvidia-cusparse-cu12
+ Downloaded nvidia-cufft-cu12
+ Downloaded nvidia-cublas-cu12
+ Downloaded nvidia-cudnn-cu12
+ Downloaded torch
+Prepared 22 packages in 1m 02s
+Installed 25 packages in 99ms
+ + filelock==3.32.5
+ + fsspec==2026.7.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.3
+ + mpmath==1.3.0
+ + networkx==3.4.2
+ + numpy==2.2.6
+ + nvidia-cublas-cu12==12.4.5.8
+ + nvidia-cuda-cupti-cu12==12.4.127
+ + nvidia-cuda-nvrtc-cu12==12.4.127
+ + nvidia-cuda-runtime-cu12==12.4.127
+ + nvidia-cudnn-cu12==9.1.0.70
+ + nvidia-cufft-cu12==11.2.1.3
+ + nvidia-curand-cu12==10.3.5.147
+ + nvidia-cusolver-cu12==11.6.1.9
+ + nvidia-cusparse-cu12==12.3.1.170
+ + nvidia-nccl-cu12==2.21.5
+ + nvidia-nvjitlink-cu12==12.4.127
+ + nvidia-nvtx-cu12==12.4.127
+ + pillow==12.3.0
+ + sympy==1.13.1
+ + torch==2.5.1
+ + torchvision==0.20.1
+ + triton==3.1.0
+ + typing-extensions==4.16.0
++ INSTALL_FLASH_ATTN=1
+++ uname -s
++ [[ Linux == \L\i\n\u\x ]]
++ [[ 1 == \1 ]]
++ uv pip install --no-build-isolation flash-attn==2.7.4.post1
+Using Python 3.10.12 environment at: gr00t/eval/sim/robocasa/robocasa_uv/.venv
+Resolved 24 packages in 514ms
+   Building flash-attn==2.7.4.post1
+      Built flash-attn==2.7.4.post1
+Prepared 2 packages in 8.59s
+Installed 2 packages in 2ms
+ + einops==0.8.2
+ + flash-attn==2.7.4.post1
++ uv pip install git+https://github.com/ARISE-Initiative/robosuite.git@master
+Using Python 3.10.12 environment at: gr00t/eval/sim/robocasa/robocasa_uv/.venv
+   Updating https://github.com/ARISE-Initiative/robosuite.git (master)
+    Updated https://github.com/ARISE-Initiative/robosuite.git (5ce6643f3092639d08f7b0f90ed1c6a84f50552c)
+Resolved 31 packages in 22.19s
+   Building evdev==1.9.3
+   Building robosuite @ git+https://github.com/ARISE-Initiative/robosuite.git@5ce6643f3092639d08f7b0f90ed1c6a84f50552c
+Downloading pyopengl (3.0MiB)
+Downloading scipy (35.9MiB)
+Downloading numba (3.6MiB)
+Downloading llvmlite (57.1MiB)
+Downloading mujoco (7.0MiB)
+Downloading opencv-python (70.4MiB)
+ Downloaded pyopengl
+ Downloaded numba
+      Built evdev==1.9.3
+ Downloaded mujoco
+ Downloaded scipy
+ Downloaded llvmlite
+ Downloaded opencv-python
+      Built robosuite @ git+https://github.com/ARISE-Initiative/robosuite.git@5ce6643f3092639d08f7b0f90ed1c6a84f50552c
+Prepared 18 packages in 16.91s
+Installed 26 packages in 50ms
+ + absl-py==2.5.0
+ + etils==1.13.0
+ + evdev==1.9.3
+ + exceptiongroup==1.3.1
+ + glfw==2.10.2
+ + importlib-resources==7.1.0
+ + iniconfig==2.3.0
+ + llvmlite==0.49.0
+ + mujoco==3.9.0
+ + numba==0.67.0
+ + opencv-python==5.0.0.93
+ + pluggy==1.6.0
+ + pygments==2.21.0
+ + pynput==1.8.2
+ + pyopengl==3.1.10
+ + pytest==9.1.1
+ + python-xlib==0.33
+ + qpsolvers==4.13.0
+ + quadprog==0.1.13
+ + robosuite==1.5.2 (from git+https://github.com/ARISE-Initiative/robosuite.git@5ce6643f3092639d08f7b0f90ed1c6a84f50552c)
+ + scipy==1.15.3
+ + six==1.17.0
+ + termcolor==3.3.0
+ + tomli==2.4.1
+ + tqdm==4.70.0
+ + zipp==4.1.0
++ uv pip install -e /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/../../../../external_dependencies/robocasa --config-settings editable_mode=compat
+Using Python 3.10.12 environment at: gr00t/eval/sim/robocasa/robocasa_uv/.venv
+Resolved 60 packages in 1.16s
+   Building robocasa @ file:///home/user/Isaac-GR00T/external_dependencies/robocasa
+   Building gym==0.26.2
+Downloading tensorboard-data-server (6.3MiB)
+Downloading protobuf (1.0MiB)
+Downloading grpcio (6.7MiB)
+Downloading tensorboard (5.3MiB)
+Downloading opencv-python (60.1MiB)
+Downloading h5py (4.8MiB)
+Downloading lxml (5.1MiB)
+Downloading mujoco (6.1MiB)
+Downloading llvmlite (33.0MiB)
+Downloading numba (3.3MiB)
+Downloading pygame (13.3MiB)
+Downloading scipy (36.8MiB)
+      Built robocasa @ file:///home/user/Isaac-GR00T/external_dependencies/robocasa
+      Built gym==0.26.2
+Downloading numpy (16.3MiB)
+ Downloaded protobuf
+ Downloaded numba
+ Downloaded h5py
+ Downloaded tensorboard
+ Downloaded lxml
+ Downloaded mujoco
+ Downloaded tensorboard-data-server
+ Downloaded grpcio
+ Downloaded pygame
+ Downloaded numpy
+ Downloaded scipy
+ Downloaded llvmlite
+ Downloaded opencv-python
+Prepared 22 packages in 4.49s
+Uninstalled 6 packages in 27ms
+Installed 23 packages in 15ms
+ + cloudpickle==3.1.2
+ + grpcio==1.83.1
+ + gym==0.26.2
+ + gym-notices==0.1.0
+ + h5py==3.16.0
+ + hidapi==0.15.0
+ + imageio==2.37.4
+ - llvmlite==0.49.0
+ + llvmlite==0.39.1
+ + lxml==6.1.3
+ + markdown==3.10.3
+ - mujoco==3.9.0
+ + mujoco==3.2.6
+ - numba==0.67.0
+ + numba==0.56.4
+ - numpy==2.2.6
+ + numpy==1.23.3
+ - opencv-python==5.0.0.93
+ + opencv-python==4.11.0.86
+ + protobuf==3.19.6
+ + pygame==2.6.1
+ + pyyaml==6.0.3
+ + robocasa==0.2.0 (from file:///home/user/Isaac-GR00T/external_dependencies/robocasa)
+ - scipy==1.15.3
+ + scipy==1.13.1
+ + tensorboard==2.20.0
+ + tensorboard-data-server==0.7.2
+ + tianshou==0.4.10
+ + werkzeug==3.1.8
++ uv pip install gymnasium==0.29.1 pydantic av==15.0.0 zmq transformers==4.51.3 msgpack==1.1.0 msgpack-numpy==0.4.8
+Using Python 3.10.12 environment at: gr00t/eval/sim/robocasa/robocasa_uv/.venv
+Resolved 30 packages in 455ms
+   Building zmq==0.0.0
+Downloading pydantic-core (2.0MiB)
+Downloading hf-xet (4.3MiB)
+Downloading tokenizers (3.0MiB)
+Downloading av (37.4MiB)
+Downloading transformers (9.9MiB)
+      Built zmq==0.0.0
+ Downloaded pydantic-core
+ Downloaded tokenizers
+ Downloaded hf-xet
+ Downloaded transformers
+ Downloaded av
+Prepared 15 packages in 2.04s
+Installed 22 packages in 21ms
+ + annotated-types==0.8.0
+ + av==15.0.0
+ + certifi==2026.7.22
+ + charset-normalizer==3.5.1
+ + farama-notifications==0.0.6
+ + gymnasium==0.29.1
+ + hf-xet==1.6.0
+ + huggingface-hub==0.36.2
+ + idna==3.19
+ + msgpack==1.1.0
+ + msgpack-numpy==0.4.8
+ + pydantic==2.13.5
+ + pydantic-core==2.46.5
+ + pyzmq==27.2.0
+ + regex==2026.9.3
+ + requests==2.34.2
+ + safetensors==0.8.0
+ + tokenizers==0.21.4
+ + transformers==4.51.3
+ + typing-inspection==0.4.4
+ + urllib3==2.7.0
+ + zmq==0.0.0
++ uv pip install --editable /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/../../../.. --no-deps
+Using Python 3.10.12 environment at: gr00t/eval/sim/robocasa/robocasa_uv/.venv
+Resolved 1 package in 2ms
+   Building gr00t @ file:///home/user/Isaac-GR00T
+      Built gr00t @ file:///home/user/Isaac-GR00T
+Prepared 1 package in 569ms
+Installed 1 package in 0.45ms
+ + gr00t==0.1.0 (from file:///home/user/Isaac-GR00T)
++ python /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/../../../../external_dependencies/robocasa/robocasa/scripts/download_kitchen_assets.py -y
+[robosuite WARNING] No private macro file found! (macros.py:57)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+[robosuite WARNING] To setup, run: python /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (macros.py:59)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+[robosuite WARNING] No private macro file found! (macros.py:28)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:29)
+[robosuite WARNING] To setup, run: python /home/user/Isaac-GR00T/external_dependencies/robocasa/robocasa/scripts/setup_macros.py (macros.py:30)
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+The script will download ~5 Gb of data. Proceed? (y/n) Traceback (most recent call last):
+  File "/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/../../../../external_dependencies/robocasa/robocasa/scripts/download_kitchen_assets.py", line 200, in <module>
+    download_kitchen_assets()
+  File "/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/../../../../external_dependencies/robocasa/robocasa/scripts/download_kitchen_assets.py", line 186, in download_kitchen_assets
+    ans = input("The script will download ~5 Gb of data. Proceed? (y/n) ")
+EOFError: EOF when reading a line

@@ -1,0 +1,371 @@
+{
+  "n_per_task": 100,
+  "40hz": {
+    "rate_hz": 40,
+    "n_episodes_total": 1000,
+    "aggregate": {
+      "fold_success_total": 362,
+      "spline_success_total": 398,
+      "fold_success_rate": 0.362,
+      "spline_success_rate": 0.398,
+      "delta_pp": -3.600000000000003
+    },
+    "task_breakdown": [
+      {
+        "task_idx": 1,
+        "task_name": "LiftPegUpright-v1",
+        "rate_hz": 40,
+        "n_episodes": 100,
+        "folding_success": 43,
+        "spline_success": 34,
+        "folding_rate": 0.43,
+        "spline_rate": 0.34,
+        "delta_pp": 8.999999999999996,
+        "mcnemar": {
+          "fold_only": 14,
+          "spline_only": 5,
+          "p_value": 0.063568115234375
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 2,
+        "task_name": "PickCube-v1",
+        "rate_hz": 40,
+        "n_episodes": 100,
+        "folding_success": 37,
+        "spline_success": 43,
+        "folding_rate": 0.37,
+        "spline_rate": 0.43,
+        "delta_pp": -6.0,
+        "mcnemar": {
+          "fold_only": 3,
+          "spline_only": 9,
+          "p_value": 0.14599609375
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 3,
+        "task_name": "StackCube-v1",
+        "rate_hz": 40,
+        "n_episodes": 100,
+        "folding_success": 21,
+        "spline_success": 40,
+        "folding_rate": 0.21,
+        "spline_rate": 0.4,
+        "delta_pp": -19.000000000000004,
+        "mcnemar": {
+          "fold_only": 4,
+          "spline_only": 23,
+          "p_value": 0.000310748815536499
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 4,
+        "task_name": "PokeCube-v1",
+        "rate_hz": 40,
+        "n_episodes": 100,
+        "folding_success": 71,
+        "spline_success": 73,
+        "folding_rate": 0.71,
+        "spline_rate": 0.73,
+        "delta_pp": -2.0000000000000018,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 2,
+          "p_value": 0.5
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 5,
+        "task_name": "PullCube-v1",
+        "rate_hz": 40,
+        "n_episodes": 100,
+        "folding_success": 75,
+        "spline_success": 88,
+        "folding_rate": 0.75,
+        "spline_rate": 0.88,
+        "delta_pp": -13.0,
+        "mcnemar": {
+          "fold_only": 4,
+          "spline_only": 17,
+          "p_value": 0.007197380065917969
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 6,
+        "task_name": "PushCube-v1",
+        "rate_hz": 40,
+        "n_episodes": 100,
+        "folding_success": 100,
+        "spline_success": 100,
+        "folding_rate": 1.0,
+        "spline_rate": 1.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 7,
+        "task_name": "RollBall-v1",
+        "rate_hz": 40,
+        "n_episodes": 100,
+        "folding_success": 12,
+        "spline_success": 15,
+        "folding_rate": 0.12,
+        "spline_rate": 0.15,
+        "delta_pp": -3.0,
+        "mcnemar": {
+          "fold_only": 3,
+          "spline_only": 6,
+          "p_value": 0.5078125
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 8,
+        "task_name": "PegInsertionSide-v1",
+        "rate_hz": 40,
+        "n_episodes": 100,
+        "folding_success": 3,
+        "spline_success": 5,
+        "folding_rate": 0.03,
+        "spline_rate": 0.05,
+        "delta_pp": -2.0000000000000004,
+        "mcnemar": {
+          "fold_only": 1,
+          "spline_only": 3,
+          "p_value": 0.625
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 9,
+        "task_name": "PushT-v1",
+        "rate_hz": 40,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 10,
+        "task_name": "DrawTriangle-v1",
+        "rate_hz": 40,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      }
+    ],
+    "master_video": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/maniskill_10tasks_40hz_master_comparison.mp4"
+  },
+  "10hz": {
+    "rate_hz": 10,
+    "n_episodes_total": 1000,
+    "aggregate": {
+      "fold_success_total": 1,
+      "spline_success_total": 1,
+      "fold_success_rate": 0.001,
+      "spline_success_rate": 0.001,
+      "delta_pp": 0.0
+    },
+    "task_breakdown": [
+      {
+        "task_idx": 1,
+        "task_name": "LiftPegUpright-v1",
+        "rate_hz": 10,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 2,
+        "task_name": "PickCube-v1",
+        "rate_hz": 10,
+        "n_episodes": 100,
+        "folding_success": 1,
+        "spline_success": 1,
+        "folding_rate": 0.01,
+        "spline_rate": 0.01,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 3,
+        "task_name": "StackCube-v1",
+        "rate_hz": 10,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 4,
+        "task_name": "PokeCube-v1",
+        "rate_hz": 10,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 5,
+        "task_name": "PullCube-v1",
+        "rate_hz": 10,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 6,
+        "task_name": "PushCube-v1",
+        "rate_hz": 10,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 7,
+        "task_name": "RollBall-v1",
+        "rate_hz": 10,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 8,
+        "task_name": "PegInsertionSide-v1",
+        "rate_hz": 10,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 9,
+        "task_name": "PushT-v1",
+        "rate_hz": 10,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      },
+      {
+        "task_idx": 10,
+        "task_name": "DrawTriangle-v1",
+        "rate_hz": 10,
+        "n_episodes": 100,
+        "folding_success": 0,
+        "spline_success": 0,
+        "folding_rate": 0.0,
+        "spline_rate": 0.0,
+        "delta_pp": 0.0,
+        "mcnemar": {
+          "fold_only": 0,
+          "spline_only": 0,
+          "p_value": 1.0
+        },
+        "frames": null
+      }
+    ],
+    "master_video": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/maniskill_10tasks_10hz_master_comparison.mp4"
+  }
+}

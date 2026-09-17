@@ -1,0 +1,23 @@
+[
+  {
+    "rate_hz": 10,
+    "n_episodes": 50,
+    "folding_success_rate": 0.02,
+    "spline_success_rate": 0.02,
+    "fold_minus_spline_pp": 0.0,
+    "video_files": [
+      "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/pickcube_10hz_fold_vs_spline.mp4"
+    ]
+  },
+  {
+    "rate_hz": 40,
+    "n_episodes": 50,
+    "folding_success_rate": 0.4,
+    "spline_success_rate": 0.44,
+    "fold_minus_spline_pp": -3.9999999999999982,
+    "video_files": [
+      "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/pickcube_40hz_fold_vs_spline.mp4",
+      "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/pickcube_40hz_fold_vs_spline.mp4"
+    ]
+  }
+]

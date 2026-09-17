@@ -1,0 +1,67 @@
+{
+  "rate_hz": 40,
+  "n_total": 250,
+  "deeponet_tac_fold_sr": 0.596,
+  "deeponet_spline_sr": 0.552,
+  "delta_pp": 4.399999999999993,
+  "deeponet_tac_fold_success": 149,
+  "deeponet_spline_success": 138,
+  "task_breakdown": [
+    {
+      "task_name": "PickCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "tac_fold_success": 23,
+      "spline_success": 22,
+      "tac_fold_sr": 0.46,
+      "spline_sr": 0.44,
+      "delta_pp": 2.0000000000000018,
+      "frames": null
+    },
+    {
+      "task_name": "LiftPegUpright-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "tac_fold_success": 26,
+      "spline_success": 20,
+      "tac_fold_sr": 0.52,
+      "spline_sr": 0.4,
+      "delta_pp": 12.0,
+      "frames": null
+    },
+    {
+      "task_name": "PullCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "tac_fold_success": 47,
+      "spline_success": 43,
+      "tac_fold_sr": 0.94,
+      "spline_sr": 0.86,
+      "delta_pp": 7.9999999999999964,
+      "frames": null
+    },
+    {
+      "task_name": "StackCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "tac_fold_success": 20,
+      "spline_success": 19,
+      "tac_fold_sr": 0.4,
+      "spline_sr": 0.38,
+      "delta_pp": 2.0000000000000018,
+      "frames": null
+    },
+    {
+      "task_name": "PokeCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "tac_fold_success": 33,
+      "spline_success": 34,
+      "tac_fold_sr": 0.66,
+      "spline_sr": 0.68,
+      "delta_pp": -2.0000000000000018,
+      "frames": null
+    }
+  ],
+  "video_path": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/deeponet_tac_fold_vs_spline_40hz_master.mp4"
+}

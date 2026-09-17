@@ -1,0 +1,249 @@
+====================================================================================================
+FULL PER-ARM TABLE (all 14 results)
+====================================================================================================
+
+--- result_dp_PickCube-v1.json: task=PickCube-v1 policy=dp k=2 n=100 train_steps=30000 ---
+  policy raw |a|>1 frac (native): 0.266
+  native            90.0% (90/100)  vs_zoh Δ=+5.0pp p=0.1797               
+  zoh               85.0% (85/100)                                         vs_native Δ=-5.0pp p=0.1797
+  spline            74.0% (74/100)  vs_zoh Δ=-11.0pp p=0.01273             vs_native Δ=-16.0pp p=0.001544
+  spline_satfix     87.0% (87/100)  vs_zoh Δ=+2.0pp p=0.625                vs_native Δ=-3.0pp p=0.4531
+  pchip             69.0% (69/100)  vs_zoh Δ=-16.0pp p=0.0004025           vs_native Δ=-21.0pp p=4.923e-05
+  pchip_satfix      85.0% (85/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-5.0pp p=0.1797
+  tac_fold          83.0% (83/100)  vs_zoh Δ=-2.0pp p=0.7905               vs_native Δ=-7.0pp p=0.1185
+  tac_fold_satfix   88.0% (88/100)  vs_zoh Δ=+3.0pp p=0.375                vs_native Δ=-2.0pp p=0.6875
+  bspline           44.0% (44/100)  vs_zoh Δ=-41.0pp p=2.328e-09           vs_native Δ=-46.0pp p=3.803e-11
+  bspline_satfix    85.0% (85/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-5.0pp p=0.1797
+
+--- result_dp_PushT-v1.json: task=PushT-v1 policy=dp k=2 n=100 train_steps=30000 ---
+  policy raw |a|>1 frac (native): 0.073
+  native            26.0% (26/100)  vs_zoh Δ=+10.0pp p=0.05248             
+  zoh               16.0% (16/100)                                         vs_native Δ=-10.0pp p=0.05248
+  spline            32.0% (32/100)  vs_zoh Δ=+16.0pp p=0.01133             vs_native Δ=+6.0pp p=0.3616
+  spline_satfix     38.0% (38/100)  vs_zoh Δ=+22.0pp p=5.948e-05           vs_native Δ=+12.0pp p=0.0357
+  pchip             30.0% (30/100)  vs_zoh Δ=+14.0pp p=0.01612             vs_native Δ=+4.0pp p=0.5847
+  pchip_satfix      25.0% (25/100)  vs_zoh Δ=+9.0pp p=0.07835              vs_native Δ=-1.0pp p=1
+  tac_fold          24.0% (24/100)  vs_zoh Δ=+8.0pp p=0.1153               vs_native Δ=-2.0pp p=0.845
+  tac_fold_satfix   30.0% (30/100)  vs_zoh Δ=+14.0pp p=0.006611            vs_native Δ=+4.0pp p=0.5413
+  bspline            3.0% (3/100)  vs_zoh Δ=-13.0pp p=0.00235             vs_native Δ=-23.0pp p=1.55e-06
+  bspline_satfix    20.0% (20/100)  vs_zoh Δ=+4.0pp p=0.4545               vs_native Δ=-6.0pp p=0.2632
+
+--- result_dp_RC-OpenDrawer.json: task=RC-OpenDrawer policy=dp k=2 n=15 train_steps=15000 ---
+  policy raw |a|>1 frac (native): 0.000
+  native            40.0% (6/15)  vs_zoh Δ=+6.7pp p=1                    
+  zoh               33.3% (5/15)                                         vs_native Δ=-6.7pp p=1
+  spline            40.0% (6/15)  vs_zoh Δ=+6.7pp p=1                    vs_native Δ=+0.0pp p=1
+  spline_satfix     40.0% (6/15)  vs_zoh Δ=+6.7pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip             40.0% (6/15)  vs_zoh Δ=+6.7pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip_satfix      40.0% (6/15)  vs_zoh Δ=+6.7pp p=1                    vs_native Δ=+0.0pp p=1
+  tac_fold          33.3% (5/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+  tac_fold_satfix   33.3% (5/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+  bspline           40.0% (6/15)  vs_zoh Δ=+6.7pp p=1                    vs_native Δ=+0.0pp p=1
+  bspline_satfix    33.3% (5/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+
+--- result_dp_RC-PnPCounterToStove.json: task=RC-PnPCounterToStove policy=dp k=2 n=15 train_steps=15000 ---
+  policy raw |a|>1 frac (native): 0.000
+  native             6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    
+  zoh                6.7% (1/15)                                         vs_native Δ=+0.0pp p=1
+  spline             6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  spline_satfix      6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip              6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip_satfix       6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  tac_fold           6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  tac_fold_satfix    6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  bspline            6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  bspline_satfix     6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+
+--- result_dp_can.json: task=can policy=dp k=2 n=100 train_steps=30000 ---
+  policy raw |a|>1 frac (native): 0.000
+  native            98.0% (98/100)  vs_zoh Δ=+0.0pp p=1                    
+  zoh               98.0% (98/100)                                         vs_native Δ=+0.0pp p=1
+  spline            98.0% (98/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  spline_satfix     98.0% (98/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip             98.0% (98/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip_satfix      98.0% (98/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  tac_fold          97.0% (97/100)  vs_zoh Δ=-1.0pp p=1                    vs_native Δ=-1.0pp p=1
+  tac_fold_satfix   98.0% (98/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  bspline           99.0% (99/100)  vs_zoh Δ=+1.0pp p=1                    vs_native Δ=+1.0pp p=1
+  bspline_satfix    97.0% (97/100)  vs_zoh Δ=-1.0pp p=1                    vs_native Δ=-1.0pp p=1
+
+--- result_dp_lift.json: task=lift policy=dp k=2 n=100 train_steps=30000 ---
+  policy raw |a|>1 frac (native): 0.000
+  native           100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    
+  zoh              100.0% (100/100)                                         vs_native Δ=+0.0pp p=1
+  spline           100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  spline_satfix    100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip            100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip_satfix     100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  tac_fold         100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  tac_fold_satfix  100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  bspline          100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  bspline_satfix   100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+
+--- result_dp_square.json: task=square policy=dp k=2 n=100 train_steps=30000 ---
+  policy raw |a|>1 frac (native): 0.000
+  native            89.0% (89/100)  vs_zoh Δ=+3.0pp p=0.5488               
+  zoh               86.0% (86/100)                                         vs_native Δ=-3.0pp p=0.5488
+  spline            84.0% (84/100)  vs_zoh Δ=-2.0pp p=0.7539               vs_native Δ=-5.0pp p=0.2266
+  spline_satfix     89.0% (89/100)  vs_zoh Δ=+3.0pp p=0.4531               vs_native Δ=+0.0pp p=1
+  pchip             89.0% (89/100)  vs_zoh Δ=+3.0pp p=0.4531               vs_native Δ=+0.0pp p=1
+  pchip_satfix      86.0% (86/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-3.0pp p=0.5488
+  tac_fold          87.0% (87/100)  vs_zoh Δ=+1.0pp p=1                    vs_native Δ=-2.0pp p=0.7266
+  tac_fold_satfix   88.0% (88/100)  vs_zoh Δ=+2.0pp p=0.6875               vs_native Δ=-1.0pp p=1
+  bspline           88.0% (88/100)  vs_zoh Δ=+2.0pp p=0.7744               vs_native Δ=-1.0pp p=1
+  bspline_satfix    88.0% (88/100)  vs_zoh Δ=+2.0pp p=0.625                vs_native Δ=-1.0pp p=1
+
+--- result_fm_PickCube-v1.json: task=PickCube-v1 policy=fm k=2 n=100 train_steps=30000 ---
+  policy raw |a|>1 frac (native): 0.263
+  native            89.0% (89/100)  vs_zoh Δ=+9.0pp p=0.02246              
+  zoh               80.0% (80/100)                                         vs_native Δ=-9.0pp p=0.02246
+  spline            71.0% (71/100)  vs_zoh Δ=-9.0pp p=0.06357              vs_native Δ=-18.0pp p=0.0002772
+  spline_satfix     83.0% (83/100)  vs_zoh Δ=+3.0pp p=0.25                 vs_native Δ=-6.0pp p=0.1094
+  pchip             66.0% (66/100)  vs_zoh Δ=-14.0pp p=0.002577            vs_native Δ=-23.0pp p=5.648e-06
+  pchip_satfix      82.0% (82/100)  vs_zoh Δ=+2.0pp p=0.625                vs_native Δ=-7.0pp p=0.06543
+  tac_fold          78.0% (78/100)  vs_zoh Δ=-2.0pp p=0.8036               vs_native Δ=-11.0pp p=0.01921
+  tac_fold_satfix   84.0% (84/100)  vs_zoh Δ=+4.0pp p=0.125                vs_native Δ=-5.0pp p=0.1797
+  bspline           47.0% (47/100)  vs_zoh Δ=-33.0pp p=5.418e-07           vs_native Δ=-42.0pp p=4.462e-10
+  bspline_satfix    85.0% (85/100)  vs_zoh Δ=+5.0pp p=0.125                vs_native Δ=-4.0pp p=0.2891
+
+--- result_fm_PushT-v1.json: task=PushT-v1 policy=fm k=2 n=100 train_steps=30000 ---
+  policy raw |a|>1 frac (native): 0.084
+  native            30.0% (30/100)  vs_zoh Δ=+19.0pp p=0.0003107           
+  zoh               11.0% (11/100)                                         vs_native Δ=-19.0pp p=0.0003107
+  spline            29.0% (29/100)  vs_zoh Δ=+18.0pp p=0.0009122           vs_native Δ=-1.0pp p=1
+  spline_satfix     26.0% (26/100)  vs_zoh Δ=+15.0pp p=0.002599            vs_native Δ=-4.0pp p=0.5847
+  pchip             19.0% (19/100)  vs_zoh Δ=+8.0pp p=0.07681              vs_native Δ=-11.0pp p=0.04329
+  pchip_satfix      24.0% (24/100)  vs_zoh Δ=+13.0pp p=0.00235             vs_native Δ=-6.0pp p=0.3075
+  tac_fold          19.0% (19/100)  vs_zoh Δ=+8.0pp p=0.09625              vs_native Δ=-11.0pp p=0.0266
+  tac_fold_satfix   25.0% (25/100)  vs_zoh Δ=+14.0pp p=0.001312            vs_native Δ=-5.0pp p=0.4421
+  bspline            4.0% (4/100)  vs_zoh Δ=-7.0pp p=0.1185               vs_native Δ=-26.0pp p=8.68e-07
+  bspline_satfix    33.0% (33/100)  vs_zoh Δ=+22.0pp p=2.744e-05           vs_native Δ=+3.0pp p=0.7201
+
+--- result_fm_RC-OpenDrawer.json: task=RC-OpenDrawer policy=fm k=2 n=15 train_steps=15000 ---
+  policy raw |a|>1 frac (native): 0.000
+  native            53.3% (8/15)  vs_zoh Δ=+6.7pp p=1                    
+  zoh               46.7% (7/15)                                         vs_native Δ=-6.7pp p=1
+  spline            40.0% (6/15)  vs_zoh Δ=-6.7pp p=1                    vs_native Δ=-13.3pp p=0.5
+  spline_satfix     40.0% (6/15)  vs_zoh Δ=-6.7pp p=1                    vs_native Δ=-13.3pp p=0.5
+  pchip             46.7% (7/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+  pchip_satfix      46.7% (7/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+  tac_fold          40.0% (6/15)  vs_zoh Δ=-6.7pp p=1                    vs_native Δ=-13.3pp p=0.5
+  tac_fold_satfix   40.0% (6/15)  vs_zoh Δ=-6.7pp p=1                    vs_native Δ=-13.3pp p=0.5
+  bspline           40.0% (6/15)  vs_zoh Δ=-6.7pp p=1                    vs_native Δ=-13.3pp p=0.5
+  bspline_satfix    40.0% (6/15)  vs_zoh Δ=-6.7pp p=1                    vs_native Δ=-13.3pp p=0.5
+
+--- result_fm_RC-PnPCounterToStove.json: task=RC-PnPCounterToStove policy=fm k=2 n=15 train_steps=15000 ---
+  policy raw |a|>1 frac (native): 0.000
+  native            13.3% (2/15)  vs_zoh Δ=+6.7pp p=1                    
+  zoh                6.7% (1/15)                                         vs_native Δ=-6.7pp p=1
+  spline             6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+  spline_satfix      6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+  pchip             13.3% (2/15)  vs_zoh Δ=+6.7pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip_satfix       6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+  tac_fold           6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+  tac_fold_satfix    6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+  bspline            6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+  bspline_satfix     6.7% (1/15)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=-6.7pp p=1
+
+--- result_fm_can.json: task=can policy=fm k=2 n=100 train_steps=30000 ---
+  policy raw |a|>1 frac (native): 0.000
+  native           100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    
+  zoh              100.0% (100/100)                                         vs_native Δ=+0.0pp p=1
+  spline            99.0% (99/100)  vs_zoh Δ=-1.0pp p=1                    vs_native Δ=-1.0pp p=1
+  spline_satfix    100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip            100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip_satfix     100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  tac_fold         100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  tac_fold_satfix  100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  bspline           98.0% (98/100)  vs_zoh Δ=-2.0pp p=0.5                  vs_native Δ=-2.0pp p=0.5
+  bspline_satfix   100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+
+--- result_fm_lift.json: task=lift policy=fm k=2 n=100 train_steps=30000 ---
+  policy raw |a|>1 frac (native): 0.000
+  native           100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    
+  zoh              100.0% (100/100)                                         vs_native Δ=+0.0pp p=1
+  spline           100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  spline_satfix    100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip            100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  pchip_satfix     100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  tac_fold         100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  tac_fold_satfix  100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  bspline          100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+  bspline_satfix   100.0% (100/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+0.0pp p=1
+
+--- result_fm_square.json: task=square policy=fm k=2 n=100 train_steps=30000 ---
+  policy raw |a|>1 frac (native): 0.000
+  native            84.0% (84/100)  vs_zoh Δ=-2.0pp p=0.6875               
+  zoh               86.0% (86/100)                                         vs_native Δ=+2.0pp p=0.6875
+  spline            85.0% (85/100)  vs_zoh Δ=-1.0pp p=1                    vs_native Δ=+1.0pp p=1
+  spline_satfix     87.0% (87/100)  vs_zoh Δ=+1.0pp p=1                    vs_native Δ=+3.0pp p=0.5078
+  pchip             82.0% (82/100)  vs_zoh Δ=-4.0pp p=0.3438               vs_native Δ=-2.0pp p=0.7539
+  pchip_satfix      84.0% (84/100)  vs_zoh Δ=-2.0pp p=0.7266               vs_native Δ=+0.0pp p=1
+  tac_fold          85.0% (85/100)  vs_zoh Δ=-1.0pp p=1                    vs_native Δ=+1.0pp p=1
+  tac_fold_satfix   87.0% (87/100)  vs_zoh Δ=+1.0pp p=1                    vs_native Δ=+3.0pp p=0.4531
+  bspline           83.0% (83/100)  vs_zoh Δ=-3.0pp p=0.6072               vs_native Δ=-1.0pp p=1
+  bspline_satfix    86.0% (86/100)  vs_zoh Δ=+0.0pp p=1                    vs_native Δ=+2.0pp p=0.7266
+
+====================================================================================================
+FAMILY 1 -- bspline-addition to already-complete DP tasks, Holm over 20 contrasts
+====================================================================================================
+  dp_PickCube-v1:bspline:vs_native    delta= -46.0pp  p=3.803e-11  p_holm=7.606e-10  <-- SURVIVES HOLM
+  dp_PickCube-v1:bspline:vs_zoh       delta= -41.0pp  p=2.328e-09  p_holm=4.423e-08  <-- SURVIVES HOLM
+  dp_PushT-v1:bspline:vs_native       delta= -23.0pp  p=1.55e-06  p_holm=2.789e-05  <-- SURVIVES HOLM
+  dp_PushT-v1:bspline:vs_zoh          delta= -13.0pp  p=0.00235  p_holm=0.03995  <-- SURVIVES HOLM
+  dp_PickCube-v1:bspline_satfix:vs_native delta=  -5.0pp  p=0.1797  p_holm=1
+  dp_PushT-v1:bspline_satfix:vs_native delta=  -6.0pp  p=0.2632  p_holm=1
+  dp_PushT-v1:bspline_satfix:vs_zoh   delta=  +4.0pp  p=0.4545  p_holm=1
+  dp_square:bspline_satfix:vs_zoh     delta=  +2.0pp  p=0.625  p_holm=1
+  dp_square:bspline:vs_zoh            delta=  +2.0pp  p=0.7744  p_holm=1
+  dp_lift:bspline:vs_zoh              delta=  +0.0pp  p=1  p_holm=1
+  dp_lift:bspline:vs_native           delta=  +0.0pp  p=1  p_holm=1
+  dp_lift:bspline_satfix:vs_zoh       delta=  +0.0pp  p=1  p_holm=1
+  dp_lift:bspline_satfix:vs_native    delta=  +0.0pp  p=1  p_holm=1
+  dp_can:bspline:vs_zoh               delta=  +1.0pp  p=1  p_holm=1
+  dp_can:bspline:vs_native            delta=  +1.0pp  p=1  p_holm=1
+  dp_can:bspline_satfix:vs_zoh        delta=  -1.0pp  p=1  p_holm=1
+  dp_can:bspline_satfix:vs_native     delta=  -1.0pp  p=1  p_holm=1
+  dp_square:bspline:vs_native         delta=  -1.0pp  p=1  p_holm=1
+  dp_square:bspline_satfix:vs_native  delta=  -1.0pp  p=1  p_holm=1
+  dp_PickCube-v1:bspline_satfix:vs_zoh delta=  +0.0pp  p=1  p_holm=1
+
+====================================================================================================
+FAMILY 2 -- all new cells (FM x 5 tasks + RoboCasa dp+fm x 2 tasks), Holm over 153 contrasts
+====================================================================================================
+
+7 of 153 contrasts survive Holm at alpha=0.05:
+  fm_PickCube-v1:bspline:vs_native         delta= -42.0pp  p=4.462e-10  p_holm=6.827e-08  <-- SURVIVES
+  fm_PickCube-v1:bspline:vs_zoh            delta= -33.0pp  p=5.418e-07  p_holm=8.235e-05  <-- SURVIVES
+  fm_PushT-v1:bspline:vs_native            delta= -26.0pp  p=8.68e-07  p_holm=0.0001311  <-- SURVIVES
+  fm_PickCube-v1:pchip:vs_native           delta= -23.0pp  p=5.648e-06  p_holm=0.0008471  <-- SURVIVES
+  fm_PushT-v1:bspline_satfix:vs_zoh        delta= +22.0pp  p=2.744e-05  p_holm=0.004089  <-- SURVIVES
+  fm_PickCube-v1:spline:vs_native          delta= -18.0pp  p=0.0002772  p_holm=0.04102  <-- SURVIVES
+  fm_PushT-v1:zoh:vs_native                delta= -19.0pp  p=0.0003107  p_holm=0.04568  <-- SURVIVES
+
+All family-2 contrasts sorted by raw p (top 25):
+  fm_PickCube-v1:bspline:vs_native         delta= -42.0pp  p=4.462e-10  p_holm=6.827e-08 <-- SURVIVES
+  fm_PickCube-v1:bspline:vs_zoh            delta= -33.0pp  p=5.418e-07  p_holm=8.235e-05 <-- SURVIVES
+  fm_PushT-v1:bspline:vs_native            delta= -26.0pp  p=8.68e-07  p_holm=0.0001311 <-- SURVIVES
+  fm_PickCube-v1:pchip:vs_native           delta= -23.0pp  p=5.648e-06  p_holm=0.0008471 <-- SURVIVES
+  fm_PushT-v1:bspline_satfix:vs_zoh        delta= +22.0pp  p=2.744e-05  p_holm=0.004089 <-- SURVIVES
+  fm_PickCube-v1:spline:vs_native          delta= -18.0pp  p=0.0002772  p_holm=0.04102 <-- SURVIVES
+  fm_PushT-v1:zoh:vs_native                delta= -19.0pp  p=0.0003107  p_holm=0.04568 <-- SURVIVES
+  fm_PushT-v1:spline:vs_zoh                delta= +18.0pp  p=0.0009122  p_holm=0.1332
+  fm_PushT-v1:tac_fold_satfix:vs_zoh       delta= +14.0pp  p=0.001312  p_holm=0.1903
+  fm_PushT-v1:pchip_satfix:vs_zoh          delta= +13.0pp  p=0.00235  p_holm=0.3384
+  fm_PickCube-v1:pchip:vs_zoh              delta= -14.0pp  p=0.002577  p_holm=0.3685
+  fm_PushT-v1:spline_satfix:vs_zoh         delta= +15.0pp  p=0.002599  p_holm=0.3691
+  fm_PickCube-v1:tac_fold:vs_native        delta= -11.0pp  p=0.01921  p_holm=1
+  fm_PickCube-v1:zoh:vs_native             delta=  -9.0pp  p=0.02246  p_holm=1
+  fm_PushT-v1:tac_fold:vs_native           delta= -11.0pp  p=0.0266  p_holm=1
+  fm_PushT-v1:pchip:vs_native              delta= -11.0pp  p=0.04329  p_holm=1
+  fm_PickCube-v1:spline:vs_zoh             delta=  -9.0pp  p=0.06357  p_holm=1
+  fm_PickCube-v1:pchip_satfix:vs_native    delta=  -7.0pp  p=0.06543  p_holm=1
+  fm_PushT-v1:pchip:vs_zoh                 delta=  +8.0pp  p=0.07681  p_holm=1
+  fm_PushT-v1:tac_fold:vs_zoh              delta=  +8.0pp  p=0.09625  p_holm=1
+  fm_PickCube-v1:spline_satfix:vs_native   delta=  -6.0pp  p=0.1094  p_holm=1
+  fm_PushT-v1:bspline:vs_zoh               delta=  -7.0pp  p=0.1185  p_holm=1
+  fm_PickCube-v1:tac_fold_satfix:vs_zoh    delta=  +4.0pp  p=0.125  p_holm=1
+  fm_PickCube-v1:bspline_satfix:vs_zoh     delta=  +5.0pp  p=0.125  p_holm=1
+  fm_PickCube-v1:tac_fold_satfix:vs_native delta=  -5.0pp  p=0.1797  p_holm=1

@@ -1,0 +1,1021 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-CloseSingleDoor_39.npz
+[data] 39 demos harvested in 0s
+[data] 9737 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CloseSingleDoor.pt
+Process SpawnPoolWorker-1:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 187, in __init__
+    self._send({"cmd": "ping"}); assert self._recv()["ok"]
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 198, in _recv
+    chunk = self.sock.recv(4 - len(hdr))
+TimeoutError: timed out
+Process SpawnPoolWorker-3:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 187, in __init__
+    self._send({"cmd": "ping"}); assert self._recv()["ok"]
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 198, in _recv
+    chunk = self.sock.recv(4 - len(hdr))
+TimeoutError: timed out
+Process SpawnPoolWorker-4:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-5:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-6:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-7:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-8:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-9:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-10:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-11:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-12:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-13:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-14:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-15:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-16:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-17:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-18:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-19:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-20:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-21:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-22:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-23:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-24:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-25:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-26:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-27:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-28:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-29:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-30:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-31:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-32:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-33:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-34:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-35:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-36:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-37:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-38:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+[eval] [10/15] native=1 zoh=1 spline=1 bspline_eps_raw=1 tac_fold_satfix=1 qp=1 qp_anchor=1
+Process SpawnPoolWorker-39:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-40:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-41:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-42:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-43:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-44:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-45:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-46:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-47:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-48:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-49:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-50:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-51:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-52:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-53:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+Process SpawnPoolWorker-54:
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/multiprocessing/pool.py", line 109, in worker
+    initializer(*initargs)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 288, in _worker_init
+    _WORKER["sim"] = make_sim(task, fold, port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 239, in make_sim
+    if task in ROBOCASA: return RoboCasaSim(task, port=port)
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 186, in __init__
+    self.sock = socket.create_connection((host, port), timeout=60)
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/home/user/anaconda3/envs/gr00t/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+[eval] [15/15] native=3 zoh=3 spline=3 bspline_eps_raw=3 tac_fold_satfix=3 qp=3 qp_anchor=3
+[eval] wall 3321s for 15 eps x 7 arms (2 workers)
+
+=== RC-CloseSingleDoor closed-loop DP, k=2, n=15 ===
+  native             20.0% (3/15)  | vs zoh:   +0.0pp p=1
+  zoh                20.0% (3/15)  | vs native:   +0.0pp p=1
+  spline             20.0% (3/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  bspline_eps_raw    20.0% (3/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold_satfix    20.0% (3/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp                 20.0% (3/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp_anchor          20.0% (3/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-CloseSingleDoor_anchor_3rdtask_v2.json

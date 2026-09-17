@@ -1,0 +1,57 @@
+[17:17:49] TurnOffSinkFaucet heldout n=15 k=2 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-TurnOffSinkFaucet_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 7038 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-TurnOffSinkFaucet_f0.pt
+[eval] [10/15] native=4 zoh=4 spline=3 bspline_eps_raw=3 tac_fold_satfix=4 qp=3 qp_anchor=4
+[eval] [15/15] native=5 zoh=5 spline=4 bspline_eps_raw=5 tac_fold_satfix=5 qp=5 qp_anchor=5
+[eval] wall 2883s for 15 eps x 7 arms
+
+=== RC-TurnOffSinkFaucet closed-loop DP, k=2, n=15 ===
+  native             33.3% (5/15)  | vs zoh:   +0.0pp p=1
+  zoh                33.3% (5/15)  | vs native:   +0.0pp p=1
+  spline             26.7% (4/15)  | vs zoh:   -6.7pp p=1  | vs native:   -6.7pp p=1
+  bspline_eps_raw    33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold_satfix    33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp                 33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp_anchor          33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-TurnOffSinkFaucet_f0_heldout_n15.json
+[18:06:01] TurnOffSinkFaucet heldout n=15 k=4 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-TurnOffSinkFaucet_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 7038 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-TurnOffSinkFaucet_f0.pt
+[eval] [10/15] native=4 zoh=3 spline=4 bspline_eps_raw=3 tac_fold_satfix=4 qp=4 qp_anchor=3
+[eval] [15/15] native=5 zoh=5 spline=5 bspline_eps_raw=5 tac_fold_satfix=5 qp=5 qp_anchor=4
+[eval] wall 2805s for 15 eps x 7 arms
+
+=== RC-TurnOffSinkFaucet closed-loop DP, k=4, n=15 ===
+  native             33.3% (5/15)  | vs zoh:   +0.0pp p=1
+  zoh                33.3% (5/15)  | vs native:   +0.0pp p=1
+  spline             33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  bspline_eps_raw    33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold_satfix    33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp                 33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp_anchor          26.7% (4/15)  | vs zoh:   -6.7pp p=1  | vs native:   -6.7pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-TurnOffSinkFaucet_f0_k4_heldout_n15.json
+[18:52:48] TurnOffSinkFaucet heldout n=15 k=8 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-TurnOffSinkFaucet_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 7038 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-TurnOffSinkFaucet_f0.pt
+[eval] [10/15] native=4 zoh=4 spline=4 bspline_eps_raw=4 tac_fold_satfix=4 qp=4 qp_anchor=4
+[eval] [15/15] native=5 zoh=5 spline=5 bspline_eps_raw=5 tac_fold_satfix=5 qp=5 qp_anchor=5
+[eval] wall 2706s for 15 eps x 7 arms
+
+=== RC-TurnOffSinkFaucet closed-loop DP, k=8, n=15 ===
+  native             33.3% (5/15)  | vs zoh:   +0.0pp p=1
+  zoh                33.3% (5/15)  | vs native:   +0.0pp p=1
+  spline             33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  bspline_eps_raw    33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold_satfix    33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp                 33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp_anchor          33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-TurnOffSinkFaucet_f0_k8_heldout_n15.json

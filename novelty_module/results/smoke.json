@@ -1,0 +1,160 @@
+{
+  "_config": {
+    "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_s0/checkpoints/8300",
+    "n_per_cat": 2,
+    "max_steps": 40,
+    "replan": 5,
+    "consensus_n": 4,
+    "noise_sigma": 0.02,
+    "categories": [
+      "Light Conditions",
+      "Background Textures",
+      "Objects Layout",
+      "Camera Viewpoints"
+    ],
+    "task_sample_seed": 42,
+    "rollout_reset_seed": 0
+  },
+  "arms": {
+    "base": {
+      "Light Conditions": {
+        "per_task": {
+          "2269": {
+            "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_light_41",
+            "difficulty": 1,
+            "success": false,
+            "sec": 3.4
+          },
+          "2359": {
+            "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_light_22",
+            "difficulty": 2,
+            "success": false,
+            "sec": 3.1
+          }
+        },
+        "average": 0.0
+      },
+      "Background Textures": {
+        "per_task": {
+          "227": {
+            "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_12",
+            "difficulty": 1,
+            "success": false,
+            "sec": 3.1
+          },
+          "248": {
+            "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_23",
+            "difficulty": 2,
+            "success": false,
+            "sec": 3.2
+          }
+        },
+        "average": 0.0
+      },
+      "Objects Layout": {
+        "per_task": {
+          "1978": {
+            "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_level2_sample2",
+            "difficulty": 1,
+            "success": false,
+            "sec": 3.2
+          },
+          "1952": {
+            "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_add_14",
+            "difficulty": 2,
+            "success": false,
+            "sec": 4.2
+          }
+        },
+        "average": 0.0
+      },
+      "Camera Viewpoints": {
+        "per_task": {
+          "668": {
+            "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_36_0_100_0_0_initstate_0",
+            "difficulty": 1,
+            "success": false,
+            "sec": 3.2
+          },
+          "682": {
+            "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_43_15_100_0_0_initstate_0",
+            "difficulty": 2,
+            "success": false,
+            "sec": 3.3
+          }
+        },
+        "average": 0.0
+      }
+    },
+    "canon": {
+      "Light Conditions": {
+        "per_task": {
+          "2269": {
+            "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate_light_41",
+            "difficulty": 1,
+            "success": false,
+            "sec": 3.5
+          },
+          "2359": {
+            "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_light_22",
+            "difficulty": 2,
+            "success": false,
+            "sec": 3.7
+          }
+        },
+        "average": 0.0
+      },
+      "Background Textures": {
+        "per_task": {
+          "227": {
+            "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_tb_12",
+            "difficulty": 1,
+            "success": false,
+            "sec": 3.7
+          },
+          "248": {
+            "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_table_23",
+            "difficulty": 2,
+            "success": false,
+            "sec": 4.4
+          }
+        },
+        "average": 0.0
+      },
+      "Objects Layout": {
+        "per_task": {
+          "1978": {
+            "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_level2_sample2",
+            "difficulty": 1,
+            "success": false,
+            "sec": 3.8
+          },
+          "1952": {
+            "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate_add_14",
+            "difficulty": 2,
+            "success": false,
+            "sec": 4.4
+          }
+        },
+        "average": 0.0
+      },
+      "Camera Viewpoints": {
+        "per_task": {
+          "668": {
+            "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_36_0_100_0_0_initstate_0",
+            "difficulty": 1,
+            "success": false,
+            "sec": 3.8
+          },
+          "682": {
+            "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_view_43_15_100_0_0_initstate_0",
+            "difficulty": 2,
+            "success": false,
+            "sec": 4.0
+          }
+        },
+        "average": 0.0
+      }
+    }
+  }
+}

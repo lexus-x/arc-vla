@@ -1,0 +1,438 @@
+# Task 2 fix round 1 scoped review package
+# Reconstructed previous-review head: /tmp/task2-fixbase.yvOAGX
+--- /tmp/task2-fixbase.yvOAGX/stage1_vision.py	2026-09-10 10:54:36.641386924 +0900
++++ stage1_vision.py	2026-09-10 10:52:41.412709294 +0900
+@@ -70,6 +70,8 @@
+ 
+ 
+ def validate_checkpoint(checkpoint, metadata):
++    if not isinstance(checkpoint, dict):
++        raise ValueError("checkpoint payload must be a mapping")
+     if checkpoint.get("format_version") != FORMAT_VERSION:
+         raise ValueError("incompatible checkpoint format")
+     if checkpoint.get("data_metadata") != metadata:
+@@ -119,6 +121,120 @@
+             raise ValueError(f"invalid {key} range")
+ 
+ 
++def experiment_request(task, metadata, n_train, n_eval, steps, batch_size, microbatch,
++                       training_seed, eval_seed):
++    """Canonical requested experiment identity used by direct eval and campaigns."""
++    if metadata.get("task") != task:
++        raise ValueError(f"requested task {task} does not match dataset task {metadata.get('task')}")
++    train_indices, eval_indices = split_demos(len(metadata["demo_names"]), n_train, n_eval)
++    requested = {
++        "task": task,
++        "data_sha256": metadata["data_sha256"],
++        "train_demo_indices": train_indices,
++        "eval_demo_indices": eval_indices,
++        "steps": steps,
++        "batch_size": batch_size,
++        "microbatch": microbatch,
++        "training_seed": training_seed,
++        "eval_seed": eval_seed,
++    }
++    if (any(type(requested[key]) is not int or requested[key] < 1
++            for key in ("steps", "batch_size", "microbatch")) or
++            type(training_seed) is not int or training_seed < 0 or
++            type(eval_seed) is not int or eval_seed < 0):
++        raise ValueError("requested budget and seeds must be valid integers")
++    return requested
++
++
++def validate_checkpoint_request(checkpoint, metadata, requested):
++    """Reject reuse when a checkpoint represents a different requested experiment."""
++    validate_checkpoint(checkpoint, metadata)
++    mismatches = []
++    if requested["task"] != metadata["task"]:
++        mismatches.append("task")
++    if requested["data_sha256"] != metadata["data_sha256"]:
++        mismatches.append("dataset hash")
++    if checkpoint["train_demo_indices"] != requested["train_demo_indices"]:
++        mismatches.append("training split/count")
++    if checkpoint["eval_demo_indices"] != requested["eval_demo_indices"]:
++        mismatches.append("evaluation split/count")
++    budget = checkpoint["budget"]
++    for checkpoint_key, request_key in (
++        ("steps", "steps"), ("batch_size", "batch_size"), ("microbatch", "microbatch"),
++        ("seed", "training_seed"),
++    ):
++        if budget[checkpoint_key] != requested[request_key]:
++            mismatches.append(request_key.replace("_", " "))
++    if mismatches:
++        raise ValueError("checkpoint does not match requested experiment: " + ", ".join(mismatches))
++
++
++def validate_result_request(result, checkpoint_path, data, checkpoint, requested):
++    """Validate a complete or partial JSON record before campaign reuse."""
++    if not isinstance(result, dict):
++        raise ValueError("result JSON payload must be an object")
++    checkpoint_path = Path(checkpoint_path).resolve()
++    expected_checkpoint_hash = sha256_file(checkpoint_path)
++    mismatches = []
++    if result.get("stage") != 1:
++        mismatches.append("stage")
++    if result.get("task") != requested["task"]:
++        mismatches.append("task")
++    task_mapping = result.get("task_mapping")
++    if not isinstance(task_mapping, dict) or task_mapping.get("dataset_task") != requested["task"]:
++        mismatches.append("task mapping")
++    if result.get("checkpoint_path") != str(checkpoint_path):
++        mismatches.append("checkpoint path")
++    if result.get("checkpoint_sha256") != expected_checkpoint_hash:
++        mismatches.append("checkpoint hash")
++    if result.get("data_path") != str(Path(data.path).resolve()):
++        mismatches.append("data path")
++    if result.get("data_metadata") != data.metadata:
++        mismatches.append("dataset identity/hash")
++    if result.get("train_demo_indices") != requested["train_demo_indices"]:
++        mismatches.append("training split/count")
++    if result.get("eval_demo_indices") != requested["eval_demo_indices"]:
++        mismatches.append("evaluation split/count")
++    if result.get("training_budget") != checkpoint["budget"]:
++        mismatches.append("training budget")
++    if result.get("eval_seed") != requested["eval_seed"]:
++        mismatches.append("evaluation seed")
++    episodes = result.get("episodes")
++    episode_count = result.get("episode_count")
++    if type(result.get("complete")) is not bool:
++        mismatches.append("completion status")
++    if (type(episode_count) is not int or episode_count < 0 or
++            not isinstance(episodes, list) or len(episodes) != episode_count):
++        mismatches.append("episode count/records")
++    if result.get("complete") is True and (
++            type(episode_count) is not int or episode_count < len(requested["eval_demo_indices"])):
++        mismatches.append("at-least-requested episode count")
++    if mismatches:
++        raise ValueError("result does not match requested experiment: " + ", ".join(mismatches))
++
++
++def campaign_artifact_status(checkpoint_path, result_path, data, requested):
++    """Return train-eval/eval/skip, rejecting stale artifacts rather than overwriting them."""
++    checkpoint_path, result_path = Path(checkpoint_path), Path(result_path)
++    if not checkpoint_path.exists():
++        if result_path.exists():
++            raise ValueError("result exists without its checkpoint; use a distinct output directory")
++        return "train-eval"
++    try:
++        checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
++    except (OSError, RuntimeError, EOFError) as exc:
++        raise ValueError(f"cannot reuse checkpoint: {exc}") from exc
++    validate_checkpoint_request(checkpoint, data.metadata, requested)
++    if not result_path.exists():
++        return "eval"
++    try:
++        result = json.loads(result_path.read_text())
++    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
++        raise ValueError(f"cannot reuse result JSON: {exc}") from exc
++    validate_result_request(result, checkpoint_path, data, checkpoint, requested)
++    return "skip" if result.get("complete") is True else "eval"
++
++
+ def save_checkpoint(path, policy, architecture, data, state_norm, action_norm, train_indices, eval_indices, budget):
+     checkpoint = {
+         "format_version": FORMAT_VERSION, "ema_policy": policy.state_dict(),
+@@ -134,9 +250,12 @@
+     temporary.replace(path)
+ 
+ 
+-def load_checkpoint(path, metadata, dev):
++def load_checkpoint(path, metadata, dev, requested=None):
+     checkpoint = torch.load(path, map_location="cpu", weights_only=False)
+-    validate_checkpoint(checkpoint, metadata)
++    if requested is None:
++        validate_checkpoint(checkpoint, metadata)
++    else:
++        validate_checkpoint_request(checkpoint, metadata, requested)
+     policy = VisualDiffusionPolicy(**checkpoint["architecture"])
+     policy.load_state_dict(checkpoint["ema_policy"], strict=True)
+     return (policy.to(dev).eval(), MinMax.from_state(checkpoint["state_normalizer"]),
+@@ -226,12 +345,14 @@
+     parser.add_argument("--batch-size", type=int, default=256)
+     parser.add_argument("--microbatch", type=int, default=16, help="gradient accumulation; effective batch stays 256")
+     parser.add_argument("--n-train", type=int, default=35)
+-    parser.add_argument("--n-eval", type=int, default=15, help="training split; eval-only uses checkpoint split")
++    parser.add_argument("--n-eval", type=int, default=15, help="held-out split; eval reuse must match")
+     parser.add_argument("--seed", type=int, default=0)
+     parser.add_argument("--eval-seed", type=int, default=0)
+     parser.add_argument("--max-steps", type=int, help="default: existing native limits, coffee=300, others=500")
+     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
+     parser.add_argument("--port", type=int, default=8766)
++    parser.add_argument("--check-artifacts", action="store_true",
++                        help="print campaign reuse status without training, evaluation, or bridge access")
+     args = parser.parse_args()
+     if args.max_steps is not None and args.max_steps < 1:
+         parser.error("--max-steps must be positive")
+@@ -239,6 +360,18 @@
+     path = args.checkpoint or args.output_dir / f"{args.task}.pt"
+     data = VisionDataset(args.task, args.data_dir)
+     try:
++        requested = experiment_request(
++            args.task, data.metadata, args.n_train, args.n_eval, args.steps, args.batch_size,
++            args.microbatch, args.seed, args.eval_seed,
++        )
++        if args.check_artifacts:
++            result_path = args.output_dir / f"{args.task}_native.json"
++            try:
++                status = campaign_artifact_status(path, result_path, data, requested)
++            except ValueError as exc:
++                parser.error(f"incompatible existing Stage 1 artifact: {exc}")
++            print(status)
++            return
+         if args.mode != "eval":
+             torch.manual_seed(args.seed)
+             np.random.seed(args.seed)
+@@ -263,7 +396,8 @@
+             if args.device.startswith("cuda"):
+                 torch.cuda.empty_cache()
+         if args.mode != "train":
+-            policy, state_norm, action_norm, checkpoint = load_checkpoint(path, data.metadata, args.device)
++            policy, state_norm, action_norm, checkpoint = load_checkpoint(
++                path, data.metadata, args.device, requested=requested)
+             torch.manual_seed(args.eval_seed)
+             np.random.seed(args.eval_seed)
+             client = VisionClient(args.task, args.port)
+--- /tmp/task2-fixbase.yvOAGX/run_stage1_vision_campaign.sh	2026-09-10 10:54:36.641386924 +0900
++++ run_stage1_vision_campaign.sh	2026-09-10 10:48:17.371142447 +0900
+@@ -23,6 +23,7 @@
+ usage() {
+     echo "Usage: [POLICY_PY=...] [BRIDGE_PY=...] [PORT=8766] [FORCE=0|1] $0"
+     echo "Runs only the four Stage 1 visual-policy tasks, sequentially. Other defaults may also be overridden by environment variable."
++    echo "FORCE=1 re-evaluates a compatible completed checkpoint; incompatible artifacts require a distinct OUTPUT_DIR."
+ }
+ 
+ if (( $# > 0 )); then
+@@ -75,6 +76,32 @@
+ PY
+ }
+ 
++TASKS=(TurnOffSinkFaucet CoffeePressButton TurnOffMicrowave CloseSingleDoor)
++MODES=()
++RUNNABLE=0
++for task in "${TASKS[@]}"; do
++    checkpoint="$OUTPUT_DIR/$task.pt"
++    status=$("$POLICY_PY" "$ROOT/stage1_vision.py" "$task" --check-artifacts \
++        --data-dir "$DATA_DIR" --output-dir "$OUTPUT_DIR" --checkpoint "$checkpoint" \
++        --steps "$STEPS" --batch-size "$BATCH_SIZE" --microbatch "$MICROBATCH" \
++        --n-train "$N_TRAIN" --n-eval "$N_EVAL" --seed "$SEED" --eval-seed "$EVAL_SEED")
++    case "$status" in
++        train-eval|eval|skip) ;;
++        *) echo "[campaign] invalid artifact status for $task: $status" >&2; exit 2 ;;
++    esac
++    if [[ "$FORCE" == 1 && "$status" == skip ]]; then
++        status=eval
++    fi
++    MODES+=("$status")
++    if [[ "$status" != skip ]]; then
++        ((RUNNABLE += 1))
++    fi
++done
++if (( RUNNABLE == 0 )); then
++    echo "[campaign] all four matching Stage 1 results are already complete"
++    exit 0
++fi
++
+ if port_is_open; then
+     echo "[campaign] refusing to replace an existing listener on 127.0.0.1:$PORT" >&2
+     exit 2
+@@ -101,38 +128,16 @@
+     exit 1
+ fi
+ 
+-result_is_complete() {
+-    "$POLICY_PY" - "$1" "$2" "$3" <<'PY' >/dev/null 2>&1
+-import json
+-import sys
+-from pathlib import Path
+-
+-with open(sys.argv[1], encoding="utf-8") as stream:
+-    result = json.load(stream)
+-matches = (
+-    result.get("stage") == 1
+-    and result.get("complete") is True
+-    and result.get("task") == sys.argv[2]
+-    and result.get("checkpoint_path") == str(Path(sys.argv[3]).resolve())
+-    and Path(sys.argv[3]).is_file()
+-)
+-raise SystemExit(0 if matches else 1)
+-PY
+-}
+-
+-TASKS=(TurnOffSinkFaucet CoffeePressButton TurnOffMicrowave CloseSingleDoor)
+-for task in "${TASKS[@]}"; do
++for index in "${!TASKS[@]}"; do
++    task="${TASKS[$index]}"
++    mode="${MODES[$index]}"
+     checkpoint="$OUTPUT_DIR/$task.pt"
+     result="$OUTPUT_DIR/${task}_native.json"
+     CURRENT_LOG="$LOG_DIR/$task.log"
+-    if [[ "$FORCE" != 1 ]] && [[ -f "$result" ]] && result_is_complete "$result" "$task" "$checkpoint"; then
+-        echo "[skip] $task already has a complete Stage 1 result: $result"
++    if [[ "$mode" == skip ]]; then
++        echo "[skip] $task has a complete result matching data, checkpoint, split, budgets, and seeds: $result"
+         continue
+     fi
+-    mode=train-eval
+-    if [[ -f "$checkpoint" ]]; then
+-        mode=eval
+-    fi
+     echo "[start] $task mode=$mode $(date --iso-8601=seconds); log=$CURRENT_LOG"
+     "$POLICY_PY" "$ROOT/stage1_vision.py" "$task" \
+         --mode "$mode" --data-dir "$DATA_DIR" --output-dir "$OUTPUT_DIR" \
+--- /tmp/task2-fixbase.yvOAGX/test_stage1_vision.py	2026-09-10 10:54:36.641386924 +0900
++++ test_stage1_vision.py	2026-09-10 10:49:21.018085538 +0900
+@@ -12,7 +12,15 @@
+ from dp_min import DiffusionPolicy, MinMax, VisualDiffusionPolicy, prepare_rgb
+ from download_robocasa_vision_data import dataset_path
+ from robocasa_vision_data import EpisodeWindows, PAPER, PROPRIO_KEYS, VisionDataset, split_demos
+-from stage1_vision import comparison_result, load_checkpoint, native_rollout, save_checkpoint, validate_checkpoint
++from stage1_vision import (
++    campaign_artifact_status,
++    comparison_result,
++    experiment_request,
++    load_checkpoint,
++    native_rollout,
++    save_checkpoint,
++    validate_checkpoint,
++)
+ 
+ 
+ def tiny_architecture(camera_keys=("left_image", "wrist_image")):
+@@ -46,7 +54,8 @@
+     }
+ 
+ 
+-def valid_checkpoint():
++def valid_checkpoint(n_train=2, n_eval=2, *, steps=15_000, batch_size=256,
++                     microbatch=16, seed=0):
+     metadata = checkpoint_metadata()
+     return {
+         "format_version": 1,
+@@ -60,11 +69,11 @@
+         "action_normalizer": {
+             "lo": np.zeros(12, np.float32), "hi": np.ones(12, np.float32), "rng": np.ones(12, np.float32)
+         },
+-        "train_demo_indices": [0, 1],
+-        "eval_demo_indices": [2, 3],
++        "train_demo_indices": list(range(n_train)),
++        "eval_demo_indices": list(range(n_train, n_train + n_eval)),
+         "budget": {
+-            "steps": 15_000, "batch_size": 256, "microbatch": 16, "lr": 1e-4,
+-            "seed": 0, "ddim_steps": 10, "ema_decay": 0.9999,
++            "steps": steps, "batch_size": batch_size, "microbatch": microbatch, "lr": 1e-4,
++            "seed": seed, "ddim_steps": 10, "ema_decay": 0.9999,
+         },
+     }
+ 
+@@ -242,7 +251,9 @@
+     budget = valid_checkpoint()["budget"]
+ 
+     save_checkpoint(path, policy, tiny_architecture(), data, state_norm, action_norm, [0, 1], [2, 3], budget)
+-    loaded, loaded_state_norm, loaded_action_norm, checkpoint = load_checkpoint(path, metadata, "cpu")
++    requested = experiment_request("TurnOffSinkFaucet", metadata, 2, 2, 15_000, 256, 16, 0, 0)
++    loaded, loaded_state_norm, loaded_action_norm, checkpoint = load_checkpoint(
++        path, metadata, "cpu", requested=requested)
+ 
+     assert isinstance(loaded, VisualDiffusionPolicy)
+     assert checkpoint["architecture"] == tiny_architecture()
+@@ -251,6 +262,100 @@
+     assert checkpoint["eval_demo_indices"] == [2, 3]
+     np.testing.assert_array_equal(loaded_state_norm.lo, state_norm.lo)
+     np.testing.assert_array_equal(loaded_action_norm.hi, action_norm.hi)
++    incompatible_request = dict(requested, steps=1)
++    with pytest.raises(ValueError, match="steps"):
++        load_checkpoint(path, metadata, "cpu", requested=incompatible_request)
++
++
++def write_result(path, checkpoint_path, data, checkpoint, episode_count, *, eval_seed=0, complete=True):
++    episodes = [{"demo_index": index, "success": index % 2 == 0, "steps": 8}
++                for index in range(episode_count)]
++    result = comparison_result(
++        data.metadata["task"], episodes, checkpoint_path, data, checkpoint, 500, eval_seed)
++    result["complete"] = complete
++    path.write_text(json.dumps(result))
++
++
++def artifact_fixture(tmp_path, *, checkpoint=None, episode_count=None, eval_seed=0, complete=True):
++    checkpoint = checkpoint or valid_checkpoint()
++    checkpoint_path = tmp_path / "policy.pt"
++    result_path = tmp_path / "result.json"
++    data = SimpleNamespace(path=(tmp_path / "dataset.hdf5").resolve(),
++                           metadata=checkpoint["data_metadata"])
++    torch.save(checkpoint, checkpoint_path)
++    if episode_count is not None:
++        write_result(result_path, checkpoint_path, data, checkpoint, episode_count,
++                     eval_seed=eval_seed, complete=complete)
++    return checkpoint_path, result_path, data, checkpoint
++
++
++def requested_experiment(data, *, n_train=2, n_eval=2, steps=15_000, batch_size=256,
++                         microbatch=16, training_seed=0, eval_seed=0):
++    return experiment_request(
++        data.metadata["task"], data.metadata, n_train, n_eval, steps, batch_size,
++        microbatch, training_seed, eval_seed)
++
++
++def test_campaign_artifact_status_covers_fresh_eval_and_skip(tmp_path: Path):
++    data = SimpleNamespace(path=(tmp_path / "dataset.hdf5").resolve(), metadata=checkpoint_metadata())
++    checkpoint_path, result_path = tmp_path / "policy.pt", tmp_path / "result.json"
++    requested = requested_experiment(data)
++    assert campaign_artifact_status(checkpoint_path, result_path, data, requested) == "train-eval"
++
++    checkpoint = valid_checkpoint()
++    torch.save(checkpoint, checkpoint_path)
++    assert campaign_artifact_status(checkpoint_path, result_path, data, requested) == "eval"
++
++    write_result(result_path, checkpoint_path, data, checkpoint, 2)
++    assert campaign_artifact_status(checkpoint_path, result_path, data, requested) == "skip"
++
++
++def test_campaign_rejects_completed_smoke_for_production_request(tmp_path: Path):
++    checkpoint_path, result_path, data, _ = artifact_fixture(
++        tmp_path, checkpoint=valid_checkpoint(n_eval=1), episode_count=1)
++    production = requested_experiment(data, n_eval=2)
++
++    with pytest.raises(ValueError, match="evaluation split/count"):
++        campaign_artifact_status(checkpoint_path, result_path, data, production)
++
++
++def test_campaign_rejects_result_after_checkpoint_contents_change_at_same_path(tmp_path: Path):
++    checkpoint_path, result_path, data, checkpoint = artifact_fixture(tmp_path, episode_count=2)
++    checkpoint["ema_policy"]["sentinel"] = torch.tensor(2.0)
++    torch.save(checkpoint, checkpoint_path)
++
++    with pytest.raises(ValueError, match="checkpoint hash"):
++        campaign_artifact_status(checkpoint_path, result_path, data, requested_experiment(data))
++
++
++@pytest.mark.parametrize(
++    "request_change, message",
++    [
++        ({"n_train": 1}, "training split/count"),
++        ({"steps": 10}, "steps"),
++        ({"batch_size": 8}, "batch size"),
++        ({"microbatch": 4}, "microbatch"),
++        ({"training_seed": 9}, "training seed"),
++    ],
++)
++def test_campaign_rejects_checkpoint_budget_mismatch(tmp_path: Path, request_change, message):
++    checkpoint_path, result_path, data, _ = artifact_fixture(tmp_path)
++    requested = requested_experiment(data, **request_change)
++
++    with pytest.raises(ValueError, match=message):
++        campaign_artifact_status(checkpoint_path, result_path, data, requested)
++
++
++def test_campaign_rejects_result_eval_seed_or_insufficient_complete_episodes(tmp_path: Path):
++    checkpoint_path, result_path, data, checkpoint = artifact_fixture(
++        tmp_path, episode_count=2, eval_seed=0)
++    with pytest.raises(ValueError, match="evaluation seed"):
++        campaign_artifact_status(
++            checkpoint_path, result_path, data, requested_experiment(data, eval_seed=1))
++
++    write_result(result_path, checkpoint_path, data, checkpoint, 1, complete=True)
++    with pytest.raises(ValueError, match="at-least-requested episode count"):
++        campaign_artifact_status(checkpoint_path, result_path, data, requested_experiment(data))
+ 
+ 
+ class FakePolicy:

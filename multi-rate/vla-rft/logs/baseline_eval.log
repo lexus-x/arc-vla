@@ -1,0 +1,450 @@
+
+===== BASELINE EVAL seed=0 =====
+[suite] libero_spatial -> baseline_results/seed0/multirate_honest.json
+
+============================================================
+ARM flow8300_native_20env
+============================================================
+[stats] flow8300_native_20env: normalizing with lerobot/libero_spatial_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[flow8300_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[flow8300_native_20env] task 0 trial 00: OK (73/220 steps)
+[flow8300_native_20env] task 0 trial 01: OK (83/220 steps)
+[flow8300_native_20env] task 0 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 0 trial 03: OK (79/220 steps)
+[flow8300_native_20env] task 0 trial 04: OK (73/220 steps)
+[flow8300_native_20env] task 0 trial 05: OK (72/220 steps)
+[flow8300_native_20env] task 0 trial 06: OK (74/220 steps)
+[flow8300_native_20env] task 0 trial 07: OK (76/220 steps)
+[flow8300_native_20env] task 0 trial 08: OK (75/220 steps)
+[flow8300_native_20env] task 0 trial 09: OK (73/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 1 trial 00: OK (111/220 steps)
+[flow8300_native_20env] task 1 trial 01: OK (108/220 steps)
+[flow8300_native_20env] task 1 trial 02: OK (111/220 steps)
+[flow8300_native_20env] task 1 trial 03: OK (105/220 steps)
+[flow8300_native_20env] task 1 trial 04: x (220/220 steps)
+[flow8300_native_20env] task 1 trial 05: OK (107/220 steps)
+[flow8300_native_20env] task 1 trial 06: x (220/220 steps)
+[flow8300_native_20env] task 1 trial 07: OK (111/220 steps)
+[flow8300_native_20env] task 1 trial 08: x (220/220 steps)
+[flow8300_native_20env] task 1 trial 09: OK (121/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 2 trial 00: OK (99/220 steps)
+[flow8300_native_20env] task 2 trial 01: OK (102/220 steps)
+[flow8300_native_20env] task 2 trial 02: OK (104/220 steps)
+[flow8300_native_20env] task 2 trial 03: OK (99/220 steps)
+[flow8300_native_20env] task 2 trial 04: OK (100/220 steps)
+[flow8300_native_20env] task 2 trial 05: OK (98/220 steps)
+[flow8300_native_20env] task 2 trial 06: OK (90/220 steps)
+[flow8300_native_20env] task 2 trial 07: OK (92/220 steps)
+[flow8300_native_20env] task 2 trial 08: OK (110/220 steps)
+[flow8300_native_20env] task 2 trial 09: OK (97/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 3 trial 00: OK (86/220 steps)
+[flow8300_native_20env] task 3 trial 01: OK (92/220 steps)
+[flow8300_native_20env] task 3 trial 02: OK (78/220 steps)
+[flow8300_native_20env] task 3 trial 03: OK (85/220 steps)
+[flow8300_native_20env] task 3 trial 04: OK (88/220 steps)
+[flow8300_native_20env] task 3 trial 05: OK (82/220 steps)
+[flow8300_native_20env] task 3 trial 06: x (220/220 steps)
+[flow8300_native_20env] task 3 trial 07: x (220/220 steps)
+[flow8300_native_20env] task 3 trial 08: x (220/220 steps)
+[flow8300_native_20env] task 3 trial 09: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 4 trial 00: OK (128/220 steps)
+[flow8300_native_20env] task 4 trial 01: x (220/220 steps)
+[flow8300_native_20env] task 4 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 4 trial 03: OK (128/220 steps)
+[flow8300_native_20env] task 4 trial 04: OK (141/220 steps)
+[flow8300_native_20env] task 4 trial 05: OK (134/220 steps)
+[flow8300_native_20env] task 4 trial 06: OK (137/220 steps)
+[flow8300_native_20env] task 4 trial 07: OK (125/220 steps)
+[flow8300_native_20env] task 4 trial 08: OK (124/220 steps)
+[flow8300_native_20env] task 4 trial 09: OK (138/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 5 trial 00: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 01: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 02: OK (85/220 steps)
+[flow8300_native_20env] task 5 trial 03: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 04: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 05: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 06: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 07: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 08: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 09: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 6 trial 00: OK (97/220 steps)
+[flow8300_native_20env] task 6 trial 01: OK (103/220 steps)
+[flow8300_native_20env] task 6 trial 02: OK (97/220 steps)
+[flow8300_native_20env] task 6 trial 03: OK (104/220 steps)
+[flow8300_native_20env] task 6 trial 04: OK (105/220 steps)
+[flow8300_native_20env] task 6 trial 05: OK (110/220 steps)
+[flow8300_native_20env] task 6 trial 06: x (220/220 steps)
+[flow8300_native_20env] task 6 trial 07: OK (103/220 steps)
+[flow8300_native_20env] task 6 trial 08: OK (103/220 steps)
+[flow8300_native_20env] task 6 trial 09: OK (102/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 7 trial 00: OK (114/220 steps)
+[flow8300_native_20env] task 7 trial 01: x (220/220 steps)
+[flow8300_native_20env] task 7 trial 02: OK (124/220 steps)
+[flow8300_native_20env] task 7 trial 03: OK (111/220 steps)
+[flow8300_native_20env] task 7 trial 04: OK (116/220 steps)
+[flow8300_native_20env] task 7 trial 05: OK (112/220 steps)
+[flow8300_native_20env] task 7 trial 06: OK (123/220 steps)
+[flow8300_native_20env] task 7 trial 07: OK (115/220 steps)
+[flow8300_native_20env] task 7 trial 08: OK (122/220 steps)
+[flow8300_native_20env] task 7 trial 09: OK (146/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 8 trial 00: OK (87/220 steps)
+[flow8300_native_20env] task 8 trial 01: x (220/220 steps)
+[flow8300_native_20env] task 8 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 8 trial 03: OK (96/220 steps)
+[flow8300_native_20env] task 8 trial 04: x (220/220 steps)
+[flow8300_native_20env] task 8 trial 05: x (220/220 steps)
+[flow8300_native_20env] task 8 trial 06: OK (87/220 steps)
+[flow8300_native_20env] task 8 trial 07: OK (91/220 steps)
+[flow8300_native_20env] task 8 trial 08: OK (94/220 steps)
+[flow8300_native_20env] task 8 trial 09: OK (88/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 9 trial 00: OK (117/220 steps)
+[flow8300_native_20env] task 9 trial 01: OK (112/220 steps)
+[flow8300_native_20env] task 9 trial 02: OK (122/220 steps)
+[flow8300_native_20env] task 9 trial 03: OK (120/220 steps)
+[flow8300_native_20env] task 9 trial 04: x (220/220 steps)
+[flow8300_native_20env] task 9 trial 05: OK (114/220 steps)
+[flow8300_native_20env] task 9 trial 06: x (220/220 steps)
+[flow8300_native_20env] task 9 trial 07: OK (121/220 steps)
+[flow8300_native_20env] task 9 trial 08: x (220/220 steps)
+[flow8300_native_20env] task 9 trial 09: OK (120/220 steps)
+[flow8300_native_20env] diagnostics: 72/100 ok | fail_at_cap=28 fail_early=0 | succ_median=103.5/220
+--> flow8300_native_20env: 72.0% (220 steps @ 20 Hz = 11.0 s, replan every 10)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  flow8300_native_20env   72.0%
+seed=0: aggregate=72.00% (n=100)
+
+===== BASELINE EVAL seed=1 =====
+[suite] libero_spatial -> baseline_results/seed1/multirate_honest.json
+
+============================================================
+ARM flow8300_native_20env
+============================================================
+[stats] flow8300_native_20env: normalizing with lerobot/libero_spatial_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[flow8300_native_20env] task 0 trial 00: OK (76/220 steps)
+[flow8300_native_20env] task 0 trial 01: OK (82/220 steps)
+[flow8300_native_20env] task 0 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 0 trial 03: OK (73/220 steps)
+[flow8300_native_20env] task 0 trial 04: OK (76/220 steps)
+[flow8300_native_20env] task 0 trial 05: OK (74/220 steps)
+[flow8300_native_20env] task 0 trial 06: OK (71/220 steps)
+[flow8300_native_20env] task 0 trial 07: OK (78/220 steps)
+[flow8300_native_20env] task 0 trial 08: OK (77/220 steps)
+[flow8300_native_20env] task 0 trial 09: OK (75/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 1 trial 00: OK (112/220 steps)
+[flow8300_native_20env] task 1 trial 01: OK (109/220 steps)
+[flow8300_native_20env] task 1 trial 02: OK (112/220 steps)
+[flow8300_native_20env] task 1 trial 03: OK (108/220 steps)
+[flow8300_native_20env] task 1 trial 04: OK (110/220 steps)
+[flow8300_native_20env] task 1 trial 05: OK (106/220 steps)
+[flow8300_native_20env] task 1 trial 06: x (220/220 steps)
+[flow8300_native_20env] task 1 trial 07: OK (109/220 steps)
+[flow8300_native_20env] task 1 trial 08: OK (107/220 steps)
+[flow8300_native_20env] task 1 trial 09: OK (113/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 2 trial 00: OK (99/220 steps)
+[flow8300_native_20env] task 2 trial 01: OK (108/220 steps)
+[flow8300_native_20env] task 2 trial 02: OK (104/220 steps)
+[flow8300_native_20env] task 2 trial 03: OK (99/220 steps)
+[flow8300_native_20env] task 2 trial 04: OK (98/220 steps)
+[flow8300_native_20env] task 2 trial 05: OK (96/220 steps)
+[flow8300_native_20env] task 2 trial 06: OK (96/220 steps)
+[flow8300_native_20env] task 2 trial 07: OK (94/220 steps)
+[flow8300_native_20env] task 2 trial 08: OK (112/220 steps)
+[flow8300_native_20env] task 2 trial 09: OK (99/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 3 trial 00: OK (85/220 steps)
+[flow8300_native_20env] task 3 trial 01: OK (91/220 steps)
+[flow8300_native_20env] task 3 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 3 trial 03: OK (85/220 steps)
+[flow8300_native_20env] task 3 trial 04: OK (85/220 steps)
+[flow8300_native_20env] task 3 trial 05: OK (83/220 steps)
+[flow8300_native_20env] task 3 trial 06: OK (85/220 steps)
+[flow8300_native_20env] task 3 trial 07: OK (82/220 steps)
+[flow8300_native_20env] task 3 trial 08: OK (85/220 steps)
+[flow8300_native_20env] task 3 trial 09: OK (84/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 4 trial 00: OK (137/220 steps)
+[flow8300_native_20env] task 4 trial 01: OK (121/220 steps)
+[flow8300_native_20env] task 4 trial 02: OK (127/220 steps)
+[flow8300_native_20env] task 4 trial 03: x (220/220 steps)
+[flow8300_native_20env] task 4 trial 04: x (220/220 steps)
+[flow8300_native_20env] task 4 trial 05: OK (139/220 steps)
+[flow8300_native_20env] task 4 trial 06: OK (129/220 steps)
+[flow8300_native_20env] task 4 trial 07: OK (126/220 steps)
+[flow8300_native_20env] task 4 trial 08: OK (120/220 steps)
+[flow8300_native_20env] task 4 trial 09: OK (134/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 5 trial 00: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 01: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 03: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 04: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 05: OK (84/220 steps)
+[flow8300_native_20env] task 5 trial 06: OK (96/220 steps)
+[flow8300_native_20env] task 5 trial 07: OK (106/220 steps)
+[flow8300_native_20env] task 5 trial 08: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 09: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 6 trial 00: OK (105/220 steps)
+[flow8300_native_20env] task 6 trial 01: OK (103/220 steps)
+[flow8300_native_20env] task 6 trial 02: OK (100/220 steps)
+[flow8300_native_20env] task 6 trial 03: OK (109/220 steps)
+[flow8300_native_20env] task 6 trial 04: OK (106/220 steps)
+[flow8300_native_20env] task 6 trial 05: OK (111/220 steps)
+[flow8300_native_20env] task 6 trial 06: OK (120/220 steps)
+[flow8300_native_20env] task 6 trial 07: OK (97/220 steps)
+[flow8300_native_20env] task 6 trial 08: OK (105/220 steps)
+[flow8300_native_20env] task 6 trial 09: OK (103/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 7 trial 00: x (220/220 steps)
+[flow8300_native_20env] task 7 trial 01: x (220/220 steps)
+[flow8300_native_20env] task 7 trial 02: OK (120/220 steps)
+[flow8300_native_20env] task 7 trial 03: OK (114/220 steps)
+[flow8300_native_20env] task 7 trial 04: OK (112/220 steps)
+[flow8300_native_20env] task 7 trial 05: OK (111/220 steps)
+[flow8300_native_20env] task 7 trial 06: OK (116/220 steps)
+[flow8300_native_20env] task 7 trial 07: OK (114/220 steps)
+[flow8300_native_20env] task 7 trial 08: OK (125/220 steps)
+[flow8300_native_20env] task 7 trial 09: OK (131/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 8 trial 00: OK (93/220 steps)
+[flow8300_native_20env] task 8 trial 01: OK (99/220 steps)
+[flow8300_native_20env] task 8 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 8 trial 03: OK (92/220 steps)
+[flow8300_native_20env] task 8 trial 04: x (220/220 steps)
+[flow8300_native_20env] task 8 trial 05: OK (96/220 steps)
+[flow8300_native_20env] task 8 trial 06: OK (87/220 steps)
+[flow8300_native_20env] task 8 trial 07: OK (88/220 steps)
+[flow8300_native_20env] task 8 trial 08: OK (94/220 steps)
+[flow8300_native_20env] task 8 trial 09: OK (93/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 9 trial 00: OK (127/220 steps)
+[flow8300_native_20env] task 9 trial 01: OK (112/220 steps)
+[flow8300_native_20env] task 9 trial 02: OK (122/220 steps)
+[flow8300_native_20env] task 9 trial 03: OK (114/220 steps)
+[flow8300_native_20env] task 9 trial 04: OK (114/220 steps)
+[flow8300_native_20env] task 9 trial 05: OK (118/220 steps)
+[flow8300_native_20env] task 9 trial 06: x (220/220 steps)
+[flow8300_native_20env] task 9 trial 07: OK (125/220 steps)
+[flow8300_native_20env] task 9 trial 08: x (220/220 steps)
+[flow8300_native_20env] task 9 trial 09: OK (122/220 steps)
+[flow8300_native_20env] diagnostics: 82/100 ok | fail_at_cap=18 fail_early=0 | succ_median=105.0/220
+--> flow8300_native_20env: 82.0% (220 steps @ 20 Hz = 11.0 s, replan every 10)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  flow8300_native_20env   82.0%
+seed=1: aggregate=82.00% (n=100)
+
+===== BASELINE EVAL seed=2 =====
+[suite] libero_spatial -> baseline_results/seed2/multirate_honest.json
+
+============================================================
+ARM flow8300_native_20env
+============================================================
+[stats] flow8300_native_20env: normalizing with lerobot/libero_spatial_image
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[flow8300_native_20env] task 0 trial 00: OK (74/220 steps)
+[flow8300_native_20env] task 0 trial 01: OK (84/220 steps)
+[flow8300_native_20env] task 0 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 0 trial 03: OK (72/220 steps)
+[flow8300_native_20env] task 0 trial 04: OK (75/220 steps)
+[flow8300_native_20env] task 0 trial 05: OK (71/220 steps)
+[flow8300_native_20env] task 0 trial 06: OK (70/220 steps)
+[flow8300_native_20env] task 0 trial 07: OK (80/220 steps)
+[flow8300_native_20env] task 0 trial 08: OK (74/220 steps)
+[flow8300_native_20env] task 0 trial 09: OK (75/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 1 trial 00: OK (115/220 steps)
+[flow8300_native_20env] task 1 trial 01: OK (103/220 steps)
+[flow8300_native_20env] task 1 trial 02: OK (111/220 steps)
+[flow8300_native_20env] task 1 trial 03: OK (111/220 steps)
+[flow8300_native_20env] task 1 trial 04: OK (115/220 steps)
+[flow8300_native_20env] task 1 trial 05: OK (105/220 steps)
+[flow8300_native_20env] task 1 trial 06: OK (108/220 steps)
+[flow8300_native_20env] task 1 trial 07: OK (105/220 steps)
+[flow8300_native_20env] task 1 trial 08: x (220/220 steps)
+[flow8300_native_20env] task 1 trial 09: OK (111/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 2 trial 00: OK (94/220 steps)
+[flow8300_native_20env] task 2 trial 01: OK (101/220 steps)
+[flow8300_native_20env] task 2 trial 02: OK (91/220 steps)
+[flow8300_native_20env] task 2 trial 03: OK (96/220 steps)
+[flow8300_native_20env] task 2 trial 04: OK (92/220 steps)
+[flow8300_native_20env] task 2 trial 05: OK (102/220 steps)
+[flow8300_native_20env] task 2 trial 06: OK (89/220 steps)
+[flow8300_native_20env] task 2 trial 07: OK (91/220 steps)
+[flow8300_native_20env] task 2 trial 08: OK (113/220 steps)
+[flow8300_native_20env] task 2 trial 09: OK (95/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 3 trial 00: OK (83/220 steps)
+[flow8300_native_20env] task 3 trial 01: OK (95/220 steps)
+[flow8300_native_20env] task 3 trial 02: OK (78/220 steps)
+[flow8300_native_20env] task 3 trial 03: OK (85/220 steps)
+[flow8300_native_20env] task 3 trial 04: x (220/220 steps)
+[flow8300_native_20env] task 3 trial 05: OK (82/220 steps)
+[flow8300_native_20env] task 3 trial 06: OK (89/220 steps)
+[flow8300_native_20env] task 3 trial 07: OK (84/220 steps)
+[flow8300_native_20env] task 3 trial 08: OK (81/220 steps)
+[flow8300_native_20env] task 3 trial 09: OK (84/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 4 trial 00: OK (135/220 steps)
+[flow8300_native_20env] task 4 trial 01: OK (128/220 steps)
+[flow8300_native_20env] task 4 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 4 trial 03: x (220/220 steps)
+[flow8300_native_20env] task 4 trial 04: OK (135/220 steps)
+[flow8300_native_20env] task 4 trial 05: OK (137/220 steps)
+[flow8300_native_20env] task 4 trial 06: OK (139/220 steps)
+[flow8300_native_20env] task 4 trial 07: OK (130/220 steps)
+[flow8300_native_20env] task 4 trial 08: OK (126/220 steps)
+[flow8300_native_20env] task 4 trial 09: OK (131/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 5 trial 00: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 01: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 03: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 04: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 05: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 06: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 07: OK (100/220 steps)
+[flow8300_native_20env] task 5 trial 08: x (220/220 steps)
+[flow8300_native_20env] task 5 trial 09: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 6 trial 00: OK (104/220 steps)
+[flow8300_native_20env] task 6 trial 01: OK (100/220 steps)
+[flow8300_native_20env] task 6 trial 02: OK (102/220 steps)
+[flow8300_native_20env] task 6 trial 03: OK (104/220 steps)
+[flow8300_native_20env] task 6 trial 04: OK (111/220 steps)
+[flow8300_native_20env] task 6 trial 05: OK (106/220 steps)
+[flow8300_native_20env] task 6 trial 06: x (220/220 steps)
+[flow8300_native_20env] task 6 trial 07: OK (100/220 steps)
+[flow8300_native_20env] task 6 trial 08: x (220/220 steps)
+[flow8300_native_20env] task 6 trial 09: OK (97/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 7 trial 00: OK (116/220 steps)
+[flow8300_native_20env] task 7 trial 01: OK (125/220 steps)
+[flow8300_native_20env] task 7 trial 02: OK (124/220 steps)
+[flow8300_native_20env] task 7 trial 03: OK (114/220 steps)
+[flow8300_native_20env] task 7 trial 04: OK (116/220 steps)
+[flow8300_native_20env] task 7 trial 05: OK (111/220 steps)
+[flow8300_native_20env] task 7 trial 06: OK (118/220 steps)
+[flow8300_native_20env] task 7 trial 07: OK (114/220 steps)
+[flow8300_native_20env] task 7 trial 08: OK (129/220 steps)
+[flow8300_native_20env] task 7 trial 09: OK (129/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 8 trial 00: OK (91/220 steps)
+[flow8300_native_20env] task 8 trial 01: OK (97/220 steps)
+[flow8300_native_20env] task 8 trial 02: x (220/220 steps)
+[flow8300_native_20env] task 8 trial 03: OK (95/220 steps)
+[flow8300_native_20env] task 8 trial 04: x (220/220 steps)
+[flow8300_native_20env] task 8 trial 05: x (220/220 steps)
+[flow8300_native_20env] task 8 trial 06: OK (84/220 steps)
+[flow8300_native_20env] task 8 trial 07: OK (91/220 steps)
+[flow8300_native_20env] task 8 trial 08: x (220/220 steps)
+[flow8300_native_20env] task 8 trial 09: OK (93/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[flow8300_native_20env] task 9 trial 00: x (220/220 steps)
+[flow8300_native_20env] task 9 trial 01: OK (115/220 steps)
+[flow8300_native_20env] task 9 trial 02: OK (118/220 steps)
+[flow8300_native_20env] task 9 trial 03: OK (117/220 steps)
+[flow8300_native_20env] task 9 trial 04: OK (116/220 steps)
+[flow8300_native_20env] task 9 trial 05: OK (115/220 steps)
+[flow8300_native_20env] task 9 trial 06: x (220/220 steps)
+[flow8300_native_20env] task 9 trial 07: OK (127/220 steps)
+[flow8300_native_20env] task 9 trial 08: OK (123/220 steps)
+[flow8300_native_20env] task 9 trial 09: OK (114/220 steps)
+[flow8300_native_20env] diagnostics: 78/100 ok | fail_at_cap=22 fail_early=0 | succ_median=103.5/220
+--> flow8300_native_20env: 78.0% (220 steps @ 20 Hz = 11.0 s, replan every 10)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  flow8300_native_20env   78.0%
+seed=2: aggregate=78.00% (n=100)
+
+===== BASELINE SUMMARY: 77.33% +/- 5.03% (n=3 seeds) =====
+{
+  "checkpoint": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_s0/checkpoints/8300",
+  "suite": "libero_spatial",
+  "trials_per_task": 10,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "per_seed": {
+    "0": {
+      "aggregate": 0.72,
+      "n": 100,
+      "source": "baseline_results/seed0/multirate_honest.json"
+    },
+    "1": {
+      "aggregate": 0.8200000000000001,
+      "n": 100,
+      "source": "baseline_results/seed1/multirate_honest.json"
+    },
+    "2": {
+      "aggregate": 0.78,
+      "n": 100,
+      "source": "baseline_results/seed2/multirate_honest.json"
+    }
+  },
+  "mean": 0.7733333333333334,
+  "std": 0.050332229568471706,
+  "std_ddof1_n_seeds": 3
+}
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 18662.09it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6813.64it/s]
+
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 115704.94it/s]
+
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6779.05it/s]
+
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 120699.40it/s]
+
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6964.82it/s]
+
+

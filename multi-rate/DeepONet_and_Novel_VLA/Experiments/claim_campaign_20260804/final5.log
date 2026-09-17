@@ -1,0 +1,6 @@
+[q5] 16:59 q3+q4 clear, starting
+[q5] 16:59 plus n=315 asrc_cadmag_spline_40env
+[q5] 18:44 asrc_cadmag_spline_40env exit=0
+[q5] 18:44 plus n=315 asrc_cadmag_folding_40env
+[q5] 20:33 asrc_cadmag_folding_40env exit=0
+[q5] 20:33 Q5 DONE

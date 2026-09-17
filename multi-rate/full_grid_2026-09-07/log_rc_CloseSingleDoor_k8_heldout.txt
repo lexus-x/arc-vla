@@ -1,0 +1,5 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-CloseSingleDoor_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 9814 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CloseSingleDoor_f0.pt
+[eval] [10/15] native=8 tac_fold=8 tac_fold_satfix=8 qp=8 qp_anchor=8 bspline_eps_raw=8 bspline=8

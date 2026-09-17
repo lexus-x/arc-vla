@@ -1,0 +1,24 @@
+{
+  "policy": "lerobot/diffusion_pusht",
+  "k": 2,
+  "n_episodes": 2,
+  "start_seed": 1000,
+  "arms": {
+    "ctac_position": {
+      "avg_max_reward": 0.65732114792385,
+      "pc_success": 50.0,
+      "avg_sum_reward": 18.559648113688723,
+      "n_success": 1,
+      "n_episodes": 2,
+      "wall_s": 31.437013387680054,
+      "max_rewards": [
+        1.0,
+        0.31464229584770004
+      ],
+      "successes": [
+        true,
+        false
+      ]
+    }
+  }
+}

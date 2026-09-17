@@ -1,0 +1,143 @@
+worker 0/4: suites=['libero_spatial']
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6214.37it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+=== libero_spatial task7 gated ===
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+    [libero_spatial t7 gated ep0] seed=50700 success=True n_stalled=0
+    [libero_spatial t7 gated ep1] seed=50701 success=True n_stalled=1
+    [libero_spatial t7 gated ep2] seed=50702 success=True n_stalled=0
+    [libero_spatial t7 gated ep3] seed=50703 success=True n_stalled=0
+    [libero_spatial t7 gated ep4] seed=50704 success=True n_stalled=0
+    [libero_spatial t7 gated ep5] seed=50705 success=True n_stalled=0
+    [libero_spatial t7 gated ep6] seed=50706 success=True n_stalled=0
+    [libero_spatial t7 gated ep7] seed=50707 success=True n_stalled=1
+    [libero_spatial t7 gated ep8] seed=50708 success=True n_stalled=0
+    [libero_spatial t7 gated ep9] seed=50709 success=False n_stalled=29
+    [libero_spatial t7 gated ep10] seed=50710 success=True n_stalled=0
+    [libero_spatial t7 gated ep11] seed=50711 success=True n_stalled=0
+    [libero_spatial t7 gated ep12] seed=50712 success=True n_stalled=0
+    [libero_spatial t7 gated ep13] seed=50713 success=True n_stalled=0
+    [libero_spatial t7 gated ep14] seed=50714 success=True n_stalled=1
+    [libero_spatial t7 gated ep15] seed=50715 success=True n_stalled=0
+    [libero_spatial t7 gated ep16] seed=50716 success=True n_stalled=0
+    [libero_spatial t7 gated ep17] seed=50717 success=True n_stalled=1
+    [libero_spatial t7 gated ep18] seed=50718 success=True n_stalled=0
+    [libero_spatial t7 gated ep19] seed=50719 success=False n_stalled=54
+=== libero_spatial task7 always_careful ===
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    [libero_spatial t7 always_careful ep0] seed=50700 success=False n_stalled=220
+    [libero_spatial t7 always_careful ep1] seed=50701 success=True n_stalled=127
+    [libero_spatial t7 always_careful ep2] seed=50702 success=True n_stalled=109
+    [libero_spatial t7 always_careful ep3] seed=50703 success=False n_stalled=220
+    [libero_spatial t7 always_careful ep4] seed=50704 success=True n_stalled=124
+    [libero_spatial t7 always_careful ep5] seed=50705 success=False n_stalled=220
+    [libero_spatial t7 always_careful ep6] seed=50706 success=True n_stalled=143
+    [libero_spatial t7 always_careful ep7] seed=50707 success=True n_stalled=131
+    [libero_spatial t7 always_careful ep8] seed=50708 success=True n_stalled=113
+    [libero_spatial t7 always_careful ep9] seed=50709 success=False n_stalled=220
+    [libero_spatial t7 always_careful ep10] seed=50710 success=True n_stalled=119
+    [libero_spatial t7 always_careful ep11] seed=50711 success=False n_stalled=220
+    [libero_spatial t7 always_careful ep12] seed=50712 success=True n_stalled=117
+    [libero_spatial t7 always_careful ep13] seed=50713 success=True n_stalled=117
+    [libero_spatial t7 always_careful ep14] seed=50714 success=True n_stalled=120
+    [libero_spatial t7 always_careful ep15] seed=50715 success=True n_stalled=120
+    [libero_spatial t7 always_careful ep16] seed=50716 success=True n_stalled=142
+    [libero_spatial t7 always_careful ep17] seed=50717 success=True n_stalled=121
+    [libero_spatial t7 always_careful ep18] seed=50718 success=True n_stalled=124
+    [libero_spatial t7 always_careful ep19] seed=50719 success=False n_stalled=220
+=== libero_spatial task8 gated ===
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    [libero_spatial t8 gated ep0] seed=50800 success=True n_stalled=0
+    [libero_spatial t8 gated ep1] seed=50801 success=False n_stalled=95
+    [libero_spatial t8 gated ep2] seed=50802 success=True n_stalled=0
+    [libero_spatial t8 gated ep3] seed=50803 success=True n_stalled=1
+    [libero_spatial t8 gated ep4] seed=50804 success=False n_stalled=42
+    [libero_spatial t8 gated ep5] seed=50805 success=False n_stalled=38
+    [libero_spatial t8 gated ep6] seed=50806 success=True n_stalled=0
+    [libero_spatial t8 gated ep7] seed=50807 success=True n_stalled=0
+    [libero_spatial t8 gated ep8] seed=50808 success=True n_stalled=0
+    [libero_spatial t8 gated ep9] seed=50809 success=False n_stalled=5
+    [libero_spatial t8 gated ep10] seed=50810 success=False n_stalled=6
+    [libero_spatial t8 gated ep11] seed=50811 success=True n_stalled=1
+    [libero_spatial t8 gated ep12] seed=50812 success=True n_stalled=0
+    [libero_spatial t8 gated ep13] seed=50813 success=False n_stalled=40
+    [libero_spatial t8 gated ep14] seed=50814 success=False n_stalled=2
+    [libero_spatial t8 gated ep15] seed=50815 success=True n_stalled=0
+    [libero_spatial t8 gated ep16] seed=50816 success=True n_stalled=0
+    [libero_spatial t8 gated ep17] seed=50817 success=True n_stalled=2
+    [libero_spatial t8 gated ep18] seed=50818 success=False n_stalled=55
+    [libero_spatial t8 gated ep19] seed=50819 success=True n_stalled=0
+=== libero_spatial task8 always_careful ===
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    [libero_spatial t8 always_careful ep0] seed=50800 success=True n_stalled=99
+    [libero_spatial t8 always_careful ep1] seed=50801 success=False n_stalled=220
+    [libero_spatial t8 always_careful ep2] seed=50802 success=True n_stalled=103
+    [libero_spatial t8 always_careful ep3] seed=50803 success=True n_stalled=102
+    [libero_spatial t8 always_careful ep4] seed=50804 success=False n_stalled=220
+    [libero_spatial t8 always_careful ep5] seed=50805 success=True n_stalled=107
+    [libero_spatial t8 always_careful ep6] seed=50806 success=True n_stalled=96
+    [libero_spatial t8 always_careful ep7] seed=50807 success=False n_stalled=220
+    [libero_spatial t8 always_careful ep8] seed=50808 success=True n_stalled=95
+    [libero_spatial t8 always_careful ep9] seed=50809 success=False n_stalled=220
+    [libero_spatial t8 always_careful ep10] seed=50810 success=True n_stalled=103
+    [libero_spatial t8 always_careful ep11] seed=50811 success=True n_stalled=90
+    [libero_spatial t8 always_careful ep12] seed=50812 success=True n_stalled=96
+    [libero_spatial t8 always_careful ep13] seed=50813 success=True n_stalled=96
+    [libero_spatial t8 always_careful ep14] seed=50814 success=True n_stalled=103
+    [libero_spatial t8 always_careful ep15] seed=50815 success=True n_stalled=94
+    [libero_spatial t8 always_careful ep16] seed=50816 success=True n_stalled=101
+    [libero_spatial t8 always_careful ep17] seed=50817 success=True n_stalled=93
+    [libero_spatial t8 always_careful ep18] seed=50818 success=True n_stalled=98
+    [libero_spatial t8 always_careful ep19] seed=50819 success=True n_stalled=89
+worker done
+Exception ignored in: <function MjRenderContext.__del__ at 0x7cda2c3471a0>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7cd94e76e0d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7cda2e89f9d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7cda2e89f9d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7cda2e89f8d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7cda2c347060>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7cd94e76e0d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7cda2e89f9d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7cda2e89f9d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7cda2e89f8d0>,
+	),
+	result = 0
+)

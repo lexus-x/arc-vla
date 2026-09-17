@@ -1,0 +1,16 @@
+{
+  "checkpoint": "/home/user/Desktop/multi-rate/vla-rft/rl_checkpoint_pilot",
+  "suite": "libero_spatial",
+  "trials_per_task": 10,
+  "seed": 0,
+  "rl_pilot_aggregate": 0.7999999999999999,
+  "rl_pilot_n": 100,
+  "baseline_seed0_aggregate": 0.72,
+  "baseline_3seed_mean": 0.7733333333333334,
+  "baseline_3seed_std": 0.050332229568471706,
+  "delta_vs_baseline_mean_pp": 2.6666666666666505,
+  "delta_vs_baseline_seed0_pp": 7.9999999999999964,
+  "noise_floor_2std_pp": 10.066445913694341,
+  "clears_noise_floor_vs_mean": false,
+  "source": "baseline_results/rl_pilot_seed0/multirate_honest.json"
+}

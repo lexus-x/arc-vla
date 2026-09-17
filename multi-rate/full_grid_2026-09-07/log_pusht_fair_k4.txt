@@ -1,0 +1,34 @@
+[PushT-v1] k=4 eligible=719 arms=['original', 'exact_integral', 'cubic_spline_satfix', 'tac_fold_satfix', 'bspline_eps_satfix', 'spline', 'bspline_eps_raw', 'qp', 'qp_anchor']
+[PushT-v1] k=4 [100/719] original=2 exact_integral=0 cubic_spline_satfix=0 tac_fold_satfix=2 bspline_eps_satfix=0 spline=0 bspline_eps_raw=0 qp=2 qp_anchor=1 (381s)
+[PushT-v1] k=4 [200/719] original=2 exact_integral=0 cubic_spline_satfix=0 tac_fold_satfix=3 bspline_eps_satfix=0 spline=0 bspline_eps_raw=0 qp=4 qp_anchor=1 (745s)
+[PushT-v1] k=4 [300/719] original=2 exact_integral=0 cubic_spline_satfix=1 tac_fold_satfix=4 bspline_eps_satfix=1 spline=0 bspline_eps_raw=0 qp=5 qp_anchor=2 (1116s)
+[PushT-v1] k=4 [400/719] original=2 exact_integral=0 cubic_spline_satfix=2 tac_fold_satfix=5 bspline_eps_satfix=1 spline=0 bspline_eps_raw=0 qp=6 qp_anchor=3 (1491s)
+[PushT-v1] k=4 [500/719] original=2 exact_integral=0 cubic_spline_satfix=2 tac_fold_satfix=5 bspline_eps_satfix=1 spline=0 bspline_eps_raw=0 qp=6 qp_anchor=3 (1882s)
+[PushT-v1] k=4 [600/719] original=2 exact_integral=0 cubic_spline_satfix=2 tac_fold_satfix=5 bspline_eps_satfix=1 spline=0 bspline_eps_raw=0 qp=6 qp_anchor=3 (2287s)
+[PushT-v1] k=4 [700/719] original=2 exact_integral=0 cubic_spline_satfix=2 tac_fold_satfix=5 bspline_eps_satfix=1 spline=0 bspline_eps_raw=0 qp=6 qp_anchor=3 (2700s)
+[PushT-v1] k=4 [719/719] original=2 exact_integral=0 cubic_spline_satfix=2 tac_fold_satfix=5 bspline_eps_satfix=1 spline=0 bspline_eps_raw=0 qp=6 qp_anchor=3 (2765s)
+
+=== [PushT-v1] k=4 n=719 ===
+  original                 0.28% (2/719)  saturated_elems=0.00%
+  exact_integral           0.00% (0/719)  saturated_elems=0.00%
+  cubic_spline_satfix      0.28% (2/719)  saturated_elems=0.00%
+  tac_fold_satfix          0.70% (5/719)  saturated_elems=0.00%
+  bspline_eps_satfix       0.14% (1/719)  saturated_elems=0.00%
+  spline                   0.00% (0/719)  saturated_elems=3.45%
+  bspline_eps_raw          0.00% (0/719)  saturated_elems=5.29%
+  qp                       0.83% (6/719)  saturated_elems=0.00%
+  qp_anchor                0.42% (3/719)  saturated_elems=0.00%
+  qp vs exact_integral      : +0.83pp  wins 6/0  p=0.0312  CI=[0.28,1.53]
+  qp_anchor vs exact_integral      : +0.42pp  wins 3/0  p=0.25  CI=[0.00,0.97]
+  qp vs cubic_spline_satfix : +0.56pp  wins 4/0  p=0.125  CI=[0.14,1.11]
+  qp_anchor vs cubic_spline_satfix : +0.14pp  wins 1/0  p=1  CI=[0.00,0.42]
+  qp vs tac_fold_satfix     : +0.14pp  wins 3/2  p=1  CI=[-0.42,0.70]
+  qp_anchor vs tac_fold_satfix     : -0.28pp  wins 0/2  p=0.5  CI=[-0.70,0.00]
+  qp vs bspline_eps_satfix  : +0.70pp  wins 5/0  p=0.0625  CI=[0.14,1.39]
+  qp_anchor vs bspline_eps_satfix  : +0.28pp  wins 2/0  p=0.5  CI=[0.00,0.70]
+  qp vs spline              : +0.83pp  wins 6/0  p=0.0312  CI=[0.28,1.53]
+  qp_anchor vs spline              : +0.42pp  wins 3/0  p=0.25  CI=[0.00,0.97]
+  qp vs bspline_eps_raw     : +0.83pp  wins 6/0  p=0.0312  CI=[0.28,1.53]
+  qp_anchor vs bspline_eps_raw     : +0.42pp  wins 3/0  p=0.25  CI=[0.00,0.97]
+saved -> /home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_fair_replay_PushT-v1_k4.json
+

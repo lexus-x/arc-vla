@@ -1,0 +1,73 @@
+# Checkpoints, models, and weights
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.ckpt
+*.onnx
+*.h5
+*.hdf5
+*.zarr
+**/checkpoints/
+**/*_checkpoints/
+**/pusht_native_dp_run/
+**/stage1_vision_results/
+**/robocasa_data*/
+**/robocasa_data/
+**/runs/
+
+# Archives & datasets
+*.tar.gz
+*.tar
+*.zip
+*.gz
+blackwell2_intern_backup/
+datasets/
+datasets
+data/
+**/hub/
+**/.locks/
+**/datasets--*/
+*.arrow
+
+# Python caches & virtual environments
+**/__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+*numba_cache*
+*.nbc
+*.nbi
+
+# Credentials & secrets
+.mcp.json
+*.key
+*.pem
+*.token
+
+# Claude / IDE / agent caches
+.claude/
+.cline/
+.codex/
+.agents/
+.remember/
+.trash*
+
+# External / separate / embedded repos and large legacy backups
+omni_vla_research/
+trajmdn_vla/
+vla-gap-work/
+Ayush/
+Ayush PH test/
+multi-rate/vla-vault/
+multi-rate/DeepONet_and_Novel_VLA/From_Blackwell/
+multi-rate/DeepONet_and_Novel_VLA/From_Laptop/
+
+# System / logs / temporary
+.DS_Store
+*.swp
+*.tmp
+nohup.out
+core.*

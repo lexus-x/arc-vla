@@ -1,0 +1,38 @@
+{
+  "benchmark": "LIBERO-Spatial",
+  "rate": "40 Hz",
+  "methods": {
+    "operator_fold_arc": {
+      "success": 6,
+      "total": 6,
+      "rate": 1.0
+    },
+    "cubic_spline": {
+      "success": 6,
+      "total": 6,
+      "rate": 1.0
+    },
+    "b_spline": {
+      "success": 3,
+      "total": 6,
+      "rate": 0.5
+    }
+  },
+  "tasks": {
+    "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": {
+      "ours": 0,
+      "cubic": 0,
+      "bspline": 0
+    },
+    "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": {
+      "ours": 0,
+      "cubic": 0,
+      "bspline": 0
+    },
+    "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": {
+      "ours": 0,
+      "cubic": 0,
+      "bspline": 0
+    }
+  }
+}

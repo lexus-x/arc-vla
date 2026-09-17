@@ -1,0 +1,41 @@
+[train] head=deeponet variant=baseline seed=0 out=runs/asrc_combo_ft_s0
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6636.02it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6593.31it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 95325.09it/s]
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 143395.01it/s]
+[train] dataset frames=52970 episodes=432 -> 1 epoch = 1104 steps @ batch 48
+[train] planned frames seen = 192000 = 3.62 epochs
+
+=== stage1 | steps=4000 batch=48 trainable: head=10.46M backbone=0.0M ===
+[stage1] step    199 | mse=0.0978 L1=0.2862 PH=0.0000 RATE=0.0001 total=0.0978 | VRAM=9.9GB | 0.391s/it
+[stage1] step    399 | mse=0.0968 L1=0.2842 PH=0.0000 RATE=0.0001 total=0.0968 | VRAM=9.9GB | 0.392s/it
+[stage1] step    599 | mse=0.0958 L1=0.2808 PH=0.0000 RATE=0.0001 total=0.0959 | VRAM=9.9GB | 0.380s/it
+[stage1] step    799 | mse=0.0943 L1=0.2819 PH=0.0000 RATE=0.0001 total=0.0944 | VRAM=9.9GB | 0.379s/it
+[stage1] step    999 | mse=0.0905 L1=0.2791 PH=0.0000 RATE=0.0001 total=0.0905 | VRAM=9.9GB | 0.392s/it
+[stage1] step   1199 | mse=0.0884 L1=0.2738 PH=0.0000 RATE=0.0001 total=0.0884 | VRAM=9.9GB | 6.524s/it
+[stage1] step   1399 | mse=0.0852 L1=0.2701 PH=0.0000 RATE=0.0001 total=0.0852 | VRAM=9.9GB | 0.382s/it
+[stage1] step   1599 | mse=0.0846 L1=0.2707 PH=0.0000 RATE=0.0001 total=0.0846 | VRAM=9.9GB | 0.388s/it
+[stage1] step   1799 | mse=0.0840 L1=0.2700 PH=0.0000 RATE=0.0001 total=0.0841 | VRAM=9.9GB | 0.378s/it
+[stage1] step   1999 | mse=0.0812 L1=0.2670 PH=0.0000 RATE=0.0001 total=0.0812 | VRAM=9.9GB | 0.392s/it
+[stage1] step   2199 | mse=0.0818 L1=0.2680 PH=0.0000 RATE=0.0001 total=0.0818 | VRAM=9.9GB | 0.378s/it
+[stage1] step   2399 | mse=0.0769 L1=0.2636 PH=0.0000 RATE=0.0001 total=0.0770 | VRAM=9.9GB | 1.210s/it
+[stage1] step   2599 | mse=0.0785 L1=0.2634 PH=0.0000 RATE=0.0001 total=0.0785 | VRAM=9.9GB | 0.380s/it
+[stage1] step   2799 | mse=0.0753 L1=0.2620 PH=0.0000 RATE=0.0001 total=0.0753 | VRAM=9.9GB | 0.400s/it
+[stage1] step   2999 | mse=0.0758 L1=0.2590 PH=0.0000 RATE=0.0001 total=0.0758 | VRAM=9.9GB | 0.400s/it
+[stage1] step   3199 | mse=0.0740 L1=0.2579 PH=0.0000 RATE=0.0001 total=0.0740 | VRAM=9.9GB | 0.397s/it
+[stage1] step   3399 | mse=0.0724 L1=0.2576 PH=0.0000 RATE=0.0001 total=0.0724 | VRAM=9.9GB | 3.278s/it
+[stage1] step   3599 | mse=0.0707 L1=0.2551 PH=0.0000 RATE=0.0001 total=0.0707 | VRAM=9.9GB | 6.216s/it
+[stage1] step   3799 | mse=0.0701 L1=0.2556 PH=0.0000 RATE=0.0001 total=0.0701 | VRAM=9.9GB | 6.822s/it
+[stage1] step   3999 | mse=0.0687 L1=0.2534 PH=0.0000 RATE=0.0001 total=0.0687 | VRAM=9.9GB | 7.650s/it
+[ckpt] saved -> runs/asrc_combo_ft_s0/checkpoints/4000  (EMA weights)
+=== stage2 skipped (0 steps) ===
+
+[train] DONE head=deeponet variant=baseline steps=4000 wall=82.9 min -> runs/asrc_combo_ft_s0

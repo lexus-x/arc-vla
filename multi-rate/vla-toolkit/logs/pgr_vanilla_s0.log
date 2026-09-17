@@ -1,0 +1,225 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  65%|██████▌   | 319/489 [00:00<00:00, 3180.12it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 3433.08it/s]
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[update 0] task=3 attempt=0 rollout=0 success=True progress_final=0.804 reward=1.000 steps=85 n_chunks=85
+[update 0] task=3 attempt=0 rollout=1 success=True progress_final=0.924 reward=1.000 steps=94 n_chunks=94
+[update 0] task=3 attempt=0 rollout=2 success=True progress_final=0.859 reward=1.000 steps=83 n_chunks=83
+[update 0] task=3 attempt=0 rollout=3 success=True progress_final=0.908 reward=1.000 steps=86 n_chunks=86
+[update 0] task=5 attempt=0 rollout=0 success=False progress_final=0.309 reward=0.000 steps=220 n_chunks=220
+[update 0] task=5 attempt=0 rollout=1 success=False progress_final=0.375 reward=0.000 steps=220 n_chunks=220
+[update 0] task=5 attempt=0 rollout=2 success=False progress_final=0.632 reward=0.000 steps=220 n_chunks=220
+[update 0] task=5 attempt=0 rollout=3 success=False progress_final=0.324 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 0: success_rate=0.500 loss=None grad_norm=None elapsed=486s =====
+[update 1] task=3 attempt=0 rollout=0 success=True progress_final=0.871 reward=1.000 steps=85 n_chunks=85
+[update 1] task=3 attempt=0 rollout=1 success=True progress_final=0.914 reward=1.000 steps=105 n_chunks=105
+[update 1] task=3 attempt=0 rollout=2 success=True progress_final=0.841 reward=1.000 steps=79 n_chunks=79
+[update 1] task=3 attempt=0 rollout=3 success=True progress_final=0.888 reward=1.000 steps=92 n_chunks=92
+[update 1] task=5 attempt=0 rollout=0 success=True progress_final=0.779 reward=1.000 steps=106 n_chunks=106
+[update 1] task=5 attempt=0 rollout=1 success=False progress_final=0.300 reward=0.000 steps=220 n_chunks=220
+[update 1] task=5 attempt=0 rollout=2 success=True progress_final=0.834 reward=1.000 steps=96 n_chunks=96
+[update 1] task=5 attempt=0 rollout=3 success=False progress_final=0.296 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 1: success_rate=0.750 loss=0.7226258157012618 grad_norm=120.5833740234375 elapsed=1096s =====
+[update 2] task=3 attempt=0 rollout=0 success=True progress_final=0.864 reward=1.000 steps=83 n_chunks=83
+[update 2] task=3 attempt=0 rollout=1 success=True progress_final=0.874 reward=1.000 steps=96 n_chunks=96
+[update 2] task=3 attempt=0 rollout=2 success=True progress_final=0.850 reward=1.000 steps=83 n_chunks=83
+[update 2] task=3 attempt=0 rollout=3 success=True progress_final=0.887 reward=1.000 steps=86 n_chunks=86
+[update 2] task=5 attempt=0 rollout=0 success=False progress_final=0.281 reward=0.000 steps=220 n_chunks=220
+[update 2] task=5 attempt=0 rollout=1 success=False progress_final=0.337 reward=0.000 steps=220 n_chunks=220
+[update 2] task=5 attempt=0 rollout=2 success=False progress_final=0.291 reward=0.000 steps=220 n_chunks=220
+[update 2] task=5 attempt=0 rollout=3 success=False progress_final=0.255 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 2: success_rate=0.500 loss=None grad_norm=None elapsed=1580s =====
+[update 3] task=3 attempt=0 rollout=0 success=True progress_final=0.862 reward=1.000 steps=90 n_chunks=90
+[update 3] task=3 attempt=0 rollout=1 success=True progress_final=0.898 reward=1.000 steps=93 n_chunks=93
+[update 3] task=3 attempt=0 rollout=2 success=True progress_final=0.861 reward=1.000 steps=85 n_chunks=85
+[update 3] task=3 attempt=0 rollout=3 success=True progress_final=0.901 reward=1.000 steps=88 n_chunks=88
+[update 3] task=5 attempt=0 rollout=0 success=False progress_final=0.326 reward=0.000 steps=220 n_chunks=220
+[update 3] task=5 attempt=0 rollout=1 success=False progress_final=0.593 reward=0.000 steps=220 n_chunks=220
+[update 3] task=5 attempt=0 rollout=2 success=False progress_final=0.303 reward=0.000 steps=220 n_chunks=220
+[update 3] task=5 attempt=0 rollout=3 success=False progress_final=0.379 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 3: success_rate=0.500 loss=None grad_norm=None elapsed=2072s =====
+[update 4] task=3 attempt=0 rollout=0 success=True progress_final=0.861 reward=1.000 steps=93 n_chunks=93
+[update 4] task=3 attempt=0 rollout=1 success=True progress_final=0.879 reward=1.000 steps=94 n_chunks=94
+[update 4] task=3 attempt=0 rollout=2 success=True progress_final=0.840 reward=1.000 steps=81 n_chunks=81
+[update 4] task=3 attempt=0 rollout=3 success=True progress_final=0.902 reward=1.000 steps=87 n_chunks=87
+[update 4] task=5 attempt=0 rollout=0 success=False progress_final=0.430 reward=0.000 steps=220 n_chunks=220
+[update 4] task=5 attempt=0 rollout=1 success=False progress_final=0.413 reward=0.000 steps=220 n_chunks=220
+[update 4] task=5 attempt=0 rollout=2 success=False progress_final=0.430 reward=0.000 steps=220 n_chunks=220
+[update 4] task=5 attempt=0 rollout=3 success=False progress_final=0.715 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 4: success_rate=0.500 loss=None grad_norm=None elapsed=2566s =====
+[update 5] task=3 attempt=0 rollout=0 success=True progress_final=0.859 reward=1.000 steps=93 n_chunks=93
+[update 5] task=3 attempt=0 rollout=1 success=True progress_final=0.932 reward=1.000 steps=93 n_chunks=93
+[update 5] task=3 attempt=0 rollout=2 success=True progress_final=0.866 reward=1.000 steps=84 n_chunks=84
+[update 5] task=3 attempt=0 rollout=3 success=True progress_final=0.924 reward=1.000 steps=86 n_chunks=86
+[update 5] task=5 attempt=0 rollout=0 success=False progress_final=0.338 reward=0.000 steps=220 n_chunks=220
+[update 5] task=5 attempt=0 rollout=1 success=False progress_final=0.256 reward=0.000 steps=220 n_chunks=220
+[update 5] task=5 attempt=0 rollout=2 success=False progress_final=0.632 reward=0.000 steps=220 n_chunks=220
+[update 5] task=5 attempt=0 rollout=3 success=False progress_final=0.454 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 5: success_rate=0.500 loss=None grad_norm=None elapsed=3055s =====
+[update 6] task=3 attempt=0 rollout=0 success=True progress_final=0.880 reward=1.000 steps=91 n_chunks=91
+[update 6] task=3 attempt=0 rollout=1 success=True progress_final=0.867 reward=1.000 steps=97 n_chunks=97
+[update 6] task=3 attempt=0 rollout=2 success=True progress_final=0.885 reward=1.000 steps=82 n_chunks=82
+[update 6] task=3 attempt=0 rollout=3 success=True progress_final=0.893 reward=1.000 steps=84 n_chunks=84
+[update 6] task=5 attempt=0 rollout=0 success=True progress_final=0.842 reward=1.000 steps=94 n_chunks=94
+[update 6] task=5 attempt=0 rollout=1 success=False progress_final=0.527 reward=0.000 steps=220 n_chunks=220
+[update 6] task=5 attempt=0 rollout=2 success=False progress_final=0.728 reward=0.000 steps=220 n_chunks=220
+[update 6] task=5 attempt=0 rollout=3 success=False progress_final=0.519 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 6: success_rate=0.625 loss=0.5530670411311663 grad_norm=104.6993637084961 elapsed=3734s =====
+[update 7] task=3 attempt=0 rollout=0 success=True progress_final=0.855 reward=1.000 steps=85 n_chunks=85
+[update 7] task=3 attempt=0 rollout=1 success=True progress_final=0.876 reward=1.000 steps=89 n_chunks=89
+[update 7] task=3 attempt=0 rollout=2 success=True progress_final=0.837 reward=1.000 steps=85 n_chunks=85
+[update 7] task=3 attempt=0 rollout=3 success=True progress_final=0.943 reward=1.000 steps=84 n_chunks=84
+[update 7] task=5 attempt=0 rollout=0 success=False progress_final=0.411 reward=0.000 steps=220 n_chunks=220
+[update 7] task=5 attempt=0 rollout=1 success=False progress_final=0.367 reward=0.000 steps=220 n_chunks=220
+[update 7] task=5 attempt=0 rollout=2 success=False progress_final=0.272 reward=0.000 steps=220 n_chunks=220
+[update 7] task=5 attempt=0 rollout=3 success=False progress_final=0.566 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 7: success_rate=0.500 loss=None grad_norm=None elapsed=4221s =====
+[update 8] task=3 attempt=0 rollout=0 success=True progress_final=0.850 reward=1.000 steps=90 n_chunks=90
+[update 8] task=3 attempt=0 rollout=1 success=True progress_final=0.827 reward=1.000 steps=87 n_chunks=87
+[update 8] task=3 attempt=0 rollout=2 success=True progress_final=0.892 reward=1.000 steps=77 n_chunks=77
+[update 8] task=3 attempt=0 rollout=3 success=True progress_final=0.919 reward=1.000 steps=91 n_chunks=91
+[update 8] task=5 attempt=0 rollout=0 success=False progress_final=0.343 reward=0.000 steps=220 n_chunks=220
+[update 8] task=5 attempt=0 rollout=1 success=False progress_final=0.336 reward=0.000 steps=220 n_chunks=220
+[update 8] task=5 attempt=0 rollout=2 success=False progress_final=0.278 reward=0.000 steps=220 n_chunks=220
+[update 8] task=5 attempt=0 rollout=3 success=False progress_final=0.203 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 8: success_rate=0.500 loss=None grad_norm=None elapsed=4705s =====
+[update 9] task=3 attempt=0 rollout=0 success=True progress_final=0.869 reward=1.000 steps=89 n_chunks=89
+[update 9] task=3 attempt=0 rollout=1 success=True progress_final=0.875 reward=1.000 steps=94 n_chunks=94
+[update 9] task=3 attempt=0 rollout=2 success=True progress_final=0.873 reward=1.000 steps=83 n_chunks=83
+[update 9] task=3 attempt=0 rollout=3 success=True progress_final=0.932 reward=1.000 steps=85 n_chunks=85
+[update 9] task=5 attempt=0 rollout=0 success=True progress_final=0.840 reward=1.000 steps=95 n_chunks=95
+[update 9] task=5 attempt=0 rollout=1 success=False progress_final=0.375 reward=0.000 steps=220 n_chunks=220
+[update 9] task=5 attempt=0 rollout=2 success=False progress_final=0.315 reward=0.000 steps=220 n_chunks=220
+[update 9] task=5 attempt=0 rollout=3 success=False progress_final=0.529 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 9: success_rate=0.625 loss=0.5356480096349653 grad_norm=107.93155670166016 elapsed=5381s =====
+[update 10] task=3 attempt=0 rollout=0 success=True progress_final=0.798 reward=1.000 steps=87 n_chunks=87
+[update 10] task=3 attempt=0 rollout=1 success=True progress_final=0.845 reward=1.000 steps=91 n_chunks=91
+[update 10] task=3 attempt=0 rollout=2 success=True progress_final=0.876 reward=1.000 steps=87 n_chunks=87
+[update 10] task=3 attempt=0 rollout=3 success=True progress_final=0.873 reward=1.000 steps=87 n_chunks=87
+[update 10] task=5 attempt=0 rollout=0 success=False progress_final=0.390 reward=0.000 steps=220 n_chunks=220
+[update 10] task=5 attempt=0 rollout=1 success=False progress_final=0.303 reward=0.000 steps=220 n_chunks=220
+[update 10] task=5 attempt=0 rollout=2 success=False progress_final=0.342 reward=0.000 steps=220 n_chunks=220
+[update 10] task=5 attempt=0 rollout=3 success=False progress_final=0.798 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 10: success_rate=0.500 loss=None grad_norm=None elapsed=5874s =====
+[update 11] task=3 attempt=0 rollout=0 success=True progress_final=0.857 reward=1.000 steps=88 n_chunks=88
+[update 11] task=3 attempt=0 rollout=1 success=True progress_final=0.864 reward=1.000 steps=93 n_chunks=93
+[update 11] task=3 attempt=0 rollout=2 success=True progress_final=0.862 reward=1.000 steps=81 n_chunks=81
+[update 11] task=3 attempt=0 rollout=3 success=True progress_final=0.893 reward=1.000 steps=90 n_chunks=90
+[update 11] task=5 attempt=0 rollout=0 success=True progress_final=0.909 reward=1.000 steps=89 n_chunks=89
+[update 11] task=5 attempt=0 rollout=1 success=False progress_final=0.370 reward=0.000 steps=220 n_chunks=220
+[update 11] task=5 attempt=0 rollout=2 success=False progress_final=0.274 reward=0.000 steps=220 n_chunks=220
+[update 11] task=5 attempt=0 rollout=3 success=False progress_final=0.282 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 11: success_rate=0.625 loss=0.5795999935695103 grad_norm=109.50020599365234 elapsed=6545s =====
+[update 12] task=3 attempt=0 rollout=0 success=True progress_final=0.817 reward=1.000 steps=86 n_chunks=86
+[update 12] task=3 attempt=0 rollout=1 success=True progress_final=0.921 reward=1.000 steps=91 n_chunks=91
+[update 12] task=3 attempt=0 rollout=2 success=True progress_final=0.819 reward=1.000 steps=78 n_chunks=78
+[update 12] task=3 attempt=0 rollout=3 success=True progress_final=0.940 reward=1.000 steps=86 n_chunks=86
+[update 12] task=5 attempt=0 rollout=0 success=False progress_final=0.263 reward=0.000 steps=220 n_chunks=220
+[update 12] task=5 attempt=0 rollout=1 success=False progress_final=0.257 reward=0.000 steps=220 n_chunks=220
+[update 12] task=5 attempt=0 rollout=2 success=False progress_final=0.745 reward=0.000 steps=220 n_chunks=220
+[update 12] task=5 attempt=0 rollout=3 success=False progress_final=0.252 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 12: success_rate=0.500 loss=None grad_norm=None elapsed=7026s =====
+[update 13] task=3 attempt=0 rollout=0 success=True progress_final=0.877 reward=1.000 steps=89 n_chunks=89
+[update 13] task=3 attempt=0 rollout=1 success=True progress_final=0.897 reward=1.000 steps=96 n_chunks=96
+[update 13] task=3 attempt=0 rollout=2 success=True progress_final=0.865 reward=1.000 steps=80 n_chunks=80
+[update 13] task=3 attempt=0 rollout=3 success=True progress_final=0.903 reward=1.000 steps=87 n_chunks=87
+[update 13] task=5 attempt=0 rollout=0 success=False progress_final=0.544 reward=0.000 steps=220 n_chunks=220
+[update 13] task=5 attempt=0 rollout=1 success=False progress_final=0.315 reward=0.000 steps=220 n_chunks=220
+[update 13] task=5 attempt=0 rollout=2 success=False progress_final=0.314 reward=0.000 steps=220 n_chunks=220
+[update 13] task=5 attempt=0 rollout=3 success=False progress_final=0.292 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 13: success_rate=0.500 loss=None grad_norm=None elapsed=7518s =====
+[update 14] task=3 attempt=0 rollout=0 success=True progress_final=0.856 reward=1.000 steps=88 n_chunks=88
+[update 14] task=3 attempt=0 rollout=1 success=True progress_final=0.909 reward=1.000 steps=95 n_chunks=95
+[update 14] task=3 attempt=0 rollout=2 success=True progress_final=0.850 reward=1.000 steps=89 n_chunks=89
+[update 14] task=3 attempt=0 rollout=3 success=True progress_final=0.917 reward=1.000 steps=85 n_chunks=85
+[update 14] task=5 attempt=0 rollout=0 success=False progress_final=0.426 reward=0.000 steps=220 n_chunks=220
+[update 14] task=5 attempt=0 rollout=1 success=False progress_final=0.270 reward=0.000 steps=220 n_chunks=220
+[update 14] task=5 attempt=0 rollout=2 success=False progress_final=0.312 reward=0.000 steps=220 n_chunks=220
+[update 14] task=5 attempt=0 rollout=3 success=False progress_final=0.320 reward=0.000 steps=220 n_chunks=220
+===== UPDATE 14: success_rate=0.500 loss=None grad_norm=None elapsed=8008s =====
+Saved RL checkpoint to rl_checkpoint/vanilla_s0
+Exception ignored in: <function MjRenderContext.__del__ at 0x71ef6f3987c0>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x71ef48f5dc50>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x71ef490f6450>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x71ef6f398680>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x71ef48f5dc50>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x71ef490f6450>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x71ef6f3987c0>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x71ef48f5dc50>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71ef70db73d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71ef70db73d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x71ef70db72d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x71ef6f398680>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x71ef48f5dc50>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71ef70db73d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71ef70db73d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x71ef70db72d0>,
+	),
+	result = 0
+)

@@ -1,0 +1,26 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_PushT-v1_200.npz
+[data] 200 demos harvested in 0s
+[data] 13352 windows, obs_dim=31, act_dim=6, raw |a|>1 frac=0.128
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PushT-v1.pt
+[eval] [10/100] native=3 zoh=3 spline=3 bspline_eps_raw=1 tac_fold_satfix=3 qp=3 qp_anchor=3
+[eval] [20/100] native=5 zoh=4 spline=6 bspline_eps_raw=1 tac_fold_satfix=4 qp=5 qp_anchor=4
+[eval] [30/100] native=7 zoh=6 spline=7 bspline_eps_raw=2 tac_fold_satfix=6 qp=6 qp_anchor=5
+[eval] [40/100] native=10 zoh=7 spline=10 bspline_eps_raw=2 tac_fold_satfix=8 qp=6 qp_anchor=8
+[eval] [50/100] native=12 zoh=8 spline=14 bspline_eps_raw=2 tac_fold_satfix=11 qp=9 qp_anchor=10
+[eval] [60/100] native=14 zoh=9 spline=18 bspline_eps_raw=5 tac_fold_satfix=14 qp=10 qp_anchor=13
+[eval] [70/100] native=16 zoh=10 spline=20 bspline_eps_raw=6 tac_fold_satfix=19 qp=11 qp_anchor=16
+[eval] [80/100] native=20 zoh=12 spline=26 bspline_eps_raw=9 tac_fold_satfix=25 qp=17 qp_anchor=21
+[eval] [90/100] native=25 zoh=14 spline=29 bspline_eps_raw=10 tac_fold_satfix=27 qp=19 qp_anchor=25
+[eval] [100/100] native=26 zoh=16 spline=32 bspline_eps_raw=11 tac_fold_satfix=30 qp=20 qp_anchor=28
+[eval] wall 3313s for 100 eps x 7 arms
+
+=== PushT-v1 closed-loop DP, k=2, n=100 ===
+  native             26.0% (26/100)  | vs zoh:  +10.0pp p=0.0525
+  zoh                16.0% (16/100)  | vs native:  -10.0pp p=0.0525
+  spline             32.0% (32/100)  | vs zoh:  +16.0pp p=0.0113  | vs native:   +6.0pp p=0.362
+  bspline_eps_raw    11.0% (11/100)  | vs zoh:   -5.0pp p=0.383  | vs native:  -15.0pp p=0.00408
+  tac_fold_satfix    30.0% (30/100)  | vs zoh:  +14.0pp p=0.00661  | vs native:   +4.0pp p=0.541
+  qp                 20.0% (20/100)  | vs zoh:   +4.0pp p=0.481  | vs native:   -6.0pp p=0.263
+  qp_anchor          28.0% (28/100)  | vs zoh:  +12.0pp p=0.0227  | vs native:   +2.0pp p=0.824
+  policy raw |a|>1 frac (pre-clip): 0.073
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PushT-v1_anchor_2ndtask_v2.json

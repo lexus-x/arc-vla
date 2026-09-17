@@ -1,0 +1,26 @@
+[harvest] 50/200
+[harvest] 100/200
+[harvest] 150/200
+[harvest] 200/200
+[data] 200 demos harvested in 396s
+[data] 13352 windows, obs_dim=31, act_dim=6, raw |a|>1 frac=0.128
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PushT-v1.pt
+[eval] [10/100] native=3 zoh=3 bspline_eps_raw=3 bspline_eps05_raw=5
+[eval] [20/100] native=5 zoh=5 bspline_eps_raw=5 bspline_eps05_raw=6
+[eval] [30/100] native=7 zoh=7 bspline_eps_raw=7 bspline_eps05_raw=8
+[eval] [40/100] native=10 zoh=10 bspline_eps_raw=10 bspline_eps05_raw=11
+[eval] [50/100] native=12 zoh=12 bspline_eps_raw=12 bspline_eps05_raw=15
+[eval] [60/100] native=14 zoh=14 bspline_eps_raw=17 bspline_eps05_raw=19
+[eval] [70/100] native=16 zoh=16 bspline_eps_raw=20 bspline_eps05_raw=22
+[eval] [80/100] native=20 zoh=20 bspline_eps_raw=25 bspline_eps05_raw=28
+[eval] [90/100] native=25 zoh=25 bspline_eps_raw=29 bspline_eps05_raw=31
+[eval] [100/100] native=26 zoh=26 bspline_eps_raw=30 bspline_eps05_raw=34
+[eval] wall 1690s for 100 eps x 4 arms
+
+=== PushT-v1 closed-loop DP, k=1, n=100 ===
+  native             26.0% (26/100)  | vs zoh:   +0.0pp p=1
+  zoh                26.0% (26/100)  | vs native:   +0.0pp p=1
+  bspline_eps_raw    30.0% (30/100)  | vs zoh:   +4.0pp p=0.219  | vs native:   +4.0pp p=0.219
+  bspline_eps05_raw   34.0% (34/100)  | vs zoh:   +8.0pp p=0.115  | vs native:   +8.0pp p=0.115
+  policy raw |a|>1 frac (pre-clip): 0.073
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PushT-v1_k1.json

@@ -1,0 +1,22 @@
+{
+  "deeponet_closed_loop": {
+    "successes": 3,
+    "total": 300,
+    "rate": 0.01
+  },
+  "flow_closed_loop": {
+    "successes": 2,
+    "total": 300,
+    "rate": 0.006666666666666667
+  },
+  "deeponet_spline": {
+    "successes": 3,
+    "total": 300,
+    "rate": 0.01
+  },
+  "deeponet_folding": {
+    "successes": 4,
+    "total": 300,
+    "rate": 0.013333333333333334
+  }
+}

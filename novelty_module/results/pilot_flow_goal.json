@@ -1,0 +1,685 @@
+{
+  "_config": {
+    "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_goal_s0/checkpoints/8300",
+    "head": "flow",
+    "n_per_cat": 6,
+    "max_steps": 300,
+    "replan": 5,
+    "consensus_n": 4,
+    "noise_sigma": 0.02,
+    "categories": [
+      "Light Conditions",
+      "Background Textures",
+      "Objects Layout",
+      "Camera Viewpoints"
+    ],
+    "task_sample_seed": 42,
+    "rollout_reset_seed": 0
+  },
+  "arms": {
+    "base": {
+      "Light Conditions": {
+        "per_task": {
+          "2498": {
+            "name": "put_the_cream_cheese_in_the_bowl_light_41",
+            "difficulty": 1,
+            "success": false,
+            "sec": 14.0
+          },
+          "2549": {
+            "name": "put_the_wine_bottle_on_top_of_the_cabinet_light_2",
+            "difficulty": 2,
+            "success": false,
+            "sec": 13.1
+          },
+          "2350": {
+            "name": "open_the_middle_drawer_of_the_cabinet_light_50",
+            "difficulty": 3,
+            "success": false,
+            "sec": 13.1
+          },
+          "2468": {
+            "name": "put_the_bowl_on_the_stove_light_24",
+            "difficulty": 4,
+            "success": false,
+            "sec": 13.1
+          },
+          "2467": {
+            "name": "put_the_bowl_on_the_stove_light_15",
+            "difficulty": 5,
+            "success": false,
+            "sec": 13.1
+          },
+          "2445": {
+            "name": "put_the_bowl_on_the_plate_light_18",
+            "difficulty": null,
+            "success": false,
+            "sec": 13.7
+          }
+        },
+        "average": 0.0
+      },
+      "Background Textures": {
+        "per_task": {
+          "107": {
+            "name": "put_the_bowl_on_the_plate_table_16",
+            "difficulty": 1,
+            "success": false,
+            "sec": 12.8
+          },
+          "184": {
+            "name": "put_the_wine_bottle_on_the_rack_table_10",
+            "difficulty": 2,
+            "success": false,
+            "sec": 13.0
+          },
+          "42": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_table_21",
+            "difficulty": 3,
+            "success": false,
+            "sec": 13.1
+          },
+          "11": {
+            "name": "open_the_middle_drawer_of_the_cabinet_table_22",
+            "difficulty": 4,
+            "success": false,
+            "sec": 12.9
+          },
+          "178": {
+            "name": "put_the_cream_cheese_in_the_bowl_tb_21",
+            "difficulty": 5,
+            "success": false,
+            "sec": 13.1
+          },
+          "115": {
+            "name": "put_the_bowl_on_the_plate_table_3",
+            "difficulty": 1,
+            "success": false,
+            "sec": 13.2
+          }
+        },
+        "average": 0.0
+      },
+      "Objects Layout": {
+        "per_task": {
+          "2197": {
+            "name": "put_the_wine_bottle_on_the_rack_add_6",
+            "difficulty": 1,
+            "success": true,
+            "sec": 8.0
+          },
+          "2243": {
+            "name": "put_the_wine_bottle_on_top_of_the_cabinet_add_8",
+            "difficulty": 2,
+            "success": true,
+            "sec": 6.3
+          },
+          "1892": {
+            "name": "open_the_middle_drawer_of_the_cabinet_add_15",
+            "difficulty": 3,
+            "success": true,
+            "sec": 7.7
+          },
+          "2212": {
+            "name": "put_the_wine_bottle_on_the_rack_moved_level3_sample4",
+            "difficulty": 4,
+            "success": false,
+            "sec": 12.9
+          },
+          "1967": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_moved_level3_sample4",
+            "difficulty": 5,
+            "success": false,
+            "sec": 13.0
+          },
+          "1912": {
+            "name": "open_the_middle_drawer_of_the_cabinet_moved_level1_sample1",
+            "difficulty": 1,
+            "success": true,
+            "sec": 11.0
+          }
+        },
+        "average": 0.6666666666666666
+      },
+      "Camera Viewpoints": {
+        "per_task": {
+          "733": {
+            "name": "put_the_bowl_on_the_stove_view_25_15_100_0_0_initstate_0",
+            "difficulty": 1,
+            "success": false,
+            "sec": 13.0
+          },
+          "1006": {
+            "name": "turn_on_the_stove_view_320_15_100_0_0_initstate_0",
+            "difficulty": 2,
+            "success": false,
+            "sec": 13.2
+          },
+          "861": {
+            "name": "put_the_bowl_on_top_of_the_cabinet_view_66_0_100_0_0_initstate_0",
+            "difficulty": 3,
+            "success": false,
+            "sec": 13.0
+          },
+          "1028": {
+            "name": "put_the_bowl_on_the_plate_view_0_0_184_0_0_initstate_0",
+            "difficulty": 4,
+            "success": false,
+            "sec": 13.8
+          },
+          "806": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_view_48_15_100_0_0_initstate_0",
+            "difficulty": 5,
+            "success": false,
+            "sec": 13.2
+          },
+          "993": {
+            "name": "turn_on_the_stove_view_0_0_100_354_352_initstate_0",
+            "difficulty": 1,
+            "success": false,
+            "sec": 12.9
+          }
+        },
+        "average": 0.0
+      }
+    },
+    "canon": {
+      "Light Conditions": {
+        "per_task": {
+          "2498": {
+            "name": "put_the_cream_cheese_in_the_bowl_light_41",
+            "difficulty": 1,
+            "success": false,
+            "sec": 16.8
+          },
+          "2549": {
+            "name": "put_the_wine_bottle_on_top_of_the_cabinet_light_2",
+            "difficulty": 2,
+            "success": true,
+            "sec": 6.7
+          },
+          "2350": {
+            "name": "open_the_middle_drawer_of_the_cabinet_light_50",
+            "difficulty": 3,
+            "success": false,
+            "sec": 16.3
+          },
+          "2468": {
+            "name": "put_the_bowl_on_the_stove_light_24",
+            "difficulty": 4,
+            "success": false,
+            "sec": 17.1
+          },
+          "2467": {
+            "name": "put_the_bowl_on_the_stove_light_15",
+            "difficulty": 5,
+            "success": false,
+            "sec": 16.8
+          },
+          "2445": {
+            "name": "put_the_bowl_on_the_plate_light_18",
+            "difficulty": null,
+            "success": false,
+            "sec": 17.5
+          }
+        },
+        "average": 0.16666666666666666
+      },
+      "Background Textures": {
+        "per_task": {
+          "107": {
+            "name": "put_the_bowl_on_the_plate_table_16",
+            "difficulty": 1,
+            "success": false,
+            "sec": 16.9
+          },
+          "184": {
+            "name": "put_the_wine_bottle_on_the_rack_table_10",
+            "difficulty": 2,
+            "success": false,
+            "sec": 17.3
+          },
+          "42": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_table_21",
+            "difficulty": 3,
+            "success": false,
+            "sec": 17.5
+          },
+          "11": {
+            "name": "open_the_middle_drawer_of_the_cabinet_table_22",
+            "difficulty": 4,
+            "success": false,
+            "sec": 16.6
+          },
+          "178": {
+            "name": "put_the_cream_cheese_in_the_bowl_tb_21",
+            "difficulty": 5,
+            "success": false,
+            "sec": 16.5
+          },
+          "115": {
+            "name": "put_the_bowl_on_the_plate_table_3",
+            "difficulty": 1,
+            "success": false,
+            "sec": 17.4
+          }
+        },
+        "average": 0.0
+      },
+      "Objects Layout": {
+        "per_task": {
+          "2197": {
+            "name": "put_the_wine_bottle_on_the_rack_add_6",
+            "difficulty": 1,
+            "success": false,
+            "sec": 17.0
+          },
+          "2243": {
+            "name": "put_the_wine_bottle_on_top_of_the_cabinet_add_8",
+            "difficulty": 2,
+            "success": true,
+            "sec": 8.7
+          },
+          "1892": {
+            "name": "open_the_middle_drawer_of_the_cabinet_add_15",
+            "difficulty": 3,
+            "success": true,
+            "sec": 9.7
+          },
+          "2212": {
+            "name": "put_the_wine_bottle_on_the_rack_moved_level3_sample4",
+            "difficulty": 4,
+            "success": false,
+            "sec": 16.7
+          },
+          "1967": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_moved_level3_sample4",
+            "difficulty": 5,
+            "success": false,
+            "sec": 16.6
+          },
+          "1912": {
+            "name": "open_the_middle_drawer_of_the_cabinet_moved_level1_sample1",
+            "difficulty": 1,
+            "success": true,
+            "sec": 9.3
+          }
+        },
+        "average": 0.5
+      },
+      "Camera Viewpoints": {
+        "per_task": {
+          "733": {
+            "name": "put_the_bowl_on_the_stove_view_25_15_100_0_0_initstate_0",
+            "difficulty": 1,
+            "success": false,
+            "sec": 16.6
+          },
+          "1006": {
+            "name": "turn_on_the_stove_view_320_15_100_0_0_initstate_0",
+            "difficulty": 2,
+            "success": false,
+            "sec": 16.6
+          },
+          "861": {
+            "name": "put_the_bowl_on_top_of_the_cabinet_view_66_0_100_0_0_initstate_0",
+            "difficulty": 3,
+            "success": false,
+            "sec": 16.8
+          },
+          "1028": {
+            "name": "put_the_bowl_on_the_plate_view_0_0_184_0_0_initstate_0",
+            "difficulty": 4,
+            "success": false,
+            "sec": 17.7
+          },
+          "806": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_view_48_15_100_0_0_initstate_0",
+            "difficulty": 5,
+            "success": false,
+            "sec": 17.0
+          },
+          "993": {
+            "name": "turn_on_the_stove_view_0_0_100_354_352_initstate_0",
+            "difficulty": 1,
+            "success": false,
+            "sec": 17.4
+          }
+        },
+        "average": 0.0
+      }
+    },
+    "consensus": {
+      "Light Conditions": {
+        "per_task": {
+          "2498": {
+            "name": "put_the_cream_cheese_in_the_bowl_light_41",
+            "difficulty": 1,
+            "success": false,
+            "sec": 38.1
+          },
+          "2549": {
+            "name": "put_the_wine_bottle_on_top_of_the_cabinet_light_2",
+            "difficulty": 2,
+            "success": false,
+            "sec": 37.8
+          },
+          "2350": {
+            "name": "open_the_middle_drawer_of_the_cabinet_light_50",
+            "difficulty": 3,
+            "success": false,
+            "sec": 37.6
+          },
+          "2468": {
+            "name": "put_the_bowl_on_the_stove_light_24",
+            "difficulty": 4,
+            "success": false,
+            "sec": 38.0
+          },
+          "2467": {
+            "name": "put_the_bowl_on_the_stove_light_15",
+            "difficulty": 5,
+            "success": false,
+            "sec": 37.8
+          },
+          "2445": {
+            "name": "put_the_bowl_on_the_plate_light_18",
+            "difficulty": null,
+            "success": false,
+            "sec": 38.6
+          }
+        },
+        "average": 0.0
+      },
+      "Background Textures": {
+        "per_task": {
+          "107": {
+            "name": "put_the_bowl_on_the_plate_table_16",
+            "difficulty": 1,
+            "success": false,
+            "sec": 37.7
+          },
+          "184": {
+            "name": "put_the_wine_bottle_on_the_rack_table_10",
+            "difficulty": 2,
+            "success": false,
+            "sec": 37.9
+          },
+          "42": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_table_21",
+            "difficulty": 3,
+            "success": false,
+            "sec": 37.7
+          },
+          "11": {
+            "name": "open_the_middle_drawer_of_the_cabinet_table_22",
+            "difficulty": 4,
+            "success": false,
+            "sec": 37.5
+          },
+          "178": {
+            "name": "put_the_cream_cheese_in_the_bowl_tb_21",
+            "difficulty": 5,
+            "success": false,
+            "sec": 38.1
+          },
+          "115": {
+            "name": "put_the_bowl_on_the_plate_table_3",
+            "difficulty": 1,
+            "success": false,
+            "sec": 37.9
+          }
+        },
+        "average": 0.0
+      },
+      "Objects Layout": {
+        "per_task": {
+          "2197": {
+            "name": "put_the_wine_bottle_on_the_rack_add_6",
+            "difficulty": 1,
+            "success": false,
+            "sec": 38.3
+          },
+          "2243": {
+            "name": "put_the_wine_bottle_on_top_of_the_cabinet_add_8",
+            "difficulty": 2,
+            "success": true,
+            "sec": 20.9
+          },
+          "1892": {
+            "name": "open_the_middle_drawer_of_the_cabinet_add_15",
+            "difficulty": 3,
+            "success": true,
+            "sec": 18.0
+          },
+          "2212": {
+            "name": "put_the_wine_bottle_on_the_rack_moved_level3_sample4",
+            "difficulty": 4,
+            "success": true,
+            "sec": 20.0
+          },
+          "1967": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_moved_level3_sample4",
+            "difficulty": 5,
+            "success": false,
+            "sec": 38.0
+          },
+          "1912": {
+            "name": "open_the_middle_drawer_of_the_cabinet_moved_level1_sample1",
+            "difficulty": 1,
+            "success": false,
+            "sec": 37.8
+          }
+        },
+        "average": 0.5
+      },
+      "Camera Viewpoints": {
+        "per_task": {
+          "733": {
+            "name": "put_the_bowl_on_the_stove_view_25_15_100_0_0_initstate_0",
+            "difficulty": 1,
+            "success": false,
+            "sec": 37.9
+          },
+          "1006": {
+            "name": "turn_on_the_stove_view_320_15_100_0_0_initstate_0",
+            "difficulty": 2,
+            "success": false,
+            "sec": 37.9
+          },
+          "861": {
+            "name": "put_the_bowl_on_top_of_the_cabinet_view_66_0_100_0_0_initstate_0",
+            "difficulty": 3,
+            "success": false,
+            "sec": 38.1
+          },
+          "1028": {
+            "name": "put_the_bowl_on_the_plate_view_0_0_184_0_0_initstate_0",
+            "difficulty": 4,
+            "success": false,
+            "sec": 38.0
+          },
+          "806": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_view_48_15_100_0_0_initstate_0",
+            "difficulty": 5,
+            "success": false,
+            "sec": 37.9
+          },
+          "993": {
+            "name": "turn_on_the_stove_view_0_0_100_354_352_initstate_0",
+            "difficulty": 1,
+            "success": false,
+            "sec": 38.9
+          }
+        },
+        "average": 0.0
+      }
+    },
+    "canon+consensus": {
+      "Light Conditions": {
+        "per_task": {
+          "2498": {
+            "name": "put_the_cream_cheese_in_the_bowl_light_41",
+            "difficulty": 1,
+            "success": false,
+            "sec": 53.1
+          },
+          "2549": {
+            "name": "put_the_wine_bottle_on_top_of_the_cabinet_light_2",
+            "difficulty": 2,
+            "success": true,
+            "sec": 20.2
+          },
+          "2350": {
+            "name": "open_the_middle_drawer_of_the_cabinet_light_50",
+            "difficulty": 3,
+            "success": false,
+            "sec": 52.3
+          },
+          "2468": {
+            "name": "put_the_bowl_on_the_stove_light_24",
+            "difficulty": 4,
+            "success": false,
+            "sec": 53.8
+          },
+          "2467": {
+            "name": "put_the_bowl_on_the_stove_light_15",
+            "difficulty": 5,
+            "success": false,
+            "sec": 53.7
+          },
+          "2445": {
+            "name": "put_the_bowl_on_the_plate_light_18",
+            "difficulty": null,
+            "success": false,
+            "sec": 55.1
+          }
+        },
+        "average": 0.16666666666666666
+      },
+      "Background Textures": {
+        "per_task": {
+          "107": {
+            "name": "put_the_bowl_on_the_plate_table_16",
+            "difficulty": 1,
+            "success": false,
+            "sec": 55.1
+          },
+          "184": {
+            "name": "put_the_wine_bottle_on_the_rack_table_10",
+            "difficulty": 2,
+            "success": false,
+            "sec": 55.2
+          },
+          "42": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_table_21",
+            "difficulty": 3,
+            "success": false,
+            "sec": 56.5
+          },
+          "11": {
+            "name": "open_the_middle_drawer_of_the_cabinet_table_22",
+            "difficulty": 4,
+            "success": false,
+            "sec": 52.8
+          },
+          "178": {
+            "name": "put_the_cream_cheese_in_the_bowl_tb_21",
+            "difficulty": 5,
+            "success": false,
+            "sec": 52.3
+          },
+          "115": {
+            "name": "put_the_bowl_on_the_plate_table_3",
+            "difficulty": 1,
+            "success": false,
+            "sec": 56.9
+          }
+        },
+        "average": 0.0
+      },
+      "Objects Layout": {
+        "per_task": {
+          "2197": {
+            "name": "put_the_wine_bottle_on_the_rack_add_6",
+            "difficulty": 1,
+            "success": false,
+            "sec": 54.5
+          },
+          "2243": {
+            "name": "put_the_wine_bottle_on_top_of_the_cabinet_add_8",
+            "difficulty": 2,
+            "success": false,
+            "sec": 55.2
+          },
+          "1892": {
+            "name": "open_the_middle_drawer_of_the_cabinet_add_15",
+            "difficulty": 3,
+            "success": false,
+            "sec": 54.4
+          },
+          "2212": {
+            "name": "put_the_wine_bottle_on_the_rack_moved_level3_sample4",
+            "difficulty": 4,
+            "success": true,
+            "sec": 28.7
+          },
+          "1967": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_moved_level3_sample4",
+            "difficulty": 5,
+            "success": false,
+            "sec": 54.4
+          },
+          "1912": {
+            "name": "open_the_middle_drawer_of_the_cabinet_moved_level1_sample1",
+            "difficulty": 1,
+            "success": false,
+            "sec": 52.6
+          }
+        },
+        "average": 0.16666666666666666
+      },
+      "Camera Viewpoints": {
+        "per_task": {
+          "733": {
+            "name": "put_the_bowl_on_the_stove_view_25_15_100_0_0_initstate_0",
+            "difficulty": 1,
+            "success": false,
+            "sec": 55.9
+          },
+          "1006": {
+            "name": "turn_on_the_stove_view_320_15_100_0_0_initstate_0",
+            "difficulty": 2,
+            "success": false,
+            "sec": 53.5
+          },
+          "861": {
+            "name": "put_the_bowl_on_top_of_the_cabinet_view_66_0_100_0_0_initstate_0",
+            "difficulty": 3,
+            "success": false,
+            "sec": 54.2
+          },
+          "1028": {
+            "name": "put_the_bowl_on_the_plate_view_0_0_184_0_0_initstate_0",
+            "difficulty": 4,
+            "success": false,
+            "sec": 53.6
+          },
+          "806": {
+            "name": "open_the_top_drawer_and_put_the_bowl_inside_view_48_15_100_0_0_initstate_0",
+            "difficulty": 5,
+            "success": false,
+            "sec": 54.0
+          },
+          "993": {
+            "name": "turn_on_the_stove_view_0_0_100_354_352_initstate_0",
+            "difficulty": 1,
+            "success": false,
+            "sec": 56.4
+          }
+        },
+        "average": 0.0
+      }
+    }
+  }
+}

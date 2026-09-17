@@ -1,0 +1,36 @@
+{
+  "task": "RC-TurnOffSinkFaucet",
+  "policy": "dp",
+  "k": 2,
+  "n": 2,
+  "train_steps": 50,
+  "arms": [
+    "native",
+    "qp_eps05"
+  ],
+  "success": {
+    "native": [
+      false,
+      false
+    ],
+    "qp_eps05": [
+      false,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.0,
+    "qp_eps05": 0.0
+  },
+  "contrasts": {
+    "native": {},
+    "qp_eps05": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    }
+  }
+}

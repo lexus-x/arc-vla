@@ -1,0 +1,25 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_square_200.npz
+[data] 200 demos harvested in 0s
+[data] 30154 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/fm_square.pt
+[eval] [10/100] native=7 qp_eps05=8 bspline_eps05_raw=6
+[eval] [20/100] native=17 qp_eps05=16 bspline_eps05_raw=16
+[eval] [30/100] native=26 qp_eps05=26 bspline_eps05_raw=26
+[eval] [40/100] native=35 qp_eps05=36 bspline_eps05_raw=36
+[eval] [50/100] native=42 qp_eps05=43 bspline_eps05_raw=43
+[eval] [60/100] native=51 qp_eps05=53 bspline_eps05_raw=52
+[eval] [70/100] native=57 qp_eps05=61 bspline_eps05_raw=59
+[eval] [80/100] native=65 qp_eps05=69 bspline_eps05_raw=66
+[eval] [90/100] native=75 qp_eps05=78 bspline_eps05_raw=76
+[eval] [100/100] native=84 qp_eps05=86 bspline_eps05_raw=84
+[eval] wall 935s for 100 eps x 3 arms
+
+=== square closed-loop FM, k=1, n=100 ===
+  native             84.0% (84/100)
+  qp_eps05           86.0% (86/100)  | vs native:   +2.0pp p=0.791
+  bspline_eps05_raw   84.0% (84/100)  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_fm_square_k1_t1x.json

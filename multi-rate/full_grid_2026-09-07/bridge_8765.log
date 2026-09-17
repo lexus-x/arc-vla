@@ -1,0 +1,59 @@
+[bridge] listening on 127.0.0.1:8765
+[bridge] client connected ('127.0.0.1', 41786)
+[robosuite WARNING] No private macro file found! (macros.py:57)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+[robosuite WARNING] To setup, run: python /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (macros.py:59)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+[robosuite WARNING] No private macro file found! (macros.py:28)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:29)
+[robosuite WARNING] To setup, run: python /home/user/Isaac-GR00T/external_dependencies/robocasa/robocasa/scripts/setup_macros.py (macros.py:30)
+[robosuite INFO] Loading controller configuration from: /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/lib/python3.10/site-packages/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: []
+using obs modality: rgb with keys: []
+[bridge] client connected ('127.0.0.1', 46928)
+[bridge] client connected ('127.0.0.1', 58962)
+[bridge] client connected ('127.0.0.1', 58970)
+[bridge] client connected ('127.0.0.1', 58976)
+[bridge] client connected ('127.0.0.1', 58984)
+[bridge] client connected ('127.0.0.1', 55114)
+[bridge] client connected ('127.0.0.1', 55128)
+[bridge] client connected ('127.0.0.1', 59804)
+[bridge] client connected ('127.0.0.1', 37710)
+[bridge] client connected ('127.0.0.1', 50082)
+[bridge] client connected ('127.0.0.1', 39778)
+[bridge] client connected ('127.0.0.1', 42102)
+[bridge] client connected ('127.0.0.1', 33452)
+[bridge] client connected ('127.0.0.1', 54724)
+[robosuite INFO] Loading controller configuration from: /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/lib/python3.10/site-packages/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: []
+using obs modality: rgb with keys: []
+[bridge] client connected ('127.0.0.1', 33188)
+[robosuite INFO] Loading controller configuration from: /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/lib/python3.10/site-packages/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: []
+using obs modality: rgb with keys: []
+[bridge] client connected ('127.0.0.1', 41556)
+[bridge] client connected ('127.0.0.1', 46394)
+[bridge] client connected ('127.0.0.1', 38596)
+[bridge] client connected ('127.0.0.1', 49078)
+[bridge] client connected ('127.0.0.1', 57688)
+[bridge] client connected ('127.0.0.1', 37218)
+[bridge] client connected ('127.0.0.1', 43948)
+[robosuite INFO] Loading controller configuration from: /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/lib/python3.10/site-packages/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: []
+using obs modality: rgb with keys: []
+[bridge] client connected ('127.0.0.1', 36740)
+[bridge] client connected ('127.0.0.1', 36742)

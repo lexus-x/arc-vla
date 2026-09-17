@@ -1,0 +1,67 @@
+{
+  "rate_hz": 20,
+  "n_total": 250,
+  "deeponet_ours_sr": 0.936,
+  "deeponet_spline_sr": 0.936,
+  "delta_pp": 0.0,
+  "deeponet_ours_success": 234,
+  "deeponet_spline_success": 234,
+  "task_breakdown": [
+    {
+      "task_name": "PickCube-v1",
+      "rate_hz": 20,
+      "n_episodes": 50,
+      "ours_success": 49,
+      "spline_success": 49,
+      "ours_sr": 0.98,
+      "spline_sr": 0.98,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "LiftPegUpright-v1",
+      "rate_hz": 20,
+      "n_episodes": 50,
+      "ours_success": 48,
+      "spline_success": 48,
+      "ours_sr": 0.96,
+      "spline_sr": 0.96,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "PullCube-v1",
+      "rate_hz": 20,
+      "n_episodes": 50,
+      "ours_success": 50,
+      "spline_success": 50,
+      "ours_sr": 1.0,
+      "spline_sr": 1.0,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "StackCube-v1",
+      "rate_hz": 20,
+      "n_episodes": 50,
+      "ours_success": 45,
+      "spline_success": 45,
+      "ours_sr": 0.9,
+      "spline_sr": 0.9,
+      "delta_pp": 0.0,
+      "frames": null
+    },
+    {
+      "task_name": "PokeCube-v1",
+      "rate_hz": 20,
+      "n_episodes": 50,
+      "ours_success": 42,
+      "spline_success": 42,
+      "ours_sr": 0.84,
+      "spline_sr": 0.84,
+      "delta_pp": 0.0,
+      "frames": null
+    }
+  ],
+  "video_path": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/deeponet_maniskill_20hz_ours_vs_spline.mp4"
+}

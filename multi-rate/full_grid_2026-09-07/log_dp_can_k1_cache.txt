@@ -1,0 +1,10 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+Traceback (most recent call last):
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 312, in <module>
+    main()
+  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/harness.py", line 245, in main
+    tmp = f"{cache}.{os.getpid()}.tmp"; np.savez(tmp, O=np.array(O, dtype=object), A=np.array(A, dtype=object)); os.replace(tmp, cache)
+                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_can_200.npz.343842.tmp' -> '/home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_can_200.npz'

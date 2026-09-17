@@ -1,0 +1,41 @@
+[
+ {
+  "trial": 0,
+  "summary": {
+   "steps": 220,
+   "success_step": null,
+   "net_disp_m": 0.4402689638991333,
+   "late_2s_disp_m": 0.09236526384498198,
+   "late_2s_cmd_sum": 18.48207051306963,
+   "max_obj_lift_m": 0.3534224175217475,
+   "grip_min": -0.0004327524489565282,
+   "grip_max": 0.013415999310510742
+  }
+ },
+ {
+  "trial": 1,
+  "summary": {
+   "steps": 220,
+   "success_step": null,
+   "net_disp_m": 0.4465325856477471,
+   "late_2s_disp_m": 0.1416211202582745,
+   "late_2s_cmd_sum": 22.0675146356225,
+   "max_obj_lift_m": 0.28338258584670073,
+   "grip_min": -0.006353031676313577,
+   "grip_max": 0.004089509716397553
+  }
+ },
+ {
+  "trial": 2,
+  "summary": {
+   "steps": 220,
+   "success_step": null,
+   "net_disp_m": 0.3419457624615937,
+   "late_2s_disp_m": 0.02269062231966591,
+   "late_2s_cmd_sum": 10.758939631283283,
+   "max_obj_lift_m": 0.2539999249275463,
+   "grip_min": -0.007521159892679735,
+   "grip_max": 0.013838062836148607
+  }
+ }
+]

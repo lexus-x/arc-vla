@@ -1,0 +1,54 @@
+[suite] libero_spatial -> h2h_don_v2_native_20env_out/multirate_honest.json
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+
+============================================================
+ARM don_v2_native_20env
+============================================================
+[stats] don_v2_native_20env: normalizing with lerobot/libero_spatial_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 96420.78it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8830.65it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8790.41it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+Traceback (most recent call last):
+  File "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/evaluate_multirate_honest.py", line 676, in <module>
+    main()
+  File "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/evaluate_multirate_honest.py", line 667, in main
+    build_arm(arm, args.trials_per_task, out_dir, results, args.suite, results_name)
+  File "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/evaluate_multirate_honest.py", line 320, in build_arm
+    policy, (preprocessor, postprocessor) = screen.load_policy(backbone, checkpoint, stats)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/evaluate_height_screen.py", line 114, in load_policy
+    policy = SmolVLADeepONetPolicy.from_pretrained(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/lerobot/src/lerobot/policies/pretrained.py", line 111, in from_pretrained
+    policy = cls._load_as_safetensor(instance, model_file, config.device, strict)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/lerobot/src/lerobot/policies/pretrained.py", line 145, in _load_as_safetensor
+    missing_keys, unexpected_keys = load_model_as_safetensor(model, model_file, **kwargs)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/safetensors/torch.py", line 224, in load_model
+    missing, unexpected = model.load_state_dict(state_dict, strict=False)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2635, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for SmolVLADeepONetPolicy:
+	size mismatch for model.deeponet.branch.0.weight: copying a param with shape torch.Size([1024, 960]) from checkpoint, the shape in current model is torch.Size([768, 4096]).
+	size mismatch for model.deeponet.branch.0.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for model.deeponet.branch.1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for model.deeponet.branch.1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for model.deeponet.branch.3.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([64, 768]).
+	size mismatch for model.deeponet.branch.3.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for model.deeponet.trunk.4.weight: copying a param with shape torch.Size([256, 256]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for model.deeponet.trunk.4.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([64]).

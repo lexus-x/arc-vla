@@ -1,0 +1,246 @@
+{
+  "name": "vanilla_s0",
+  "ckpt": "/home/user/Desktop/multi-rate/vla-toolkit/rl_checkpoint/vanilla_s0",
+  "records": [
+    {
+      "task_id": 3,
+      "episode": 0,
+      "seed": 9003000,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 1,
+      "seed": 9003001,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 2,
+      "seed": 9003002,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 3,
+      "seed": 9003003,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 4,
+      "seed": 9003004,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 5,
+      "seed": 9003005,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 6,
+      "seed": 9003006,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 7,
+      "seed": 9003007,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 8,
+      "seed": 9003008,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 9,
+      "seed": 9003009,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 10,
+      "seed": 9003010,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 11,
+      "seed": 9003011,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 12,
+      "seed": 9003012,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 13,
+      "seed": 9003013,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 14,
+      "seed": 9003014,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 15,
+      "seed": 9003015,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 16,
+      "seed": 9003016,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 17,
+      "seed": 9003017,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 18,
+      "seed": 9003018,
+      "success": true
+    },
+    {
+      "task_id": 3,
+      "episode": 19,
+      "seed": 9003019,
+      "success": true
+    },
+    {
+      "task_id": 5,
+      "episode": 0,
+      "seed": 9005000,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 1,
+      "seed": 9005001,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 2,
+      "seed": 9005002,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 3,
+      "seed": 9005003,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 4,
+      "seed": 9005004,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 5,
+      "seed": 9005005,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 6,
+      "seed": 9005006,
+      "success": true
+    },
+    {
+      "task_id": 5,
+      "episode": 7,
+      "seed": 9005007,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 8,
+      "seed": 9005008,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 9,
+      "seed": 9005009,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 10,
+      "seed": 9005010,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 11,
+      "seed": 9005011,
+      "success": true
+    },
+    {
+      "task_id": 5,
+      "episode": 12,
+      "seed": 9005012,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 13,
+      "seed": 9005013,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 14,
+      "seed": 9005014,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 15,
+      "seed": 9005015,
+      "success": true
+    },
+    {
+      "task_id": 5,
+      "episode": 16,
+      "seed": 9005016,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 17,
+      "seed": 9005017,
+      "success": false
+    },
+    {
+      "task_id": 5,
+      "episode": 18,
+      "seed": 9005018,
+      "success": true
+    },
+    {
+      "task_id": 5,
+      "episode": 19,
+      "seed": 9005019,
+      "success": true
+    }
+  ]
+}

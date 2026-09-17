@@ -1,0 +1,28 @@
+[data] 39 demos harvested in 13s
+[data] 8151 windows, obs_dim=124, act_dim=12, raw |a|>1 frac=0.000
+[train] step 1/15000 loss=1.12033
+[train] step 2000/15000 loss=0.01779
+[train] step 4000/15000 loss=0.01055
+[train] step 6000/15000 loss=0.00908
+[train] step 8000/15000 loss=0.00517
+[train] step 10000/15000 loss=0.00648
+[train] step 12000/15000 loss=0.00344
+[train] step 14000/15000 loss=0.00260
+[train] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-OpenDrawer.pt
+[eval] [10/15] native=3 zoh=2 spline=3 spline_satfix=3 pchip=3 pchip_satfix=3 tac_fold=2 tac_fold_satfix=2 bspline=3 bspline_satfix=2
+[eval] [15/15] native=6 zoh=5 spline=6 spline_satfix=6 pchip=6 pchip_satfix=6 tac_fold=5 tac_fold_satfix=5 bspline=6 bspline_satfix=5
+[eval] wall 3804s for 15 eps x 10 arms
+
+=== RC-OpenDrawer closed-loop DP, k=2, n=15 ===
+  native             40.0% (6/15)  | vs zoh:   +6.7pp p=1
+  zoh                33.3% (5/15)  | vs native:   -6.7pp p=1
+  spline             40.0% (6/15)  | vs zoh:   +6.7pp p=1  | vs native:   +0.0pp p=1
+  spline_satfix      40.0% (6/15)  | vs zoh:   +6.7pp p=1  | vs native:   +0.0pp p=1
+  pchip              40.0% (6/15)  | vs zoh:   +6.7pp p=1  | vs native:   +0.0pp p=1
+  pchip_satfix       40.0% (6/15)  | vs zoh:   +6.7pp p=1  | vs native:   +0.0pp p=1
+  tac_fold           33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  tac_fold_satfix    33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  bspline            40.0% (6/15)  | vs zoh:   +6.7pp p=1  | vs native:   +0.0pp p=1
+  bspline_satfix     33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-OpenDrawer.json

@@ -1,0 +1,31 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] 200 demos harvested in 0s
+[data] 30154 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_square.pt
+[eval] [10/100] native=10 zoh=8 spline=7 spline_satfix=8 pchip=8 pchip_satfix=9 tac_fold=9 tac_fold_satfix=9 bspline=8 bspline_satfix=9
+[eval] [20/100] native=19 zoh=17 spline=16 spline_satfix=17 pchip=18 pchip_satfix=18 tac_fold=18 tac_fold_satfix=19 bspline=18 bspline_satfix=18
+[eval] [30/100] native=27 zoh=26 spline=25 spline_satfix=26 pchip=27 pchip_satfix=27 tac_fold=27 tac_fold_satfix=28 bspline=27 bspline_satfix=27
+[eval] [40/100] native=37 zoh=36 spline=34 spline_satfix=36 pchip=37 pchip_satfix=37 tac_fold=37 tac_fold_satfix=37 bspline=36 bspline_satfix=37
+[eval] [50/100] native=46 zoh=45 spline=43 spline_satfix=45 pchip=46 pchip_satfix=46 tac_fold=46 tac_fold_satfix=46 bspline=45 bspline_satfix=46
+[eval] [60/100] native=54 zoh=53 spline=52 spline_satfix=54 pchip=54 pchip_satfix=54 tac_fold=55 tac_fold_satfix=55 bspline=54 bspline_satfix=56
+[eval] [70/100] native=63 zoh=62 spline=60 spline_satfix=62 pchip=62 pchip_satfix=62 tac_fold=63 tac_fold_satfix=64 bspline=61 bspline_satfix=64
+[eval] [80/100] native=72 zoh=70 spline=67 spline_satfix=71 pchip=71 pchip_satfix=70 tac_fold=70 tac_fold_satfix=72 bspline=69 bspline_satfix=72
+[eval] [90/100] native=80 zoh=77 spline=75 spline_satfix=79 pchip=79 pchip_satfix=78 tac_fold=78 tac_fold_satfix=80 bspline=79 bspline_satfix=79
+[eval] [100/100] native=89 zoh=86 spline=84 spline_satfix=89 pchip=89 pchip_satfix=86 tac_fold=87 tac_fold_satfix=88 bspline=88 bspline_satfix=88
+[eval] wall 2214s for 100 eps x 10 arms
+
+=== square closed-loop DP, k=2, n=100 ===
+  native             89.0% (89/100)  | vs zoh:   +3.0pp p=0.549
+  zoh                86.0% (86/100)  | vs native:   -3.0pp p=0.549
+  spline             84.0% (84/100)  | vs zoh:   -2.0pp p=0.754  | vs native:   -5.0pp p=0.227
+  spline_satfix      89.0% (89/100)  | vs zoh:   +3.0pp p=0.453  | vs native:   +0.0pp p=1
+  pchip              89.0% (89/100)  | vs zoh:   +3.0pp p=0.453  | vs native:   +0.0pp p=1
+  pchip_satfix       86.0% (86/100)  | vs zoh:   +0.0pp p=1  | vs native:   -3.0pp p=0.549
+  tac_fold           87.0% (87/100)  | vs zoh:   +1.0pp p=1  | vs native:   -2.0pp p=0.727
+  tac_fold_satfix    88.0% (88/100)  | vs zoh:   +2.0pp p=0.688  | vs native:   -1.0pp p=1
+  bspline            88.0% (88/100)  | vs zoh:   +2.0pp p=0.774  | vs native:   -1.0pp p=1
+  bspline_satfix     88.0% (88/100)  | vs zoh:   +2.0pp p=0.625  | vs native:   -1.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_square.json

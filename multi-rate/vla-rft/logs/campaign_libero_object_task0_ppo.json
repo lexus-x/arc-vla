@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "suite": "libero_object",
+    "task_id": 0,
+    "task_description": "pick up the alphabet soup and place it in the basket",
+    "arm": "ppo",
+    "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_object_s0/checkpoints/8300",
+    "n_episodes": 20,
+    "group_size": 4,
+    "n_groups": 5,
+    "seed_range": [
+      60040,
+      60059
+    ],
+    "safety_metric": "max_joint_speed/max_joint_jerk over robot arm qvel (robosuite sim.data.qvel), rho_safe = SAFE_JOINT_SPEED_BOUND - max_joint_speed. Replaces smoke_results_v3.json's static-distractor-displacement proxy -- see module docstring.",
+    "safe_joint_speed_bound": 2.0,
+    "elapsed_s": 1477.449728012085
+  },
+  "records": [
+    {
+      "arm": "ppo",
+      "episode": 0,
+      "seed": 60040,
+      "group": 0,
+      "success": false,
+      "max_joint_speed": 0.6866397052515207,
+      "max_joint_jerk": 0.4141848785201593,
+      "rho_safe": 1.3133602947484793,
+      "steps": 280
+    },
+    {
+      "arm": "ppo",
+      "episode": 1,
+      "seed": 60041,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 1.0311772070918364,
+      "max_joint_jerk": 0.3425172442120042,
+      "rho_safe": 0.9688227929081636,
+      "steps": 143
+    },
+    {
+      "arm": "ppo",
+      "episode": 2,
+      "seed": 60042,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 0.8618822380325454,
+      "max_joint_jerk": 0.37905055793080555,
+      "rho_safe": 1.1381177619674547,
+      "steps": 161
+    },
+    {
+      "arm": "ppo",
+      "episode": 3,
+      "seed": 60043,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 0.8932651166815246,
+      "max_joint_jerk": 0.4644375762099141,
+      "rho_safe": 1.1067348833184754,
+      "steps": 143
+    },
+    {
+      "arm": "ppo",
+      "episode": 4,
+      "seed": 60044,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 1.0636469895534522,
+      "max_joint_jerk": 0.461793463339734,
+      "rho_safe": 0.9363530104465478,
+      "steps": 125
+    },
+    {
+      "arm": "ppo",
+      "episode": 5,
+      "seed": 60045,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 0.9901763483519834,
+      "max_joint_jerk": 0.2353920097544479,
+      "rho_safe": 1.0098236516480166,
+      "steps": 144
+    },
+    {
+      "arm": "ppo",
+      "episode": 6,
+      "seed": 60046,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 1.0060361771441442,
+      "max_joint_jerk": 0.39779209862587983,
+      "rho_safe": 0.9939638228558558,
+      "steps": 244
+    },
+    {
+      "arm": "ppo",
+      "episode": 7,
+      "seed": 60047,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 0.9551401729932636,
+      "max_joint_jerk": 0.400442569309449,
+      "rho_safe": 1.0448598270067364,
+      "steps": 198
+    },
+    {
+      "arm": "ppo",
+      "episode": 8,
+      "seed": 60048,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 1.1349161259990939,
+      "max_joint_jerk": 0.27730351345420945,
+      "rho_safe": 0.8650838740009061,
+      "steps": 153
+    },
+    {
+      "arm": "ppo",
+      "episode": 9,
+      "seed": 60049,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 0.9337503294925489,
+      "max_joint_jerk": 0.27412038007485745,
+      "rho_safe": 1.0662496705074511,
+      "steps": 196
+    },
+    {
+      "arm": "ppo",
+      "episode": 10,
+      "seed": 60050,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 0.8657469362429745,
+      "max_joint_jerk": 0.41154827173424424,
+      "rho_safe": 1.1342530637570256,
+      "steps": 140
+    },
+    {
+      "arm": "ppo",
+      "episode": 11,
+      "seed": 60051,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 0.9984955572104949,
+      "max_joint_jerk": 0.28631835148106566,
+      "rho_safe": 1.0015044427895052,
+      "steps": 164
+    },
+    {
+      "arm": "ppo",
+      "episode": 12,
+      "seed": 60052,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 0.8920958922564647,
+      "max_joint_jerk": 0.25234240312565626,
+      "rho_safe": 1.1079041077435354,
+      "steps": 163
+    },
+    {
+      "arm": "ppo",
+      "episode": 13,
+      "seed": 60053,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 0.9783573598186993,
+      "max_joint_jerk": 0.23781544533269705,
+      "rho_safe": 1.0216426401813008,
+      "steps": 146
+    },
+    {
+      "arm": "ppo",
+      "episode": 14,
+      "seed": 60054,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 0.9377273241025244,
+      "max_joint_jerk": 0.33204967098111215,
+      "rho_safe": 1.0622726758974756,
+      "steps": 172
+    },
+    {
+      "arm": "ppo",
+      "episode": 15,
+      "seed": 60055,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 0.9907909968837132,
+      "max_joint_jerk": 0.35132954551702206,
+      "rho_safe": 1.0092090031162868,
+      "steps": 163
+    },
+    {
+      "arm": "ppo",
+      "episode": 16,
+      "seed": 60056,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 0.8873769975852462,
+      "max_joint_jerk": 0.2543924693520351,
+      "rho_safe": 1.1126230024147539,
+      "steps": 145
+    },
+    {
+      "arm": "ppo",
+      "episode": 17,
+      "seed": 60057,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 0.89575702462199,
+      "max_joint_jerk": 0.2163009545661997,
+      "rho_safe": 1.10424297537801,
+      "steps": 170
+    },
+    {
+      "arm": "ppo",
+      "episode": 18,
+      "seed": 60058,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 0.8547142126625233,
+      "max_joint_jerk": 0.26301689269410283,
+      "rho_safe": 1.1452857873374767,
+      "steps": 159
+    },
+    {
+      "arm": "ppo",
+      "episode": 19,
+      "seed": 60059,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 1.0199653424021138,
+      "max_joint_jerk": 0.6311203730354956,
+      "rho_safe": 0.9800346575978862,
+      "steps": 138
+    }
+  ],
+  "update_log": [
+    {
+      "group": 0,
+      "success_rate": 0.75,
+      "stats": {
+        "n_transitions": 727,
+        "epochs": [
+          {
+            "epoch": 0,
+            "n_transitions": 727,
+            "loss": 0.312102684620486,
+            "grad_norm": 140.8997344970703
+          },
+          {
+            "epoch": 1,
+            "n_transitions": 727,
+            "loss": 0.2898644970773503,
+            "grad_norm": 428.3533020019531
+          },
+          {
+            "epoch": 2,
+            "n_transitions": 727,
+            "loss": 0.2771473521908119,
+            "grad_norm": 538.95068359375
+          },
+          {
+            "epoch": 3,
+            "n_transitions": 727,
+            "loss": 0.2641131024800108,
+            "grad_norm": 568.6860961914062
+          }
+        ]
+      }
+    },
+    {
+      "group": 1,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "epochs": []
+      }
+    },
+    {
+      "group": 2,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "epochs": []
+      }
+    },
+    {
+      "group": 3,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "epochs": []
+      }
+    },
+    {
+      "group": 4,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "epochs": []
+      }
+    }
+  ]
+}

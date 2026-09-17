@@ -1,0 +1,1430 @@
+[
+  {
+    "fail_id": "t0_ep1_seed20000001",
+    "task_id": 0,
+    "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+    "seed": 20000001,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep1_seed20000001/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep1_seed20000001/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep1_seed20000001/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep1_seed20000001/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep1_seed20000001/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep1_seed20000001/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep1_seed20000001/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep1_seed20000001/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep1_seed20000001/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep1_seed20000001/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t0_ep2_seed20000002",
+    "task_id": 0,
+    "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+    "seed": 20000002,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep2_seed20000002/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep2_seed20000002/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep2_seed20000002/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep2_seed20000002/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep2_seed20000002/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep2_seed20000002/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep2_seed20000002/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep2_seed20000002/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep2_seed20000002/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep2_seed20000002/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t0_ep3_seed20000003",
+    "task_id": 0,
+    "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+    "seed": 20000003,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep3_seed20000003/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep3_seed20000003/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep3_seed20000003/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep3_seed20000003/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep3_seed20000003/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep3_seed20000003/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep3_seed20000003/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep3_seed20000003/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep3_seed20000003/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep3_seed20000003/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t0_ep4_seed20000004",
+    "task_id": 0,
+    "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+    "seed": 20000004,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep4_seed20000004/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep4_seed20000004/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep4_seed20000004/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep4_seed20000004/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep4_seed20000004/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep4_seed20000004/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep4_seed20000004/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep4_seed20000004/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep4_seed20000004/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep4_seed20000004/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t0_ep5_seed20000005",
+    "task_id": 0,
+    "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+    "seed": 20000005,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep5_seed20000005/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep5_seed20000005/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep5_seed20000005/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep5_seed20000005/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep5_seed20000005/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep5_seed20000005/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep5_seed20000005/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep5_seed20000005/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep5_seed20000005/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep5_seed20000005/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t0_ep6_seed20000006",
+    "task_id": 0,
+    "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+    "seed": 20000006,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep6_seed20000006/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep6_seed20000006/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep6_seed20000006/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep6_seed20000006/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep6_seed20000006/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep6_seed20000006/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep6_seed20000006/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep6_seed20000006/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep6_seed20000006/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep6_seed20000006/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t0_ep7_seed20000007",
+    "task_id": 0,
+    "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+    "seed": 20000007,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep7_seed20000007/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep7_seed20000007/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep7_seed20000007/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep7_seed20000007/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep7_seed20000007/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep7_seed20000007/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep7_seed20000007/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep7_seed20000007/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep7_seed20000007/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep7_seed20000007/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t0_ep9_seed20000009",
+    "task_id": 0,
+    "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+    "seed": 20000009,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep9_seed20000009/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep9_seed20000009/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep9_seed20000009/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep9_seed20000009/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep9_seed20000009/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep9_seed20000009/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep9_seed20000009/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep9_seed20000009/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep9_seed20000009/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t0_ep9_seed20000009/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t1_ep4_seed20001004",
+    "task_id": 1,
+    "task_description": "put both the cream cheese box and the butter in the basket",
+    "seed": 20001004,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep4_seed20001004/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep4_seed20001004/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep4_seed20001004/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep4_seed20001004/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep4_seed20001004/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep4_seed20001004/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep4_seed20001004/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep4_seed20001004/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep4_seed20001004/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep4_seed20001004/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t1_ep9_seed20001009",
+    "task_id": 1,
+    "task_description": "put both the cream cheese box and the butter in the basket",
+    "seed": 20001009,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep9_seed20001009/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep9_seed20001009/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep9_seed20001009/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep9_seed20001009/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep9_seed20001009/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep9_seed20001009/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep9_seed20001009/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep9_seed20001009/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep9_seed20001009/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t1_ep9_seed20001009/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t4_ep1_seed20004001",
+    "task_id": 4,
+    "task_description": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+    "seed": 20004001,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep1_seed20004001/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep1_seed20004001/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep1_seed20004001/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep1_seed20004001/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep1_seed20004001/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep1_seed20004001/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep1_seed20004001/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep1_seed20004001/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep1_seed20004001/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep1_seed20004001/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t4_ep2_seed20004002",
+    "task_id": 4,
+    "task_description": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+    "seed": 20004002,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep2_seed20004002/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep2_seed20004002/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep2_seed20004002/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep2_seed20004002/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep2_seed20004002/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep2_seed20004002/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep2_seed20004002/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep2_seed20004002/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep2_seed20004002/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t4_ep2_seed20004002/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t5_ep1_seed20005001",
+    "task_id": 5,
+    "task_description": "pick up the book and place it in the back compartment of the caddy",
+    "seed": 20005001,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep1_seed20005001/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep1_seed20005001/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep1_seed20005001/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep1_seed20005001/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep1_seed20005001/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep1_seed20005001/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep1_seed20005001/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep1_seed20005001/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep1_seed20005001/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep1_seed20005001/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t5_ep8_seed20005008",
+    "task_id": 5,
+    "task_description": "pick up the book and place it in the back compartment of the caddy",
+    "seed": 20005008,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep8_seed20005008/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep8_seed20005008/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep8_seed20005008/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep8_seed20005008/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep8_seed20005008/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep8_seed20005008/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep8_seed20005008/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep8_seed20005008/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep8_seed20005008/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t5_ep8_seed20005008/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t6_ep0_seed20006000",
+    "task_id": 6,
+    "task_description": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+    "seed": 20006000,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep0_seed20006000/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep0_seed20006000/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep0_seed20006000/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep0_seed20006000/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep0_seed20006000/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep0_seed20006000/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep0_seed20006000/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep0_seed20006000/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep0_seed20006000/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep0_seed20006000/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t6_ep4_seed20006004",
+    "task_id": 6,
+    "task_description": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+    "seed": 20006004,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep4_seed20006004/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep4_seed20006004/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep4_seed20006004/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep4_seed20006004/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep4_seed20006004/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep4_seed20006004/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep4_seed20006004/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep4_seed20006004/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep4_seed20006004/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep4_seed20006004/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t6_ep6_seed20006006",
+    "task_id": 6,
+    "task_description": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+    "seed": 20006006,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep6_seed20006006/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep6_seed20006006/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep6_seed20006006/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep6_seed20006006/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep6_seed20006006/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep6_seed20006006/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep6_seed20006006/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep6_seed20006006/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep6_seed20006006/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep6_seed20006006/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t6_ep8_seed20006008",
+    "task_id": 6,
+    "task_description": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+    "seed": 20006008,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep8_seed20006008/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep8_seed20006008/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep8_seed20006008/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep8_seed20006008/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep8_seed20006008/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep8_seed20006008/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep8_seed20006008/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep8_seed20006008/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep8_seed20006008/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep8_seed20006008/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t6_ep9_seed20006009",
+    "task_id": 6,
+    "task_description": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+    "seed": 20006009,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep9_seed20006009/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep9_seed20006009/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep9_seed20006009/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep9_seed20006009/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep9_seed20006009/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep9_seed20006009/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep9_seed20006009/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep9_seed20006009/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep9_seed20006009/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t6_ep9_seed20006009/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t7_ep0_seed20007000",
+    "task_id": 7,
+    "task_description": "put both the alphabet soup and the cream cheese box in the basket",
+    "seed": 20007000,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep0_seed20007000/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep0_seed20007000/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep0_seed20007000/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep0_seed20007000/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep0_seed20007000/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep0_seed20007000/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep0_seed20007000/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep0_seed20007000/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep0_seed20007000/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep0_seed20007000/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t7_ep3_seed20007003",
+    "task_id": 7,
+    "task_description": "put both the alphabet soup and the cream cheese box in the basket",
+    "seed": 20007003,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep3_seed20007003/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep3_seed20007003/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep3_seed20007003/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep3_seed20007003/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep3_seed20007003/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep3_seed20007003/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep3_seed20007003/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep3_seed20007003/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep3_seed20007003/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep3_seed20007003/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t7_ep4_seed20007004",
+    "task_id": 7,
+    "task_description": "put both the alphabet soup and the cream cheese box in the basket",
+    "seed": 20007004,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep4_seed20007004/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep4_seed20007004/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep4_seed20007004/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep4_seed20007004/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep4_seed20007004/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep4_seed20007004/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep4_seed20007004/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep4_seed20007004/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep4_seed20007004/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep4_seed20007004/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t7_ep5_seed20007005",
+    "task_id": 7,
+    "task_description": "put both the alphabet soup and the cream cheese box in the basket",
+    "seed": 20007005,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep5_seed20007005/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep5_seed20007005/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep5_seed20007005/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep5_seed20007005/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep5_seed20007005/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep5_seed20007005/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep5_seed20007005/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep5_seed20007005/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep5_seed20007005/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep5_seed20007005/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t7_ep6_seed20007006",
+    "task_id": 7,
+    "task_description": "put both the alphabet soup and the cream cheese box in the basket",
+    "seed": 20007006,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep6_seed20007006/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep6_seed20007006/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep6_seed20007006/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep6_seed20007006/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep6_seed20007006/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep6_seed20007006/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep6_seed20007006/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep6_seed20007006/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep6_seed20007006/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep6_seed20007006/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t7_ep7_seed20007007",
+    "task_id": 7,
+    "task_description": "put both the alphabet soup and the cream cheese box in the basket",
+    "seed": 20007007,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep7_seed20007007/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep7_seed20007007/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep7_seed20007007/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep7_seed20007007/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep7_seed20007007/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep7_seed20007007/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep7_seed20007007/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep7_seed20007007/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep7_seed20007007/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep7_seed20007007/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t7_ep8_seed20007008",
+    "task_id": 7,
+    "task_description": "put both the alphabet soup and the cream cheese box in the basket",
+    "seed": 20007008,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep8_seed20007008/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep8_seed20007008/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep8_seed20007008/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep8_seed20007008/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep8_seed20007008/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep8_seed20007008/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep8_seed20007008/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep8_seed20007008/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep8_seed20007008/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep8_seed20007008/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t7_ep9_seed20007009",
+    "task_id": 7,
+    "task_description": "put both the alphabet soup and the cream cheese box in the basket",
+    "seed": 20007009,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep9_seed20007009/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep9_seed20007009/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep9_seed20007009/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep9_seed20007009/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep9_seed20007009/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep9_seed20007009/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep9_seed20007009/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep9_seed20007009/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep9_seed20007009/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t7_ep9_seed20007009/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t8_ep2_seed20008002",
+    "task_id": 8,
+    "task_description": "put both moka pots on the stove",
+    "seed": 20008002,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep2_seed20008002/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep2_seed20008002/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep2_seed20008002/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep2_seed20008002/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep2_seed20008002/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep2_seed20008002/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep2_seed20008002/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep2_seed20008002/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep2_seed20008002/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep2_seed20008002/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t8_ep3_seed20008003",
+    "task_id": 8,
+    "task_description": "put both moka pots on the stove",
+    "seed": 20008003,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep3_seed20008003/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep3_seed20008003/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep3_seed20008003/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep3_seed20008003/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep3_seed20008003/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep3_seed20008003/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep3_seed20008003/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep3_seed20008003/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep3_seed20008003/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep3_seed20008003/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t8_ep4_seed20008004",
+    "task_id": 8,
+    "task_description": "put both moka pots on the stove",
+    "seed": 20008004,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep4_seed20008004/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep4_seed20008004/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep4_seed20008004/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep4_seed20008004/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep4_seed20008004/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep4_seed20008004/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep4_seed20008004/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep4_seed20008004/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep4_seed20008004/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep4_seed20008004/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t8_ep5_seed20008005",
+    "task_id": 8,
+    "task_description": "put both moka pots on the stove",
+    "seed": 20008005,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep5_seed20008005/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep5_seed20008005/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep5_seed20008005/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep5_seed20008005/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep5_seed20008005/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep5_seed20008005/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep5_seed20008005/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep5_seed20008005/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep5_seed20008005/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep5_seed20008005/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t8_ep6_seed20008006",
+    "task_id": 8,
+    "task_description": "put both moka pots on the stove",
+    "seed": 20008006,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep6_seed20008006/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep6_seed20008006/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep6_seed20008006/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep6_seed20008006/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep6_seed20008006/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep6_seed20008006/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep6_seed20008006/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep6_seed20008006/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep6_seed20008006/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep6_seed20008006/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t8_ep7_seed20008007",
+    "task_id": 8,
+    "task_description": "put both moka pots on the stove",
+    "seed": 20008007,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep7_seed20008007/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep7_seed20008007/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep7_seed20008007/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep7_seed20008007/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep7_seed20008007/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep7_seed20008007/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep7_seed20008007/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep7_seed20008007/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep7_seed20008007/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep7_seed20008007/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t8_ep8_seed20008008",
+    "task_id": 8,
+    "task_description": "put both moka pots on the stove",
+    "seed": 20008008,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep8_seed20008008/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep8_seed20008008/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep8_seed20008008/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep8_seed20008008/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep8_seed20008008/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep8_seed20008008/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep8_seed20008008/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep8_seed20008008/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep8_seed20008008/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep8_seed20008008/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t8_ep9_seed20008009",
+    "task_id": 8,
+    "task_description": "put both moka pots on the stove",
+    "seed": 20008009,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep9_seed20008009/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep9_seed20008009/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep9_seed20008009/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep9_seed20008009/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep9_seed20008009/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep9_seed20008009/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep9_seed20008009/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep9_seed20008009/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep9_seed20008009/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t8_ep9_seed20008009/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t9_ep1_seed20009001",
+    "task_id": 9,
+    "task_description": "put the yellow and white mug in the microwave and close it",
+    "seed": 20009001,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep1_seed20009001/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep1_seed20009001/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep1_seed20009001/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep1_seed20009001/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep1_seed20009001/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep1_seed20009001/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep1_seed20009001/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep1_seed20009001/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep1_seed20009001/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep1_seed20009001/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t9_ep3_seed20009003",
+    "task_id": 9,
+    "task_description": "put the yellow and white mug in the microwave and close it",
+    "seed": 20009003,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep3_seed20009003/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep3_seed20009003/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep3_seed20009003/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep3_seed20009003/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep3_seed20009003/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep3_seed20009003/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep3_seed20009003/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep3_seed20009003/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep3_seed20009003/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep3_seed20009003/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t9_ep4_seed20009004",
+    "task_id": 9,
+    "task_description": "put the yellow and white mug in the microwave and close it",
+    "seed": 20009004,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep4_seed20009004/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep4_seed20009004/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep4_seed20009004/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep4_seed20009004/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep4_seed20009004/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep4_seed20009004/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep4_seed20009004/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep4_seed20009004/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep4_seed20009004/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep4_seed20009004/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t9_ep5_seed20009005",
+    "task_id": 9,
+    "task_description": "put the yellow and white mug in the microwave and close it",
+    "seed": 20009005,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep5_seed20009005/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep5_seed20009005/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep5_seed20009005/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep5_seed20009005/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep5_seed20009005/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep5_seed20009005/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep5_seed20009005/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep5_seed20009005/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep5_seed20009005/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep5_seed20009005/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t9_ep6_seed20009006",
+    "task_id": 9,
+    "task_description": "put the yellow and white mug in the microwave and close it",
+    "seed": 20009006,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep6_seed20009006/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep6_seed20009006/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep6_seed20009006/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep6_seed20009006/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep6_seed20009006/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep6_seed20009006/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep6_seed20009006/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep6_seed20009006/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep6_seed20009006/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep6_seed20009006/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t9_ep8_seed20009008",
+    "task_id": 9,
+    "task_description": "put the yellow and white mug in the microwave and close it",
+    "seed": 20009008,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep8_seed20009008/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep8_seed20009008/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep8_seed20009008/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep8_seed20009008/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep8_seed20009008/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep8_seed20009008/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep8_seed20009008/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep8_seed20009008/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep8_seed20009008/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep8_seed20009008/frac0.95_cam2.png"
+      }
+    ]
+  },
+  {
+    "fail_id": "t9_ep9_seed20009009",
+    "task_id": 9,
+    "task_description": "put the yellow and white mug in the microwave and close it",
+    "seed": 20009009,
+    "steps": 520,
+    "keyframes": [
+      {
+        "frac": 0.0,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep9_seed20009009/frac0.00_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep9_seed20009009/frac0.00_cam2.png"
+      },
+      {
+        "frac": 0.25,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep9_seed20009009/frac0.25_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep9_seed20009009/frac0.25_cam2.png"
+      },
+      {
+        "frac": 0.5,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep9_seed20009009/frac0.50_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep9_seed20009009/frac0.50_cam2.png"
+      },
+      {
+        "frac": 0.75,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep9_seed20009009/frac0.75_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep9_seed20009009/frac0.75_cam2.png"
+      },
+      {
+        "frac": 0.95,
+        "cam1": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep9_seed20009009/frac0.95_cam1.png",
+        "cam2": "/home/user/Desktop/multi-rate/vla-toolkit/failure_keyframes/t9_ep9_seed20009009/frac0.95_cam2.png"
+      }
+    ]
+  }
+]

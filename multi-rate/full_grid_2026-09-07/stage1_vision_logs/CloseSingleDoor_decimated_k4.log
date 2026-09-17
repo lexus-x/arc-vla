@@ -1,0 +1,24 @@
+[eval] CloseSingleDoor 1/15 native=0 zoh=0 spline_satfix=0 bspline_eps_satfix=0 gripper_sync=0
+[eval] CloseSingleDoor 2/15 native=0 zoh=0 spline_satfix=0 bspline_eps_satfix=0 gripper_sync=0
+[eval] CloseSingleDoor 3/15 native=0 zoh=0 spline_satfix=1 bspline_eps_satfix=0 gripper_sync=0
+[eval] CloseSingleDoor 4/15 native=0 zoh=0 spline_satfix=2 bspline_eps_satfix=0 gripper_sync=1
+[eval] CloseSingleDoor 5/15 native=1 zoh=1 spline_satfix=3 bspline_eps_satfix=1 gripper_sync=2
+[eval] CloseSingleDoor 6/15 native=1 zoh=1 spline_satfix=3 bspline_eps_satfix=1 gripper_sync=2
+[eval] CloseSingleDoor 7/15 native=1 zoh=1 spline_satfix=3 bspline_eps_satfix=1 gripper_sync=2
+[eval] CloseSingleDoor 8/15 native=1 zoh=2 spline_satfix=4 bspline_eps_satfix=2 gripper_sync=2
+[eval] CloseSingleDoor 9/15 native=1 zoh=3 spline_satfix=4 bspline_eps_satfix=2 gripper_sync=2
+[eval] CloseSingleDoor 10/15 native=2 zoh=3 spline_satfix=4 bspline_eps_satfix=2 gripper_sync=2
+[eval] CloseSingleDoor 11/15 native=2 zoh=3 spline_satfix=4 bspline_eps_satfix=2 gripper_sync=3
+[eval] CloseSingleDoor 12/15 native=3 zoh=3 spline_satfix=4 bspline_eps_satfix=2 gripper_sync=3
+[eval] CloseSingleDoor 13/15 native=4 zoh=3 spline_satfix=5 bspline_eps_satfix=3 gripper_sync=3
+[eval] CloseSingleDoor 14/15 native=5 zoh=3 spline_satfix=5 bspline_eps_satfix=3 gripper_sync=4
+[eval] CloseSingleDoor 15/15 native=6 zoh=3 spline_satfix=6 bspline_eps_satfix=4 gripper_sync=5
+
+=== CloseSingleDoor visual DP, k=4, n=15 ===
+  native                   40.0% (6/15)  | vs zoh:  +20.0pp p=0.453
+  zoh                      20.0% (3/15)  | vs native:  -20.0pp p=0.453
+  spline_satfix            40.0% (6/15)  | vs zoh:  +20.0pp p=0.375  | vs native:   +0.0pp p=1
+  bspline_eps_satfix       26.7% (4/15)  | vs zoh:   +6.7pp p=1  | vs native:  -13.3pp p=0.625
+  gripper_sync             33.3% (5/15)  | vs zoh:  +13.3pp p=0.688  | vs native:   -6.7pp p=1  | vs spline_satfix:   -6.7pp p=1  | vs bspline_eps_satfix:   +6.7pp p=1
+[saved] stage1_vision_results/CloseSingleDoor_decimated_k4.json
+EVAL_EXIT=0

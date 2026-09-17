@@ -1,0 +1,21 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_PickCube-v1_200.npz
+[data] 200 demos harvested in 0s
+[data] 3890 windows, obs_dim=42, act_dim=8, raw |a|>1 frac=0.303
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PickCube-v1_s2.pt
+[eval] [10/100] zoh=5 qp=5
+[eval] [20/100] zoh=13 qp=14
+[eval] [30/100] zoh=22 qp=23
+[eval] [40/100] zoh=31 qp=32
+[eval] [50/100] zoh=38 qp=40
+[eval] [60/100] zoh=43 qp=48
+[eval] [70/100] zoh=51 qp=57
+[eval] [80/100] zoh=60 qp=67
+[eval] [90/100] zoh=68 qp=75
+[eval] [100/100] zoh=77 qp=85
+[eval] wall 715s for 100 eps x 2 arms
+
+=== PickCube-v1 closed-loop DP, k=2, n=100 ===
+  zoh                77.0% (77/100)
+  qp                 85.0% (85/100)  | vs zoh:   +8.0pp p=0.0386
+  policy raw |a|>1 frac (pre-clip): 0.237
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PickCube-v1_s2_c2.json

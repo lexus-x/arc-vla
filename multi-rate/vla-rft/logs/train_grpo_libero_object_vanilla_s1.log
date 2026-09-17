@@ -1,0 +1,409 @@
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[update 0] task=5 attempt=0 rollout=0 success=True steps=147 n_chunks=147
+[update 0] task=5 attempt=0 rollout=1 success=True steps=152 n_chunks=152
+[update 0] task=5 attempt=0 rollout=2 success=True steps=142 n_chunks=142
+[update 0] task=5 attempt=0 rollout=3 success=True steps=133 n_chunks=133
+[update 0] task=5 attempt=0 rollout=4 success=True steps=112 n_chunks=112
+[update 0] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 0] task=3 attempt=0 rollout=0 success=True steps=139 n_chunks=139
+[update 0] task=3 attempt=0 rollout=1 success=True steps=127 n_chunks=127
+[update 0] task=3 attempt=0 rollout=2 success=False steps=280 n_chunks=280
+[update 0] task=3 attempt=0 rollout=3 success=False steps=280 n_chunks=280
+[update 0] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 0] task=3 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+===== UPDATE 0: success_rate=0.583 loss=0.594625127216687 grad_norm=213.75489807128906 elapsed=1070s =====
+[update 1] task=5 attempt=0 rollout=0 success=True steps=147 n_chunks=147
+[update 1] task=5 attempt=0 rollout=1 success=True steps=138 n_chunks=138
+[update 1] task=5 attempt=0 rollout=2 success=True steps=134 n_chunks=134
+[update 1] task=5 attempt=0 rollout=3 success=True steps=142 n_chunks=142
+[update 1] task=5 attempt=0 rollout=4 success=True steps=163 n_chunks=163
+[update 1] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 1] task=3 attempt=0 rollout=0 success=True steps=145 n_chunks=145
+[update 1] task=3 attempt=0 rollout=1 success=True steps=145 n_chunks=145
+[update 1] task=3 attempt=0 rollout=2 success=True steps=144 n_chunks=144
+[update 1] task=3 attempt=0 rollout=3 success=True steps=167 n_chunks=167
+[update 1] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 1] task=3 attempt=0 rollout=5 success=True steps=142 n_chunks=142
+===== UPDATE 1: success_rate=0.833 loss=0.5612637513837734 grad_norm=241.74789428710938 elapsed=1998s =====
+[update 2] task=5 attempt=0 rollout=0 success=False steps=280 n_chunks=280
+[update 2] task=5 attempt=0 rollout=1 success=True steps=120 n_chunks=120
+[update 2] task=5 attempt=0 rollout=2 success=True steps=141 n_chunks=141
+[update 2] task=5 attempt=0 rollout=3 success=True steps=136 n_chunks=136
+[update 2] task=5 attempt=0 rollout=4 success=True steps=151 n_chunks=151
+[update 2] task=5 attempt=0 rollout=5 success=True steps=148 n_chunks=148
+[update 2] task=3 attempt=0 rollout=0 success=True steps=155 n_chunks=155
+[update 2] task=3 attempt=0 rollout=1 success=False steps=280 n_chunks=280
+[update 2] task=3 attempt=0 rollout=2 success=True steps=141 n_chunks=141
+[update 2] task=3 attempt=0 rollout=3 success=False steps=280 n_chunks=280
+[update 2] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 2] task=3 attempt=0 rollout=5 success=True steps=141 n_chunks=141
+===== UPDATE 2: success_rate=0.667 loss=0.6027124191039518 grad_norm=220.03724670410156 elapsed=3034s =====
+[update 3] task=5 attempt=0 rollout=0 success=False steps=280 n_chunks=280
+[update 3] task=5 attempt=0 rollout=1 success=True steps=133 n_chunks=133
+[update 3] task=5 attempt=0 rollout=2 success=True steps=141 n_chunks=141
+[update 3] task=5 attempt=0 rollout=3 success=True steps=142 n_chunks=142
+[update 3] task=5 attempt=0 rollout=4 success=True steps=211 n_chunks=211
+[update 3] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 3] task=3 attempt=0 rollout=0 success=False steps=280 n_chunks=280
+[update 3] task=3 attempt=0 rollout=1 success=True steps=174 n_chunks=174
+[update 3] task=3 attempt=0 rollout=2 success=True steps=156 n_chunks=156
+[update 3] task=3 attempt=0 rollout=3 success=True steps=155 n_chunks=155
+[update 3] task=3 attempt=0 rollout=4 success=True steps=277 n_chunks=277
+[update 3] task=3 attempt=0 rollout=5 success=True steps=144 n_chunks=144
+===== UPDATE 3: success_rate=0.750 loss=0.4857543821180113 grad_norm=230.7443389892578 elapsed=4121s =====
+[update 4] task=5 attempt=0 rollout=0 success=True steps=141 n_chunks=141
+[update 4] task=5 attempt=0 rollout=1 success=True steps=143 n_chunks=143
+[update 4] task=5 attempt=0 rollout=2 success=True steps=139 n_chunks=139
+[update 4] task=5 attempt=0 rollout=3 success=True steps=139 n_chunks=139
+[update 4] task=5 attempt=0 rollout=4 success=True steps=168 n_chunks=168
+[update 4] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 4] task=3 attempt=0 rollout=0 success=True steps=153 n_chunks=153
+[update 4] task=3 attempt=0 rollout=1 success=True steps=189 n_chunks=189
+[update 4] task=3 attempt=0 rollout=2 success=True steps=156 n_chunks=156
+[update 4] task=3 attempt=0 rollout=3 success=True steps=197 n_chunks=197
+[update 4] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 4] task=3 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+===== UPDATE 4: success_rate=0.750 loss=0.48007333928649265 grad_norm=234.6656494140625 elapsed=5162s =====
+[update 5] task=5 attempt=0 rollout=0 success=True steps=137 n_chunks=137
+[update 5] task=5 attempt=0 rollout=1 success=True steps=124 n_chunks=124
+[update 5] task=5 attempt=0 rollout=2 success=True steps=140 n_chunks=140
+[update 5] task=5 attempt=0 rollout=3 success=True steps=133 n_chunks=133
+[update 5] task=5 attempt=0 rollout=4 success=True steps=156 n_chunks=156
+[update 5] task=5 attempt=0 rollout=5 success=True steps=143 n_chunks=143
+[update 5] task=3 attempt=0 rollout=0 success=True steps=149 n_chunks=149
+[update 5] task=3 attempt=0 rollout=1 success=True steps=158 n_chunks=158
+[update 5] task=3 attempt=0 rollout=2 success=False steps=280 n_chunks=280
+[update 5] task=3 attempt=0 rollout=3 success=True steps=155 n_chunks=155
+[update 5] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 5] task=3 attempt=0 rollout=5 success=True steps=133 n_chunks=133
+===== UPDATE 5: success_rate=0.833 loss=0.5989883783575777 grad_norm=163.80860900878906 elapsed=5913s =====
+[update 6] task=5 attempt=0 rollout=0 success=True steps=136 n_chunks=136
+[update 6] task=5 attempt=0 rollout=1 success=True steps=123 n_chunks=123
+[update 6] task=5 attempt=0 rollout=2 success=True steps=138 n_chunks=138
+[update 6] task=5 attempt=0 rollout=3 success=False steps=280 n_chunks=280
+[update 6] task=5 attempt=0 rollout=4 success=True steps=144 n_chunks=144
+[update 6] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 6] task=3 attempt=0 rollout=0 success=True steps=136 n_chunks=136
+[update 6] task=3 attempt=0 rollout=1 success=True steps=172 n_chunks=172
+[update 6] task=3 attempt=0 rollout=2 success=True steps=155 n_chunks=155
+[update 6] task=3 attempt=0 rollout=3 success=True steps=198 n_chunks=198
+[update 6] task=3 attempt=0 rollout=4 success=True steps=159 n_chunks=159
+[update 6] task=3 attempt=0 rollout=5 success=True steps=139 n_chunks=139
+===== UPDATE 6: success_rate=0.833 loss=0.7394486268902778 grad_norm=168.73992919921875 elapsed=6664s =====
+[update 7] task=5 attempt=0 rollout=0 success=True steps=140 n_chunks=140
+[update 7] task=5 attempt=0 rollout=1 success=False steps=280 n_chunks=280
+[update 7] task=5 attempt=0 rollout=2 success=True steps=145 n_chunks=145
+[update 7] task=5 attempt=0 rollout=3 success=True steps=205 n_chunks=205
+[update 7] task=5 attempt=0 rollout=4 success=True steps=149 n_chunks=149
+[update 7] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 7] task=3 attempt=0 rollout=0 success=True steps=147 n_chunks=147
+[update 7] task=3 attempt=0 rollout=1 success=True steps=169 n_chunks=169
+[update 7] task=3 attempt=0 rollout=2 success=True steps=154 n_chunks=154
+[update 7] task=3 attempt=0 rollout=3 success=False steps=280 n_chunks=280
+[update 7] task=3 attempt=0 rollout=4 success=True steps=214 n_chunks=214
+[update 7] task=3 attempt=0 rollout=5 success=True steps=146 n_chunks=146
+===== UPDATE 7: success_rate=0.750 loss=0.5167169085618685 grad_norm=250.17698669433594 elapsed=7709s =====
+[update 8] task=5 attempt=0 rollout=0 success=True steps=152 n_chunks=152
+[update 8] task=5 attempt=0 rollout=1 success=True steps=137 n_chunks=137
+[update 8] task=5 attempt=0 rollout=2 success=True steps=139 n_chunks=139
+[update 8] task=5 attempt=0 rollout=3 success=True steps=195 n_chunks=195
+[update 8] task=5 attempt=0 rollout=4 success=True steps=143 n_chunks=143
+[update 8] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 8] task=3 attempt=0 rollout=0 success=False steps=280 n_chunks=280
+[update 8] task=3 attempt=0 rollout=1 success=False steps=280 n_chunks=280
+[update 8] task=3 attempt=0 rollout=2 success=False steps=280 n_chunks=280
+[update 8] task=3 attempt=0 rollout=3 success=True steps=142 n_chunks=142
+[update 8] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 8] task=3 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+===== UPDATE 8: success_rate=0.500 loss=0.429536564917616 grad_norm=209.505615234375 elapsed=8907s =====
+[update 9] task=5 attempt=0 rollout=0 success=True steps=151 n_chunks=151
+[update 9] task=5 attempt=0 rollout=1 success=True steps=153 n_chunks=153
+[update 9] task=5 attempt=0 rollout=2 success=True steps=146 n_chunks=146
+[update 9] task=5 attempt=0 rollout=3 success=True steps=147 n_chunks=147
+[update 9] task=5 attempt=0 rollout=4 success=True steps=146 n_chunks=146
+[update 9] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 9] task=3 attempt=0 rollout=0 success=True steps=160 n_chunks=160
+[update 9] task=3 attempt=0 rollout=1 success=False steps=280 n_chunks=280
+[update 9] task=3 attempt=0 rollout=2 success=True steps=151 n_chunks=151
+[update 9] task=3 attempt=0 rollout=3 success=True steps=176 n_chunks=176
+[update 9] task=3 attempt=0 rollout=4 success=True steps=149 n_chunks=149
+[update 9] task=3 attempt=0 rollout=5 success=True steps=147 n_chunks=147
+===== UPDATE 9: success_rate=0.833 loss=0.5359530990812945 grad_norm=233.46641540527344 elapsed=9856s =====
+[update 10] task=5 attempt=0 rollout=0 success=True steps=145 n_chunks=145
+[update 10] task=5 attempt=0 rollout=1 success=True steps=201 n_chunks=201
+[update 10] task=5 attempt=0 rollout=2 success=True steps=146 n_chunks=146
+[update 10] task=5 attempt=0 rollout=3 success=False steps=280 n_chunks=280
+[update 10] task=5 attempt=0 rollout=4 success=True steps=146 n_chunks=146
+[update 10] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 10] task=3 attempt=0 rollout=0 success=True steps=150 n_chunks=150
+[update 10] task=3 attempt=0 rollout=1 success=True steps=178 n_chunks=178
+[update 10] task=3 attempt=0 rollout=2 success=True steps=151 n_chunks=151
+[update 10] task=3 attempt=0 rollout=3 success=True steps=144 n_chunks=144
+[update 10] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 10] task=3 attempt=0 rollout=5 success=True steps=151 n_chunks=151
+===== UPDATE 10: success_rate=0.750 loss=0.56297598738177 grad_norm=247.32005310058594 elapsed=10778s =====
+[update 11] task=5 attempt=0 rollout=0 success=True steps=186 n_chunks=186
+[update 11] task=5 attempt=0 rollout=1 success=True steps=146 n_chunks=146
+[update 11] task=5 attempt=0 rollout=2 success=True steps=145 n_chunks=145
+[update 11] task=5 attempt=0 rollout=3 success=True steps=220 n_chunks=220
+[update 11] task=5 attempt=0 rollout=4 success=True steps=147 n_chunks=147
+[update 11] task=5 attempt=0 rollout=5 success=True steps=163 n_chunks=163
+[update 11] task=3 attempt=0 rollout=0 success=True steps=160 n_chunks=160
+[update 11] task=3 attempt=0 rollout=1 success=False steps=280 n_chunks=280
+[update 11] task=3 attempt=0 rollout=2 success=True steps=151 n_chunks=151
+[update 11] task=3 attempt=0 rollout=3 success=False steps=280 n_chunks=280
+[update 11] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 11] task=3 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+===== UPDATE 11: success_rate=0.667 loss=0.4698883335462073 grad_norm=148.79452514648438 elapsed=11708s =====
+[update 12] task=5 attempt=0 rollout=0 success=True steps=146 n_chunks=146
+[update 12] task=5 attempt=0 rollout=1 success=True steps=134 n_chunks=134
+[update 12] task=5 attempt=0 rollout=2 success=True steps=138 n_chunks=138
+[update 12] task=5 attempt=0 rollout=3 success=True steps=236 n_chunks=236
+[update 12] task=5 attempt=0 rollout=4 success=True steps=148 n_chunks=148
+[update 12] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 12] task=3 attempt=0 rollout=0 success=True steps=150 n_chunks=150
+[update 12] task=3 attempt=0 rollout=1 success=True steps=150 n_chunks=150
+[update 12] task=3 attempt=0 rollout=2 success=False steps=280 n_chunks=280
+[update 12] task=3 attempt=0 rollout=3 success=True steps=197 n_chunks=197
+[update 12] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 12] task=3 attempt=0 rollout=5 success=True steps=148 n_chunks=148
+===== UPDATE 12: success_rate=0.750 loss=0.5166558429931104 grad_norm=228.5924835205078 elapsed=12640s =====
+[update 13] task=5 attempt=0 rollout=0 success=False steps=280 n_chunks=280
+[update 13] task=5 attempt=0 rollout=1 success=True steps=132 n_chunks=132
+[update 13] task=5 attempt=0 rollout=2 success=True steps=140 n_chunks=140
+[update 13] task=5 attempt=0 rollout=3 success=True steps=141 n_chunks=141
+[update 13] task=5 attempt=0 rollout=4 success=True steps=170 n_chunks=170
+[update 13] task=5 attempt=0 rollout=5 success=True steps=144 n_chunks=144
+[update 13] task=3 attempt=0 rollout=0 success=True steps=141 n_chunks=141
+[update 13] task=3 attempt=0 rollout=1 success=False steps=280 n_chunks=280
+[update 13] task=3 attempt=0 rollout=2 success=True steps=151 n_chunks=151
+[update 13] task=3 attempt=0 rollout=3 success=True steps=163 n_chunks=163
+[update 13] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 13] task=3 attempt=0 rollout=5 success=True steps=134 n_chunks=134
+===== UPDATE 13: success_rate=0.750 loss=0.5824089042275646 grad_norm=229.76490783691406 elapsed=13619s =====
+[update 14] task=5 attempt=0 rollout=0 success=True steps=143 n_chunks=143
+[update 14] task=5 attempt=0 rollout=1 success=True steps=129 n_chunks=129
+[update 14] task=5 attempt=0 rollout=2 success=True steps=150 n_chunks=150
+[update 14] task=5 attempt=0 rollout=3 success=True steps=135 n_chunks=135
+[update 14] task=5 attempt=0 rollout=4 success=True steps=208 n_chunks=208
+[update 14] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 14] task=3 attempt=0 rollout=0 success=True steps=156 n_chunks=156
+[update 14] task=3 attempt=0 rollout=1 success=True steps=143 n_chunks=143
+[update 14] task=3 attempt=0 rollout=2 success=True steps=155 n_chunks=155
+[update 14] task=3 attempt=0 rollout=3 success=True steps=142 n_chunks=142
+[update 14] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 14] task=3 attempt=0 rollout=5 success=True steps=151 n_chunks=151
+===== UPDATE 14: success_rate=0.833 loss=0.5691128740497078 grad_norm=270.5470886230469 elapsed=14588s =====
+[update 15] task=5 attempt=0 rollout=0 success=True steps=126 n_chunks=126
+[update 15] task=5 attempt=0 rollout=1 success=True steps=144 n_chunks=144
+[update 15] task=5 attempt=0 rollout=2 success=True steps=131 n_chunks=131
+[update 15] task=5 attempt=0 rollout=3 success=False steps=280 n_chunks=280
+[update 15] task=5 attempt=0 rollout=4 success=True steps=209 n_chunks=209
+[update 15] task=5 attempt=0 rollout=5 success=True steps=140 n_chunks=140
+[update 15] task=3 attempt=0 rollout=0 success=True steps=138 n_chunks=138
+[update 15] task=3 attempt=0 rollout=1 success=True steps=150 n_chunks=150
+[update 15] task=3 attempt=0 rollout=2 success=True steps=148 n_chunks=148
+[update 15] task=3 attempt=0 rollout=3 success=True steps=149 n_chunks=149
+[update 15] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 15] task=3 attempt=0 rollout=5 success=True steps=141 n_chunks=141
+===== UPDATE 15: success_rate=0.833 loss=0.536859012979187 grad_norm=230.6811981201172 elapsed=15541s =====
+[update 16] task=5 attempt=0 rollout=0 success=True steps=141 n_chunks=141
+[update 16] task=5 attempt=0 rollout=1 success=True steps=129 n_chunks=129
+[update 16] task=5 attempt=0 rollout=2 success=True steps=152 n_chunks=152
+[update 16] task=5 attempt=0 rollout=3 success=True steps=145 n_chunks=145
+[update 16] task=5 attempt=0 rollout=4 success=True steps=140 n_chunks=140
+[update 16] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 16] task=3 attempt=0 rollout=0 success=True steps=162 n_chunks=162
+[update 16] task=3 attempt=0 rollout=1 success=False steps=280 n_chunks=280
+[update 16] task=3 attempt=0 rollout=2 success=True steps=169 n_chunks=169
+[update 16] task=3 attempt=0 rollout=3 success=True steps=187 n_chunks=187
+[update 16] task=3 attempt=0 rollout=4 success=True steps=154 n_chunks=154
+[update 16] task=3 attempt=0 rollout=5 success=True steps=143 n_chunks=143
+===== UPDATE 16: success_rate=0.833 loss=0.568628054244603 grad_norm=253.19764709472656 elapsed=16519s =====
+[update 17] task=5 attempt=0 rollout=0 success=True steps=140 n_chunks=140
+[update 17] task=5 attempt=0 rollout=1 success=True steps=132 n_chunks=132
+[update 17] task=5 attempt=0 rollout=2 success=True steps=135 n_chunks=135
+[update 17] task=5 attempt=0 rollout=3 success=True steps=201 n_chunks=201
+[update 17] task=5 attempt=0 rollout=4 success=True steps=138 n_chunks=138
+[update 17] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 17] task=3 attempt=0 rollout=0 success=True steps=141 n_chunks=141
+[update 17] task=3 attempt=0 rollout=1 success=True steps=175 n_chunks=175
+[update 17] task=3 attempt=0 rollout=2 success=True steps=154 n_chunks=154
+[update 17] task=3 attempt=0 rollout=3 success=True steps=177 n_chunks=177
+[update 17] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 17] task=3 attempt=0 rollout=5 success=True steps=155 n_chunks=155
+===== UPDATE 17: success_rate=0.833 loss=0.4946363131026163 grad_norm=247.87660217285156 elapsed=17492s =====
+[update 18] task=5 attempt=0 rollout=0 success=True steps=207 n_chunks=207
+[update 18] task=5 attempt=0 rollout=1 success=True steps=154 n_chunks=154
+[update 18] task=5 attempt=0 rollout=2 success=True steps=133 n_chunks=133
+[update 18] task=5 attempt=0 rollout=3 success=True steps=136 n_chunks=136
+[update 18] task=5 attempt=0 rollout=4 success=True steps=136 n_chunks=136
+[update 18] task=5 attempt=0 rollout=5 success=True steps=139 n_chunks=139
+[update 18] task=3 attempt=0 rollout=0 success=True steps=157 n_chunks=157
+[update 18] task=3 attempt=0 rollout=1 success=True steps=170 n_chunks=170
+[update 18] task=3 attempt=0 rollout=2 success=True steps=139 n_chunks=139
+[update 18] task=3 attempt=0 rollout=3 success=True steps=139 n_chunks=139
+[update 18] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 18] task=3 attempt=0 rollout=5 success=True steps=161 n_chunks=161
+===== UPDATE 18: success_rate=0.917 loss=0.5272286818656593 grad_norm=166.39126586914062 elapsed=18219s =====
+[update 19] task=5 attempt=0 rollout=0 success=True steps=139 n_chunks=139
+[update 19] task=5 attempt=0 rollout=1 success=True steps=140 n_chunks=140
+[update 19] task=5 attempt=0 rollout=2 success=False steps=280 n_chunks=280
+[update 19] task=5 attempt=0 rollout=3 success=True steps=132 n_chunks=132
+[update 19] task=5 attempt=0 rollout=4 success=True steps=135 n_chunks=135
+[update 19] task=5 attempt=0 rollout=5 success=True steps=157 n_chunks=157
+[update 19] task=3 attempt=0 rollout=0 success=True steps=152 n_chunks=152
+[update 19] task=3 attempt=0 rollout=1 success=True steps=147 n_chunks=147
+[update 19] task=3 attempt=0 rollout=2 success=True steps=143 n_chunks=143
+[update 19] task=3 attempt=0 rollout=3 success=False steps=280 n_chunks=280
+[update 19] task=3 attempt=0 rollout=4 success=True steps=148 n_chunks=148
+[update 19] task=3 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+===== UPDATE 19: success_rate=0.750 loss=0.577032575347979 grad_norm=247.11273193359375 elapsed=19203s =====
+[update 20] task=5 attempt=0 rollout=0 success=True steps=227 n_chunks=227
+[update 20] task=5 attempt=0 rollout=1 success=True steps=134 n_chunks=134
+[update 20] task=5 attempt=0 rollout=2 success=True steps=148 n_chunks=148
+[update 20] task=5 attempt=0 rollout=3 success=True steps=143 n_chunks=143
+[update 20] task=5 attempt=0 rollout=4 success=True steps=144 n_chunks=144
+[update 20] task=5 attempt=0 rollout=5 success=True steps=145 n_chunks=145
+[update 20] task=3 attempt=0 rollout=0 success=True steps=149 n_chunks=149
+[update 20] task=3 attempt=0 rollout=1 success=True steps=134 n_chunks=134
+[update 20] task=3 attempt=0 rollout=2 success=True steps=155 n_chunks=155
+[update 20] task=3 attempt=0 rollout=3 success=True steps=157 n_chunks=157
+[update 20] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 20] task=3 attempt=0 rollout=5 success=True steps=146 n_chunks=146
+===== UPDATE 20: success_rate=0.917 loss=0.5601886078554783 grad_norm=160.2293243408203 elapsed=19936s =====
+[update 21] task=5 attempt=0 rollout=0 success=True steps=156 n_chunks=156
+[update 21] task=5 attempt=0 rollout=1 success=True steps=115 n_chunks=115
+[update 21] task=5 attempt=0 rollout=2 success=True steps=145 n_chunks=145
+[update 21] task=5 attempt=0 rollout=3 success=True steps=131 n_chunks=131
+[update 21] task=5 attempt=0 rollout=4 success=True steps=148 n_chunks=148
+[update 21] task=5 attempt=0 rollout=5 success=True steps=206 n_chunks=206
+[update 21] task=3 attempt=0 rollout=0 success=False steps=280 n_chunks=280
+[update 21] task=3 attempt=0 rollout=1 success=False steps=280 n_chunks=280
+[update 21] task=3 attempt=0 rollout=2 success=True steps=144 n_chunks=144
+[update 21] task=3 attempt=0 rollout=3 success=True steps=193 n_chunks=193
+[update 21] task=3 attempt=0 rollout=4 success=True steps=149 n_chunks=149
+[update 21] task=3 attempt=0 rollout=5 success=True steps=142 n_chunks=142
+===== UPDATE 21: success_rate=0.833 loss=0.5485661561641629 grad_norm=155.4581756591797 elapsed=20661s =====
+[update 22] task=5 attempt=0 rollout=0 success=True steps=134 n_chunks=134
+[update 22] task=5 attempt=0 rollout=1 success=False steps=280 n_chunks=280
+[update 22] task=5 attempt=0 rollout=2 success=True steps=145 n_chunks=145
+[update 22] task=5 attempt=0 rollout=3 success=True steps=193 n_chunks=193
+[update 22] task=5 attempt=0 rollout=4 success=True steps=201 n_chunks=201
+[update 22] task=5 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+[update 22] task=3 attempt=0 rollout=0 success=True steps=148 n_chunks=148
+[update 22] task=3 attempt=0 rollout=1 success=False steps=280 n_chunks=280
+[update 22] task=3 attempt=0 rollout=2 success=False steps=280 n_chunks=280
+[update 22] task=3 attempt=0 rollout=3 success=False steps=280 n_chunks=280
+[update 22] task=3 attempt=0 rollout=4 success=True steps=158 n_chunks=158
+[update 22] task=3 attempt=0 rollout=5 success=True steps=152 n_chunks=152
+===== UPDATE 22: success_rate=0.583 loss=0.5522469741843143 grad_norm=242.5262908935547 elapsed=21761s =====
+[update 23] task=5 attempt=0 rollout=0 success=True steps=140 n_chunks=140
+[update 23] task=5 attempt=0 rollout=1 success=True steps=139 n_chunks=139
+[update 23] task=5 attempt=0 rollout=2 success=True steps=146 n_chunks=146
+[update 23] task=5 attempt=0 rollout=3 success=False steps=280 n_chunks=280
+[update 23] task=5 attempt=0 rollout=4 success=True steps=131 n_chunks=131
+[update 23] task=5 attempt=0 rollout=5 success=True steps=178 n_chunks=178
+[update 23] task=3 attempt=0 rollout=0 success=True steps=154 n_chunks=154
+[update 23] task=3 attempt=0 rollout=1 success=True steps=146 n_chunks=146
+[update 23] task=3 attempt=0 rollout=2 success=True steps=141 n_chunks=141
+[update 23] task=3 attempt=0 rollout=3 success=True steps=165 n_chunks=165
+[update 23] task=3 attempt=0 rollout=4 success=False steps=280 n_chunks=280
+[update 23] task=3 attempt=0 rollout=5 success=False steps=280 n_chunks=280
+===== UPDATE 23: success_rate=0.750 loss=0.6009461110338159 grad_norm=255.37867736816406 elapsed=22782s =====
+Saved RL checkpoint to rl_checkpoint_libero_object_vanilla_s1
+
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 91678.78it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6305.09it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Exception ignored in: <function MjRenderContext.__del__ at 0x71c3ae6ee980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x71c380263a50>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x71c37814bbd0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x71c3ae6ee840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x71c380263a50>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x71c37814bbd0>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x71c3ae6ee980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x71c380263a50>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71c3ae6975d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71c3ae6975d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x71c3ae6974d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x71c3ae6ee840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x71c380263a50>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71c3ae6975d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71c3ae6975d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x71c3ae6974d0>,
+	),
+	result = 0
+)
+
+

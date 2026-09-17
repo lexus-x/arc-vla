@@ -1,0 +1,10 @@
+{
+  "task_idx": 1,
+  "task_name": "PickCube-v1",
+  "n_episodes": 50,
+  "ours_success": 1,
+  "spline_success": 1,
+  "ours_sr": 0.02,
+  "spline_sr": 0.02,
+  "delta_pp": 0.0
+}

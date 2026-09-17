@@ -1,0 +1,7 @@
+[start] dp_lift_k2 01:20:51
+[end] dp_lift_k2 rc=0 01:26:22
+[start] dp_can_k2 01:26:22
+[end] dp_can_k2 rc=0 01:40:48
+[start] dp_square_k2 01:40:48
+[end] dp_square_k2 rc=0 02:03:28
+[fill B] DONE

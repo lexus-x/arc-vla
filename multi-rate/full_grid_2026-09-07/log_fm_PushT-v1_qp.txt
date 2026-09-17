@@ -1,0 +1,26 @@
+[harvest] 50/200
+[harvest] 100/200
+[harvest] 150/200
+[harvest] 200/200
+[data] 200 demos harvested in 904s
+[data] 13352 windows, obs_dim=31, act_dim=6, raw |a|>1 frac=0.128
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/fm_PushT-v1.pt
+[eval] [10/100] native=4 zoh=2 tac_fold_satfix=2 qp=3
+[eval] [20/100] native=5 zoh=2 tac_fold_satfix=5 qp=6
+[eval] [30/100] native=8 zoh=2 tac_fold_satfix=6 qp=6
+[eval] [40/100] native=11 zoh=2 tac_fold_satfix=9 qp=8
+[eval] [50/100] native=13 zoh=4 tac_fold_satfix=13 qp=11
+[eval] [60/100] native=16 zoh=8 tac_fold_satfix=17 qp=15
+[eval] [70/100] native=20 zoh=9 tac_fold_satfix=20 qp=16
+[eval] [80/100] native=26 zoh=11 tac_fold_satfix=24 qp=22
+[eval] [90/100] native=28 zoh=11 tac_fold_satfix=25 qp=23
+[eval] [100/100] native=30 zoh=11 tac_fold_satfix=25 qp=23
+[eval] wall 2958s for 100 eps x 4 arms
+
+=== PushT-v1 closed-loop FM, k=2, n=100 ===
+  native             30.0% (30/100)  | vs zoh:  +19.0pp p=0.000311
+  zoh                11.0% (11/100)  | vs native:  -19.0pp p=0.000311
+  tac_fold_satfix    25.0% (25/100)  | vs zoh:  +14.0pp p=0.00131  | vs native:   -5.0pp p=0.442
+  qp                 23.0% (23/100)  | vs zoh:  +12.0pp p=0.00418  | vs native:   -7.0pp p=0.23
+  policy raw |a|>1 frac (pre-clip): 0.084
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_fm_PushT-v1_qp.json

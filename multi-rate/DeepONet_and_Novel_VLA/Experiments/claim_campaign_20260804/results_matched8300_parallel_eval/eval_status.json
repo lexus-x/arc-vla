@@ -1,0 +1,130 @@
+{
+  "flow8300_mag_spline_10env": {
+    "arm": "flow8300_mag_spline_10env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 929.4
+  },
+  "flow8300_naive_10env": {
+    "arm": "flow8300_naive_10env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 1059.1
+  },
+  "flow8300_native_20env": {
+    "arm": "flow8300_native_20env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 1141.2
+  },
+  "til_native_20env": {
+    "arm": "til_native_20env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 1171.5
+  },
+  "flow8300_cadmag_spline_40env": {
+    "arm": "flow8300_cadmag_spline_40env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 1628.4
+  },
+  "asrc_folding_10env": {
+    "arm": "asrc_folding_10env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 1185.6
+  },
+  "asrc_native_20env": {
+    "arm": "asrc_native_20env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 1234.3
+  },
+  "til_naive_40env": {
+    "arm": "til_naive_40env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 2447.1
+  },
+  "til_folding_40env": {
+    "arm": "til_folding_40env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 2570.6
+  },
+  "flow8300_naive_40env": {
+    "arm": "flow8300_naive_40env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 2572.3
+  },
+  "asrc_mag_folding_10env": {
+    "arm": "asrc_mag_folding_10env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 1001.1
+  },
+  "til_zoh_40env": {
+    "arm": "til_zoh_40env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 1800.8
+  },
+  "til_cadmag_spline_40env": {
+    "arm": "til_cadmag_spline_40env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 1708.6
+  },
+  "asrc_cadmag_spline_40env": {
+    "arm": "asrc_cadmag_spline_40env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 589.7
+  },
+  "asrc_cadmag_folding_40env": {
+    "arm": "asrc_cadmag_folding_40env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 678.6
+  },
+  "asrc_naive_40env": {
+    "arm": "asrc_naive_40env",
+    "status": "COMPLETE",
+    "success_rate": "0.0% (0/0)",
+    "successes": 0,
+    "trials": 0,
+    "elapsed_s": 769.8
+  }
+}

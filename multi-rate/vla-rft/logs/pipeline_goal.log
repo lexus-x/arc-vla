@@ -1,0 +1,48 @@
+[libero_goal] === baseline eval ===
+===== BASELINE EVAL suite=libero_goal ckpt=/media/user/C2FE578FFE577A9D/vla_matched/flow8300_goal_s0/checkpoints/8300 =====
+[suite] libero_goal -> baseline_results/libero_goal_seed0/multirate_libero_goal.json
+Skipping flow8300_libero_goal_native_20env (complete at n=100: 2.0%)
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  flow8300_libero_goal_native_20env   2.0%
+RESULT suite=libero_goal aggregate=2.00% (n=100) source=baseline_results/libero_goal_seed0/multirate_libero_goal.json
+
+[libero_goal] === RL GRPO pilot ===
+
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 97541.95it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6243.27it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Terminated
+
+ERROR conda.cli.main_run:execute(127): `conda run python train_grpo_suite.py --suite libero_goal --ckpt /media/user/C2FE578FFE577A9D/vla_matched/flow8300_goal_s0/checkpoints/8300 --group_size 6 --n_groups_per_update 2 --n_updates 8 --out_ckpt rl_checkpoint_libero_goal --log_json logs/train_progress_libero_goal.json` failed. (See above for error)
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[update 0] task=3 rollout=0 success=False steps=300 n_chunks=300
+[update 0] task=3 rollout=1 success=True steps=180 n_chunks=180
+[update 0] task=3 rollout=2 success=True steps=193 n_chunks=193
+[update 0] task=3 rollout=3 success=True steps=190 n_chunks=190
+[update 0] task=3 rollout=4 success=False steps=300 n_chunks=300
+[update 0] task=3 rollout=5 success=False steps=300 n_chunks=300
+[update 0] task=5 rollout=0 success=True steps=132 n_chunks=132
+[update 0] task=5 rollout=1 success=True steps=140 n_chunks=140
+[update 0] task=5 rollout=2 success=True steps=147 n_chunks=147
+[update 0] task=5 rollout=3 success=True steps=145 n_chunks=145
+[update 0] task=5 rollout=4 success=True steps=156 n_chunks=156
+[update 0] task=5 rollout=5 success=True steps=130 n_chunks=130
+

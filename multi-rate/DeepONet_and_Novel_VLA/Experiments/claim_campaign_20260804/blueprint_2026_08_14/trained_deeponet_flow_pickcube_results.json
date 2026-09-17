@@ -1,0 +1,32 @@
+{
+  "deeponet_native": {
+    "successes": 1,
+    "total": 150,
+    "rate": 0.006666666666666667
+  },
+  "deeponet_spline_40hz": {
+    "successes": 1,
+    "total": 150,
+    "rate": 0.006666666666666667
+  },
+  "deeponet_folding_40hz": {
+    "successes": 1,
+    "total": 150,
+    "rate": 0.006666666666666667
+  },
+  "flow_native": {
+    "successes": 0,
+    "total": 150,
+    "rate": 0.0
+  },
+  "flow_spline_40hz": {
+    "successes": 0,
+    "total": 150,
+    "rate": 0.0
+  },
+  "flow_zoh_40hz": {
+    "successes": 0,
+    "total": 150,
+    "rate": 0.0
+  }
+}

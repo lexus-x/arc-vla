@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "suite": "libero_spatial",
+    "task_id": 8,
+    "task_description": "pick up the black bowl next to the plate and place it on the plate",
+    "arm": "grpo",
+    "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_s0/checkpoints/8300",
+    "n_episodes": 20,
+    "group_size": 4,
+    "n_groups": 5,
+    "seed_range": [
+      50820,
+      50839
+    ],
+    "safety_metric": "max_joint_speed/max_joint_jerk over robot arm qvel (robosuite sim.data.qvel), rho_safe = SAFE_JOINT_SPEED_BOUND - max_joint_speed. Replaces smoke_results_v3.json's static-distractor-displacement proxy -- see module docstring.",
+    "safe_joint_speed_bound": 2.0,
+    "elapsed_s": 959.4949805736542
+  },
+  "records": [
+    {
+      "arm": "grpo",
+      "episode": 0,
+      "seed": 50820,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 1.0166372505596915,
+      "max_joint_jerk": 0.641887144954312,
+      "rho_safe": 0.9833627494403085,
+      "steps": 95
+    },
+    {
+      "arm": "grpo",
+      "episode": 1,
+      "seed": 50821,
+      "group": 0,
+      "success": false,
+      "max_joint_speed": 1.0728691718609815,
+      "max_joint_jerk": 0.19937404733893488,
+      "rho_safe": 0.9271308281390185,
+      "steps": 220
+    },
+    {
+      "arm": "grpo",
+      "episode": 2,
+      "seed": 50822,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 1.0302107818568083,
+      "max_joint_jerk": 0.5915610502416871,
+      "rho_safe": 0.9697892181431917,
+      "steps": 98
+    },
+    {
+      "arm": "grpo",
+      "episode": 3,
+      "seed": 50823,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 1.0653358092423324,
+      "max_joint_jerk": 0.30266709300143896,
+      "rho_safe": 0.9346641907576676,
+      "steps": 97
+    },
+    {
+      "arm": "grpo",
+      "episode": 4,
+      "seed": 50824,
+      "group": 1,
+      "success": false,
+      "max_joint_speed": 1.105798579026427,
+      "max_joint_jerk": 0.20545081056790188,
+      "rho_safe": 0.8942014209735729,
+      "steps": 220
+    },
+    {
+      "arm": "grpo",
+      "episode": 5,
+      "seed": 50825,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 1.1863791281313083,
+      "max_joint_jerk": 0.6963677101644457,
+      "rho_safe": 0.8136208718686917,
+      "steps": 92
+    },
+    {
+      "arm": "grpo",
+      "episode": 6,
+      "seed": 50826,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 1.0317212711177506,
+      "max_joint_jerk": 0.6338070060091098,
+      "rho_safe": 0.9682787288822494,
+      "steps": 101
+    },
+    {
+      "arm": "grpo",
+      "episode": 7,
+      "seed": 50827,
+      "group": 1,
+      "success": true,
+      "max_joint_speed": 1.1956759280389937,
+      "max_joint_jerk": 0.6287248150227499,
+      "rho_safe": 0.8043240719610063,
+      "steps": 99
+    },
+    {
+      "arm": "grpo",
+      "episode": 8,
+      "seed": 50828,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 1.1369523076475299,
+      "max_joint_jerk": 0.5505605267580389,
+      "rho_safe": 0.8630476923524701,
+      "steps": 106
+    },
+    {
+      "arm": "grpo",
+      "episode": 9,
+      "seed": 50829,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 1.1282381656343863,
+      "max_joint_jerk": 0.6194625614248394,
+      "rho_safe": 0.8717618343656137,
+      "steps": 98
+    },
+    {
+      "arm": "grpo",
+      "episode": 10,
+      "seed": 50830,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 1.0899325081587412,
+      "max_joint_jerk": 0.5248318186909194,
+      "rho_safe": 0.9100674918412588,
+      "steps": 104
+    },
+    {
+      "arm": "grpo",
+      "episode": 11,
+      "seed": 50831,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 1.1172100612736005,
+      "max_joint_jerk": 0.6721678635771714,
+      "rho_safe": 0.8827899387263995,
+      "steps": 92
+    },
+    {
+      "arm": "grpo",
+      "episode": 12,
+      "seed": 50832,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 1.0998457535480253,
+      "max_joint_jerk": 0.6073331156945149,
+      "rho_safe": 0.9001542464519747,
+      "steps": 88
+    },
+    {
+      "arm": "grpo",
+      "episode": 13,
+      "seed": 50833,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 1.1557355203234247,
+      "max_joint_jerk": 0.8250720335696153,
+      "rho_safe": 0.8442644796765753,
+      "steps": 99
+    },
+    {
+      "arm": "grpo",
+      "episode": 14,
+      "seed": 50834,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 1.0285196693913794,
+      "max_joint_jerk": 0.9011401357037324,
+      "rho_safe": 0.9714803306086206,
+      "steps": 97
+    },
+    {
+      "arm": "grpo",
+      "episode": 15,
+      "seed": 50835,
+      "group": 3,
+      "success": true,
+      "max_joint_speed": 1.1519987010565065,
+      "max_joint_jerk": 0.2872685694460553,
+      "rho_safe": 0.8480012989434935,
+      "steps": 111
+    },
+    {
+      "arm": "grpo",
+      "episode": 16,
+      "seed": 50836,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 1.0470194477502228,
+      "max_joint_jerk": 0.22278373455870487,
+      "rho_safe": 0.9529805522497772,
+      "steps": 94
+    },
+    {
+      "arm": "grpo",
+      "episode": 17,
+      "seed": 50837,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 1.1666367050732247,
+      "max_joint_jerk": 0.6817163264479074,
+      "rho_safe": 0.8333632949267753,
+      "steps": 96
+    },
+    {
+      "arm": "grpo",
+      "episode": 18,
+      "seed": 50838,
+      "group": 4,
+      "success": false,
+      "max_joint_speed": 1.0119526895944584,
+      "max_joint_jerk": 0.24040736331444584,
+      "rho_safe": 0.9880473104055416,
+      "steps": 220
+    },
+    {
+      "arm": "grpo",
+      "episode": 19,
+      "seed": 50839,
+      "group": 4,
+      "success": true,
+      "max_joint_speed": 1.0152246507105658,
+      "max_joint_jerk": 0.7307257308132943,
+      "rho_safe": 0.9847753492894342,
+      "steps": 96
+    }
+  ],
+  "update_log": [
+    {
+      "group": 0,
+      "success_rate": 0.75,
+      "stats": {
+        "n_transitions": 510,
+        "loss": 0.8274956512684916,
+        "grad_norm": 139.3636474609375
+      }
+    },
+    {
+      "group": 1,
+      "success_rate": 0.75,
+      "stats": {
+        "n_transitions": 512,
+        "loss": 0.7956444332376122,
+        "grad_norm": 134.6697998046875
+      }
+    },
+    {
+      "group": 2,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "loss": null,
+        "grad_norm": null
+      }
+    },
+    {
+      "group": 3,
+      "success_rate": 1.0,
+      "stats": {
+        "n_transitions": 0,
+        "loss": null,
+        "grad_norm": null
+      }
+    },
+    {
+      "group": 4,
+      "success_rate": 0.75,
+      "stats": {
+        "n_transitions": 506,
+        "loss": 0.7598116590453702,
+        "grad_norm": 114.2730941772461
+      }
+    }
+  ]
+}

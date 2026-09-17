@@ -1,0 +1,11 @@
+{
+  "suite": "libero_object",
+  "rl_ckpt": "/home/user/Desktop/multi-rate/vla-rft/rl_checkpoint_object",
+  "rl_aggregate": 0.8800000000000001,
+  "rl_n": 100,
+  "baseline_aggregate": 0.86,
+  "baseline_source": "baseline_results/libero_object_seed0_v2/summary.json",
+  "delta_pp": 2.000000000000013,
+  "note": "1-seed preliminary, no significance claim possible (no baseline stddev for this suite)",
+  "source": "baseline_results/rl_object_seed0_v2/multirate_libero_object.json"
+}

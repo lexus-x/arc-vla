@@ -1,0 +1,89 @@
+{
+  "task": "RC-TurnOffSinkFaucet",
+  "policy": "dp",
+  "k": 1,
+  "n": 15,
+  "train_steps": 15000,
+  "arms": [
+    "native",
+    "qp_eps05",
+    "bspline_eps05_raw"
+  ],
+  "success": {
+    "native": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false
+    ],
+    "qp_eps05": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false
+    ],
+    "bspline_eps05_raw": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.0,
+    "qp_eps05": 0.0,
+    "bspline_eps05_raw": 0.0
+  },
+  "contrasts": {
+    "native": {},
+    "qp_eps05": {
+      "vs_native": {
+        "delta_pp": -6.6666666666666705,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    },
+    "bspline_eps05_raw": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    }
+  }
+}

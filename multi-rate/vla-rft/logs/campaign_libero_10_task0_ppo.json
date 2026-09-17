@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "suite": "libero_10",
+    "task_id": 0,
+    "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+    "arm": "ppo",
+    "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_10_s0/checkpoints/8300",
+    "n_episodes": 20,
+    "group_size": 4,
+    "n_groups": 5,
+    "seed_range": [
+      80040,
+      80059
+    ],
+    "safety_metric": "max_joint_speed/max_joint_jerk over robot arm qvel (robosuite sim.data.qvel), rho_safe = SAFE_JOINT_SPEED_BOUND - max_joint_speed. Replaces smoke_results_v3.json's static-distractor-displacement proxy -- see module docstring.",
+    "safe_joint_speed_bound": 2.0,
+    "elapsed_s": 4725.912083148956
+  },
+  "records": [
+    {
+      "arm": "ppo",
+      "episode": 0,
+      "seed": 80040,
+      "group": 0,
+      "success": true,
+      "max_joint_speed": 1.1568241915438673,
+      "max_joint_jerk": 0.2940558140590243,
+      "rho_safe": 0.8431758084561327,
+      "steps": 291
+    },
+    {
+      "arm": "ppo",
+      "episode": 1,
+      "seed": 80041,
+      "group": 0,
+      "success": false,
+      "max_joint_speed": 0.8642636326728317,
+      "max_joint_jerk": 0.5309252436636944,
+      "rho_safe": 1.1357363673271683,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 2,
+      "seed": 80042,
+      "group": 0,
+      "success": false,
+      "max_joint_speed": 0.9969073793812119,
+      "max_joint_jerk": 0.578332435530043,
+      "rho_safe": 1.003092620618788,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 3,
+      "seed": 80043,
+      "group": 0,
+      "success": false,
+      "max_joint_speed": 0.7278556763971963,
+      "max_joint_jerk": 0.4362410010091031,
+      "rho_safe": 1.2721443236028036,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 4,
+      "seed": 80044,
+      "group": 1,
+      "success": false,
+      "max_joint_speed": 0.6880440334833406,
+      "max_joint_jerk": 0.2711321274063993,
+      "rho_safe": 1.3119559665166594,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 5,
+      "seed": 80045,
+      "group": 1,
+      "success": false,
+      "max_joint_speed": 0.9385007135635076,
+      "max_joint_jerk": 0.6377616633281809,
+      "rho_safe": 1.0614992864364923,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 6,
+      "seed": 80046,
+      "group": 1,
+      "success": false,
+      "max_joint_speed": 1.1135773569818155,
+      "max_joint_jerk": 0.5008267855646316,
+      "rho_safe": 0.8864226430181845,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 7,
+      "seed": 80047,
+      "group": 1,
+      "success": false,
+      "max_joint_speed": 1.0208930786322254,
+      "max_joint_jerk": 0.5458183514746311,
+      "rho_safe": 0.9791069213677746,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 8,
+      "seed": 80048,
+      "group": 2,
+      "success": false,
+      "max_joint_speed": 0.8783337906778382,
+      "max_joint_jerk": 0.57335982974234,
+      "rho_safe": 1.1216662093221617,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 9,
+      "seed": 80049,
+      "group": 2,
+      "success": false,
+      "max_joint_speed": 1.094021252563192,
+      "max_joint_jerk": 0.41118112507862575,
+      "rho_safe": 0.905978747436808,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 10,
+      "seed": 80050,
+      "group": 2,
+      "success": false,
+      "max_joint_speed": 1.2947327956842427,
+      "max_joint_jerk": 0.44104119232594974,
+      "rho_safe": 0.7052672043157573,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 11,
+      "seed": 80051,
+      "group": 2,
+      "success": true,
+      "max_joint_speed": 1.1102475850429285,
+      "max_joint_jerk": 0.3972542972715293,
+      "rho_safe": 0.8897524149570715,
+      "steps": 354
+    },
+    {
+      "arm": "ppo",
+      "episode": 12,
+      "seed": 80052,
+      "group": 3,
+      "success": false,
+      "max_joint_speed": 1.0685411762680828,
+      "max_joint_jerk": 0.7220146105593105,
+      "rho_safe": 0.9314588237319172,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 13,
+      "seed": 80053,
+      "group": 3,
+      "success": false,
+      "max_joint_speed": 1.2625844542432392,
+      "max_joint_jerk": 0.46290179323733355,
+      "rho_safe": 0.7374155457567608,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 14,
+      "seed": 80054,
+      "group": 3,
+      "success": false,
+      "max_joint_speed": 1.1595184876662181,
+      "max_joint_jerk": 0.577425761412692,
+      "rho_safe": 0.8404815123337819,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 15,
+      "seed": 80055,
+      "group": 3,
+      "success": false,
+      "max_joint_speed": 0.8920674365025434,
+      "max_joint_jerk": 0.38990020859569074,
+      "rho_safe": 1.1079325634974566,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 16,
+      "seed": 80056,
+      "group": 4,
+      "success": false,
+      "max_joint_speed": 1.025145625136834,
+      "max_joint_jerk": 0.5472171647842627,
+      "rho_safe": 0.974854374863166,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 17,
+      "seed": 80057,
+      "group": 4,
+      "success": false,
+      "max_joint_speed": 1.017709158331306,
+      "max_joint_jerk": 0.5209666938467178,
+      "rho_safe": 0.982290841668694,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 18,
+      "seed": 80058,
+      "group": 4,
+      "success": false,
+      "max_joint_speed": 0.971050647635359,
+      "max_joint_jerk": 0.48466483852495773,
+      "rho_safe": 1.028949352364641,
+      "steps": 520
+    },
+    {
+      "arm": "ppo",
+      "episode": 19,
+      "seed": 80059,
+      "group": 4,
+      "success": false,
+      "max_joint_speed": 1.0873034815801248,
+      "max_joint_jerk": 0.4080281634557059,
+      "rho_safe": 0.9126965184198752,
+      "steps": 520
+    }
+  ],
+  "update_log": [
+    {
+      "group": 0,
+      "success_rate": 0.25,
+      "stats": {
+        "n_transitions": 1851,
+        "epochs": [
+          {
+            "epoch": 0,
+            "n_transitions": 1851,
+            "loss": 0.21428396964575522,
+            "grad_norm": 156.67169189453125
+          },
+          {
+            "epoch": 1,
+            "n_transitions": 1851,
+            "loss": 0.2082969376356087,
+            "grad_norm": 1174.980224609375
+          },
+          {
+            "epoch": 2,
+            "n_transitions": 1851,
+            "loss": 0.1950337532151591,
+            "grad_norm": 1178.216552734375
+          },
+          {
+            "epoch": 3,
+            "n_transitions": 1851,
+            "loss": 0.1884812523973693,
+            "grad_norm": 867.6912231445312
+          }
+        ]
+      }
+    },
+    {
+      "group": 1,
+      "success_rate": 0.0,
+      "stats": {
+        "n_transitions": 0,
+        "epochs": []
+      }
+    },
+    {
+      "group": 2,
+      "success_rate": 0.25,
+      "stats": {
+        "n_transitions": 1914,
+        "epochs": [
+          {
+            "epoch": 0,
+            "n_transitions": 1914,
+            "loss": 0.15021965982024574,
+            "grad_norm": 155.92921447753906
+          },
+          {
+            "epoch": 1,
+            "n_transitions": 1914,
+            "loss": 0.1443787281417467,
+            "grad_norm": 490.23699951171875
+          },
+          {
+            "epoch": 2,
+            "n_transitions": 1914,
+            "loss": 0.14040844358667112,
+            "grad_norm": 537.7138671875
+          },
+          {
+            "epoch": 3,
+            "n_transitions": 1914,
+            "loss": 0.13418938086892607,
+            "grad_norm": 781.5592651367188
+          }
+        ]
+      }
+    },
+    {
+      "group": 3,
+      "success_rate": 0.0,
+      "stats": {
+        "n_transitions": 0,
+        "epochs": []
+      }
+    },
+    {
+      "group": 4,
+      "success_rate": 0.0,
+      "stats": {
+        "n_transitions": 0,
+        "epochs": []
+      }
+    }
+  ]
+}

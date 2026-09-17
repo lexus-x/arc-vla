@@ -1,0 +1,285 @@
+"""Multi-rate evaluation on LIBERO-Plus (2402 perturbed tasks, 7 categories).
+
+Same protocol as evaluate_multirate_honest.py so the numbers are comparable:
+  * genuine simulator control_freq (LiberoPlusEnv takes it directly)
+  * matched wall-clock budget: 11.0 s at every rate
+  * 20 Hz decision cadence via phase accumulator (works for non-integer ratios)
+  * raw-space magnitude correction, and raw-space spline rescaling
+
+ACTION-CONVENTION NOTE. LiberoPlusEnv.step() multiplies pose deltas by
+`20/control_freq`, i.e. the rate-invariant convention. That convention measured
+**0/50** in base LIBERO -- the arm under-travels ~2x and times out. We therefore set
+`relative_delta_scale = 1.0` and let this script's own magscale supply the correction,
+so both benchmarks issue the identical physical command. Without this the two
+benchmarks would differ by a factor of (env_freq/20)^2 and be incomparable.
+
+Task sampling is a deterministic stratified subset (equal per category, evenly spaced
+by benchmark index), so every arm sees exactly the same tasks in the same order.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+from pathlib import Path
+
+import numpy as np
+import torch
+
+CAMPAIGN = "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804"
+PLUS_V2 = "/home/user/DeepONet_and_Novel_VLA/From_Blackwell/Ayush PH test/DeepONet PH/v2"
+WALLCLOCK_S = 11.0
+REPLAN_S = 0.5
+NATIVE_HZ = 20.0
+POSE_DIMS = 6
+CATEGORIES = ["Background Textures", "Camera Viewpoints", "Language Instructions",
+              "Light Conditions", "Objects Layout", "Robot Initial States", "Sensor Noise"]
+
+
+def stratified_tasks(tasks: list, per_category: int) -> list:
+    """Equal count per category, evenly spaced by benchmark index. Deterministic."""
+    chosen = []
+    for cat in CATEGORIES:
+        pool = sorted([t for t in tasks if t["category"] == cat], key=lambda t: t["index"])
+        if not pool:
+            raise SystemExit(f"[FATAL] no tasks for category {cat!r}")
+        take = min(per_category, len(pool))
+        step = len(pool) / take
+        chosen.extend(pool[int(i * step)] for i in range(take))
+    return chosen
+
+
+
+def _jsonable(o):
+    """install_transforms returns counter state that can hold action-stat TENSORS.
+    json.dumps chokes on those and killed both n=315 arms AFTER the rollouts had run.
+    Counters (ints) are preserved exactly; tensors become lists or a shape tag."""
+    import torch
+    if isinstance(o, dict):
+        return {k: _jsonable(v) for k, v in o.items()}
+    if isinstance(o, (list, tuple)):
+        return [_jsonable(v) for v in o]
+    if isinstance(o, torch.Tensor):
+        return (o.detach().float().cpu().tolist() if o.numel() <= 16
+                else f"<tensor {tuple(o.shape)}>")
+    if o is None or isinstance(o, (bool, int, float, str)):
+        return o
+    return repr(o)
+
+def install_transforms(policy, arm, env_freq, transform, head):
+    """Policy-side arms, identical in effect to evaluate_multirate_honest.build_arm."""
+    sys.path.insert(0, CAMPAIGN)
+    from evaluate_multirate_honest import resample_delta_chunk  # raw-space version
+    from lerobot.utils.constants import ACTION
+
+    steps_ = transform.split("+") if transform else []
+    state = {"n": 0, "last": None, "queries": 0, "resolved": 0, "starved": 0, "phase": -1,
+             "spline": 0, "mag": 0}
+
+    if "spline" in steps_:
+        target_len = int(np.ceil(2.5 * env_freq))
+        s_off, s_sc = head.action_offset.detach().clone(), head.action_scale.detach().clone()
+        prev = policy._get_action_chunk
+
+        def spline_chunk(*a, **k):
+            chunk = prev(*a, **k)
+            state["spline"] += 1
+            return resample_delta_chunk(chunk, target_len, chunk.shape[1], s_off, s_sc)
+
+        policy._get_action_chunk = spline_chunk
+
+    if "magscale" in steps_:
+        k = env_freq / NATIVE_HZ
+        off = head.action_offset[:POSE_DIMS].detach().clone()
+        sc = head.action_scale[:POSE_DIMS].detach().clone()
+        prev_m = policy._get_action_chunk
+
+        def mag_chunk(*a, **kw):
+            chunk = prev_m(*a, **kw)
+            out = chunk.clone()
+            o, s = off.to(chunk.dtype), sc.to(chunk.dtype)
+            raw = chunk[..., :POSE_DIMS] * s + o
+            out[..., :POSE_DIMS] = (raw * k - o) / s
+            state["mag"] += 1
+            return out
+
+        policy._get_action_chunk = mag_chunk
+
+    if "cadence" in steps_ or "hold" in steps_:
+        resolve = "cadence" in steps_
+        raw_select = policy.select_action
+
+        def cadence_select(batch):
+            phase = int(state["n"] * NATIVE_HZ / env_freq)
+            if phase != state["phase"]:
+                state["phase"] = phase
+                state["last"] = raw_select(batch)
+                state["queries"] += 1
+            elif resolve and len(policy._queues[ACTION]) > 0:
+                state["last"] = policy._queues[ACTION].popleft()
+                state["resolved"] += 1
+            elif resolve:
+                state["starved"] += 1
+            state["n"] += 1
+            return state["last"]
+
+        policy.select_action = cadence_select
+    return state
+
+
+def _q2aa(quat) -> np.ndarray:
+    from robosuite.utils.transform_utils import quat2axisangle
+    return np.asarray(quat2axisangle(np.asarray(quat, dtype=np.float64)), dtype=np.float32)
+
+
+def plus_obs_to_policy_input(obs, task_description):
+    """Matches the training convention: 180-deg image flip, state =
+    [eef_pos(3), quat2axisangle(3), gripper_qpos(2)]."""
+    def img(a):
+        t = torch.as_tensor(np.asarray(a)).float() / 255.0
+        return torch.flip(t.permute(2, 0, 1).unsqueeze(0), dims=[2, 3])
+
+    state = torch.cat([
+        torch.as_tensor(np.asarray(obs["robot0_eef_pos"])).float().reshape(1, 3),
+        torch.as_tensor(_q2aa(obs["robot0_eef_quat"])).float().reshape(1, 3),
+        torch.as_tensor(np.asarray(obs["robot0_gripper_qpos"])).float().reshape(1, 2),
+    ], dim=-1)
+    return {"observation.images.image": img(obs["agentview_image"]),
+            "observation.images.wrist_image": img(obs["robot0_eye_in_hand_image"]),
+            "observation.state": state,
+            "task": [task_description]}
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--arms", required=True, help="comma-separated, from evaluate_multirate_honest.ARMS")
+    parser.add_argument("--per_category", type=int, default=15, help="tasks per category (7 categories)")
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--out", default="plus_multirate_out")
+    args = parser.parse_args()
+
+    # PLUS_V2 must go LAST on sys.path. It contains its own older
+    # modeling_smolvla_deeponet_v2.py and deeponet_head_v2.py with no `asrc` branch; putting
+    # it first shadows the campaign copies and silently builds the WRONG head (DeepONetHeadV2,
+    # trunk_in = 1 + 2*n_fourier = 13, vs 20 for asrc). That surfaced only as a size mismatch;
+    # with matching shapes it would have run and produced a plausible number.
+    sys.path.insert(0, CAMPAIGN)
+    sys.path.append(PLUS_V2)
+    import evaluate_multirate_honest as honest
+    import libero_plus_wrapper as LP
+
+    import modeling_smolvla_deeponet_v2 as _mod
+    import rate_integrated_deeponet as _rid
+    for _m in (_mod, _rid, honest):
+        if not os.path.realpath(_m.__file__).startswith(os.path.realpath(CAMPAIGN)):
+            raise SystemExit(f"[FATAL] {_m.__name__} resolved to {_m.__file__}, outside "
+                             f"{CAMPAIGN}. A shadowing copy would build a different head.")
+    print(f"[guard] head modules resolved inside the campaign dir", flush=True)
+
+    bench, all_tasks = LP.list_perturbed_tasks("libero_spatial")
+    if bench.n_tasks != 2402:
+        raise SystemExit(f"[FATAL] LIBERO-Plus not imported: n_tasks={bench.n_tasks} != 2402 "
+                         "(import shadowing -- every 'perturbed' task would be an unperturbed base task)")
+    tasks = stratified_tasks(all_tasks, args.per_category)
+    print(f"[plus] n_tasks={bench.n_tasks} verified; evaluating {len(tasks)} tasks "
+          f"({args.per_category}/category x {len(CATEGORIES)})", flush=True)
+
+    out_dir = Path(args.out)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    results_path = out_dir / "plus_multirate.json"
+    results = json.loads(results_path.read_text()) if results_path.exists() else {}
+
+    for arm in args.arms.split(","):
+        if arm not in honest.ARMS:
+            raise SystemExit(f"[FATAL] unknown arm {arm}")
+        model_key, env_freq, head_rate, transform = honest.ARMS[arm]
+        backbone, checkpoint, deeponet_head, fourier = honest.MODELS[model_key]
+        if backbone != "deeponet":
+            raise SystemExit(f"[FATAL] {arm}: only deeponet arms wired for Plus")
+
+        entry = results.setdefault(arm, {"config": {}, "per_task": {}, "aggregate": None})
+        if entry.get("aggregate") is not None and len(entry["per_task"]) >= len(tasks):
+            print(f"Skipping {arm} (complete: {entry['aggregate']*100:.1f}%)")
+            continue
+
+        os.environ["DEEPONET_HEAD"] = deeponet_head
+        os.environ["DEEPONET_FOURIER"] = str(fourier)
+        os.environ["DEEPONET_STATE_HISTORY_STEPS"] = "8"
+        import evaluate_height_screen as screen
+        from lerobot.datasets.lerobot_dataset import LeRobotDatasetMetadata
+        from rate_integrated_deeponet import RateIntegratedDeepONetHead
+
+        steps = int(round(WALLCLOCK_S * env_freq))
+        screen.REPLAN = int(round(REPLAN_S * env_freq))
+        screen.MAX_STEPS = steps
+        screen.CONTROL_FREQ = head_rate if head_rate is not None else int(NATIVE_HZ)
+        stats = LeRobotDatasetMetadata(screen.DATASET).stats
+        policy, (pre, post) = screen.load_policy("deeponet", checkpoint, stats)
+        head = [m for m in policy.modules() if isinstance(m, RateIntegratedDeepONetHead)][0]
+        if float(head.runtime_rate_hz) != float(screen.CONTROL_FREQ):
+            raise SystemExit(f"[FATAL] {arm}: head rate {head.runtime_rate_hz}")
+        st = install_transforms(policy, arm, env_freq, transform, head)
+        entry["counters"] = _jsonable(st)  # persisted: a run with 0 here is a silent no-op
+        entry["config"] = {"env_freq": env_freq, "head_rate": head_rate, "transform": transform,
+                           "steps": steps, "replan": screen.REPLAN, "wallclock_s": WALLCLOCK_S,
+                           "model": model_key, "checkpoint": checkpoint,
+                           "per_category": args.per_category, "n_tasks_verified": bench.n_tasks}
+        print(f"\n=== {arm} | {env_freq} Hz sim | head {head.runtime_rate_hz} Hz | "
+              f"{steps} steps = {WALLCLOCK_S}s | replan {screen.REPLAN} | {transform} ===", flush=True)
+
+        for i, t in enumerate(tasks):
+            key = str(t["index"])
+            if key in entry["per_task"]:
+                continue
+            env = LP.LiberoPlusEnv(bench, t["index"], img_size=256, control_freq=env_freq)
+            # Neutralize the wrapper's 20/control_freq downscale; magscale above supplies the
+            # correction instead, so this matches base LIBERO exactly. See module docstring.
+            env.relative_delta_scale = 1.0
+            policy.reset()
+            st.update(n=0, last=None, phase=-1)
+            obs = env.reset(seed=args.seed)
+            success, used = False, steps
+            for step in range(1, steps + 1):
+                batch = pre(plus_obs_to_policy_input(obs, env.task_description))
+                batch = {k: v.to("cuda") if torch.is_tensor(v) else v for k, v in batch.items()}
+                with torch.autocast("cuda", dtype=torch.bfloat16):
+                    action = policy.select_action(batch)
+                obs, _, done, _ = env.step(post(action).to("cpu").float().numpy().reshape(-1))
+                if env.check_success():
+                    success, used = True, step
+                    break
+                if done:
+                    used = step
+                    break
+            env.close()
+            entry["per_task"][key] = {"category": t["category"], "success": bool(success),
+                                      "steps": used, "name": t["name"]}
+            done_n = len(entry["per_task"])
+            ok_n = sum(v["success"] for v in entry["per_task"].values())
+            results_path.write_text(json.dumps(results, indent=2, sort_keys=True))
+            print(f"[{arm}] {done_n:3d}/{len(tasks)} {t['category'][:18]:18s} "
+                  f"{'OK ' if success else 'x  '} ({used}/{steps})  running {100*ok_n/done_n:5.1f}%",
+                  flush=True)
+
+        vals = list(entry["per_task"].values())
+        entry["aggregate"] = float(np.mean([v["success"] for v in vals]))
+        by_cat = {c: [v["success"] for v in vals if v["category"] == c] for c in CATEGORIES}
+        entry["by_category"] = {c: (float(np.mean(v)) if v else None) for c, v in by_cat.items()}
+        results_path.write_text(json.dumps(results, indent=2, sort_keys=True))
+        print(f"--> {arm}: {entry['aggregate']*100:.1f}% overall "
+              f"({sum(v['success'] for v in vals)}/{len(vals)})", flush=True)
+        for c, r in entry["by_category"].items():
+            print(f"      {c:22s} {'n/a' if r is None else f'{r*100:5.1f}%'}")
+        del policy
+        torch.cuda.empty_cache()
+
+    print("\nSUMMARY (LIBERO-Plus, matched wall-clock)")
+    for arm in args.arms.split(","):
+        a = results.get(arm, {}).get("aggregate")
+        print(f"  {arm:30s} {'n/a' if a is None else f'{a*100:5.1f}%'}")
+
+
+if __name__ == "__main__":
+    main()

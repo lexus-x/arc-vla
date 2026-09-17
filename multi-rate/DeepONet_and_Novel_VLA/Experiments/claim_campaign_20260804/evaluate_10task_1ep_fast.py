@@ -1,0 +1,98 @@
+"""Fast 10-Task Mean Benchmark (1 Episode/Task): Naive Legacy Rescaling vs DeepONet (til_s0) at 10 Hz and 40 Hz."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+from pathlib import Path
+import numpy as np
+import torch
+
+from evaluate_height_screen import (
+    load_policy, _make_env, _policy_input, _rollout, DATASET
+)
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--rate", type=int, required=True, help="Target rate (10 or 40)")
+    parser.add_argument("--out", default="fast_10task_1ep_out", help="Output directory")
+    args = parser.parse_args()
+
+    rate = args.rate
+    models = {
+        f"naive_flow_{rate}hz": ("flow", "/home/user/DeepONet_and_Novel_VLA/From_Blackwell/Ayush PH test/DeepONet PH/paper_repro/Spatial/runs/flow_s0/checkpoints/30000"),
+        f"til_s0_deeponet_{rate}hz": ("deeponet", "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/til_s0/checkpoints/8300")
+    }
+
+    from lerobot.datasets.lerobot_dataset import LeRobotDatasetMetadata
+    stats = LeRobotDatasetMetadata(DATASET).stats
+    out_dir = Path(args.out)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    results_path = out_dir / f"fast_1ep_{rate}hz.json"
+    results = json.loads(results_path.read_text()) if results_path.exists() else {}
+
+    for arm_key, (head, checkpoint) in models.items():
+        if arm_key in results and results[arm_key].get("aggregate") is not None:
+            print(f"Skipping {arm_key} (already completed: {results[arm_key]['aggregate']*100:.1f}%)")
+            continue
+
+        if head == "deeponet":
+            os.environ["DEEPONET_HEAD"] = "til"
+            os.environ["DEEPONET_STATE_HISTORY_STEPS"] = "8"
+        else:
+            os.environ.pop("DEEPONET_HEAD", None)
+            os.environ["DEEPONET_STATE_HISTORY_STEPS"] = "1"
+
+        print(f"\n==========================================")
+        print(f"RUNNING FAST 10-TASK ARM: {arm_key} @ {rate} Hz (1 ep/task)")
+        print(f"==========================================")
+
+        policy, (preprocessor, postprocessor) = load_policy(head, checkpoint, stats)
+        _raw_select = policy.select_action
+        
+        if head == "deeponet":
+            from rate_integrated_deeponet import RateIntegratedDeepONetHead
+            heads = [m for m in policy.modules() if isinstance(m, RateIntegratedDeepONetHead)]
+            if heads:
+                heads[0].set_rate(rate)
+                print(f"Configured DeepONet Rate Integration for {rate} Hz")
+        else:
+            scale = 20.0 / rate
+            def naive_scale_action(batch):
+                action = _raw_select(batch)
+                return action * scale
+            policy.select_action = naive_scale_action
+            print(f"Configured Naive Legacy Rescaling (scale = {scale:.2f})")
+
+        model_res = results.setdefault(arm_key, {"per_task": {}, "aggregate": None})
+
+        for t_id in range(10):
+            task_entry = model_res["per_task"].setdefault(str(t_id), {"episodes": [], "success_rate": 0.0})
+            episodes = task_entry["episodes"]
+            env = _make_env(t_id)
+            task_entry["task"] = env.task_description
+
+            for trial in range(len(episodes), 1):
+                env.init_state_id = trial
+                assert getattr(env, "init_state_id", None) == trial
+                ep = _rollout(policy, preprocessor, postprocessor, env, env.task_description, 1000 + trial)
+                episodes.append(ep)
+                task_entry["success_rate"] = float(ep["success"])
+                results_path.write_text(json.dumps(results, indent=2, sort_keys=True))
+                print(f"[{arm_key}] Task {t_id} Trial 0: {'OK' if ep['success'] else 'x'} ({ep['steps']} steps)", flush=True)
+            
+            env.close()
+
+        rates_list = [entry["success_rate"] for entry in model_res["per_task"].values()]
+        model_res["aggregate"] = float(np.mean(rates_list))
+        results_path.write_text(json.dumps(results, indent=2, sort_keys=True))
+        print(f"--> ARM {arm_key} 10-TASK MEAN: {model_res['aggregate']*100:.1f}%\n")
+        
+        del policy
+        torch.cuda.empty_cache()
+
+    print(f"\n10-TASK BENCHMARK FOR {rate} HZ COMPLETE!", flush=True)
+
+if __name__ == "__main__":
+    main()

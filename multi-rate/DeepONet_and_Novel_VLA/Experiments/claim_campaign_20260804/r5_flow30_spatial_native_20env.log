@@ -1,0 +1,43 @@
+[replan] OVERRIDE: 5 env steps (default would be 10 at 20 Hz)
+[suite] libero_spatial -> r5_flow30_spatial_native_20env_out/multirate_honest.json
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+
+============================================================
+ARM flow30_spatial_native_20env
+============================================================
+[stats] flow30_spatial_native_20env: normalizing with lerobot/libero_spatial_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 101680.10it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6320.99it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[flow30_spatial_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[flow30_spatial_native_20env] task 0 trial 00: OK (77/220 steps)
+[flow30_spatial_native_20env] task 0 trial 01: OK (82/220 steps)
+[flow30_spatial_native_20env] task 0 trial 02: x (220/220 steps)
+[flow30_spatial_native_20env] task 0 trial 03: OK (74/220 steps)
+[flow30_spatial_native_20env] task 0 trial 04: OK (72/220 steps)
+[flow30_spatial_native_20env] task 0 trial 05: OK (76/220 steps)
+[flow30_spatial_native_20env] task 0 trial 06: OK (73/220 steps)
+[flow30_spatial_native_20env] task 0 trial 07: OK (76/220 steps)
+[flow30_spatial_native_20env] task 0 trial 08: OK (78/220 steps)
+[flow30_spatial_native_20env] task 0 trial 09: OK (72/220 steps)
+[flow30_spatial_native_20env] task 0 trial 10: x (220/220 steps)
+[flow30_spatial_native_20env] task 0 trial 11: OK (77/220 steps)
+[flow30_spatial_native_20env] task 0 trial 12: OK (78/220 steps)
+[flow30_spatial_native_20env] task 0 trial 13: x (220/220 steps)
+[flow30_spatial_native_20env] task 0 trial 14: x (220/220 steps)
+[flow30_spatial_native_20env] task 0 trial 15: OK (73/220 steps)
+[flow30_spatial_native_20env] task 0 trial 16: OK (75/220 steps)
+[flow30_spatial_native_20env] task 0 trial 17: OK (75/220 steps)

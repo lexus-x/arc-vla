@@ -1,0 +1,6 @@
+[long40] 03:03 probe clear, starting
+[long40] 03:03 asrc_long_cadmag_spline_40env
+[long40] 03:11 asrc_long_cadmag_spline_40env rc=0
+[long40] 03:11 asrc_long_cadmag_folding_40env
+[long40] 03:21 asrc_long_cadmag_folding_40env rc=0
+[long40] Wed Aug 12 03:21:13 AM KST 2026 DONE

@@ -1,0 +1,74 @@
+[
+  {
+    "update": 0,
+    "success_rate": 1.0,
+    "n_episodes": 12,
+    "elapsed_s": 415.2793695926666,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 1,
+    "success_rate": 1.0,
+    "n_episodes": 12,
+    "elapsed_s": 857.7430505752563,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 2,
+    "success_rate": 0.9166666666666666,
+    "n_episodes": 12,
+    "elapsed_s": 1502.0190002918243,
+    "n_transitions": 1596,
+    "loss": 0.8040502984310153,
+    "grad_norm": 217.1880340576172
+  },
+  {
+    "update": 3,
+    "success_rate": 1.0,
+    "n_episodes": 12,
+    "elapsed_s": 1916.256403207779,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 4,
+    "success_rate": 1.0,
+    "n_episodes": 12,
+    "elapsed_s": 2335.8518784046173,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 5,
+    "success_rate": 0.9166666666666666,
+    "n_episodes": 12,
+    "elapsed_s": 2974.6775963306427,
+    "n_transitions": 1750,
+    "loss": 0.6731204022509711,
+    "grad_norm": 201.313232421875
+  },
+  {
+    "update": 6,
+    "success_rate": 0.8333333333333334,
+    "n_episodes": 12,
+    "elapsed_s": 3728.0421600341797,
+    "n_transitions": 2110,
+    "loss": 0.6567366983370758,
+    "grad_norm": 211.46041870117188
+  },
+  {
+    "update": 7,
+    "success_rate": 1.0,
+    "n_episodes": 12,
+    "elapsed_s": 4122.411841869354,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  }
+]

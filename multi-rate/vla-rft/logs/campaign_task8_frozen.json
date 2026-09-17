@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "suite": "libero_spatial",
+    "task_id": 8,
+    "task_description": "pick up the black bowl next to the plate and place it on the plate",
+    "arm": "frozen",
+    "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_s0/checkpoints/8300",
+    "n_episodes": 20,
+    "group_size": 4,
+    "n_groups": null,
+    "seed_range": [
+      50800,
+      50819
+    ],
+    "safety_metric": "max_joint_speed/max_joint_jerk over robot arm qvel (robosuite sim.data.qvel), rho_safe = SAFE_JOINT_SPEED_BOUND - max_joint_speed. Replaces smoke_results_v3.json's static-distractor-displacement proxy -- see module docstring.",
+    "safe_joint_speed_bound": 2.0,
+    "elapsed_s": 670.789472579956
+  },
+  "records": [
+    {
+      "arm": "frozen",
+      "episode": 0,
+      "seed": 50800,
+      "success": true,
+      "max_joint_speed": 1.0795295862491028,
+      "max_joint_jerk": 0.637009046650804,
+      "rho_safe": 0.9204704137508972,
+      "steps": 96
+    },
+    {
+      "arm": "frozen",
+      "episode": 1,
+      "seed": 50801,
+      "success": false,
+      "max_joint_speed": 1.0382830628230661,
+      "max_joint_jerk": 0.24302801856632233,
+      "rho_safe": 0.9617169371769339,
+      "steps": 220
+    },
+    {
+      "arm": "frozen",
+      "episode": 2,
+      "seed": 50802,
+      "success": true,
+      "max_joint_speed": 1.0601037949307328,
+      "max_joint_jerk": 0.6749279576491616,
+      "rho_safe": 0.9398962050692672,
+      "steps": 103
+    },
+    {
+      "arm": "frozen",
+      "episode": 3,
+      "seed": 50803,
+      "success": true,
+      "max_joint_speed": 1.0726245211952836,
+      "max_joint_jerk": 0.27711005816865125,
+      "rho_safe": 0.9273754788047164,
+      "steps": 114
+    },
+    {
+      "arm": "frozen",
+      "episode": 4,
+      "seed": 50804,
+      "success": true,
+      "max_joint_speed": 1.152021415381032,
+      "max_joint_jerk": 0.6976962417711089,
+      "rho_safe": 0.847978584618968,
+      "steps": 90
+    },
+    {
+      "arm": "frozen",
+      "episode": 5,
+      "seed": 50805,
+      "success": true,
+      "max_joint_speed": 1.0722480748464258,
+      "max_joint_jerk": 0.6048318505372325,
+      "rho_safe": 0.9277519251535742,
+      "steps": 98
+    },
+    {
+      "arm": "frozen",
+      "episode": 6,
+      "seed": 50806,
+      "success": true,
+      "max_joint_speed": 0.9820955674859422,
+      "max_joint_jerk": 0.20281463730037474,
+      "rho_safe": 1.0179044325140578,
+      "steps": 104
+    },
+    {
+      "arm": "frozen",
+      "episode": 7,
+      "seed": 50807,
+      "success": false,
+      "max_joint_speed": 0.9381853167569896,
+      "max_joint_jerk": 0.3518986818786545,
+      "rho_safe": 1.0618146832430104,
+      "steps": 220
+    },
+    {
+      "arm": "frozen",
+      "episode": 8,
+      "seed": 50808,
+      "success": true,
+      "max_joint_speed": 1.1544097273627518,
+      "max_joint_jerk": 0.4277850558268614,
+      "rho_safe": 0.8455902726372482,
+      "steps": 100
+    },
+    {
+      "arm": "frozen",
+      "episode": 9,
+      "seed": 50809,
+      "success": true,
+      "max_joint_speed": 1.1115115540060003,
+      "max_joint_jerk": 0.8974244815472583,
+      "rho_safe": 0.8884884459939997,
+      "steps": 98
+    },
+    {
+      "arm": "frozen",
+      "episode": 10,
+      "seed": 50810,
+      "success": true,
+      "max_joint_speed": 1.1093665639901742,
+      "max_joint_jerk": 0.395813268139953,
+      "rho_safe": 0.8906334360098258,
+      "steps": 99
+    },
+    {
+      "arm": "frozen",
+      "episode": 11,
+      "seed": 50811,
+      "success": true,
+      "max_joint_speed": 1.043611032038075,
+      "max_joint_jerk": 0.5613624486473803,
+      "rho_safe": 0.9563889679619251,
+      "steps": 99
+    },
+    {
+      "arm": "frozen",
+      "episode": 12,
+      "seed": 50812,
+      "success": true,
+      "max_joint_speed": 1.1139073845122553,
+      "max_joint_jerk": 0.786755887214491,
+      "rho_safe": 0.8860926154877447,
+      "steps": 91
+    },
+    {
+      "arm": "frozen",
+      "episode": 13,
+      "seed": 50813,
+      "success": true,
+      "max_joint_speed": 1.0787710104609056,
+      "max_joint_jerk": 0.7410277182977449,
+      "rho_safe": 0.9212289895390944,
+      "steps": 99
+    },
+    {
+      "arm": "frozen",
+      "episode": 14,
+      "seed": 50814,
+      "success": false,
+      "max_joint_speed": 1.0969768804746218,
+      "max_joint_jerk": 0.3185285220077548,
+      "rho_safe": 0.9030231195253782,
+      "steps": 220
+    },
+    {
+      "arm": "frozen",
+      "episode": 15,
+      "seed": 50815,
+      "success": true,
+      "max_joint_speed": 1.099140602902514,
+      "max_joint_jerk": 0.707191777551709,
+      "rho_safe": 0.9008593970974861,
+      "steps": 98
+    },
+    {
+      "arm": "frozen",
+      "episode": 16,
+      "seed": 50816,
+      "success": true,
+      "max_joint_speed": 1.1531396102414295,
+      "max_joint_jerk": 0.867356243731145,
+      "rho_safe": 0.8468603897585705,
+      "steps": 91
+    },
+    {
+      "arm": "frozen",
+      "episode": 17,
+      "seed": 50817,
+      "success": true,
+      "max_joint_speed": 1.1491935909609892,
+      "max_joint_jerk": 0.46976999997016866,
+      "rho_safe": 0.8508064090390108,
+      "steps": 98
+    },
+    {
+      "arm": "frozen",
+      "episode": 18,
+      "seed": 50818,
+      "success": false,
+      "max_joint_speed": 1.1519093874872803,
+      "max_joint_jerk": 0.23734529103555593,
+      "rho_safe": 0.8480906125127197,
+      "steps": 220
+    },
+    {
+      "arm": "frozen",
+      "episode": 19,
+      "seed": 50819,
+      "success": true,
+      "max_joint_speed": 1.1022805339258168,
+      "max_joint_jerk": 0.23105079668567374,
+      "rho_safe": 0.8977194660741832,
+      "steps": 95
+    }
+  ],
+  "update_log": []
+}

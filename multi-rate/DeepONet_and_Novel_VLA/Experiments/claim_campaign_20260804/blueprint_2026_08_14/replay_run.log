@@ -1,0 +1,5 @@
+orig      140/150  =  93.3%
+fold       76/150  =  50.7%
+spline     16/150  =  10.7%
+
+fold-spline delta = +40.0 pp   discordant 64/4   exact McNemar p=0.0000

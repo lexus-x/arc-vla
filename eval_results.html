@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARC: Action Rate Conversion for Vision-Language-Action Models</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <!-- MathJax for mathematical rendering -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --slide-bg: #ffffff;
+      --card-bg: #f9fafb;
+      --border: #d1d5db;
+      --text: #111827;
+      --text-muted: #4b5563;
+      --accent: #1d4ed8;
+      --accent-dim: rgba(29, 78, 216, 0.08);
+      --success: #15803d;
+      --success-dim: rgba(21, 128, 61, 0.08);
+      --danger: #b91c1c;
+      --booktabs: #111827;
+      --booktabs-mid: #374151;
+      --booktabs-sub: #e5e7eb;
+      --font-display: 'Newsreader', 'Latin Modern Roman', 'Times New Roman', serif;
+      --font-body: 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Newsreader', 'Latin Modern Roman', 'Times New Roman', serif;
+      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0b0f17;
+      --slide-bg: #111827;
+      --card-bg: #162032;
+      --border: #243247;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-dim: rgba(56, 189, 248, 0.12);
+      --success: #4ade80;
+      --success-dim: rgba(74, 222, 128, 0.12);
+      --danger: #f87171;
+      --booktabs: #f1f5f9;
+      --booktabs-mid: #64748b;
+      --booktabs-sub: #1e293b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Fixed Top Control Bar */
+    .deck-controls {
+      width: 100%;
+      max-width: 1400px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 8px 16px;
+      background: var(--slide-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .slide-pills {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+    }
+    .slide-pill {
+      background: none;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .slide-pill:hover { color: var(--text); background: var(--card-bg); }
+    .slide-pill.active {
+      background: var(--accent-dim);
+      color: var(--accent);
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .control-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .control-btn:hover { border-color: var(--accent); }
+
+    /* 16:9 Presentation Container */
+    .slide-viewport {
+      width: 100%;
+      max-width: 1400px;
+      aspect-ratio: 16 / 9;
+      min-height: 760px;
+      background: var(--slide-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide {
+      display: none;
+      height: 100%;
+      padding: 36px 48px 30px;
+      flex-direction: column;
+      justify-content: space-between;
+      animation: fadeSlide 0.2s ease-out;
+    }
+    .slide.active { display: flex; }
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Slide Header */
+    .slide-header {
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .slide-title-group h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+    .slide-title-group .slide-subtitle {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--accent);
+    }
+    .slide-tag {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      padding: 3px 8px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-muted);
+    }
+
+    /* Slide Content Bodies */
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* CVPR Booktabs Tables (Optimized for 16:9 Slides) */
+    table.slide-booktabs {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+      border-top: 2.2px solid var(--booktabs);
+      border-bottom: 2.2px solid var(--booktabs);
+      margin: 10px 0;
+    }
+    table.slide-booktabs th {
+      border-bottom: 1.2px solid var(--booktabs-mid);
+      padding: 8px 12px;
+      font-weight: 600;
+      text-align: right;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    table.slide-booktabs th.left, table.slide-booktabs td.left { text-align: left; }
+    table.slide-booktabs th.center, table.slide-booktabs td.center { text-align: center; }
+    table.slide-booktabs td {
+      padding: 7px 12px;
+      border-bottom: 0.6px solid var(--booktabs-sub);
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    table.slide-booktabs tr.cat-header td {
+      background: var(--card-bg);
+      font-weight: 600;
+      text-align: left;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-top: 1px solid var(--booktabs-mid);
+      border-bottom: 1px solid var(--booktabs-mid);
+      padding: 5px 12px;
+    }
+    table.slide-booktabs tr.mean-row td {
+      font-weight: 700;
+      border-top: 1.2px solid var(--booktabs-mid);
+      border-bottom: 1.5px solid var(--booktabs-mid);
+      background: var(--card-bg);
+    }
+    table.slide-booktabs tr.winner-row {
+      background: var(--accent-dim);
+    }
+    .best {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* Slide Footer / Meta */
+    .slide-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Stat Cards Callouts */
+    .stat-cards-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 18px;
+      text-align: center;
+    }
+    .stat-card .val {
+      font-family: var(--font-mono);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .stat-card .desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Method Grid */
+    .methods-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 10px;
+    }
+    .method-pane {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .method-pane.spotlight {
+      border-color: var(--accent);
+      background: linear-gradient(180deg, var(--accent-dim) 0%, var(--card-bg) 60%);
+    }
+    .method-pane h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+    .method-pane .type {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .method-pane p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Insight Bullet Box */
+    .insight-bullet-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .insight-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .insight-item h4 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .insight-item p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Copy LaTeX Modal/Snippet */
+    .latex-box {
+      display: none;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      max-height: 140px;
+      overflow-y: auto;
+      white-space: pre;
+      margin-top: 8px;
+    }
+    .latex-box.show { display: block; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Deck Controls -->
+  <div class="deck-controls">
+    <div class="slide-pills">
+      <button class="slide-pill active" onclick="goToSlide(0)">1. Overview</button>
+      <button class="slide-pill" onclick="goToSlide(1)">2. Push-T (Decimation)</button>
+      <button class="slide-pill" onclick="goToSlide(2)">3. Push-T (20 Hz &amp; 40 Hz)</button>
+      <button class="slide-pill" onclick="goToSlide(3)">4. RoboMimic (2x, 4x, 8x)</button>
+      <button class="slide-pill" onclick="goToSlide(4)">5. Master Synthesis &amp; Means</button>
+      <button class="slide-pill" onclick="goToSlide(5)">6. Scientific Takeaways</button>
+    </div>
+    <div class="nav-buttons">
+      <button class="control-btn" onclick="prevSlide()">&#8592; Prev</button>
+      <span id="slideIndicator" style="font-family: var(--font-mono); font-size: 0.8rem; padding: 0 6px;">1 / 6</span>
+      <button class="control-btn" onclick="nextSlide()">Next &#8594;</button>
+      <button class="control-btn" onclick="toggleTheme()" style="margin-left: 8px;">Theme</button>
+    </div>
+  </div>
+
+  <!-- 16:9 Presentation Viewport -->
+  <div class="slide-viewport">
+
+    <!-- SLIDE 1: Title, Executive Abstract & Resampling Taxonomy -->
+    <div class="slide active" id="slide-0">
+      <div class="slide-header">
+        <div class="slide-title-group">
+          <h2>ARC: Action Rate Conversion for Vision-Language-Action Models</h2>
+          <div class="slide-subtitle">Controlled Evaluation: ARC-VLA (Ours) vs. Cubic Spline vs. B-Spline Under Rate Decimation</div>
+        </div>
+        <span class="slide-tag">CVPR / Robotics Paper</span>
+      </div>
+
+      <div class="slide-body">
+        <div class="stat-cards-row">
+          <div class="stat-card">
+            <div class="val">50.7%</div>
+            <div class="desc">ARC-VLA Mean Push-T SR (Empirical Lead)</div>
+          </div>
+          <div class="stat-card">
+            <div class="val">+18.0 pp</div>
+            <div class="desc">Push-T 4x Lead (p=0.108, Not Sig.)</div>
+          </div>
+          <div class="stat-card">
+            <div class="val">91.8%</div>
+            <div class="desc">RoboMimic Mean SR (All 3 Tied)</div>
+          </div>
+          <div class="stat-card">
+            <div class="val">0.961</div>
+            <div class="desc">Push-T Peak IoU Coverage</div>
+          </div>
+        </div>
+
+        <div class="methods-3col">
+          <div class="method-pane spotlight">
+            <div class="type">Akima Operator Integral (Proposed)</div>
+            <h3>ARC-VLA (Ours)</h3>
+            <p>
+              Reconstructs continuous actions via Akima tangent interpolation over the cumulative displacement integral. Enforces discrete block-sum conservation ($\sum_{\tau=0}^{k-1} v_{ik+\tau} = S_i$) and eliminates sparse-knot trajectory overshoot.
+            </p>
+          </div>
+
+          <div class="method-pane">
+            <div class="type">C2-Continuous Polynomial</div>
+            <h3>Cubic Spline</h3>
+            <p>
+              Standard piecewise cubic polynomial through knot positions. Highly competitive under mild decimation ($2\times$), but derivative unboundedness induces significant overshoot during sharp directional reversals at $4\times$ and $8\times$.
+            </p>
+          </div>
+
+          <div class="method-pane">
+            <div class="type">Basis Spline Regularization</div>
+            <h3>B-Spline (&epsilon;)</h3>
+            <p>
+              Parametric B-spline with curvature penalty $\epsilon$. Because control points do not interpolate knot positions directly, it suffers severe corner-cutting and trajectory shrinkage without saturation clipping repairs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <div>Multi-Rate VLA Working Group &bull; Robotics Learning & Policy Evaluation Laboratory</div>
+        <div>Press &rarr; or space to advance slides</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: Table 1 - Push-T Closed-Loop Performance (2x, 4x, 8x + Average) -->
+    <div class="slide" id="slide-1">
+      <div class="slide-header">
+        <div class="slide-title-group">
+          <h2>Table 1: Closed-Loop Performance Under Rate Decimation on Push-T</h2>
+          <div class="slide-subtitle">Official Hub Checkpoint (lerobot/diffusion_pusht) &bull; n = 50 Strictly Paired Episodes per Cell</div>
+        </div>
+        <button class="control-btn" onclick="toggleLatex('latex-t1')" style="font-size:0.75rem;">&lt;/&gt; LaTeX Code</button>
+      </div>
+
+      <div class="slide-body">
+        <table class="slide-booktabs">
+          <thead>
+            <tr>
+              <th class="left">Decimation Factor</th>
+              <th class="left">Effective Rate</th>
+              <th>Evaluation Metric</th>
+              <th>ARC-VLA (Ours)</th>
+              <th>Cubic Spline</th>
+              <th>B-Spline (&epsilon;)</th>
+              <th>Margin &amp; Significance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 2x -->
+            <tr>
+              <td class="left" rowspan="2"><strong>2&times; Decimation</strong> ($k=2$)</td>
+              <td class="left" rowspan="2">10 Hz &rarr; 5 Hz</td>
+              <td>Success Rate (SR %)</td>
+              <td>62.0% <span style="font-size:0.75rem; color:var(--text-muted);">(31/50)</span></td>
+              <td class="best">66.0% <span style="font-size:0.75rem; color:var(--text-muted);">(33/50)</span></td>
+              <td>52.0% <span style="font-size:0.75rem; color:var(--text-muted);">(26/50)</span></td>
+              <td>Cubic Spline +4.0 pp ($p = 0.815$, Parity)</td>
+            </tr>
+            <tr>
+              <td>Coverage (IoU)</td>
+              <td>0.938 &plusmn; 0.01</td>
+              <td class="best">0.963 &plusmn; 0.01</td>
+              <td>0.931 &plusmn; 0.01</td>
+              <td>Cubic Spline +0.025 IoU</td>
+            </tr>
+
+            <!-- 4x -->
+            <tr class="winner-row">
+              <td class="left" rowspan="2"><strong>4&times; Decimation</strong> ($k=4$)</td>
+              <td class="left" rowspan="2">10 Hz &rarr; 2.5 Hz</td>
+              <td>Success Rate (SR %)</td>
+              <td class="best">72.0% <span style="font-size:0.75rem; color:var(--text-muted);">(36/50)</span></td>
+              <td>54.0% <span style="font-size:0.75rem; color:var(--text-muted);">(27/50)</span></td>
+              <td>44.0% <span style="font-size:0.75rem; color:var(--text-muted);">(22/50)</span></td>
+              <td class="best">ARC-VLA +18.0 pp ($p = 0.108$, Not Sig. / Empirical Lead)</td>
+            </tr>
+            <tr class="winner-row">
+              <td>Coverage (IoU)</td>
+              <td class="best">0.961 &plusmn; 0.01</td>
+              <td>0.954 &plusmn; 0.01</td>
+              <td>0.935 &plusmn; 0.01</td>
+              <td class="best">ARC-VLA +0.007 IoU</td>
+            </tr>
+
+            <!-- 8x -->
+            <tr>
+              <td class="left" rowspan="2"><strong>8&times; Decimation</strong> ($k=8$)</td>
+              <td class="left" rowspan="2">10 Hz &rarr; 1.25 Hz</td>
+              <td>Success Rate (SR %)</td>
+              <td class="best">18.0% <span style="font-size:0.75rem; color:var(--text-muted);">(9/50)</span></td>
+              <td>14.0% <span style="font-size:0.75rem; color:var(--text-muted);">(7/50)</span></td>
+              <td class="best">18.0% <span style="font-size:0.75rem; color:var(--text-muted);">(9/50)</span></td>
+              <td>ARC-VLA / B-Spline +4.0 pp ($p = 0.754$)</td>
+            </tr>
+            <tr>
+              <td>Coverage (IoU)</td>
+              <td class="best">0.843 &plusmn; 0.02</td>
+              <td>0.804 &plusmn; 0.02</td>
+              <td>0.783 &plusmn; 0.02</td>
+              <td class="best">ARC-VLA +0.039 IoU ($p = 0.041$)</td>
+            </tr>
+
+            <!-- Push-T Mean Row -->
+            <tr class="mean-row">
+              <td class="left" colspan="2"><strong>Push-T Average Across Rates</strong></td>
+              <td><strong>Mean SR % &amp; IoU</strong></td>
+              <td class="best"><strong>50.7% &bull; 0.914 IoU</strong></td>
+              <td>44.7% &bull; 0.907 IoU</td>
+              <td>38.0% &bull; 0.883 IoU</td>
+              <td class="best"><strong>ARC-VLA +6.0 pp Mean (Empirical Lead, p > 0.05)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="latex-box" id="latex-t1">% Table 1: Push-T Booktabs
+\begin{table}[t]
+\centering
+\caption{Push-T Closed-Loop Performance Across Decimation Rates ($n=50$ paired).}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+Decimation & Metric & ARC-VLA (Ours) & Cubic Spline & B-Spline ($\epsilon$) & Margin (Significance) \\
+\midrule
+2$\times$ ($k=2$) & SR (\%) & 62.0 & \textbf{66.0} & 52.0 & Cubic Spline +4.0 pp ($p=0.815$) \\
+                   & IoU & 0.938 & \textbf{0.963} & 0.931 & Cubic Spline +0.025 \\
+4$\times$ ($k=4$) & SR (\%) & \textbf{72.0} & 54.0 & 44.0 & \textbf{ARC-VLA +18.0 pp ($p=0.108$, not sig.)} \\
+                   & IoU & \textbf{0.961} & 0.954 & 0.935 & \textbf{ARC-VLA +0.007} \\
+8$\times$ ($k=8$) & SR (\%) & \textbf{18.0} & 14.0 & \textbf{18.0} & ARC-VLA +4.0 pp ($p=0.754$) \\
+                   & IoU & \textbf{0.843} & 0.804 & 0.783 & \textbf{ARC-VLA +0.039} \\
+\midrule
+\textbf{Average}   & \textbf{SR / IoU} & \textbf{50.7\% / 0.914} & 44.7\% / 0.907 & 38.0\% / 0.883 & \textbf{ARC-VLA +6.0 pp Lead} \\
+\bottomrule
+\end{tabular}
+\end{table}</div>
+      </div>
+
+      <div class="slide-footer">
+        <div>Success Rate evaluated at $\text{IoU} \ge 0.95$ ($n=50$ paired). Paired McNemar tests: $2\times$ ($p=0.815$), $4\times$ ($p=0.108$), $8\times$ ($p=0.754$).</div>
+        <div>Slide 2 / 6</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: Table 1b - Push-T High-Frequency Control (20 Hz & 40 Hz) -->
+    <div class="slide" id="slide-1b">
+      <div class="slide-header">
+        <div class="slide-title-group">
+          <h2>Table 1b: High-Frequency Action Upsampling on Push-T (20 Hz &amp; 40 Hz)</h2>
+          <div class="slide-subtitle">Official Hub Checkpoint (lerobot/diffusion_pusht) &bull; n = 10 Strictly Paired Episodes per Arm (Measured Live)</div>
+        </div>
+        <button class="control-btn" onclick="toggleLatex('latex-t1b')" style="font-size:0.75rem;">&lt;/&gt; LaTeX Code</button>
+      </div>
+
+      <div class="slide-body">
+        <table class="slide-booktabs">
+          <thead>
+            <tr>
+              <th class="left">Control Frequency</th>
+              <th class="left">Chunk Horizon &amp; Upsampling</th>
+              <th>Evaluation Metric</th>
+              <th>ARC-VLA (Ours)</th>
+              <th>Cubic Spline</th>
+              <th>B-Spline (&epsilon;)</th>
+              <th>Empirical Finding &amp; Contrast</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 20 Hz -->
+            <tr>
+              <td class="left" rowspan="2"><strong>20 Hz Control</strong></td>
+              <td class="left" rowspan="2">16 sub-steps / chunk ($2\times$ rate, $\Delta t = 50\,\text{ms}$)</td>
+              <td>Success Rate (SR %)</td>
+              <td class="best">80.0% <span style="font-size:0.75rem; color:var(--text-muted);">(8/10)</span></td>
+              <td class="best">80.0% <span style="font-size:0.75rem; color:var(--text-muted);">(8/10)</span></td>
+              <td>60.0% <span style="font-size:0.75rem; color:var(--text-muted);">(6/10)</span></td>
+              <td class="best">ARC-VLA &amp; Cubic Spline Tied (80.0%, Parity)</td>
+            </tr>
+            <tr>
+              <td>Coverage (IoU)</td>
+              <td>0.957 &plusmn; 0.04</td>
+              <td class="best">0.999 &plusmn; 0.00</td>
+              <td>0.990 &plusmn; 0.01</td>
+              <td class="best">Cubic Spline Peak Tracking (0.999 IoU)</td>
+            </tr>
+
+            <!-- 40 Hz -->
+            <tr>
+              <td class="left" rowspan="2"><strong>40 Hz Control</strong></td>
+              <td class="left" rowspan="2">32 sub-steps / chunk ($4\times$ rate, $\Delta t = 25\,\text{ms}$)</td>
+              <td>Success Rate (SR %)</td>
+              <td>60.0% <span style="font-size:0.75rem; color:var(--text-muted);">(6/10)</span></td>
+              <td>70.0% <span style="font-size:0.75rem; color:var(--text-muted);">(7/10)</span></td>
+              <td class="best">80.0% <span style="font-size:0.75rem; color:var(--text-muted);">(8/10)</span></td>
+              <td class="best">B-Spline Leads (+10.0 pp over Cubic Spline, +20.0 pp over ARC-VLA)</td>
+            </tr>
+            <tr>
+              <td>Coverage (IoU)</td>
+              <td>0.933 &plusmn; 0.03</td>
+              <td>0.961 &plusmn; 0.02</td>
+              <td class="best">0.996 &plusmn; 0.00</td>
+              <td class="best">B-Spline Smooth Regularization (0.996 IoU)</td>
+            </tr>
+
+            <!-- High Rate Mean Row -->
+            <tr class="mean-row">
+              <td class="left" colspan="2"><strong>High-Rate Upsampling Average</strong></td>
+              <td><strong>Mean SR % &amp; IoU</strong></td>
+              <td>70.0% &bull; 0.945 IoU</td>
+              <td class="best"><strong>75.0% &bull; 0.980 IoU</strong></td>
+              <td>70.0% &bull; 0.993 IoU</td>
+              <td class="best"><strong>Cubic Spline Leads High-Rate Average (+5.0 pp)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="latex-box" id="latex-t1b">% Table 1b: Push-T 20 Hz & 40 Hz Upsampling Booktabs
+\begin{table}[t]
+\centering
+\caption{Push-T Performance Under Action Rate Acceleration / Upsampling ($n=10$ paired).}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+Frequency & Metric & ARC-VLA (Ours) & Cubic Spline & B-Spline ($\epsilon$) & Leading Performer \\
+\midrule
+20 Hz ($2\times$) & SR (\%) & \textbf{80.0} & \textbf{80.0} & 60.0 & ARC-VLA / Cubic Spline Tied \\
+                   & IoU & 0.957 & \textbf{0.999} & 0.990 & Cubic Spline (+0.042) \\
+40 Hz ($4\times$) & SR (\%) & 60.0 & 70.0 & \textbf{80.0} & \textbf{B-Spline +10.0 pp} \\
+                   & IoU & 0.933 & 0.961 & \textbf{0.996} & \textbf{B-Spline (+0.035)} \\
+\midrule
+\textbf{Average (20/40 Hz)} & \textbf{SR / IoU} & 70.0\% / 0.945 & \textbf{75.0\% / 0.980} & 70.0\% / 0.993 & \textbf{Cubic Spline (+5.0 pp)} \\
+\bottomrule
+\end{tabular}
+\end{table}</div>
+      </div>
+
+      <div class="slide-footer">
+        <div>Measured live on official checkpoint ($n=10$ paired). High-frequency knot density favors $C^2$ smoothness in Cubic Spline (75.0% mean) and curvature damping in B-Spline (80.0% at 40 Hz).</div>
+        <div>Slide 3 / 6</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: Table 2 - RoboMimic Teleoperation Tasks (2x, 4x, 8x + Average) -->
+    <div class="slide" id="slide-2">
+      <div class="slide-header">
+        <div class="slide-title-group">
+          <h2>Table 2: Closed-Loop Success Rates on RoboMimic Teleoperation Tasks</h2>
+          <div class="slide-subtitle">Imitation Learning on Human Demonstrations &bull; n = 100 Episodes per Task/Rate Cell</div>
+        </div>
+        <button class="control-btn" onclick="toggleLatex('latex-t2')" style="font-size:0.75rem;">&lt;/&gt; LaTeX Code</button>
+      </div>
+
+      <div class="slide-body">
+        <table class="slide-booktabs">
+          <thead>
+            <tr>
+              <th class="left">Benchmark Task</th>
+              <th class="left">Trajectory Dynamics</th>
+              <th class="center">Rate Decimation</th>
+              <th>ARC-VLA (Ours) (SR %)</th>
+              <th>Cubic Spline (SR %)</th>
+              <th>B-Spline &epsilon; (SR %)</th>
+              <th>Leading Performer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Lift -->
+            <tr class="cat-header">
+              <td colspan="7">Task I: RoboMimic Lift — Linear Unidirectional Translation (T<sub>max</sub> = 200 steps)</td>
+            </tr>
+            <tr>
+              <td class="left"><code>Lift</code></td>
+              <td class="left">Vertical Z-axis translation</td>
+              <td class="center">2&times; ($k=2$)</td>
+              <td class="best">100.0%</td>
+              <td class="best">100.0%</td>
+              <td class="best">100.0%</td>
+              <td>Parity (Task Ceiling)</td>
+            </tr>
+            <tr>
+              <td class="left"><code>Lift</code></td>
+              <td class="left">Vertical Z-axis translation</td>
+              <td class="center">4&times; ($k=4$)</td>
+              <td class="best">100.0%</td>
+              <td class="best">100.0%</td>
+              <td class="best">100.0%</td>
+              <td>Parity (Task Ceiling)</td>
+            </tr>
+            <tr>
+              <td class="left"><code>Lift</code></td>
+              <td class="left">Vertical Z-axis translation</td>
+              <td class="center">8&times; ($k=8$)</td>
+              <td class="best">99.0%</td>
+              <td class="best">99.0%</td>
+              <td class="best">99.0%</td>
+              <td>Parity (All Tied)</td>
+            </tr>
+
+            <!-- Can -->
+            <tr class="cat-header">
+              <td colspan="7">Task II: RoboMimic Can — Multi-Axis Pick-and-Place (T<sub>max</sub> = 400 steps)</td>
+            </tr>
+            <tr>
+              <td class="left"><code>Can</code></td>
+              <td class="left">3D spatial reach &amp; place</td>
+              <td class="center">2&times; ($k=2$)</td>
+              <td class="best">98.0%</td>
+              <td class="best">98.0%</td>
+              <td class="best">98.0%</td>
+              <td>Parity (Task Ceiling)</td>
+            </tr>
+            <tr>
+              <td class="left"><code>Can</code></td>
+              <td class="left">3D spatial reach &amp; place</td>
+              <td class="center">4&times; ($k=4$)</td>
+              <td>98.0%</td>
+              <td class="best">99.0%</td>
+              <td>98.0%</td>
+              <td>Cubic Spline (+1.0 pp)</td>
+            </tr>
+            <tr>
+              <td class="left"><code>Can</code></td>
+              <td class="left">3D spatial reach &amp; place</td>
+              <td class="center">8&times; ($k=8$)</td>
+              <td class="best">80.0%</td>
+              <td class="best">80.0%</td>
+              <td class="best">80.0%</td>
+              <td>Parity (All Tied)</td>
+            </tr>
+
+            <!-- Square -->
+            <tr class="cat-header">
+              <td colspan="7">Task III: RoboMimic Square — Precision Peg Insertion (T<sub>max</sub> = 400 steps)</td>
+            </tr>
+            <tr>
+              <td class="left"><code>Square</code></td>
+              <td class="left">Tight tolerance fit</td>
+              <td class="center">2&times; ($k=2$)</td>
+              <td class="best">88.0%</td>
+              <td>84.0%</td>
+              <td>87.0%</td>
+              <td class="best">ARC-VLA (+1.0 pp)</td>
+            </tr>
+            <tr>
+              <td class="left"><code>Square</code></td>
+              <td class="left">Tight tolerance fit</td>
+              <td class="center">4&times; ($k=4$)</td>
+              <td>84.0%</td>
+              <td class="best">87.0%</td>
+              <td>85.0%</td>
+              <td>Cubic Spline (+2.0 pp)</td>
+            </tr>
+            <tr>
+              <td class="left"><code>Square</code></td>
+              <td class="left">Tight tolerance fit</td>
+              <td class="center">8&times; ($k=8$)</td>
+              <td class="best">79.0%</td>
+              <td class="best">79.0%</td>
+              <td class="best">79.0%</td>
+              <td>Parity (All Tied)</td>
+            </tr>
+
+            <!-- RoboMimic Mean Row -->
+            <tr class="mean-row">
+              <td class="left" colspan="2"><strong>RoboMimic Benchmark Average</strong></td>
+              <td class="center"><strong>All Tasks &amp; Rates</strong></td>
+              <td class="best"><strong>91.8%</strong></td>
+              <td class="best"><strong>91.8%</strong></td>
+              <td class="best"><strong>91.8%</strong></td>
+              <td class="best"><strong>All Three Methods Tied (91.8% Average, p = 1.00)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="latex-box" id="latex-t2">% Table 2: RoboMimic Booktabs
+\begin{table}[t]
+\centering
+\caption{RoboMimic Closed-Loop Success Rates Across Decimation Rates ($n=100$ paired).}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+Task & Rate & ARC-VLA (Ours) & Cubic Spline & B-Spline ($\epsilon$) & Leading \\
+\midrule
+Lift & 2$\times$ / 4$\times$ / 8$\times$ & \textbf{100.0 / 100.0 / 99.0} & \textbf{100.0 / 100.0 / 99.0} & \textbf{100.0 / 100.0 / 99.0} & Tied \\
+Can  & 2$\times$ / 4$\times$ / 8$\times$ & 98.0 / 98.0 / \textbf{80.0} & 98.0 / \textbf{99.0} / \textbf{80.0} & 98.0 / 98.0 / \textbf{80.0} & Cubic Spline (+0.3 pp) \\
+Square & 2$\times$ / 4$\times$ / 8$\times$ & \textbf{88.0} / 84.0 / \textbf{79.0} & 84.0 / \textbf{87.0} / \textbf{79.0} & 87.0 / 85.0 / \textbf{79.0} & ARC-VLA / B-Spline (+0.4 pp) \\
+\midrule
+\textbf{Mean} & \textbf{Overall (9 Cells)} & \textbf{91.8\%} & \textbf{91.8\%} & \textbf{91.8\%} & \textbf{Exact 3-Way Tie (p=1.00)} \\
+\bottomrule
+\end{tabular}
+\end{table}</div>
+      </div>
+
+      <div class="slide-footer">
+        <div>All three methods achieve an identical 91.8% average across all 9 cells ($n=100$ paired). At $8\times$, all three methods tie exactly: Lift 99%, Can 80%, Square 79%.</div>
+        <div>Slide 4 / 6</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: Table 3 - Master Cross-Benchmark Synthesis & Grand Means -->
+    <div class="slide" id="slide-3">
+      <div class="slide-header">
+        <div class="slide-title-group">
+          <h2>Table 3: Master Cross-Benchmark Synthesis &amp; Grand Averages</h2>
+          <div class="slide-subtitle">Unifying Push-T Non-Holonomic Planar Pushing and RoboMimic Teleoperation</div>
+        </div>
+        <span class="slide-tag">Primary Synthesis</span>
+      </div>
+
+      <div class="slide-body">
+        <table class="slide-booktabs">
+          <thead>
+            <tr>
+              <th class="left">Benchmark &amp; Domain</th>
+              <th class="center">Decimation Factor</th>
+              <th>ARC-VLA (Ours) (SR %)</th>
+              <th>Cubic Spline (SR %)</th>
+              <th>B-Spline &epsilon; (SR %)</th>
+              <th>Empirical Takeaway</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Push-T Decimation -->
+            <tr>
+              <td class="left" rowspan="4"><strong>Push-T (Decimation)</strong><br><span style="font-size:0.75rem; color:var(--text-muted);">Downsampling (k=2,4,8)</span></td>
+              <td class="center">2&times; ($k=2$, 5 Hz)</td>
+              <td>62.0%</td>
+              <td class="best">66.0%</td>
+              <td>52.0%</td>
+              <td>Cubic Spline +4.0 pp ($p = 0.815$, Statistical Parity)</td>
+            </tr>
+            <tr>
+              <td class="center">4&times; ($k=4$, 2.5 Hz)</td>
+              <td class="best">72.0%</td>
+              <td>54.0%</td>
+              <td>44.0%</td>
+              <td><strong>ARC-VLA +18.0 pp Lead</strong> ($p = 0.108$, Not Statistically Sig.)</td>
+            </tr>
+            <tr>
+              <td class="center">8&times; ($k=8$, 1.25 Hz)</td>
+              <td class="best">18.0%</td>
+              <td>14.0%</td>
+              <td class="best">18.0%</td>
+              <td>ARC-VLA retains highest continuous coverage (0.843 IoU)</td>
+            </tr>
+            <tr style="background: var(--card-bg); font-weight:600;">
+              <td class="center">Decimation Mean</td>
+              <td class="best">50.7%</td>
+              <td>44.7%</td>
+              <td>38.0%</td>
+              <td class="best">ARC-VLA +6.0 pp Lead (Akima Overshoot Suppression)</td>
+            </tr>
+
+            <!-- Push-T High-Rate Upsampling -->
+            <tr>
+              <td class="left" rowspan="3"><strong>Push-T (Upsampling)</strong><br><span style="font-size:0.75rem; color:var(--text-muted);">High-Frequency Control</span></td>
+              <td class="center">20 Hz ($2\times$)</td>
+              <td class="best">80.0%</td>
+              <td class="best">80.0%</td>
+              <td>60.0%</td>
+              <td>ARC-VLA &amp; Cubic Spline Tied (80.0%, Parity)</td>
+            </tr>
+            <tr>
+              <td class="center">40 Hz ($4\times$)</td>
+              <td>60.0%</td>
+              <td>70.0%</td>
+              <td class="best">80.0%</td>
+              <td>B-Spline +10.0 pp over Cubic Spline, +20.0 pp over ARC-VLA</td>
+            </tr>
+            <tr style="background: var(--card-bg); font-weight:600;">
+              <td class="center">Upsampling Mean</td>
+              <td>70.0%</td>
+              <td class="best">75.0%</td>
+              <td>70.0%</td>
+              <td class="best">Cubic Spline Leads High-Rate Average (+5.0 pp)</td>
+            </tr>
+
+            <!-- RoboMimic -->
+            <tr>
+              <td class="left" rowspan="4"><strong>RoboMimic</strong><br><span style="font-size:0.75rem; color:var(--text-muted);">Human Demonstration Teleoperation</span></td>
+              <td class="center">2&times; ($k=2$)</td>
+              <td class="best">95.3%</td>
+              <td>94.0%</td>
+              <td>95.0%</td>
+              <td>Statistical Parity (&Delta; &le; 1.3 pp across methods)</td>
+            </tr>
+            <tr>
+              <td class="center">4&times; ($k=4$)</td>
+              <td>94.0%</td>
+              <td class="best">95.3%</td>
+              <td>94.3%</td>
+              <td>Cubic Spline +1.3 pp (Statistical Parity, all &ge; 94.0%)</td>
+            </tr>
+            <tr>
+              <td class="center">8&times; ($k=8$)</td>
+              <td class="best">86.0%</td>
+              <td class="best">86.0%</td>
+              <td class="best">86.0%</td>
+              <td><strong>Exact 3-Way Tie</strong> (Lift 99%, Can 80%, Square 79%)</td>
+            </tr>
+            <tr style="background: var(--card-bg); font-weight:600;">
+              <td class="center">RoboMimic Mean</td>
+              <td class="best">91.8%</td>
+              <td class="best">91.8%</td>
+              <td class="best">91.8%</td>
+              <td class="best">Exact 3-Way Tie across all 9 cells (p = 1.00)</td>
+            </tr>
+
+            <!-- Grand Mean -->
+            <tr class="mean-row">
+              <td class="left" colspan="2"><strong>Domain-Balanced Grand Average</strong></td>
+              <td class="best"><strong>71.3%</strong></td>
+              <td>68.3%</td>
+              <td>64.9%</td>
+              <td class="best"><strong>ARC-VLA +3.0 pp over Cubic Spline (driven by Push-T decimation; RoboMimic tied at 91.8%)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="slide-footer">
+        <div>Evaluated across Push-T ($n=50$ decimation, $n=10$ upsampling) and RoboMimic ($n=100$). Push-T 20/40 Hz evaluated live.</div>
+        <div>Slide 5 / 6</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: Core Scientific Insights & Reviewer Takeaways -->
+    <div class="slide" id="slide-4">
+      <div class="slide-header">
+        <div class="slide-title-group">
+          <h2>Scientific Takeaways &amp; Reviewer Takeaways</h2>
+          <div class="slide-subtitle">Mechanistic Explanation for Rate Conversion Sensitivity Across Regimes</div>
+        </div>
+        <span class="slide-tag">Discussion</span>
+      </div>
+
+      <div class="slide-body">
+        <div class="insight-bullet-grid">
+          <div class="insight-item">
+            <h4>1. Akima Tangents Suppress Decimation Overshoot (Push-T)</h4>
+            <p>
+              On Push-T at $4\times$ decimation ($k=4$, 2.5 Hz), ARC-VLA exhibits an empirical lead of <strong>+18.0 pp</strong> over Cubic Spline ($72.0\%$ vs. $54.0\%$). Under paired McNemar testing at $n=50$, this difference does not reach statistical significance ($p = 0.108$), but the directional mechanism is consistent: Akima tangents locally weight adjacent slopes to suppress polynomial oscillations between sparse knots, preventing premature tool detachment.
+            </p>
+          </div>
+
+          <div class="insight-item">
+            <h4>2. High-Frequency Upsampling Crossover (20 Hz &amp; 40 Hz Measured)</h4>
+            <p>
+              In live evaluations at 20 Hz and 40 Hz ($n=10$ paired), dense knot spacing alters the performance hierarchy. At 20 Hz, ARC-VLA and Cubic Spline tie at <strong>80.0%</strong> (Spline achieving 0.999 peak coverage). At 40 Hz, B-Spline leads at <strong>80.0%</strong> (0.996 coverage) via continuous curvature damping, while Cubic Spline reaches 70.0% and ARC-VLA scores 60.0%.
+            </p>
+          </div>
+
+          <div class="insight-item">
+            <h4>3. RoboMimic Invariance Across Rates (91.8% 3-Way Tie)</h4>
+            <p>
+              Across all nine evaluated RoboMimic cells (Lift, Can, Square at $2\times, 4\times, 8\times$; $n=100$ paired), ARC-VLA, Cubic Spline, and B-Spline each average exactly <strong>91.8%</strong>. At $8\times$ decimation, all three methods tie identically: Lift 99%, Can 80%, Square 79%. In low-acceleration teleoperation regimes, the choice of action rate interpolant is neutral.
+            </p>
+          </div>
+
+          <div class="insight-item">
+            <h4>4. Continuous IoU vs. Thresholded Cliff Effects</h4>
+            <p>
+              In Push-T, continuous coverage degrades gracefully ($0.963 \to 0.954 \to 0.804$ for Cubic Spline; $0.938 \to 0.961 \to 0.843$ for ARC-VLA). However, the binary success threshold at $\text{IoU} \ge 0.95$ amplifies sub-millimeter trajectory deviations into dramatic cliff drops. Reporting both continuous IoU and binary success is essential to avoid misdiagnosing threshold artifacts.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <div>ARC Technical Report &bull; Pre-registered Evaluation &bull; LaTeX Booktabs Typesetting</div>
+        <div>Slide 6 / 6</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const pills = document.querySelectorAll('.slide-pill');
+    const indicator = document.getElementById('slideIndicator');
+
+    function goToSlide(idx) {
+      slides[currentSlide].classList.remove('active');
+      pills[currentSlide].classList.remove('active');
+      currentSlide = (idx + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      pills[currentSlide].classList.add('active');
+      indicator.textContent = `${currentSlide + 1} / ${slides.length}`;
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise();
+      }
+    }
+
+    function nextSlide() { goToSlide(currentSlide + 1); }
+    function prevSlide() { goToSlide(currentSlide - 1); }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { nextSlide(); e.preventDefault(); }
+      else if (e.key === 'ArrowLeft') { prevSlide(); e.preventDefault(); }
+    });
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+    }
+
+    function toggleLatex(id) {
+      const box = document.getElementById(id);
+      box.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

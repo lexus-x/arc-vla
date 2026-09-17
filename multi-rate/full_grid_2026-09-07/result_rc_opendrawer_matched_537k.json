@@ -1,0 +1,86 @@
+{
+  "Reg": {
+    "k1": {
+      "native": {
+        "success_rate": 0.06666666666666667,
+        "count": "1/15"
+      },
+      "zoh": {
+        "success_rate": 0.06666666666666667,
+        "count": "1/15"
+      }
+    },
+    "k2": {
+      "native": {
+        "success_rate": 0.06666666666666667,
+        "count": "1/15"
+      },
+      "zoh": {
+        "success_rate": 0.06666666666666667,
+        "count": "1/15"
+      }
+    },
+    "k4": {
+      "native": {
+        "success_rate": 0.06666666666666667,
+        "count": "1/15"
+      },
+      "zoh": {
+        "success_rate": 0.26666666666666666,
+        "count": "4/15"
+      }
+    },
+    "k8": {
+      "native": {
+        "success_rate": 0.06666666666666667,
+        "count": "1/15"
+      },
+      "zoh": {
+        "success_rate": 0.06666666666666667,
+        "count": "1/15"
+      }
+    }
+  },
+  "Diff": {
+    "k1": {
+      "native": {
+        "success_rate": 0.4666666666666667,
+        "count": "7/15"
+      },
+      "zoh": {
+        "success_rate": 0.4666666666666667,
+        "count": "7/15"
+      }
+    },
+    "k2": {
+      "native": {
+        "success_rate": 0.4666666666666667,
+        "count": "7/15"
+      },
+      "zoh": {
+        "success_rate": 0.4666666666666667,
+        "count": "7/15"
+      }
+    },
+    "k4": {
+      "native": {
+        "success_rate": 0.4666666666666667,
+        "count": "7/15"
+      },
+      "zoh": {
+        "success_rate": 0.4666666666666667,
+        "count": "7/15"
+      }
+    },
+    "k8": {
+      "native": {
+        "success_rate": 0.4666666666666667,
+        "count": "7/15"
+      },
+      "zoh": {
+        "success_rate": 0.4666666666666667,
+        "count": "7/15"
+      }
+    }
+  }
+}

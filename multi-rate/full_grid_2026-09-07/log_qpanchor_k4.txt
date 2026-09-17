@@ -1,0 +1,30 @@
+[PickCube-v1] k=4 eligible=993 arms=['original', 'exact_integral', 'cubic_spline_satfix', 'tac_fold_satfix', 'bspline_eps_satfix', 'qp', 'qp_anchor']
+[PickCube-v1] k=4 [100/993] original=96 exact_integral=19 cubic_spline_satfix=30 tac_fold_satfix=31 bspline_eps_satfix=29 qp=39 qp_anchor=34 (49s)
+[PickCube-v1] k=4 [200/993] original=188 exact_integral=32 cubic_spline_satfix=56 tac_fold_satfix=57 bspline_eps_satfix=50 qp=69 qp_anchor=63 (99s)
+[PickCube-v1] k=4 [300/993] original=277 exact_integral=52 cubic_spline_satfix=88 tac_fold_satfix=86 bspline_eps_satfix=82 qp=107 qp_anchor=97 (148s)
+[PickCube-v1] k=4 [400/993] original=370 exact_integral=79 cubic_spline_satfix=119 tac_fold_satfix=116 bspline_eps_satfix=111 qp=140 qp_anchor=130 (195s)
+[PickCube-v1] k=4 [500/993] original=462 exact_integral=106 cubic_spline_satfix=158 tac_fold_satfix=152 bspline_eps_satfix=148 qp=181 qp_anchor=171 (243s)
+[PickCube-v1] k=4 [600/993] original=556 exact_integral=129 cubic_spline_satfix=190 tac_fold_satfix=181 bspline_eps_satfix=180 qp=215 qp_anchor=203 (292s)
+[PickCube-v1] k=4 [700/993] original=650 exact_integral=152 cubic_spline_satfix=224 tac_fold_satfix=219 bspline_eps_satfix=212 qp=252 qp_anchor=247 (340s)
+[PickCube-v1] k=4 [800/993] original=739 exact_integral=168 cubic_spline_satfix=249 tac_fold_satfix=240 bspline_eps_satfix=234 qp=279 qp_anchor=273 (390s)
+[PickCube-v1] k=4 [900/993] original=835 exact_integral=189 cubic_spline_satfix=281 tac_fold_satfix=270 bspline_eps_satfix=267 qp=319 qp_anchor=306 (439s)
+[PickCube-v1] k=4 [993/993] original=918 exact_integral=209 cubic_spline_satfix=306 tac_fold_satfix=297 bspline_eps_satfix=294 qp=346 qp_anchor=331 (487s)
+
+=== [PickCube-v1] k=4 n=993 ===
+  original                92.45% (918/993)  saturated_elems=0.00%
+  exact_integral          21.05% (209/993)  saturated_elems=0.00%
+  cubic_spline_satfix     30.82% (306/993)  saturated_elems=0.00%
+  tac_fold_satfix         29.91% (297/993)  saturated_elems=0.00%
+  bspline_eps_satfix      29.61% (294/993)  saturated_elems=0.00%
+  qp                      34.84% (346/993)  saturated_elems=0.00%
+  qp_anchor               33.33% (331/993)  saturated_elems=0.00%
+  qp vs exact_integral      : +13.80pp  wins 156/19  p=5.87e-28  CI=[11.38,16.31]
+  qp_anchor vs exact_integral      : +12.29pp  wins 139/17  p=5.44e-25  CI=[9.97,14.70]
+  qp vs cubic_spline_satfix : +4.03pp  wins 63/23  p=1.88e-05  CI=[2.32,5.84]
+  qp_anchor vs cubic_spline_satfix : +2.52pp  wins 57/32  p=0.0105  CI=[0.60,4.33]
+  qp vs tac_fold_satfix     : +4.93pp  wins 87/38  p=1.39e-05  CI=[2.82,7.15]
+  qp_anchor vs tac_fold_satfix     : +3.42pp  wins 46/12  p=8.22e-06  CI=[2.01,4.93]
+  qp vs bspline_eps_satfix  : +5.24pp  wins 86/34  p=2.28e-06  CI=[3.12,7.35]
+  qp_anchor vs bspline_eps_satfix  : +3.73pp  wins 82/45  p=0.00131  CI=[1.51,5.94]
+saved -> /home/user/Desktop/multi-rate/full_grid_2026-09-07/qpanchor_replay_PickCube-v1_k4.json
+

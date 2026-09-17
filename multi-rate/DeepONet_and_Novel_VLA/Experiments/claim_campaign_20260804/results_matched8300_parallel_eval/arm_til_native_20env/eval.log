@@ -1,0 +1,93 @@
+[suite] libero_spatial -> /home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/results_matched8300_parallel_eval/arm_til_native_20env/multirate_honest.json
+
+============================================================
+ARM til_native_20env
+============================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+[stats] til_native_20env: normalizing with lerobot/libero_spatial_image
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 61230.72it/s]
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  42%|████▏     | 204/489 [00:00<00:00, 2028.63it/s]Loading weights:  88%|████████▊ | 429/489 [00:00<00:00, 2151.07it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 2218.71it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  92%|█████████▏| 451/489 [00:00<00:00, 4406.71it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 4345.30it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[til_native_20env] variant=til n_fourier=0 re-integrates at 20.0 Hz (native ODE re-integration, NOT alias folding)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[til_native_20env] settle window scaled to 10 steps (0.50 s at 20 Hz)
+[til_native_20env] task 0 trial 00: OK (74/220 steps)
+[til_native_20env] task 0 trial 01: OK (76/220 steps)
+[til_native_20env] task 0 trial 02: OK (72/220 steps)
+[til_native_20env] task 0 trial 03: OK (73/220 steps)
+[til_native_20env] task 0 trial 04: OK (75/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[til_native_20env] task 1 trial 00: x (220/220 steps)
+[til_native_20env] task 1 trial 01: OK (108/220 steps)
+[til_native_20env] task 1 trial 02: OK (120/220 steps)
+[til_native_20env] task 1 trial 03: OK (115/220 steps)
+[til_native_20env] task 1 trial 04: OK (121/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[til_native_20env] task 2 trial 00: OK (95/220 steps)
+[til_native_20env] task 2 trial 01: OK (103/220 steps)
+[til_native_20env] task 2 trial 02: OK (93/220 steps)
+[til_native_20env] task 2 trial 03: OK (94/220 steps)
+[til_native_20env] task 2 trial 04: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[til_native_20env] task 3 trial 00: OK (87/220 steps)
+[til_native_20env] task 3 trial 01: OK (87/220 steps)
+[til_native_20env] task 3 trial 02: OK (85/220 steps)
+[til_native_20env] task 3 trial 03: x (220/220 steps)
+[til_native_20env] task 3 trial 04: OK (87/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[til_native_20env] task 4 trial 00: x (220/220 steps)
+[til_native_20env] task 4 trial 01: x (220/220 steps)
+[til_native_20env] task 4 trial 02: x (220/220 steps)
+[til_native_20env] task 4 trial 03: OK (132/220 steps)
+[til_native_20env] task 4 trial 04: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[til_native_20env] task 5 trial 00: x (220/220 steps)
+[til_native_20env] task 5 trial 01: x (220/220 steps)
+[til_native_20env] task 5 trial 02: x (220/220 steps)
+[til_native_20env] task 5 trial 03: x (220/220 steps)
+[til_native_20env] task 5 trial 04: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[til_native_20env] task 6 trial 00: OK (112/220 steps)
+[til_native_20env] task 6 trial 01: x (220/220 steps)
+[til_native_20env] task 6 trial 02: x (220/220 steps)
+[til_native_20env] task 6 trial 03: OK (115/220 steps)
+[til_native_20env] task 6 trial 04: OK (119/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[til_native_20env] task 7 trial 00: OK (155/220 steps)
+[til_native_20env] task 7 trial 01: OK (113/220 steps)
+[til_native_20env] task 7 trial 02: OK (125/220 steps)
+[til_native_20env] task 7 trial 03: OK (125/220 steps)
+[til_native_20env] task 7 trial 04: OK (135/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[til_native_20env] task 8 trial 00: x (220/220 steps)
+[til_native_20env] task 8 trial 01: OK (101/220 steps)
+[til_native_20env] task 8 trial 02: x (220/220 steps)
+[til_native_20env] task 8 trial 03: x (220/220 steps)
+[til_native_20env] task 8 trial 04: x (220/220 steps)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[til_native_20env] task 9 trial 00: OK (120/220 steps)
+[til_native_20env] task 9 trial 01: OK (118/220 steps)
+[til_native_20env] task 9 trial 02: x (220/220 steps)
+[til_native_20env] task 9 trial 03: OK (120/220 steps)
+[til_native_20env] task 9 trial 04: x (220/220 steps)
+[til_native_20env] diagnostics: 30/50 ok | fail_at_cap=20 fail_early=0 | succ_median=110.0/220
+--> til_native_20env: 60.0% (220 steps @ 20 Hz = 11.0 s, replan every 10)
+
+
+SUMMARY (matched wall-clock, chunk-driven replan)
+  til_native_20env        60.0%

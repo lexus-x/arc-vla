@@ -1,0 +1,21 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] 3 demos harvested in 0s
+[data] 171 windows, obs_dim=19, act_dim=7, raw |a|>1 frac=0.000
+[train] step 1/50 loss=1.14833
+[train] saved /home/user/Desktop/multi-rate/dp_tacfold_2026-09-06/dp_lift_smoke.pt
+[eval] [2/2] native=0 zoh=0 spline=0 spline_satfix=0 pchip=0 pchip_satfix=0 tac_fold=0 tac_fold_satfix=0
+[eval] wall 29s for 2 eps x 8 arms
+
+=== lift closed-loop DP, k=2, n=2 ===
+  native              0.0% (0/2)  | vs zoh:   +0.0pp p=1
+  zoh                 0.0% (0/2)  | vs native:   +0.0pp p=1
+  spline              0.0% (0/2)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  spline_satfix       0.0% (0/2)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  pchip               0.0% (0/2)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  pchip_satfix        0.0% (0/2)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold            0.0% (0/2)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold_satfix     0.0% (0/2)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/dp_tacfold_2026-09-06/result_lift_smoke.json

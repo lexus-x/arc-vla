@@ -1,0 +1,19 @@
+[PegInsertionSide-v1] eligible=1000 arms=['original', 'exact_integral', 'exact_integral_satfix', 'cubic_spline', 'cubic_spline_satfix', 'pchip', 'pchip_satfix', 'tac_fold', 'tac_fold_satfix']
+Traceback (most recent call last):
+  File "/tmp/claude-1000/-home-user-Desktop/84eef76b-33e3-4b02-8c76-473993217a1e/scratchpad/run_satfix_general.py", line 54, in <module>
+    try: u.set_state_dict(state)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/ms3/lib/python3.11/site-packages/mani_skill/envs/sapien_env.py", line 1301, in set_state_dict
+    self.scene.set_sim_state(state, env_idx)
+  File "/home/user/anaconda3/envs/ms3/lib/python3.11/site-packages/mani_skill/envs/scene.py", line 888, in set_sim_state
+    self.state_dict_registry.actors[actor_id].set_state(actor_state, None)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'peg_0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/claude-1000/-home-user-Desktop/84eef76b-33e3-4b02-8c76-473993217a1e/scratchpad/run_satfix_general.py", line 55, in <module>
+    except Exception as exc: raise RuntimeError(f"set_state_dict failed {task} ep {ep_id}: {exc!r}")
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: set_state_dict failed PegInsertionSide-v1 ep 0: KeyError('peg_0')

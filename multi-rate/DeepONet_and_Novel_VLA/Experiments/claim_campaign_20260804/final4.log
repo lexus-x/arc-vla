@@ -1,0 +1,11 @@
+[q4] 16:58 q2+q3 clear, starting
+[q4] 16:58 smoke flow_m1 on Plus
+[q4] 16:58 SMOKE FAILED - aborting, see smoke_plus_flow.log
+[q4] 17:01 q2+q3 clear, starting
+[q4] 17:01 smoke flow_m1 on Plus
+[q4] 17:02 smoke ok
+[q4] 17:02 plus n=315 flow_m1_cadmag_spline_40env
+[q4] 18:45 flow_m1_cadmag_spline_40env exit=0
+[q4] 18:45 plus n=315 flow_m1_native_20env
+[q4] 19:57 flow_m1_native_20env exit=0
+[q4] 19:57 Q4 DONE

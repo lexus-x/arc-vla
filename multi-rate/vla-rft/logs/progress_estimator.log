@@ -1,0 +1,79 @@
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 101067.57it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6671.53it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+=== Collecting demo features (train/val split) ===
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 120699.40it/s]
+[train] 36 episodes, 3617 frames
+[val] 9 episodes, 870 frames
+=== Training progress head ===
+  epoch 0: train_mse=0.0891 val_mse=0.1053
+  epoch 50: train_mse=0.0103 val_mse=0.0093
+  epoch 100: train_mse=0.0074 val_mse=0.0075
+  epoch 150: train_mse=0.0055 val_mse=0.0061
+  epoch 200: train_mse=0.0040 val_mse=0.0055
+  epoch 250: train_mse=0.0030 val_mse=0.0055
+  epoch 299: train_mse=0.0028 val_mse=0.0051
+Saved head to /home/user/Desktop/multi-rate/vla-rft/progress_head.pt
+Held-out overall Pearson r = 0.9697 (per-episode mean r = 0.980733669321945)
+=== Rollout validation (fresh episodes, same checkpoint/task/config) ===
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[rollout seed=2000] fresh_success=True steps=83 pred_progress: start=0.064 end=0.861 delta=+0.796 corr_vs_t=0.9835213611585353
+[rollout seed=2001] fresh_success=False steps=220 pred_progress: start=0.062 end=0.457 delta=+0.395 corr_vs_t=0.6573046139362468
+[rollout seed=2003] fresh_success=True steps=84 pred_progress: start=0.073 end=0.874 delta=+0.801 corr_vs_t=0.9861251441373237
+[rollout seed=2002] fresh_success=False steps=220 pred_progress: start=0.046 end=0.889 delta=+0.843 corr_vs_t=0.91463244700761
+[rollout seed=2005] fresh_success=True steps=78 pred_progress: start=0.031 end=0.835 delta=+0.804 corr_vs_t=0.9937165041556204
+[rollout seed=2007] fresh_success=True steps=79 pred_progress: start=0.051 end=0.891 delta=+0.840 corr_vs_t=0.9900312630245164
+
+Saved /home/user/Desktop/multi-rate/vla-rft/progress_estimator_eval.json
+Total wall time: 190s
+Exception ignored in: <function MjRenderContext.__del__ at 0x7239d41299e0>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7239aadb8450>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7239d40bb7d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7239d40bb7d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7239d40bb6d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7239d41298a0>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7239aadb8450>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7239d40bb7d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7239d40bb7d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7239d40bb6d0>,
+	),
+	result = 0
+)

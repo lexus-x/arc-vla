@@ -1,0 +1,32 @@
+[PushCube-v1] eligible=1019 arms=['original', 'exact_integral', 'exact_integral_satfix', 'cubic_spline', 'cubic_spline_satfix', 'pchip', 'pchip_satfix', 'tac_fold', 'tac_fold_satfix']
+[PushCube-v1] [100/1019] original=100 exact_integral=97 exact_integral_satfix=97 cubic_spline=96 cubic_spline_satfix=97 pchip=98 pchip_satfix=97 tac_fold=97 tac_fold_satfix=98
+[PushCube-v1] [200/1019] original=199 exact_integral=197 exact_integral_satfix=197 cubic_spline=187 cubic_spline_satfix=196 pchip=198 pchip_satfix=197 tac_fold=195 tac_fold_satfix=197
+[PushCube-v1] [300/1019] original=299 exact_integral=296 exact_integral_satfix=296 cubic_spline=282 cubic_spline_satfix=295 pchip=296 pchip_satfix=296 tac_fold=293 tac_fold_satfix=295
+[PushCube-v1] [400/1019] original=399 exact_integral=395 exact_integral_satfix=394 cubic_spline=378 cubic_spline_satfix=393 pchip=393 pchip_satfix=395 tac_fold=390 tac_fold_satfix=393
+[PushCube-v1] [500/1019] original=498 exact_integral=494 exact_integral_satfix=493 cubic_spline=471 cubic_spline_satfix=492 pchip=491 pchip_satfix=493 tac_fold=486 tac_fold_satfix=492
+[PushCube-v1] [600/1019] original=598 exact_integral=593 exact_integral_satfix=592 cubic_spline=563 cubic_spline_satfix=591 pchip=587 pchip_satfix=592 tac_fold=582 tac_fold_satfix=590
+[PushCube-v1] [700/1019] original=698 exact_integral=692 exact_integral_satfix=691 cubic_spline=657 cubic_spline_satfix=691 pchip=683 pchip_satfix=692 tac_fold=680 tac_fold_satfix=689
+[PushCube-v1] [800/1019] original=796 exact_integral=789 exact_integral_satfix=788 cubic_spline=750 cubic_spline_satfix=789 pchip=778 pchip_satfix=789 tac_fold=775 tac_fold_satfix=786
+[PushCube-v1] [900/1019] original=895 exact_integral=887 exact_integral_satfix=886 cubic_spline=844 cubic_spline_satfix=887 pchip=874 pchip_satfix=887 tac_fold=871 tac_fold_satfix=884
+[PushCube-v1] [1000/1019] original=993 exact_integral=986 exact_integral_satfix=985 cubic_spline=938 cubic_spline_satfix=986 pchip=968 pchip_satfix=986 tac_fold=967 tac_fold_satfix=984
+[PushCube-v1] [1019/1019] original=1012 exact_integral=1004 exact_integral_satfix=1003 cubic_spline=954 cubic_spline_satfix=1004 pchip=986 pchip_satfix=1004 tac_fold=985 tac_fold_satfix=1003
+
+=== [PushCube-v1] k=2 n=1019 ===
+  original                99.31% (1012/1019)  saturated_elems=0.00%
+  exact_integral          98.53% (1004/1019)  saturated_elems=0.00%
+  exact_integral_satfix   98.43% (1003/1019)  saturated_elems=0.00%
+  cubic_spline            93.62% (954/1019)  saturated_elems=15.34%
+  cubic_spline_satfix     98.53% (1004/1019)  saturated_elems=0.00%
+  pchip                   96.76% (986/1019)  saturated_elems=6.80%
+  pchip_satfix            98.53% (1004/1019)  saturated_elems=0.00%
+  tac_fold                96.66% (985/1019)  saturated_elems=3.66%
+  tac_fold_satfix         98.43% (1003/1019)  saturated_elems=0.00%
+--- paired contrasts vs ZOH (exact McNemar, 95% CI pp) ---
+  exact_integral_satfix  vs ZOH: -0.10pp  wins 0/1  p=1  CI=[-0.29,0.00]
+  cubic_spline           vs ZOH: -4.91pp  wins 5/55  p=1.04e-11  CI=[-6.38,-3.43]
+  cubic_spline_satfix    vs ZOH: +0.00pp  wins 3/3  p=1  CI=[-0.49,0.49]
+  pchip                  vs ZOH: -1.77pp  wins 4/22  p=0.000534  CI=[-2.75,-0.79]
+  pchip_satfix           vs ZOH: +0.00pp  wins 1/1  p=1  CI=[-0.29,0.29]
+  tac_fold               vs ZOH: -1.86pp  wins 3/22  p=0.000157  CI=[-2.85,-0.98]
+  tac_fold_satfix        vs ZOH: -0.10pp  wins 4/5  p=1  CI=[-0.69,0.49]
+saved -> /tmp/claude-1000/-home-user-Desktop/84eef76b-33e3-4b02-8c76-473993217a1e/scratchpad/satfix_PushCube-v1_k2.json

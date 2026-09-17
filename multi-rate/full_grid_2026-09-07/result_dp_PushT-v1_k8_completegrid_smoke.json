@@ -1,0 +1,146 @@
+{
+  "task": "PushT-v1",
+  "policy": "dp",
+  "k": 8,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 2,
+  "train_steps": 30000,
+  "arms": [
+    "native",
+    "zoh",
+    "spline",
+    "bspline_eps_raw",
+    "tac_fold_satfix",
+    "qp",
+    "qp_anchor"
+  ],
+  "success": {
+    "native": [
+      false,
+      true
+    ],
+    "zoh": [
+      false,
+      false
+    ],
+    "spline": [
+      false,
+      false
+    ],
+    "bspline_eps_raw": [
+      false,
+      false
+    ],
+    "tac_fold_satfix": [
+      false,
+      false
+    ],
+    "qp": [
+      false,
+      false
+    ],
+    "qp_anchor": [
+      false,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.07374338624338625,
+    "zoh": 0.009755291005291006,
+    "spline": 0.009755291005291006,
+    "bspline_eps_raw": 0.009755291005291006,
+    "tac_fold_satfix": 0.009755291005291006,
+    "qp": 0.009755291005291006,
+    "qp_anchor": 0.009755291005291006
+  },
+  "contrasts": {
+    "native": {
+      "vs_zoh": {
+        "delta_pp": 50.0,
+        "p": 1.0,
+        "a_only": 1,
+        "ref_only": 0
+      }
+    },
+    "zoh": {
+      "vs_native": {
+        "delta_pp": -50.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    },
+    "spline": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": -50.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    },
+    "bspline_eps_raw": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": -50.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    },
+    "tac_fold_satfix": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": -50.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    },
+    "qp": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": -50.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    },
+    "qp_anchor": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": -50.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 1
+      }
+    }
+  }
+}

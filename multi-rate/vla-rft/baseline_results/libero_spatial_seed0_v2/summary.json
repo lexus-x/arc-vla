@@ -1,0 +1,7 @@
+{
+  "suite": "libero_spatial",
+  "ckpt": "/media/user/C2FE578FFE577A9D/vla_matched/flow8300_s0/checkpoints/8300",
+  "aggregate": 0.7733333333333334,
+  "n": 300,
+  "source": "baseline_results/summary.json (3-seed mean, PHASE2)"
+}

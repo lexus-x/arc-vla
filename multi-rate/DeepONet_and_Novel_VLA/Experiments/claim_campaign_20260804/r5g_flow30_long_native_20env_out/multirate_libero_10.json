@@ -1,0 +1,1595 @@
+{
+  "flow30_long_native_20env": {
+    "aggregate": 0.6900000000000001,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/From_Blackwell/Ayush PH test/DeepONet PH/paper_repro/Long/runs/flow_s0/checkpoints/30000",
+      "deeponet_head": null,
+      "env_freq": 20,
+      "fourier": null,
+      "head_rate": null,
+      "model": "flow30_long",
+      "replan": 5,
+      "settle_steps": 10,
+      "steps": 520,
+      "suite": "libero_10",
+      "trained_on": "libero_spatial",
+      "transform": null,
+      "wallclock_s": 26.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": null,
+      "cap": 520,
+      "fail_at_cap": 93,
+      "fail_early": 0,
+      "magscale_applied": null,
+      "n": 300,
+      "n_success": 207,
+      "spline_applied": null,
+      "success_steps_max": 518,
+      "success_steps_median": 241.0
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 276,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 335,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 255,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 499,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 298,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 427,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 246,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 285,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 431,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 345,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1017,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1018,
+            "steps": 450,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 325,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1021,
+            "steps": 277,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1023,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1024,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1025,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1026,
+            "steps": 282,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1028,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1029,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.4666666666666667,
+        "task": "put both the alphabet soup and the tomato sauce in the basket"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 267,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 238,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 233,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 232,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 234,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 241,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 371,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 376,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 258,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 237,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 240,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 239,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 248,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 247,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 254,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 235,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 252,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1023,
+            "steps": 518,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1025,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1026,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1027,
+            "steps": 229,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 245,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 242,
+            "success": true
+          }
+        ],
+        "success_rate": 0.7333333333333333,
+        "task": "put both the cream cheese box and the butter in the basket"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 232,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 222,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 240,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 237,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 252,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 239,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 223,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 239,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 237,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 237,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 214,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 262,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1018,
+            "steps": 225,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 244,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 235,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 218,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 217,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 243,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 257,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 225,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 240,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 219,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 218,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 251,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8333333333333334,
+        "task": "turn on the stove and put the moka pot on it"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 254,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 268,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 210,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 242,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 232,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 215,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 232,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 210,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 217,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 258,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 254,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 215,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 261,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 206,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 217,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 207,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 242,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 218,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 203,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 223,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 216,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 225,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 215,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 245,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 234,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 228,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 213,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 286,
+            "success": true
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "put the black bowl in the bottom drawer of the cabinet and close it"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 220,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 230,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 408,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 227,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 327,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 234,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 248,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1016,
+            "steps": 218,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 249,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1019,
+            "steps": 233,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 236,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1022,
+            "steps": 475,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 239,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 232,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 223,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1027,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1028,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 241,
+            "success": true
+          }
+        ],
+        "success_rate": 0.6,
+        "task": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 171,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 307,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 189,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 180,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 164,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 165,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 170,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 432,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 182,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 164,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 176,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 160,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 158,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 150,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 177,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 163,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 188,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 171,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 170,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1020,
+            "steps": 190,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 166,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1023,
+            "steps": 157,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 155,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 172,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1027,
+            "steps": 180,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 167,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 168,
+            "success": true
+          }
+        ],
+        "success_rate": 0.9,
+        "task": "pick up the book and place it in the back compartment of the caddy"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 250,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 241,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 238,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 212,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 226,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 212,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 218,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 242,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 214,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1017,
+            "steps": 230,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 221,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 208,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1021,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1022,
+            "steps": 220,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 247,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 285,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 352,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1027,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1028,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1029,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.5666666666666667,
+        "task": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 247,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 259,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 253,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 235,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 257,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 236,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 259,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 263,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 247,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 498,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1017,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1018,
+            "steps": 247,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 233,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 301,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 412,
+            "success": true
+          },
+          {
+            "seed": 1022,
+            "steps": 242,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1024,
+            "steps": 243,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 259,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 254,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.6666666666666666,
+        "task": "put both the alphabet soup and the cream cheese box in the basket"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 463,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 411,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 429,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1015,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1016,
+            "steps": 482,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1018,
+            "steps": 382,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 385,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1021,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1022,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1023,
+            "steps": 441,
+            "success": true
+          },
+          {
+            "seed": 1024,
+            "steps": 447,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 396,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1027,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1028,
+            "steps": 414,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 520,
+            "success": false
+          }
+        ],
+        "success_rate": 0.3333333333333333,
+        "task": "put both moka pots on the stove"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 270,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 248,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 274,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 291,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 316,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 266,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 252,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 252,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 250,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 267,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 509,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 273,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 259,
+            "success": true
+          },
+          {
+            "seed": 1015,
+            "steps": 245,
+            "success": true
+          },
+          {
+            "seed": 1016,
+            "steps": 257,
+            "success": true
+          },
+          {
+            "seed": 1017,
+            "steps": 267,
+            "success": true
+          },
+          {
+            "seed": 1018,
+            "steps": 272,
+            "success": true
+          },
+          {
+            "seed": 1019,
+            "steps": 313,
+            "success": true
+          },
+          {
+            "seed": 1020,
+            "steps": 308,
+            "success": true
+          },
+          {
+            "seed": 1021,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1022,
+            "steps": 266,
+            "success": true
+          },
+          {
+            "seed": 1023,
+            "steps": 520,
+            "success": false
+          },
+          {
+            "seed": 1024,
+            "steps": 259,
+            "success": true
+          },
+          {
+            "seed": 1025,
+            "steps": 484,
+            "success": true
+          },
+          {
+            "seed": 1026,
+            "steps": 263,
+            "success": true
+          },
+          {
+            "seed": 1027,
+            "steps": 253,
+            "success": true
+          },
+          {
+            "seed": 1028,
+            "steps": 256,
+            "success": true
+          },
+          {
+            "seed": 1029,
+            "steps": 437,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8666666666666667,
+        "task": "put the yellow and white mug in the microwave and close it"
+      }
+    }
+  }
+}

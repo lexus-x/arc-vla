@@ -1,0 +1,57 @@
+[17:17:49] TurnOffMicrowave heldout n=15 k=2 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-TurnOffMicrowave_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 8612 windows, obs_dim=96, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-TurnOffMicrowave_f0.pt
+[eval] [10/15] native=2 zoh=2 spline=2 bspline_eps_raw=2 tac_fold_satfix=2 qp=2 qp_anchor=2
+[eval] [15/15] native=2 zoh=2 spline=2 bspline_eps_raw=2 tac_fold_satfix=2 qp=2 qp_anchor=2
+[eval] wall 3006s for 15 eps x 7 arms
+
+=== RC-TurnOffMicrowave closed-loop DP, k=2, n=15 ===
+  native             13.3% (2/15)  | vs zoh:   +0.0pp p=1
+  zoh                13.3% (2/15)  | vs native:   +0.0pp p=1
+  spline             13.3% (2/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  bspline_eps_raw    13.3% (2/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold_satfix    13.3% (2/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp                 13.3% (2/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp_anchor          13.3% (2/15)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-TurnOffMicrowave_f0_heldout_n15.json
+[18:08:05] TurnOffMicrowave heldout n=15 k=4 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-TurnOffMicrowave_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 8612 windows, obs_dim=96, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-TurnOffMicrowave_f0.pt
+[eval] [10/15] native=2 zoh=1 spline=1 bspline_eps_raw=1 tac_fold_satfix=1 qp=1 qp_anchor=1
+[eval] [15/15] native=2 zoh=1 spline=1 bspline_eps_raw=1 tac_fold_satfix=1 qp=1 qp_anchor=1
+[eval] wall 2952s for 15 eps x 7 arms
+
+=== RC-TurnOffMicrowave closed-loop DP, k=4, n=15 ===
+  native             13.3% (2/15)  | vs zoh:   +6.7pp p=1
+  zoh                 6.7% (1/15)  | vs native:   -6.7pp p=1
+  spline              6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  bspline_eps_raw     6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  tac_fold_satfix     6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  qp                  6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  qp_anchor           6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-TurnOffMicrowave_f0_k4_heldout_n15.json
+[18:57:18] TurnOffMicrowave heldout n=15 k=8 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-TurnOffMicrowave_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 8612 windows, obs_dim=96, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-TurnOffMicrowave_f0.pt
+[eval] [10/15] native=2 zoh=1 spline=1 bspline_eps_raw=1 tac_fold_satfix=1 qp=1 qp_anchor=1
+[eval] [15/15] native=2 zoh=1 spline=1 bspline_eps_raw=1 tac_fold_satfix=1 qp=1 qp_anchor=1
+[eval] wall 2770s for 15 eps x 7 arms
+
+=== RC-TurnOffMicrowave closed-loop DP, k=8, n=15 ===
+  native             13.3% (2/15)  | vs zoh:   +6.7pp p=1
+  zoh                 6.7% (1/15)  | vs native:   -6.7pp p=1
+  spline              6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  bspline_eps_raw     6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  tac_fold_satfix     6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  qp                  6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  qp_anchor           6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-TurnOffMicrowave_f0_k8_heldout_n15.json

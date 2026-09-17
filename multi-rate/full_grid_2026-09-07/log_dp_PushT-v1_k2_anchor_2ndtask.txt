@@ -1,0 +1,5 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_PushT-v1_200.npz
+[data] 200 demos harvested in 0s
+[data] 13352 windows, obs_dim=31, act_dim=6, raw |a|>1 frac=0.128
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PushT-v1.pt
+[eval] [10/100] native=3 zoh=3 spline_satfix=3 tac_fold_satfix=3 bspline_eps_satfix=3 qp=3 qp_anchor=3

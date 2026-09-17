@@ -1,0 +1,10 @@
+[q3] 15:29 q2 clear, starting
+[q3] 15:29 n=300 asrc_native_20env
+[q3] 15:55 asrc_native_20env exit=0 74.7%
+[q3] 15:55 n=300 flow_m1_native_20env
+[q3] 16:25 flow_m1_native_20env exit=0 77.0%
+[q3] 16:25 n=300 don_v2_native_20env
+[q3] 16:25 don_v2_native_20env exit=1 
+[q3] 16:25 n=300 flow_m1_cadmag_spline_40env
+[q3] 16:57 flow_m1_cadmag_spline_40env exit=0 77.0%
+[q3] 16:57 Q3 DONE

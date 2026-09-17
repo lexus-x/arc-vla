@@ -1,0 +1,45 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] 200 demos harvested in 0s
+[data] 9666 windows, obs_dim=19, act_dim=7, raw |a|>1 frac=0.000
+[train] step 1/30000 loss=1.15218
+[train] step 2000/30000 loss=0.04173
+[train] step 4000/30000 loss=0.02339
+[train] step 6000/30000 loss=0.02229
+[train] step 8000/30000 loss=0.01569
+[train] step 10000/30000 loss=0.01618
+[train] step 12000/30000 loss=0.01314
+[train] step 14000/30000 loss=0.00994
+[train] step 16000/30000 loss=0.00688
+[train] step 18000/30000 loss=0.00603
+[train] step 20000/30000 loss=0.00598
+[train] step 22000/30000 loss=0.00500
+[train] step 24000/30000 loss=0.00444
+[train] step 26000/30000 loss=0.00440
+[train] step 28000/30000 loss=0.00596
+[train] step 30000/30000 loss=0.00355
+[train] saved /home/user/Desktop/multi-rate/dp_tacfold_2026-09-06/dp_lift.pt
+[eval] [10/100] native=10 zoh=10 spline=10 spline_satfix=10 pchip=10 pchip_satfix=10 tac_fold=10 tac_fold_satfix=10
+[eval] [20/100] native=20 zoh=20 spline=20 spline_satfix=20 pchip=20 pchip_satfix=20 tac_fold=20 tac_fold_satfix=20
+[eval] [30/100] native=30 zoh=30 spline=30 spline_satfix=30 pchip=30 pchip_satfix=30 tac_fold=30 tac_fold_satfix=30
+[eval] [40/100] native=40 zoh=40 spline=40 spline_satfix=40 pchip=40 pchip_satfix=40 tac_fold=40 tac_fold_satfix=40
+[eval] [50/100] native=50 zoh=50 spline=50 spline_satfix=50 pchip=50 pchip_satfix=50 tac_fold=50 tac_fold_satfix=50
+[eval] [60/100] native=60 zoh=60 spline=60 spline_satfix=60 pchip=60 pchip_satfix=60 tac_fold=60 tac_fold_satfix=60
+[eval] [70/100] native=70 zoh=70 spline=70 spline_satfix=70 pchip=70 pchip_satfix=70 tac_fold=70 tac_fold_satfix=70
+[eval] [80/100] native=80 zoh=80 spline=80 spline_satfix=80 pchip=80 pchip_satfix=80 tac_fold=80 tac_fold_satfix=80
+[eval] [90/100] native=90 zoh=90 spline=90 spline_satfix=90 pchip=90 pchip_satfix=90 tac_fold=90 tac_fold_satfix=90
+[eval] [100/100] native=100 zoh=100 spline=100 spline_satfix=100 pchip=100 pchip_satfix=100 tac_fold=100 tac_fold_satfix=100
+[eval] wall 445s for 100 eps x 8 arms
+
+=== lift closed-loop DP, k=2, n=100 ===
+  native            100.0% (100/100)  | vs zoh:   +0.0pp p=1
+  zoh               100.0% (100/100)  | vs native:   +0.0pp p=1
+  spline            100.0% (100/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  spline_satfix     100.0% (100/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  pchip             100.0% (100/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  pchip_satfix      100.0% (100/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold          100.0% (100/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold_satfix   100.0% (100/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/dp_tacfold_2026-09-06/result_lift.json

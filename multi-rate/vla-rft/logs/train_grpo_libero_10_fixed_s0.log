@@ -1,0 +1,885 @@
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[update 0] task=7 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 0] task=7 attempt=0 rollout=1 success=True steps=277 n_chunks=277
+[update 0] task=7 attempt=0 rollout=2 success=True steps=289 n_chunks=289
+[update 0] task=7 attempt=0 rollout=3 success=True steps=281 n_chunks=281
+[update 0] task=7 attempt=0 rollout=4 success=True steps=357 n_chunks=357
+[update 0] task=7 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 0] task=8 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 0] task=8 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 0] task=8 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 0] task=8 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 0] task=8 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 0] task=8 attempt=0 rollout=5 success=True steps=520 n_chunks=520
+===== UPDATE 0: success_rate=0.417 loss=0.23497574498611631 grad_norm=311.0506286621094 elapsed=1543s =====
+[update 1] task=1 attempt=0 rollout=0 success=True steps=260 n_chunks=260
+[update 1] task=1 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 1] task=1 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 1] task=1 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 1] task=1 attempt=0 rollout=4 success=True steps=258 n_chunks=258
+[update 1] task=1 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 1] task=5 attempt=0 rollout=0 success=True steps=199 n_chunks=199
+[update 1] task=5 attempt=0 rollout=1 success=True steps=236 n_chunks=236
+[update 1] task=5 attempt=0 rollout=2 success=True steps=192 n_chunks=192
+[update 1] task=5 attempt=0 rollout=3 success=True steps=208 n_chunks=208
+[update 1] task=5 attempt=0 rollout=4 success=True steps=194 n_chunks=194
+[update 1] task=5 attempt=0 rollout=5 success=True steps=188 n_chunks=188
+[update 1] task=5 degenerate group (all reward=1.0), resampling (1/2)
+[update 1] task=5 attempt=1 rollout=0 success=True steps=202 n_chunks=202
+[update 1] task=5 attempt=1 rollout=1 success=True steps=181 n_chunks=181
+[update 1] task=5 attempt=1 rollout=2 success=True steps=276 n_chunks=276
+[update 1] task=5 attempt=1 rollout=3 success=False steps=520 n_chunks=520
+[update 1] task=5 attempt=1 rollout=4 success=True steps=200 n_chunks=200
+[update 1] task=5 attempt=1 rollout=5 success=True steps=200 n_chunks=200
+===== UPDATE 1: success_rate=0.583 loss=0.6862809851976112 grad_norm=331.9663391113281 elapsed=2948s =====
+[update 2] task=3 attempt=0 rollout=0 success=True steps=333 n_chunks=333
+[update 2] task=3 attempt=0 rollout=1 success=True steps=257 n_chunks=257
+[update 2] task=3 attempt=0 rollout=2 success=True steps=277 n_chunks=277
+[update 2] task=3 attempt=0 rollout=3 success=True steps=229 n_chunks=229
+[update 2] task=3 attempt=0 rollout=4 success=True steps=256 n_chunks=256
+[update 2] task=3 attempt=0 rollout=5 success=True steps=247 n_chunks=247
+[update 2] task=3 degenerate group (all reward=1.0), resampling (1/2)
+[update 2] task=3 attempt=1 rollout=0 success=True steps=271 n_chunks=271
+[update 2] task=3 attempt=1 rollout=1 success=True steps=286 n_chunks=286
+[update 2] task=3 attempt=1 rollout=2 success=True steps=291 n_chunks=291
+[update 2] task=3 attempt=1 rollout=3 success=True steps=283 n_chunks=283
+[update 2] task=3 attempt=1 rollout=4 success=True steps=244 n_chunks=244
+[update 2] task=3 attempt=1 rollout=5 success=True steps=246 n_chunks=246
+[update 2] task=3 degenerate group (all reward=1.0), resampling (2/2)
+[update 2] task=3 attempt=2 rollout=0 success=True steps=278 n_chunks=278
+[update 2] task=3 attempt=2 rollout=1 success=True steps=255 n_chunks=255
+[update 2] task=3 attempt=2 rollout=2 success=True steps=263 n_chunks=263
+[update 2] task=3 attempt=2 rollout=3 success=True steps=241 n_chunks=241
+[update 2] task=3 attempt=2 rollout=4 success=True steps=262 n_chunks=262
+[update 2] task=3 attempt=2 rollout=5 success=True steps=217 n_chunks=217
+[update 2] task=4 attempt=0 rollout=0 success=True steps=329 n_chunks=329
+[update 2] task=4 attempt=0 rollout=1 success=True steps=246 n_chunks=246
+[update 2] task=4 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 2] task=4 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 2] task=4 attempt=0 rollout=4 success=True steps=252 n_chunks=252
+[update 2] task=4 attempt=0 rollout=5 success=True steps=311 n_chunks=311
+===== UPDATE 2: success_rate=0.833 loss=0.6077882807062129 grad_norm=222.96490478515625 elapsed=4361s =====
+[update 3] task=2 attempt=0 rollout=0 success=True steps=224 n_chunks=224
+[update 3] task=2 attempt=0 rollout=1 success=True steps=245 n_chunks=245
+[update 3] task=2 attempt=0 rollout=2 success=True steps=274 n_chunks=274
+[update 3] task=2 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 3] task=2 attempt=0 rollout=4 success=True steps=275 n_chunks=275
+[update 3] task=2 attempt=0 rollout=5 success=True steps=236 n_chunks=236
+[update 3] task=0 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 3] task=0 degenerate group (all reward=0.0), resampling (1/2)
+[update 3] task=0 attempt=1 rollout=0 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=1 rollout=1 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=1 rollout=2 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=1 rollout=3 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=1 rollout=4 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=1 rollout=5 success=False steps=520 n_chunks=520
+[update 3] task=0 degenerate group (all reward=0.0), resampling (2/2)
+[update 3] task=0 attempt=2 rollout=0 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=2 rollout=1 success=True steps=338 n_chunks=338
+[update 3] task=0 attempt=2 rollout=2 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=2 rollout=3 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=2 rollout=4 success=False steps=520 n_chunks=520
+[update 3] task=0 attempt=2 rollout=5 success=False steps=520 n_chunks=520
+===== UPDATE 3: success_rate=0.500 loss=0.4207375990590539 grad_norm=276.83880615234375 elapsed=6708s =====
+[update 4] task=9 attempt=0 rollout=0 success=True steps=260 n_chunks=260
+[update 4] task=9 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 4] task=9 attempt=0 rollout=2 success=True steps=290 n_chunks=290
+[update 4] task=9 attempt=0 rollout=3 success=True steps=357 n_chunks=357
+[update 4] task=9 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 4] task=9 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 4] task=6 attempt=0 rollout=0 success=True steps=237 n_chunks=237
+[update 4] task=6 attempt=0 rollout=1 success=True steps=258 n_chunks=258
+[update 4] task=6 attempt=0 rollout=2 success=True steps=270 n_chunks=270
+[update 4] task=6 attempt=0 rollout=3 success=True steps=488 n_chunks=488
+[update 4] task=6 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 4] task=6 attempt=0 rollout=5 success=True steps=267 n_chunks=267
+===== UPDATE 4: success_rate=0.667 loss=0.5108131805200494 grad_norm=304.86883544921875 elapsed=8010s =====
+[update 5] task=7 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 5] task=7 attempt=0 rollout=1 success=True steps=275 n_chunks=275
+[update 5] task=7 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 5] task=7 attempt=0 rollout=3 success=True steps=276 n_chunks=276
+[update 5] task=7 attempt=0 rollout=4 success=True steps=311 n_chunks=311
+[update 5] task=7 attempt=0 rollout=5 success=True steps=269 n_chunks=269
+[update 5] task=8 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 5] task=8 attempt=0 rollout=1 success=True steps=358 n_chunks=358
+[update 5] task=8 attempt=0 rollout=2 success=True steps=476 n_chunks=476
+[update 5] task=8 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 5] task=8 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 5] task=8 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+===== UPDATE 5: success_rate=0.500 loss=0.3669442005799818 grad_norm=303.1707458496094 elapsed=9464s =====
+[update 6] task=1 attempt=0 rollout=0 success=True steps=271 n_chunks=271
+[update 6] task=1 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 6] task=1 attempt=0 rollout=2 success=True steps=264 n_chunks=264
+[update 6] task=1 attempt=0 rollout=3 success=True steps=298 n_chunks=298
+[update 6] task=1 attempt=0 rollout=4 success=True steps=261 n_chunks=261
+[update 6] task=1 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 6] task=5 attempt=0 rollout=0 success=True steps=193 n_chunks=193
+[update 6] task=5 attempt=0 rollout=1 success=True steps=255 n_chunks=255
+[update 6] task=5 attempt=0 rollout=2 success=True steps=212 n_chunks=212
+[update 6] task=5 attempt=0 rollout=3 success=True steps=212 n_chunks=212
+[update 6] task=5 attempt=0 rollout=4 success=True steps=225 n_chunks=225
+[update 6] task=5 attempt=0 rollout=5 success=True steps=181 n_chunks=181
+[update 6] task=5 degenerate group (all reward=1.0), resampling (1/2)
+[update 6] task=5 attempt=1 rollout=0 success=True steps=195 n_chunks=195
+[update 6] task=5 attempt=1 rollout=1 success=True steps=222 n_chunks=222
+[update 6] task=5 attempt=1 rollout=2 success=True steps=186 n_chunks=186
+[update 6] task=5 attempt=1 rollout=3 success=True steps=177 n_chunks=177
+[update 6] task=5 attempt=1 rollout=4 success=True steps=211 n_chunks=211
+[update 6] task=5 attempt=1 rollout=5 success=True steps=197 n_chunks=197
+[update 6] task=5 degenerate group (all reward=1.0), resampling (2/2)
+[update 6] task=5 attempt=2 rollout=0 success=True steps=199 n_chunks=199
+[update 6] task=5 attempt=2 rollout=1 success=True steps=252 n_chunks=252
+[update 6] task=5 attempt=2 rollout=2 success=True steps=231 n_chunks=231
+[update 6] task=5 attempt=2 rollout=3 success=True steps=228 n_chunks=228
+[update 6] task=5 attempt=2 rollout=4 success=True steps=195 n_chunks=195
+[update 6] task=5 attempt=2 rollout=5 success=True steps=174 n_chunks=174
+===== UPDATE 6: success_rate=0.833 loss=0.6379433536540713 grad_norm=230.82435607910156 elapsed=10692s =====
+[update 7] task=3 attempt=0 rollout=0 success=True steps=275 n_chunks=275
+[update 7] task=3 attempt=0 rollout=1 success=True steps=263 n_chunks=263
+[update 7] task=3 attempt=0 rollout=2 success=True steps=298 n_chunks=298
+[update 7] task=3 attempt=0 rollout=3 success=True steps=284 n_chunks=284
+[update 7] task=3 attempt=0 rollout=4 success=True steps=242 n_chunks=242
+[update 7] task=3 attempt=0 rollout=5 success=True steps=218 n_chunks=218
+[update 7] task=3 degenerate group (all reward=1.0), resampling (1/2)
+[update 7] task=3 attempt=1 rollout=0 success=True steps=281 n_chunks=281
+[update 7] task=3 attempt=1 rollout=1 success=True steps=238 n_chunks=238
+[update 7] task=3 attempt=1 rollout=2 success=True steps=277 n_chunks=277
+[update 7] task=3 attempt=1 rollout=3 success=True steps=239 n_chunks=239
+[update 7] task=3 attempt=1 rollout=4 success=False steps=520 n_chunks=520
+[update 7] task=3 attempt=1 rollout=5 success=True steps=225 n_chunks=225
+[update 7] task=4 attempt=0 rollout=0 success=True steps=305 n_chunks=305
+[update 7] task=4 attempt=0 rollout=1 success=True steps=264 n_chunks=264
+[update 7] task=4 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 7] task=4 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 7] task=4 attempt=0 rollout=4 success=True steps=279 n_chunks=279
+[update 7] task=4 attempt=0 rollout=5 success=True steps=296 n_chunks=296
+===== UPDATE 7: success_rate=0.750 loss=0.6301056548396706 grad_norm=282.2531433105469 elapsed=12101s =====
+[update 8] task=2 attempt=0 rollout=0 success=True steps=286 n_chunks=286
+[update 8] task=2 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 8] task=2 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 8] task=2 attempt=0 rollout=3 success=True steps=273 n_chunks=273
+[update 8] task=2 attempt=0 rollout=4 success=True steps=275 n_chunks=275
+[update 8] task=2 attempt=0 rollout=5 success=True steps=257 n_chunks=257
+[update 8] task=0 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 8] task=0 degenerate group (all reward=0.0), resampling (1/2)
+[update 8] task=0 attempt=1 rollout=0 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=1 rollout=1 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=1 rollout=2 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=1 rollout=3 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=1 rollout=4 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=1 rollout=5 success=False steps=520 n_chunks=520
+[update 8] task=0 degenerate group (all reward=0.0), resampling (2/2)
+[update 8] task=0 attempt=2 rollout=0 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=2 rollout=1 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=2 rollout=2 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=2 rollout=3 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=2 rollout=4 success=False steps=520 n_chunks=520
+[update 8] task=0 attempt=2 rollout=5 success=False steps=520 n_chunks=520
+===== UPDATE 8: success_rate=0.333 loss=0.6399418367907678 grad_norm=200.02064514160156 elapsed=14201s =====
+[update 9] task=9 attempt=0 rollout=0 success=True steps=280 n_chunks=280
+[update 9] task=9 attempt=0 rollout=1 success=True steps=253 n_chunks=253
+[update 9] task=9 attempt=0 rollout=2 success=True steps=310 n_chunks=310
+[update 9] task=9 attempt=0 rollout=3 success=True steps=293 n_chunks=293
+[update 9] task=9 attempt=0 rollout=4 success=True steps=302 n_chunks=302
+[update 9] task=9 attempt=0 rollout=5 success=True steps=349 n_chunks=349
+[update 9] task=9 degenerate group (all reward=1.0), resampling (1/2)
+[update 9] task=9 attempt=1 rollout=0 success=False steps=520 n_chunks=520
+[update 9] task=9 attempt=1 rollout=1 success=True steps=286 n_chunks=286
+[update 9] task=9 attempt=1 rollout=2 success=True steps=395 n_chunks=395
+[update 9] task=9 attempt=1 rollout=3 success=True steps=491 n_chunks=491
+[update 9] task=9 attempt=1 rollout=4 success=False steps=520 n_chunks=520
+[update 9] task=9 attempt=1 rollout=5 success=True steps=296 n_chunks=296
+[update 9] task=6 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 9] task=6 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 9] task=6 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 9] task=6 attempt=0 rollout=3 success=True steps=304 n_chunks=304
+[update 9] task=6 attempt=0 rollout=4 success=True steps=300 n_chunks=300
+[update 9] task=6 attempt=0 rollout=5 success=True steps=298 n_chunks=298
+===== UPDATE 9: success_rate=0.583 loss=0.45024196885721063 grad_norm=343.196533203125 elapsed=15919s =====
+[update 10] task=7 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 10] task=7 attempt=0 rollout=1 success=True steps=268 n_chunks=268
+[update 10] task=7 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 10] task=7 attempt=0 rollout=3 success=True steps=278 n_chunks=278
+[update 10] task=7 attempt=0 rollout=4 success=True steps=316 n_chunks=316
+[update 10] task=7 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 10] task=8 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 10] task=8 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 10] task=8 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 10] task=8 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 10] task=8 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 10] task=8 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 10] task=8 degenerate group (all reward=0.0), resampling (1/2)
+[update 10] task=8 attempt=1 rollout=0 success=True steps=389 n_chunks=389
+[update 10] task=8 attempt=1 rollout=1 success=False steps=520 n_chunks=520
+[update 10] task=8 attempt=1 rollout=2 success=False steps=520 n_chunks=520
+[update 10] task=8 attempt=1 rollout=3 success=False steps=520 n_chunks=520
+[update 10] task=8 attempt=1 rollout=4 success=False steps=520 n_chunks=520
+[update 10] task=8 attempt=1 rollout=5 success=False steps=520 n_chunks=520
+===== UPDATE 10: success_rate=0.333 loss=0.37481458882509155 grad_norm=277.0858154296875 elapsed=17945s =====
+[update 11] task=1 attempt=0 rollout=0 success=True steps=281 n_chunks=281
+[update 11] task=1 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 11] task=1 attempt=0 rollout=2 success=True steps=273 n_chunks=273
+[update 11] task=1 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 11] task=1 attempt=0 rollout=4 success=True steps=252 n_chunks=252
+[update 11] task=1 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 11] task=5 attempt=0 rollout=0 success=True steps=211 n_chunks=211
+[update 11] task=5 attempt=0 rollout=1 success=True steps=234 n_chunks=234
+[update 11] task=5 attempt=0 rollout=2 success=True steps=189 n_chunks=189
+[update 11] task=5 attempt=0 rollout=3 success=True steps=203 n_chunks=203
+[update 11] task=5 attempt=0 rollout=4 success=True steps=218 n_chunks=218
+[update 11] task=5 attempt=0 rollout=5 success=True steps=172 n_chunks=172
+[update 11] task=5 degenerate group (all reward=1.0), resampling (1/2)
+[update 11] task=5 attempt=1 rollout=0 success=True steps=191 n_chunks=191
+[update 11] task=5 attempt=1 rollout=1 success=True steps=182 n_chunks=182
+[update 11] task=5 attempt=1 rollout=2 success=True steps=299 n_chunks=299
+[update 11] task=5 attempt=1 rollout=3 success=True steps=184 n_chunks=184
+[update 11] task=5 attempt=1 rollout=4 success=False steps=520 n_chunks=520
+[update 11] task=5 attempt=1 rollout=5 success=True steps=201 n_chunks=201
+===== UPDATE 11: success_rate=0.667 loss=0.7037461436085068 grad_norm=321.7904357910156 elapsed=19286s =====
+[update 12] task=3 attempt=0 rollout=0 success=True steps=254 n_chunks=254
+[update 12] task=3 attempt=0 rollout=1 success=True steps=255 n_chunks=255
+[update 12] task=3 attempt=0 rollout=2 success=True steps=265 n_chunks=265
+[update 12] task=3 attempt=0 rollout=3 success=True steps=234 n_chunks=234
+[update 12] task=3 attempt=0 rollout=4 success=True steps=253 n_chunks=253
+[update 12] task=3 attempt=0 rollout=5 success=True steps=256 n_chunks=256
+[update 12] task=3 degenerate group (all reward=1.0), resampling (1/2)
+[update 12] task=3 attempt=1 rollout=0 success=True steps=240 n_chunks=240
+[update 12] task=3 attempt=1 rollout=1 success=True steps=233 n_chunks=233
+[update 12] task=3 attempt=1 rollout=2 success=True steps=269 n_chunks=269
+[update 12] task=3 attempt=1 rollout=3 success=True steps=232 n_chunks=232
+[update 12] task=3 attempt=1 rollout=4 success=True steps=235 n_chunks=235
+[update 12] task=3 attempt=1 rollout=5 success=True steps=219 n_chunks=219
+[update 12] task=3 degenerate group (all reward=1.0), resampling (2/2)
+[update 12] task=3 attempt=2 rollout=0 success=True steps=300 n_chunks=300
+[update 12] task=3 attempt=2 rollout=1 success=True steps=253 n_chunks=253
+[update 12] task=3 attempt=2 rollout=2 success=True steps=486 n_chunks=486
+[update 12] task=3 attempt=2 rollout=3 success=True steps=220 n_chunks=220
+[update 12] task=3 attempt=2 rollout=4 success=True steps=260 n_chunks=260
+[update 12] task=3 attempt=2 rollout=5 success=True steps=248 n_chunks=248
+[update 12] task=4 attempt=0 rollout=0 success=True steps=257 n_chunks=257
+[update 12] task=4 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 12] task=4 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 12] task=4 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 12] task=4 attempt=0 rollout=4 success=True steps=337 n_chunks=337
+[update 12] task=4 attempt=0 rollout=5 success=True steps=299 n_chunks=299
+===== UPDATE 12: success_rate=0.750 loss=0.5276348538122709 grad_norm=196.56089782714844 elapsed=20763s =====
+[update 13] task=2 attempt=0 rollout=0 success=True steps=234 n_chunks=234
+[update 13] task=2 attempt=0 rollout=1 success=True steps=260 n_chunks=260
+[update 13] task=2 attempt=0 rollout=2 success=True steps=298 n_chunks=298
+[update 13] task=2 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 13] task=2 attempt=0 rollout=4 success=True steps=249 n_chunks=249
+[update 13] task=2 attempt=0 rollout=5 success=True steps=252 n_chunks=252
+[update 13] task=0 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 13] task=0 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 13] task=0 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 13] task=0 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 13] task=0 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 13] task=0 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 13] task=0 degenerate group (all reward=0.0), resampling (1/2)
+[update 13] task=0 attempt=1 rollout=0 success=False steps=520 n_chunks=520
+[update 13] task=0 attempt=1 rollout=1 success=True steps=308 n_chunks=308
+[update 13] task=0 attempt=1 rollout=2 success=False steps=520 n_chunks=520
+[update 13] task=0 attempt=1 rollout=3 success=False steps=520 n_chunks=520
+[update 13] task=0 attempt=1 rollout=4 success=False steps=520 n_chunks=520
+[update 13] task=0 attempt=1 rollout=5 success=False steps=520 n_chunks=520
+===== UPDATE 13: success_rate=0.500 loss=0.44550566417866405 grad_norm=286.5260009765625 elapsed=22620s =====
+[update 14] task=9 attempt=0 rollout=0 success=True steps=426 n_chunks=426
+[update 14] task=9 attempt=0 rollout=1 success=True steps=263 n_chunks=263
+[update 14] task=9 attempt=0 rollout=2 success=True steps=294 n_chunks=294
+[update 14] task=9 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 14] task=9 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 14] task=9 attempt=0 rollout=5 success=True steps=341 n_chunks=341
+[update 14] task=6 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 14] task=6 attempt=0 rollout=1 success=True steps=299 n_chunks=299
+[update 14] task=6 attempt=0 rollout=2 success=True steps=248 n_chunks=248
+[update 14] task=6 attempt=0 rollout=3 success=True steps=286 n_chunks=286
+[update 14] task=6 attempt=0 rollout=4 success=True steps=416 n_chunks=416
+[update 14] task=6 attempt=0 rollout=5 success=True steps=327 n_chunks=327
+===== UPDATE 14: success_rate=0.750 loss=0.43189950951546296 grad_norm=295.7817687988281 elapsed=23903s =====
+[update 15] task=7 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 15] task=7 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 15] task=7 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 15] task=7 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 15] task=7 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 15] task=7 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 15] task=7 degenerate group (all reward=0.0), resampling (1/2)
+[update 15] task=7 attempt=1 rollout=0 success=False steps=520 n_chunks=520
+[update 15] task=7 attempt=1 rollout=1 success=True steps=262 n_chunks=262
+[update 15] task=7 attempt=1 rollout=2 success=False steps=520 n_chunks=520
+[update 15] task=7 attempt=1 rollout=3 success=False steps=520 n_chunks=520
+[update 15] task=7 attempt=1 rollout=4 success=True steps=277 n_chunks=277
+[update 15] task=7 attempt=1 rollout=5 success=False steps=520 n_chunks=520
+[update 15] task=8 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 15] task=8 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 15] task=8 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 15] task=8 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 15] task=8 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 15] task=8 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 15] task=8 degenerate group (all reward=0.0), resampling (1/2)
+[update 15] task=8 attempt=1 rollout=0 success=False steps=520 n_chunks=520
+[update 15] task=8 attempt=1 rollout=1 success=True steps=494 n_chunks=494
+[update 15] task=8 attempt=1 rollout=2 success=False steps=520 n_chunks=520
+[update 15] task=8 attempt=1 rollout=3 success=False steps=520 n_chunks=520
+[update 15] task=8 attempt=1 rollout=4 success=False steps=520 n_chunks=520
+[update 15] task=8 attempt=1 rollout=5 success=False steps=520 n_chunks=520
+===== UPDATE 15: success_rate=0.250 loss=0.28489062196315745 grad_norm=325.0972900390625 elapsed=26517s =====
+[update 16] task=1 attempt=0 rollout=0 success=True steps=264 n_chunks=264
+[update 16] task=1 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 16] task=1 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 16] task=1 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 16] task=1 attempt=0 rollout=4 success=True steps=263 n_chunks=263
+[update 16] task=1 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 16] task=5 attempt=0 rollout=0 success=True steps=219 n_chunks=219
+[update 16] task=5 attempt=0 rollout=1 success=True steps=252 n_chunks=252
+[update 16] task=5 attempt=0 rollout=2 success=True steps=255 n_chunks=255
+[update 16] task=5 attempt=0 rollout=3 success=True steps=233 n_chunks=233
+[update 16] task=5 attempt=0 rollout=4 success=True steps=195 n_chunks=195
+[update 16] task=5 attempt=0 rollout=5 success=True steps=162 n_chunks=162
+[update 16] task=5 degenerate group (all reward=1.0), resampling (1/2)
+[update 16] task=5 attempt=1 rollout=0 success=True steps=201 n_chunks=201
+[update 16] task=5 attempt=1 rollout=1 success=True steps=327 n_chunks=327
+[update 16] task=5 attempt=1 rollout=2 success=True steps=228 n_chunks=228
+[update 16] task=5 attempt=1 rollout=3 success=True steps=179 n_chunks=179
+[update 16] task=5 attempt=1 rollout=4 success=True steps=178 n_chunks=178
+[update 16] task=5 attempt=1 rollout=5 success=True steps=197 n_chunks=197
+[update 16] task=5 degenerate group (all reward=1.0), resampling (2/2)
+[update 16] task=5 attempt=2 rollout=0 success=True steps=205 n_chunks=205
+[update 16] task=5 attempt=2 rollout=1 success=True steps=295 n_chunks=295
+[update 16] task=5 attempt=2 rollout=2 success=True steps=230 n_chunks=230
+[update 16] task=5 attempt=2 rollout=3 success=True steps=197 n_chunks=197
+[update 16] task=5 attempt=2 rollout=4 success=True steps=172 n_chunks=172
+[update 16] task=5 attempt=2 rollout=5 success=True steps=193 n_chunks=193
+===== UPDATE 16: success_rate=0.667 loss=0.5386922857200774 grad_norm=189.13182067871094 elapsed=27898s =====
+[update 17] task=3 attempt=0 rollout=0 success=True steps=316 n_chunks=316
+[update 17] task=3 attempt=0 rollout=1 success=True steps=276 n_chunks=276
+[update 17] task=3 attempt=0 rollout=2 success=True steps=291 n_chunks=291
+[update 17] task=3 attempt=0 rollout=3 success=True steps=277 n_chunks=277
+[update 17] task=3 attempt=0 rollout=4 success=True steps=248 n_chunks=248
+[update 17] task=3 attempt=0 rollout=5 success=True steps=241 n_chunks=241
+[update 17] task=3 degenerate group (all reward=1.0), resampling (1/2)
+[update 17] task=3 attempt=1 rollout=0 success=True steps=294 n_chunks=294
+[update 17] task=3 attempt=1 rollout=1 success=True steps=274 n_chunks=274
+[update 17] task=3 attempt=1 rollout=2 success=False steps=520 n_chunks=520
+[update 17] task=3 attempt=1 rollout=3 success=True steps=253 n_chunks=253
+[update 17] task=3 attempt=1 rollout=4 success=True steps=248 n_chunks=248
+[update 17] task=3 attempt=1 rollout=5 success=True steps=239 n_chunks=239
+[update 17] task=4 attempt=0 rollout=0 success=True steps=261 n_chunks=261
+[update 17] task=4 attempt=0 rollout=1 success=True steps=260 n_chunks=260
+[update 17] task=4 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 17] task=4 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 17] task=4 attempt=0 rollout=4 success=True steps=283 n_chunks=283
+[update 17] task=4 attempt=0 rollout=5 success=True steps=320 n_chunks=320
+===== UPDATE 17: success_rate=0.750 loss=0.6379794004057835 grad_norm=293.90924072265625 elapsed=29323s =====
+[update 18] task=2 attempt=0 rollout=0 success=True steps=219 n_chunks=219
+[update 18] task=2 attempt=0 rollout=1 success=True steps=255 n_chunks=255
+[update 18] task=2 attempt=0 rollout=2 success=True steps=248 n_chunks=248
+[update 18] task=2 attempt=0 rollout=3 success=True steps=300 n_chunks=300
+[update 18] task=2 attempt=0 rollout=4 success=True steps=267 n_chunks=267
+[update 18] task=2 attempt=0 rollout=5 success=True steps=274 n_chunks=274
+[update 18] task=2 degenerate group (all reward=1.0), resampling (1/2)
+[update 18] task=2 attempt=1 rollout=0 success=True steps=259 n_chunks=259
+[update 18] task=2 attempt=1 rollout=1 success=False steps=520 n_chunks=520
+[update 18] task=2 attempt=1 rollout=2 success=True steps=240 n_chunks=240
+[update 18] task=2 attempt=1 rollout=3 success=True steps=282 n_chunks=282
+[update 18] task=2 attempt=1 rollout=4 success=True steps=279 n_chunks=279
+[update 18] task=2 attempt=1 rollout=5 success=True steps=244 n_chunks=244
+[update 18] task=0 attempt=0 rollout=0 success=True steps=299 n_chunks=299
+[update 18] task=0 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 18] task=0 attempt=0 rollout=2 success=True steps=288 n_chunks=288
+[update 18] task=0 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 18] task=0 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 18] task=0 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+===== UPDATE 18: success_rate=0.583 loss=0.512295843252385 grad_norm=288.70379638671875 elapsed=30866s =====
+[update 19] task=9 attempt=0 rollout=0 success=True steps=311 n_chunks=311
+[update 19] task=9 attempt=0 rollout=1 success=True steps=251 n_chunks=251
+[update 19] task=9 attempt=0 rollout=2 success=True steps=364 n_chunks=364
+[update 19] task=9 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 19] task=9 attempt=0 rollout=4 success=True steps=375 n_chunks=375
+[update 19] task=9 attempt=0 rollout=5 success=True steps=516 n_chunks=516
+[update 19] task=6 attempt=0 rollout=0 success=True steps=265 n_chunks=265
+[update 19] task=6 attempt=0 rollout=1 success=True steps=224 n_chunks=224
+[update 19] task=6 attempt=0 rollout=2 success=True steps=249 n_chunks=249
+[update 19] task=6 attempt=0 rollout=3 success=True steps=273 n_chunks=273
+[update 19] task=6 attempt=0 rollout=4 success=True steps=273 n_chunks=273
+[update 19] task=6 attempt=0 rollout=5 success=True steps=242 n_chunks=242
+[update 19] task=6 degenerate group (all reward=1.0), resampling (1/2)
+[update 19] task=6 attempt=1 rollout=0 success=True steps=264 n_chunks=264
+[update 19] task=6 attempt=1 rollout=1 success=True steps=257 n_chunks=257
+[update 19] task=6 attempt=1 rollout=2 success=True steps=272 n_chunks=272
+[update 19] task=6 attempt=1 rollout=3 success=True steps=277 n_chunks=277
+[update 19] task=6 attempt=1 rollout=4 success=True steps=281 n_chunks=281
+[update 19] task=6 attempt=1 rollout=5 success=True steps=242 n_chunks=242
+[update 19] task=6 degenerate group (all reward=1.0), resampling (2/2)
+[update 19] task=6 attempt=2 rollout=0 success=True steps=255 n_chunks=255
+[update 19] task=6 attempt=2 rollout=1 success=True steps=261 n_chunks=261
+[update 19] task=6 attempt=2 rollout=2 success=True steps=230 n_chunks=230
+[update 19] task=6 attempt=2 rollout=3 success=True steps=275 n_chunks=275
+[update 19] task=6 attempt=2 rollout=4 success=False steps=520 n_chunks=520
+[update 19] task=6 attempt=2 rollout=5 success=True steps=235 n_chunks=235
+===== UPDATE 19: success_rate=0.833 loss=0.4585035483303251 grad_norm=316.3687438964844 elapsed=32557s =====
+[update 20] task=7 attempt=0 rollout=0 success=True steps=280 n_chunks=280
+[update 20] task=7 attempt=0 rollout=1 success=True steps=267 n_chunks=267
+[update 20] task=7 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 20] task=7 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 20] task=7 attempt=0 rollout=4 success=True steps=277 n_chunks=277
+[update 20] task=7 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 20] task=8 degenerate group (all reward=0.0), resampling (1/2)
+[update 20] task=8 attempt=1 rollout=0 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=1 rollout=1 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=1 rollout=2 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=1 rollout=3 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=1 rollout=4 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=1 rollout=5 success=False steps=520 n_chunks=520
+[update 20] task=8 degenerate group (all reward=0.0), resampling (2/2)
+[update 20] task=8 attempt=2 rollout=0 success=True steps=385 n_chunks=385
+[update 20] task=8 attempt=2 rollout=1 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=2 rollout=2 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=2 rollout=3 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=2 rollout=4 success=False steps=520 n_chunks=520
+[update 20] task=8 attempt=2 rollout=5 success=False steps=520 n_chunks=520
+===== UPDATE 20: success_rate=0.333 loss=0.39408900092091725 grad_norm=259.5181579589844 elapsed=35063s =====
+[update 21] task=1 attempt=0 rollout=0 success=True steps=270 n_chunks=270
+[update 21] task=1 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 21] task=1 attempt=0 rollout=2 success=True steps=396 n_chunks=396
+[update 21] task=1 attempt=0 rollout=3 success=True steps=288 n_chunks=288
+[update 21] task=1 attempt=0 rollout=4 success=True steps=244 n_chunks=244
+[update 21] task=1 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+[update 21] task=5 attempt=0 rollout=0 success=True steps=186 n_chunks=186
+[update 21] task=5 attempt=0 rollout=1 success=True steps=222 n_chunks=222
+[update 21] task=5 attempt=0 rollout=2 success=True steps=208 n_chunks=208
+[update 21] task=5 attempt=0 rollout=3 success=True steps=212 n_chunks=212
+[update 21] task=5 attempt=0 rollout=4 success=True steps=183 n_chunks=183
+[update 21] task=5 attempt=0 rollout=5 success=True steps=177 n_chunks=177
+[update 21] task=5 degenerate group (all reward=1.0), resampling (1/2)
+[update 21] task=5 attempt=1 rollout=0 success=False steps=520 n_chunks=520
+[update 21] task=5 attempt=1 rollout=1 success=True steps=269 n_chunks=269
+[update 21] task=5 attempt=1 rollout=2 success=False steps=520 n_chunks=520
+[update 21] task=5 attempt=1 rollout=3 success=True steps=209 n_chunks=209
+[update 21] task=5 attempt=1 rollout=4 success=True steps=206 n_chunks=206
+[update 21] task=5 attempt=1 rollout=5 success=True steps=191 n_chunks=191
+===== UPDATE 21: success_rate=0.667 loss=0.7052709430405929 grad_norm=309.9751892089844 elapsed=36418s =====
+[update 22] task=3 attempt=0 rollout=0 success=False steps=520 n_chunks=520
+[update 22] task=3 attempt=0 rollout=1 success=True steps=270 n_chunks=270
+[update 22] task=3 attempt=0 rollout=2 success=True steps=267 n_chunks=267
+[update 22] task=3 attempt=0 rollout=3 success=True steps=305 n_chunks=305
+[update 22] task=3 attempt=0 rollout=4 success=True steps=269 n_chunks=269
+[update 22] task=3 attempt=0 rollout=5 success=True steps=233 n_chunks=233
+[update 22] task=4 attempt=0 rollout=0 success=True steps=294 n_chunks=294
+[update 22] task=4 attempt=0 rollout=1 success=True steps=235 n_chunks=235
+[update 22] task=4 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 22] task=4 attempt=0 rollout=3 success=True steps=369 n_chunks=369
+[update 22] task=4 attempt=0 rollout=4 success=True steps=256 n_chunks=256
+[update 22] task=4 attempt=0 rollout=5 success=True steps=360 n_chunks=360
+===== UPDATE 22: success_rate=0.833 loss=0.5045715433823995 grad_norm=354.7524108886719 elapsed=37442s =====
+[update 23] task=2 attempt=0 rollout=0 success=True steps=248 n_chunks=248
+[update 23] task=2 attempt=0 rollout=1 success=True steps=264 n_chunks=264
+[update 23] task=2 attempt=0 rollout=2 success=True steps=278 n_chunks=278
+[update 23] task=2 attempt=0 rollout=3 success=True steps=271 n_chunks=271
+[update 23] task=2 attempt=0 rollout=4 success=True steps=224 n_chunks=224
+[update 23] task=2 attempt=0 rollout=5 success=True steps=245 n_chunks=245
+[update 23] task=2 degenerate group (all reward=1.0), resampling (1/2)
+[update 23] task=2 attempt=1 rollout=0 success=True steps=246 n_chunks=246
+[update 23] task=2 attempt=1 rollout=1 success=True steps=334 n_chunks=334
+[update 23] task=2 attempt=1 rollout=2 success=True steps=284 n_chunks=284
+[update 23] task=2 attempt=1 rollout=3 success=False steps=520 n_chunks=520
+[update 23] task=2 attempt=1 rollout=4 success=True steps=225 n_chunks=225
+[update 23] task=2 attempt=1 rollout=5 success=True steps=242 n_chunks=242
+[update 23] task=0 attempt=0 rollout=0 success=True steps=292 n_chunks=292
+[update 23] task=0 attempt=0 rollout=1 success=False steps=520 n_chunks=520
+[update 23] task=0 attempt=0 rollout=2 success=False steps=520 n_chunks=520
+[update 23] task=0 attempt=0 rollout=3 success=False steps=520 n_chunks=520
+[update 23] task=0 attempt=0 rollout=4 success=False steps=520 n_chunks=520
+[update 23] task=0 attempt=0 rollout=5 success=False steps=520 n_chunks=520
+===== UPDATE 23: success_rate=0.500 loss=0.47223744188434785 grad_norm=287.1998291015625 elapsed=38896s =====
+Saved RL checkpoint to rl_checkpoint_libero_10_fixed_s0
+
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 104857.60it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6580.16it/s]
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d04a6b9e980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035c775550>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d04a6b9e840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035c775550>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d04a6b9e980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035d0a2650>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d04a6b9e840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035d0a2650>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d04a6b9e980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035c0e0bd0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d04a6b9e840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035c0e0bd0>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d04a6b9e980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d04783f69d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d04a6b9e840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d04783f69d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d04a6b9e980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035c278950>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d04a6b9e840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035c278950>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d04a6b9e980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d03d2108850>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d04a6b9e840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d03d2108850>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d04a6b9e980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035c0e0850>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d04a6b9e840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035c0e0850>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d04a6b9e980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035d03c4d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d04a6b9e840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035d03c4d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d04a6b9e980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035cfb5bd0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d04a6b9e840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 150, in free
+    EGL.eglDestroyContext(EGL_DISPLAY, self._context)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglDestroyContext,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d035cfb5bd0>,
+	),
+	result = 0
+)
+Exception ignored in: <function MjRenderContext.__del__ at 0x7d04a6b9e980>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7d04a6b435d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7d04a6b435d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d04a6b434d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7d04a6b9e840>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x7d04783732d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7d04a6b435d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7d04a6b435d0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7d04a6b434d0>,
+	),
+	result = 0
+)
+
+

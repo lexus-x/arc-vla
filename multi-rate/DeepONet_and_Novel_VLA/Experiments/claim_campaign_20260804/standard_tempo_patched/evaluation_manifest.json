@@ -1,0 +1,35 @@
+{
+  "code_sha256": {
+    "deeponet_head_v2.py": "6ed9570995edab23ddb2285a56c6643b6597f2504cf024d5457d103d1480917e",
+    "evaluate_libero_standard.py": "03cdae506dcd99308ce7b7b96e825adfd7d8772282053ec788f53fefa7a1480c",
+    "modeling_smolvla_deeponet_v2.py": "0fc2260a1e8d97b58eddd3a138f4636e3e3e954b93d70bb408c3b807fb459109",
+    "ncde_style_deeponet.py": "aa9bc001126617af8d0f37e0ccabdab2a0d1e3983692fa770ab6f2a587d12c7d",
+    "rate_integrated_deeponet.py": "de4cfeaccbaacb6450db1d2b3e7ac58506643e95562f2e98a92182bed2c2ab68",
+    "state_history.py": "7220766c35bde08e45051a8105226bd0089b4da8b52d53181d0b3388421f2afd",
+    "tempo_vsta.py": "626e06f2e4b782dca903db4c13b3906e603912ceb04a70c4075baa281af4a01b"
+  },
+  "dataset": "lerobot/libero_spatial_image",
+  "models": {
+    "tempo_s0": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/tempo_s0/checkpoints/8300",
+      "head": "deeponet",
+      "model_sha256": "0aa6dfd88a550a8345ecf1d464665a6452992e52bb31ec9c8f51b252e9d663a0"
+    }
+  },
+  "protocol": {
+    "control_freq": 20,
+    "max_steps": 220,
+    "n_tasks": 10,
+    "replan": 1,
+    "rollout_reset_seed": "1000 + trial_index",
+    "suite": "libero_spatial",
+    "trials_per_task": 50,
+    "videos": false
+  },
+  "runtime": {
+    "DEEPONET_HEAD": "tempo",
+    "DEEPONET_STATE_HISTORY_STEPS": "1"
+  },
+  "stats_path": null,
+  "stats_sha256": null
+}

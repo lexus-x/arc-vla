@@ -1,0 +1,12 @@
+[start] TurnOffMicrowave step f0 14:24:13
+[end] rc=0 15:06:39
+[start] TurnOffMicrowave bspline f0 15:06:39
+[end] rc=0 15:31:30
+[start] TurnOffMicrowave step f1 15:31:30
+[end] rc=0 16:07:59
+[start] TurnOffMicrowave bspline f1 16:07:59
+[end] rc=0 16:28:05
+[start] TurnOffMicrowave step f2 16:28:05
+[end] rc=0 16:57:16
+[start] TurnOffMicrowave bspline f2 16:57:16
+[end] rc=0 17:11:44

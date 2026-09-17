@@ -1,0 +1,39 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_lift_200.npz
+[data] 200 demos harvested in 0s
+[data] 9666 windows, obs_dim=19, act_dim=7, raw |a|>1 frac=0.000
+[train] step 1/30000 loss=1.15055
+[train] step 2000/30000 loss=0.02113
+[train] step 4000/30000 loss=0.01201
+[train] step 6000/30000 loss=0.01020
+[train] step 8000/30000 loss=0.00623
+[train] step 10000/30000 loss=0.00729
+[train] step 12000/30000 loss=0.00522
+[train] step 14000/30000 loss=0.00377
+[train] step 16000/30000 loss=0.00253
+[train] step 18000/30000 loss=0.00208
+[train] step 20000/30000 loss=0.00192
+[train] step 22000/30000 loss=0.00170
+[train] step 24000/30000 loss=0.00170
+[train] step 26000/30000 loss=0.00179
+[train] step 28000/30000 loss=0.00238
+[train] step 30000/30000 loss=0.00119
+[train] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_lift_bspline.pt
+[eval] [10/100] native=10
+[eval] [20/100] native=20
+[eval] [30/100] native=30
+[eval] [40/100] native=40
+[eval] [50/100] native=50
+[eval] [60/100] native=60
+[eval] [70/100] native=70
+[eval] [80/100] native=80
+[eval] [90/100] native=90
+[eval] [100/100] native=100
+[eval] wall 90s for 100 eps x 1 arms
+
+=== lift closed-loop DP, k=1, n=100 ===
+  native            100.0% (100/100)
+  policy raw |a|>1 frac (pre-clip): 0.006
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_lift_bspline_k1_t1x.json

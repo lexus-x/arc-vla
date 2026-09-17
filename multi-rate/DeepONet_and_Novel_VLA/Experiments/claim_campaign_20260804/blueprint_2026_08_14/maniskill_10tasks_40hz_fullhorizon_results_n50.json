@@ -1,0 +1,174 @@
+{
+  "n_per_task": 50,
+  "rate_hz": 40,
+  "n_episodes_total": 500,
+  "aggregate": {
+    "pchip_success_total": 209,
+    "spline_success_total": 222,
+    "pchip_success_rate": 0.418,
+    "spline_success_rate": 0.444,
+    "delta_pp": -2.6000000000000023
+  },
+  "task_breakdown": [
+    {
+      "task_idx": 1,
+      "task_name": "LiftPegUpright-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "pchip_success": 18,
+      "spline_success": 21,
+      "pchip_rate": 0.36,
+      "spline_rate": 0.42,
+      "delta_pp": -6.0,
+      "mcnemar": {
+        "pchip_only": 3,
+        "spline_only": 6,
+        "p_value": 0.5078125
+      }
+    },
+    {
+      "task_idx": 2,
+      "task_name": "PickCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "pchip_success": 25,
+      "spline_success": 27,
+      "pchip_rate": 0.5,
+      "spline_rate": 0.54,
+      "delta_pp": -4.0000000000000036,
+      "mcnemar": {
+        "pchip_only": 0,
+        "spline_only": 2,
+        "p_value": 0.5
+      }
+    },
+    {
+      "task_idx": 3,
+      "task_name": "StackCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "pchip_success": 16,
+      "spline_success": 20,
+      "pchip_rate": 0.32,
+      "spline_rate": 0.4,
+      "delta_pp": -8.000000000000002,
+      "mcnemar": {
+        "pchip_only": 2,
+        "spline_only": 6,
+        "p_value": 0.2890625
+      }
+    },
+    {
+      "task_idx": 4,
+      "task_name": "PokeCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "pchip_success": 44,
+      "spline_success": 43,
+      "pchip_rate": 0.88,
+      "spline_rate": 0.86,
+      "delta_pp": 2.0000000000000018,
+      "mcnemar": {
+        "pchip_only": 1,
+        "spline_only": 0,
+        "p_value": 1.0
+      }
+    },
+    {
+      "task_idx": 5,
+      "task_name": "PullCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "pchip_success": 41,
+      "spline_success": 43,
+      "pchip_rate": 0.82,
+      "spline_rate": 0.86,
+      "delta_pp": -4.0000000000000036,
+      "mcnemar": {
+        "pchip_only": 2,
+        "spline_only": 4,
+        "p_value": 0.6875
+      }
+    },
+    {
+      "task_idx": 6,
+      "task_name": "PushCube-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "pchip_success": 50,
+      "spline_success": 50,
+      "pchip_rate": 1.0,
+      "spline_rate": 1.0,
+      "delta_pp": 0.0,
+      "mcnemar": {
+        "pchip_only": 0,
+        "spline_only": 0,
+        "p_value": 1.0
+      }
+    },
+    {
+      "task_idx": 7,
+      "task_name": "RollBall-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "pchip_success": 12,
+      "spline_success": 15,
+      "pchip_rate": 0.24,
+      "spline_rate": 0.3,
+      "delta_pp": -6.0,
+      "mcnemar": {
+        "pchip_only": 5,
+        "spline_only": 8,
+        "p_value": 0.5810546875
+      }
+    },
+    {
+      "task_idx": 8,
+      "task_name": "PegInsertionSide-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "pchip_success": 2,
+      "spline_success": 3,
+      "pchip_rate": 0.04,
+      "spline_rate": 0.06,
+      "delta_pp": -1.9999999999999998,
+      "mcnemar": {
+        "pchip_only": 0,
+        "spline_only": 1,
+        "p_value": 1.0
+      }
+    },
+    {
+      "task_idx": 9,
+      "task_name": "PushT-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "pchip_success": 1,
+      "spline_success": 0,
+      "pchip_rate": 0.02,
+      "spline_rate": 0.0,
+      "delta_pp": 2.0,
+      "mcnemar": {
+        "pchip_only": 1,
+        "spline_only": 0,
+        "p_value": 1.0
+      }
+    },
+    {
+      "task_idx": 10,
+      "task_name": "DrawTriangle-v1",
+      "rate_hz": 40,
+      "n_episodes": 50,
+      "pchip_success": 0,
+      "spline_success": 0,
+      "pchip_rate": 0.0,
+      "spline_rate": 0.0,
+      "delta_pp": 0.0,
+      "mcnemar": {
+        "pchip_only": 0,
+        "spline_only": 0,
+        "p_value": 1.0
+      }
+    }
+  ]
+}

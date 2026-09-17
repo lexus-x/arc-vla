@@ -1,0 +1,22 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_PushT-v1_200.npz
+[data] 200 demos harvested in 0s
+[data] 13352 windows, obs_dim=31, act_dim=6, raw |a|>1 frac=0.128
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/fm_PushT-v1.pt
+[eval] [10/100] native=4 qp_eps05=2 bspline_eps05_raw=5
+[eval] [20/100] native=5 qp_eps05=2 bspline_eps05_raw=8
+[eval] [30/100] native=8 qp_eps05=5 bspline_eps05_raw=11
+[eval] [40/100] native=11 qp_eps05=7 bspline_eps05_raw=15
+[eval] [50/100] native=13 qp_eps05=10 bspline_eps05_raw=18
+[eval] [60/100] native=16 qp_eps05=14 bspline_eps05_raw=23
+[eval] [70/100] native=20 qp_eps05=18 bspline_eps05_raw=29
+[eval] [80/100] native=26 qp_eps05=21 bspline_eps05_raw=32
+[eval] [90/100] native=28 qp_eps05=22 bspline_eps05_raw=33
+[eval] [100/100] native=30 qp_eps05=23 bspline_eps05_raw=35
+[eval] wall 1759s for 100 eps x 3 arms
+
+=== PushT-v1 closed-loop FM, k=1, n=100 ===
+  native             30.0% (30/100)
+  qp_eps05           23.0% (23/100)  | vs native:   -7.0pp p=0.23
+  bspline_eps05_raw   35.0% (35/100)  | vs native:   +5.0pp p=0.442
+  policy raw |a|>1 frac (pre-clip): 0.084
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_fm_PushT-v1_k1_t1x.json

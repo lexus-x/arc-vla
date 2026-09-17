@@ -1,0 +1,16 @@
+=======================================================
+EVALUATING DEEPONET + TAC-FOLD VS SPLINE AT 40 HZ
+=======================================================
+[+] Task PickCube-v1 (40 Hz): DeepONet+TACFold=46.0%, DeepONet+Spline=44.0% (Δ = +2.0pp)
+[+] Task LiftPegUpright-v1 (40 Hz): DeepONet+TACFold=52.0%, DeepONet+Spline=40.0% (Δ = +12.0pp)
+[33;1m2026-08-15 09:09:32,609 - mani_skill  - WARNING - No initial pose set for actor builder of goal_region, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[+] Task PullCube-v1 (40 Hz): DeepONet+TACFold=94.0%, DeepONet+Spline=86.0% (Δ = +8.0pp)
+[+] Task StackCube-v1 (40 Hz): DeepONet+TACFold=40.0%, DeepONet+Spline=38.0% (Δ = +2.0pp)
+[+] Task PokeCube-v1 (40 Hz): DeepONet+TACFold=66.0%, DeepONet+Spline=68.0% (Δ = -2.0pp)
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1024, 556) to (1024, 560) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+
+[+] Saving comparison video to /home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/deeponet_tac_fold_vs_spline_40hz_master.mp4...
+[SUCCESS] Saved video: /home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/deeponet_tac_fold_vs_spline_40hz_master.mp4
+
+[ALL COMPLETE] Saved to /home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/deeponet_tac_fold_vs_spline_40hz_results.json
+DeepONet + TAC-Fold: 59.6% | DeepONet + Spline: 55.2% (Δ = +4.4 pp)

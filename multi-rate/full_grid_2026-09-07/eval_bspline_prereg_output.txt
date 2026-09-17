@@ -1,0 +1,38 @@
+### (A) PickCube-v1 open-loop paired replay, n=993 — QP vs bounded-error B-spline (Alg.1, eps=0.005)
+arm                          k=2       k=4
+original                  92.45%    92.45%
+exact_integral            58.01%    21.05%
+cubic_spline_satfix       72.81%    31.02%
+tac_fold_satfix           77.34%    30.01%
+bspline_eps_satfix        77.04%    29.61%
+qp                        74.22%    35.15%
+
+contrasts (delta pp, wins/losses, p, 95% CI):
+k=2 qp                   vs bspline_eps_satfix    -2.82pp  25/ 53 p=0.00203 CI=[-4.53,-1.11]
+k=2 qp                   vs cubic_spline_satfix   +1.41pp  17/  3 p=0.00258 CI=[+0.60,+2.32]
+k=2 bspline_eps_satfix   vs exact_integral       +19.03pp 209/ 20 p=7.05e-41 CI=[+16.31,+21.75]
+k=2 bspline_eps_satfix   vs cubic_spline_satfix   +4.23pp  63/ 21 p=4.97e-06 CI=[+2.42,+6.04]
+k=2 bspline_eps_satfix   vs tac_fold_satfix       -0.30pp  42/ 45 p=0.83 CI=[-2.11,+1.51]
+k=4 qp                   vs bspline_eps_satfix    +5.54pp  87/ 32 p=4.69e-07 CI=[+3.52,+7.65]
+k=4 qp                   vs cubic_spline_satfix   +4.13pp  63/ 22 p=9.81e-06 CI=[+2.32,+5.94]
+k=4 bspline_eps_satfix   vs exact_integral        +8.56pp 100/ 15 p=1.35e-16 CI=[+6.55,+10.67]
+k=4 bspline_eps_satfix   vs cubic_spline_satfix   -1.41pp  21/ 35 p=0.0814 CI=[-2.92,+0.00]
+k=4 bspline_eps_satfix   vs tac_fold_satfix       -0.40pp  51/ 55 p=0.771 CI=[-2.42,+1.61]
+
+P1 (primary) qp > bspline_eps_satfix at both k, Holm m=2:
+  k=2: -2.82pp raw p=0.00203 Holm p=0.00203 survives=True
+  k=4: +5.54pp raw p=4.69e-07 Holm p=9.39e-07 survives=True
+  P1 FAILS
+P2 k=2: bspline 77.04 > ZOH 58.01? True (p=7.05e-41)   P3 k=2: bspline < cubic_satfix 72.81? False (p=4.97e-06)
+P2 k=4: bspline 29.61 > ZOH 21.05? True (p=1.35e-16)   P3 k=4: bspline < cubic_satfix 31.02? True (p=0.0814)
+P4: bspline_eps_satfix@k=2 = 77.04% ; between ZOH 58 and cubic 72.7? False
+
+### (B) RoboCasa OpenDrawer closed-loop DP, k=2, n=15 (new 4-arm run)
+arms: ['native', 'zoh', 'spline_satfix', 'qp'] | raw sat: 0.0
+  native           6/15
+  zoh              5/15
+  spline_satfix    6/15
+  qp               5/15
+  qp vs zoh              +0.0pp 0/0 p=1
+  qp vs native           -6.7pp 0/1 p=1
+  qp vs spline_satfix    -6.7pp 0/1 p=1

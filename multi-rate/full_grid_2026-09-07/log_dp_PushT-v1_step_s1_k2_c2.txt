@@ -1,0 +1,21 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_PushT-v1_200.npz
+[data] 200 demos harvested in 0s
+[data] 13352 windows, obs_dim=31, act_dim=6, raw |a|>1 frac=0.128
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PushT-v1_s1.pt
+[eval] [10/100] zoh=2 qp=3
+[eval] [20/100] zoh=3 qp=6
+[eval] [30/100] zoh=4 qp=7
+[eval] [40/100] zoh=4 qp=11
+[eval] [50/100] zoh=6 qp=13
+[eval] [60/100] zoh=6 qp=15
+[eval] [70/100] zoh=7 qp=16
+[eval] [80/100] zoh=11 qp=21
+[eval] [90/100] zoh=12 qp=23
+[eval] [100/100] zoh=12 qp=25
+[eval] wall 8536s for 100 eps x 2 arms
+
+=== PushT-v1 closed-loop DP, k=2, n=100 ===
+  zoh                12.0% (12/100)
+  qp                 25.0% (25/100)  | vs zoh:  +13.0pp p=0.0106
+  policy raw |a|>1 frac (pre-clip): 0.038
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PushT-v1_s1_c2.json

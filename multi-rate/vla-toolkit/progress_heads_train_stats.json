@@ -1,0 +1,78 @@
+{
+  "libero_spatial": {
+    "task_ids": [
+      7,
+      8
+    ],
+    "task_descriptions": [
+      "pick up the black bowl on the stove and place it on the plate",
+      "pick up the black bowl next to the plate and place it on the plate"
+    ],
+    "train_time_s": 0.4781045913696289,
+    "n_train_frames": 8324,
+    "n_val_frames": 1993,
+    "n_train_episodes": 66,
+    "n_val_episodes": 16,
+    "held_out_overall_pearson_r": 0.9882729000136249,
+    "held_out_per_episode_pearson_r_mean": 0.9959095059418035,
+    "held_out_per_episode_pearson_r_n": 16,
+    "held_out_val_mse": 0.0020466793794184923
+  },
+  "libero_object": {
+    "task_ids": [
+      0,
+      1
+    ],
+    "task_descriptions": [
+      "pick up the alphabet soup and place it in the basket",
+      "pick up the cream cheese and place it in the basket"
+    ],
+    "train_time_s": 0.44307374954223633,
+    "n_train_frames": 10503,
+    "n_val_frames": 2742,
+    "n_train_episodes": 71,
+    "n_val_episodes": 18,
+    "held_out_overall_pearson_r": 0.9924032101011492,
+    "held_out_per_episode_pearson_r_mean": 0.9951469107373008,
+    "held_out_per_episode_pearson_r_n": 18,
+    "held_out_val_mse": 0.0013224930735304952
+  },
+  "libero_goal": {
+    "task_ids": [
+      0,
+      1
+    ],
+    "task_descriptions": [
+      "open the middle drawer of the cabinet",
+      "put the bowl on the stove"
+    ],
+    "train_time_s": 0.40120530128479004,
+    "n_train_frames": 8894,
+    "n_val_frames": 1979,
+    "n_train_episodes": 73,
+    "n_val_episodes": 18,
+    "held_out_overall_pearson_r": 0.991127927146686,
+    "held_out_per_episode_pearson_r_mean": 0.995602040946638,
+    "held_out_per_episode_pearson_r_n": 18,
+    "held_out_val_mse": 0.0015045878244563937
+  },
+  "libero_10": {
+    "task_ids": [
+      0,
+      1
+    ],
+    "task_descriptions": [
+      "put both the alphabet soup and the tomato sauce in the basket",
+      "put both the cream cheese box and the butter in the basket"
+    ],
+    "train_time_s": 0.7232334613800049,
+    "n_train_frames": 18007,
+    "n_val_frames": 4266,
+    "n_train_episodes": 66,
+    "n_val_episodes": 16,
+    "held_out_overall_pearson_r": 0.9880445623779242,
+    "held_out_per_episode_pearson_r_mean": 0.9937654043815731,
+    "held_out_per_episode_pearson_r_n": 16,
+    "held_out_val_mse": 0.0021454445086419582
+  }
+}

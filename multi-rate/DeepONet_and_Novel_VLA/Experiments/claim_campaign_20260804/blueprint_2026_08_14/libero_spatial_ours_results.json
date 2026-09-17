@@ -1,0 +1,10 @@
+{
+  "n_tasks": 10,
+  "rate_hz": 40,
+  "ours_success_rate": 0.0,
+  "spline_success_rate": 0.0,
+  "delta_pp": 0.0,
+  "ours_success_count": 0,
+  "spline_success_count": 0,
+  "video_path": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/libero_spatial_ours_vs_spline.mp4"
+}

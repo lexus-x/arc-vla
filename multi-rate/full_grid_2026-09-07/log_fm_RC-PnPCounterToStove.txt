@@ -1,0 +1,28 @@
+[data] 39 demos harvested in 20s
+[data] 11955 windows, obs_dim=110, act_dim=12, raw |a|>1 frac=0.000
+[train] step 1/15000 loss=1.60656
+[train] step 2000/15000 loss=0.05567
+[train] step 4000/15000 loss=0.04371
+[train] step 6000/15000 loss=0.03981
+[train] step 8000/15000 loss=0.03969
+[train] step 10000/15000 loss=0.03347
+[train] step 12000/15000 loss=0.01969
+[train] step 14000/15000 loss=0.01323
+[train] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/fm_RC-PnPCounterToStove.pt
+[eval] [10/15] native=1 zoh=0 spline=0 spline_satfix=0 pchip=1 pchip_satfix=0 tac_fold=0 tac_fold_satfix=0 bspline=0 bspline_satfix=0
+[eval] [15/15] native=2 zoh=1 spline=1 spline_satfix=1 pchip=2 pchip_satfix=1 tac_fold=1 tac_fold_satfix=1 bspline=1 bspline_satfix=1
+[eval] wall 4351s for 15 eps x 10 arms
+
+=== RC-PnPCounterToStove closed-loop FM, k=2, n=15 ===
+  native             13.3% (2/15)  | vs zoh:   +6.7pp p=1
+  zoh                 6.7% (1/15)  | vs native:   -6.7pp p=1
+  spline              6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  spline_satfix       6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  pchip              13.3% (2/15)  | vs zoh:   +6.7pp p=1  | vs native:   +0.0pp p=1
+  pchip_satfix        6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  tac_fold            6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  tac_fold_satfix     6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  bspline             6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  bspline_satfix      6.7% (1/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_fm_RC-PnPCounterToStove.json

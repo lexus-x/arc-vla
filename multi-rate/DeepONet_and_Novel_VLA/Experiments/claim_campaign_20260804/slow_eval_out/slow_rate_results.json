@@ -1,0 +1,34 @@
+{
+  "model": "til_s0",
+  "rate_hz": 10,
+  "task_id": 3,
+  "trials": [
+    {
+      "seed": 1000,
+      "success": true,
+      "steps": 60
+    },
+    {
+      "seed": 1001,
+      "success": true,
+      "steps": 64
+    },
+    {
+      "seed": 1002,
+      "success": false,
+      "steps": 220
+    },
+    {
+      "seed": 1003,
+      "success": true,
+      "steps": 77
+    },
+    {
+      "seed": 1004,
+      "success": true,
+      "steps": 70
+    }
+  ],
+  "success_rate": 0.8,
+  "n_trials": 5
+}

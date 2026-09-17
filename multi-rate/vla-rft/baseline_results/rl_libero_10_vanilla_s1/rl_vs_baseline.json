@@ -1,0 +1,11 @@
+{
+  "suite": "libero_10",
+  "rl_ckpt": "rl_checkpoint_libero_10_vanilla_s1",
+  "rl_aggregate": 0.56,
+  "rl_n": 100,
+  "baseline_aggregate": 0.55,
+  "baseline_source": "baseline_results/libero_10_seed0_v2/summary.json",
+  "delta_pp": 1.0000000000000009,
+  "note": "1-seed preliminary, no significance claim possible (no baseline stddev for this suite)",
+  "source": "baseline_results/rl_libero_10_vanilla_s1/multirate_libero_10.json"
+}

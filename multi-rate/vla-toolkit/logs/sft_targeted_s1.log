@@ -1,0 +1,99 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6098.73it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 46474.28it/s]
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 108942.96it/s]
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[weights] 33767/101469 frames from hard tasks (0, 1, 7) (33.3%)
+/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=693940) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/torch/utils/data/_utils/pin_memory.py:57: DeprecationWarning: The argument 'device' of Tensor.pin_memory() is deprecated. Please do not pass this argument. (Triggered internally at /pytorch/aten/src/ATen/native/Memory.cpp:46.)
+  return data.pin_memory(device)
+/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/torch/utils/data/_utils/pin_memory.py:57: DeprecationWarning: The argument 'device' of Tensor.is_pinned() is deprecated. Please do not pass this argument. (Triggered internally at /pytorch/aten/src/ATen/native/Memory.cpp:31.)
+  return data.pin_memory(device)
+[targeted] step    0 loss=0.1749 grad_norm=3.027 elapsed=8s
+[targeted] step   20 loss=0.1957 grad_norm=5.173 elapsed=47s
+[targeted] step   40 loss=0.1318 grad_norm=3.020 elapsed=94s
+[targeted] step   60 loss=0.1408 grad_norm=4.042 elapsed=140s
+[targeted] step   80 loss=0.1711 grad_norm=3.868 elapsed=187s
+[targeted] step  100 loss=0.1369 grad_norm=4.114 elapsed=230s
+[targeted] step  120 loss=0.1608 grad_norm=3.948 elapsed=275s
+[targeted] step  140 loss=0.1848 grad_norm=5.063 elapsed=321s
+[targeted] step  160 loss=0.1602 grad_norm=4.076 elapsed=364s
+[targeted] step  180 loss=0.1731 grad_norm=4.656 elapsed=400s
+[targeted] step  200 loss=0.1418 grad_norm=4.084 elapsed=441s
+[targeted] step  220 loss=0.1603 grad_norm=3.442 elapsed=480s
+[targeted] step  240 loss=0.1571 grad_norm=3.150 elapsed=521s
+[targeted] step  260 loss=0.1771 grad_norm=4.435 elapsed=561s
+[targeted] step  280 loss=0.2075 grad_norm=4.552 elapsed=602s
+[targeted] step  300 loss=0.1568 grad_norm=4.192 elapsed=645s
+[targeted] step  320 loss=0.1665 grad_norm=4.118 elapsed=682s
+[targeted] step  340 loss=0.1862 grad_norm=3.851 elapsed=723s
+malloc_consolidate(): unaligned fastbin chunk detected
+Traceback (most recent call last):
+  File "/home/user/Desktop/multi-rate/vla-toolkit/continued_sft_curated.py", line 157, in <module>
+    main()
+  File "/home/user/Desktop/multi-rate/vla-toolkit/continued_sft_curated.py", line 137, in main
+    loss.backward()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/torch/_tensor.py", line 630, in backward
+    torch.autograd.backward(
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/torch/autograd/__init__.py", line 364, in backward
+    _engine_run_backward(
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/torch/autograd/graph.py", line 865, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 697262) is killed by signal: Aborted. 
+Exception ignored in: <function MjRenderContext.__del__ at 0x737c0bc637e0>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x737bf2130d50>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x737c0bc03ad0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x737c0bc03ad0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x737c0bc039d0>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x737c0bc636a0>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x737bf2130d50>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x737c0bc03ad0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x737c0bc03ad0>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x737c0bc039d0>,
+	),
+	result = 0
+)

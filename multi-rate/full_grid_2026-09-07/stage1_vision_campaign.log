@@ -1,0 +1,4 @@
+[bridge] starting on 127.0.0.1:8770; log=/home/user/Desktop/multi-rate/full_grid_2026-09-07/stage1_vision_logs/bridge.log
+[start] TurnOffSinkFaucet mode=train-eval 2026-09-10T10:44:50+09:00; log=/home/user/Desktop/multi-rate/full_grid_2026-09-07/stage1_vision_logs/TurnOffSinkFaucet.log
+[bridge] stopped pid=1427971
+[campaign] stopped with status 1; task log: /home/user/Desktop/multi-rate/full_grid_2026-09-07/stage1_vision_logs/TurnOffSinkFaucet.log

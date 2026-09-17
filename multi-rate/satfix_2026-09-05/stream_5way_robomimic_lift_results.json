@@ -1,0 +1,38 @@
+{
+  "native": {
+    "success_rate": 96.0,
+    "successes": 24,
+    "total": 25,
+    "saturation": 0.0
+  },
+  "b_spline": {
+    "success_rate": 36.0,
+    "successes": 9,
+    "total": 25,
+    "saturation": 0.011494252873563218
+  },
+  "cubic_spline": {
+    "success_rate": 100.0,
+    "successes": 25,
+    "total": 25,
+    "saturation": 0.6043836072807878
+  },
+  "pchip_fold": {
+    "success_rate": 100.0,
+    "successes": 25,
+    "total": 25,
+    "saturation": 0.4327308938558958
+  },
+  "align_fold": {
+    "success_rate": 100.0,
+    "successes": 25,
+    "total": 25,
+    "saturation": 0.4327308938558958
+  },
+  "tac_fold": {
+    "success_rate": 100.0,
+    "successes": 25,
+    "total": 25,
+    "saturation": 0.176297134852857
+  }
+}

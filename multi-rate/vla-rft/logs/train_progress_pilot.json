@@ -1,0 +1,74 @@
+[
+  {
+    "update": 0,
+    "success_rate": 0.5,
+    "n_episodes": 12,
+    "elapsed_s": 325.45466589927673,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 1,
+    "success_rate": 0.4166666666666667,
+    "n_episodes": 12,
+    "elapsed_s": 751.9570105075836,
+    "n_transitions": 667,
+    "loss": 0.8102650950694906,
+    "grad_norm": 150.48294067382812
+  },
+  {
+    "update": 2,
+    "success_rate": 0.5,
+    "n_episodes": 12,
+    "elapsed_s": 1074.2884390354156,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 3,
+    "success_rate": 0.5,
+    "n_episodes": 12,
+    "elapsed_s": 1385.8817050457,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 4,
+    "success_rate": 0.5833333333333334,
+    "n_episodes": 12,
+    "elapsed_s": 1811.5481712818146,
+    "n_transitions": 1206,
+    "loss": 0.39677467890343265,
+    "grad_norm": 139.2880859375
+  },
+  {
+    "update": 5,
+    "success_rate": 0.5,
+    "n_episodes": 12,
+    "elapsed_s": 2108.6576058864594,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  },
+  {
+    "update": 6,
+    "success_rate": 0.4166666666666667,
+    "n_episodes": 12,
+    "elapsed_s": 2505.2389554977417,
+    "n_transitions": 671,
+    "loss": 0.8512826600124512,
+    "grad_norm": 167.79713439941406
+  },
+  {
+    "update": 7,
+    "success_rate": 0.4166666666666667,
+    "n_episodes": 12,
+    "elapsed_s": 2900.4830536842346,
+    "n_transitions": 658,
+    "loss": 0.8593793442999338,
+    "grad_norm": 164.48257446289062
+  }
+]

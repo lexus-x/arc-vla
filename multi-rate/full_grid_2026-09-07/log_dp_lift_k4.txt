@@ -1,0 +1,26 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] 200 demos harvested in 0s
+[data] 9666 windows, obs_dim=19, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_lift.pt
+[eval] [10/100] native=10 zoh=10 spline_satfix=10 tac_fold_satfix=10 qp=10
+[eval] [20/100] native=20 zoh=20 spline_satfix=20 tac_fold_satfix=20 qp=20
+[eval] [30/100] native=30 zoh=30 spline_satfix=30 tac_fold_satfix=30 qp=30
+[eval] [40/100] native=40 zoh=40 spline_satfix=40 tac_fold_satfix=40 qp=40
+[eval] [50/100] native=50 zoh=50 spline_satfix=50 tac_fold_satfix=50 qp=50
+[eval] [60/100] native=60 zoh=60 spline_satfix=60 tac_fold_satfix=60 qp=60
+[eval] [70/100] native=70 zoh=70 spline_satfix=70 tac_fold_satfix=70 qp=70
+[eval] [80/100] native=80 zoh=80 spline_satfix=80 tac_fold_satfix=80 qp=80
+[eval] [90/100] native=90 zoh=90 spline_satfix=90 tac_fold_satfix=90 qp=90
+[eval] [100/100] native=100 zoh=100 spline_satfix=100 tac_fold_satfix=100 qp=100
+[eval] wall 340s for 100 eps x 5 arms
+
+=== lift closed-loop DP, k=4, n=100 ===
+  native            100.0% (100/100)  | vs zoh:   +0.0pp p=1
+  zoh               100.0% (100/100)  | vs native:   +0.0pp p=1
+  spline_satfix     100.0% (100/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  tac_fold_satfix   100.0% (100/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  qp                100.0% (100/100)  | vs zoh:   +0.0pp p=1  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_lift_k4.json

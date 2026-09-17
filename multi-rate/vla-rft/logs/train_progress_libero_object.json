@@ -1,0 +1,11 @@
+[
+  {
+    "update": 0,
+    "success_rate": 1.0,
+    "n_episodes": 12,
+    "elapsed_s": 347.13722825050354,
+    "n_transitions": 0,
+    "loss": null,
+    "grad_norm": null
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "flow_s0": {
+    "aggregate": null,
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 79,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 220,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 78,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 72,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 71,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 78,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 77,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 81,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 75,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 112,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "pick up the black bowl next to the ramekin and place it on the plate"
+      }
+    }
+  }
+}

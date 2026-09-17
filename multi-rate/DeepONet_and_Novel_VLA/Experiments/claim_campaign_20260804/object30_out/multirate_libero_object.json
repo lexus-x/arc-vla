@@ -1,0 +1,2543 @@
+{
+  "asrc_object_cadmag_folding_30env": {
+    "aggregate": 0.8,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_object_s0/checkpoints/8300",
+      "deeponet_head": "asrc",
+      "env_freq": 30,
+      "fourier": 6,
+      "head_rate": 30,
+      "model": "asrc_object",
+      "replan": 15,
+      "settle_steps": 15,
+      "steps": 420,
+      "suite": "libero_object",
+      "trained_on": "libero_spatial",
+      "transform": "magscale+cadence",
+      "wallclock_s": 14.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": {
+        "n": 38659,
+        "phase": 25772,
+        "queries": 25773,
+        "resolved": 12833,
+        "starved": 53
+      },
+      "cap": 420,
+      "fail_at_cap": 30,
+      "fail_early": 0,
+      "magscale_applied": 2630,
+      "n": 150,
+      "n_success": 120,
+      "spline_applied": null,
+      "success_steps_max": 397,
+      "success_steps_median": 207.0
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 198,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 218,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 241,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 176,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 199,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 224,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 237,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 200,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 216,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 222,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 250,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 254,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "pick up the alphabet soup and place it in the basket"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 256,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 254,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 233,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 368,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 184,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 296,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 339,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 345,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 420,
+            "success": false
+          }
+        ],
+        "success_rate": 0.5333333333333333,
+        "task": "pick up the cream cheese and place it in the basket"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 175,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 183,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 178,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 167,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 183,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 182,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 168,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 171,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 172,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 173,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 174,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 179,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 166,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 181,
+            "success": true
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "pick up the salad dressing and place it in the basket"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 184,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 181,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 185,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 194,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 201,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 184,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 198,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 185,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 179,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 189,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 241,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 240,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 186,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 185,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 420,
+            "success": false
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "pick up the bbq sauce and place it in the basket"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 212,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 204,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 204,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 214,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 206,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 206,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 203,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 207,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 203,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 212,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 202,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 205,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 207,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 221,
+            "success": true
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "pick up the ketchup and place it in the basket"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 191,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 190,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 196,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 207,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 200,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 208,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 185,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 258,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 190,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 227,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 202,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 199,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 179,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 420,
+            "success": false
+          }
+        ],
+        "success_rate": 0.8666666666666667,
+        "task": "pick up the tomato sauce and place it in the basket"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 235,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 235,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 219,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 224,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 215,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 226,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 219,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 228,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 212,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 215,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 281,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 225,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 220,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "pick up the butter and place it in the basket"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 276,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 209,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 208,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 198,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 206,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 191,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 210,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 206,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 213,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 187,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 213,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 209,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "pick up the milk and place it in the basket"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 222,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 314,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 230,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 328,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 222,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 225,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 229,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 397,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 291,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 301,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 226,
+            "success": true
+          }
+        ],
+        "success_rate": 0.7333333333333333,
+        "task": "pick up the chocolate pudding and place it in the basket"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 192,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 204,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 271,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 192,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 173,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 205,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 263,
+            "success": true
+          }
+        ],
+        "success_rate": 0.4666666666666667,
+        "task": "pick up the orange juice and place it in the basket"
+      }
+    }
+  },
+  "asrc_object_cadmag_spline_30env": {
+    "aggregate": 0.7733333333333333,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_object_s0/checkpoints/8300",
+      "deeponet_head": "asrc",
+      "env_freq": 30,
+      "fourier": 6,
+      "head_rate": 20,
+      "model": "asrc_object",
+      "replan": 15,
+      "settle_steps": 15,
+      "steps": 420,
+      "suite": "libero_object",
+      "trained_on": "libero_spatial",
+      "transform": "spline+magscale+cadence",
+      "wallclock_s": 14.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": {
+        "n": 39039,
+        "phase": 26025,
+        "queries": 26026,
+        "resolved": 12980,
+        "starved": 33
+      },
+      "cap": 420,
+      "fail_at_cap": 34,
+      "fail_early": 0,
+      "magscale_applied": 2660,
+      "n": 150,
+      "n_success": 116,
+      "spline_applied": 2660,
+      "success_steps_max": 406,
+      "success_steps_median": 204.0
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 200,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 207,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 301,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 310,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 274,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 200,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 220,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 248,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 201,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 219,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 209,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 196,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 420,
+            "success": false
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "pick up the alphabet soup and place it in the basket"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 197,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 241,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 240,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 292,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 182,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 242,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 290,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 406,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 249,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 420,
+            "success": false
+          }
+        ],
+        "success_rate": 0.6,
+        "task": "pick up the cream cheese and place it in the basket"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 171,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 174,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 175,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 164,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 182,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 183,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 167,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 188,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 160,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 229,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 168,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 176,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 166,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 184,
+            "success": true
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "pick up the salad dressing and place it in the basket"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 182,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 175,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 179,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 185,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 201,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 185,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 189,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 180,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 178,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 193,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 195,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 235,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 185,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 186,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 420,
+            "success": false
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "pick up the bbq sauce and place it in the basket"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 209,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 202,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 214,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 198,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 203,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 202,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 204,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 199,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 213,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 203,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 299,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 208,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 212,
+            "success": true
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "pick up the ketchup and place it in the basket"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 193,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 178,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 192,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 187,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 181,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 193,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 182,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 251,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 189,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 160,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 200,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 190,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 178,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 420,
+            "success": false
+          }
+        ],
+        "success_rate": 0.8666666666666667,
+        "task": "pick up the tomato sauce and place it in the basket"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 232,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 243,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 207,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 219,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 217,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 221,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 210,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 228,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 215,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 224,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 207,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 216,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 206,
+            "success": true
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "pick up the butter and place it in the basket"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 204,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 204,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 217,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 206,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 205,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 199,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 214,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 213,
+            "success": true
+          }
+        ],
+        "success_rate": 0.5333333333333333,
+        "task": "pick up the milk and place it in the basket"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 346,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 219,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 230,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 301,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 231,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1007,
+            "steps": 224,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 304,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 223,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 227,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 301,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 284,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1014,
+            "steps": 218,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "pick up the chocolate pudding and place it in the basket"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 195,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 176,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 199,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1009,
+            "steps": 211,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 200,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 420,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 202,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 420,
+            "success": false
+          }
+        ],
+        "success_rate": 0.4,
+        "task": "pick up the orange juice and place it in the basket"
+      }
+    }
+  },
+  "asrc_object_native_20env": {
+    "aggregate": 0.8266666666666668,
+    "config": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/runs/asrc_object_s0/checkpoints/8300",
+      "deeponet_head": "asrc",
+      "env_freq": 20,
+      "fourier": 6,
+      "head_rate": 20,
+      "model": "asrc_object",
+      "replan": 10,
+      "settle_steps": 10,
+      "steps": 280,
+      "suite": "libero_object",
+      "trained_on": "libero_spatial",
+      "transform": null,
+      "wallclock_s": 14.0
+    },
+    "diagnostics": {
+      "anchor_applied": null,
+      "cadence": null,
+      "cap": 280,
+      "fail_at_cap": 26,
+      "fail_early": 0,
+      "magscale_applied": null,
+      "n": 150,
+      "n_success": 124,
+      "spline_applied": null,
+      "success_steps_max": 242,
+      "success_steps_median": 134.5
+    },
+    "per_task": {
+      "0": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 134,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 144,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 142,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 142,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 125,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 141,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 135,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 126,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 143,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 129,
+            "success": true
+          }
+        ],
+        "success_rate": 0.7333333333333333,
+        "task": "pick up the alphabet soup and place it in the basket"
+      },
+      "1": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 201,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 156,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 200,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1005,
+            "steps": 166,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 121,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 226,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 242,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 222,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 226,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 162,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 280,
+            "success": false
+          }
+        ],
+        "success_rate": 0.6666666666666666,
+        "task": "pick up the cream cheese and place it in the basket"
+      },
+      "2": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 115,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 112,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 109,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 110,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 115,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 111,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 280,
+            "success": false
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "pick up the salad dressing and place it in the basket"
+      },
+      "3": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 119,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 122,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 122,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 129,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 122,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 125,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 121,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 132,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 126,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 179,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 122,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 122,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 280,
+            "success": false
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "pick up the bbq sauce and place it in the basket"
+      },
+      "4": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 131,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 137,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 132,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 135,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 132,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 134,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 135,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 134,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 132,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 132,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 142,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 144,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "pick up the ketchup and place it in the basket"
+      },
+      "5": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 125,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 126,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 119,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 129,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 166,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 120,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 119,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 238,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 132,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 168,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 128,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 280,
+            "success": false
+          }
+        ],
+        "success_rate": 0.9333333333333333,
+        "task": "pick up the tomato sauce and place it in the basket"
+      },
+      "6": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 152,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 154,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 146,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 148,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 145,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 141,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 151,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 141,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 151,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 150,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 143,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 156,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 152,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 144,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 146,
+            "success": true
+          }
+        ],
+        "success_rate": 1.0,
+        "task": "pick up the butter and place it in the basket"
+      },
+      "7": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1002,
+            "steps": 194,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1004,
+            "steps": 135,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 166,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 138,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1008,
+            "steps": 137,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1010,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1012,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 138,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 139,
+            "success": true
+          }
+        ],
+        "success_rate": 0.4666666666666667,
+        "task": "pick up the milk and place it in the basket"
+      },
+      "8": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1001,
+            "steps": 145,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1003,
+            "steps": 150,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 154,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1006,
+            "steps": 193,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 150,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 150,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 151,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 147,
+            "success": true
+          },
+          {
+            "seed": 1011,
+            "steps": 200,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 151,
+            "success": true
+          },
+          {
+            "seed": 1013,
+            "steps": 152,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 147,
+            "success": true
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "pick up the chocolate pudding and place it in the basket"
+      },
+      "9": {
+        "episodes": [
+          {
+            "seed": 1000,
+            "steps": 116,
+            "success": true
+          },
+          {
+            "seed": 1001,
+            "steps": 130,
+            "success": true
+          },
+          {
+            "seed": 1002,
+            "steps": 127,
+            "success": true
+          },
+          {
+            "seed": 1003,
+            "steps": 133,
+            "success": true
+          },
+          {
+            "seed": 1004,
+            "steps": 144,
+            "success": true
+          },
+          {
+            "seed": 1005,
+            "steps": 177,
+            "success": true
+          },
+          {
+            "seed": 1006,
+            "steps": 122,
+            "success": true
+          },
+          {
+            "seed": 1007,
+            "steps": 171,
+            "success": true
+          },
+          {
+            "seed": 1008,
+            "steps": 118,
+            "success": true
+          },
+          {
+            "seed": 1009,
+            "steps": 113,
+            "success": true
+          },
+          {
+            "seed": 1010,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1011,
+            "steps": 128,
+            "success": true
+          },
+          {
+            "seed": 1012,
+            "steps": 280,
+            "success": false
+          },
+          {
+            "seed": 1013,
+            "steps": 152,
+            "success": true
+          },
+          {
+            "seed": 1014,
+            "steps": 280,
+            "success": false
+          }
+        ],
+        "success_rate": 0.8,
+        "task": "pick up the orange juice and place it in the basket"
+      }
+    }
+  }
+}

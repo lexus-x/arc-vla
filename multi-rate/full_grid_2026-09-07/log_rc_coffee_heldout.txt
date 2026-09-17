@@ -1,0 +1,57 @@
+[17:17:49] CoffeePressButton heldout n=15 k=2 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-CoffeePressButton_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 4652 windows, obs_dim=82, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CoffeePressButton_f0.pt
+[eval] [10/15] native=3 zoh=1 spline=1 bspline_eps_raw=1 tac_fold_satfix=1 qp=1 qp_anchor=1
+[eval] [15/15] native=4 zoh=2 spline=2 bspline_eps_raw=2 tac_fold_satfix=2 qp=2 qp_anchor=2
+[eval] wall 2104s for 15 eps x 7 arms
+
+=== RC-CoffeePressButton closed-loop DP, k=2, n=15 ===
+  native             26.7% (4/15)  | vs zoh:  +13.3pp p=0.5
+  zoh                13.3% (2/15)  | vs native:  -13.3pp p=0.5
+  spline             13.3% (2/15)  | vs zoh:   +0.0pp p=1  | vs native:  -13.3pp p=0.5
+  bspline_eps_raw    13.3% (2/15)  | vs zoh:   +0.0pp p=1  | vs native:  -13.3pp p=0.5
+  tac_fold_satfix    13.3% (2/15)  | vs zoh:   +0.0pp p=1  | vs native:  -13.3pp p=0.5
+  qp                 13.3% (2/15)  | vs zoh:   +0.0pp p=1  | vs native:  -13.3pp p=0.5
+  qp_anchor          13.3% (2/15)  | vs zoh:   +0.0pp p=1  | vs native:  -13.3pp p=0.5
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-CoffeePressButton_f0_heldout_n15.json
+[17:53:01] CoffeePressButton heldout n=15 k=4 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-CoffeePressButton_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 4652 windows, obs_dim=82, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CoffeePressButton_f0.pt
+[eval] [10/15] native=3 zoh=4 spline=4 bspline_eps_raw=4 tac_fold_satfix=4 qp=4 qp_anchor=4
+[eval] [15/15] native=4 zoh=5 spline=5 bspline_eps_raw=5 tac_fold_satfix=5 qp=5 qp_anchor=5
+[eval] wall 1984s for 15 eps x 7 arms
+
+=== RC-CoffeePressButton closed-loop DP, k=4, n=15 ===
+  native             26.7% (4/15)  | vs zoh:   -6.7pp p=1
+  zoh                33.3% (5/15)  | vs native:   +6.7pp p=1
+  spline             33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +6.7pp p=1
+  bspline_eps_raw    33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +6.7pp p=1
+  tac_fold_satfix    33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +6.7pp p=1
+  qp                 33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +6.7pp p=1
+  qp_anchor          33.3% (5/15)  | vs zoh:   +0.0pp p=1  | vs native:   +6.7pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-CoffeePressButton_f0_k4_heldout_n15.json
+[18:26:07] CoffeePressButton heldout n=15 k=8 starting...
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RC-CoffeePressButton_39_f0.npz
+[data] 39 demos harvested in 0s
+[data] 4652 windows, obs_dim=82, act_dim=12, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CoffeePressButton_f0.pt
+[eval] [10/15] native=3 zoh=3 spline=3 bspline_eps_raw=3 tac_fold_satfix=3 qp=3 qp_anchor=3
+[eval] [15/15] native=4 zoh=3 spline=3 bspline_eps_raw=3 tac_fold_satfix=3 qp=3 qp_anchor=3
+[eval] wall 1982s for 15 eps x 7 arms
+
+=== RC-CoffeePressButton closed-loop DP, k=8, n=15 ===
+  native             26.7% (4/15)  | vs zoh:   +6.7pp p=1
+  zoh                20.0% (3/15)  | vs native:   -6.7pp p=1
+  spline             20.0% (3/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  bspline_eps_raw    20.0% (3/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  tac_fold_satfix    20.0% (3/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  qp                 20.0% (3/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  qp_anchor          20.0% (3/15)  | vs zoh:   +0.0pp p=1  | vs native:   -6.7pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RC-CoffeePressButton_f0_k8_heldout_n15.json

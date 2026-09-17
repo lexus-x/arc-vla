@@ -1,0 +1,39 @@
+{
+  "code_sha256": {
+    "deeponet_head_v2.py": "6ed9570995edab23ddb2285a56c6643b6597f2504cf024d5457d103d1480917e",
+    "evaluate_libero_standard.py": "3d9dae8f12fbcfb8daa7bae4b4b76af4b94e628ca028dcfd182ba300fe15006d",
+    "modeling_smolvla_deeponet_v2.py": "40eaffc34337ee95ce402ef87a41d44df830e7a929c122d2b57142afc5aa58c8",
+    "rate_integrated_deeponet.py": "de4cfeaccbaacb6450db1d2b3e7ac58506643e95562f2e98a92182bed2c2ab68",
+    "tempo_vsta.py": "626e06f2e4b782dca903db4c13b3906e603912ceb04a70c4075baa281af4a01b"
+  },
+  "dataset": "lerobot/libero_spatial_image",
+  "models": {
+    "flow_s0": {
+      "checkpoint": "/home/user/DeepONet_and_Novel_VLA/From_Blackwell/Ayush PH test/DeepONet PH/paper_repro/Spatial/runs/flow_s0/checkpoints/30000",
+      "head": "flow",
+      "model_sha256": "f66ca8264616c3a2eadd67d7b2764644a79de5ab50a5c89b97ea177c28160266"
+    }
+  },
+  "protocol": {
+    "control_freq": 20,
+    "max_steps": 220,
+    "n_tasks": 10,
+    "replan": 1,
+    "rollout_reset_seed": "1000 + trial_index",
+    "suite": "libero_spatial",
+    "trials_per_task": 50,
+    "videos": false
+  },
+  "runtime": {
+    "DEEPONET_ACTION_INTERP_FACTOR": "1",
+    "DEEPONET_FOLD_ALIASES": "0",
+    "DEEPONET_GAAR": "0",
+    "DEEPONET_QUERY_FACTOR": "1",
+    "DEEPONET_QUERY_POINTS": "0",
+    "DEEPONET_RATE_HZ": "20",
+    "DEEPONET_RETURN_QUERY_GRID": "0",
+    "TEMPO_SPEED": "1.0"
+  },
+  "stats_path": null,
+  "stats_sha256": null
+}

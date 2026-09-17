@@ -1,0 +1,27 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] 200 demos harvested in 0s
+[data] 30154 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_square.pt
+[eval] [10/100] native=10 zoh=10 bspline_eps_raw=10 bspline_eps05_raw=10 qp_eps05=9 qp_eps10=8
+[eval] [20/100] native=19 zoh=19 bspline_eps_raw=18 bspline_eps05_raw=20 qp_eps05=19 qp_eps10=18
+[eval] [30/100] native=27 zoh=27 bspline_eps_raw=26 bspline_eps05_raw=30 qp_eps05=29 qp_eps10=27
+[eval] [40/100] native=37 zoh=37 bspline_eps_raw=36 bspline_eps05_raw=40 qp_eps05=39 qp_eps10=36
+[eval] [50/100] native=46 zoh=46 bspline_eps_raw=45 bspline_eps05_raw=49 qp_eps05=48 qp_eps10=44
+[eval] [60/100] native=54 zoh=54 bspline_eps_raw=54 bspline_eps05_raw=58 qp_eps05=56 qp_eps10=53
+[eval] [70/100] native=63 zoh=63 bspline_eps_raw=63 bspline_eps05_raw=67 qp_eps05=63 qp_eps10=61
+[eval] [80/100] native=72 zoh=72 bspline_eps_raw=71 bspline_eps05_raw=73 qp_eps05=72 qp_eps10=69
+[eval] [90/100] native=80 zoh=80 bspline_eps_raw=79 bspline_eps05_raw=81 qp_eps05=81 qp_eps10=77
+[eval] [100/100] native=89 zoh=89 bspline_eps_raw=88 bspline_eps05_raw=91 qp_eps05=90 qp_eps10=86
+[eval] wall 1532s for 100 eps x 6 arms
+
+=== square closed-loop DP, k=1, n=100 ===
+  native             89.0% (89/100)  | vs zoh:   +0.0pp p=1
+  zoh                89.0% (89/100)  | vs native:   +0.0pp p=1
+  bspline_eps_raw    88.0% (88/100)  | vs zoh:   -1.0pp p=1  | vs native:   -1.0pp p=1
+  bspline_eps05_raw   91.0% (91/100)  | vs zoh:   +2.0pp p=0.727  | vs native:   +2.0pp p=0.727
+  qp_eps05           90.0% (90/100)  | vs zoh:   +1.0pp p=1  | vs native:   +1.0pp p=1
+  qp_eps10           86.0% (86/100)  | vs zoh:   -3.0pp p=0.581  | vs native:   -3.0pp p=0.581
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_square_k1.json

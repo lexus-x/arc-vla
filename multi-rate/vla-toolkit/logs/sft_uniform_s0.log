@@ -1,0 +1,31 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  86%|████████▌ | 421/489 [00:00<00:00, 4185.39it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 4329.15it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 86928.58it/s]
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 111107.39it/s]
+[uniform] step    0 loss=0.2072 grad_norm=5.180 elapsed=8s
+[uniform] step   20 loss=0.1771 grad_norm=3.797 elapsed=40s
+[uniform] step   40 loss=0.1625 grad_norm=4.728 elapsed=72s
+[uniform] step   60 loss=0.1788 grad_norm=5.156 elapsed=103s
+[uniform] step   80 loss=0.1721 grad_norm=4.660 elapsed=134s
+[uniform] step  100 loss=0.1504 grad_norm=3.596 elapsed=165s
+[uniform] step  120 loss=0.1919 grad_norm=4.201 elapsed=196s
+[uniform] step  140 loss=0.1900 grad_norm=6.074 elapsed=227s
+[uniform] step  160 loss=0.1458 grad_norm=4.872 elapsed=258s
+[uniform] step  180 loss=0.1513 grad_norm=4.372 elapsed=289s
+[uniform] step  200 loss=0.1762 grad_norm=4.978 elapsed=320s
+[uniform] step  220 loss=0.1739 grad_norm=3.974 elapsed=350s
+[uniform] step  240 loss=0.1828 grad_norm=3.439 elapsed=380s
+[uniform] step  260 loss=0.1702 grad_norm=4.813 elapsed=411s
+[uniform] step  280 loss=0.2418 grad_norm=3.956 elapsed=442s
+[uniform] step  300 loss=0.1674 grad_norm=3.663 elapsed=472s
+[uniform] step  320 loss=0.1886 grad_norm=4.530 elapsed=504s
+[uniform] step  340 loss=0.1574 grad_norm=4.033 elapsed=533s
+[uniform] step  360 loss=0.1574 grad_norm=5.015 elapsed=564s
+[uniform] step  380 loss=0.1460 grad_norm=4.314 elapsed=594s
+[uniform] step  399 loss=0.1895 grad_norm=4.114 elapsed=619s
+Saved to rl_checkpoint/sft_uniform_s0

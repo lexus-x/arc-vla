@@ -1,0 +1,20 @@
+
+=======================================================
+EVALUATING TAC-FOLD AT 40 HZ (n=50/task)
+=======================================================
+[33;1m2026-08-15 08:50:14,406 - mani_skill  - WARNING - No initial pose set for actor builder of goal_region, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[+] Task PullCube-v1 (40 Hz): TACFold=94.0%, Spline=86.0% (Δ = +8.0pp, p = 0.1250)
+[+] Task PushCube-v1 (40 Hz): TACFold=100.0%, Spline=100.0% (Δ = +0.0pp, p = 1.0000)
+[+] Task LiftPegUpright-v1 (40 Hz): TACFold=52.0%, Spline=40.0% (Δ = +12.0pp, p = 0.0703)
+[+] Task PickCube-v1 (40 Hz): TACFold=46.0%, Spline=44.0% (Δ = +2.0pp, p = 1.0000)
+[+] Task StackCube-v1 (40 Hz): TACFold=40.0%, Spline=38.0% (Δ = +2.0pp, p = 1.0000)
+[+] Task RollBall-v1 (40 Hz): TACFold=16.0%, Spline=12.0% (Δ = +4.0pp, p = 0.6875)
+[+] Task PokeCube-v1 (40 Hz): TACFold=66.0%, Spline=68.0% (Δ = -2.0pp, p = 1.0000)
+[+] Task PushT-v1 (40 Hz): TACFold=0.0%, Spline=0.0% (Δ = +0.0pp, p = 1.0000)
+[+] Task DrawTriangle-v1 (40 Hz): TACFold=0.0%, Spline=0.0% (Δ = +0.0pp, p = 1.0000)
+[+] Task PegInsertionSide-v1 (40 Hz): TACFold=4.0%, Spline=6.0% (Δ = -2.0pp, p = 1.0000)
+
+[+] Saving 40 Hz TAC-Fold Master Video (925 frames) to /home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/maniskill_10tasks_40hz_tac_fold_master.mp4...
+[SUCCESS] Saved: /home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/comparison_videos/maniskill_10tasks_40hz_tac_fold_master.mp4
+
+[ALL COMPLETE] TAC-Fold Scoreboard Saved to /home/user/DeepONet_and_Novel_VLA/Experiments/claim_campaign_20260804/blueprint_2026_08_14/maniskill_10tasks_tac_fold_results_n50.json

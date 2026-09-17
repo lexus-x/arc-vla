@@ -1,0 +1,24 @@
+[PickCube-v1] k=4 eligible=993 arms=['original', 'exact_integral', 'cubic_spline_satfix', 'tac_fold_satfix', 'bspline_eps_satfix', 'qp']
+[PickCube-v1] k=4 [100/993] original=96 exact_integral=19 cubic_spline_satfix=30 tac_fold_satfix=31 bspline_eps_satfix=29 qp=39 (120s)
+[PickCube-v1] k=4 [200/993] original=188 exact_integral=32 cubic_spline_satfix=56 tac_fold_satfix=57 bspline_eps_satfix=50 qp=69 (238s)
+[PickCube-v1] k=4 [300/993] original=277 exact_integral=52 cubic_spline_satfix=88 tac_fold_satfix=86 bspline_eps_satfix=82 qp=107 (353s)
+[PickCube-v1] k=4 [400/993] original=370 exact_integral=79 cubic_spline_satfix=119 tac_fold_satfix=116 bspline_eps_satfix=111 qp=142 (463s)
+[PickCube-v1] k=4 [500/993] original=462 exact_integral=106 cubic_spline_satfix=158 tac_fold_satfix=153 bspline_eps_satfix=148 qp=183 (584s)
+[PickCube-v1] k=4 [600/993] original=556 exact_integral=128 cubic_spline_satfix=190 tac_fold_satfix=182 bspline_eps_satfix=180 qp=217 (695s)
+[PickCube-v1] k=4 [700/993] original=650 exact_integral=151 cubic_spline_satfix=225 tac_fold_satfix=220 bspline_eps_satfix=212 qp=254 (810s)
+[PickCube-v1] k=4 [800/993] original=739 exact_integral=167 cubic_spline_satfix=250 tac_fold_satfix=241 bspline_eps_satfix=234 qp=281 (919s)
+[PickCube-v1] k=4 [900/993] original=835 exact_integral=188 cubic_spline_satfix=282 tac_fold_satfix=271 bspline_eps_satfix=267 qp=321 (988s)
+[PickCube-v1] k=4 [993/993] original=918 exact_integral=209 cubic_spline_satfix=308 tac_fold_satfix=298 bspline_eps_satfix=294 qp=349 (1055s)
+
+=== [PickCube-v1] k=4 n=993 ===
+  original                92.45% (918/993)  saturated_elems=0.00%
+  exact_integral          21.05% (209/993)  saturated_elems=0.00%
+  cubic_spline_satfix     31.02% (308/993)  saturated_elems=0.00%
+  tac_fold_satfix         30.01% (298/993)  saturated_elems=0.00%
+  bspline_eps_satfix      29.61% (294/993)  saturated_elems=0.00%
+  qp                      35.15% (349/993)  saturated_elems=0.00%
+  qp vs exact_integral      : +14.10pp  wins 158/18  p=3.92e-29  CI=[11.68,16.62]
+  qp vs cubic_spline_satfix : +4.13pp  wins 63/22  p=9.81e-06  CI=[2.32,5.94]
+  qp vs tac_fold_satfix     : +5.14pp  wins 86/35  p=4e-06  CI=[3.02,7.25]
+  qp vs bspline_eps_satfix  : +5.54pp  wins 87/32  p=4.69e-07  CI=[3.52,7.65]
+saved -> /home/user/Desktop/multi-rate/full_grid_2026-09-07/bspl_replay_PickCube-v1_k4.json

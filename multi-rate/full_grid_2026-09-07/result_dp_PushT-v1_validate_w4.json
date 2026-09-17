@@ -1,0 +1,136 @@
+{
+  "task": "PushT-v1",
+  "policy": "dp",
+  "k": 2,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 8,
+  "train_steps": 30000,
+  "arms": [
+    "native",
+    "zoh",
+    "spline",
+    "qp",
+    "qp_anchor"
+  ],
+  "success": {
+    "native": [
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false
+    ],
+    "zoh": [
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    "spline": [
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "qp": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true
+    ],
+    "qp_anchor": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.0753926917989418,
+    "zoh": 0.09884465939153439,
+    "spline": 0.06796747812372812,
+    "qp": 0.09463872354497355,
+    "qp_anchor": 0.05438781415343916
+  },
+  "contrasts": {
+    "native": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 2,
+        "ref_only": 2
+      }
+    },
+    "zoh": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 2,
+        "ref_only": 2
+      }
+    },
+    "spline": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 2,
+        "ref_only": 2
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 1,
+        "ref_only": 1
+      }
+    },
+    "qp": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 1,
+        "ref_only": 1
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 1,
+        "ref_only": 1
+      }
+    },
+    "qp_anchor": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 1,
+        "ref_only": 1
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 1,
+        "ref_only": 1
+      }
+    }
+  }
+}

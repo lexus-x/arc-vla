@@ -1,0 +1,9 @@
+[start] dp_RC-OpenDrawer 03:08:19
+[end] dp_RC-OpenDrawer rc=0 04:19:55
+[start] fm_RC-OpenDrawer 04:19:55
+[end] fm_RC-OpenDrawer rc=1 04:19:56
+[start] dp_RC-PnPCounterToStove 04:19:56
+[end] dp_RC-PnPCounterToStove rc=1 04:19:58
+[start] fm_RC-PnPCounterToStove 04:19:58
+[end] fm_RC-PnPCounterToStove rc=1 04:19:59
+[stream C] DONE 04:19:59

@@ -1,0 +1,50 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 88768.34it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6796.46it/s]
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6673.09it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+[task 2] 'pick up the black bowl from table center and place it on the plate' | bowls=['akita_black_bowl_1_pos', 'akita_black_bowl_2_pos']
+[task 2 trial 0] SUCCESS | first_close@40 | bowl_1 xy=0.051 dz=+0.0283 bowl_2 xy=0.250 dz=+0.0283 | lift={'bowl_1': 0.126, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 1] SUCCESS | first_close@40 | bowl_1 xy=0.037 dz=+0.0488 bowl_2 xy=0.287 dz=+0.0488 | lift={'bowl_1': 0.149, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 2] SUCCESS | first_close@37 | bowl_1 xy=0.043 dz=+0.0505 bowl_2 xy=0.271 dz=+0.0505 | lift={'bowl_1': 0.148, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 3] SUCCESS | first_close@35 | bowl_1 xy=0.057 dz=+0.0304 bowl_2 xy=0.271 dz=+0.0304 | lift={'bowl_1': 0.138, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 4] SUCCESS | first_close@41 | bowl_1 xy=0.049 dz=+0.0330 bowl_2 xy=0.310 dz=+0.0330 | lift={'bowl_1': 0.144, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 5] SUCCESS | first_close@38 | bowl_1 xy=0.053 dz=+0.0425 bowl_2 xy=0.281 dz=+0.0425 | lift={'bowl_1': 0.165, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 6] SUCCESS | first_close@39 | bowl_1 xy=0.050 dz=+0.0375 bowl_2 xy=0.277 dz=+0.0375 | lift={'bowl_1': 0.146, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 7] SUCCESS | first_close@38 | bowl_1 xy=0.053 dz=+0.0532 bowl_2 xy=0.277 dz=+0.0532 | lift={'bowl_1': 0.151, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 8] SUCCESS | first_close@42 | bowl_1 xy=0.027 dz=+0.0462 bowl_2 xy=0.278 dz=+0.0462 | lift={'bowl_1': 0.161, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 9] SUCCESS | first_close@38 | bowl_1 xy=0.044 dz=+0.0387 bowl_2 xy=0.291 dz=+0.0387 | lift={'bowl_1': 0.177, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 10] SUCCESS | first_close@41 | bowl_1 xy=0.019 dz=+0.0268 bowl_2 xy=0.308 dz=+0.0268 | lift={'bowl_1': 0.169, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 11] SUCCESS | first_close@38 | bowl_1 xy=0.032 dz=+0.0472 bowl_2 xy=0.285 dz=+0.0472 | lift={'bowl_1': 0.136, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 12] SUCCESS | first_close@37 | bowl_1 xy=0.051 dz=+0.0467 bowl_2 xy=0.287 dz=+0.0467 | lift={'bowl_1': 0.148, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 13] SUCCESS | first_close@38 | bowl_1 xy=0.076 dz=+0.0273 bowl_2 xy=0.281 dz=+0.0273 | lift={'bowl_1': 0.157, 'bowl_2': 0.0}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[task 2 trial 14] FAIL | first_close@36 | bowl_1 xy=0.039 dz=+0.0463 bowl_2 xy=0.270 dz=+0.0462 | lift={'bowl_1': 0.155, 'bowl_2': 0.002}

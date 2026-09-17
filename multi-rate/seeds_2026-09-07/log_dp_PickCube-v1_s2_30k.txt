@@ -1,0 +1,48 @@
+[harvest] 50/200
+[harvest] 100/200
+[harvest] 150/200
+[harvest] 200/200
+[data] 200 demos harvested in 210s
+[data] 3890 windows, obs_dim=42, act_dim=8, raw |a|>1 frac=0.303
+[train] step 1/30000 loss=1.15351
+[train] step 2000/30000 loss=0.01504
+[train] step 4000/30000 loss=0.00614
+[train] step 6000/30000 loss=0.00413
+[train] step 8000/30000 loss=0.00381
+[train] step 10000/30000 loss=0.00256
+[train] step 12000/30000 loss=0.00229
+[train] step 14000/30000 loss=0.00237
+[train] step 16000/30000 loss=0.00110
+[train] step 18000/30000 loss=0.00077
+[train] step 20000/30000 loss=0.00074
+[train] step 22000/30000 loss=0.00043
+[train] step 24000/30000 loss=0.00038
+[train] step 26000/30000 loss=0.00022
+[train] step 28000/30000 loss=0.00016
+[train] step 30000/30000 loss=0.00013
+[train] saved /home/user/Desktop/multi-rate/seeds_2026-09-07/dp_PickCube-v1_s2_30k.pt
+[eval] [10/100] native=7 zoh=5 spline=6 spline_satfix=5 pchip=4 pchip_satfix=5 tac_fold=4 tac_fold_satfix=5 bspline=3 bspline_satfix=4
+[eval] [20/100] native=16 zoh=14 spline=13 spline_satfix=14 pchip=12 pchip_satfix=13 tac_fold=12 tac_fold_satfix=14 bspline=8 bspline_satfix=13
+[eval] [30/100] native=25 zoh=23 spline=21 spline_satfix=23 pchip=21 pchip_satfix=22 tac_fold=21 tac_fold_satfix=23 bspline=14 bspline_satfix=22
+[eval] [40/100] native=34 zoh=32 spline=29 spline_satfix=32 pchip=29 pchip_satfix=31 tac_fold=29 tac_fold_satfix=32 bspline=20 bspline_satfix=31
+[eval] [50/100] native=43 zoh=39 spline=36 spline_satfix=40 pchip=35 pchip_satfix=39 tac_fold=36 tac_fold_satfix=40 bspline=24 bspline_satfix=38
+[eval] [60/100] native=53 zoh=44 spline=41 spline_satfix=47 pchip=39 pchip_satfix=46 tac_fold=43 tac_fold_satfix=48 bspline=28 bspline_satfix=44
+[eval] [70/100] native=63 zoh=52 spline=47 spline_satfix=56 pchip=45 pchip_satfix=55 tac_fold=51 tac_fold_satfix=58 bspline=29 bspline_satfix=53
+[eval] [80/100] native=73 zoh=61 spline=57 spline_satfix=66 pchip=55 pchip_satfix=65 tac_fold=60 tac_fold_satfix=68 bspline=36 bspline_satfix=63
+[eval] [90/100] native=82 zoh=69 spline=64 spline_satfix=74 pchip=62 pchip_satfix=73 tac_fold=69 tac_fold_satfix=76 bspline=38 bspline_satfix=71
+[eval] [100/100] native=92 zoh=78 spline=74 spline_satfix=83 pchip=70 pchip_satfix=82 tac_fold=79 tac_fold_satfix=86 bspline=42 bspline_satfix=79
+[eval] wall 2193s for 100 eps x 10 arms
+
+=== PickCube-v1 closed-loop DP, k=2, n=100 ===
+  native             92.0% (92/100)  | vs zoh:  +14.0pp p=0.000122
+  zoh                78.0% (78/100)  | vs native:  -14.0pp p=0.000122
+  spline             74.0% (74/100)  | vs zoh:   -4.0pp p=0.523  | vs native:  -18.0pp p=0.000277
+  spline_satfix      83.0% (83/100)  | vs zoh:   +5.0pp p=0.18  | vs native:   -9.0pp p=0.00391
+  pchip              70.0% (70/100)  | vs zoh:   -8.0pp p=0.0963  | vs native:  -22.0pp p=2.98e-06
+  pchip_satfix       82.0% (82/100)  | vs zoh:   +4.0pp p=0.289  | vs native:  -10.0pp p=0.00195
+  tac_fold           79.0% (79/100)  | vs zoh:   +1.0pp p=1  | vs native:  -13.0pp p=0.000977
+  tac_fold_satfix    86.0% (86/100)  | vs zoh:   +8.0pp p=0.0215  | vs native:   -6.0pp p=0.0312
+  bspline            42.0% (42/100)  | vs zoh:  -36.0pp p=4.41e-08  | vs native:  -50.0pp p=2.35e-14
+  bspline_satfix     79.0% (79/100)  | vs zoh:   +1.0pp p=1  | vs native:  -13.0pp p=0.000244
+  policy raw |a|>1 frac (pre-clip): 0.266
+[saved] /home/user/Desktop/multi-rate/seeds_2026-09-07/result_dp_PickCube-v1_s2_30k.json

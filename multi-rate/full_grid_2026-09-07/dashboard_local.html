@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rate Bench Ops (local)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --ink:#1B2027; --paper:#F5F4F0; --surface:#FFFFFF; --surface-2:#FBFAF7;
+    --line:#DEDAD1; --muted:#6B6F76; --accent:#2C6E8C;
+    --good:#3F7D52; --good-bg:#E7F1E9; --void:#8A8578; --void-bg:#EFECE5; --warn:#B9812E;
+    --shadow: 0 1px 2px rgba(27,32,39,.06), 0 4px 14px rgba(27,32,39,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#EDEBE6; --paper:#15171B; --surface:#1B1E23; --surface-2:#20232A;
+      --line:#2C2F36; --muted:#9A9DA5; --accent:#6BB6D6;
+      --good:#6FBF86; --good-bg:#1D2B21; --void:#A9A497; --void-bg:#232219; --warn:#E0B463;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:"IBM Plex Sans",system-ui,sans-serif; padding-inline:20px; padding-block:28px 60px; }
+  .mono{ font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums; }
+  .wrap{ max-width:980px; margin:0 auto; }
+  header{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:10px 24px; margin-bottom:22px; }
+  .brand{ display:flex; align-items:baseline; gap:10px; }
+  .brand-mark{ width:9px; height:9px; border-radius:2px; background:var(--accent); display:inline-block; transform:rotate(45deg); flex:none; }
+  h1{ font-size:1.28rem; font-weight:700; margin:0; letter-spacing:-.01em; }
+  .eyebrow{ font-size:.72rem; text-transform:uppercase; letter-spacing:.09em; color:var(--muted); margin:0 0 2px; }
+  .clock{ text-align:right; font-size:.8rem; color:var(--muted); }
+  .clock .t{ color:var(--ink); font-weight:600; font-size:.95rem; }
+  .stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:30px; }
+  .stat{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:14px 16px; box-shadow:var(--shadow); }
+  .stat .k{ font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:6px; }
+  .stat .v{ font-size:1.55rem; font-weight:600; line-height:1; }
+  .stat .v small{ font-size:.85rem; color:var(--muted); font-weight:500; }
+  section{ margin-bottom:34px; }
+  .section-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:12px; border-bottom:1px solid var(--line); padding-bottom:8px; }
+  .section-head h2{ font-size:.95rem; font-weight:600; margin:0; }
+  .section-head .note{ font-size:.74rem; color:var(--muted); }
+  .jobs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:10px; }
+  .job{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px 15px; box-shadow:var(--shadow); }
+  .job-top{ display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px; }
+  .job-name{ font-weight:600; font-size:.9rem; }
+  .pill{ font-size:.65rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; padding:2.5px 7px; border-radius:20px; white-space:nowrap; }
+  .pill-run{ background:var(--accent); color:var(--surface); }
+  .pill-run::before{ content:"●"; margin-right:4px; display:inline-block; animation:pulse 1.6s ease-in-out infinite; }
+  .pill-dead{ background:var(--void-bg); color:var(--void); }
+  @keyframes pulse{ 0%,100%{opacity:1} 50%{opacity:.35} }
+  @media (prefers-reduced-motion:reduce){ .pill-run::before{ animation:none } }
+  .pill-good{ background:var(--good-bg); color:var(--good); }
+  .pill-void{ background:var(--void-bg); color:var(--void); }
+  .bar-track{ height:6px; border-radius:4px; background:var(--surface-2); border:1px solid var(--line); overflow:hidden; margin-bottom:8px; }
+  .bar-fill{ height:100%; background:var(--accent); border-radius:4px; transition:width .4s ease; }
+  .job-meta{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 10px; font-size:.74rem; color:var(--muted); }
+  .job-meta .mono{ color:var(--ink); }
+  .job-epoch{ font-size:.7rem; color:var(--muted); margin-top:8px; }
+  .job-epoch .mono{ color:var(--ink); font-weight:500; }
+  .results{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:10px; }
+  .card{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:15px 16px 16px; box-shadow:var(--shadow); }
+  .card-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:4px; }
+  .card-title{ font-weight:600; font-size:.92rem; }
+  .card-sub{ font-size:.72rem; color:var(--muted); margin-bottom:12px; }
+  .kv{ display:flex; flex-direction:column; gap:6px; margin-bottom:10px; }
+  .kv-row{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; font-size:.79rem; border-bottom:1px dashed var(--line); padding-bottom:6px; }
+  .kv-row:last-child{ border-bottom:none; padding-bottom:0; }
+  .kv-row .label{ color:var(--muted); }
+  .val.sig{ color:var(--good); font-weight:600; }
+  .val.ns{ color:var(--muted); }
+  .card-note{ font-size:.72rem; color:var(--muted); line-height:1.5; padding-top:8px; border-top:1px solid var(--line); }
+  footer{ font-size:.74rem; color:var(--muted); border-top:1px solid var(--line); padding-top:14px; display:flex; flex-wrap:wrap; gap:6px 18px; justify-content:space-between; }
+  footer .mono{ color:var(--ink); }
+  .stale-flag{ display:none; color:var(--warn); font-weight:600; }
+  .stale .stale-flag{ display:inline; }
+  @media (max-width:480px){ h1{ font-size:1.12rem; } .clock{ text-align:left; } header{ flex-direction:column; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div><p class="eyebrow">multi-rate vla action resampling · local</p><h1>Rate Bench Ops</h1></div>
+    </div>
+    <div class="clock"><div class="t" id="clock-time">—</div><div id="sync-note">connecting…</div></div>
+  </header>
+
+  <div class="stats" id="stats">
+    <div class="stat"><div class="k">Training runs live</div><div class="v" id="stat-jobs">–</div></div>
+    <div class="stat"><div class="k">Tasks evaluated</div><div class="v" id="stat-evald">–</div></div>
+    <div class="stat"><div class="k">qp_anchor verdicts</div><div class="v" id="stat-verdict">–</div></div>
+    <div class="stat"><div class="k">GPU</div><div class="v" id="stat-gpu">–</div></div>
+  </div>
+
+  <section>
+    <div class="section-head"><h2>RoboCasa native reproduction — training</h2>
+      <span class="note">read fresh from the actual log files on every poll</span></div>
+    <div class="jobs" id="jobs"></div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>qp_anchor vs. baselines — closed-loop verdicts</h2>
+      <span class="note">exact McNemar, Holm-corrected, pre-registered before each result</span></div>
+    <div class="results" id="results"></div>
+  </section>
+
+  <footer>
+    <span>bridge <span class="mono" id="bridge-status">—</span></span>
+    <span><span class="mono">harness.py --workers</span> validated byte-identical vs sequential</span>
+    <span class="stale-flag">⚠ server unreachable — is dashboard_server.py running?</span>
+  </footer>
+</div>
+
+<script>
+function tick(){ document.getElementById("clock-time").textContent = new Date().toLocaleTimeString(undefined,{hour:"2-digit",minute:"2-digit",second:"2-digit"}); }
+tick(); setInterval(tick, 1000);
+
+function jobCard(j){
+  const iterPct = Math.min(100, Math.round(100*j.iter/j.totalIter));
+  const remainIter = Math.max(0, j.totalIter - j.iter);
+  const etaEpochS = j.itPerSec>0 ? remainIter/j.itPerSec : 0;
+  const epochS = j.itPerSec>0 ? j.totalIter/j.itPerSec : 0;
+  const remainEpochs = Math.max(0, j.totalEpochs - j.epoch - 1);
+  const etaTotalH = (etaEpochS + remainEpochs*epochS)/3600;
+  const etaStr = etaTotalH >= 1 ? etaTotalH.toFixed(0)+"h" : Math.round(etaTotalH*60)+"m";
+  return `<div class="job">
+    <div class="job-top"><span class="job-name">${j.task}</span>
+      <span class="pill ${j.alive?'pill-run':'pill-dead'}">${j.alive?'running':'stopped'}</span></div>
+    <div class="bar-track"><div class="bar-fill" style="width:${iterPct}%"></div></div>
+    <div class="job-meta">
+      <span>iter <span class="mono">${j.iter}/${j.totalIter}</span></span>
+      <span><span class="mono">${j.itPerSec.toFixed(1)}</span> it/s</span>
+      <span>full run ≈ <span class="mono">${etaStr}</span> left</span>
+    </div>
+    <div class="job-epoch">epoch <span class="mono">${j.epoch}</span> / <span class="mono">${j.totalEpochs}</span></div>
+  </div>`;
+}
+function resultCard(r){
+  const pillClass = r.verdict==="good" ? "pill-good" : "pill-void";
+  const rows = r.rows.map(row => `<div class="kv-row"><span class="label">${row.label}</span>
+      <span class="val mono ${row.sig?'sig':'ns'}">${row.delta} · p=${row.p}</span></div>`).join("");
+  return `<div class="card">
+    <div class="card-top"><span class="card-title">${r.task}</span><span class="pill ${pillClass}">${r.verdictLabel}</span></div>
+    <div class="card-sub">${r.kind} · ${r.policy} · k=${r.k} · n=${r.n}</div>
+    <div class="kv">${rows}</div>
+    <div class="card-note">${r.note}</div>
+  </div>`;
+}
+
+async function poll(){
+  try{
+    const res = await fetch("/status.json", {cache:"no-store"});
+    const state = await res.json();
+    document.getElementById("jobs").innerHTML = state.jobs.map(jobCard).join("");
+    document.getElementById("results").innerHTML = state.results.map(resultCard).join("");
+    document.getElementById("stat-jobs").textContent = state.jobs.filter(j=>j.alive).length + " / " + state.jobs.length;
+    document.getElementById("stat-evald").textContent = state.results.length;
+    const good = state.results.filter(r=>r.verdict==="good").length;
+    document.getElementById("stat-verdict").innerHTML = `${good} win <small>/ ${state.results.length-good} tie-void</small>`;
+    document.getElementById("stat-gpu").textContent = state.session.gpu;
+    document.getElementById("bridge-status").textContent = state.session.bridge;
+    document.getElementById("sync-note").textContent = "live · polling every 5s";
+    document.body.classList.remove("stale");
+  }catch(e){
+    document.body.classList.add("stale");
+    document.getElementById("sync-note").textContent = "disconnected";
+  }
+}
+poll(); setInterval(poll, 5000);
+</script>
+</body>
+</html>

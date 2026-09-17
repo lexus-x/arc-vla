@@ -1,0 +1,22 @@
+{
+  "task": "PickCube-v1",
+  "policy": "dp",
+  "k": 2,
+  "n": 2,
+  "train_steps": 50,
+  "arms": [
+    "native"
+  ],
+  "success": {
+    "native": [
+      false,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.8052721088435374
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

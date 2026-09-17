@@ -1,0 +1,1123 @@
+# Task 2 snapshot-based review package
+# Baseline: /tmp/stage1_task2_before_2 (workspace has no usable git metadata)
+# Current files: dp_min.py robocasa_vision_data.py robocasa_vision_bridge.py stage1_vision.py run_stage1_vision_campaign.sh test_stage1_vision.py
+--- /tmp/stage1_task2_before_2/dp_min.py	2026-09-10 09:39:53.475082224 +0900
++++ dp_min.py	2026-09-10 09:45:38.466613826 +0900
+@@ -184,6 +184,79 @@
+     return ema.m
+ 
+ 
++def prepare_rgb(images, layout="HWC", device=None):
++    """Convert (...,H,W,3) / (...,3,H,W) RGB to float (...,3,H,W) in [0,1].
++
++    Float inputs may be [0,1] or raw [0,255]. Never flip axes spatially: the
++    RoboCasa data-processing wrapper already matches stored image orientation.
++    """
++    if isinstance(images, np.ndarray):
++        images = np.ascontiguousarray(images)
++    x = torch.as_tensor(images, device=device)
++    if x.ndim < 3 or layout not in ("HWC", "CHW"):
++        raise ValueError("RGB requires at least 3 dimensions and explicit HWC/CHW layout")
++    if (x.shape[-1] if layout == "HWC" else x.shape[-3]) != 3:
++        raise ValueError("RGB channel dimension must be 3")
++    is_uint8 = x.dtype == torch.uint8
++    x = x.float()
++    if not torch.isfinite(x).all() or x.min() < 0 or x.max() > 255:
++        raise ValueError("RGB values must be finite and in [0,255]")
++    if is_uint8 or x.max() > 1:
++        x = x / 255.0
++    return x.movedim(-1, -3) if layout == "HWC" else x
++
++
++class VisualDiffusionPolicy(DiffusionPolicy):
++    """Additive multimodal DP; one shared RGB encoder, ordered camera embeddings.
++
++    State is already normalized; image inputs remain a separate raw RGB dict.
++    ``tiny`` is an explicit CPU-test backbone, never the production default.
++    """
++    def __init__(self, proprio_dim, act_dim, camera_keys, embedding_dim=64,
++                 image_layouts=None, backbone="resnet18", **kwargs):
++        camera_keys = tuple(camera_keys)
++        if not camera_keys or len(set(camera_keys)) != len(camera_keys):
++            raise ValueError("camera_keys must be nonempty and unique")
++        super().__init__(proprio_dim + len(camera_keys) * embedding_dim, act_dim, **kwargs)
++        self.proprio_dim, self.camera_keys = proprio_dim, camera_keys
++        self.image_layouts = dict(image_layouts or {k: "HWC" for k in camera_keys})
++        if set(self.image_layouts) != set(camera_keys):
++            raise ValueError("image layout keys must match cameras")
++        if backbone == "resnet18":
++            from torchvision.models import resnet18
++            self.encoder = resnet18(weights=None)
++            width = self.encoder.fc.in_features
++            self.encoder.fc = nn.Identity()
++        elif backbone == "tiny":
++            width = 8
++            self.encoder = nn.Sequential(nn.Conv2d(3, width, 3, padding=1), nn.ReLU(),
++                                         nn.AdaptiveAvgPool2d(1), nn.Flatten())
++        else:
++            raise ValueError(f"unknown visual backbone: {backbone}")
++        self.projection = nn.Linear(width, embedding_dim)
++
++    def encode(self, state, images):
++        if state.ndim != 3 or state.shape[1:] != (self.n_obs, self.proprio_dim):
++            raise ValueError("state must have shape (B,n_obs,proprio_dim)")
++        if set(images) != set(self.camera_keys):
++            raise ValueError("image keys must exactly match policy cameras")
++        features = [state]
++        for key in self.camera_keys:
++            x = prepare_rgb(images[key], self.image_layouts[key], state.device)
++            if x.ndim != 5 or x.shape[:2] != state.shape[:2]:
++                raise ValueError("images must have matching (B,n_obs) leading dimensions")
++            z = self.projection(self.encoder(x.flatten(0, 1)))
++            features.append(z.reshape(*state.shape[:2], -1))
++        return torch.cat(features, dim=-1)
++
++    def loss(self, state, images, act):
++        return super().loss(self.encode(state, images), act)
++
++    @torch.no_grad()
++    def sample(self, state, images, n_steps=10):
++        return super().sample(self.encode(state, images), n_steps=n_steps)
++
++
+ if __name__ == "__main__":  # smoke: shapes, one train step, one sample, EMA copy
+     dev = "cuda" if torch.cuda.is_available() else "cpu"
+     p = DiffusionPolicy(obs_dim=42, act_dim=8).to(dev)
+--- /dev/null	2026-08-17 03:48:18.012999965 +0900
++++ robocasa_vision_data.py	2026-09-10 10:25:27.763419927 +0900
+@@ -0,0 +1,164 @@
++"""Shared, torch-free contracts for Stage 1 HDF5 and live RGB observations."""
++import hashlib
++import json
++from pathlib import Path
++
++import h5py
++import numpy as np
++
++from download_robocasa_vision_data import dataset_path, validate_dataset, TASK_URLS
++
++PROPRIO_KEYS = ("robot0_eef_pos", "robot0_eef_quat", "robot0_gripper_qpos")
++PAPER = {
++    "TurnOffSinkFaucet": ("SinkFaucet", 79.0),
++    "CoffeePressButton": ("CoffeePressButton", 93.0),
++    "TurnOffMicrowave": ("Microwave", 77.0),
++    "CloseSingleDoor": ("CloseDoor", 27.0),
++}
++
++
++def sha256_file(path):
++    digest = hashlib.sha256()
++    with open(path, "rb") as stream:
++        for block in iter(lambda: stream.read(1024 * 1024), b""):
++            digest.update(block)
++    return digest.hexdigest()
++
++
++class VisionDataset:
++    def __init__(self, task, data_dir):
++        if task not in TASK_URLS:
++            raise ValueError(f"unsupported Stage 1 task: {task}")
++        self.path = dataset_path(Path(data_dir), task).resolve()
++        summary = validate_dataset(self.path)
++        self.h5 = h5py.File(self.path, "r")
++        try:
++            data = self.h5["data"]
++            self.env_meta = json.loads(data.attrs["env_args"])
++            recorded_task = self.env_meta.get("env_name")
++            if recorded_task and recorded_task != task:
++                raise ValueError(f"dataset task {recorded_task} does not match {task}")
++            self.demos = sorted(data.keys(), key=lambda k: int(k.removeprefix("demo_")))
++            self.camera_keys = tuple(summary.rgb_image_keys)
++            if any(not k.endswith("_image") or "/" in k for k in self.camera_keys):
++                raise ValueError("camera RGB keys must be flat <camera>_image names")
++            first = data[self.demos[0]]
++            self.widths = {k: int(first["obs"][k].shape[-1]) for k in PROPRIO_KEYS}
++            if self.widths[PROPRIO_KEYS[0]] != 3 or self.widths[PROPRIO_KEYS[1]] != 4:
++                raise ValueError("eef pose requires position(3) and quaternion(4)")
++            self.shapes = {k: list(first["obs"][k].shape[1:]) for k in self.camera_keys}
++            self.layouts = {}
++            for k, shape in self.shapes.items():
++                if len(shape) != 3 or (shape[-1] == 3) == (shape[0] == 3):
++                    raise ValueError(f"ambiguous or invalid image shape: {k} {shape}")
++                self.layouts[k] = "HWC" if shape[-1] == 3 else "CHW"
++            self.act_dim = int(first["actions"].shape[-1])
++            for name in self.demos:
++                g = data[name]
++                length = len(g["actions"])
++                if length < 1 or g["actions"].shape != (length, self.act_dim):
++                    raise ValueError(f"invalid actions in {name}")
++                if "states" not in g or len(g["states"]) != length or "model_file" not in g.attrs:
++                    raise ValueError(f"missing/alignment-invalid replay state in {name}")
++                for k, width in self.widths.items():
++                    if width < 1 or g["obs"][k].shape != (length, width):
++                        raise ValueError(f"proprioception shape mismatch: {name}/{k}")
++                for k, shape in self.shapes.items():
++                    ds = g["obs"][k]
++                    if list(ds.shape) != [length] + shape or ds.dtype != np.uint8:
++                        raise ValueError(f"expected aligned raw uint8 RGB: {name}/{k}")
++            self.metadata = {
++                "task": task, "data_sha256": sha256_file(self.path),
++                "demo_names": self.demos, "proprio_keys": list(PROPRIO_KEYS),
++                "proprio_widths": self.widths, "camera_keys": list(self.camera_keys),
++                "image_shapes": self.shapes, "image_layouts": self.layouts,
++                "image_orientation": "robocasa_data_processing_wrapper_no_extra_flip",
++                "act_dim": self.act_dim,
++            }
++        except Exception:
++            self.h5.close()
++            raise
++
++    def close(self):
++        self.h5.close()
++
++    def episode(self, index):
++        g = self.h5["data"][self.demos[index]]
++        state = np.concatenate([np.asarray(g["obs"][k], np.float32) for k in PROPRIO_KEYS], -1)
++        actions = np.asarray(g["actions"], np.float32)
++        if not np.isfinite(state).all() or not np.isfinite(actions).all():
++            raise ValueError("nonfinite proprioception/actions")
++        return {"state": state, "images": {k: np.asarray(g["obs"][k]) for k in self.camera_keys},
++                "actions": actions}
++
++    def live_observation(self, obs):
++        parts = []
++        for key in PROPRIO_KEYS:
++            value = np.asarray(obs[key], np.float32).reshape(-1)
++            if value.shape != (self.widths[key],) or not np.isfinite(value).all():
++                raise ValueError(f"invalid live proprioception: {key}")
++            parts.append(value)
++        images = {}
++        for key in self.camera_keys:
++            # EnvUtils returns HWC uint8, already flipped identically to stored data.
++            value = np.asarray(obs[key])
++            if self.layouts[key] == "CHW":
++                value = value.transpose(2, 0, 1)
++            if list(value.shape) != self.shapes[key] or value.dtype != np.uint8:
++                raise ValueError(f"invalid live RGB shape/dtype: {key}")
++            images[key] = np.ascontiguousarray(value)
++        return {"state": np.concatenate(parts), "images": images}
++
++    def camera_config(self):
++        sizes = []
++        for key in self.camera_keys:
++            shape = self.shapes[key]
++            sizes.append(shape[:2] if self.layouts[key] == "HWC" else shape[1:])
++        if any(size != sizes[0] for size in sizes):
++            raise ValueError("bridge requires common camera resolution")
++        return {"camera_names": [k[:-6] for k in self.camera_keys],
++                "camera_height": sizes[0][0], "camera_width": sizes[0][1]}
++
++
++def split_demos(total, n_train=35, n_eval=15):
++    if n_train < 1 or n_eval < 1 or n_train + n_eval > total:
++        raise ValueError(f"need disjoint positive train/eval counts, requested {n_train}+{n_eval} of {total}")
++    return list(range(n_train)), list(range(n_train, n_train + n_eval))
++
++
++class EpisodeWindows:
++    """Keep each raw CPU frame once; materialize only the requested batch windows."""
++    def __init__(self, episodes, state_norm, action_norm, n_obs=2, horizon=16):
++        if not episodes or any(len(ep["actions"]) == 0 for ep in episodes):
++            raise ValueError("nonempty episodes required")
++        camera_keys = tuple(episodes[0]["images"])
++        if not camera_keys or any(tuple(ep["images"]) != camera_keys for ep in episodes):
++            raise ValueError("all episodes must have the same ordered camera keys")
++        for ep in episodes:
++            length = len(ep["actions"])
++            if len(ep["state"]) != length or any(len(ep["images"][key]) != length for key in camera_keys):
++                raise ValueError("state, image, and action trajectories must be aligned")
++        self.episodes, self.state_norm, self.action_norm = episodes, state_norm, action_norm
++        self.n_obs, self.horizon = n_obs, horizon
++        self.ends = np.cumsum([len(ep["actions"]) for ep in episodes])
++
++    def __len__(self):
++        return int(self.ends[-1])
++
++    def batch(self, indices):
++        states, actions = [], []
++        images = {k: [] for k in self.episodes[0]["images"]}
++        for index in indices:
++            if index < 0 or index >= len(self):
++                raise IndexError(index)
++            e = int(np.searchsorted(self.ends, index, side="right"))
++            t = int(index - (self.ends[e - 1] if e else 0))
++            ep = self.episodes[e]
++            obs_idx = np.clip(np.arange(t - self.n_obs + 1, t + 1), 0, len(ep["actions"]) - 1)
++            act_idx = np.clip(np.arange(t, t + self.horizon), 0, len(ep["actions"]) - 1)
++            states.append(ep["state"][obs_idx])
++            actions.append(ep["actions"][act_idx])
++            for k in images:
++                images[k].append(ep["images"][k][obs_idx])
++        return (self.state_norm.norm(np.stack(states)), {k: np.stack(v) for k, v in images.items()},
++                self.action_norm.norm(np.stack(actions)))
+--- /dev/null	2026-08-17 03:48:18.012999965 +0900
++++ robocasa_vision_bridge.py	2026-09-10 09:47:32.260327343 +0900
+@@ -0,0 +1,102 @@
++#!/usr/bin/env python3
++"""Stage 1 RGB bridge. Run in RoboCasa's numpy-1.23 environment on localhost.
++
++Pickle is a trusted-local protocol, matching the original bridge. This service
++is separate so state-only clients and their cached datasets remain untouched.
++"""
++import argparse
++import signal
++import socket
++import numpy as np
++
++from robocasa_bridge import recv_msg, send_msg
++from robocasa_vision_data import VisionDataset
++from download_robocasa_vision_data import DEFAULT_OUTPUT_DIR
++
++
++class VisionTaskState:
++    def __init__(self, task, data_dir):
++        self.data = VisionDataset(task, data_dir)
++        self.env = None
++
++    def request(self, msg):
++        cmd = msg["cmd"]
++        if cmd == "metadata":
++            return {"metadata": self.data.metadata, "data_path": str(self.data.path)}
++        if cmd == "harvest":
++            return {"episodes": [self.data.episode(i) for i in msg["idx"]]}
++        if cmd == "reset_to":
++            if self.env is None:
++                import robocasa.utils.robomimic.robomimic_env_utils as EnvUtils
++                self.env = EnvUtils.create_env_for_data_processing(
++                    env_meta=self.data.env_meta, reward_shaping=False, **self.data.camera_config())
++            g = self.data.h5["data"][self.data.demos[msg["idx"]]]
++            self.env.reset()
++            od = self.env.reset_to({"states": np.asarray(g["states"][0]),
++                                    "model": g.attrs["model_file"], "ep_meta": g.attrs.get("ep_meta")})
++            return {"obs": self.data.live_observation(od)}
++        if cmd == "step":
++            if self.env is None:
++                raise ValueError("reset_to must precede step")
++            action = np.asarray(msg["action"], np.float32)
++            if action.shape != (self.data.act_dim,) or not np.isfinite(action).all():
++                raise ValueError("invalid native action")
++            od, reward, done, info = self.env.step(action)
++            return {"obs": self.data.live_observation(od),
++                    "success": bool(self.env.is_success()["task"]), "done": bool(done)}
++        raise ValueError(f"unknown vision command: {cmd}")
++
++    def close(self):
++        try:
++            if self.env is not None:
++                self.env.close()
++        finally:
++            self.data.close()
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--port", type=int, default=8766)
++    parser.add_argument("--data-dir", default=str(DEFAULT_OUTPUT_DIR))
++    args = parser.parse_args()
++    signal.signal(signal.SIGTERM, lambda *_: (_ for _ in ()).throw(KeyboardInterrupt()))
++    states = {}
++    try:
++        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
++            server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
++            server.bind(("127.0.0.1", args.port))
++            server.listen(1)
++            print(f"[vision bridge] listening on 127.0.0.1:{args.port}", flush=True)
++            while True:
++                conn, _ = server.accept()
++                with conn:
++                    while True:
++                        msg = recv_msg(conn)
++                        if msg is None:
++                            break
++                        try:
++                            if msg["cmd"] == "ping":
++                                response = {"ok": True, "mode": "vision-stage1"}
++                            elif msg["cmd"] == "close":
++                                state = states.pop(msg["task"], None)
++                                if state is not None:
++                                    state.close()
++                                response = {"ok": True}
++                            else:
++                                task = msg["task"]
++                                if task not in states:
++                                    states[task] = VisionTaskState(task, args.data_dir)
++                                response = states[task].request(msg)
++                        except Exception as exc:
++                            response = {"error": f"{type(exc).__name__}: {exc}"}
++                            print(f"[vision bridge] {response['error']}", flush=True)
++                        send_msg(conn, response)
++    except KeyboardInterrupt:
++        pass
++    finally:
++        for state in states.values():
++            state.close()
++
++
++if __name__ == "__main__":
++    main()
+--- /dev/null	2026-08-17 03:48:18.012999965 +0900
++++ stage1_vision.py	2026-09-10 10:33:52.193495018 +0900
+@@ -0,0 +1,297 @@
++#!/usr/bin/env python3
++"""Train/evaluate Stage 1 visual DP at native k=1; never launches Stage 2.
++
++Examples:
++  python stage1_vision.py TurnOffSinkFaucet --mode train
++  python stage1_vision.py TurnOffSinkFaucet --mode eval --port 8766
++Only load trusted checkpoints (torch/pickle). The bridge uses a separate env.
++"""
++import argparse
++from collections import deque
++import json
++import math
++from pathlib import Path
++import socket
++import time
++
++import numpy as np
++import torch
++
++from dp_min import EMA, MinMax, VisualDiffusionPolicy
++from robocasa_bridge import recv_msg, send_msg
++from robocasa_vision_data import VisionDataset, EpisodeWindows, PAPER, split_demos, sha256_file
++from download_robocasa_vision_data import DEFAULT_OUTPUT_DIR
++
++FORMAT_VERSION = 1
++ARCHITECTURE_FIELDS = {
++    "proprio_dim", "act_dim", "camera_keys", "image_layouts", "embedding_dim",
++    "backbone", "n_obs", "horizon", "n_action_steps", "T", "down_dims",
++}
++BUDGET_FIELDS = {"steps", "batch_size", "microbatch", "lr", "seed", "ddim_steps", "ema_decay"}
++
++
++def train_vision(policy, windows, steps=15_000, bs=256, microbatch=16, lr=1e-4,
++                 dev="cuda", seed=0, log_every=100):
++    if min(steps, bs, microbatch) < 1:
++        raise ValueError("steps and batch sizes must be positive")
++    policy.to(dev).train()
++    opt = torch.optim.AdamW(policy.parameters(), lr=lr, betas=(0.95, 0.999), eps=1e-8, weight_decay=1e-6)
++    schedule = torch.optim.lr_scheduler.LambdaLR(
++        opt, lambda s: min(1., s / 500) * .5 * (1 + math.cos(math.pi * min(s, steps) / steps)))
++    ema = EMA(policy)
++    rng = np.random.default_rng(seed)
++    started = time.monotonic()
++    for step in range(1, steps + 1):
++        indices = rng.integers(len(windows), size=bs)
++        opt.zero_grad(set_to_none=True)
++        loss_sum = 0.
++        for start in range(0, bs, microbatch):
++            batch_indices = indices[start:start + microbatch]
++            state, images, actions = windows.batch(batch_indices)
++            loss = policy.loss(torch.as_tensor(state, device=dev), images,
++                               torch.as_tensor(actions, device=dev))
++            if not torch.isfinite(loss):
++                raise FloatingPointError("nonfinite visual DP loss")
++            fraction = len(batch_indices) / bs
++            (loss * fraction).backward()
++            loss_sum += loss.item() * fraction
++        opt.step()
++        schedule.step()
++        ema.update(policy)
++        # Existing state-only EMA has no running stats. ResNet BatchNorm does:
++        # copy its calibrated buffers, including integer num_batches_tracked.
++        with torch.no_grad():
++            for target, source in zip(ema.m.buffers(), policy.buffers()):
++                target.copy_(source)
++        if step == 1 or step % log_every == 0 or step == steps:
++            print(f"[train vision] step {step}/{steps} loss={loss_sum:.5f} "
++                  f"elapsed_s={time.monotonic() - started:.1f}", flush=True)
++    return ema.m
++
++
++def validate_checkpoint(checkpoint, metadata):
++    if checkpoint.get("format_version") != FORMAT_VERSION:
++        raise ValueError("incompatible checkpoint format")
++    if checkpoint.get("data_metadata") != metadata:
++        raise ValueError("checkpoint/data metadata mismatch (identity, modalities, or shapes)")
++    arch = checkpoint.get("architecture")
++    if not isinstance(arch, dict) or not ARCHITECTURE_FIELDS.issubset(arch):
++        raise ValueError("checkpoint is missing policy architecture values")
++    budget = checkpoint.get("budget")
++    if not isinstance(budget, dict) or not BUDGET_FIELDS.issubset(budget):
++        raise ValueError("checkpoint is missing training budget or seed")
++    if not isinstance(checkpoint.get("ema_policy"), dict) or not checkpoint["ema_policy"]:
++        raise ValueError("checkpoint is missing EMA policy weights")
++    if (arch["proprio_dim"] != sum(metadata["proprio_widths"].values()) or
++            arch["act_dim"] != metadata["act_dim"] or
++            list(arch["camera_keys"]) != metadata["camera_keys"] or
++            arch["image_layouts"] != metadata["image_layouts"]):
++        raise ValueError("architecture disagrees with data modalities")
++    if (arch["backbone"] not in ("resnet18", "tiny") or
++            type(arch["embedding_dim"]) is not int or arch["embedding_dim"] < 1 or
++            type(arch["T"]) is not int or arch["T"] < 1):
++        raise ValueError("invalid visual architecture")
++    if (not arch["down_dims"] or any(type(width) is not int or width < 1 for width in arch["down_dims"])):
++        raise ValueError("invalid U-Net dimensions")
++    if (arch["n_obs"], arch["horizon"], arch["n_action_steps"]) != (2, 16, 8):
++        raise ValueError("Stage 1 requires n_obs=2, horizon=16, n_action_steps=8")
++    if (any(type(budget[key]) is not int or budget[key] < 1
++            for key in ("steps", "batch_size", "microbatch")) or
++            type(budget["seed"]) is not int or
++            not isinstance(budget["lr"], (int, float)) or budget["lr"] <= 0 or
++            not isinstance(budget["ema_decay"], (int, float)) or
++            not 0 <= budget["ema_decay"] < 1):
++        raise ValueError("invalid training budget or seed")
++    if budget["ddim_steps"] != 10:
++        raise ValueError("Stage 1 requires DDIM-10")
++    tr, ev = checkpoint["train_demo_indices"], checkpoint["eval_demo_indices"]
++    if (not tr or not ev or set(tr) & set(ev) or len(set(tr + ev)) != len(tr + ev) or
++            any(type(i) is not int or i < 0 or i >= len(metadata["demo_names"]) for i in tr + ev)):
++        raise ValueError("checkpoint has invalid or overlapping demo split")
++    for key, width in (("state_normalizer", arch["proprio_dim"]), ("action_normalizer", arch["act_dim"])):
++        norm = checkpoint[key]
++        for field in ("lo", "hi", "rng"):
++            value = np.asarray(norm[field])
++            if value.shape != (width,) or not np.isfinite(value).all():
++                raise ValueError(f"invalid {key}/{field}")
++        span = np.asarray(norm["hi"]) - np.asarray(norm["lo"])
++        if np.any(span < 0) or not np.allclose(norm["rng"], np.where(span < 1e-8, 1., span)):
++            raise ValueError(f"invalid {key} range")
++
++
++def save_checkpoint(path, policy, architecture, data, state_norm, action_norm, train_indices, eval_indices, budget):
++    checkpoint = {
++        "format_version": FORMAT_VERSION, "ema_policy": policy.state_dict(),
++        "architecture": architecture, "data_metadata": data.metadata, "data_path": str(data.path),
++        "state_normalizer": state_norm.state(), "action_normalizer": action_norm.state(),
++        "train_demo_indices": train_indices, "eval_demo_indices": eval_indices, "budget": budget,
++    }
++    validate_checkpoint(checkpoint, data.metadata)
++    path = Path(path)
++    path.parent.mkdir(parents=True, exist_ok=True)
++    temporary = path.with_suffix(path.suffix + ".partial")
++    torch.save(checkpoint, temporary)
++    temporary.replace(path)
++
++
++def load_checkpoint(path, metadata, dev):
++    checkpoint = torch.load(path, map_location="cpu", weights_only=False)
++    validate_checkpoint(checkpoint, metadata)
++    policy = VisualDiffusionPolicy(**checkpoint["architecture"])
++    policy.load_state_dict(checkpoint["ema_policy"], strict=True)
++    return (policy.to(dev).eval(), MinMax.from_state(checkpoint["state_normalizer"]),
++            MinMax.from_state(checkpoint["action_normalizer"]), checkpoint)
++
++
++class VisionClient:
++    def __init__(self, task, port):
++        self.task = task
++        self.sock = socket.create_connection(("127.0.0.1", port), timeout=600)
++
++    def request(self, cmd, **kwargs):
++        send_msg(self.sock, {"cmd": cmd, "task": self.task, **kwargs})
++        reply = recv_msg(self.sock)
++        if reply is None:
++            raise ConnectionError("vision bridge disconnected")
++        if "error" in reply:
++            raise RuntimeError(reply["error"])
++        return reply
++
++    def close(self):
++        try:
++            try:
++                self.request("close")
++            except (ConnectionError, OSError, RuntimeError):
++                # Preserve an in-flight evaluation error if the bridge also
++                # disappeared before it could acknowledge client cleanup.
++                pass
++        finally:
++            self.sock.close()
++
++
++def native_rollout(client, policy, state_norm, action_norm, demo_index, max_steps, dev):
++    observation = client.request("reset_to", idx=demo_index)["obs"]
++    history = deque([observation] * policy.n_obs, maxlen=policy.n_obs)
++    executed, success = 0, False
++    while executed < max_steps:
++        states = np.stack([o["state"] for o in history])[None]
++        images = {k: np.stack([o["images"][k] for o in history])[None] for k in policy.camera_keys}
++        chunk = policy.sample(torch.as_tensor(state_norm.norm(states), device=dev), images, n_steps=10)
++        actions = action_norm.denorm(chunk[0].cpu().numpy())
++        # Native control: first 8 chronological actions, one env step per action.
++        for action in actions[:policy.n_action_steps]:
++            reply = client.request("step", action=action)
++            executed += 1
++            history.append(reply["obs"])
++            success = success or reply["success"]
++            if success or reply["done"] or executed >= max_steps:
++                return {"demo_index": demo_index, "success": bool(success), "steps": executed}
++    return {"demo_index": demo_index, "success": bool(success), "steps": executed}
++
++
++def comparison_result(task, episodes, checkpoint_path, data, checkpoint, max_steps, eval_seed):
++    if not episodes:
++        raise ValueError("at least one evaluation episode required")
++    label, reference = PAPER[task]
++    successes = sum(bool(e["success"]) for e in episodes)
++    rate = 100. * successes / len(episodes)
++    return {
++        "stage": 1, "task": task, "paper_task": label, "policy": "visual_diffusion_policy",
++        "task_mapping": {"dataset_task": task, "paper_task": label},
++        "k": 1, "action_execution": "first 8 predicted actions directly; no decimation/resampling",
++        "ddim_steps": 10, "episode_count": len(episodes), "success_count": successes,
++        "success_percent": rate, "paper_diff_1x_base_percent": reference,
++        "gap_percentage_points": rate - reference, "episodes": episodes,
++        "max_steps": max_steps, "eval_seed": eval_seed,
++        "checkpoint_path": str(Path(checkpoint_path).resolve()), "checkpoint_sha256": sha256_file(checkpoint_path),
++        "checkpoint_format_version": checkpoint["format_version"],
++        "policy_architecture": checkpoint["architecture"],
++        "data_path": str(data.path), "data_metadata": data.metadata,
++        "train_demo_indices": checkpoint["train_demo_indices"],
++        "eval_demo_indices": checkpoint["eval_demo_indices"], "training_budget": checkpoint["budget"],
++        "interpretation": "If results remain far below the paper, demo count is the next likely cause. "
++                          "Stage 1 uses 35 training demos by default. Stage 2 is not started.",
++        "scientific_limit": "One task is not a four-task validation; fewer than 15 episodes is a smoke evaluation.",
++    }
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("task", choices=PAPER)
++    parser.add_argument("--mode", choices=("train", "eval", "train-eval"), default="train-eval")
++    parser.add_argument("--data-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
++    parser.add_argument("--output-dir", type=Path, default=Path("stage1_vision_results"))
++    parser.add_argument("--checkpoint", type=Path)
++    parser.add_argument("--steps", type=int, default=15_000)
++    parser.add_argument("--batch-size", type=int, default=256)
++    parser.add_argument("--microbatch", type=int, default=16, help="gradient accumulation; effective batch stays 256")
++    parser.add_argument("--n-train", type=int, default=35)
++    parser.add_argument("--n-eval", type=int, default=15, help="training split; eval-only uses checkpoint split")
++    parser.add_argument("--seed", type=int, default=0)
++    parser.add_argument("--eval-seed", type=int, default=0)
++    parser.add_argument("--max-steps", type=int, help="default: existing native limits, coffee=300, others=500")
++    parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
++    parser.add_argument("--port", type=int, default=8766)
++    args = parser.parse_args()
++    if args.max_steps is not None and args.max_steps < 1:
++        parser.error("--max-steps must be positive")
++    args.output_dir.mkdir(parents=True, exist_ok=True)
++    path = args.checkpoint or args.output_dir / f"{args.task}.pt"
++    data = VisionDataset(args.task, args.data_dir)
++    try:
++        if args.mode != "eval":
++            torch.manual_seed(args.seed)
++            np.random.seed(args.seed)
++            train_indices, eval_indices = split_demos(len(data.demos), args.n_train, args.n_eval)
++            print(f"[data] {args.task} train={train_indices} eval={eval_indices} cameras={data.camera_keys}", flush=True)
++            episodes = [data.episode(i) for i in train_indices]
++            state_norm = MinMax(np.concatenate([e["state"] for e in episodes]))
++            action_norm = MinMax(np.concatenate([e["actions"] for e in episodes]))
++            architecture = {"proprio_dim": sum(data.widths.values()), "act_dim": data.act_dim,
++                            "camera_keys": list(data.camera_keys), "image_layouts": data.layouts,
++                            "embedding_dim": 64, "backbone": "resnet18", "n_obs": 2, "horizon": 16,
++                            "n_action_steps": 8, "T": 100, "down_dims": (256, 512, 1024)}
++            windows = EpisodeWindows(episodes, state_norm, action_norm)
++            policy = VisualDiffusionPolicy(**architecture)
++            ema = train_vision(policy, windows, args.steps, args.batch_size, args.microbatch,
++                               dev=args.device, seed=args.seed)
++            budget = {"steps": args.steps, "batch_size": args.batch_size, "microbatch": args.microbatch,
++                      "lr": 1e-4, "seed": args.seed, "ddim_steps": 10, "ema_decay": .9999}
++            save_checkpoint(path, ema, architecture, data, state_norm, action_norm, train_indices, eval_indices, budget)
++            print(f"[checkpoint] saved EMA policy: {path}", flush=True)
++            del policy, ema, windows, episodes
++            if args.device.startswith("cuda"):
++                torch.cuda.empty_cache()
++        if args.mode != "train":
++            policy, state_norm, action_norm, checkpoint = load_checkpoint(path, data.metadata, args.device)
++            torch.manual_seed(args.eval_seed)
++            np.random.seed(args.eval_seed)
++            client = VisionClient(args.task, args.port)
++            episodes = []
++            max_steps = args.max_steps or (300 if args.task == "CoffeePressButton" else 500)
++            try:
++                if client.request("metadata")["metadata"] != data.metadata:
++                    raise ValueError("bridge/client dataset metadata mismatch")
++                for i, index in enumerate(checkpoint["eval_demo_indices"]):
++                    result = native_rollout(client, policy, state_norm, action_norm, index, max_steps, args.device)
++                    episodes.append(result)
++                    print(f"[eval] {args.task} {i + 1}/{len(checkpoint['eval_demo_indices'])} "
++                          f"success={result['success']} steps={result['steps']}", flush=True)
++                    report = comparison_result(args.task, episodes, path, data, checkpoint, max_steps, args.eval_seed)
++                    report["complete"] = len(episodes) == len(checkpoint["eval_demo_indices"])
++                    result_path = args.output_dir / f"{args.task}_native.json"
++                    temporary = result_path.with_suffix(".json.partial")
++                    temporary.write_text(json.dumps(report, indent=2) + "\n")
++                    temporary.replace(result_path)
++            finally:
++                client.close()
++            print(f"[paper] {report['paper_task']}: {report['success_count']}/{report['episode_count']} "
++                  f"({report['success_percent']:.1f}%) vs {report['paper_diff_1x_base_percent']:.0f}%; "
++                  f"gap {report['gap_percentage_points']:+.1f} percentage points. "
++                  f"{report['interpretation']}", flush=True)
++    finally:
++        data.close()
++
++
++if __name__ == "__main__":
++    main()
+--- /dev/null	2026-08-17 03:48:18.012999965 +0900
++++ run_stage1_vision_campaign.sh	2026-09-10 10:38:34.657261992 +0900
+@@ -0,0 +1,150 @@
++#!/usr/bin/env bash
++# Sequential Stage 1 only: own one vision bridge, then train/evaluate all four Table 2a tasks.
++# Existing checkpoints resume at evaluation; completed structured results are skipped.
++set -Eeuo pipefail
++
++ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
++POLICY_PY="${POLICY_PY:-/home/user/anaconda3/envs/vla_smolvla_libero/bin/python}"
++BRIDGE_PY="${BRIDGE_PY:-/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/bin/python}"
++PORT="${PORT:-8766}"
++DATA_DIR="${DATA_DIR:-$ROOT/robocasa_data_vision}"
++OUTPUT_DIR="${OUTPUT_DIR:-$ROOT/stage1_vision_results}"
++LOG_DIR="${LOG_DIR:-$ROOT/stage1_vision_logs}"
++BRIDGE_NUMBA_CACHE_DIR="${BRIDGE_NUMBA_CACHE_DIR:-$LOG_DIR/numba_cache}"
++STEPS="${STEPS:-15000}"
++BATCH_SIZE="${BATCH_SIZE:-256}"
++MICROBATCH="${MICROBATCH:-16}"
++N_TRAIN="${N_TRAIN:-35}"
++N_EVAL="${N_EVAL:-15}"
++SEED="${SEED:-0}"
++EVAL_SEED="${EVAL_SEED:-0}"
++FORCE="${FORCE:-0}"
++
++usage() {
++    echo "Usage: [POLICY_PY=...] [BRIDGE_PY=...] [PORT=8766] [FORCE=0|1] $0"
++    echo "Runs only the four Stage 1 visual-policy tasks, sequentially. Other defaults may also be overridden by environment variable."
++}
++
++if (( $# > 0 )); then
++    if (( $# == 1 )) && [[ "$1" == "-h" || "$1" == "--help" ]]; then
++        usage
++        exit 0
++    fi
++    usage >&2
++    exit 2
++fi
++
++BRIDGE_PID=""
++CURRENT_PID=""
++CURRENT_LOG=""
++
++cleanup() {
++    status=$?
++    trap - EXIT INT TERM
++    if [[ -n "$CURRENT_PID" ]] && kill -0 "$CURRENT_PID" 2>/dev/null; then
++        kill -TERM "$CURRENT_PID" 2>/dev/null || true
++        wait "$CURRENT_PID" 2>/dev/null || true
++    fi
++    if [[ -n "$BRIDGE_PID" ]] && kill -0 "$BRIDGE_PID" 2>/dev/null; then
++        kill -TERM "$BRIDGE_PID" 2>/dev/null || true
++        wait "$BRIDGE_PID" 2>/dev/null || true
++        echo "[bridge] stopped pid=$BRIDGE_PID"
++    fi
++    if (( status != 0 )) && [[ -n "$CURRENT_LOG" ]]; then
++        echo "[campaign] stopped with status $status; task log: $CURRENT_LOG" >&2
++    fi
++    exit "$status"
++}
++trap cleanup EXIT INT TERM
++
++for executable in "$POLICY_PY" "$BRIDGE_PY"; do
++    if [[ ! -x "$executable" ]]; then
++        echo "[campaign] Python executable is unavailable: $executable" >&2
++        exit 2
++    fi
++done
++mkdir -p "$OUTPUT_DIR" "$LOG_DIR" "$BRIDGE_NUMBA_CACHE_DIR"
++
++port_is_open() {
++    "$POLICY_PY" - "$PORT" <<'PY' >/dev/null 2>&1
++import socket
++import sys
++
++with socket.create_connection(("127.0.0.1", int(sys.argv[1])), timeout=0.25):
++    pass
++PY
++}
++
++if port_is_open; then
++    echo "[campaign] refusing to replace an existing listener on 127.0.0.1:$PORT" >&2
++    exit 2
++fi
++
++BRIDGE_LOG="$LOG_DIR/bridge.log"
++echo "[bridge] starting on 127.0.0.1:$PORT; log=$BRIDGE_LOG"
++NUMBA_CACHE_DIR="$BRIDGE_NUMBA_CACHE_DIR" \
++    "$BRIDGE_PY" "$ROOT/robocasa_vision_bridge.py" --port "$PORT" --data-dir "$DATA_DIR" \
++    >>"$BRIDGE_LOG" 2>&1 &
++BRIDGE_PID=$!
++for _ in $(seq 1 60); do
++    if port_is_open; then
++        break
++    fi
++    if ! kill -0 "$BRIDGE_PID" 2>/dev/null; then
++        echo "[bridge] exited during startup; see $BRIDGE_LOG" >&2
++        exit 1
++    fi
++    sleep 1
++done
++if ! port_is_open; then
++    echo "[bridge] did not become ready within 60 seconds; see $BRIDGE_LOG" >&2
++    exit 1
++fi
++
++result_is_complete() {
++    "$POLICY_PY" - "$1" "$2" "$3" <<'PY' >/dev/null 2>&1
++import json
++import sys
++from pathlib import Path
++
++with open(sys.argv[1], encoding="utf-8") as stream:
++    result = json.load(stream)
++matches = (
++    result.get("stage") == 1
++    and result.get("complete") is True
++    and result.get("task") == sys.argv[2]
++    and result.get("checkpoint_path") == str(Path(sys.argv[3]).resolve())
++    and Path(sys.argv[3]).is_file()
++)
++raise SystemExit(0 if matches else 1)
++PY
++}
++
++TASKS=(TurnOffSinkFaucet CoffeePressButton TurnOffMicrowave CloseSingleDoor)
++for task in "${TASKS[@]}"; do
++    checkpoint="$OUTPUT_DIR/$task.pt"
++    result="$OUTPUT_DIR/${task}_native.json"
++    CURRENT_LOG="$LOG_DIR/$task.log"
++    if [[ "$FORCE" != 1 ]] && [[ -f "$result" ]] && result_is_complete "$result" "$task" "$checkpoint"; then
++        echo "[skip] $task already has a complete Stage 1 result: $result"
++        continue
++    fi
++    mode=train-eval
++    if [[ -f "$checkpoint" ]]; then
++        mode=eval
++    fi
++    echo "[start] $task mode=$mode $(date --iso-8601=seconds); log=$CURRENT_LOG"
++    "$POLICY_PY" "$ROOT/stage1_vision.py" "$task" \
++        --mode "$mode" --data-dir "$DATA_DIR" --output-dir "$OUTPUT_DIR" \
++        --checkpoint "$checkpoint" --port "$PORT" --steps "$STEPS" \
++        --batch-size "$BATCH_SIZE" --microbatch "$MICROBATCH" \
++        --n-train "$N_TRAIN" --n-eval "$N_EVAL" --seed "$SEED" --eval-seed "$EVAL_SEED" \
++        >>"$CURRENT_LOG" 2>&1 &
++    CURRENT_PID=$!
++    wait "$CURRENT_PID"
++    CURRENT_PID=""
++    echo "[done] $task $(date --iso-8601=seconds); result=$result"
++done
++
++CURRENT_LOG=""
++echo "[campaign] all four Stage 1 tasks completed; Stage 2 was not started"
+--- /dev/null	2026-08-17 03:48:18.012999965 +0900
++++ test_stage1_vision.py	2026-09-10 10:32:33.724112093 +0900
+@@ -0,0 +1,310 @@
++import copy
++import json
++from pathlib import Path
++from types import SimpleNamespace
++
++import h5py
++import numpy as np
++import pytest
++import torch
++from torch import nn
++
++from dp_min import DiffusionPolicy, MinMax, VisualDiffusionPolicy, prepare_rgb
++from download_robocasa_vision_data import dataset_path
++from robocasa_vision_data import EpisodeWindows, PAPER, PROPRIO_KEYS, VisionDataset, split_demos
++from stage1_vision import comparison_result, load_checkpoint, native_rollout, save_checkpoint, validate_checkpoint
++
++
++def tiny_architecture(camera_keys=("left_image", "wrist_image")):
++    return {
++        "proprio_dim": 9,
++        "act_dim": 12,
++        "camera_keys": list(camera_keys),
++        "image_layouts": {key: "HWC" for key in camera_keys},
++        "embedding_dim": 4,
++        "backbone": "tiny",
++        "n_obs": 2,
++        "horizon": 16,
++        "n_action_steps": 8,
++        "T": 8,
++        "down_dims": (8, 16),
++    }
++
++
++def checkpoint_metadata(camera_keys=("left_image", "wrist_image")):
++    return {
++        "task": "TurnOffSinkFaucet",
++        "data_sha256": "synthetic-digest",
++        "demo_names": [f"demo_{index}" for index in range(4)],
++        "proprio_keys": list(PROPRIO_KEYS),
++        "proprio_widths": {"robot0_eef_pos": 3, "robot0_eef_quat": 4, "robot0_gripper_qpos": 2},
++        "camera_keys": list(camera_keys),
++        "image_shapes": {key: [8, 8, 3] for key in camera_keys},
++        "image_layouts": {key: "HWC" for key in camera_keys},
++        "image_orientation": "robocasa_data_processing_wrapper_no_extra_flip",
++        "act_dim": 12,
++    }
++
++
++def valid_checkpoint():
++    metadata = checkpoint_metadata()
++    return {
++        "format_version": 1,
++        "ema_policy": {"sentinel": torch.tensor(1.0)},
++        "architecture": tiny_architecture(),
++        "data_metadata": metadata,
++        "data_path": "/tmp/synthetic.hdf5",
++        "state_normalizer": {
++            "lo": np.zeros(9, np.float32), "hi": np.ones(9, np.float32), "rng": np.ones(9, np.float32)
++        },
++        "action_normalizer": {
++            "lo": np.zeros(12, np.float32), "hi": np.ones(12, np.float32), "rng": np.ones(12, np.float32)
++        },
++        "train_demo_indices": [0, 1],
++        "eval_demo_indices": [2, 3],
++        "budget": {
++            "steps": 15_000, "batch_size": 256, "microbatch": 16, "lr": 1e-4,
++            "seed": 0, "ddim_steps": 10, "ema_decay": 0.9999,
++        },
++    }
++
++
++def test_visual_policy_tensor_contracts_and_state_policy_unchanged():
++    policy = VisualDiffusionPolicy(**tiny_architecture())
++    state = torch.zeros(2, 2, 9)
++    images = {
++        "left_image": np.zeros((2, 2, 8, 8, 3), dtype=np.uint8),
++        "wrist_image": torch.full((2, 2, 8, 8, 3), 255.0),
++    }
++    action = torch.zeros(2, 16, 12)
++
++    assert policy.encode(state, images).shape == (2, 2, 17)
++    assert policy.loss(state, images, action).ndim == 0
++    assert policy.sample(state, images, n_steps=2).shape == action.shape
++
++    state_only = DiffusionPolicy(obs_dim=9, act_dim=12, T=8, down_dims=(8, 16))
++    assert state_only.loss(state, action).ndim == 0
++
++
++def test_production_backbone_is_untrained_resnet18_with_learned_projection():
++    policy = VisualDiffusionPolicy(
++        proprio_dim=9, act_dim=12, camera_keys=["camera_image"], embedding_dim=7,
++        backbone="resnet18", n_obs=2, horizon=16, n_action_steps=8, T=8, down_dims=(8, 16),
++    )
++
++    assert policy.encoder.__class__.__name__ == "ResNet"
++    assert isinstance(policy.encoder.fc, nn.Identity)
++    assert isinstance(policy.projection, nn.Linear)
++    assert policy.projection.out_features == 7
++    encoded = policy.encode(
++        torch.zeros(1, 2, 9),
++        {"camera_image": np.zeros((1, 2, 32, 32, 3), np.uint8)},
++    )
++    assert encoded.shape == (1, 2, 16)
++
++
++def test_rgb_preprocessing_preserves_orientation_and_handles_hwc_chw():
++    hwc = np.zeros((1, 2, 3, 4, 3), dtype=np.uint8)
++    hwc[..., 0, :, 0] = 255
++    converted = prepare_rgb(hwc, "HWC")
++
++    assert converted.shape == (1, 2, 3, 3, 4)
++    assert converted.dtype == torch.float32
++    assert torch.all(converted[..., 0, 0, :] == 1)
++    assert torch.all(converted[..., 0, -1, :] == 0)
++    chw = torch.from_numpy(hwc).movedim(-1, -3).float()
++    assert torch.equal(prepare_rgb(chw, "CHW"), converted)
++    with pytest.raises(ValueError, match=r"\[0,255\]"):
++        prepare_rgb(np.full((2, 2, 3), 256.0, np.float32), "HWC")
++
++
++class IdentityNormalizer:
++    def norm(self, value):
++        return value
++
++    def denorm(self, value):
++        return value
++
++
++def test_multimodal_windows_keep_state_images_and_actions_aligned():
++    values = np.array([10, 20, 30], np.float32)
++    episode = {
++        "state": values[:, None],
++        "images": {
++            "left_image": values.astype(np.uint8)[:, None, None, None],
++            "wrist_image": (values + 1).astype(np.uint8)[:, None, None, None],
++        },
++        "actions": (values * 10)[:, None],
++    }
++    windows = EpisodeWindows([episode], IdentityNormalizer(), IdentityNormalizer(), n_obs=2, horizon=4)
++    state, images, actions = windows.batch([0, 2])
++
++    np.testing.assert_array_equal(state[..., 0], [[10, 10], [20, 30]])
++    np.testing.assert_array_equal(images["left_image"][..., 0, 0, 0], [[10, 10], [20, 30]])
++    np.testing.assert_array_equal(images["wrist_image"][..., 0, 0, 0], [[11, 11], [21, 31]])
++    np.testing.assert_array_equal(actions[..., 0], [[100, 200, 300, 300], [300, 300, 300, 300]])
++
++
++def test_multimodal_windows_reject_misaligned_trajectories():
++    episode = {
++        "state": np.zeros((2, 1)),
++        "images": {"camera_image": np.zeros((1, 2, 2, 3), np.uint8)},
++        "actions": np.zeros((2, 1)),
++    }
++    with pytest.raises(ValueError, match="aligned"):
++        EpisodeWindows([episode], IdentityNormalizer(), IdentityNormalizer())
++
++
++def make_vision_dataset(path: Path):
++    with h5py.File(path, "w") as h5:
++        data = h5.create_group("data")
++        data.attrs["env_args"] = json.dumps({
++            "env_name": "TurnOffSinkFaucet",
++            "env_kwargs": {"use_camera_obs": True, "camera_names": ["derived_camera"]},
++        })
++        for demo_index in range(2):
++            demo = data.create_group(f"demo_{demo_index}")
++            demo.attrs["model_file"] = "<mujoco/>"
++            demo.create_dataset("states", data=np.zeros((3, 5), np.float32))
++            demo.create_dataset("actions", data=np.zeros((3, 12), np.float32))
++            obs = demo.create_group("obs")
++            obs.create_dataset("robot0_eef_pos", data=np.full((3, 3), 1 + demo_index, np.float32))
++            obs.create_dataset("robot0_eef_quat", data=np.full((3, 4), 2 + demo_index, np.float32))
++            obs.create_dataset("robot0_gripper_qpos", data=np.full((3, 2), 3 + demo_index, np.float32))
++            obs.create_dataset("object", data=np.full((3, 99), 1000, np.float32))
++            image = np.zeros((3, 4, 5, 3), np.uint8)
++            image[:, 0, :, 0] = 255
++            obs.create_dataset("derived_camera_image", data=image)
++
++
++def test_dataset_uses_explicit_nonprivileged_state_and_derived_camera(tmp_path: Path):
++    path = dataset_path(tmp_path, "TurnOffSinkFaucet")
++    make_vision_dataset(path)
++    data = VisionDataset("TurnOffSinkFaucet", tmp_path)
++    try:
++        episode = data.episode(0)
++        assert PROPRIO_KEYS == ("robot0_eef_pos", "robot0_eef_quat", "robot0_gripper_qpos")
++        assert "object" not in data.metadata["proprio_keys"]
++        assert episode["state"].shape == (3, 9)
++        assert np.max(episode["state"]) == 3
++        assert data.camera_config() == {
++            "camera_names": ["derived_camera"], "camera_height": 4, "camera_width": 5,
++        }
++
++        live_image = np.asarray(data.h5["data/demo_0/obs/derived_camera_image"][0])
++        live = data.live_observation({
++            "robot0_eef_pos": np.ones(3),
++            "robot0_eef_quat": np.ones(4) * 2,
++            "robot0_gripper_qpos": np.ones(2) * 3,
++            "object": np.ones(200) * 1000,
++            "derived_camera_image": live_image,
++        })
++        np.testing.assert_array_equal(live["images"]["derived_camera_image"], live_image)
++        assert live["images"]["derived_camera_image"][0, 0, 0] == 255
++        assert live["images"]["derived_camera_image"][-1, 0, 0] == 0
++        assert live["state"].shape == (9,)
++    finally:
++        data.close()
++
++
++def test_default_split_is_disjoint_35_train_15_eval():
++    train_indices, eval_indices = split_demos(54)
++    assert train_indices == list(range(35))
++    assert eval_indices == list(range(35, 50))
++    assert not set(train_indices) & set(eval_indices)
++
++
++@pytest.mark.parametrize(
++    "mutation, message",
++    [
++        (lambda checkpoint: checkpoint["data_metadata"].update(data_sha256="other"), "metadata mismatch"),
++        (lambda checkpoint: checkpoint["architecture"].update(camera_keys=["other_image"]), "modalities"),
++        (lambda checkpoint: checkpoint.update(eval_demo_indices=[1, 2]), "overlapping"),
++        (lambda checkpoint: checkpoint["budget"].update(ddim_steps=9), "DDIM-10"),
++        (lambda checkpoint: checkpoint["budget"].pop("seed"), "budget or seed"),
++    ],
++)
++def test_checkpoint_metadata_validation_rejects_incompatibility(mutation, message):
++    checkpoint = valid_checkpoint()
++    expected_metadata = copy.deepcopy(checkpoint["data_metadata"])
++    mutation(checkpoint)
++    with pytest.raises(ValueError, match=message):
++        validate_checkpoint(checkpoint, expected_metadata)
++
++
++def test_checkpoint_roundtrip_contains_ema_architecture_normalizers_split_and_budget(tmp_path: Path):
++    metadata = checkpoint_metadata()
++    data = SimpleNamespace(metadata=metadata, path=tmp_path / "synthetic.hdf5")
++    policy = VisualDiffusionPolicy(**tiny_architecture())
++    state_norm = MinMax(np.stack([np.zeros(9), np.ones(9)]))
++    action_norm = MinMax(np.stack([np.zeros(12), np.ones(12)]))
++    path = tmp_path / "policy.pt"
++    budget = valid_checkpoint()["budget"]
++
++    save_checkpoint(path, policy, tiny_architecture(), data, state_norm, action_norm, [0, 1], [2, 3], budget)
++    loaded, loaded_state_norm, loaded_action_norm, checkpoint = load_checkpoint(path, metadata, "cpu")
++
++    assert isinstance(loaded, VisualDiffusionPolicy)
++    assert checkpoint["architecture"] == tiny_architecture()
++    assert checkpoint["budget"]["seed"] == 0
++    assert checkpoint["train_demo_indices"] == [0, 1]
++    assert checkpoint["eval_demo_indices"] == [2, 3]
++    np.testing.assert_array_equal(loaded_state_norm.lo, state_norm.lo)
++    np.testing.assert_array_equal(loaded_action_norm.hi, action_norm.hi)
++
++
++class FakePolicy:
++    n_obs = 2
++    n_action_steps = 8
++    camera_keys = ("camera_image",)
++
++    def sample(self, state, images, n_steps):
++        assert state.shape == (1, 2, 1)
++        assert images["camera_image"].shape == (1, 2, 2, 2, 3)
++        assert n_steps == 10
++        return torch.arange(32, dtype=torch.float32).reshape(1, 16, 2)
++
++
++class FakeClient:
++    def __init__(self):
++        self.actions = []
++        self.observation = {"state": np.zeros(1, np.float32),
++                            "images": {"camera_image": np.zeros((2, 2, 3), np.uint8)}}
++
++    def request(self, command, **kwargs):
++        if command == "reset_to":
++            return {"obs": self.observation}
++        assert command == "step"
++        self.actions.append(np.asarray(kwargs["action"]))
++        return {"obs": self.observation, "success": len(self.actions) == 8, "done": False}
++
++
++def test_native_rollout_executes_first_eight_actions_directly_at_k1():
++    client = FakeClient()
++    result = native_rollout(client, FakePolicy(), IdentityNormalizer(), IdentityNormalizer(), 3, 100, "cpu")
++
++    np.testing.assert_array_equal(np.stack(client.actions), np.arange(16).reshape(8, 2))
++    assert result == {"demo_index": 3, "success": True, "steps": 8}
++
++
++@pytest.mark.parametrize("task", list(PAPER))
++def test_paper_comparison_result_has_counts_mapping_gaps_and_identity(tmp_path: Path, task: str):
++    checkpoint_path = tmp_path / "policy.pt"
++    checkpoint_path.write_bytes(b"checkpoint identity")
++    checkpoint = valid_checkpoint()
++    data = SimpleNamespace(path=tmp_path / "dataset.hdf5", metadata=checkpoint["data_metadata"])
++    episodes = [{"success": True}, {"success": False}, {"success": True}, {"success": False}]
++
++    result = comparison_result(task, episodes, checkpoint_path, data, checkpoint, 500, 7)
++
++    paper_task, reference = PAPER[task]
++    assert result["task_mapping"] == {"dataset_task": task, "paper_task": paper_task}
++    assert result["success_count"] == 2
++    assert result["episode_count"] == 4
++    assert result["success_percent"] == 50.0
++    assert result["paper_diff_1x_base_percent"] == reference
++    assert result["gap_percentage_points"] == 50.0 - reference
++    assert result["checkpoint_sha256"]
++    assert result["data_metadata"] == data.metadata
++    assert "demo count is the next likely cause" in result["interpretation"]
++    assert result["k"] == 1 and "no decimation/resampling" in result["action_execution"]

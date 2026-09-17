@@ -1,0 +1,61 @@
+nohup: ignoring input
+=== Training Push-T Diffusion Policy for 100,000 steps ===
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_PushT-v1_200.npz (200 demos)
+[data] 13352 windows, obs_dim=31, act_dim=6
+[train] starting 100,000 steps on cuda...
+[train] step 1/100000 loss=1.11816
+[train] step 5000/100000 loss=0.02591
+[train] step 10000/100000 loss=0.02161
+[train] step 15000/100000 loss=0.02217
+[train] step 20000/100000 loss=0.01372
+[train] step 25000/100000 loss=0.00759
+[train] step 30000/100000 loss=0.00572
+[train] step 35000/100000 loss=0.00602
+[train] step 40000/100000 loss=0.00504
+[train] step 45000/100000 loss=0.00631
+[train] step 50000/100000 loss=0.00398
+[train] step 55000/100000 loss=0.00513
+[train] step 60000/100000 loss=0.00177
+[train] step 65000/100000 loss=0.00156
+[train] step 70000/100000 loss=0.00209
+[train] step 75000/100000 loss=0.00128
+[train] step 80000/100000 loss=0.00066
+[train] step 85000/100000 loss=0.00065
+[train] step 90000/100000 loss=0.00059
+[train] step 95000/100000 loss=0.00023
+[train] step 100000/100000 loss=0.00025
+[train] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PushT-v1_100k.pt in 32.51 minutes
+
+--- Evaluating Push-T 100k model at 1X (n=100) ---
+  [k=1] [20/100] native=3/20 zoh=3/20
+  [k=1] [40/100] native=10/40 zoh=10/40
+  [k=1] [60/100] native=13/60 zoh=13/60
+  [k=1] [80/100] native=20/80 zoh=20/80
+  [k=1] [100/100] native=24/100 zoh=24/100
+  [k=1] completed in 842.3s
+
+--- Evaluating Push-T 100k model at 2X (n=100) ---
+  [k=2] [20/100] native=3/20 zoh=4/20
+  [k=2] [40/100] native=10/40 zoh=6/40
+  [k=2] [60/100] native=13/60 zoh=9/60
+  [k=2] [80/100] native=20/80 zoh=11/80
+  [k=2] [100/100] native=24/100 zoh=11/100
+  [k=2] completed in 894.3s
+
+--- Evaluating Push-T 100k model at 4X (n=100) ---
+  [k=4] [20/100] native=3/20 zoh=0/20
+  [k=4] [40/100] native=10/40 zoh=2/40
+  [k=4] [60/100] native=13/60 zoh=4/60
+  [k=4] [80/100] native=20/80 zoh=4/80
+  [k=4] [100/100] native=24/100 zoh=4/100
+  [k=4] completed in 919.2s
+
+--- Evaluating Push-T 100k model at 8X (n=100) ---
+  [k=8] [20/100] native=3/20 zoh=0/20
+  [k=8] [40/100] native=10/40 zoh=0/40
+  [k=8] [60/100] native=13/60 zoh=0/60
+  [k=8] [80/100] native=20/80 zoh=1/80
+  [k=8] [100/100] native=24/100 zoh=1/100
+  [k=8] completed in 929.8s
+
+[DONE] Results saved to /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PushT-v1_100k_grid.json

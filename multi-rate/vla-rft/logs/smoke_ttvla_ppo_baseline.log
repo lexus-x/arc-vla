@@ -1,0 +1,188 @@
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 6686.81it/s]
+=== Loading FRESH checkpoint for Arm C (TT-VLA-style PPO test-time RL) ===
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6516.10it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Local assets not found. Downloading from HuggingFace Hub...
+Assets already downloaded at /home/user/.cache/libero/assets
+task_description='pick up the black bowl between the plate and the ramekin and place it on the plate' primary_obj_name='akita_black_bowl_1' distractor_obj_name='glazed_rim_porcelain_ramekin_1' distances={'akita_black_bowl_2': 0.17229933890987412, 'cookies_1': 0.2137177593772099, 'glazed_rim_porcelain_ramekin_1': 0.13453084129843537, 'wooden_cabinet_1': 0.47990388216914553, 'flat_stove_1': 0.4878865712952108}
+[ArmC group0 ep0 seed=4000] success=False rho_safe=0.1500 max_obj_speed=0.00000 steps=220
+[ArmC group0 ep1 seed=4001] success=False rho_safe=0.1496 max_obj_speed=0.00000 steps=220
+[ArmC group0 ep2 seed=4002] success=True rho_safe=0.1254 max_obj_speed=0.02463 steps=73
+[ArmC group0 ep3 seed=4003] success=True rho_safe=0.1367 max_obj_speed=0.01334 steps=80
+===== ArmC group 0 PPO update: success_rate=0.500 n_transitions=593 =====
+    epoch0: loss=0.4839797639123103 grad_norm=123.61387634277344 n_transitions=593
+    epoch1: loss=0.4582992500902749 grad_norm=578.2237548828125 n_transitions=593
+    epoch2: loss=0.44986106226382494 grad_norm=392.0124816894531 n_transitions=593
+    epoch3: loss=0.4422114281349738 grad_norm=386.83587646484375 n_transitions=593
+[ArmC group1 ep4 seed=4004] success=True rho_safe=0.1389 max_obj_speed=0.01106 steps=112
+[ArmC group1 ep5 seed=4005] success=True rho_safe=0.1325 max_obj_speed=0.01749 steps=79
+[ArmC group1 ep6 seed=4006] success=True rho_safe=0.1295 max_obj_speed=0.02052 steps=80
+[ArmC group1 ep7 seed=4007] success=True rho_safe=0.1484 max_obj_speed=0.00160 steps=93
+===== ArmC group 1 PPO update: success_rate=1.000 n_transitions=0 =====
+[ArmC group2 ep8 seed=4008] success=True rho_safe=0.1337 max_obj_speed=0.01629 steps=87
+[ArmC group2 ep9 seed=4009] success=True rho_safe=0.1375 max_obj_speed=0.01250 steps=80
+[ArmC group2 ep10 seed=4010] success=True rho_safe=0.1285 max_obj_speed=0.02145 steps=79
+[ArmC group2 ep11 seed=4011] success=True rho_safe=0.1389 max_obj_speed=0.01109 steps=83
+===== ArmC group 2 PPO update: success_rate=1.000 n_transitions=0 =====
+[ArmC group3 ep12 seed=4012] success=True rho_safe=0.1270 max_obj_speed=0.02302 steps=78
+[ArmC group3 ep13 seed=4013] success=True rho_safe=0.1301 max_obj_speed=0.01991 steps=78
+[ArmC group3 ep14 seed=4014] success=True rho_safe=0.1173 max_obj_speed=0.03272 steps=87
+[ArmC group3 ep15 seed=4015] success=True rho_safe=0.1279 max_obj_speed=0.02206 steps=77
+===== ArmC group 3 PPO update: success_rate=1.000 n_transitions=0 =====
+[ArmC group4 ep16 seed=4016] success=True rho_safe=0.1391 max_obj_speed=0.01093 steps=90
+[ArmC group4 ep17 seed=4017] success=True rho_safe=0.1327 max_obj_speed=0.01727 steps=100
+[ArmC group4 ep18 seed=4018] success=False rho_safe=0.1500 max_obj_speed=0.00000 steps=220
+[ArmC group4 ep19 seed=4019] success=False rho_safe=0.1500 max_obj_speed=0.00000 steps=220
+===== ArmC group 4 PPO update: success_rate=0.500 n_transitions=630 =====
+    epoch0: loss=0.3968253968253968 grad_norm=118.35093688964844 n_transitions=630
+    epoch1: loss=0.3772577316788513 grad_norm=454.33929443359375 n_transitions=630
+    epoch2: loss=0.36143888502472055 grad_norm=441.9228210449219 n_transitions=630
+    epoch3: loss=0.35295450234464515 grad_norm=421.6171875 n_transitions=630
+[ArmC group5 ep20 seed=4020] success=True rho_safe=0.1424 max_obj_speed=0.00762 steps=76
+[ArmC group5 ep21 seed=4021] success=True rho_safe=0.1230 max_obj_speed=0.02697 steps=77
+[ArmC group5 ep22 seed=4022] success=False rho_safe=0.1500 max_obj_speed=0.00000 steps=220
+[ArmC group5 ep23 seed=4023] success=True rho_safe=0.1444 max_obj_speed=0.00565 steps=82
+===== ArmC group 5 PPO update: success_rate=0.750 n_transitions=455 =====
+    epoch0: loss=0.5392832087946462 grad_norm=119.54904174804688 n_transitions=455
+    epoch1: loss=0.5142763859387692 grad_norm=575.2815551757812 n_transitions=455
+    epoch2: loss=0.4969074366326195 grad_norm=408.1968994140625 n_transitions=455
+    epoch3: loss=0.4904937793366741 grad_norm=314.6004943847656 n_transitions=455
+[ArmC group6 ep24 seed=4024] success=True rho_safe=0.1269 max_obj_speed=0.02308 steps=67
+[ArmC group6 ep25 seed=4025] success=True rho_safe=0.1274 max_obj_speed=0.02263 steps=83
+[ArmC group6 ep26 seed=4026] success=True rho_safe=0.1241 max_obj_speed=0.02587 steps=75
+[ArmC group6 ep27 seed=4027] success=True rho_safe=0.1456 max_obj_speed=0.00444 steps=84
+===== ArmC group 6 PPO update: success_rate=1.000 n_transitions=0 =====
+[ArmC group7 ep28 seed=4028] success=False rho_safe=0.1021 max_obj_speed=0.00505 steps=220
+[ArmC group7 ep29 seed=4029] success=False rho_safe=0.1500 max_obj_speed=0.00000 steps=220
+[ArmC group7 ep30 seed=4030] success=True rho_safe=0.1349 max_obj_speed=0.01508 steps=78
+[ArmC group7 ep31 seed=4031] success=True rho_safe=0.1354 max_obj_speed=0.01464 steps=70
+===== ArmC group 7 PPO update: success_rate=0.500 n_transitions=588 =====
+    epoch0: loss=0.4965986394557823 grad_norm=123.17373657226562 n_transitions=588
+    epoch1: loss=0.4661497956230527 grad_norm=509.0321044921875 n_transitions=588
+    epoch2: loss=0.45372495726131057 grad_norm=463.9288024902344 n_transitions=588
+    epoch3: loss=0.4448626061634163 grad_norm=365.9735412597656 n_transitions=588
+[ArmC group8 ep32 seed=4032] success=True rho_safe=0.1342 max_obj_speed=0.01576 steps=77
+[ArmC group8 ep33 seed=4033] success=False rho_safe=0.1500 max_obj_speed=0.00000 steps=220
+[ArmC group8 ep34 seed=4034] success=True rho_safe=0.1295 max_obj_speed=0.02052 steps=74
+[ArmC group8 ep35 seed=4035] success=False rho_safe=0.1500 max_obj_speed=0.00000 steps=220
+===== ArmC group 8 PPO update: success_rate=0.500 n_transitions=591 =====
+    epoch0: loss=0.4890016920473773 grad_norm=111.9394302368164 n_transitions=591
+    epoch1: loss=0.46327816938757643 grad_norm=470.52752685546875 n_transitions=591
+    epoch2: loss=0.449008623693275 grad_norm=367.94110107421875 n_transitions=591
+    epoch3: loss=0.44220118869744185 grad_norm=332.97918701171875 n_transitions=591
+[ArmC group9 ep36 seed=4036] success=False rho_safe=0.1500 max_obj_speed=0.00000 steps=220
+[ArmC group9 ep37 seed=4037] success=True rho_safe=0.1337 max_obj_speed=0.01629 steps=79
+[ArmC group9 ep38 seed=4038] success=False rho_safe=0.1500 max_obj_speed=0.00000 steps=220
+[ArmC group9 ep39 seed=4039] success=True rho_safe=0.1275 max_obj_speed=0.02250 steps=86
+===== ArmC group 9 PPO update: success_rate=0.500 n_transitions=605 =====
+    epoch0: loss=0.45454545454545453 grad_norm=114.11864471435547 n_transitions=605
+    epoch1: loss=0.4347284161347278 grad_norm=578.2994995117188 n_transitions=605
+    epoch2: loss=0.4212784258904894 grad_norm=430.2203369140625 n_transitions=605
+    epoch3: loss=0.4160777505647151 grad_norm=407.99664306640625 n_transitions=605
+Arm C done in 2471s
+Saved /home/user/Desktop/multi-rate/vla-rft/smoke_results_ppo.json
+
+================ SUMMARY: Arm C (PPO test-time RL) ================
+  n=40  success_rate=0.725 (29/40)
+  rho_safe: mean=0.1364 min=0.1021  violation_rate(rho<0)=0.000
+  max_obj_speed: mean=0.01255 max=0.03272
+
+Arm C per-group breakdown (mean rho_safe / mean max_obj_speed / success_rate):
+  group0: rho_safe=0.1404  max_obj_speed=0.00949  success_rate=0.500
+  group1: rho_safe=0.1373  max_obj_speed=0.01267  success_rate=1.000
+  group2: rho_safe=0.1347  max_obj_speed=0.01533  success_rate=1.000
+  group3: rho_safe=0.1256  max_obj_speed=0.02443  success_rate=1.000
+  group4: rho_safe=0.1430  max_obj_speed=0.00705  success_rate=0.500
+  group5: rho_safe=0.1399  max_obj_speed=0.01006  success_rate=0.750
+  group6: rho_safe=0.1310  max_obj_speed=0.01900  success_rate=1.000
+  group7: rho_safe=0.1306  max_obj_speed=0.00869  success_rate=0.500
+  group8: rho_safe=0.1409  max_obj_speed=0.00907  success_rate=0.500
+  group9: rho_safe=0.1403  max_obj_speed=0.00970  success_rate=0.500
+
+Per-group PPO inner-epoch loss/grad_norm (n_epochs=4 each):
+  group0 success_rate=0.500 n_transitions=593
+    epoch0: loss=0.4839797639123103 grad_norm=123.61387634277344
+    epoch1: loss=0.4582992500902749 grad_norm=578.2237548828125
+    epoch2: loss=0.44986106226382494 grad_norm=392.0124816894531
+    epoch3: loss=0.4422114281349738 grad_norm=386.83587646484375
+  group1 success_rate=1.000 n_transitions=0
+  group2 success_rate=1.000 n_transitions=0
+  group3 success_rate=1.000 n_transitions=0
+  group4 success_rate=0.500 n_transitions=630
+    epoch0: loss=0.3968253968253968 grad_norm=118.35093688964844
+    epoch1: loss=0.3772577316788513 grad_norm=454.33929443359375
+    epoch2: loss=0.36143888502472055 grad_norm=441.9228210449219
+    epoch3: loss=0.35295450234464515 grad_norm=421.6171875
+  group5 success_rate=0.750 n_transitions=455
+    epoch0: loss=0.5392832087946462 grad_norm=119.54904174804688
+    epoch1: loss=0.5142763859387692 grad_norm=575.2815551757812
+    epoch2: loss=0.4969074366326195 grad_norm=408.1968994140625
+    epoch3: loss=0.4904937793366741 grad_norm=314.6004943847656
+  group6 success_rate=1.000 n_transitions=0
+  group7 success_rate=0.500 n_transitions=588
+    epoch0: loss=0.4965986394557823 grad_norm=123.17373657226562
+    epoch1: loss=0.4661497956230527 grad_norm=509.0321044921875
+    epoch2: loss=0.45372495726131057 grad_norm=463.9288024902344
+    epoch3: loss=0.4448626061634163 grad_norm=365.9735412597656
+  group8 success_rate=0.500 n_transitions=591
+    epoch0: loss=0.4890016920473773 grad_norm=111.9394302368164
+    epoch1: loss=0.46327816938757643 grad_norm=470.52752685546875
+    epoch2: loss=0.449008623693275 grad_norm=367.94110107421875
+    epoch3: loss=0.44220118869744185 grad_norm=332.97918701171875
+  group9 success_rate=0.500 n_transitions=605
+    epoch0: loss=0.45454545454545453 grad_norm=114.11864471435547
+    epoch1: loss=0.4347284161347278 grad_norm=578.2994995117188
+    epoch2: loss=0.4212784258904894 grad_norm=430.2203369140625
+    epoch3: loss=0.4160777505647151 grad_norm=407.99664306640625
+
+Total wall time: 2471s
+Exception ignored in: <function MjRenderContext.__del__ at 0x71dde4d79080>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x71ddc02782d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71dde4d25b50>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71dde4d25b50>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x71dde4d25a50>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x71dde4d78f40>
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x71ddc02782d0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71dde4d25b50>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x71dde4d25b50>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x71dde4d25a50>,
+	),
+	result = 0
+)

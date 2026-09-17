@@ -1,0 +1,212 @@
+[
+  {
+    "name": "PullCube-v1",
+    "status": "SUCCESS",
+    "n_episodes": 50,
+    "rates": {
+      "original": 1.0,
+      "folding": 0.94,
+      "spline": 0.96
+    },
+    "counts": {
+      "original": 50,
+      "folding": 47,
+      "spline": 48
+    },
+    "comparison": {
+      "fold_minus_spline_pp": -2.0000000000000018,
+      "fold_only": 1,
+      "spline_only": 2,
+      "p_value": 1.0
+    }
+  },
+  {
+    "name": "PushCube-v1",
+    "status": "SUCCESS",
+    "n_episodes": 50,
+    "rates": {
+      "original": 1.0,
+      "folding": 0.96,
+      "spline": 1.0
+    },
+    "counts": {
+      "original": 50,
+      "folding": 48,
+      "spline": 50
+    },
+    "comparison": {
+      "fold_minus_spline_pp": -4.0000000000000036,
+      "fold_only": 0,
+      "spline_only": 2,
+      "p_value": 0.5
+    }
+  },
+  {
+    "name": "RollBall-v1",
+    "status": "SUCCESS",
+    "n_episodes": 50,
+    "rates": {
+      "original": 0.4,
+      "folding": 0.08,
+      "spline": 0.08
+    },
+    "counts": {
+      "original": 20,
+      "folding": 4,
+      "spline": 4
+    },
+    "comparison": {
+      "fold_minus_spline_pp": 0.0,
+      "fold_only": 2,
+      "spline_only": 2,
+      "p_value": 1.0
+    }
+  },
+  {
+    "name": "LiftPegUpright-v1",
+    "status": "SUCCESS",
+    "n_episodes": 50,
+    "rates": {
+      "original": 0.96,
+      "folding": 0.5,
+      "spline": 0.2
+    },
+    "counts": {
+      "original": 48,
+      "folding": 25,
+      "spline": 10
+    },
+    "comparison": {
+      "fold_minus_spline_pp": 30.0,
+      "fold_only": 16,
+      "spline_only": 1,
+      "p_value": 0.000274658203125
+    }
+  },
+  {
+    "name": "PickCube-v1",
+    "status": "SUCCESS",
+    "n_episodes": 50,
+    "rates": {
+      "original": 0.98,
+      "folding": 0.64,
+      "spline": 0.4
+    },
+    "counts": {
+      "original": 49,
+      "folding": 32,
+      "spline": 20
+    },
+    "comparison": {
+      "fold_minus_spline_pp": 24.0,
+      "fold_only": 14,
+      "spline_only": 2,
+      "p_value": 0.004180908203125
+    }
+  },
+  {
+    "name": "StackCube-v1",
+    "status": "SUCCESS",
+    "n_episodes": 50,
+    "rates": {
+      "original": 0.92,
+      "folding": 0.22,
+      "spline": 0.18
+    },
+    "counts": {
+      "original": 46,
+      "folding": 11,
+      "spline": 9
+    },
+    "comparison": {
+      "fold_minus_spline_pp": 4.000000000000001,
+      "fold_only": 5,
+      "spline_only": 3,
+      "p_value": 0.7265625
+    }
+  },
+  {
+    "name": "PokeCube-v1",
+    "status": "SUCCESS",
+    "n_episodes": 50,
+    "rates": {
+      "original": 0.84,
+      "folding": 0.86,
+      "spline": 0.86
+    },
+    "counts": {
+      "original": 42,
+      "folding": 43,
+      "spline": 43
+    },
+    "comparison": {
+      "fold_minus_spline_pp": 0.0,
+      "fold_only": 0,
+      "spline_only": 0,
+      "p_value": 1.0
+    }
+  },
+  {
+    "name": "DrawTriangle-v1",
+    "status": "SUCCESS",
+    "n_episodes": 50,
+    "rates": {
+      "original": 0.0,
+      "folding": 0.0,
+      "spline": 0.0
+    },
+    "counts": {
+      "original": 0,
+      "folding": 0,
+      "spline": 0
+    },
+    "comparison": {
+      "fold_minus_spline_pp": 0.0,
+      "fold_only": 0,
+      "spline_only": 0,
+      "p_value": 1.0
+    }
+  },
+  {
+    "name": "PushT-v1",
+    "status": "SUCCESS",
+    "n_episodes": 50,
+    "rates": {
+      "original": 0.02,
+      "folding": 0.02,
+      "spline": 0.02
+    },
+    "counts": {
+      "original": 1,
+      "folding": 1,
+      "spline": 1
+    },
+    "comparison": {
+      "fold_minus_spline_pp": 0.0,
+      "fold_only": 0,
+      "spline_only": 0,
+      "p_value": 1.0
+    }
+  },
+  {
+    "name": "PegInsertionSide-v1",
+    "status": "SUCCESS",
+    "n_episodes": 50,
+    "rates": {
+      "original": 0.92,
+      "folding": 0.06,
+      "spline": 0.06
+    },
+    "counts": {
+      "original": 46,
+      "folding": 3,
+      "spline": 3
+    },
+    "comparison": {
+      "fold_minus_spline_pp": 0.0,
+      "fold_only": 3,
+      "spline_only": 3,
+      "p_value": 1.0
+    }
+  }
+]

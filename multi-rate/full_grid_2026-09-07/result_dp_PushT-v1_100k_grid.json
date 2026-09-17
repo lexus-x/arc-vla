@@ -1,0 +1,42 @@
+{
+  "k1": {
+    "native": {
+      "success_rate": 0.24,
+      "count": "24/100"
+    },
+    "zoh": {
+      "success_rate": 0.24,
+      "count": "24/100"
+    }
+  },
+  "k2": {
+    "native": {
+      "success_rate": 0.24,
+      "count": "24/100"
+    },
+    "zoh": {
+      "success_rate": 0.11,
+      "count": "11/100"
+    }
+  },
+  "k4": {
+    "native": {
+      "success_rate": 0.24,
+      "count": "24/100"
+    },
+    "zoh": {
+      "success_rate": 0.04,
+      "count": "4/100"
+    }
+  },
+  "k8": {
+    "native": {
+      "success_rate": 0.24,
+      "count": "24/100"
+    },
+    "zoh": {
+      "success_rate": 0.01,
+      "count": "1/100"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "k2": {
+    "tac_fold": {
+      "avg_max_reward": 0.9384478449847012,
+      "pc_success": 62.0,
+      "n_success": 31,
+      "n_episodes": 50,
+      "wall_s": 121.30650472640991
+    },
+    "spline": {
+      "avg_max_reward": 0.9626833893569219,
+      "pc_success": 66.0,
+      "n_success": 33,
+      "n_episodes": 50,
+      "wall_s": 120.79193949699402
+    },
+    "bspline_eps_raw": {
+      "avg_max_reward": 0.9311332109610714,
+      "pc_success": 52.0,
+      "n_success": 26,
+      "n_episodes": 50,
+      "wall_s": 121.1616473197937
+    }
+  },
+  "k4": {
+    "tac_fold": {
+      "avg_max_reward": 0.9606002757465838,
+      "pc_success": 72.0,
+      "n_success": 36,
+      "n_episodes": 50,
+      "wall_s": 120.94849419593811
+    },
+    "spline": {
+      "avg_max_reward": 0.9537553397586562,
+      "pc_success": 54.0,
+      "n_success": 27,
+      "n_episodes": 50,
+      "wall_s": 120.86321258544922
+    },
+    "bspline_eps_raw": {
+      "avg_max_reward": 0.9351311952915689,
+      "pc_success": 44.0,
+      "n_success": 22,
+      "n_episodes": 50,
+      "wall_s": 120.70078730583191
+    }
+  },
+  "k8": {
+    "tac_fold": {
+      "avg_max_reward": 0.8427398203510765,
+      "pc_success": 18.0,
+      "n_success": 9,
+      "n_episodes": 50,
+      "wall_s": 120.71704936027527
+    },
+    "spline": {
+      "avg_max_reward": 0.8036395693648731,
+      "pc_success": 14.000000000000002,
+      "n_success": 7,
+      "n_episodes": 50,
+      "wall_s": 121.34382653236389
+    },
+    "bspline_eps_raw": {
+      "avg_max_reward": 0.7833437362166654,
+      "pc_success": 18.0,
+      "n_success": 9,
+      "n_episodes": 50,
+      "wall_s": 121.10035943984985
+    }
+  }
+}

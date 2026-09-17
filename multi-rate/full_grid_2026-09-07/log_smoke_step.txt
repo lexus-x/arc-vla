@@ -1,0 +1,12 @@
+[data] 3 demos harvested in 2s
+[data] 45 windows, obs_dim=42, act_dim=8, raw |a|>1 frac=0.328
+[train] step 1/50 loss=1.11645
+[train] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PickCube-v1_smoke.pt
+[eval] [2/2] native=0 qp=0
+[eval] wall 14s for 2 eps x 2 arms
+
+=== PickCube-v1 closed-loop DP, k=2, n=2 ===
+  native              0.0% (0/2)
+  qp                  0.0% (0/2)  | vs native:   +0.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.581
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PickCube-v1_smoke.json

@@ -1,0 +1,202 @@
+{
+  "20hz": {
+    "fps": 20,
+    "mult": 2,
+    "n_episodes": 10,
+    "arms": {
+      "tac_fold": {
+        "avg_max_reward": 0.9956758918093322,
+        "pc_success": 90.0,
+        "n_success": 9,
+        "n_episodes": 10,
+        "wall_s": 64.76409769058228,
+        "max_rewards": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9567589180933234,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "successes": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true
+        ]
+      },
+      "spline": {
+        "avg_max_reward": 0.9980282264981885,
+        "pc_success": 80.0,
+        "n_success": 8,
+        "n_episodes": 10,
+        "wall_s": 63.906527519226074,
+        "max_rewards": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9946182300614378,
+          0.9856640349204461,
+          1.0
+        ],
+        "successes": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true
+        ]
+      },
+      "bspline_eps_raw": {
+        "avg_max_reward": 1.0,
+        "pc_success": 100.0,
+        "n_success": 10,
+        "n_episodes": 10,
+        "wall_s": 50.96445059776306,
+        "max_rewards": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "successes": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "40hz": {
+    "fps": 40,
+    "mult": 4,
+    "n_episodes": 10,
+    "arms": {
+      "tac_fold": {
+        "avg_max_reward": 0.9652535215928676,
+        "pc_success": 80.0,
+        "n_success": 8,
+        "n_episodes": 10,
+        "wall_s": 128.9804675579071,
+        "max_rewards": [
+          0.98275632259437,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.669778893334306,
+          1.0
+        ],
+        "successes": [
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      "spline": {
+        "avg_max_reward": 1.0,
+        "pc_success": 100.0,
+        "n_success": 10,
+        "n_episodes": 10,
+        "wall_s": 57.102566957473755,
+        "max_rewards": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "successes": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "bspline_eps_raw": {
+        "avg_max_reward": 0.9995647312406234,
+        "pc_success": 90.0,
+        "n_success": 9,
+        "n_episodes": 10,
+        "wall_s": 129.5467712879181,
+        "max_rewards": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9956473124062346
+        ],
+        "successes": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ]
+      }
+    }
+  }
+}

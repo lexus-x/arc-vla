@@ -10,6 +10,8 @@ resample_math.RESAMPLERS.setdefault("qp", resample_qp)
 
 H = 16          # window (native steps)
 C = 16          # B-spline control points
+ARC_BLOCKS = 8
+ARC_RATES = (1, 2, 4)
 _KNOTS = np.r_[[0.0] * 4, np.linspace(0, H, C - 4 + 2)[1:-1], [float(H)] * 4]  # cubic, clamped, uniform, 12 interior
 
 
@@ -35,6 +37,15 @@ def targets(ac, head, nd, nb=4):
     raise ValueError(head)
 
 
+def arc_targets(ac, nd, rate, n_blocks=ARC_BLOCKS):
+    """Rate-specific block means; fixed output shape, variable native-time coverage."""
+    needed = n_blocks * rate
+    if ac.shape[1] < needed:
+        raise ValueError(f"ARC rate {rate} needs {needed} action steps, got {ac.shape[1]}")
+    blocks = ac[:, :needed].reshape(len(ac), n_blocks, rate, ac.shape[-1])
+    return np.concatenate([blocks[..., :nd].mean(2), blocks[:, :, 0, nd:]], -1).astype(np.float32)
+
+
 def decode(pred, head, nd, n, arm, nb=4):
     """pred = denormalised head output -> executed per-step chunk at speedup n (first half of the horizon, like DP)."""
     if head == "blocksum":
@@ -45,6 +56,16 @@ def decode(pred, head, nd, n, arm, nb=4):
     if head == "bspline":
         y = _phi(np.linspace(0, H, H // n + 1)) @ pred[:, :nd]              # (16/n+1, nd) positions
         return np.concatenate([np.diff(y, axis=0), pred[::n, nd:]], 1)[: H // 2 // n].astype(np.float32)
+    if head == "arc":
+        if n not in ARC_RATES:
+            raise ValueError(f"ARC was trained only for rates {ARC_RATES}, got {n}")
+        fn = "zoh" if arm == "native" else arm
+        # ARC predicts mean controller commands. Bound the means before turning them
+        # into block sums so |S| <= n and the conservative projection is always feasible.
+        block_sum = np.clip(pred[:, :nd], -1.0, 1.0) * n
+        pose = resample_math.RESAMPLERS[fn](block_sum, n)
+        held = np.repeat(pred[:, nd:], n, axis=0)
+        return np.concatenate([pose, held], 1)[:8].astype(np.float32)
     raise ValueError(head)
 
 
@@ -59,4 +80,9 @@ if __name__ == "__main__":  # self-check
     tb = targets(sm, "bspline", nd); yb = np.cumsum(decode(tb[0], "bspline", nd, 1, "native")[:, :nd], 0)
     assert tb.shape == (1, 16, 3) and np.abs(yb - np.cumsum(sm[0, :8, :nd], 0)).max() < 1e-4
     assert decode(tb[0], "bspline", nd, 4, "native").shape == (2, 3)
+    ac32 = np.tile(ac[:, :8], (1, 4, 1)); ta = arc_targets(ac32, nd, 4)
+    da = decode(ta[0], "arc", nd, 4, "tac_fold")
+    assert ta.shape == (5, ARC_BLOCKS, 3) and da.shape == (8, 3)
+    assert np.allclose(da[:, :nd].reshape(2, 4, nd).sum(1),
+                       ta[0, :2, :nd] * 4, atol=1e-5)
     print("heads self-check ok")

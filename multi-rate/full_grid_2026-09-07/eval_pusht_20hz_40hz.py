@@ -170,9 +170,9 @@ def main():
     for fps in rates:
         res = run_eval_rate(fps=fps, n_episodes=args.n_episodes, batch_size=args.batch_size, start_seed=args.start_seed)
         master_results[f"{fps}hz"] = res
+        with open(args.out_file, "w") as f:
+            json.dump(master_results, f, indent=2)
 
-    with open(args.out_file, "w") as f:
-        json.dump(master_results, f, indent=2)
     print(f"\n=======================================================")
     print(f"All rates {rates} evaluated and saved to {args.out_file}")
     print(f"=======================================================")

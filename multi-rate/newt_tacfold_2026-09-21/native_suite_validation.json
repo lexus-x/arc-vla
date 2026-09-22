@@ -1,0 +1,1027 @@
+{
+  "checkpoint_sha256": "54d76a7dc98d41fc882d446a72892e28e779f7a2f2f17c096ff336f1fe4a2232",
+  "episodes_per_task": 20,
+  "protocol": "PREREG.md",
+  "tasks": {
+    "ms-lift-peg": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      "task_index": 101
+    },
+    "ms-pick-apple": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      "task_index": 102
+    },
+    "ms-pick-banana": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "task_index": 103
+    },
+    "ms-pick-baseball": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false
+        ]
+      },
+      "task_index": 113
+    },
+    "ms-pick-can": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false
+        ]
+      },
+      "task_index": 104
+    },
+    "ms-pick-cube-eepose": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "task_index": 93
+    },
+    "ms-pick-fork": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          false
+        ]
+      },
+      "task_index": 106
+    },
+    "ms-pick-hammer": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      "task_index": 105
+    },
+    "ms-pick-knife": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          false
+        ]
+      },
+      "task_index": 107
+    },
+    "ms-pick-mug": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "task_index": 108
+    },
+    "ms-pick-orange": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false
+        ]
+      },
+      "task_index": 109
+    },
+    "ms-pick-screwdriver": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false
+        ]
+      },
+      "task_index": 110
+    },
+    "ms-pick-sponge": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "task_index": 115
+    },
+    "ms-pick-spoon": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "task_index": 111
+    },
+    "ms-pick-tennis-ball": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          false
+        ]
+      },
+      "task_index": 112
+    },
+    "ms-poke-cube": {
+      "plan_saturation": {
+        "native": [
+          0.036458333333333336,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      "task_index": 95
+    },
+    "ms-pull-cube": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.020833333333333332,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          true,
+          false
+        ]
+      },
+      "task_index": 97
+    },
+    "ms-pull-cube-tool": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "task_index": 98
+    },
+    "ms-push-cube": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false
+        ]
+      },
+      "task_index": 96
+    },
+    "ms-stack-cube": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "task_index": 99
+    }
+  }
+}

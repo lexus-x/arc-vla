@@ -115,23 +115,35 @@ class MinMax:
 
 
 class DiffusionPolicy(nn.Module):
-    def __init__(self, obs_dim, act_dim, n_obs=2, horizon=16, n_action_steps=8, T=100, down_dims=(256, 512, 1024)):
+    def __init__(self, obs_dim, act_dim, n_obs=2, horizon=16, n_action_steps=8, T=100,
+                 down_dims=(256, 512, 1024), rate_condition_dim=0):
         super().__init__()
         self.obs_dim, self.act_dim, self.n_obs, self.horizon, self.n_action_steps, self.T = obs_dim, act_dim, n_obs, horizon, n_action_steps, T
-        self.net = ConditionalUnet1D(act_dim, obs_dim * n_obs, down_dims)
+        self.rate_condition_dim = rate_condition_dim
+        self.net = ConditionalUnet1D(act_dim, obs_dim * n_obs + rate_condition_dim, down_dims)
         self.register_buffer("acp", cosine_alphas_cumprod(T))
 
-    def loss(self, obs, act):  # obs (B,n_obs,D) act (B,H,A), both already normalised to [-1,1]
+    def _condition(self, obs, rate_condition=None):
+        cond = obs.flatten(1)
+        if self.rate_condition_dim:
+            if rate_condition is None or rate_condition.shape != (len(obs), self.rate_condition_dim):
+                raise ValueError(f"rate_condition must have shape ({len(obs)},{self.rate_condition_dim})")
+            cond = torch.cat([cond, rate_condition.to(device=obs.device, dtype=obs.dtype)], -1)
+        elif rate_condition is not None:
+            raise ValueError("this policy was created without rate conditioning")
+        return cond
+
+    def loss(self, obs, act, rate_condition=None):  # inputs already normalised to [-1,1]
         B = act.shape[0]
         t = torch.randint(0, self.T, (B,), device=act.device)
         eps = torch.randn_like(act)
         a = self.acp[t].view(B, 1, 1)
         xt = a.sqrt() * act + (1 - a).sqrt() * eps
-        return ((self.net(xt, t, obs.flatten(1)) - eps) ** 2).mean()
+        return ((self.net(xt, t, self._condition(obs, rate_condition)) - eps) ** 2).mean()
 
     @torch.no_grad()
-    def sample(self, obs, n_steps=10):  # DDIM eta=0, returns normalised chunk (B,H,A)
-        B = obs.shape[0]; g = obs.flatten(1)
+    def sample(self, obs, n_steps=10, rate_condition=None):  # DDIM eta=0
+        B = obs.shape[0]; g = self._condition(obs, rate_condition)
         x = torch.randn(B, self.horizon, self.act_dim, device=obs.device)
         ts = torch.linspace(self.T - 1, 0, n_steps).round().long().tolist()
         for i, t in enumerate(ts):
@@ -169,15 +181,17 @@ def make_chunks(obs_ep, act_ep, n_obs, horizon):
     return ob, ac
 
 
-def train(policy, obs_chunks, act_chunks, steps=50_000, bs=256, lr=1e-4, dev="cuda", log_every=2000):
+def train(policy, obs_chunks, act_chunks, steps=50_000, bs=256, lr=1e-4, dev="cuda",
+          log_every=2000, rate_conditions=None):
     policy.to(dev).train()
     opt = torch.optim.AdamW(policy.parameters(), lr=lr, betas=(0.95, 0.999), eps=1e-8, weight_decay=1e-6)
     sched = torch.optim.lr_scheduler.LambdaLR(opt, lambda s: min(1.0, s / 500) * 0.5 * (1 + math.cos(math.pi * min(s, steps) / steps)))
     ema = EMA(policy)
     O = torch.as_tensor(obs_chunks, device=dev); A = torch.as_tensor(act_chunks, device=dev); N = len(O)
+    R = torch.as_tensor(rate_conditions, device=dev) if rate_conditions is not None else None
     for s in range(1, steps + 1):
         idx = torch.randint(0, N, (bs,), device=dev)
-        l = policy.loss(O[idx], A[idx])
+        l = policy.loss(O[idx], A[idx]) if R is None else policy.loss(O[idx], A[idx], R[idx])
         opt.zero_grad(set_to_none=True); l.backward(); opt.step(); sched.step(); ema.update(policy)
         if s % log_every == 0 or s == 1:
             print(f"[train] step {s}/{steps} loss={l.item():.5f}", flush=True)
@@ -249,12 +263,13 @@ class VisualDiffusionPolicy(DiffusionPolicy):
             features.append(z.reshape(*state.shape[:2], -1))
         return torch.cat(features, dim=-1)
 
-    def loss(self, state, images, act):
-        return super().loss(self.encode(state, images), act)
+    def loss(self, state, images, act, rate_condition=None):
+        return super().loss(self.encode(state, images), act, rate_condition)
 
     @torch.no_grad()
-    def sample(self, state, images, n_steps=10):
-        return super().sample(self.encode(state, images), n_steps=n_steps)
+    def sample(self, state, images, n_steps=10, rate_condition=None):
+        return super().sample(self.encode(state, images), n_steps=n_steps,
+                              rate_condition=rate_condition)
 
 
 if __name__ == "__main__":  # smoke: shapes, one train step, one sample, EMA copy
@@ -264,6 +279,11 @@ if __name__ == "__main__":  # smoke: shapes, one train step, one sample, EMA cop
     assert p.net(a, torch.zeros(4, dtype=torch.long, device=dev), o.flatten(1)).shape == a.shape
     l0 = p.loss(o, a); l0.backward(); assert torch.isfinite(l0)
     s = p.sample(o, n_steps=5); assert s.shape == a.shape and s.abs().max() <= 1.0
+    pr = DiffusionPolicy(obs_dim=42, act_dim=8, horizon=8, rate_condition_dim=1,
+                         down_dims=(32, 64, 128)).to(dev)
+    r = torch.tensor([[0.0], [0.5], [1.0], [0.0]], device=dev)
+    lr = pr.loss(o, a[:, :8], r); lr.backward()
+    assert pr.sample(o, n_steps=2, rate_condition=r).shape == (4, 8, 8)
     ob, ac = make_chunks(np.zeros((30, 42), np.float32), np.zeros((30, 8), np.float32), 2, 16)
     assert ob.shape == (30, 2, 42) and ac.shape == (30, 16, 8)
     nm = MinMax(np.array([[0., 5.], [2., 5.]])); assert np.allclose(nm.denorm(nm.norm(np.array([[1., 5.]]))), [[1., 5.]])

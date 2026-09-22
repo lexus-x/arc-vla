@@ -1,0 +1,437 @@
+nohup: ignoring input
+
+======================================================================
+RoboMimic: task=lift, k=2, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_lift_200.npz
+[data] 200 demos harvested in 0s
+[data] 9666 windows, obs_dim=19, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_lift.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=10 tac_fold_satfix=10
+[eval] [20/50] qp_anchor=20 tac_fold_satfix=20
+[eval] [30/50] qp_anchor=30 tac_fold_satfix=30
+[eval] [40/50] qp_anchor=40 tac_fold_satfix=40
+[eval] [50/50] qp_anchor=50 tac_fold_satfix=50
+[eval] wall 29s for 50 eps x 2 arms (4 workers)
+
+=== lift closed-loop DP, k=2, n=50 ===
+  qp_anchor         100.0% (50/50)
+  tac_fold_satfix   100.0% (50/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_lift_qp_eval.json
+Finished lift k=2 in 33.1s (exit code 0)
+
+======================================================================
+RoboMimic: task=lift, k=4, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_lift_200.npz
+[data] 200 demos harvested in 0s
+[data] 9666 windows, obs_dim=19, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_lift.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=10 tac_fold_satfix=10
+[eval] [20/50] qp_anchor=20 tac_fold_satfix=20
+[eval] [30/50] qp_anchor=30 tac_fold_satfix=30
+[eval] [40/50] qp_anchor=40 tac_fold_satfix=40
+[eval] [50/50] qp_anchor=50 tac_fold_satfix=50
+[eval] wall 34s for 50 eps x 2 arms (4 workers)
+
+=== lift closed-loop DP, k=4, n=50 ===
+  qp_anchor         100.0% (50/50)
+  tac_fold_satfix   100.0% (50/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_lift_k4_qp_eval.json
+Finished lift k=4 in 37.9s (exit code 0)
+
+======================================================================
+RoboMimic: task=lift, k=8, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_lift_200.npz
+[data] 200 demos harvested in 0s
+[data] 9666 windows, obs_dim=19, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_lift.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=9 tac_fold_satfix=9
+[eval] [20/50] qp_anchor=20 tac_fold_satfix=20
+[eval] [30/50] qp_anchor=30 tac_fold_satfix=30
+[eval] [40/50] qp_anchor=40 tac_fold_satfix=40
+[eval] [50/50] qp_anchor=50 tac_fold_satfix=50
+[eval] wall 36s for 50 eps x 2 arms (4 workers)
+
+=== lift closed-loop DP, k=8, n=50 ===
+  qp_anchor         100.0% (50/50)
+  tac_fold_satfix   100.0% (50/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_lift_k8_qp_eval.json
+Finished lift k=8 in 40.7s (exit code 0)
+
+======================================================================
+RoboMimic: task=lift, k=1, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_lift_200.npz
+[data] 200 demos harvested in 0s
+[data] 9666 windows, obs_dim=19, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_lift.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=10 tac_fold_satfix=10
+[eval] [20/50] qp_anchor=20 tac_fold_satfix=20
+[eval] [30/50] qp_anchor=30 tac_fold_satfix=30
+[eval] [40/50] qp_anchor=40 tac_fold_satfix=40
+[eval] [50/50] qp_anchor=50 tac_fold_satfix=50
+[eval] wall 33s for 50 eps x 2 arms (4 workers)
+
+=== lift closed-loop DP, k=1, n=50 ===
+  qp_anchor         100.0% (50/50)
+  tac_fold_satfix   100.0% (50/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_lift_k1_qp_eval.json
+Finished lift k=1 in 37.2s (exit code 0)
+
+======================================================================
+RoboMimic: task=can, k=2, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_can_200.npz
+[data] 200 demos harvested in 0s
+[data] 23207 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_can.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=9 tac_fold_satfix=9
+[eval] [20/50] qp_anchor=20 tac_fold_satfix=20
+[eval] [30/50] qp_anchor=29 tac_fold_satfix=29
+[eval] [40/50] qp_anchor=39 tac_fold_satfix=40
+[eval] [50/50] qp_anchor=49 tac_fold_satfix=50
+[eval] wall 74s for 50 eps x 2 arms (4 workers)
+
+=== can closed-loop DP, k=2, n=50 ===
+  qp_anchor          98.0% (49/50)
+  tac_fold_satfix   100.0% (50/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_can_qp_eval.json
+Finished can k=2 in 78.3s (exit code 0)
+
+======================================================================
+RoboMimic: task=can, k=4, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_can_200.npz
+[data] 200 demos harvested in 0s
+[data] 23207 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_can.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=9 tac_fold_satfix=9
+[eval] [20/50] qp_anchor=20 tac_fold_satfix=20
+[eval] [30/50] qp_anchor=29 tac_fold_satfix=29
+[eval] [40/50] qp_anchor=40 tac_fold_satfix=40
+[eval] [50/50] qp_anchor=50 tac_fold_satfix=50
+[eval] wall 75s for 50 eps x 2 arms (4 workers)
+
+=== can closed-loop DP, k=4, n=50 ===
+  qp_anchor         100.0% (50/50)
+  tac_fold_satfix   100.0% (50/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_can_k4_qp_eval.json
+Finished can k=4 in 79.6s (exit code 0)
+
+======================================================================
+RoboMimic: task=can, k=8, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_can_200.npz
+[data] 200 demos harvested in 0s
+[data] 23207 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_can.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=9 tac_fold_satfix=9
+[eval] [20/50] qp_anchor=18 tac_fold_satfix=18
+[eval] [30/50] qp_anchor=24 tac_fold_satfix=24
+[eval] [40/50] qp_anchor=33 tac_fold_satfix=33
+[eval] [50/50] qp_anchor=38 tac_fold_satfix=38
+[eval] wall 120s for 50 eps x 2 arms (4 workers)
+
+=== can closed-loop DP, k=8, n=50 ===
+  qp_anchor          76.0% (38/50)
+  tac_fold_satfix    76.0% (38/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_can_k8_qp_eval.json
+Finished can k=8 in 123.8s (exit code 0)
+
+======================================================================
+RoboMimic: task=can, k=1, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_can_200.npz
+[data] 200 demos harvested in 0s
+[data] 23207 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_can.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=9 tac_fold_satfix=9
+[eval] [20/50] qp_anchor=20 tac_fold_satfix=20
+[eval] [30/50] qp_anchor=29 tac_fold_satfix=29
+[eval] [40/50] qp_anchor=40 tac_fold_satfix=40
+[eval] [50/50] qp_anchor=50 tac_fold_satfix=50
+[eval] wall 62s for 50 eps x 2 arms (4 workers)
+
+=== can closed-loop DP, k=1, n=50 ===
+  qp_anchor         100.0% (50/50)
+  tac_fold_satfix   100.0% (50/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_can_k1_qp_eval.json
+Finished can k=1 in 66.2s (exit code 0)
+
+======================================================================
+RoboMimic: task=square, k=2, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_square_200.npz
+[data] 200 demos harvested in 0s
+[data] 30154 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_square.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=9 tac_fold_satfix=9
+[eval] [20/50] qp_anchor=19 tac_fold_satfix=19
+[eval] [30/50] qp_anchor=28 tac_fold_satfix=28
+[eval] [40/50] qp_anchor=37 tac_fold_satfix=37
+[eval] [50/50] qp_anchor=46 tac_fold_satfix=46
+[eval] wall 98s for 50 eps x 2 arms (4 workers)
+
+=== square closed-loop DP, k=2, n=50 ===
+  qp_anchor          92.0% (46/50)
+  tac_fold_satfix    92.0% (46/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_square_qp_eval.json
+Finished square k=2 in 102.3s (exit code 0)
+
+======================================================================
+RoboMimic: task=square, k=4, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_square_200.npz
+[data] 200 demos harvested in 0s
+[data] 30154 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_square.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=8 tac_fold_satfix=8
+[eval] [20/50] qp_anchor=17 tac_fold_satfix=18
+[eval] [30/50] qp_anchor=26 tac_fold_satfix=28
+[eval] [40/50] qp_anchor=35 tac_fold_satfix=37
+[eval] [50/50] qp_anchor=44 tac_fold_satfix=46
+[eval] wall 102s for 50 eps x 2 arms (4 workers)
+
+=== square closed-loop DP, k=4, n=50 ===
+  qp_anchor          88.0% (44/50)
+  tac_fold_satfix    92.0% (46/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_square_k4_qp_eval.json
+Finished square k=4 in 105.6s (exit code 0)
+
+======================================================================
+RoboMimic: task=square, k=8, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_square_200.npz
+[data] 200 demos harvested in 0s
+[data] 30154 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_square.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=8 tac_fold_satfix=8
+[eval] [20/50] qp_anchor=16 tac_fold_satfix=16
+[eval] [30/50] qp_anchor=25 tac_fold_satfix=25
+[eval] [40/50] qp_anchor=33 tac_fold_satfix=33
+[eval] [50/50] qp_anchor=43 tac_fold_satfix=43
+[eval] wall 114s for 50 eps x 2 arms (4 workers)
+
+=== square closed-loop DP, k=8, n=50 ===
+  qp_anchor          86.0% (43/50)
+  tac_fold_satfix    86.0% (43/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_square_k8_qp_eval.json
+Finished square k=8 in 117.9s (exit code 0)
+
+======================================================================
+RoboMimic: task=square, k=1, arms=qp_anchor,tac_fold_satfix
+======================================================================
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_square_200.npz
+[data] 200 demos harvested in 0s
+[data] 30154 windows, obs_dim=23, act_dim=7, raw |a|>1 frac=0.000
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_square.pt
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[eval] [10/50] qp_anchor=9 tac_fold_satfix=9
+[eval] [20/50] qp_anchor=19 tac_fold_satfix=20
+[eval] [30/50] qp_anchor=27 tac_fold_satfix=27
+[eval] [40/50] qp_anchor=37 tac_fold_satfix=37
+[eval] [50/50] qp_anchor=46 tac_fold_satfix=46
+[eval] wall 99s for 50 eps x 2 arms (4 workers)
+
+=== square closed-loop DP, k=1, n=50 ===
+  qp_anchor          92.0% (46/50)
+  tac_fold_satfix    92.0% (46/50)
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_square_k1_qp_eval.json
+Finished square k=1 in 103.3s (exit code 0)
+
+================================================================================
+ALL ROBOMIMIC QP EVALUATIONS COMPLETE!
+================================================================================

@@ -1,0 +1,162 @@
+{
+  "task": "gym-pusht",
+  "k": 2,
+  "n": 2,
+  "train_steps": 50,
+  "arms": [
+    "native",
+    "zoh",
+    "spline",
+    "spline_satfix",
+    "pchip",
+    "pchip_satfix",
+    "tac_fold",
+    "tac_fold_satfix"
+  ],
+  "success": {
+    "native": [
+      false,
+      false
+    ],
+    "zoh": [
+      false,
+      false
+    ],
+    "spline": [
+      false,
+      false
+    ],
+    "spline_satfix": [
+      false,
+      false
+    ],
+    "pchip": [
+      false,
+      false
+    ],
+    "pchip_satfix": [
+      false,
+      false
+    ],
+    "tac_fold": [
+      false,
+      false
+    ],
+    "tac_fold_satfix": [
+      false,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.0,
+    "zoh": 0.0,
+    "spline": 0.0,
+    "spline_satfix": 0.0,
+    "pchip": 0.0,
+    "pchip_satfix": 0.0,
+    "tac_fold": 0.0,
+    "tac_fold_satfix": 0.0
+  },
+  "contrasts": {
+    "native": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "zoh": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "spline": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "spline_satfix": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "pchip": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "pchip_satfix": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "tac_fold": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "tac_fold_satfix": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    }
+  }
+}

@@ -36,7 +36,8 @@ def evaluate_checkpoint(task, policy_type, ckpt_path, norm_path, n_eval=25, k=1,
     if not os.path.exists(ckpt_path) or not os.path.exists(norm_path):
         return None
 
-    norms = torch.load(norm_path, map_location="cpu", weights_only=True)
+    # Local training artifact contains NumPy normalizer arrays, not only tensors.
+    norms = torch.load(norm_path, map_location="cpu", weights_only=False)
     onorm = MinMax.from_state(norms["onorm"])
     anorm = MinMax.from_state(norms["anorm"])
 

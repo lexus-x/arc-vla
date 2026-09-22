@@ -1,0 +1,31 @@
+{
+  "name": "ManiSkill3-Panda20",
+  "selection_rule": "All 20 tasks in the official Newt ManiSkill3 set that use the Franka/Panda, a 7-D action, and pd_ee_delta_pose, taking all 13 published PickSingleYCB object variants and the 7 non-YCB tabletop tasks under the same contract.",
+  "tasks": [
+    "ms-pick-cube-eepose",
+    "ms-poke-cube",
+    "ms-push-cube",
+    "ms-pull-cube",
+    "ms-pull-cube-tool",
+    "ms-stack-cube",
+    "ms-lift-peg",
+    "ms-pick-apple",
+    "ms-pick-banana",
+    "ms-pick-can",
+    "ms-pick-hammer",
+    "ms-pick-fork",
+    "ms-pick-knife",
+    "ms-pick-mug",
+    "ms-pick-orange",
+    "ms-pick-screwdriver",
+    "ms-pick-spoon",
+    "ms-pick-tennis-ball",
+    "ms-pick-baseball",
+    "ms-pick-sponge"
+  ],
+  "robot": "panda",
+  "control_mode": "pd_ee_delta_pose",
+  "action_dim": 7,
+  "continuous_action_dims": 6,
+  "held_action_dims": 1
+}

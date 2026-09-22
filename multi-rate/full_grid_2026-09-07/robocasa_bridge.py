@@ -16,7 +16,7 @@ import argparse, json, os, pickle, random, socket, struct
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = f"{HERE}/robocasa_data"
+DATA_DIR = os.environ.get("ROBOCASA_DATA_DIR", f"{HERE}/robocasa_data")
 
 # Verified empirically (2026-09-07): RoboCasa PandaMobile action = 12 dims. dims[0:3]=rel_pos,
 # dims[3:6]=rel_rot_axis_angle (both genuine continuous per-step deltas, saturate |a|>1 pre-clip

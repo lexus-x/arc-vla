@@ -25,6 +25,7 @@ ARMS = ["native", "zoh", "spline", "spline_satfix", "pchip", "pchip_satfix", "ta
 MANISKILL = {"PickCube-v1": dict(h5="pick_rl_joint", ctrl="pd_joint_delta_pos", gripper=True, max_steps=100),
              "PushT-v1":    dict(h5="pusht_rl",       ctrl="pd_ee_delta_pose",    gripper=False, max_steps=150)}
 ROBOMIMIC = {"lift": 200, "can": 400, "square": 400}  # max steps (DP paper)
+PUSHT = {"gym-pusht": 300}  # gym_pusht spec max_episode_steps
 RM_OBS = ["object", "robot0_eef_pos", "robot0_eef_quat", "robot0_gripper_qpos"]  # DP low-dim obs
 
 
@@ -133,6 +134,65 @@ class RoboMimicSim:
     def close(self): self.env.close(); self.f.close()
 
 
+
+
+# ------------------------------------------------------------------ gym-pusht adapter
+class PushTSim:
+    """gym_pusht/PushT-v0 + official DP pusht_cchi_v7_replay.zarr (206 demos, full 5-dim state).
+
+    Policy obs = [agent_xy, block_xy, block_angle] (DP low-dim convention).
+    Actions = absolute agent-position targets. Eval = seeded resets (reproducible).
+    Arms run on position deltas in normalised space, re-anchored (apply_arm_pusht).
+    Success = env termination (>=95% coverage).
+    """
+    ZARR = "/home/user/pusht_official/pusht/pusht_cchi_v7_replay.zarr"
+
+    def __init__(self):
+        import gymnasium as gym, gym_pusht  # noqa
+        import zarr
+        self.env = gym.make("gym_pusht/PushT-v0", obs_type="state")
+        self.has_gripper = False
+        self.max_steps = PUSHT["gym-pusht"]
+        z = zarr.open(self.ZARR)
+        state, action, ends = z["data"]["state"][:], z["data"]["action"][:], z["meta"]["episode_ends"][:]
+        self.episodes = []
+        lo = 0
+        for e in ends:
+            n = int(e) - lo
+            if n >= 16:
+                self.episodes.append(dict(obs=state[lo:int(e)].astype(np.float32),
+                                          act=action[lo:int(e)].astype(np.float32)))
+            lo = int(e)
+
+    def split(self, n_train, n_eval):  # eval = seeded resets (fully reproducible)
+        return self.episodes[:n_train], list(range(n_eval))
+
+    def reset_to(self, seed):
+        od, _ = self.env.reset(seed=10_000 + seed)
+        return np.asarray(od, np.float32)
+
+    def step(self, a):
+        od, r, term, trunc, info = self.env.step(np.asarray(a, np.float64))
+        return np.asarray(od, np.float32), bool(term), bool(term or trunc)
+
+    def harvest(self, eps):
+        return [ep["obs"][: len(ep["act"])] for ep in eps], [ep["act"] for ep in eps]
+
+    def close(self):
+        self.env.close()
+
+
+def apply_arm_pusht(chunk, arm):
+    """chunk (8,2) absolute agent targets, already clipped to [-1,1] in normalized space.
+    Returns absolute targets of the same length, resampled at k=2 in delta space."""
+    if arm == "native":
+        return chunk
+    anchor = chunk[0].copy()
+    deltas = np.diff(chunk, axis=0, prepend=chunk[:1])
+    out_d = decimate_and_resample(deltas, K, arm)
+    return (anchor + np.cumsum(out_d, axis=0)).astype(np.float32)
+
+
 # ------------------------------------------------------------------ main
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("task"); ap.add_argument("--steps", type=int, default=30_000)
@@ -140,7 +200,8 @@ def main():
     ap.add_argument("--smoke", action="store_true"); args = ap.parse_args()
     if args.smoke: args.steps, args.n_train, args.n_eval = 50, 3, 2
     dev = "cuda"; torch.manual_seed(0); np.random.seed(0)
-    sim = ManiSkillSim(args.task) if args.task in MANISKILL else RoboMimicSim(args.task)
+    sim = (ManiSkillSim(args.task) if args.task in MANISKILL
+           else PushTSim() if args.task in PUSHT else RoboMimicSim(args.task))
     tag = args.task + ("_smoke" if args.smoke else "")
     train_eps, eval_eps = sim.split(args.n_train, args.n_eval)
 
@@ -169,10 +230,14 @@ def main():
             while steps < sim.max_steps and not s:
                 o = torch.as_tensor(onorm.norm(np.stack(hist[-2:]))[None], device=dev)
                 torch.manual_seed(1_000_003 * ei + replan)  # paired noise across arms
-                chunk = anorm.denorm(policy.sample(o).cpu().numpy()[0])[:8]
+                chunk = policy.sample(o).cpu().numpy()[0][:8]  # normalised [-1,1]
                 sat_e.append(float((np.abs(chunk) > 1).mean()))
                 chunk = np.clip(chunk, -1, 1).astype(np.float32)
-                for a in apply_arm(chunk, arm, sim.has_gripper):
+                if args.task in PUSHT:
+                    sub = anorm.denorm(apply_arm_pusht(chunk, arm))  # arms in normalised delta space, then to raw px
+                else:
+                    sub = apply_arm(chunk, arm, sim.has_gripper)
+                for a in sub:
                     obs, s_t, done = sim.step(a); hist.append(obs); steps += 1; s |= s_t
                     if s or done or steps >= sim.max_steps: break
                 replan += 1

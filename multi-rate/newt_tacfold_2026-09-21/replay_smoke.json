@@ -1,0 +1,32 @@
+{
+  "checkpoint_sha256": "54d76a7dc98d41fc882d446a72892e28e779f7a2f2f17c096ff336f1fe4a2232",
+  "episodes_per_task": 2,
+  "protocol": "PREREG_REPLAY.md",
+  "tasks": {
+    "ms-pick-cube-eepose": {
+      "success": {
+        "bspline": [
+          false,
+          false
+        ],
+        "native": [
+          true,
+          true
+        ],
+        "spline": [
+          false,
+          false
+        ],
+        "tac_fold": [
+          false,
+          false
+        ],
+        "zoh": [
+          true,
+          true
+        ]
+      },
+      "task_index": 93
+    }
+  }
+}

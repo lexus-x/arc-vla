@@ -1,0 +1,51 @@
+{
+  "task": "lift",
+  "policy": "dp",
+  "k": 2,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 2,
+  "n_train": 3,
+  "train_steps": 50,
+  "arms": [
+    "arc",
+    "spline",
+    "tac_fold_satfix",
+    "bspline_eps_raw"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_lift_smoke.pt",
+  "checkpoint_sha256": "fa790ccbe3cc367a646cc5c05d4e266410241d34ea96600be0c7982a410733b4",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "arc": [
+      false,
+      false
+    ],
+    "spline": [
+      false,
+      false
+    ],
+    "tac_fold_satfix": [
+      false,
+      false
+    ],
+    "bspline_eps_raw": [
+      false,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "arc": 0.0,
+    "spline": 0.0,
+    "tac_fold_satfix": 0.0,
+    "bspline_eps_raw": 0.0
+  },
+  "contrasts": {
+    "arc": {},
+    "spline": {},
+    "tac_fold_satfix": {},
+    "bspline_eps_raw": {}
+  }
+}

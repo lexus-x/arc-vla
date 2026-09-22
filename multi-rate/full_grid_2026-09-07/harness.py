@@ -21,11 +21,13 @@ Protocol (pre-registered, do not tune after seeing results):
   * Stats: exact McNemar vs zoh AND vs native, per arm. Loss column always reported.
 Usage: python harness.py TASK [--steps 30000] [--n_train 200] [--n_eval 100] [--smoke]
 """
-import argparse, json, math, os, socket, struct, pickle, sys, time
+import argparse, hashlib, json, math, os, socket, struct, pickle, sys, time
 import multiprocessing as mp
 import numpy as np, torch
 
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
+MANISKILL_DATA_DIR = os.environ.get("MANISKILL_DATA_DIR", "/home/user/maniskill_data")
+ROBOMIMIC_DATA_DIR = os.environ.get("ROBOMIMIC_DATA_DIR", "/home/user/robomimic_data")
 from dp_min import DiffusionPolicy, MinMax, make_chunks, train
 from fm_min import FlowMatchingPolicy
 from resample_math import coarsen_gripper_transitions, decimate_and_resample, gripper_sync
@@ -62,6 +64,14 @@ BRIDGE_HOST, BRIDGE_PORT = "127.0.0.1", 8765
 
 
 def to_np(x): return x.cpu().numpy() if hasattr(x, "cpu") else np.asarray(x)
+
+
+def sha256_file(path):
+    digest = hashlib.sha256()
+    with open(path, "rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
 
 
 def exact_mcnemar(a, b):
@@ -102,8 +112,8 @@ class ManiSkillSim:
                             sim_backend="physx_cuda", reconfiguration_freq=1)
         self.u = self.env.unwrapped; self.has_gripper = cfg["gripper"]; self.n_hold = 1 if cfg["gripper"] else 0
         self.max_steps = cfg["max_steps"]
-        self.meta = json.load(open(f"/home/user/maniskill_data/{cfg['h5']}.json"))["episodes"]
-        self.h5 = h5py.File(f"/home/user/maniskill_data/{cfg['h5']}.h5", "r")
+        self.meta = json.load(open(f"{MANISKILL_DATA_DIR}/{cfg['h5']}.json"))["episodes"]
+        self.h5 = h5py.File(f"{MANISKILL_DATA_DIR}/{cfg['h5']}.h5", "r")
         self.eligible = [e for e in self.meta if len(self.h5[f"traj_{int(e['episode_id'])}"]["actions"]) >= 16]
 
     def _state(self, ep):
@@ -144,7 +154,7 @@ class ManiSkillSim:
 class RoboMimicSim:
     def __init__(self, task):
         import robosuite, h5py
-        self.f = h5py.File(f"/home/user/robomimic_data/{task}.hdf5", "r")
+        self.f = h5py.File(f"{ROBOMIMIC_DATA_DIR}/{task}.hdf5", "r")
         env_meta = json.loads(self.f["data"].attrs["env_args"])
         self.env = robosuite.make(env_meta["env_name"], **env_meta["env_kwargs"])
         self.has_gripper = True; self.n_hold = 1; self.max_steps = ROBOMIMIC[task]
@@ -264,7 +274,12 @@ def run_episode(sim, policy, onorm, anorm, dev, ei, ep, head, K, ND, nblocks):
         while steps < sim.max_steps and not s:
             o = torch.as_tensor(onorm.norm(np.stack(hist[-2:]))[None], device=dev)
             torch.manual_seed(1_000_003 * ei + replan)  # paired noise across arms
-            pred = anorm.denorm(policy.sample(o).cpu().numpy()[0])
+            if head == "arc":
+                rate_condition = torch.tensor([[math.log2(K) / 2.0]], device=dev)
+                sampled = policy.sample(o, rate_condition=rate_condition)
+            else:
+                sampled = policy.sample(o)
+            pred = anorm.denorm(sampled.cpu().numpy()[0])
             if head == "step":
                 chunk = pred[:8]; sat_e.append(float((np.abs(chunk) > 1).mean()))
                 exec_chunk = apply_arm(np.clip(chunk, -1, 1).astype(np.float32), arm, sim.n_hold)
@@ -348,7 +363,8 @@ def main():
     ap.add_argument("--policy", choices=list(POLICIES), default="dp")
     ap.add_argument("--k", type=int, default=2); ap.add_argument("--arms", default=None, help="comma list; default all")
     ap.add_argument("--suffix", default="", help="appended to the result tag (never to the checkpoint)")
-    ap.add_argument("--head", choices=["step", "blocksum", "bspline"], default="step"); ap.add_argument("--nblocks", type=int, default=4)
+    ap.add_argument("--checkpoint-suffix", default="", help="isolates checkpoint provenance")
+    ap.add_argument("--head", choices=["step", "blocksum", "bspline", "arc"], default="step"); ap.add_argument("--nblocks", type=int, default=4)
     ap.add_argument("--seed", type=int, default=0, help="training seed; eval episodes and paired noise are seed-independent")
     ap.add_argument("--fold", type=int, default=-1, help="RoboCasa: held-out fold index (n_eval demos per fold)"); ap.add_argument("--port", type=int, default=BRIDGE_PORT)
     ap.add_argument("--rc-random-eval", action="store_true", help="RoboCasa: evaluate deterministic fresh resets instead of held-out demo states")
@@ -364,6 +380,7 @@ def main():
     global K, ARMS, FOLD
     K = args.k; FOLD = args.fold
     if args.arms: ARMS = [a.strip() for a in args.arms.split(",")]
+    elif args.head == "arc": ARMS = ["zoh", "tac_fold", "tac_fold_satfix"]
     hsfx = ("" if args.head == "step" else f"_{args.head}" + (f"_b{args.nblocks}" if args.head == "blocksum" and args.nblocks != 4 else "")) + (f"_s{args.seed}" if args.seed else "") + (f"_f{args.fold}" if args.fold >= 0 else "")
     if args.head != "step": assert args.policy == "dp", "heads implemented for dp only"
     tag = args.policy + "_" + args.task + hsfx + (f"_k{K}" if K != 2 else "") + args.suffix + ("_smoke" if args.smoke else "")
@@ -373,7 +390,11 @@ def main():
             with open(out_target) as _fp: _d = json.load(_fp)
             _s = _d.get("success", {})
             req_proto = "random_reset" if args.rc_random_eval else "heldout_demo_state"
-            if len(_s) > 0 and all(a in _s and len(_s[a]) == args.n_eval for a in ARMS) and _d.get("eval_protocol") == req_proto:
+            if (len(_s) > 0 and all(a in _s and len(_s[a]) == args.n_eval for a in ARMS)
+                    and _d.get("eval_protocol") == req_proto
+                    and _d.get("eval_seed") == args.eval_seed
+                    and _d.get("n_train") == args.n_train
+                    and _d.get("train_steps") == args.steps):
                 print(f"[skip] {out_target} already complete ({args.n_eval} eps, all arms present). Skipping.")
                 sim.close()
                 return
@@ -392,9 +413,23 @@ def main():
     print(f"[data] {len(O)} demos harvested in {time.time()-t0:.0f}s", flush=True)
     onorm, anorm = MinMax(np.concatenate(O)), MinMax(np.concatenate(A))
     ND = A[0].shape[-1] - sim.n_hold  # continuous (resampled) dims; trailing dims are causal-hold
+    rate_conditions = None
     if args.head == "step":
         chunks = [make_chunks(onorm.norm(o), anorm.norm(a), 2, 16) for o, a in zip(O, A)]
         OC, AC = np.concatenate([c[0] for c in chunks]), np.concatenate([c[1] for c in chunks])
+    elif args.head == "arc":
+        chunks = [make_chunks(onorm.norm(o), a, 2, heads.ARC_BLOCKS * max(heads.ARC_RATES))
+                  for o, a in zip(O, A)]
+        base_oc = np.concatenate([c[0] for c in chunks])
+        raw = np.concatenate([c[1] for c in chunks])
+        targets = [heads.arc_targets(raw, ND, rate) for rate in heads.ARC_RATES]
+        OC = np.concatenate([base_oc for _ in heads.ARC_RATES])
+        AC = np.concatenate(targets)
+        rate_conditions = np.concatenate([
+            np.full((len(base_oc), 1), math.log2(rate) / 2.0, np.float32)
+            for rate in heads.ARC_RATES
+        ])
+        anorm = MinMax(AC.reshape(-1, AC.shape[-1])); AC = anorm.norm(AC)
     else:  # head targets from RAW 16-step windows; normaliser fit on the targets themselves
         chunks = [make_chunks(onorm.norm(o), a, 2, 16) for o, a in zip(O, A)]
         OC = np.concatenate([c[0] for c in chunks])
@@ -403,13 +438,20 @@ def main():
     print(f"[data] {len(OC)} windows, obs_dim={OC.shape[-1]}, act_dim={AC.shape[-1]}, "
           f"raw |a|>1 frac={float((np.abs(np.concatenate(A))>1).mean()):.3f}", flush=True)
 
-    ckpt = f"{HERE}/{args.policy}_{args.task}{hsfx}" + ("_smoke" if args.smoke else "") + ".pt"  # k-agnostic; smoke never touches the real ckpt
-    policy = POLICIES[args.policy](OC.shape[-1], AC.shape[-1], **({"horizon": AC.shape[1]} if args.head != "step" else {}))
+    ckpt = (f"{HERE}/{args.policy}_{args.task}{hsfx}{args.checkpoint_suffix}" +
+            ("_smoke" if args.smoke else "") + ".pt")  # k-agnostic
+    head_kwargs = ({"horizon": AC.shape[1]} if args.head != "step" else {})
+    if args.head == "arc": head_kwargs["rate_condition_dim"] = 1
+    policy = POLICIES[args.policy](OC.shape[-1], AC.shape[-1], **head_kwargs)
     if os.path.exists(ckpt) and not args.smoke:
         policy.load_state_dict(torch.load(ckpt, map_location=dev, weights_only=True)); policy.to(dev).eval(); print(f"[train] loaded {ckpt}")
     else:
-        policy = train(policy, OC, AC, steps=args.steps, dev=dev)
-        torch.save(policy.state_dict(), ckpt); print(f"[train] saved {ckpt}")
+        policy = train(policy, OC, AC, steps=args.steps, dev=dev,
+                       rate_conditions=rate_conditions)
+        checkpoint_tmp = f"{ckpt}.{os.getpid()}.partial"
+        torch.save(policy.state_dict(), checkpoint_tmp)
+        os.replace(checkpoint_tmp, ckpt)
+        print(f"[train] saved {ckpt}")
     policy.eval()
 
     # ---- eval
@@ -420,7 +462,6 @@ def main():
         sim.close()
     else:
         sim.close()  # not reused for parallel eval -- each worker builds its own
-        head_kwargs = {"horizon": AC.shape[1]} if args.head != "step" else {}
         succ, sat = _eval_parallel(n_workers, args, ND, eval_eps, ckpt, OC.shape[-1], AC.shape[-1], head_kwargs, onorm, anorm)
     print(f"[eval] wall {time.time()-t_eval:.0f}s for {len(eval_eps)} eps x {len(ARMS)} arms"
           f"{f' ({n_workers} workers)' if n_workers > 1 else ''}", flush=True)
@@ -428,9 +469,11 @@ def main():
     S = {a: np.asarray(succ[a], bool) for a in ARMS}
     print(f"\n=== {args.task} closed-loop {args.policy.upper()}, k={K}, n={len(eval_eps)} ===")
     res = {"task": args.task, "policy": args.policy, "k": K, "head": args.head, "seed": args.seed, "fold": args.fold,
-           "n": len(eval_eps), "train_steps": args.steps, "arms": ARMS,
+           "n": len(eval_eps), "n_train": args.n_train, "train_steps": args.steps, "arms": ARMS,
+           "checkpoint_path": os.path.abspath(ckpt), "checkpoint_sha256": sha256_file(ckpt),
            "eval_protocol": "random_reset" if args.rc_random_eval else "heldout_demo_state", "eval_seed": args.eval_seed,
            "success": {a: succ[a] for a in ARMS}, "policy_raw_sat_frac": {a: float(np.mean(sat[a])) for a in ARMS}, "contrasts": {}}
+    if args.head == "arc": res["arc_training_rates"] = list(heads.ARC_RATES)
     for a in ARMS:
         line = f"  {a:16s} {100*S[a].mean():6.1f}% ({S[a].sum()}/{len(S[a])})"
         res["contrasts"][a] = {}
@@ -444,7 +487,12 @@ def main():
             line += f"  | vs {ref}: {d:+6.1f}pp p={p:.3g}"
         print(line)
     print(f"  policy raw |a|>1 frac (pre-clip): {res['policy_raw_sat_frac'][ARMS[0]]:.3f}")
-    out = f"{HERE}/result_{tag}.json"; json.dump(res, open(out, "w"), indent=2); print(f"[saved] {out}")
+    out = f"{HERE}/result_{tag}.json"
+    result_tmp = f"{out}.{os.getpid()}.partial"
+    with open(result_tmp, "w") as stream:
+        json.dump(res, stream, indent=2)
+    os.replace(result_tmp, out)
+    print(f"[saved] {out}")
 
 
 if __name__ == "__main__":

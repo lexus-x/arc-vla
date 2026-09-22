@@ -1,0 +1,68 @@
+{
+  "task": "lift",
+  "policy": "dp",
+  "k": 2,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 10,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "tac_fold",
+    "tac_fold_satfix",
+    "qp_anchor"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_lift.pt",
+  "checkpoint_sha256": "094468cd769fd288a613bae8d309de793c2567adb52fbf7995f0600231faf6bc",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "tac_fold": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "tac_fold_satfix": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "qp_anchor": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "tac_fold": 0.0,
+    "tac_fold_satfix": 0.0,
+    "qp_anchor": 0.0
+  },
+  "contrasts": {
+    "tac_fold": {},
+    "tac_fold_satfix": {},
+    "qp_anchor": {}
+  }
+}

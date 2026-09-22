@@ -22,6 +22,7 @@ from dp_min import EMA, MinMax, VisualDiffusionPolicy
 from robocasa_bridge import recv_msg, send_msg
 from robocasa_vision_data import VisionDataset, EpisodeWindows, PAPER, split_demos, sha256_file
 from download_robocasa_vision_data import DEFAULT_OUTPUT_DIR
+import heads
 
 FORMAT_VERSION = 1
 ARCHITECTURE_FIELDS = {
@@ -32,8 +33,50 @@ BUDGET_FIELDS = {"steps", "batch_size", "microbatch", "lr", "seed", "ddim_steps"
 DECIMATED_TASK = "CloseSingleDoor"
 DECIMATED_ROBOCASA_TASK = "RC-CloseSingleDoor"
 DEFAULT_COMPARISON_ARMS = (
-    "native", "zoh", "spline_satfix", "bspline_eps_satfix", "gripper_sync",
+    "native", "zoh", "tac_fold", "tac_fold_satfix", "spline", "spline_satfix",
+    "bspline_eps_raw", "bspline_eps_satfix", "gripper_sync",
 )
+
+
+class ARCVisualWindows:
+    """Rate-conditioned visual windows without duplicating stored RGB frames."""
+    class _Raw:
+        @staticmethod
+        def norm(value):
+            return value
+
+    def __init__(self, episodes, state_norm, action_norm, n_hold=6):
+        self.base = EpisodeWindows(
+            episodes, state_norm, self._Raw(), horizon=heads.ARC_BLOCKS * max(heads.ARC_RATES))
+        self.action_norm, self.nd = action_norm, episodes[0]["actions"].shape[-1] - n_hold
+
+    def __len__(self):
+        return len(self.base) * len(heads.ARC_RATES)
+
+    def batch(self, indices):
+        indices = np.asarray(indices)
+        rate_ids, base_indices = np.divmod(indices, len(self.base))
+        states, images, raw = self.base.batch(base_indices)
+        rates = np.asarray(heads.ARC_RATES)[rate_ids]
+        actions = np.stack([
+            heads.arc_targets(action[None], self.nd, int(rate))[0]
+            for action, rate in zip(raw, rates)
+        ])
+        condition = (np.log2(rates) / 2.0).astype(np.float32)[:, None]
+        return states, images, self.action_norm.norm(actions), condition
+
+
+def arc_action_normalizer(episodes, n_hold=6):
+    """Fit ARC normalization to the same padded targets sampled during training."""
+    nd = episodes[0]["actions"].shape[-1] - n_hold
+    targets = []
+    horizon = heads.ARC_BLOCKS * max(heads.ARC_RATES)
+    for episode in episodes:
+        action = episode["actions"]
+        padded = np.concatenate([action, np.repeat(action[-1:], horizon, axis=0)])
+        windows = np.stack([padded[t:t + horizon] for t in range(len(action))])
+        targets.extend(heads.arc_targets(windows, nd, rate) for rate in heads.ARC_RATES)
+    return MinMax(np.concatenate(targets))
 
 
 def train_vision(policy, windows, steps=15_000, bs=256, microbatch=16, lr=1e-4,
@@ -53,9 +96,11 @@ def train_vision(policy, windows, steps=15_000, bs=256, microbatch=16, lr=1e-4,
         loss_sum = 0.
         for start in range(0, bs, microbatch):
             batch_indices = indices[start:start + microbatch]
-            state, images, actions = windows.batch(batch_indices)
+            batch = windows.batch(batch_indices)
+            state, images, actions = batch[:3]
+            condition = None if len(batch) == 3 else torch.as_tensor(batch[3], device=dev)
             loss = policy.loss(torch.as_tensor(state, device=dev), images,
-                               torch.as_tensor(actions, device=dev))
+                               torch.as_tensor(actions, device=dev), condition)
             if not torch.isfinite(loss):
                 raise FloatingPointError("nonfinite visual DP loss")
             fraction = len(batch_indices) / bs
@@ -101,8 +146,12 @@ def validate_checkpoint(checkpoint, metadata):
         raise ValueError("invalid visual architecture")
     if (not arch["down_dims"] or any(type(width) is not int or width < 1 for width in arch["down_dims"])):
         raise ValueError("invalid U-Net dimensions")
-    if (arch["n_obs"], arch["horizon"], arch["n_action_steps"]) != (2, 16, 8):
-        raise ValueError("Stage 1 requires n_obs=2, horizon=16, n_action_steps=8")
+    rate_dim = arch.get("rate_condition_dim", 0)
+    if rate_dim not in (0, 1):
+        raise ValueError("invalid rate conditioning")
+    expected = (2, 8, 8) if rate_dim else (2, 16, 8)
+    if (arch["n_obs"], arch["horizon"], arch["n_action_steps"]) != expected:
+        raise ValueError(f"Stage 1 requires n_obs,horizon,n_action_steps={expected}")
     if (any(type(budget[key]) is not int or budget[key] < 1
             for key in ("steps", "batch_size", "microbatch")) or
             type(budget["seed"]) is not int or
@@ -132,7 +181,7 @@ def default_max_steps(task):
 
 
 def experiment_request(task, metadata, n_train, n_eval, steps, batch_size, microbatch,
-                       training_seed, eval_seed, max_steps=None):
+                       training_seed, eval_seed, max_steps=None, head="step", k=1):
     """Canonical requested experiment identity used by direct eval and campaigns."""
     if metadata.get("task") != task:
         raise ValueError(f"requested task {task} does not match dataset task {metadata.get('task')}")
@@ -148,6 +197,8 @@ def experiment_request(task, metadata, n_train, n_eval, steps, batch_size, micro
         "training_seed": training_seed,
         "eval_seed": eval_seed,
         "max_steps": default_max_steps(task) if max_steps is None else max_steps,
+        "head": head,
+        "k": k,
     }
     if (any(type(requested[key]) is not int or requested[key] < 1
             for key in ("steps", "batch_size", "microbatch", "max_steps")) or
@@ -170,6 +221,9 @@ def validate_checkpoint_request(checkpoint, metadata, requested):
     if checkpoint["eval_demo_indices"] != requested["eval_demo_indices"]:
         mismatches.append("evaluation split/count")
     budget = checkpoint["budget"]
+    checkpoint_head = "arc" if checkpoint["architecture"].get("rate_condition_dim", 0) else "step"
+    if checkpoint_head != requested.get("head", "step"):
+        mismatches.append("head")
     for checkpoint_key, request_key in (
         ("steps", "steps"), ("batch_size", "batch_size"), ("microbatch", "microbatch"),
         ("seed", "training_seed"),
@@ -212,12 +266,24 @@ def validate_result_request(result, checkpoint_path, data, checkpoint, requested
         mismatches.append("evaluation seed")
     if result.get("max_steps") != requested["max_steps"]:
         mismatches.append("evaluation max steps")
+    if result.get("head", "step") != requested.get("head", "step"):
+        mismatches.append("head")
+    comparison_arms = result.get("arms")
+    if comparison_arms is not None and result.get("k") != requested.get("k"):
+        mismatches.append("action resolution")
     episodes = result.get("episodes")
     episode_count = result.get("episode_count")
     if type(result.get("complete")) is not bool:
         mismatches.append("completion status")
+    native_records_valid = isinstance(episodes, list) and len(episodes) == episode_count
+    comparison_records_valid = (
+        isinstance(comparison_arms, list) and comparison_arms and
+        isinstance(episodes, dict) and set(episodes) == set(comparison_arms) and
+        all(isinstance(episodes[arm], list) and len(episodes[arm]) == episode_count
+            for arm in comparison_arms)
+    )
     if (type(episode_count) is not int or episode_count < 0 or
-            not isinstance(episodes, list) or len(episodes) != episode_count):
+            not (native_records_valid or comparison_records_valid)):
         mismatches.append("episode count/records")
     if result.get("complete") is True and (
             type(episode_count) is not int or episode_count < len(requested["eval_demo_indices"])):
@@ -336,7 +402,7 @@ def apply_comparison_arm(chunk, arm, n_hold, k):
 
 
 def decimated_rollout(client, policy, state_norm, action_norm, demo_index, ei,
-                      max_steps, dev, arm, k, n_hold):
+                      max_steps, dev, arm, k, n_hold, head="step"):
     """Run one paired visual-policy arm with harness-identical chunk execution."""
     observation = client.request("reset_to", idx=demo_index)["obs"]
     history = deque([observation] * policy.n_obs, maxlen=policy.n_obs)
@@ -346,11 +412,19 @@ def decimated_rollout(client, policy, state_norm, action_norm, demo_index, ei,
         images = {key: np.stack([o["images"][key] for o in history])[None]
                   for key in policy.camera_keys}
         torch.manual_seed(1_000_003 * ei + replan)  # paired noise across arms
-        predicted = policy.sample(
-            torch.as_tensor(state_norm.norm(states), device=dev), images, n_steps=10)
+        inputs = (torch.as_tensor(state_norm.norm(states), device=dev), images)
+        if head == "arc":
+            condition = torch.tensor([[math.log2(k) / 2.0]], device=dev)
+            predicted = policy.sample(*inputs, n_steps=10, rate_condition=condition)
+        else:
+            predicted = policy.sample(*inputs, n_steps=10)
         actions = action_norm.denorm(predicted[0].cpu().numpy())
-        chunk = np.clip(actions[:policy.n_action_steps], -1, 1).astype(np.float32)
-        exec_chunk = apply_comparison_arm(chunk, arm, n_hold, k)
+        if head == "arc":
+            exec_chunk = np.clip(
+                heads.decode(actions, "arc", actions.shape[-1] - n_hold, k, arm), -1, 1)
+        else:
+            chunk = np.clip(actions[:policy.n_action_steps], -1, 1).astype(np.float32)
+            exec_chunk = apply_comparison_arm(chunk, arm, n_hold, k)
         for action in exec_chunk:
             reply = client.request("step", action=action)
             executed += 1
@@ -389,7 +463,7 @@ def comparison_result(task, episodes, checkpoint_path, data, checkpoint, max_ste
 
 
 def decimated_comparison_result(task, episodes_by_arm, checkpoint_path, data, checkpoint,
-                                max_steps, eval_seed, k, n_hold):
+                                max_steps, eval_seed, k, n_hold, head="step"):
     """Build a harness-style paired multi-arm result with exact McNemar contrasts."""
     from harness import exact_mcnemar
 
@@ -439,10 +513,13 @@ def decimated_comparison_result(task, episodes_by_arm, checkpoint_path, data, ch
         "task": task,
         "paper_task": label,
         "policy": "visual_diffusion_policy",
+        "head": head,
         "task_mapping": {"dataset_task": task, "paper_task": label},
         "k": k,
         "n_hold": n_hold,
-        "action_execution": "clip each predicted 8-step chunk to [-1,1], then apply harness.apply_arm",
+        "action_execution": ("decode eight rate-conditioned block means, then clip to [-1,1]"
+                             if head == "arc" else
+                             "clip each predicted 8-step chunk to [-1,1], then apply harness.apply_arm"),
         "ddim_steps": 10,
         "arms": arms,
         "episode_count": episode_count,
@@ -503,6 +580,7 @@ def build_parser():
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--port", type=int, default=8766)
     parser.add_argument("--k", type=int, default=2)
+    parser.add_argument("--head", choices=("step", "arc"), default="step")
     parser.add_argument("--arms", type=parse_arms,
                         help="comma list; default all comparison arms for CloseSingleDoor")
     parser.add_argument("--check-artifacts", action="store_true",
@@ -517,6 +595,8 @@ def main():
         parser.error("--max-steps must be positive")
     if args.k < 1:
         parser.error("--k must be positive")
+    if args.head == "arc" and (args.task != DECIMATED_TASK or args.k not in heads.ARC_RATES):
+        parser.error("visual ARC evaluation supports CloseSingleDoor at trained rates 1, 2, or 4")
     if args.mode != "train" and not args.check_artifacts:
         if args.task != DECIMATED_TASK and args.arms is not None:
             parser.error("--arms is supported for CloseSingleDoor evaluation only")
@@ -527,15 +607,17 @@ def main():
             if args.max_steps is not None and args.max_steps != expected_max_steps:
                 parser.error(f"CloseSingleDoor comparison requires --max-steps {expected_max_steps}")
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    path = args.checkpoint or args.output_dir / f"{args.task}.pt"
+    path = args.checkpoint or args.output_dir / f"{args.task}{'_arc' if args.head == 'arc' else ''}.pt"
     data = VisionDataset(args.task, args.data_dir)
     try:
         requested = experiment_request(
             args.task, data.metadata, args.n_train, args.n_eval, args.steps, args.batch_size,
-            args.microbatch, args.seed, args.eval_seed, args.max_steps,
+            args.microbatch, args.seed, args.eval_seed, args.max_steps, args.head, args.k,
         )
         if args.check_artifacts:
-            result_path = args.output_dir / f"{args.task}_native.json"
+            result_path = args.output_dir / (
+                f"{args.task}_{args.head}_decimated_k{args.k}.json"
+                if args.task == DECIMATED_TASK else f"{args.task}_native.json")
             try:
                 status = campaign_artifact_status(path, result_path, data, requested)
             except ValueError as exc:
@@ -549,12 +631,18 @@ def main():
             print(f"[data] {args.task} train={train_indices} eval={eval_indices} cameras={data.camera_keys}", flush=True)
             episodes = [data.episode(i) for i in train_indices]
             state_norm = MinMax(np.concatenate([e["state"] for e in episodes]))
-            action_norm = MinMax(np.concatenate([e["actions"] for e in episodes]))
+            action_norm = (arc_action_normalizer(episodes) if args.head == "arc" else
+                           MinMax(np.concatenate([e["actions"] for e in episodes])))
             architecture = {"proprio_dim": sum(data.widths.values()), "act_dim": data.act_dim,
                             "camera_keys": list(data.camera_keys), "image_layouts": data.layouts,
-                            "embedding_dim": 64, "backbone": "resnet18", "n_obs": 2, "horizon": 16,
+                            "embedding_dim": 64, "backbone": "resnet18", "n_obs": 2,
+                            "horizon": 8 if args.head == "arc" else 16,
                             "n_action_steps": 8, "T": 100, "down_dims": (256, 512, 1024)}
-            windows = EpisodeWindows(episodes, state_norm, action_norm)
+            if args.head == "arc":
+                architecture["rate_condition_dim"] = 1
+                windows = ARCVisualWindows(episodes, state_norm, action_norm)
+            else:
+                windows = EpisodeWindows(episodes, state_norm, action_norm)
             policy = VisualDiffusionPolicy(**architecture)
             ema = train_vision(policy, windows, args.steps, args.batch_size, args.microbatch,
                                dev=args.device, seed=args.seed)
@@ -574,7 +662,8 @@ def main():
             if args.task == DECIMATED_TASK:
                 import harness
 
-                arms = args.arms or DEFAULT_COMPARISON_ARMS
+                arms = args.arms or (("zoh", "tac_fold", "tac_fold_satfix")
+                                     if args.head == "arc" else DEFAULT_COMPARISON_ARMS)
                 episodes_by_arm = {arm: [] for arm in arms}
                 robocasa_config = harness.ROBOCASA[DECIMATED_ROBOCASA_TASK]
                 max_steps = robocasa_config["max_steps"]
@@ -586,7 +675,7 @@ def main():
                         for arm in arms:
                             result = decimated_rollout(
                                 client, policy, state_norm, action_norm, index, episode_index,
-                                max_steps, args.device, arm, args.k, n_hold)
+                                max_steps, args.device, arm, args.k, n_hold, args.head)
                             episodes_by_arm[arm].append(result)
                         counts = " ".join(
                             f"{arm}={sum(episode['success'] for episode in episodes_by_arm[arm])}"
@@ -595,10 +684,10 @@ def main():
                               f"{len(checkpoint['eval_demo_indices'])} {counts}", flush=True)
                         report = decimated_comparison_result(
                             args.task, episodes_by_arm, path, data, checkpoint, max_steps,
-                            args.eval_seed, args.k, n_hold)
+                            args.eval_seed, args.k, n_hold, args.head)
                         report["complete"] = (
                             episode_index + 1 == len(checkpoint["eval_demo_indices"]))
-                        result_path = args.output_dir / f"{args.task}_decimated_k{args.k}.json"
+                        result_path = args.output_dir / f"{args.task}_{args.head}_decimated_k{args.k}.json"
                         temporary = result_path.with_suffix(".json.partial")
                         temporary.write_text(json.dumps(report, indent=2) + "\n")
                         temporary.replace(result_path)

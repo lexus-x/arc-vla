@@ -292,6 +292,7 @@ RESAMPLERS = {
     # gripper_sync composition is applied by harness.apply_arm after this default
     # spline+satfix backbone has reconstructed the continuous dimensions.
     "gripper_sync": resample_spline_satfix,
+    "arc": lambda block_sum, k: __import__("resample_arc").resample_arc(block_sum, k, is_up=False),
 }
 
 

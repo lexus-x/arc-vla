@@ -1,0 +1,44 @@
+/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+[data] 150 demos harvested in 0s
+[data] 18426 windows, obs_dim=5, act_dim=2, raw |a|>1 frac=1.000
+[train] step 1/30000 loss=1.07973
+[train] step 2000/30000 loss=0.03114
+[train] step 4000/30000 loss=0.02787
+[train] step 6000/30000 loss=0.02251
+[train] step 8000/30000 loss=0.01642
+[train] step 10000/30000 loss=0.01896
+[train] step 12000/30000 loss=0.01356
+[train] step 14000/30000 loss=0.01114
+[train] step 16000/30000 loss=0.00910
+[train] step 18000/30000 loss=0.00839
+[train] step 20000/30000 loss=0.00716
+[train] step 22000/30000 loss=0.00594
+[train] step 24000/30000 loss=0.00527
+[train] step 26000/30000 loss=0.00469
+[train] step 28000/30000 loss=0.00568
+[train] step 30000/30000 loss=0.00400
+[train] saved /home/user/Desktop/multi-rate/dp_tacfold_2026-09-06/dp_gym-pusht.pt
+[eval] [10/100] native=5 zoh=7 spline=6 spline_satfix=6 pchip=4 pchip_satfix=4 tac_fold=5 tac_fold_satfix=5
+[eval] [20/100] native=7 zoh=10 spline=12 spline_satfix=12 pchip=11 pchip_satfix=11 tac_fold=9 tac_fold_satfix=9
+[eval] [30/100] native=13 zoh=13 spline=17 spline_satfix=17 pchip=16 pchip_satfix=16 tac_fold=14 tac_fold_satfix=14
+[eval] [40/100] native=16 zoh=16 spline=22 spline_satfix=22 pchip=21 pchip_satfix=21 tac_fold=19 tac_fold_satfix=19
+[eval] [50/100] native=19 zoh=19 spline=25 spline_satfix=25 pchip=26 pchip_satfix=26 tac_fold=23 tac_fold_satfix=23
+[eval] [60/100] native=25 zoh=27 spline=33 spline_satfix=33 pchip=33 pchip_satfix=33 tac_fold=31 tac_fold_satfix=31
+[eval] [70/100] native=32 zoh=34 spline=38 spline_satfix=38 pchip=40 pchip_satfix=40 tac_fold=39 tac_fold_satfix=39
+[eval] [80/100] native=39 zoh=39 spline=43 spline_satfix=43 pchip=45 pchip_satfix=45 tac_fold=44 tac_fold_satfix=44
+[eval] [90/100] native=45 zoh=45 spline=48 spline_satfix=48 pchip=49 pchip_satfix=49 tac_fold=48 tac_fold_satfix=48
+[eval] [100/100] native=51 zoh=46 spline=52 spline_satfix=52 pchip=52 pchip_satfix=52 tac_fold=52 tac_fold_satfix=52
+[eval] wall 928s for 100 eps x 8 arms
+
+=== gym-pusht closed-loop DP, k=2, n=100 ===
+  native             51.0% (51/100)  | vs zoh:   +5.0pp p=0.5
+  zoh                46.0% (46/100)  | vs native:   -5.0pp p=0.5
+  spline             52.0% (52/100)  | vs zoh:   +6.0pp p=0.392  | vs native:   +1.0pp p=1
+  spline_satfix      52.0% (52/100)  | vs zoh:   +6.0pp p=0.392  | vs native:   +1.0pp p=1
+  pchip              52.0% (52/100)  | vs zoh:   +6.0pp p=0.392  | vs native:   +1.0pp p=1
+  pchip_satfix       52.0% (52/100)  | vs zoh:   +6.0pp p=0.392  | vs native:   +1.0pp p=1
+  tac_fold           52.0% (52/100)  | vs zoh:   +6.0pp p=0.405  | vs native:   +1.0pp p=1
+  tac_fold_satfix    52.0% (52/100)  | vs zoh:   +6.0pp p=0.405  | vs native:   +1.0pp p=1
+  policy raw |a|>1 frac (pre-clip): 0.000
+[saved] /home/user/Desktop/multi-rate/dp_tacfold_2026-09-06/result_gym-pusht.json

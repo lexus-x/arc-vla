@@ -26,6 +26,7 @@ from stage1_vision import (
     native_rollout,
     save_checkpoint,
     validate_checkpoint,
+    validate_result_request,
 )
 
 
@@ -547,6 +548,33 @@ def test_decimated_result_contains_paired_success_steps_and_exact_mcnemar(tmp_pa
         "arm_only": arm_only,
         "reference_only": reference_only,
     }
+
+
+def test_decimated_result_validation_accepts_paired_arm_records_and_checks_rate(tmp_path: Path):
+    checkpoint_path = tmp_path / "policy.pt"
+    checkpoint = valid_checkpoint()
+    checkpoint["data_metadata"]["task"] = "CloseSingleDoor"
+    torch.save(checkpoint, checkpoint_path)
+    data = SimpleNamespace(path=(tmp_path / "dataset.hdf5").resolve(),
+                           metadata=checkpoint["data_metadata"])
+    episodes = {
+        "zoh": [{"demo_index": 2, "success": False, "steps": 8},
+                {"demo_index": 3, "success": True, "steps": 8}],
+        "tac_fold_satfix": [{"demo_index": 2, "success": True, "steps": 8},
+                            {"demo_index": 3, "success": True, "steps": 8}],
+    }
+    result = decimated_comparison_result(
+        "CloseSingleDoor", episodes, checkpoint_path, data, checkpoint,
+        max_steps=500, eval_seed=0, k=4, n_hold=6)
+    result["complete"] = True
+    requested = experiment_request(
+        "CloseSingleDoor", data.metadata, 2, 2, 15_000, 256, 16, 0, 0,
+        head="step", k=4)
+
+    validate_result_request(result, checkpoint_path, data, checkpoint, requested)
+    with pytest.raises(ValueError, match="action resolution"):
+        validate_result_request(result, checkpoint_path, data, checkpoint,
+                                dict(requested, k=2))
 
 
 @pytest.mark.parametrize("task", list(PAPER))

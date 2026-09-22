@@ -1,0 +1,22 @@
+{
+  "checkpoint_sha256": "54d76a7dc98d41fc882d446a72892e28e779f7a2f2f17c096ff336f1fe4a2232",
+  "episodes_per_task": 2,
+  "protocol": "PREREG.md",
+  "tasks": {
+    "ms-pick-apple": {
+      "plan_saturation": {
+        "native": [
+          0.0,
+          0.0
+        ]
+      },
+      "success": {
+        "native": [
+          false,
+          true
+        ]
+      },
+      "task_index": 102
+    }
+  }
+}

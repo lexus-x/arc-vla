@@ -1,34 +1,0 @@
-
-======================================================================
-Evaluating 50.0Hz (fps=50, factor=5, is_up=True)
-Arms: ['arc'] | n=50 | batch=10
-======================================================================
-WARNING:root:Unexpected key(s) when loading model: ['normalize_inputs.buffer_observation_image.mean', 'normalize_inputs.buffer_observation_image.std', 'normalize_inputs.buffer_observation_state.max', 'normalize_inputs.buffer_observation_state.min', 'normalize_targets.buffer_action.max', 'normalize_targets.buffer_action.min', 'unnormalize_outputs.buffer_action.max', 'unnormalize_outputs.buffer_action.min']
-/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
-  from pkg_resources import resource_stream, resource_exists
-Loading weights from local directory
-gym id 'gym_pusht/PushT-v0' not found, attempting to import 'gym_pusht'...
-Stepping through eval batches:   0%|          | 0/5 [00:00<?, ?it/s]
-Running rollout with at most 1500 steps:   0%|          | 0/1500 [00:00<?, ?it/s][A/home/user/lerobot/src/lerobot/scripts/lerobot_eval.py:162: UserWarning: The environment does not have 'task_description' and 'task'. Some policies require these features.
-  check_env_attributes_and_types(env)
-
-Running rollout with at most 1500 steps:   0%|          | 0/1500 [00:01<?, ?it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 1/1500 [00:01<31:18,  1.25s/it, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 1/1500 [00:01<31:18,  1.25s/it, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 2/1500 [00:01<31:17,  1.25s/it, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 3/1500 [00:01<31:16,  1.25s/it, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 4/1500 [00:01<31:14,  1.25s/it, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 5/1500 [00:01<05:21,  4.65it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 5/1500 [00:01<05:21,  4.65it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 6/1500 [00:01<05:21,  4.65it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 7/1500 [00:01<05:21,  4.65it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 8/1500 [00:02<05:20,  4.65it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 9/1500 [00:02<04:47,  5.18it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 9/1500 [00:02<04:47,  5.18it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 10/1500 [00:02<04:47,  5.18it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 11/1500 [00:02<04:47,  5.18it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 12/1500 [00:02<04:47,  5.18it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 13/1500 [00:02<02:59,  8.28it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 13/1500 [00:02<02:59,  8.28it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 14/1500 [00:02<02:59,  8.28it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 15/1500 [00:02<02:59,  8.28it/s, running_success_rate=0.0%][A

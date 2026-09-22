@@ -1,75 +1,0 @@
-
-======================================================================
-Evaluating 50.0Hz (fps=50, factor=5, is_up=True)
-Arms: ['qp_anchor', 'tac_fold_satfix'] | n=50 | batch=10
-======================================================================
-WARNING:root:Unexpected key(s) when loading model: ['normalize_inputs.buffer_observation_image.mean', 'normalize_inputs.buffer_observation_image.std', 'normalize_inputs.buffer_observation_state.max', 'normalize_inputs.buffer_observation_state.min', 'normalize_targets.buffer_action.max', 'normalize_targets.buffer_action.min', 'unnormalize_outputs.buffer_action.max', 'unnormalize_outputs.buffer_action.min']
-/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
-  from pkg_resources import resource_stream, resource_exists
-Loading weights from local directory
-gym id 'gym_pusht/PushT-v0' not found, attempting to import 'gym_pusht'...
-Stepping through eval batches:   0%|          | 0/5 [00:00<?, ?it/s]
-Running rollout with at most 1500 steps:   0%|          | 0/1500 [00:00<?, ?it/s][A/home/user/lerobot/src/lerobot/scripts/lerobot_eval.py:162: UserWarning: The environment does not have 'task_description' and 'task'. Some policies require these features.
-  check_env_attributes_and_types(env)
-
-Running rollout with at most 1500 steps:   0%|          | 0/1500 [00:02<?, ?it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 1/1500 [00:02<1:00:12,  2.41s/it, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 1/1500 [00:02<1:00:12,  2.41s/it, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 2/1500 [00:02<1:00:09,  2.41s/it, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 3/1500 [00:02<1:00:07,  2.41s/it, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 4/1500 [00:02<12:06,  2.06it/s, running_success_rate=0.0%]  [A
-Running rollout with at most 1500 steps:   0%|          | 4/1500 [00:02<12:06,  2.06it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 5/1500 [00:02<12:05,  2.06it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 6/1500 [00:02<12:05,  2.06it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   0%|          | 7/1500 [00:02<12:04,  2.06it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 8/1500 [00:04<12:04,  2.06it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 9/1500 [00:04<09:00,  2.76it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 9/1500 [00:04<09:00,  2.76it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 10/1500 [00:04<08:59,  2.76it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 11/1500 [00:04<08:59,  2.76it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 12/1500 [00:04<06:06,  4.06it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 12/1500 [00:04<06:06,  4.06it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 13/1500 [00:04<06:06,  4.06it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 14/1500 [00:04<06:05,  4.06it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 15/1500 [00:04<06:05,  4.06it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 16/1500 [00:04<03:54,  6.32it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 16/1500 [00:05<03:54,  6.32it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 17/1500 [00:05<03:54,  6.32it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|          | 18/1500 [00:05<03:54,  6.32it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|▏         | 19/1500 [00:05<06:36,  3.73it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|▏         | 19/1500 [00:05<06:36,  3.73it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|▏         | 20/1500 [00:05<06:36,  3.73it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|▏         | 21/1500 [00:05<06:35,  3.73it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   1%|▏         | 22/1500 [00:05<06:35,  3.73it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 23/1500 [00:05<04:24,  5.59it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 23/1500 [00:05<04:24,  5.59it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 24/1500 [00:07<04:23,  5.59it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 25/1500 [00:07<04:23,  5.59it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 26/1500 [00:07<07:19,  3.35it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 26/1500 [00:07<07:19,  3.35it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 27/1500 [00:07<07:19,  3.35it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 28/1500 [00:07<07:18,  3.35it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 29/1500 [00:07<07:18,  3.35it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 30/1500 [00:07<04:58,  4.93it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 30/1500 [00:07<04:58,  4.93it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 31/1500 [00:07<04:57,  4.93it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 32/1500 [00:09<04:57,  4.93it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 33/1500 [00:09<07:28,  3.27it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 33/1500 [00:09<07:28,  3.27it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 34/1500 [00:09<07:28,  3.27it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 35/1500 [00:09<07:27,  3.27it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 36/1500 [00:09<05:37,  4.34it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 36/1500 [00:09<05:37,  4.34it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   2%|▏         | 37/1500 [00:09<05:37,  4.34it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 38/1500 [00:09<05:36,  4.34it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 39/1500 [00:09<05:36,  4.34it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 40/1500 [00:09<03:54,  6.24it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 40/1500 [00:11<03:54,  6.24it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 41/1500 [00:11<03:53,  6.24it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 42/1500 [00:11<03:53,  6.24it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 43/1500 [00:11<06:31,  3.72it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 43/1500 [00:11<06:31,  3.72it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 44/1500 [00:11<06:30,  3.72it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 45/1500 [00:11<06:30,  3.72it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 46/1500 [00:11<06:30,  3.72it/s, running_success_rate=0.0%][A
-Running rollout with at most 1500 steps:   3%|▎         | 47/1500 [00:11<04:31,  5.36it/s, running_success_rate=0.0%][A

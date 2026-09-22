@@ -1,7 +1,0 @@
-[q2] 13:45 standard protocol (DEEPONET_HEAD=asrc)
-[q2] 15:27 standard exit=0
-[q2] 15:27 plus n=315 asrc_cadmag_spline_40env
-[q2] 15:27 plus asrc_cadmag_spline_40env exit=1
-[q2] 15:27 plus n=315 asrc_cadmag_folding_40env
-[q2] 15:28 plus asrc_cadmag_folding_40env exit=1
-[q2] 15:28 Q2 DONE

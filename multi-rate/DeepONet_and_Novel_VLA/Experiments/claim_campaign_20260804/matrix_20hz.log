@@ -1,81 +1,0 @@
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 88768.34it/s]
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Skipping til_s0_folding_20hz (already completed: 55.0%)
-Skipping flow_s0_folding_20hz (already completed: 80.0%)
-
-==========================================
-RUNNING PARALLEL WORKER: til_s0_spline_20hz (SPLINE) @ 20 Hz
-==========================================
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 5336.58it/s]
-Reducing the number of VLM layers to 16 ...
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  98%|█████████▊| 481/489 [00:00<00:00, 4797.22it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 4853.69it/s]
-[robosuite WARNING] No private macro file found! (__init__.py:7)
-WARNING:robosuite_logs:No private macro file found!
-[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
-WARNING:robosuite_logs:It is recommended to use a private macro file
-[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
-WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-Local assets not found. Downloading from HuggingFace Hub...
-Assets already downloaded at /home/user/.cache/libero/assets
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[til_s0_spline_20hz] Task 4 Trial 00: x (220 steps)
-[til_s0_spline_20hz] Task 4 Trial 01: x (220 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[til_s0_spline_20hz] Task 5 Trial 00: OK (88 steps)
-[til_s0_spline_20hz] Task 5 Trial 01: x (220 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[til_s0_spline_20hz] Task 6 Trial 00: OK (116 steps)
-[til_s0_spline_20hz] Task 6 Trial 01: x (220 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[til_s0_spline_20hz] Task 7 Trial 00: x (220 steps)
-[til_s0_spline_20hz] Task 7 Trial 01: x (220 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[til_s0_spline_20hz] Task 8 Trial 00: OK (166 steps)
-[til_s0_spline_20hz] Task 8 Trial 01: OK (106 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[til_s0_spline_20hz] Task 9 Trial 00: OK (124 steps)
-[til_s0_spline_20hz] Task 9 Trial 01: OK (116 steps)
---> ARM til_s0_spline_20hz AGGREGATE RESULT: 55.0%
-
-
-==========================================
-RUNNING PARALLEL WORKER: flow_s0_spline_20hz (SPLINE) @ 20 Hz
-==========================================
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6806.72it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[flow_s0_spline_20hz] Task 5 Trial 00: x (220 steps)
-[flow_s0_spline_20hz] Task 5 Trial 01: x (220 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[flow_s0_spline_20hz] Task 6 Trial 00: OK (100 steps)
-[flow_s0_spline_20hz] Task 6 Trial 01: OK (100 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[flow_s0_spline_20hz] Task 7 Trial 00: OK (119 steps)
-[flow_s0_spline_20hz] Task 7 Trial 01: OK (132 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[flow_s0_spline_20hz] Task 8 Trial 00: OK (95 steps)
-[flow_s0_spline_20hz] Task 8 Trial 01: x (220 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[flow_s0_spline_20hz] Task 9 Trial 00: OK (123 steps)
-[flow_s0_spline_20hz] Task 9 Trial 01: OK (122 steps)
---> ARM flow_s0_spline_20hz AGGREGATE RESULT: 70.0%
-
-
-PARALLEL WORKER FOR 20 HZ COMPLETE!

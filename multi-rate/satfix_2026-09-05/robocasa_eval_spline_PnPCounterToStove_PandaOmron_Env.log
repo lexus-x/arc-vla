@@ -1,20 +1,0 @@
-[robosuite WARNING] No private macro file found! (macros.py:57)
-[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
-[robosuite WARNING] To setup, run: python /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (macros.py:59)
-[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
-[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
-[robosuite WARNING] No private macro file found! (macros.py:28)
-[robosuite WARNING] It is recommended to use a private macro file (macros.py:29)
-[robosuite WARNING] To setup, run: python /home/user/Isaac-GR00T/external_dependencies/robocasa/robocasa/scripts/setup_macros.py (macros.py:30)
-[robosuite INFO] Loading controller configuration from: /home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/lib/python3.10/site-packages/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
-/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/lib/python3.10/site-packages/gymnasium/utils/passive_env_checker.py:159: UserWarning: [33mWARN: The obs returned by the `reset()` method is not within the observation space.[0m
-  logger.warn(f"{pre} is not within the observation space.")
-Running collecting 10 episodes for robocasa_panda_omron/PnPCounterToStove_PandaOmron_Env with 1 vec envs
-WARNING: mimicgen environments not imported since mimicgen is not installed!
-Episodes:   0%|          | 0/10 [00:00<?, ?it/s]/home/user/Isaac-GR00T/gr00t/eval/sim/robocasa/robocasa_uv/.venv/lib/python3.10/site-packages/gymnasium/utils/passive_env_checker.py:159: UserWarning: [33mWARN: The obs returned by the `step()` method is not within the observation space.[0m
-  logger.warn(f"{pre} is not within the observation space.")
-Episodes:  10%|█         | 1/10 [00:18<02:46, 18.52s/it]Episodes:  20%|██        | 2/10 [00:47<03:15, 24.48s/it]Episodes:  30%|███       | 3/10 [01:16<03:05, 26.49s/it]Episodes:  40%|████      | 4/10 [01:44<02:43, 27.33s/it]Episodes:  50%|█████     | 5/10 [02:05<02:04, 24.84s/it]Episodes:  60%|██████    | 6/10 [02:25<01:33, 23.29s/it]Episodes:  70%|███████   | 7/10 [02:47<01:09, 23.04s/it]Episodes:  80%|████████  | 8/10 [03:24<00:54, 27.40s/it]Episodes:  90%|█████████ | 9/10 [03:47<00:25, 25.93s/it]Episodes: 100%|██████████| 10/10 [04:19<00:00, 27.85s/it]Episodes: 100%|██████████| 10/10 [04:19<00:00, 25.95s/it]
-Collecting 10 episodes took 280.30535101890564 seconds
-Video saved to:  /tmp/sim_eval_videos_robocasa_panda_omron/PnPCounterToStove_PandaOmron_Env_ac8_1b4991b3-dd9d-4330-8b64-842be347d612
-results:  ('robocasa_panda_omron/PnPCounterToStove_PandaOmron_Env', [True, False, False, False, True, True, True, False, True, False], {})
-success rate:  0.5

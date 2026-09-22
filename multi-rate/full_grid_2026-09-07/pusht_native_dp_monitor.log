@@ -1,61 +1,0 @@
-=== TRAINING PROCESS EXITED ===
-Running rollout with at most 300 steps:  94%|█████████▎| 281/300 [00:29<00:02,  7.85it/s, running_success_rate=12.0%][A[A
-
-Running rollout with at most 300 steps:  94%|█████████▍| 282/300 [00:29<00:02,  7.85it/s, running_success_rate=12.0%][A[A
-
-Running rollout with at most 300 steps:  94%|█████████▍| 283/300 [00:29<00:02,  7.85it/s, running_success_rate=12.0%][A[A
-
-Running rollout with at most 300 steps:  95%|█████████▍| 284/300 [00:29<00:01,  9.87it/s, running_success_rate=12.0%][A[A
-
-Running rollout with at most 300 steps:  95%|█████████▍| 284/300 [00:29<00:01,  9.87it/s, running_success_rate=12.0%][A[A
-
-Running rollout with at most 300 steps:  95%|█████████▌| 285/300 [00:30<00:01,  9.87it/s, running_success_rate=12.0%][A[A
-
-Running rollout with at most 300 steps:  95%|█████████▌| 286/300 [00:30<00:01,  9.87it/s, running_success_rate=12.0%][A[A
-
-Running rollout with at most 300 steps:  96%|█████████▌| 287/300 [00:30<00:01, 11.84it/s, running_success_rate=12.0%][A[A
-
-Running rollout with at most 300 steps:  96%|█████████▌| 287/300 [00:30<00:01, 11.84it/s, running_success_rate=12.0%][A[A
-
-Running rollout with at most 300 steps:  96%|█████████▌| 288/300 [00:30<00:01, 11.84it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  96%|█████████▋| 289/300 [00:30<00:01,  7.82it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  96%|█████████▋| 289/300 [00:30<00:01,  7.82it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  97%|█████████▋| 290/300 [00:30<00:01,  7.82it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  97%|█████████▋| 291/300 [00:30<00:01,  7.82it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  97%|█████████▋| 292/300 [00:30<00:00,  9.85it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  97%|█████████▋| 292/300 [00:30<00:00,  9.85it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  98%|█████████▊| 293/300 [00:30<00:00,  9.85it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  98%|█████████▊| 294/300 [00:30<00:00,  9.85it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  98%|█████████▊| 295/300 [00:30<00:00, 11.83it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  98%|█████████▊| 295/300 [00:30<00:00, 11.83it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  99%|█████████▊| 296/300 [00:31<00:00, 11.83it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  99%|█████████▉| 297/300 [00:31<00:00,  7.79it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  99%|█████████▉| 297/300 [00:31<00:00,  7.79it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps:  99%|█████████▉| 298/300 [00:31<00:00,  7.79it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps: 100%|█████████▉| 299/300 [00:31<00:00,  9.20it/s, running_success_rate=16.0%][A[A
-
-Running rollout with at most 300 steps: 100%|█████████▉| 299/300 [00:31<00:00,  9.20it/s, running_success_rate=16.0%][A[A
-
-                                                                                                                     [A[A
-Stepping through eval batches:  50%|█████     | 1/2 [01:08<00:36, 36.42s/it, running_success_rate=14.0%][A
-Stepping through eval batches: 100%|██████████| 2/2 [01:08<00:00, 33.66s/it, running_success_rate=14.0%][AStepping through eval batches: 100%|██████████| 2/2 [01:08<00:00, 34.08s/it, running_success_rate=14.0%]
-INFO 2026-09-14 22:15:38 ot_train.py:512 Suite per_task aggregated: [{'task_group': 'pusht', 'task_id': 0, 'metrics': {'sum_rewards': [0.35723061050179455, 0.0, 1.7833833664026437, 219.30123936609021, 185.1619733778616, 0.0, 43.310084625213356, 193.43126743215538, 0.04883481819398691, 34.09593202022893, 11.405854570879606, 139.96056583666328, 0.009414260319012798, 50.335166643823094, 6.746727148911799, 152.6499900670319, 0.04704743618194748, 106.66614887786527, 14.00799790987325, 53.34337278421502, 0.0, 3.7218898140156806, 82.21498939412515, 0.0, 54.173594347039796, 9.169295665941664, 24.236533874964383, 71.41057714771124, 0.3449282509588646, 78.0166003968761, 103.48860547937832, 101.57930771365275, 68.49555009558495, 0.04090366216476863, 4.450624692136639, 2.3816779319130323, 0.003600632659033545, 83.82738617424762, 153.3990357297819, 197.0722130876841, 0.0, 193.36791034370842, 112.16839453155578, 165.34705653292983, 63.75859597863046, 101.34800366313883, 27.449174527460094, 1.3111134732221719, 0.0, 11.966892394544368], 'max_rewards': [0.016161635587489693, 0.0, 0.12603971744550294, 0.9231247544884126, 0.9568641504319354, 0.0, 0.37242393292282, 0.9713244961974975, 0.0033558529898065096, 0.4953098407310924, 0.25857327415024456, 0.6978678527515039, 0.004973297705353978, 1.0, 0.1960062527007459, 0.9895780242566115, 0.006437999437863147, 0.6490620874790334, 0.053270812614371804, 0.8385093885244427, 0.0, 0.1160858275041278, 1.0, 0.0, 1.0, 0.19740980032184974, 1.0, 1.0, 0.022597461268316493, 0.7126693936639873, 0.9828588113802876, 0.9468876258536333, 0.4045906152556921, 0.012967034113448038, 0.1517015396558885, 0.17845300932243077, 0.0023634334084095404, 0.4575705737107064, 0.9980537968560597, 0.9963136523508713, 0.0, 0.9717387435337086, 1.0, 0.9816788846235843, 0.8790873417540668, 0.9284967997458736, 1.0, 0.03846418379283366, 0.0, 0.43161663458267446], 'successes': [False, False, False, False, False, False, False, False, False, False, False, False, False, True, False, False, False, False, False, False, False, False, True, False, True, False, True, True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True, False, False, False, True, False, False, False], 'video_paths': ['/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_0.mp4', '/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_1.mp4', '/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_2.mp4', '/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_3.mp4']}}]
-INFO 2026-09-14 22:15:38 ot_train.py:512 Suite per_group aggregated: {'pusht': {'avg_sum_reward': 58.54813373376876, 'avg_max_reward': 0.49940977066226355, 'pc_success': 14.000000000000002, 'n_episodes': 50, 'video_paths': ['/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_0.mp4', '/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_1.mp4', '/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_2.mp4', '/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_3.mp4']}}
-INFO 2026-09-14 22:15:38 ot_train.py:512 Suite overall aggregated: {'avg_sum_reward': 58.54813373376876, 'avg_max_reward': 0.49940977066226355, 'pc_success': 14.000000000000002, 'n_episodes': 50, 'eval_s': 68.17375421524048, 'eval_ep_s': 1.3634750843048096, 'video_paths': ['/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_0.mp4', '/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_1.mp4', '/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_2.mp4', '/home/user/Desktop/multi-rate/full_grid_2026-09-07/pusht_native_dp_run/eval/videos_step_100000/pusht_0/eval_episode_3.mp4']}
-Training: 100%|██████████| 100000/100000 [1:21:35<00:00, 20.43step/s]
-INFO 2026-09-14 22:15:38 ot_train.py:545 End of training

@@ -1,131 +1,0 @@
-=== libero_spatial (tasks [7, 8]) ===
-`torch_dtype` is deprecated! Use `dtype` instead!
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 7045.11it/s]
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-[robosuite WARNING] No private macro file found! (__init__.py:7)
-WARNING:robosuite_logs:No private macro file found!
-[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
-WARNING:robosuite_logs:It is recommended to use a private macro file
-[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
-WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-Local assets not found. Downloading from HuggingFace Hub...
-Assets already downloaded at /home/user/.cache/libero/assets
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  task descriptions: ['pick up the black bowl on the stove and place it on the plate', 'pick up the black bowl next to the plate and place it on the plate']
-  [train] 66 episodes, 8324 frames
-  [val] 16 episodes, 1993 frames
-  epoch 0: train_mse=0.0837 val_mse=0.2583
-  epoch 50: train_mse=0.0073 val_mse=0.0056
-  epoch 100: train_mse=0.0048 val_mse=0.0038
-  epoch 150: train_mse=0.0033 val_mse=0.0032
-  epoch 200: train_mse=0.0029 val_mse=0.0033
-  epoch 250: train_mse=0.0017 val_mse=0.0031
-  epoch 299: train_mse=0.0033 val_mse=0.0041
-Saved head to /home/user/Desktop/multi-rate/vla-toolkit/progress_head_libero_spatial.pt
-  held-out r=0.9812 per-ep r=0.9897865933186165
-=== libero_object (tasks [0, 1]) ===
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6469.83it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  task descriptions: ['pick up the alphabet soup and place it in the basket', 'pick up the cream cheese and place it in the basket']
-  [train] 71 episodes, 10503 frames
-  [val] 18 episodes, 2742 frames
-  epoch 0: train_mse=0.0820 val_mse=0.2739
-  epoch 50: train_mse=0.0067 val_mse=0.0053
-  epoch 100: train_mse=0.0034 val_mse=0.0031
-  epoch 150: train_mse=0.0024 val_mse=0.0025
-  epoch 200: train_mse=0.0019 val_mse=0.0022
-  epoch 250: train_mse=0.0016 val_mse=0.0021
-  epoch 299: train_mse=0.0013 val_mse=0.0020
-Saved head to /home/user/Desktop/multi-rate/vla-toolkit/progress_head_libero_object.pt
-  held-out r=0.9879 per-ep r=0.9912333357734361
-=== libero_goal (tasks [0, 1]) ===
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 93206.76it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6299.26it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  task descriptions: ['open the middle drawer of the cabinet', 'put the bowl on the stove']
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 105517.08it/s]
-  [train] 73 episodes, 8894 frames
-  [val] 18 episodes, 1979 frames
-  epoch 0: train_mse=0.0814 val_mse=0.0981
-  epoch 50: train_mse=0.3347 val_mse=0.3349
-  epoch 100: train_mse=0.3347 val_mse=0.3349
-  epoch 150: train_mse=0.3347 val_mse=0.3349
-  epoch 200: train_mse=0.3347 val_mse=0.3349
-  epoch 250: train_mse=0.3347 val_mse=0.3349
-  epoch 299: train_mse=0.3347 val_mse=0.3349
-Saved head to /home/user/Desktop/multi-rate/vla-toolkit/progress_head_libero_goal.pt
-  held-out r=-0.4788 per-ep r=None
-=== libero_10 (tasks [0, 1]) ===
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 8839.42it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6669.32it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  task descriptions: ['put both the alphabet soup and the tomato sauce in the basket', 'put both the cream cheese box and the butter in the basket']
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 44620.26it/s]
-  [train] 66 episodes, 18007 frames
-  [val] 16 episodes, 4266 frames
-  epoch 0: train_mse=0.0826 val_mse=0.0590
-  epoch 50: train_mse=0.0136 val_mse=0.0167
-  epoch 100: train_mse=0.0079 val_mse=0.0087
-  epoch 150: train_mse=0.0053 val_mse=0.0066
-  epoch 200: train_mse=0.0036 val_mse=0.0054
-  epoch 250: train_mse=0.0024 val_mse=0.0044
-  epoch 299: train_mse=0.0018 val_mse=0.0037
-Saved head to /home/user/Desktop/multi-rate/vla-toolkit/progress_head_libero_10.pt
-  held-out r=0.9791 per-ep r=0.9857640154530215
-
-Wrote progress_heads_train_stats.json
-Exception ignored in: <function MjRenderContext.__del__ at 0x71961c30a7a0>
-Traceback (most recent call last):
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
-    self.gl_ctx.free()
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
-    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
-    raise self._errorClass(
-OpenGL.raw.EGL._errors.EGLError: EGLError(
-	err = EGL_NOT_INITIALIZED,
-	baseOperation = eglMakeCurrent,
-	cArguments = (
-		<OpenGL._opaque.EGLDisplay_pointer object at 0x7195f815dd50>,
-		<OpenGL._opaque.EGLSurface_pointer object at 0x71961e9eb450>,
-		<OpenGL._opaque.EGLSurface_pointer object at 0x71961e9eb450>,
-		<OpenGL._opaque.EGLContext_pointer object at 0x71961e9eb350>,
-	),
-	result = 0
-)
-Exception ignored in: <function EGLGLContext.__del__ at 0x71961c30a660>
-Traceback (most recent call last):
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
-    self.free()
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
-    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
-    raise self._errorClass(
-OpenGL.raw.EGL._errors.EGLError: EGLError(
-	err = EGL_NOT_INITIALIZED,
-	baseOperation = eglMakeCurrent,
-	cArguments = (
-		<OpenGL._opaque.EGLDisplay_pointer object at 0x7195f815dd50>,
-		<OpenGL._opaque.EGLSurface_pointer object at 0x71961e9eb450>,
-		<OpenGL._opaque.EGLSurface_pointer object at 0x71961e9eb450>,
-		<OpenGL._opaque.EGLContext_pointer object at 0x71961e9eb350>,
-	),
-	result = 0
-)

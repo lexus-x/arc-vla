@@ -1,91 +1,0 @@
-[robosuite WARNING] No private macro file found! (__init__.py:7)
-WARNING:robosuite_logs:No private macro file found!
-[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
-WARNING:robosuite_logs:It is recommended to use a private macro file
-[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
-WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 36314.32it/s]
-`torch_dtype` is deprecated! Use `dtype` instead!
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 7668.78it/s]
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Reducing the number of VLM layers to 16 ...
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8181.25it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-Local assets not found. Downloading from HuggingFace Hub...
-Assets already downloaded at /home/user/.cache/libero/assets
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-=== spatial (n_ctx=8, chunk=50) ===
-  A full chunk   20->40 :   1.12%  (max 2.04%)
-  A EXECUTED win 20->40 :   1.59%  (max 3.62%)   <-- ratio 1.42x
-  B downsample   20->10 :   2.31%  (max 4.23%)
-  C 16-step chunk       :   0.72%
-  C  8-step chunk       :   0.71%
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 84307.62it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8583.12it/s]
-Reducing the number of VLM layers to 16 ...
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8400.67it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-=== object (n_ctx=8, chunk=50) ===
-  A full chunk   20->40 :   0.79%  (max 1.10%)
-  A EXECUTED win 20->40 :   1.78%  (max 3.73%)   <-- ratio 2.26x
-  B downsample   20->10 :   1.65%  (max 2.30%)
-  C 16-step chunk       :   0.84%
-  C  8-step chunk       :   1.05%
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 204.18it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8847.33it/s]
-Reducing the number of VLM layers to 16 ...
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8275.96it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-=== goal (n_ctx=8, chunk=50) ===
-  A full chunk   20->40 :   0.77%  (max 1.68%)
-  A EXECUTED win 20->40 :   1.24%  (max 2.21%)   <-- ratio 1.61x
-  B downsample   20->10 :   1.56%  (max 3.38%)
-  C 16-step chunk       :   0.60%
-  C  8-step chunk       :   0.65%
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 201.62it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 8505.39it/s]
-Reducing the number of VLM layers to 16 ...
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 9698.06it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-=== long (n_ctx=8, chunk=50) ===
-  A full chunk   20->40 :   0.49%  (max 0.73%)
-  A EXECUTED win 20->40 :   1.38%  (max 2.68%)   <-- ratio 2.83x
-  B downsample   20->10 :   1.02%  (max 1.49%)
-  C 16-step chunk       :   0.61%
-  C  8-step chunk       :   0.79%
-
-wrote spline_weakness_probe.json
-
-GATES: axis A alive if executed/full >= 2x; axis B alive if 10 Hz >= 3%; GO on any regime >= 5%.

@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/robocasa_bridge.py", line 165, in <module>
-    main()
-  File "/home/user/Desktop/multi-rate/full_grid_2026-09-07/robocasa_bridge.py", line 143, in main
-    srv.bind(("127.0.0.1", args.port)); srv.listen(1)
-OSError: [Errno 98] Address already in use

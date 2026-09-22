@@ -1,29 +1,0 @@
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 108942.96it/s]
-`torch_dtype` is deprecated! Use `dtype` instead!
-
-==========================================
-RUNNING ARM: flow_s0_folding_20hz (FOLDING) @ 20 Hz
-==========================================
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6889.67it/s]
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-[robosuite WARNING] No private macro file found! (__init__.py:7)
-WARNING:robosuite_logs:No private macro file found!
-[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
-WARNING:robosuite_logs:It is recommended to use a private macro file
-[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
-WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-Local assets not found. Downloading from HuggingFace Hub...
-Assets already downloaded at /home/user/.cache/libero/assets
-[flow_s0_folding_20hz] Task 0 Trial 00: OK (80 steps)
-[flow_s0_folding_20hz] Task 0 Trial 01: x (220 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[flow_s0_folding_20hz] Task 1 Trial 00: OK (114 steps)
-[flow_s0_folding_20hz] Task 1 Trial 01: OK (113 steps)
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[flow_s0_folding_20hz] Task 2 Trial 00: OK (100 steps)
-[flow_s0_folding_20hz] Task 2 Trial 01: OK (105 steps)

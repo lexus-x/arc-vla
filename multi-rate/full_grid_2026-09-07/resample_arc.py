@@ -21,6 +21,8 @@ Key innovations over standard TAC-Fold and Cubic Splines:
 import numpy as np
 from scipy.interpolate import CubicSpline
 
+from resample_math import eval_hermite_cubic
+
 def _project_block_waterfill(v: np.ndarray, S: np.ndarray, k: int) -> np.ndarray:
     """Project a k-step block onto {|v_i| <= 1 elementwise, sum_i v_i = S}."""
     v = v.copy()
@@ -74,19 +76,6 @@ def compute_steffen_monotone_slopes(x: np.ndarray, y: np.ndarray) -> np.ndarray:
         slopes[i] = steffen_slope
 
     return slopes
-
-def eval_hermite_cubic(x0, x1, y0, y1, d0, d1, x):
-    h = x1 - x0
-    t = (x - x0) / h
-    t2 = t * t
-    t3 = t2 * t
-
-    h00 = (2.0 * t3 - 3.0 * t2 + 1.0)[:, None]
-    h10 = (t3 - 2.0 * t2 + t)[:, None] * h
-    h01 = (-2.0 * t3 + 3.0 * t2)[:, None]
-    h11 = (t3 - t2)[:, None] * h
-
-    return h00 * y0[None, :] + h10 * d0[None, :] + h01 * y1[None, :] + h11 * d1[None, :]
 
 def resample_arc_decimation(block_sum: np.ndarray, k: int) -> np.ndarray:
     """ARC Decimation: Steffen-Hermite folding with saturation water-filling projection."""

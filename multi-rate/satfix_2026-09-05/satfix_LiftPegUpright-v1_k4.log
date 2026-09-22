@@ -1,2 +1,0 @@
-[LiftPegUpright-v1] eligible=941 arms=['original', 'exact_integral', 'exact_integral_satfix', 'cubic_spline', 'cubic_spline_satfix', 'pchip', 'pchip_satfix', 'tac_fold', 'tac_fold_satfix']
-[LiftPegUpright-v1] [100/941] original=97 exact_integral=0 exact_integral_satfix=0 cubic_spline=0 cubic_spline_satfix=1 pchip=0 pchip_satfix=1 tac_fold=0 tac_fold_satfix=1

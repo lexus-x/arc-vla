@@ -1,24 +1,0 @@
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 98112.37it/s]
-`torch_dtype` is deprecated! Use `dtype` instead!
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6142.01it/s]
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-[robosuite WARNING] No private macro file found! (__init__.py:7)
-WARNING:robosuite_logs:No private macro file found!
-[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
-WARNING:robosuite_logs:It is recommended to use a private macro file
-[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
-WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-Local assets not found. Downloading from HuggingFace Hub...
-Assets already downloaded at /home/user/.cache/libero/assets
-[rollout seed=2004] fresh_success=True steps=82 pred_progress: start=0.064 end=0.875 delta=+0.811 corr_vs_t=0.991191817153356
-[rollout seed=2006] fresh_success=False steps=220 pred_progress: start=0.060 end=0.547 delta=+0.486 corr_vs_t=0.6960722245735576
-[rollout seed=2010] fresh_success=True steps=84 pred_progress: start=0.049 end=0.850 delta=+0.801 corr_vs_t=0.9899940849385898
-[rollout seed=2012] fresh_success=True steps=82 pred_progress: start=0.047 end=0.900 delta=+0.853 corr_vs_t=0.9894764020277851
-Merged. n_success=7 n_fail=3
-fail end values: [0.4565685987472534, 0.8885513544082642, 0.5467118620872498]
-success end values: [0.8608257174491882, 0.8739122152328491, 0.8348797559738159, 0.8909772634506226, 0.8749885559082031, 0.84959477186203, 0.8999302387237549]

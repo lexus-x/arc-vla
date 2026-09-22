@@ -72,3 +72,6 @@ multi-rate/DeepONet_and_Novel_VLA/From_Laptop/
 nohup.out
 core.*
 multi-rate/newt-src/
+*.log
+**/demos_*.npz
+vla/

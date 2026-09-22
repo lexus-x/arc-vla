@@ -1,210 +1,0 @@
-=== probing libero_spatial task_id=7 ===
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 83886.08it/s]
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6472.41it/s]
-[robosuite WARNING] No private macro file found! (__init__.py:7)
-WARNING:robosuite_logs:No private macro file found!
-[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
-WARNING:robosuite_logs:It is recommended to use a private macro file
-[robosuite WARNING] To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
-WARNING:robosuite_logs:To setup, run: python /home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-Local assets not found. Downloading from HuggingFace Hub...
-Assets already downloaded at /home/user/.cache/libero/assets
-    [libero_spatial t7 g0 r0] seed=907000 success=True
-    [libero_spatial t7 g0 r1] seed=907001 success=True
-    [libero_spatial t7 g0 r2] seed=907002 success=True
-    [libero_spatial t7 g0 r3] seed=907003 success=True
-    [libero_spatial t7 g1 r0] seed=907004 success=True
-    [libero_spatial t7 g1 r1] seed=907005 success=True
-    [libero_spatial t7 g1 r2] seed=907006 success=True
-    [libero_spatial t7 g1 r3] seed=907007 success=True
-    [libero_spatial t7 g2 r0] seed=907008 success=True
-    [libero_spatial t7 g2 r1] seed=907009 success=True
-    [libero_spatial t7 g2 r2] seed=907010 success=True
-    [libero_spatial t7 g2 r3] seed=907011 success=True
-    baseline_success_rate=1.000 degenerate_group_rate=1.000 prediction=REGRESS_OR_FLAT
-=== probing libero_spatial task_id=8 ===
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 25811.10it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6869.41it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [libero_spatial t8 g0 r0] seed=908000 success=True
-    [libero_spatial t8 g0 r1] seed=908001 success=False
-    [libero_spatial t8 g0 r2] seed=908002 success=True
-    [libero_spatial t8 g0 r3] seed=908003 success=True
-    [libero_spatial t8 g1 r0] seed=908004 success=True
-    [libero_spatial t8 g1 r1] seed=908005 success=True
-    [libero_spatial t8 g1 r2] seed=908006 success=True
-    [libero_spatial t8 g1 r3] seed=908007 success=False
-    [libero_spatial t8 g2 r0] seed=908008 success=True
-    [libero_spatial t8 g2 r1] seed=908009 success=True
-    [libero_spatial t8 g2 r2] seed=908010 success=True
-    [libero_spatial t8 g2 r3] seed=908011 success=True
-    baseline_success_rate=0.833 degenerate_group_rate=0.333 prediction=IMPROVE
-=== probing libero_object task_id=0 ===
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 26929.72it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6865.64it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [libero_object t0 g0 r0] seed=900000 success=True
-    [libero_object t0 g0 r1] seed=900001 success=True
-    [libero_object t0 g0 r2] seed=900002 success=True
-    [libero_object t0 g0 r3] seed=900003 success=False
-    [libero_object t0 g1 r0] seed=900004 success=True
-    [libero_object t0 g1 r1] seed=900005 success=True
-    [libero_object t0 g1 r2] seed=900006 success=True
-    [libero_object t0 g1 r3] seed=900007 success=True
-    [libero_object t0 g2 r0] seed=900008 success=True
-    [libero_object t0 g2 r1] seed=900009 success=True
-    [libero_object t0 g2 r2] seed=900010 success=True
-    [libero_object t0 g2 r3] seed=900011 success=True
-    baseline_success_rate=0.917 degenerate_group_rate=0.667 prediction=REGRESS_OR_FLAT
-=== probing libero_object task_id=1 ===
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 118987.35it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6613.98it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [libero_object t1 g0 r0] seed=901000 success=False
-    [libero_object t1 g0 r1] seed=901001 success=False
-    [libero_object t1 g0 r2] seed=901002 success=True
-    [libero_object t1 g0 r3] seed=901003 success=True
-    [libero_object t1 g1 r0] seed=901004 success=False
-    [libero_object t1 g1 r1] seed=901005 success=False
-    [libero_object t1 g1 r2] seed=901006 success=True
-    [libero_object t1 g1 r3] seed=901007 success=False
-    [libero_object t1 g2 r0] seed=901008 success=True
-    [libero_object t1 g2 r1] seed=901009 success=True
-    [libero_object t1 g2 r2] seed=901010 success=True
-    [libero_object t1 g2 r3] seed=901011 success=False
-    baseline_success_rate=0.500 degenerate_group_rate=0.000 prediction=IMPROVE
-=== probing libero_goal task_id=0 ===
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 73262.95it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6536.02it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [libero_goal t0 g0 r0] seed=900000 success=True
-    [libero_goal t0 g0 r1] seed=900001 success=True
-    [libero_goal t0 g0 r2] seed=900002 success=False
-    [libero_goal t0 g0 r3] seed=900003 success=True
-    [libero_goal t0 g1 r0] seed=900004 success=False
-    [libero_goal t0 g1 r1] seed=900005 success=True
-    [libero_goal t0 g1 r2] seed=900006 success=True
-    [libero_goal t0 g1 r3] seed=900007 success=False
-    [libero_goal t0 g2 r0] seed=900008 success=True
-    [libero_goal t0 g2 r1] seed=900009 success=True
-    [libero_goal t0 g2 r2] seed=900010 success=True
-    [libero_goal t0 g2 r3] seed=900011 success=True
-    baseline_success_rate=0.750 degenerate_group_rate=0.333 prediction=IMPROVE
-=== probing libero_goal task_id=1 ===
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 120699.40it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6351.37it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [libero_goal t1 g0 r0] seed=901000 success=True
-    [libero_goal t1 g0 r1] seed=901001 success=True
-    [libero_goal t1 g0 r2] seed=901002 success=True
-    [libero_goal t1 g0 r3] seed=901003 success=True
-    [libero_goal t1 g1 r0] seed=901004 success=True
-    [libero_goal t1 g1 r1] seed=901005 success=True
-    [libero_goal t1 g1 r2] seed=901006 success=True
-    [libero_goal t1 g1 r3] seed=901007 success=True
-    [libero_goal t1 g2 r0] seed=901008 success=True
-    [libero_goal t1 g2 r1] seed=901009 success=True
-    [libero_goal t1 g2 r2] seed=901010 success=True
-    [libero_goal t1 g2 r3] seed=901011 success=True
-    baseline_success_rate=1.000 degenerate_group_rate=1.000 prediction=REGRESS_OR_FLAT
-=== probing libero_10 task_id=0 ===
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 118149.41it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 7034.09it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [libero_10 t0 g0 r0] seed=900000 success=False
-    [libero_10 t0 g0 r1] seed=900001 success=True
-    [libero_10 t0 g0 r2] seed=900002 success=False
-    [libero_10 t0 g0 r3] seed=900003 success=False
-    [libero_10 t0 g1 r0] seed=900004 success=False
-    [libero_10 t0 g1 r1] seed=900005 success=False
-    [libero_10 t0 g1 r2] seed=900006 success=False
-    [libero_10 t0 g1 r3] seed=900007 success=False
-    [libero_10 t0 g2 r0] seed=900008 success=True
-    [libero_10 t0 g2 r1] seed=900009 success=False
-    [libero_10 t0 g2 r2] seed=900010 success=True
-    [libero_10 t0 g2 r3] seed=900011 success=False
-    baseline_success_rate=0.250 degenerate_group_rate=0.333 prediction=IMPROVE
-=== probing libero_10 task_id=1 ===
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 37957.50it/s]
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6616.35it/s]
-Reducing the number of VLM layers to 16 ...
-Loading weights from local directory
-[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [libero_10 t1 g0 r0] seed=901000 success=True
-    [libero_10 t1 g0 r1] seed=901001 success=True
-    [libero_10 t1 g0 r2] seed=901002 success=True
-    [libero_10 t1 g0 r3] seed=901003 success=True
-    [libero_10 t1 g1 r0] seed=901004 success=False
-    [libero_10 t1 g1 r1] seed=901005 success=True
-    [libero_10 t1 g1 r2] seed=901006 success=True
-    [libero_10 t1 g1 r3] seed=901007 success=True
-    [libero_10 t1 g2 r0] seed=901008 success=True
-    [libero_10 t1 g2 r1] seed=901009 success=False
-    [libero_10 t1 g2 r2] seed=901010 success=False
-    [libero_10 t1 g2 r3] seed=901011 success=True
-    baseline_success_rate=0.750 degenerate_group_rate=0.333 prediction=IMPROVE
-Wrote logs/phase6_probe_results.json
-Exception ignored in: <function MjRenderContext.__del__ at 0x7a07ca6f16c0>
-Traceback (most recent call last):
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
-    self.gl_ctx.free()
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
-    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
-    raise self._errorClass(
-OpenGL.raw.EGL._errors.EGLError: EGLError(
-	err = EGL_NOT_INITIALIZED,
-	baseOperation = eglMakeCurrent,
-	cArguments = (
-		<OpenGL._opaque.EGLDisplay_pointer object at 0x7a07841dafd0>,
-		<OpenGL._opaque.EGLSurface_pointer object at 0x7a07d42c88d0>,
-		<OpenGL._opaque.EGLSurface_pointer object at 0x7a07d42c88d0>,
-		<OpenGL._opaque.EGLContext_pointer object at 0x7a07d42c87d0>,
-	),
-	result = 0
-)
-Exception ignored in: <function EGLGLContext.__del__ at 0x7a07ca6f1580>
-Traceback (most recent call last):
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
-    self.free()
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
-    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
-  File "/home/user/anaconda3/envs/vla_smolvla_libero/lib/python3.12/site-packages/OpenGL/error.py", line 230, in glCheckError
-    raise self._errorClass(
-OpenGL.raw.EGL._errors.EGLError: EGLError(
-	err = EGL_NOT_INITIALIZED,
-	baseOperation = eglMakeCurrent,
-	cArguments = (
-		<OpenGL._opaque.EGLDisplay_pointer object at 0x7a07841dafd0>,
-		<OpenGL._opaque.EGLSurface_pointer object at 0x7a07d42c88d0>,
-		<OpenGL._opaque.EGLSurface_pointer object at 0x7a07d42c88d0>,
-		<OpenGL._opaque.EGLContext_pointer object at 0x7a07d42c87d0>,
-	),
-	result = 0
-)

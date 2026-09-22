@@ -1,7 +1,0 @@
-[start] dp_PushT-v1_k2 01:20:10
-[end] dp_PushT-v1_k2 rc=0 02:21:14
-[start] dp_PickCube-v1_k2 02:21:14
-[end] dp_PickCube-v1_k2 rc=0 02:35:37
-[start] dp_PushT-v1_k4 02:35:37
-[end] dp_PushT-v1_k4 rc=0 03:32:08
-[fill A] DONE

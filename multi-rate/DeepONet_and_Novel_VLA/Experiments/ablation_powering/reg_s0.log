@@ -1,64 +1,0 @@
-[train] head=deeponet variant=baseline seed=0 out=/home/user/DeepONet_and_Novel_VLA/Experiments/ablation_powering/reg_s0
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  15%|█▍        | 73/489 [00:00<00:00, 729.18it/s]Loading weights:  32%|███▏      | 155/489 [00:00<00:00, 773.90it/s]Loading weights:  48%|████▊     | 233/489 [00:00<00:00, 774.95it/s]Loading weights:  70%|███████   | 343/489 [00:00<00:00, 896.90it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1003.60it/s]
-Reducing the number of VLM layers to 16 ...
-Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
-Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6849.41it/s]
-Reducing the number of VLM layers to 16 ...
-WARNING:root:Missing key(s) when loading model: {'model.deeponet.pool.blocks.2.ln_q.bias', 'model.deeponet.pool.blocks.0.ln_q.weight', 'model.deeponet.pool.blocks.0.ln2.bias', 'model.deeponet.decoder.0.weight', 'model.deeponet.pool.blocks.2.attn.in_proj_weight', 'model.deeponet.pool.blocks.0.ff.0.bias', 'model.deeponet.pool.blocks.1.attn.in_proj_bias', 'model.deeponet.decoder.1.weight', 'model.deeponet.pool.blocks.0.attn.in_proj_weight', 'model.deeponet.pool.blocks.0.attn.out_proj.weight', 'model.deeponet.pool.blocks.1.ff.2.weight', 'model.deeponet.pool.blocks.1.ff.0.weight', 'model.deeponet.pool.blocks.2.ln_q.weight', 'model.deeponet.pool.in_proj.bias', 'model.deeponet.pool.blocks.2.ff.2.bias', 'model.deeponet.decoder.0.bias', 'model.deeponet.pool.blocks.0.ff.0.weight', 'model.deeponet.pool.in_proj.weight', 'model.deeponet.pool.blocks.2.ln2.weight', 'model.deeponet.pool.blocks.1.attn.in_proj_weight', 'model.deeponet.pool.blocks.2.attn.out_proj.weight', 'model.deeponet.pool.blocks.1.ff.0.bias', 'model.deeponet.pool.blocks.0.ln_kv.weight', 'model.deeponet.pool.blocks.1.ln_q.bias', 'model.deeponet.pool.blocks.2.ln_kv.weight', 'model.deeponet.pool.blocks.0.attn.in_proj_bias', 'model.deeponet.pool.blocks.0.ln_kv.bias', 'model.deeponet.pool.blocks.2.ln_kv.bias', 'model.deeponet.pool.blocks.1.attn.out_proj.weight', 'model.deeponet.pool.blocks.1.ff.2.bias', 'model.deeponet.pool.queries', 'model.deeponet.pool.blocks.0.attn.out_proj.bias', 'model.deeponet.pool.blocks.1.ln2.weight', 'model.deeponet.pool.blocks.2.attn.in_proj_bias', 'model.deeponet.decoder.1.bias', 'model.deeponet.pool.blocks.1.ln_q.weight', 'model.deeponet.pool.blocks.0.ff.2.weight', 'model.deeponet.pool.blocks.1.ln_kv.weight', 'model.deeponet.pool.blocks.2.ln2.bias', 'model.deeponet.pool.blocks.1.ln2.bias', 'model.deeponet.pool.blocks.2.ff.2.weight', 'model.deeponet.pool.blocks.1.attn.out_proj.bias', 'model.deeponet.pool.blocks.0.ln2.weight', 'model.deeponet.pool.blocks.2.attn.out_proj.bias', 'model.deeponet.pool.blocks.2.ff.0.bias', 'model.deeponet.decoder.3.weight', 'model.deeponet.pool.blocks.1.ln_kv.bias', 'model.deeponet.pool.blocks.0.ff.2.bias', 'model.deeponet.decoder.3.bias', 'model.deeponet.pool.blocks.2.ff.0.weight', 'model.deeponet.pool.blocks.0.ln_q.bias'}
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 39290.90it/s]
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 117323.19it/s]
-[train] dataset frames=52970 episodes=432 -> 1 epoch = 1104 steps @ batch 48
-[train] planned frames seen = 398400 = 7.52 epochs
-
-=== stage1 | steps=1650 batch=48 trainable: head=10.49M backbone=0.0M ===
-[stage1] step    199 | mse=0.6650 L1=0.6849 PH=0.0000 total=0.6650 | VRAM=9.5GB | 0.277s/it
-[stage1] step    399 | mse=0.4408 L1=0.5386 PH=0.0000 total=0.4408 | VRAM=9.5GB | 0.278s/it
-[stage1] step    599 | mse=0.3790 L1=0.4934 PH=0.0000 total=0.3790 | VRAM=9.5GB | 0.277s/it
-[stage1] step    799 | mse=0.3531 L1=0.4750 PH=0.0000 total=0.3531 | VRAM=9.5GB | 0.497s/it
-[stage1] step    999 | mse=0.3320 L1=0.4628 PH=0.0000 total=0.3320 | VRAM=9.5GB | 0.591s/it
-[stage1] step   1199 | mse=0.3194 L1=0.4528 PH=0.0000 total=0.3194 | VRAM=9.5GB | 4.042s/it
-[stage1] step   1399 | mse=0.3022 L1=0.4448 PH=0.0000 total=0.3022 | VRAM=9.5GB | 1.309s/it
-[stage1] step   1599 | mse=0.2904 L1=0.4383 PH=0.0000 total=0.2904 | VRAM=9.5GB | 0.278s/it
-[ckpt] saved -> /home/user/DeepONet_and_Novel_VLA/Experiments/ablation_powering/reg_s0/checkpoints/1650  (EMA weights)
-
-=== stage2 | steps=6650 batch=48 trainable: head=10.49M backbone=350.2M ===
-[stage2] step   1849 | mse=0.2722 L1=0.4270 PH=0.0000 total=0.2722 | VRAM=50.3GB | 0.637s/it
-[stage2] step   2049 | mse=0.2580 L1=0.4244 PH=0.0000 total=0.2580 | VRAM=50.3GB | 0.636s/it
-[stage2] step   2249 | mse=0.2453 L1=0.4119 PH=0.0000 total=0.2453 | VRAM=50.3GB | 0.636s/it
-[stage2] step   2449 | mse=0.2250 L1=0.3995 PH=0.0000 total=0.2250 | VRAM=50.3GB | 0.637s/it
-[stage2] step   2649 | mse=0.2137 L1=0.3946 PH=0.0000 total=0.2137 | VRAM=50.3GB | 0.637s/it
-[stage2] step   2849 | mse=0.1915 L1=0.3784 PH=0.0000 total=0.1915 | VRAM=50.3GB | 3.562s/it
-[stage2] step   3049 | mse=0.1765 L1=0.3698 PH=0.0000 total=0.1765 | VRAM=50.3GB | 2.916s/it
-[stage2] step   3249 | mse=0.1648 L1=0.3611 PH=0.0000 total=0.1648 | VRAM=50.3GB | 2.552s/it
-[stage2] step   3449 | mse=0.1573 L1=0.3557 PH=0.0000 total=0.1573 | VRAM=50.3GB | 1.380s/it
-[stage2] step   3649 | mse=0.1484 L1=0.3499 PH=0.0000 total=0.1484 | VRAM=50.3GB | 1.103s/it
-[stage2] step   3849 | mse=0.1413 L1=0.3449 PH=0.0000 total=0.1413 | VRAM=50.3GB | 0.769s/it
-[stage2] step   4049 | mse=0.1269 L1=0.3319 PH=0.0000 total=0.1269 | VRAM=50.3GB | 0.634s/it
-[stage2] step   4249 | mse=0.1222 L1=0.3262 PH=0.0000 total=0.1222 | VRAM=50.3GB | 0.635s/it
-[stage2] step   4449 | mse=0.1178 L1=0.3240 PH=0.0000 total=0.1178 | VRAM=50.3GB | 0.635s/it
-[stage2] step   4649 | mse=0.1142 L1=0.3212 PH=0.0000 total=0.1142 | VRAM=50.3GB | 0.636s/it
-[stage2] step   4849 | mse=0.1112 L1=0.3185 PH=0.0000 total=0.1112 | VRAM=50.3GB | 0.637s/it
-[stage2] step   5049 | mse=0.1030 L1=0.3072 PH=0.0000 total=0.1030 | VRAM=50.3GB | 0.636s/it
-[stage2] step   5249 | mse=0.0976 L1=0.3020 PH=0.0000 total=0.0976 | VRAM=50.3GB | 0.636s/it
-[stage2] step   5449 | mse=0.0950 L1=0.3033 PH=0.0000 total=0.0950 | VRAM=50.3GB | 0.635s/it
-[stage2] step   5649 | mse=0.0935 L1=0.2969 PH=0.0000 total=0.0935 | VRAM=50.3GB | 0.637s/it
-[stage2] step   5849 | mse=0.0912 L1=0.2967 PH=0.0000 total=0.0912 | VRAM=50.3GB | 0.636s/it
-[stage2] step   6049 | mse=0.0884 L1=0.2932 PH=0.0000 total=0.0884 | VRAM=50.3GB | 0.634s/it
-[stage2] step   6249 | mse=0.0827 L1=0.2870 PH=0.0000 total=0.0827 | VRAM=50.3GB | 0.636s/it
-[stage2] step   6449 | mse=0.0810 L1=0.2847 PH=0.0000 total=0.0810 | VRAM=50.3GB | 0.637s/it
-[stage2] step   6649 | mse=0.0795 L1=0.2826 PH=0.0000 total=0.0795 | VRAM=50.3GB | 0.638s/it
-[stage2] step   6849 | mse=0.0790 L1=0.2805 PH=0.0000 total=0.0790 | VRAM=50.3GB | 0.636s/it
-[stage2] step   7049 | mse=0.0763 L1=0.2793 PH=0.0000 total=0.0763 | VRAM=50.3GB | 1.282s/it
-[stage2] step   7249 | mse=0.0736 L1=0.2753 PH=0.0000 total=0.0736 | VRAM=50.3GB | 0.635s/it
-[stage2] step   7449 | mse=0.0703 L1=0.2709 PH=0.0000 total=0.0703 | VRAM=50.3GB | 0.636s/it
-[stage2] step   7649 | mse=0.0705 L1=0.2694 PH=0.0000 total=0.0705 | VRAM=50.3GB | 0.637s/it
-[stage2] step   7849 | mse=0.0692 L1=0.2688 PH=0.0000 total=0.0692 | VRAM=50.3GB | 0.636s/it
-[stage2] step   8049 | mse=0.0678 L1=0.2688 PH=0.0000 total=0.0678 | VRAM=50.3GB | 0.637s/it
-[stage2] step   8249 | mse=0.0665 L1=0.2663 PH=0.0000 total=0.0665 | VRAM=50.3GB | 0.637s/it
-[ckpt] saved -> /home/user/DeepONet_and_Novel_VLA/Experiments/ablation_powering/reg_s0/checkpoints/8300  (EMA weights)
-
-[train] DONE head=deeponet variant=baseline steps=8300 wall=139.7 min -> /home/user/DeepONet_and_Novel_VLA/Experiments/ablation_powering/reg_s0

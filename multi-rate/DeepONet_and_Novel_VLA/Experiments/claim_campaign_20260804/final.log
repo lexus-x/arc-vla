@@ -1,7 +1,0 @@
-[final] 12:27 goal n=300 asrc_goal_cadmag_spline_40env
-[final] 12:49 goal n=300 asrc_goal_cadmag_folding_40env
-[final] 13:14 ablation 2x2
-[final] 13:41 standard protocol
-[final] 13:41 plus n=315 asrc_cadmag_spline_40env
-[final] 13:41 plus n=315 asrc_cadmag_folding_40env
-[final] 13:42 ALL DONE

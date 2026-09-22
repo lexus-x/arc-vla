@@ -1,9 +1,0 @@
-[start] dp_PickCube-v1_s1_30k 15:39:20
-[start] dp_PushT-v1_s1_30k 15:39:20
-[end] dp_PickCube-v1_s1_30k rc=0 16:37:35
-[start] dp_PickCube-v1_s2_30k 16:37:35
-[end] dp_PickCube-v1_s2_30k rc=0 17:29:13
-[end] dp_PushT-v1_s1_30k rc=0 18:08:00
-[start] dp_PushT-v1_s2_30k 18:08:00
-[end] dp_PushT-v1_s2_30k rc=0 19:35:16
-[campaign] ALL DONE 19:35:16

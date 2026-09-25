@@ -51,6 +51,12 @@ FOLD = -1  # RoboCasa held-out fold (--fold); -1 = legacy split
 ARMS = ["native", "zoh", "spline", "spline_satfix", "pchip", "pchip_satfix", "tac_fold", "tac_fold_satfix", "bspline", "bspline_satfix", "gripper_sync"]
 MANISKILL = {"PickCube-v1": dict(h5="pick_rl_joint", ctrl="pd_joint_delta_pos", gripper=True, max_steps=100),
              "PushT-v1":    dict(h5="pusht_rl",       ctrl="pd_ee_delta_pose",    gripper=False, max_steps=150)}
+# 2026-09-23 saturation-screened expansion: official ManiSkill RL demos, joint-delta controller,
+# gripper convention as PickCube, max_steps = each env's own default (from the demo json).
+MANISKILL.update({t: dict(h5=f"raw/{t}/rl/trajectory.none.pd_joint_delta_pos.physx_cuda", ctrl="pd_joint_delta_pos",
+                          gripper=t != "AnymalC-Reach-v1", max_steps=m)
+                  for t, m in [("RollBall-v1", 80), ("PullCube-v1", 50), ("LiftPegUpright-v1", 50), ("PushCube-v1", 50),
+                               ("AnymalC-Reach-v1", 200), ("PokeCube-v1", 50), ("StackCube-v1", 50)]})
 ROBOMIMIC = {"lift": 200, "can": 400, "square": 400}  # max steps (DP paper)
 RM_OBS = ["object", "robot0_eef_pos", "robot0_eef_quat", "robot0_gripper_qpos"]  # DP low-dim obs
 ROBOCASA = {"RC-OpenDrawer": dict(env_task="OpenDrawer", max_steps=500, n_hold=6),
@@ -103,6 +109,25 @@ def apply_arm(chunk, arm, n_hold):
     return out.astype(np.float32)
 
 
+def apply_arm_ctx(pred, arm, n_hold, prev_bs):
+    """``<base>_ctx`` arm: resample the executed 8 steps with context instead of in isolation.
+
+    Block sums = [previously executed blocks | all blocks of the clipped predicted horizon
+    (executed 8 steps + the unexecuted tail the step head already predicts)]; run the base
+    resampler over that whole sequence and keep the executed window. Block-sum conservation
+    and the box are per-block, so qp_anchor_ctx keeps both on the executed blocks.
+    Gripper/trailing dims are causal-held exactly as in apply_arm.
+    """
+    assert 8 % K == 0, "ctx arms need whole blocks in the 8-step executed chunk"
+    nd = pred.shape[1] - n_hold
+    bs = resample_math.coarsen_delta(pred[:, :nd], K)
+    p = 0 if prev_bs is None else len(prev_bs)
+    if p: bs = np.concatenate([prev_bs, bs])
+    out = apply_arm(pred[:8], "zoh", n_hold)
+    out[:, :nd] = resample_math.RESAMPLERS[arm](bs, K)[p * K:p * K + 8]
+    return out.astype(np.float32)
+
+
 # ------------------------------------------------------------------ sim adapters
 class ManiSkillSim:
     def __init__(self, task):
@@ -120,8 +145,8 @@ class ManiSkillSim:
         sg = self.h5[f"traj_{int(ep['episode_id'])}"]["env_states"]
         return {g: {n: torch.as_tensor(np.asarray(sg[g][n])[0:1]) for n in sg[g]} for g in sg}
 
-    def split(self, n_train, n_eval):  # plenty of demos -> eval from held-out demo init states
-        eps = self.eligible[:n_train], self.eligible[n_train:n_train + n_eval]
+    def split(self, n_train, n_eval, offset=0):  # plenty of demos -> eval from held-out demo init states
+        a = n_train + offset; eps = self.eligible[:n_train], self.eligible[a:a + n_eval]
         assert len(eps[1]) == n_eval, f"not enough held-out demos: {len(eps[1])}"
         return eps
 
@@ -270,7 +295,7 @@ def run_episode(sim, policy, onorm, anorm, dev, ei, ep, head, K, ND, nblocks):
     out = {}
     for arm in ARMS:
         obs = sim.reset_to(ep); hist = [obs, obs]; s = False; steps = 0; sat_e = []
-        replan = 0
+        replan = 0; prev_bs = None
         while steps < sim.max_steps and not s:
             o = torch.as_tensor(onorm.norm(np.stack(hist[-2:]))[None], device=dev)
             torch.manual_seed(1_000_003 * ei + replan)  # paired noise across arms
@@ -282,7 +307,20 @@ def run_episode(sim, policy, onorm, anorm, dev, ei, ep, head, K, ND, nblocks):
             pred = anorm.denorm(sampled.cpu().numpy()[0])
             if head == "step":
                 chunk = pred[:8]; sat_e.append(float((np.abs(chunk) > 1).mean()))
-                exec_chunk = apply_arm(np.clip(chunk, -1, 1).astype(np.float32), arm, sim.n_hold)
+                if arm == "mlp_bc":  # small network alone as the policy (DP proposal ignored)
+                    import shape_governor
+                    exec_chunk = shape_governor.decode_bc(os.environ["SHAPE_BC_PATH"], np.stack(hist[-2:]))
+                elif arm in ("qp_learned", "learned_raw", "learned_tanh"):  # shape_governor.py: learned anchor (+ governor) / tanh net
+                    import shape_governor
+                    nd = chunk.shape[1] - sim.n_hold; exec_chunk = apply_arm(np.clip(chunk, -1, 1).astype(np.float32), "zoh", sim.n_hold)
+                    exec_chunk[:, :nd] = shape_governor.decode(os.environ["SHAPE_TANH_PATH" if arm == "learned_tanh" else "SHAPE_GOV_PATH"], np.stack(hist[-2:]),
+                                                               np.clip(chunk[:, :nd], -1, 1).astype(np.float32), arm == "qp_learned")
+                elif arm.endswith("_ctx"):
+                    clipped = np.clip(pred, -1, 1).astype(np.float32)
+                    exec_chunk = apply_arm_ctx(clipped, arm[:-4], sim.n_hold, prev_bs)
+                    prev_bs = resample_math.coarsen_delta(clipped[:8, :clipped.shape[1] - sim.n_hold], K)
+                else:
+                    exec_chunk = apply_arm(np.clip(chunk, -1, 1).astype(np.float32), arm, sim.n_hold)
             else:
                 exec_chunk = heads.decode(pred, head, ND, K, arm, nblocks)
                 sat_e.append(float((np.abs(exec_chunk[:, :ND]) > 1).mean())); exec_chunk = np.clip(exec_chunk, -1, 1)
@@ -370,6 +408,7 @@ def main():
     ap.add_argument("--rc-random-eval", action="store_true", help="RoboCasa: evaluate deterministic fresh resets instead of held-out demo states")
     ap.add_argument("--eval-seed", type=int, default=0, help="RoboCasa random-reset seed block")
     ap.add_argument("--workers", type=int, default=1, help="parallel eval processes across episodes; 1=sequential (default, unchanged behavior). >1 must produce identical results (see VALIDATE_WORKERS.md) -- pairing depends only on (episode, replan), never on which worker runs it.")
+    ap.add_argument("--eval-offset", type=int, default=0, help="ManiSkill: skip this many held-out demos before the eval window (dev vs confirmation windows)")
     ap.add_argument("--smoke", action="store_true"); args = ap.parse_args()
     if args.smoke: args.steps, args.n_train, args.n_eval = 50, 3, 2
     dev = "cuda"; torch.manual_seed(args.seed); np.random.seed(args.seed)
@@ -394,13 +433,14 @@ def main():
                     and _d.get("eval_protocol") == req_proto
                     and _d.get("eval_seed") == args.eval_seed
                     and _d.get("n_train") == args.n_train
-                    and _d.get("train_steps") == args.steps):
+                    and _d.get("train_steps") == args.steps
+                    and _d.get("eval_offset", 0) == args.eval_offset):
                 print(f"[skip] {out_target} already complete ({args.n_eval} eps, all arms present). Skipping.")
                 sim.close()
                 return
         except Exception:
             pass
-    train_eps, eval_eps = sim.split(args.n_train, args.n_eval)
+    train_eps, eval_eps = sim.split(args.n_train, args.n_eval, **({"offset": args.eval_offset} if args.eval_offset else {}))
 
     cache = f"{HERE}/demos_{args.task}_{args.n_train}" + (f"_f{args.fold}" if args.fold >= 0 else "") + ".npz"  # harvested demos are deterministic per (task, n_train)
     t0 = time.time()
@@ -453,6 +493,17 @@ def main():
         os.replace(checkpoint_tmp, ckpt)
         print(f"[train] saved {ckpt}")
     policy.eval()
+    if any(a in ("qp_learned", "learned_raw", "learned_tanh") for a in ARMS):  # fit on the training demos only; env var reaches spawned workers
+        import shape_governor
+        for env, tanh in (("SHAPE_GOV_PATH", False), ("SHAPE_TANH_PATH", True)):
+            sp = f"{HERE}/shape{'_tanh' if tanh else ''}_{args.task}_k{K}_n{args.n_train}.pt"
+            if not os.path.exists(sp): torch.save(shape_governor.fit(O, A, K, ND, tanh=tanh), sp); print(f"[shape] saved {sp}")
+            os.environ[env] = sp
+    if "mlp_bc" in ARMS:
+        import shape_governor
+        sp = f"{HERE}/shape_bc_{args.task}_n{args.n_train}.pt"
+        if not os.path.exists(sp): torch.save(shape_governor.fit_bc(O, A, ND), sp); print(f"[shape] saved {sp}")
+        os.environ["SHAPE_BC_PATH"] = sp
 
     # ---- eval
     t_eval = time.time()
@@ -469,7 +520,7 @@ def main():
     S = {a: np.asarray(succ[a], bool) for a in ARMS}
     print(f"\n=== {args.task} closed-loop {args.policy.upper()}, k={K}, n={len(eval_eps)} ===")
     res = {"task": args.task, "policy": args.policy, "k": K, "head": args.head, "seed": args.seed, "fold": args.fold,
-           "n": len(eval_eps), "n_train": args.n_train, "train_steps": args.steps, "arms": ARMS,
+           "n": len(eval_eps), "eval_offset": args.eval_offset, "n_train": args.n_train, "train_steps": args.steps, "arms": ARMS,
            "checkpoint_path": os.path.abspath(ckpt), "checkpoint_sha256": sha256_file(ckpt),
            "eval_protocol": "random_reset" if args.rc_random_eval else "heldout_demo_state", "eval_seed": args.eval_seed,
            "success": {a: succ[a] for a in ARMS}, "policy_raw_sat_frac": {a: float(np.mean(sat[a])) for a in ARMS}, "contrasts": {}}

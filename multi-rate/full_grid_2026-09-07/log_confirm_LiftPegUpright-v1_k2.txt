@@ -1,0 +1,59 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_LiftPegUpright-v1_200.npz
+[data] 200 demos harvested in 0s
+[data] 2820 windows, obs_dim=32, act_dim=8, raw |a|>1 frac=0.585
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_LiftPegUpright-v1.pt
+[shape] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/shape_LiftPegUpright-v1_k2_n200.pt
+[shape] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/shape_tanh_LiftPegUpright-v1_k2_n200.pt
+[eval] [10/400] native=10 zoh=5 tac_fold_satfix=9 qp_anchor=9 qp_learned=10 learned_raw=9 learned_tanh=7 mlp_bc=9
+[eval] [20/400] native=18 zoh=10 tac_fold_satfix=15 qp_anchor=15 qp_learned=16 learned_raw=15 learned_tanh=13 mlp_bc=17
+[eval] [30/400] native=27 zoh=12 tac_fold_satfix=21 qp_anchor=21 qp_learned=22 learned_raw=20 learned_tanh=18 mlp_bc=25
+[eval] [40/400] native=37 zoh=17 tac_fold_satfix=26 qp_anchor=25 qp_learned=28 learned_raw=26 learned_tanh=22 mlp_bc=34
+[eval] [50/400] native=46 zoh=20 tac_fold_satfix=33 qp_anchor=32 qp_learned=34 learned_raw=32 learned_tanh=28 mlp_bc=44
+[eval] [60/400] native=56 zoh=27 tac_fold_satfix=40 qp_anchor=39 qp_learned=42 learned_raw=41 learned_tanh=36 mlp_bc=53
+[eval] [70/400] native=65 zoh=32 tac_fold_satfix=45 qp_anchor=46 qp_learned=48 learned_raw=48 learned_tanh=42 mlp_bc=62
+[eval] [80/400] native=74 zoh=36 tac_fold_satfix=49 qp_anchor=52 qp_learned=54 learned_raw=53 learned_tanh=48 mlp_bc=70
+[eval] [90/400] native=84 zoh=42 tac_fold_satfix=55 qp_anchor=58 qp_learned=62 learned_raw=61 learned_tanh=55 mlp_bc=78
+[eval] [100/400] native=94 zoh=47 tac_fold_satfix=59 qp_anchor=62 qp_learned=66 learned_raw=65 learned_tanh=58 mlp_bc=85
+[eval] [110/400] native=103 zoh=52 tac_fold_satfix=67 qp_anchor=70 qp_learned=74 learned_raw=73 learned_tanh=65 mlp_bc=93
+[eval] [120/400] native=112 zoh=59 tac_fold_satfix=75 qp_anchor=78 qp_learned=83 learned_raw=82 learned_tanh=72 mlp_bc=102
+[eval] [130/400] native=121 zoh=61 tac_fold_satfix=80 qp_anchor=83 qp_learned=88 learned_raw=86 learned_tanh=78 mlp_bc=110
+[eval] [140/400] native=131 zoh=69 tac_fold_satfix=88 qp_anchor=91 qp_learned=97 learned_raw=94 learned_tanh=85 mlp_bc=121
+[eval] [150/400] native=140 zoh=73 tac_fold_satfix=92 qp_anchor=95 qp_learned=102 learned_raw=101 learned_tanh=90 mlp_bc=131
+[eval] [160/400] native=151 zoh=78 tac_fold_satfix=98 qp_anchor=103 qp_learned=110 learned_raw=109 learned_tanh=97 mlp_bc=141
+[eval] [170/400] native=160 zoh=83 tac_fold_satfix=103 qp_anchor=108 qp_learned=116 learned_raw=115 learned_tanh=103 mlp_bc=150
+[eval] [180/400] native=171 zoh=86 tac_fold_satfix=108 qp_anchor=113 qp_learned=122 learned_raw=120 learned_tanh=108 mlp_bc=158
+[eval] [190/400] native=178 zoh=90 tac_fold_satfix=112 qp_anchor=118 qp_learned=127 learned_raw=126 learned_tanh=112 mlp_bc=165
+[eval] [200/400] native=190 zoh=97 tac_fold_satfix=120 qp_anchor=126 qp_learned=136 learned_raw=135 learned_tanh=121 mlp_bc=176
+[eval] [210/400] native=199 zoh=102 tac_fold_satfix=125 qp_anchor=130 qp_learned=141 learned_raw=141 learned_tanh=128 mlp_bc=184
+[eval] [220/400] native=207 zoh=108 tac_fold_satfix=130 qp_anchor=136 qp_learned=147 learned_raw=145 learned_tanh=133 mlp_bc=192
+[eval] [230/400] native=218 zoh=115 tac_fold_satfix=138 qp_anchor=143 qp_learned=155 learned_raw=154 learned_tanh=141 mlp_bc=203
+[eval] [240/400] native=228 zoh=122 tac_fold_satfix=145 qp_anchor=150 qp_learned=162 learned_raw=160 learned_tanh=148 mlp_bc=213
+[eval] [250/400] native=238 zoh=126 tac_fold_satfix=149 qp_anchor=154 qp_learned=167 learned_raw=165 learned_tanh=152 mlp_bc=221
+[eval] [260/400] native=248 zoh=132 tac_fold_satfix=155 qp_anchor=161 qp_learned=173 learned_raw=171 learned_tanh=158 mlp_bc=231
+[eval] [270/400] native=257 zoh=135 tac_fold_satfix=161 qp_anchor=166 qp_learned=179 learned_raw=176 learned_tanh=165 mlp_bc=241
+[eval] [280/400] native=265 zoh=140 tac_fold_satfix=165 qp_anchor=171 qp_learned=185 learned_raw=182 learned_tanh=171 mlp_bc=250
+[eval] [290/400] native=275 zoh=144 tac_fold_satfix=171 qp_anchor=178 qp_learned=194 learned_raw=189 learned_tanh=177 mlp_bc=261
+[eval] [300/400] native=284 zoh=148 tac_fold_satfix=176 qp_anchor=182 qp_learned=200 learned_raw=195 learned_tanh=182 mlp_bc=269
+[eval] [310/400] native=294 zoh=152 tac_fold_satfix=180 qp_anchor=186 qp_learned=204 learned_raw=198 learned_tanh=185 mlp_bc=278
+[eval] [320/400] native=303 zoh=155 tac_fold_satfix=183 qp_anchor=189 qp_learned=208 learned_raw=202 learned_tanh=189 mlp_bc=286
+[eval] [330/400] native=314 zoh=161 tac_fold_satfix=191 qp_anchor=197 qp_learned=216 learned_raw=210 learned_tanh=195 mlp_bc=295
+[eval] [340/400] native=324 zoh=167 tac_fold_satfix=196 qp_anchor=202 qp_learned=224 learned_raw=217 learned_tanh=202 mlp_bc=304
+[eval] [350/400] native=332 zoh=173 tac_fold_satfix=202 qp_anchor=209 qp_learned=230 learned_raw=223 learned_tanh=209 mlp_bc=312
+[eval] [360/400] native=342 zoh=181 tac_fold_satfix=209 qp_anchor=217 qp_learned=239 learned_raw=231 learned_tanh=217 mlp_bc=322
+[eval] [370/400] native=351 zoh=185 tac_fold_satfix=216 qp_anchor=224 qp_learned=246 learned_raw=237 learned_tanh=223 mlp_bc=330
+[eval] [380/400] native=361 zoh=192 tac_fold_satfix=224 qp_anchor=233 qp_learned=255 learned_raw=246 learned_tanh=231 mlp_bc=340
+[eval] [390/400] native=371 zoh=196 tac_fold_satfix=229 qp_anchor=238 qp_learned=260 learned_raw=252 learned_tanh=237 mlp_bc=349
+[eval] [400/400] native=381 zoh=200 tac_fold_satfix=234 qp_anchor=244 qp_learned=266 learned_raw=258 learned_tanh=244 mlp_bc=357
+[eval] wall 2194s for 400 eps x 8 arms (4 workers)
+
+=== LiftPegUpright-v1 closed-loop DP, k=2, n=400 ===
+  native             95.2% (381/400)  | vs zoh:  +45.2pp p=1.34e-49
+  zoh                50.0% (200/400)  | vs native:  -45.2pp p=1.34e-49
+  tac_fold_satfix    58.5% (234/400)  | vs zoh:   +8.5pp p=1.21e-05  | vs native:  -36.8pp p=8.43e-39
+  qp_anchor          61.0% (244/400)  | vs zoh:  +11.0pp p=3.6e-08  | vs native:  -34.2pp p=6.2e-36
+  qp_learned         66.5% (266/400)  | vs zoh:  +16.5pp p=1.65e-14  | vs native:  -28.7pp p=1.15e-29
+  learned_raw        64.5% (258/400)  | vs zoh:  +14.5pp p=7.86e-11  | vs native:  -30.8pp p=3.61e-31
+  learned_tanh       61.0% (244/400)  | vs zoh:  +11.0pp p=6.34e-06  | vs native:  -34.2pp p=6.2e-36
+  mlp_bc             89.2% (357/400)  | vs zoh:  +39.2pp p=2.96e-39  | vs native:   -6.0pp p=0.000717
+  policy raw |a|>1 frac (pre-clip): 0.558
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_LiftPegUpright-v1_k2_confirm.json

@@ -1,0 +1,59 @@
+[data] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/demos_RollBall-v1_200.npz
+[data] 200 demos harvested in 0s
+[data] 8595 windows, obs_dim=44, act_dim=8, raw |a|>1 frac=0.620
+[train] loaded /home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RollBall-v1.pt
+[shape] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/shape_RollBall-v1_k2_n200.pt
+[shape] saved /home/user/Desktop/multi-rate/full_grid_2026-09-07/shape_tanh_RollBall-v1_k2_n200.pt
+[eval] [10/400] native=6 zoh=3 tac_fold_satfix=5 qp_anchor=4 qp_learned=6 learned_raw=6 learned_tanh=6 mlp_bc=1
+[eval] [20/400] native=10 zoh=6 tac_fold_satfix=8 qp_anchor=8 qp_learned=13 learned_raw=11 learned_tanh=13 mlp_bc=2
+[eval] [30/400] native=19 zoh=11 tac_fold_satfix=14 qp_anchor=14 qp_learned=19 learned_raw=17 learned_tanh=22 mlp_bc=3
+[eval] [40/400] native=27 zoh=15 tac_fold_satfix=20 qp_anchor=19 qp_learned=26 learned_raw=23 learned_tanh=27 mlp_bc=4
+[eval] [50/400] native=34 zoh=17 tac_fold_satfix=25 qp_anchor=24 qp_learned=32 learned_raw=28 learned_tanh=32 mlp_bc=5
+[eval] [60/400] native=42 zoh=20 tac_fold_satfix=30 qp_anchor=29 qp_learned=40 learned_raw=35 learned_tanh=36 mlp_bc=7
+[eval] [70/400] native=46 zoh=25 tac_fold_satfix=35 qp_anchor=35 qp_learned=48 learned_raw=41 learned_tanh=41 mlp_bc=8
+[eval] [80/400] native=53 zoh=27 tac_fold_satfix=41 qp_anchor=39 qp_learned=55 learned_raw=44 learned_tanh=47 mlp_bc=9
+[eval] [90/400] native=62 zoh=29 tac_fold_satfix=44 qp_anchor=43 qp_learned=64 learned_raw=51 learned_tanh=55 mlp_bc=10
+[eval] [100/400] native=69 zoh=33 tac_fold_satfix=51 qp_anchor=51 qp_learned=72 learned_raw=56 learned_tanh=60 mlp_bc=11
+[eval] [110/400] native=76 zoh=37 tac_fold_satfix=53 qp_anchor=53 qp_learned=79 learned_raw=62 learned_tanh=67 mlp_bc=13
+[eval] [120/400] native=79 zoh=40 tac_fold_satfix=56 qp_anchor=55 qp_learned=82 learned_raw=65 learned_tanh=71 mlp_bc=15
+[eval] [130/400] native=83 zoh=43 tac_fold_satfix=57 qp_anchor=56 qp_learned=87 learned_raw=68 learned_tanh=74 mlp_bc=16
+[eval] [140/400] native=91 zoh=49 tac_fold_satfix=64 qp_anchor=63 qp_learned=94 learned_raw=74 learned_tanh=83 mlp_bc=16
+[eval] [150/400] native=96 zoh=53 tac_fold_satfix=68 qp_anchor=67 qp_learned=99 learned_raw=80 learned_tanh=86 mlp_bc=18
+[eval] [160/400] native=101 zoh=56 tac_fold_satfix=71 qp_anchor=69 qp_learned=105 learned_raw=82 learned_tanh=90 mlp_bc=22
+[eval] [170/400] native=109 zoh=59 tac_fold_satfix=75 qp_anchor=72 qp_learned=112 learned_raw=88 learned_tanh=96 mlp_bc=22
+[eval] [180/400] native=115 zoh=64 tac_fold_satfix=80 qp_anchor=77 qp_learned=116 learned_raw=92 learned_tanh=99 mlp_bc=22
+[eval] [190/400] native=120 zoh=67 tac_fold_satfix=83 qp_anchor=79 qp_learned=122 learned_raw=96 learned_tanh=103 mlp_bc=23
+[eval] [200/400] native=125 zoh=71 tac_fold_satfix=87 qp_anchor=83 qp_learned=126 learned_raw=102 learned_tanh=105 mlp_bc=26
+[eval] [210/400] native=129 zoh=75 tac_fold_satfix=92 qp_anchor=89 qp_learned=134 learned_raw=105 learned_tanh=112 mlp_bc=28
+[eval] [220/400] native=133 zoh=77 tac_fold_satfix=93 qp_anchor=90 qp_learned=139 learned_raw=108 learned_tanh=116 mlp_bc=28
+[eval] [230/400] native=139 zoh=80 tac_fold_satfix=95 qp_anchor=92 qp_learned=146 learned_raw=113 learned_tanh=120 mlp_bc=32
+[eval] [240/400] native=147 zoh=83 tac_fold_satfix=100 qp_anchor=97 qp_learned=153 learned_raw=120 learned_tanh=128 mlp_bc=33
+[eval] [250/400] native=154 zoh=89 tac_fold_satfix=107 qp_anchor=104 qp_learned=162 learned_raw=129 learned_tanh=135 mlp_bc=33
+[eval] [260/400] native=163 zoh=91 tac_fold_satfix=111 qp_anchor=108 qp_learned=168 learned_raw=136 learned_tanh=141 mlp_bc=36
+[eval] [270/400] native=165 zoh=94 tac_fold_satfix=112 qp_anchor=109 qp_learned=169 learned_raw=142 learned_tanh=143 mlp_bc=39
+[eval] [280/400] native=168 zoh=94 tac_fold_satfix=112 qp_anchor=109 qp_learned=172 learned_raw=144 learned_tanh=145 mlp_bc=39
+[eval] [290/400] native=172 zoh=100 tac_fold_satfix=116 qp_anchor=113 qp_learned=177 learned_raw=150 learned_tanh=149 mlp_bc=42
+[eval] [300/400] native=179 zoh=106 tac_fold_satfix=123 qp_anchor=120 qp_learned=183 learned_raw=157 learned_tanh=154 mlp_bc=44
+[eval] [310/400] native=185 zoh=111 tac_fold_satfix=127 qp_anchor=125 qp_learned=192 learned_raw=161 learned_tanh=160 mlp_bc=47
+[eval] [320/400] native=191 zoh=114 tac_fold_satfix=133 qp_anchor=132 qp_learned=198 learned_raw=165 learned_tanh=164 mlp_bc=47
+[eval] [330/400] native=199 zoh=116 tac_fold_satfix=137 qp_anchor=136 qp_learned=204 learned_raw=173 learned_tanh=168 mlp_bc=48
+[eval] [340/400] native=204 zoh=123 tac_fold_satfix=142 qp_anchor=141 qp_learned=207 learned_raw=179 learned_tanh=173 mlp_bc=49
+[eval] [350/400] native=209 zoh=127 tac_fold_satfix=148 qp_anchor=147 qp_learned=213 learned_raw=185 learned_tanh=180 mlp_bc=51
+[eval] [360/400] native=213 zoh=129 tac_fold_satfix=151 qp_anchor=150 qp_learned=218 learned_raw=191 learned_tanh=184 mlp_bc=53
+[eval] [370/400] native=219 zoh=131 tac_fold_satfix=155 qp_anchor=155 qp_learned=225 learned_raw=197 learned_tanh=190 mlp_bc=54
+[eval] [380/400] native=225 zoh=134 tac_fold_satfix=159 qp_anchor=160 qp_learned=232 learned_raw=203 learned_tanh=195 mlp_bc=56
+[eval] [390/400] native=232 zoh=137 tac_fold_satfix=165 qp_anchor=166 qp_learned=239 learned_raw=208 learned_tanh=201 mlp_bc=60
+[eval] [400/400] native=240 zoh=142 tac_fold_satfix=174 qp_anchor=174 qp_learned=248 learned_raw=217 learned_tanh=208 mlp_bc=63
+[eval] wall 4089s for 400 eps x 8 arms (4 workers)
+
+=== RollBall-v1 closed-loop DP, k=2, n=400 ===
+  native             60.0% (240/400)  | vs zoh:  +24.5pp p=4.31e-13
+  zoh                35.5% (142/400)  | vs native:  -24.5pp p=4.31e-13
+  tac_fold_satfix    43.5% (174/400)  | vs zoh:   +8.0pp p=0.00244  | vs native:  -16.5pp p=6.92e-08
+  qp_anchor          43.5% (174/400)  | vs zoh:   +8.0pp p=0.00294  | vs native:  -16.5pp p=8.54e-08
+  qp_learned         62.0% (248/400)  | vs zoh:  +26.5pp p=4.32e-16  | vs native:   +2.0pp p=0.389
+  learned_raw        54.2% (217/400)  | vs zoh:  +18.8pp p=1.73e-09  | vs native:   -5.8pp p=0.0297
+  learned_tanh       52.0% (208/400)  | vs zoh:  +16.5pp p=3.81e-07  | vs native:   -8.0pp p=0.00633
+  mlp_bc             15.8% (63/400)  | vs zoh:  -19.7pp p=1.44e-11  | vs native:  -44.2pp p=1.02e-38
+  policy raw |a|>1 frac (pre-clip): 0.556
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_RollBall-v1_k2_confirm.json

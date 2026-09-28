@@ -1,0 +1,30 @@
+/home/islab/miniconda3/envs/ms3/lib/python3.11/site-packages/sapien/_vulkan_tricks.py:42: UserWarning: Failed to find system libvulkan. Fallback to SAPIEN builtin libvulkan.
+  warn("Failed to find system libvulkan. Fallback to SAPIEN builtin libvulkan.")
+Traceback (most recent call last):
+  File "/home/islab/multirate_confirm/fg/harness.py", line 550, in <module>
+    main()
+  File "/home/islab/multirate_confirm/fg/harness.py", line 415, in main
+    if args.task in MANISKILL: sim = ManiSkillSim(args.task)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/islab/multirate_confirm/fg/harness.py", line 136, in __init__
+    self.env = gym.make(task, num_envs=1, obs_mode="state", control_mode=cfg["ctrl"],
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/islab/miniconda3/envs/ms3/lib/python3.11/site-packages/gymnasium/envs/registration.py", line 735, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/islab/miniconda3/envs/ms3/lib/python3.11/site-packages/mani_skill/utils/registration.py", line 182, in make
+    env = env_spec.make(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/islab/miniconda3/envs/ms3/lib/python3.11/site-packages/mani_skill/utils/registration.py", line 79, in make
+    return self.cls(**_kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/islab/miniconda3/envs/ms3/lib/python3.11/site-packages/mani_skill/envs/tasks/tabletop/push_cube.py", line 65, in __init__
+    super().__init__(*args, robot_uids=robot_uids, **kwargs)
+  File "/home/islab/miniconda3/envs/ms3/lib/python3.11/site-packages/mani_skill/envs/sapien_env.py", line 245, in __init__
+    physx.enable_gpu()
+  File "/home/islab/miniconda3/envs/ms3/lib/python3.11/site-packages/sapien/physx/__init__.py", line 64, in enable_gpu
+    ctypes.CDLL("libcuda.so", ctypes.RTLD_GLOBAL)
+  File "/home/islab/miniconda3/envs/ms3/lib/python3.11/ctypes/__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libcuda.so: cannot open shared object file: No such file or directory

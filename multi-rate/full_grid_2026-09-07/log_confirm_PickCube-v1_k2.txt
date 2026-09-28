@@ -1,0 +1,49 @@
+[data] loaded /home/islab/multirate_confirm/fg/demos_PickCube-v1_200.npz
+[data] 200 demos harvested in 0s
+[data] 3890 windows, obs_dim=42, act_dim=8, raw |a|>1 frac=0.303
+[train] loaded /home/islab/multirate_confirm/fg/dp_PickCube-v1.pt
+[shape] saved /home/islab/multirate_confirm/fg/shape_PickCube-v1_k2_n200.pt
+[shape] saved /home/islab/multirate_confirm/fg/shape_tanh_PickCube-v1_k2_n200.pt
+[eval] [10/293] native=9 zoh=9 tac_fold_satfix=10 qp_anchor=10 qp_learned=10 learned_raw=10 learned_tanh=9 mlp_bc=7
+[eval] [20/293] native=18 zoh=17 tac_fold_satfix=18 qp_anchor=18 qp_learned=19 learned_raw=18 learned_tanh=18 mlp_bc=15
+[eval] [30/293] native=27 zoh=26 tac_fold_satfix=27 qp_anchor=27 qp_learned=27 learned_raw=27 learned_tanh=27 mlp_bc=25
+[eval] [40/293] native=36 zoh=34 tac_fold_satfix=35 qp_anchor=35 qp_learned=35 learned_raw=35 learned_tanh=36 mlp_bc=34
+[eval] [50/293] native=44 zoh=41 tac_fold_satfix=43 qp_anchor=43 qp_learned=44 learned_raw=43 learned_tanh=44 mlp_bc=41
+[eval] [60/293] native=52 zoh=47 tac_fold_satfix=50 qp_anchor=50 qp_learned=52 learned_raw=51 learned_tanh=52 mlp_bc=47
+[eval] [70/293] native=59 zoh=53 tac_fold_satfix=59 qp_anchor=59 qp_learned=61 learned_raw=60 learned_tanh=59 mlp_bc=55
+[eval] [80/293] native=67 zoh=61 tac_fold_satfix=67 qp_anchor=67 qp_learned=69 learned_raw=68 learned_tanh=68 mlp_bc=64
+[eval] [90/293] native=74 zoh=67 tac_fold_satfix=73 qp_anchor=73 qp_learned=76 learned_raw=76 learned_tanh=76 mlp_bc=73
+[eval] [100/293] native=84 zoh=74 tac_fold_satfix=82 qp_anchor=82 qp_learned=85 learned_raw=85 learned_tanh=85 mlp_bc=83
+[eval] [110/293] native=94 zoh=81 tac_fold_satfix=91 qp_anchor=91 qp_learned=95 learned_raw=94 learned_tanh=94 mlp_bc=91
+[eval] [120/293] native=101 zoh=87 tac_fold_satfix=99 qp_anchor=99 qp_learned=102 learned_raw=102 learned_tanh=102 mlp_bc=100
+[eval] [130/293] native=107 zoh=93 tac_fold_satfix=105 qp_anchor=105 qp_learned=109 learned_raw=108 learned_tanh=109 mlp_bc=108
+[eval] [140/293] native=115 zoh=99 tac_fold_satfix=112 qp_anchor=112 qp_learned=116 learned_raw=117 learned_tanh=119 mlp_bc=118
+[eval] [150/293] native=123 zoh=106 tac_fold_satfix=121 qp_anchor=121 qp_learned=124 learned_raw=125 learned_tanh=127 mlp_bc=126
+[eval] [160/293] native=134 zoh=115 tac_fold_satfix=132 qp_anchor=132 qp_learned=135 learned_raw=136 learned_tanh=138 mlp_bc=135
+[eval] [170/293] native=143 zoh=124 tac_fold_satfix=141 qp_anchor=141 qp_learned=143 learned_raw=144 learned_tanh=147 mlp_bc=144
+[eval] [180/293] native=150 zoh=131 tac_fold_satfix=147 qp_anchor=147 qp_learned=151 learned_raw=151 learned_tanh=157 mlp_bc=151
+[eval] [190/293] native=159 zoh=139 tac_fold_satfix=155 qp_anchor=155 qp_learned=159 learned_raw=159 learned_tanh=166 mlp_bc=160
+[eval] [200/293] native=168 zoh=146 tac_fold_satfix=163 qp_anchor=164 qp_learned=168 learned_raw=168 learned_tanh=175 mlp_bc=168
+[eval] [210/293] native=177 zoh=155 tac_fold_satfix=172 qp_anchor=173 qp_learned=177 learned_raw=178 learned_tanh=185 mlp_bc=178
+[eval] [220/293] native=186 zoh=164 tac_fold_satfix=181 qp_anchor=182 qp_learned=186 learned_raw=187 learned_tanh=194 mlp_bc=185
+[eval] [230/293] native=196 zoh=174 tac_fold_satfix=192 qp_anchor=193 qp_learned=197 learned_raw=197 learned_tanh=205 mlp_bc=195
+[eval] [240/293] native=206 zoh=183 tac_fold_satfix=201 qp_anchor=202 qp_learned=207 learned_raw=206 learned_tanh=213 mlp_bc=205
+[eval] [250/293] native=212 zoh=188 tac_fold_satfix=206 qp_anchor=207 qp_learned=212 learned_raw=212 learned_tanh=221 mlp_bc=213
+[eval] [260/293] native=221 zoh=195 tac_fold_satfix=215 qp_anchor=216 qp_learned=222 learned_raw=221 learned_tanh=231 mlp_bc=222
+[eval] [270/293] native=229 zoh=203 tac_fold_satfix=223 qp_anchor=224 qp_learned=231 learned_raw=229 learned_tanh=240 mlp_bc=231
+[eval] [280/293] native=239 zoh=211 tac_fold_satfix=232 qp_anchor=233 qp_learned=241 learned_raw=239 learned_tanh=250 mlp_bc=241
+[eval] [290/293] native=246 zoh=219 tac_fold_satfix=241 qp_anchor=242 qp_learned=251 learned_raw=249 learned_tanh=260 mlp_bc=250
+[eval] [293/293] native=249 zoh=222 tac_fold_satfix=244 qp_anchor=245 qp_learned=254 learned_raw=252 learned_tanh=262 mlp_bc=253
+[eval] wall 4143s for 293 eps x 8 arms (4 workers)
+
+=== PickCube-v1 closed-loop DP, k=2, n=293 ===
+  native             85.0% (249/293)  | vs zoh:   +9.2pp p=9.85e-05
+  zoh                75.8% (222/293)  | vs native:   -9.2pp p=9.85e-05
+  tac_fold_satfix    83.3% (244/293)  | vs zoh:   +7.5pp p=1.05e-05  | vs native:   -1.7pp p=0.487
+  qp_anchor          83.6% (245/293)  | vs zoh:   +7.8pp p=5.65e-06  | vs native:   -1.4pp p=0.608
+  qp_learned         86.7% (254/293)  | vs zoh:  +10.9pp p=1.86e-07  | vs native:   +1.7pp p=0.424
+  learned_raw        86.0% (252/293)  | vs zoh:  +10.2pp p=6.04e-07  | vs native:   +1.0pp p=0.701
+  learned_tanh       89.4% (262/293)  | vs zoh:  +13.7pp p=2.29e-08  | vs native:   +4.4pp p=0.0596
+  mlp_bc             86.3% (253/293)  | vs zoh:  +10.6pp p=0.000371  | vs native:   +1.4pp p=0.672
+  policy raw |a|>1 frac (pre-clip): 0.257
+[saved] /home/islab/multirate_confirm/fg/result_dp_PickCube-v1_k2_confirm.json

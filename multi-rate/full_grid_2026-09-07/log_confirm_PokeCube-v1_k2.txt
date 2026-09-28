@@ -1,0 +1,59 @@
+[data] loaded /home/islab/multirate_confirm/fg/demos_PokeCube-v1_200.npz
+[data] 200 demos harvested in 0s
+[data] 3889 windows, obs_dim=54, act_dim=8, raw |a|>1 frac=0.406
+[train] loaded /home/islab/multirate_confirm/fg/dp_PokeCube-v1.pt
+[shape] saved /home/islab/multirate_confirm/fg/shape_PokeCube-v1_k2_n200.pt
+[shape] saved /home/islab/multirate_confirm/fg/shape_tanh_PokeCube-v1_k2_n200.pt
+[eval] [10/400] native=9 zoh=9 tac_fold_satfix=9 qp_anchor=9 qp_learned=8 learned_raw=8 learned_tanh=8 mlp_bc=9
+[eval] [20/400] native=20 zoh=20 tac_fold_satfix=20 qp_anchor=20 qp_learned=19 learned_raw=19 learned_tanh=18 mlp_bc=20
+[eval] [30/400] native=29 zoh=28 tac_fold_satfix=28 qp_anchor=28 qp_learned=26 learned_raw=26 learned_tanh=24 mlp_bc=28
+[eval] [40/400] native=40 zoh=39 tac_fold_satfix=38 qp_anchor=39 qp_learned=37 learned_raw=36 learned_tanh=35 mlp_bc=38
+[eval] [50/400] native=50 zoh=48 tac_fold_satfix=48 qp_anchor=49 qp_learned=47 learned_raw=46 learned_tanh=45 mlp_bc=46
+[eval] [60/400] native=60 zoh=58 tac_fold_satfix=58 qp_anchor=59 qp_learned=57 learned_raw=55 learned_tanh=55 mlp_bc=56
+[eval] [70/400] native=69 zoh=67 tac_fold_satfix=66 qp_anchor=67 qp_learned=66 learned_raw=64 learned_tanh=65 mlp_bc=66
+[eval] [80/400] native=79 zoh=77 tac_fold_satfix=75 qp_anchor=76 qp_learned=76 learned_raw=74 learned_tanh=74 mlp_bc=74
+[eval] [90/400] native=87 zoh=85 tac_fold_satfix=83 qp_anchor=84 qp_learned=84 learned_raw=83 learned_tanh=82 mlp_bc=83
+[eval] [100/400] native=98 zoh=95 tac_fold_satfix=94 qp_anchor=95 qp_learned=95 learned_raw=93 learned_tanh=93 mlp_bc=93
+[eval] [110/400] native=107 zoh=104 tac_fold_satfix=103 qp_anchor=104 qp_learned=103 learned_raw=102 learned_tanh=102 mlp_bc=101
+[eval] [120/400] native=117 zoh=114 tac_fold_satfix=113 qp_anchor=114 qp_learned=113 learned_raw=112 learned_tanh=110 mlp_bc=111
+[eval] [130/400] native=128 zoh=125 tac_fold_satfix=124 qp_anchor=125 qp_learned=123 learned_raw=122 learned_tanh=120 mlp_bc=121
+[eval] [140/400] native=137 zoh=134 tac_fold_satfix=133 qp_anchor=134 qp_learned=132 learned_raw=131 learned_tanh=128 mlp_bc=130
+[eval] [150/400] native=146 zoh=143 tac_fold_satfix=141 qp_anchor=142 qp_learned=140 learned_raw=139 learned_tanh=137 mlp_bc=138
+[eval] [160/400] native=156 zoh=153 tac_fold_satfix=151 qp_anchor=151 qp_learned=150 learned_raw=149 learned_tanh=147 mlp_bc=147
+[eval] [170/400] native=166 zoh=162 tac_fold_satfix=160 qp_anchor=160 qp_learned=159 learned_raw=158 learned_tanh=157 mlp_bc=157
+[eval] [180/400] native=175 zoh=171 tac_fold_satfix=169 qp_anchor=169 qp_learned=169 learned_raw=167 learned_tanh=166 mlp_bc=167
+[eval] [190/400] native=186 zoh=181 tac_fold_satfix=180 qp_anchor=180 qp_learned=180 learned_raw=178 learned_tanh=177 mlp_bc=177
+[eval] [200/400] native=194 zoh=189 tac_fold_satfix=188 qp_anchor=188 qp_learned=188 learned_raw=185 learned_tanh=184 mlp_bc=184
+[eval] [210/400] native=205 zoh=200 tac_fold_satfix=199 qp_anchor=199 qp_learned=199 learned_raw=196 learned_tanh=195 mlp_bc=195
+[eval] [220/400] native=213 zoh=210 tac_fold_satfix=208 qp_anchor=208 qp_learned=209 learned_raw=206 learned_tanh=204 mlp_bc=205
+[eval] [230/400] native=220 zoh=217 tac_fold_satfix=214 qp_anchor=214 qp_learned=217 learned_raw=213 learned_tanh=212 mlp_bc=213
+[eval] [240/400] native=229 zoh=226 tac_fold_satfix=224 qp_anchor=224 qp_learned=226 learned_raw=222 learned_tanh=221 mlp_bc=223
+[eval] [250/400] native=240 zoh=236 tac_fold_satfix=235 qp_anchor=235 qp_learned=237 learned_raw=233 learned_tanh=231 mlp_bc=233
+[eval] [260/400] native=250 zoh=245 tac_fold_satfix=245 qp_anchor=245 qp_learned=246 learned_raw=242 learned_tanh=241 mlp_bc=241
+[eval] [270/400] native=259 zoh=254 tac_fold_satfix=254 qp_anchor=254 qp_learned=255 learned_raw=251 learned_tanh=249 mlp_bc=250
+[eval] [280/400] native=269 zoh=264 tac_fold_satfix=264 qp_anchor=264 qp_learned=265 learned_raw=261 learned_tanh=259 mlp_bc=260
+[eval] [290/400] native=278 zoh=273 tac_fold_satfix=273 qp_anchor=273 qp_learned=274 learned_raw=270 learned_tanh=268 mlp_bc=269
+[eval] [300/400] native=289 zoh=284 tac_fold_satfix=284 qp_anchor=284 qp_learned=284 learned_raw=280 learned_tanh=278 mlp_bc=279
+[eval] [310/400] native=296 zoh=291 tac_fold_satfix=292 qp_anchor=292 qp_learned=291 learned_raw=288 learned_tanh=287 mlp_bc=286
+[eval] [320/400] native=306 zoh=301 tac_fold_satfix=302 qp_anchor=302 qp_learned=301 learned_raw=298 learned_tanh=297 mlp_bc=296
+[eval] [330/400] native=315 zoh=310 tac_fold_satfix=311 qp_anchor=311 qp_learned=310 learned_raw=307 learned_tanh=306 mlp_bc=305
+[eval] [340/400] native=326 zoh=321 tac_fold_satfix=322 qp_anchor=322 qp_learned=321 learned_raw=318 learned_tanh=317 mlp_bc=316
+[eval] [350/400] native=334 zoh=330 tac_fold_satfix=330 qp_anchor=330 qp_learned=330 learned_raw=327 learned_tanh=327 mlp_bc=324
+[eval] [360/400] native=343 zoh=339 tac_fold_satfix=339 qp_anchor=339 qp_learned=339 learned_raw=336 learned_tanh=335 mlp_bc=333
+[eval] [370/400] native=353 zoh=350 tac_fold_satfix=349 qp_anchor=349 qp_learned=349 learned_raw=346 learned_tanh=345 mlp_bc=344
+[eval] [380/400] native=363 zoh=359 tac_fold_satfix=358 qp_anchor=358 qp_learned=359 learned_raw=356 learned_tanh=354 mlp_bc=354
+[eval] [390/400] native=372 zoh=366 tac_fold_satfix=365 qp_anchor=366 qp_learned=367 learned_raw=365 learned_tanh=362 mlp_bc=362
+[eval] [400/400] native=381 zoh=375 tac_fold_satfix=373 qp_anchor=374 qp_learned=376 learned_raw=374 learned_tanh=372 mlp_bc=370
+[eval] wall 4165s for 400 eps x 8 arms (4 workers)
+
+=== PokeCube-v1 closed-loop DP, k=2, n=400 ===
+  native             95.2% (381/400)  | vs zoh:   +1.5pp p=0.21
+  zoh                93.8% (375/400)  | vs native:   -1.5pp p=0.21
+  tac_fold_satfix    93.2% (373/400)  | vs zoh:   -0.5pp p=0.804  | vs native:   -2.0pp p=0.0768
+  qp_anchor          93.5% (374/400)  | vs zoh:   -0.2pp p=1  | vs native:   -1.7pp p=0.118
+  qp_learned         94.0% (376/400)  | vs zoh:   +0.2pp p=1  | vs native:   -1.3pp p=0.332
+  learned_raw        93.5% (374/400)  | vs zoh:   -0.2pp p=1  | vs native:   -1.7pp p=0.21
+  learned_tanh       93.0% (372/400)  | vs zoh:   -0.7pp p=0.743  | vs native:   -2.2pp p=0.163
+  mlp_bc             92.5% (370/400)  | vs zoh:   -1.2pp p=0.5  | vs native:   -2.7pp p=0.108
+  policy raw |a|>1 frac (pre-clip): 0.378
+[saved] /home/islab/multirate_confirm/fg/result_dp_PokeCube-v1_k2_confirm.json

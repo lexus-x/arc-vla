@@ -1,3 +1,6 @@
+# DEPRECATED. The "ARC" column here is the retired resample_arc arm (NOT the paper's ARC=qp_anchor),
+# and it mixes n=50 (eval_arc_results) with n=100 (qp) -- unpaired, not comparable.
+# For the paper's ARC vs Spline vs B-Spline use assemble_arc_vs_spline.py (paired, regenerates the report).
 import json, os, glob
 
 tasks = ['lift', 'can', 'square']

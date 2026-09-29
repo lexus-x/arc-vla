@@ -1,4 +1,9 @@
 """
+DEPRECATED / RETIRED. This "ARC" (Adaptive Rate-optimal Conservative fold) is NOT the paper's ARC.
+The paper's ARC == `qp_anchor` (box-constrained global-QP resampler). This file is kept only as a
+historical record; it is no longer a selectable eval arm (removed from resample_math.RESAMPLERS).
+Do NOT report these numbers under the name ARC. See assemble_arc_vs_spline.py.
+Original description follows.
 ARC: Adaptive Rate-optimal Conservative Fold
 The state-of-the-art trajectory resampler for multi-rate robot policy execution.
 

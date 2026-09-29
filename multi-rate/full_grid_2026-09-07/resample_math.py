@@ -292,7 +292,9 @@ RESAMPLERS = {
     # gripper_sync composition is applied by harness.apply_arm after this default
     # spline+satfix backbone has reconstructed the continuous dimensions.
     "gripper_sync": resample_spline_satfix,
-    "arc": lambda block_sum, k: __import__("resample_arc").resample_arc(block_sum, k, is_up=False),
+    # "arc" (resample_arc, "Adaptive Rate-optimal Conservative fold") is RETIRED. ARC == qp_anchor.
+    # It is no longer a selectable arm. Use --arms qp_anchor. (Old result JSONs with an "arc" arm are
+    # historical records of the retired resampler, not the paper's ARC.)
 }
 
 

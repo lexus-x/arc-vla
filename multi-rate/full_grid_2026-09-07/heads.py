@@ -11,6 +11,10 @@ resample_math.RESAMPLERS.setdefault("qp", resample_qp)
 H = 16          # window (native steps)
 C = 16          # B-spline control points
 ARC_BLOCKS = 8
+# RETIRED / NOT the paper's ARC. This `head=arc` is a rate-conditioned POLICY head (retrained with
+# rate k injected). The paper's ARC == `qp_anchor` (a post-hoc box-constrained global-QP resampler).
+# Kept for the rate-conditioning research direction only; do NOT report its numbers under "ARC".
+# See assemble_arc_vs_spline.py.
 ARC_RATES = (1, 2, 4)
 _KNOTS = np.r_[[0.0] * 4, np.linspace(0, H, C - 4 + 2)[1:-1], [float(H)] * 4]  # cubic, clamped, uniform, 12 interior
 

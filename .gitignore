@@ -46,6 +46,8 @@ venv/
 *.key
 *.pem
 *.token
+.env
+*.env
 
 # Claude / IDE / agent caches
 .claude/
@@ -72,6 +74,15 @@ multi-rate/DeepONet_and_Novel_VLA/From_Laptop/
 nohup.out
 core.*
 multi-rate/newt-src/
+# Run logs (never tracked; cedbf52). Logs named .txt slip past *.log — cover them too.
 *.log
+log_*.txt
+# Bulk run-output artifacts (eval rollout videos, downloaded model weights, raw stdout dumps).
+# Intentional small demo videos already tracked stay tracked; this stops future bulk.
+*.safetensors
+*.out
+*.mp4
+# Vendored third-party repos (each has its own .git) — never track here.
+multi-rate/external/
 **/demos_*.npz
 vla/

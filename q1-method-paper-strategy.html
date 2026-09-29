@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q1 Method-Paper Strategy — Plant-Free Governor for VLA Action Streams</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f5f5; --paper-2:#ececec; --ink:#2d3142; --muted:#4f5d75;
+    --soft:#7a8399; --rule:rgba(45,49,66,0.12); --rule-solid:#bfc0c0;
+    --accent:#eb6c36; --accent-tint:rgba(235,108,54,0.08); --link:#2e5aa8;
+    --sans:'Geist',system-ui,sans-serif; --mono:'Geist Mono',ui-monospace,monospace;
+    --serif:'Instrument Serif',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;padding:40px 24px 64px}
+  .wrap{max-width:1160px;margin:0 auto}
+  .eyebrow{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--soft);margin-bottom:10px}
+  h1{font-family:var(--serif);font-weight:400;font-size:38px;line-height:1.1;
+    letter-spacing:-.01em;margin-bottom:8px}
+  h1 em{font-style:italic;color:var(--accent)}
+  .sub{font-size:14.5px;color:var(--muted);max-width:760px;line-height:1.55;margin-bottom:34px}
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+  .card{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:20px 22px}
+  .card h2{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--soft);margin-bottom:14px}
+  .c12{grid-column:span 12}.c8{grid-column:span 8}.c7{grid-column:span 7}
+  .c6{grid-column:span 6}.c5{grid-column:span 5}.c4{grid-column:span 4}
+  svg{display:block;width:100%;height:auto}
+  text{font-family:var(--sans)}
+  .claim{background:var(--ink);color:var(--paper);border-radius:8px;padding:22px 26px;
+    display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+  .claim .tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);white-space:nowrap}
+  .claim p{font-family:var(--serif);font-size:22px;line-height:1.35;flex:1;min-width:320px}
+  .claim p b{color:#fff;font-weight:400;border-bottom:2px solid var(--accent)}
+  .prop{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--rule);
+    align-items:baseline}
+  .prop:last-child{border-bottom:none}
+  .prop .pn{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);
+    min-width:34px}
+  .prop .pt{font-size:13.5px;line-height:1.45}
+  .prop .pt b{font-weight:600}
+  .prop .pt span{color:var(--muted)}
+  .pill{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
+    padding:2px 7px;border-radius:4px;white-space:nowrap;font-weight:600}
+  .taken{background:rgba(79,93,117,.12);color:var(--muted)}
+  .yours{background:var(--accent-tint);color:var(--accent);border:1px solid var(--accent)}
+  .gate{display:flex;gap:14px;align-items:flex-start;padding:12px 0;
+    border-bottom:1px dashed var(--rule)}
+  .gate:last-child{border-bottom:none}
+  .gate .gn{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink);
+    background:var(--paper-2);border:1px solid var(--rule);border-radius:4px;
+    padding:3px 8px;white-space:nowrap}
+  .gate .gt{font-size:13.5px;line-height:1.5}
+  .gate .gt b{font-weight:600}
+  .gate .gt span{color:var(--muted)}
+  .tl{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .tl .wk{padding:0 14px;border-left:2px solid var(--rule-solid);position:relative}
+  .tl .wk:first-child{border-left-color:var(--accent)}
+  .tl .wn{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:6px}
+  .tl .wt{font-size:13px;font-weight:600;margin-bottom:6px}
+  .tl ul{list-style:none}
+  .tl li{font-size:12px;color:var(--muted);line-height:1.5;padding-left:10px;position:relative;margin-bottom:3px}
+  .tl li::before{content:"";position:absolute;left:0;top:7px;width:4px;height:4px;
+    border-radius:50%;background:var(--rule-solid)}
+  .foot{margin-top:26px;display:flex;gap:24px;flex-wrap:wrap;align-items:center;
+    font-size:12px;color:var(--soft)}
+  .foot .ok{font-family:var(--mono);font-size:11px;color:var(--ink)}
+  .foot .ok b{color:var(--accent)}
+  @media(max-width:900px){
+    .c8,.c7,.c6,.c5,.c4{grid-column:span 12}
+    h1{font-size:30px}.tl{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Strategy one-pager · TAC-Fold / satfix → Q1 method paper · 2026-09-23</div>
+  <h1>From &ldquo;our arms lose sometimes&rdquo; to <em>the first governor</em><br>for VLA action streams</h1>
+  <p class="sub">The same method you already have, reframed: one constrained projection, seven provable properties, a 40-year-old control lineage nobody has imported to VLA — plus the two cheap experiments that separate a solid Q1 from a barely-Q1.</p>
+
+  <!-- 1 · CLAIM -->
+  <div class="grid" style="margin-bottom:20px">
+    <div class="c12 claim">
+      <span class="tag">The one-sentence novelty</span>
+      <p>First decode-time resampler that <b>conserves the commanded impulse while clipping</b> — provably a <b>no-op wherever the policy was already valid</b>. Plant-free, backbone-free, zero learned parameters.</p>
+    <!-- 2 · UNIFIED FORMULATION -->
+    <div class="c7 card">
+      <h2>One objective · every arm is a corner</h2>
+      <svg viewBox="0 0 560 340" role="img" aria-labelledby="unif-title unif-desc">
+        <title id="unif-title">Unified projection formulation</title>
+        <desc id="unif-desc">A minimization problem with an anchor term subject to a box constraint and per-block conservation; existing methods satfix, plain QP, qp_anchor, TAC-Fold, clip, spline and ZOH appear as instances obtained by turning the anchor, coupling, box or conservation knobs.</desc>
+        <rect x="0" y="0" width="560" height="76" rx="6" fill="#2d3142"/>
+        <text x="18" y="34" fill="#ffffff" font-size="16">R(a) = argmin</text>
+        <text x="120" y="42" fill="#ffffff" font-size="15" font-style="italic">v</text>
+        <text x="132" y="34" fill="#ffffff" font-size="16">  Σ (Δv − Δr)²</text>
+        <text x="18" y="62" fill="#eb6c36" font-size="12.5" font-family="monospace">s.t. |v| ≤ 1   ·   Σ∈block v = Σ∈block a   (conservation)</text>
+        <text x="0" y="104" font-size="11" font-family="monospace" fill="#7a8399" letter-spacing="1.2">TWO KNOBS → WHOLE ARM ZOO</text>
+        <line x1="280" y1="112" x2="280" y2="132" stroke="#4f5d75" stroke-width="1"/>
+        <path d="M276,128 L280,136 L284,128" fill="none" stroke="#4f5d75" stroke-width="1"/>
+        <g font-size="12.5">
+          <rect x="0" y="140" width="176" height="44" rx="6" fill="#ffffff" stroke="#2d3142"/>
+          <text x="12" y="159" font-weight="600">satfix</text>
+          <text x="12" y="175" font-size="10.5" fill="#4f5d75" font-family="monospace">block-diagonal coupling</text>
+          <rect x="192" y="140" width="176" height="44" rx="6" fill="#ffffff" stroke="#2d3142"/>
+          <text x="204" y="159" font-weight="600">plain QP</text>
+          <text x="204" y="175" font-size="10.5" fill="#4f5d75" font-family="monospace">anchor r = 0</text>
+          <rect x="384" y="140" width="176" height="44" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1.4"/>
+          <text x="396" y="159" font-weight="600" fill="#eb6c36">qp_anchor ★</text>
+          <text x="396" y="175" font-size="10.5" fill="#4f5d75" font-family="monospace">anchor r = a · global</text>
+          <rect x="0" y="200" width="176" height="44" rx="6" fill="#ffffff" stroke="#2d3142" stroke-dasharray="4 3"/>
+          <text x="12" y="219" font-weight="600">TAC-Fold</text>
+          <text x="12" y="235" font-size="10.5" fill="#4f5d75" font-family="monospace">just another anchor r</text>
+          <rect x="192" y="200" width="176" height="44" rx="6" fill="#ffffff" stroke="#2d3142" stroke-dasharray="4 3"/>
+          <text x="204" y="219" font-weight="600">clip</text>
+          <text x="204" y="235" font-size="10.5" fill="#4f5d75" font-family="monospace">k = 1 (per-step)</text>
+          <rect x="384" y="200" width="176" height="44" rx="6" fill="#ffffff" stroke="#2d3142" stroke-dasharray="4 3"/>
+          <text x="396" y="219" font-weight="600">spline (smooth-only)</text>
+          <text x="396" y="235" font-size="10.5" fill="#4f5d75" font-family="monospace">box OFF · conserve OFF</text>
+          <rect x="0" y="260" width="176" height="44" rx="6" fill="#ffffff" stroke="#2d3142" stroke-dasharray="4 3"/>
+          <text x="12" y="279" font-weight="600">ZOH</text>
+          <text x="12" y="295" font-size="10.5" fill="#4f5d75" font-family="monospace">feasible, zero smooth</text>
+          <rect x="192" y="260" width="368" height="44" rx="6" fill="#ececec" stroke="#bfc0c0"/>
+          <text x="204" y="279" font-weight="600" font-size="12">Limiting-cases lemma: prior methods = corners of OUR formulation</text>
+          <text x="204" y="295" font-size="10.5" fill="#4f5d75" font-family="monospace">one table covers the whole related work</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- 3 · GUARANTEES -->
+    <div class="c5 card">
+      <h2>Seven provable properties (no new runs)</h2>
+      <div class="prop"><span class="pn">P1</span><span class="pt"><b>Feasibility certificate.</b> <span>Solvable iff |block sum| ≤ k — checkable before execution.</span></span></div>
+      <div class="prop"><span class="pn">P2</span><span class="pt"><b>Identity / never-hurts.</b> <span>R(a)=a when already feasible → your nulls become evidence.</span></span></div>
+      <div class="prop"><span class="pn">P3</span><span class="pt"><b>Non-expansive.</b> <span>Perturbs the policy at most by what the clip would remove anyway.</span></span></div>
+      <div class="prop"><span class="pn">P4</span><span class="pt"><b>Exact DC / impulse.</b> <span>Explains ZOH &gt; spline as a design consequence, not a fluke.</span></span></div>
+      <div class="prop"><span class="pn">P5</span><span class="pt"><b>Minimal-repair lemma.</b> <span>Unique least-perturbation fix of clip that restores conservation.</span></span></div>
+      <div class="prop"><span class="pn">P6</span><span class="pt"><b>Dual solver.</b> <span>T/k multipliers, certified optimal, kills SLSQP — timing table.</span></span></div>
+      <div class="prop"><span class="pn">P7</span><span class="pt"><b>Limits inclusion.</b> <span>Clip / spline / QP / ZOH = corners → ablation writes itself.</span></span></div>
+    </div>
+    <!-- 4 · POSITIONING -->
+    <div class="c7 card">
+      <h2>Positioning — who owns what</h2>
+      <svg viewBox="0 0 560 240" role="img" aria-labelledby="pos-title pos-desc">
+        <title id="pos-title">Positioning against prior methods</title>
+        <desc id="pos-desc">Table comparing feasibility, conservation, identity-on-feasible input and guarantees across ZOH, splines, low-pass filtering, RTC, NIAF and the proposed governor; only the proposed method satisfies all rows.</desc>
+        <g font-size="11.5">
+          <text x="0" y="14" font-family="monospace" font-size="9.5" fill="#7a8399" letter-spacing="1">METHOD</text>
+          <text x="180" y="14" font-family="monospace" font-size="9.5" fill="#7a8399" letter-spacing="1" text-anchor="middle">FEASIBLE</text>
+          <text x="270" y="14" font-family="monospace" font-size="9.5" fill="#7a8399" letter-spacing="1" text-anchor="middle">CONSERVES</text>
+          <text x="375" y="14" font-family="monospace" font-size="9.5" fill="#7a8399" letter-spacing="1" text-anchor="middle">NO-OP IF VALID</text>
+          <text x="495" y="14" font-family="monospace" font-size="9.5" fill="#7a8399" letter-spacing="1" text-anchor="middle">GUARANTEE</text>
+          <line x1="0" y1="22" x2="560" y2="22" stroke="#bfc0c0"/>
+          <text x="0" y="48" font-weight="600">ZOH</text>
+          <text x="180" y="48" text-anchor="middle" fill="#4f5d75">✓</text>
+          <text x="270" y="48" text-anchor="middle" fill="#4f5d75">✓</text>
+          <text x="375" y="48" text-anchor="middle" fill="#7a8399">—</text>
+          <text x="495" y="48" text-anchor="middle" fill="#7a8399" font-size="10.5">none</text>
+          <line x1="0" y1="60" x2="560" y2="60" stroke="rgba(45,49,66,0.12)" stroke-dasharray="3 3"/>
+          <text x="0" y="84" font-weight="600">Cubic / B-spline</text>
+          <text x="180" y="84" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="270" y="84" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="375" y="84" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="495" y="84" text-anchor="middle" fill="#7a8399" font-size="10.5">none</text>
+          <line x1="0" y1="96" x2="560" y2="96" stroke="rgba(45,49,66,0.12)" stroke-dasharray="3 3"/>
+          <text x="0" y="120" font-weight="600">Low-pass / FAFD</text>
+          <text x="180" y="120" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="270" y="120" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="375" y="120" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="495" y="120" text-anchor="middle" fill="#7a8399" font-size="10.5">heuristic</text>
+          <line x1="0" y1="132" x2="560" y2="132" stroke="rgba(45,49,66,0.12)" stroke-dasharray="3 3"/>
+          <text x="0" y="156" font-weight="600">RTC <tspan fill="#7a8399" font-weight="400">(decode-time, closest ref)</tspan></text>
+          <text x="180" y="156" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="270" y="156" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="375" y="156" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="495" y="156" text-anchor="middle" fill="#7a8399" font-size="10.5">none</text>
+          <line x1="0" y1="168" x2="560" y2="168" stroke="rgba(45,49,66,0.12)" stroke-dasharray="3 3"/>
+          <text x="0" y="192" font-weight="600">NIAF <tspan fill="#7a8399" font-weight="400">(frequency framing)</tspan></text>
+          <text x="180" y="192" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="270" y="192" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="375" y="192" text-anchor="middle" fill="#7a8399">✗</text>
+          <text x="495" y="192" text-anchor="middle" fill="#7a8399" font-size="10.5">diagnosis only</text>
+          <rect x="-8" y="204" width="576" height="30" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36"/>
+          <text x="0" y="224" font-weight="700" fill="#eb6c36">OURS · plant-free governor</text>
+          <text x="180" y="224" text-anchor="middle" fill="#eb6c36" font-weight="700">✓</text>
+          <text x="270" y="224" text-anchor="middle" fill="#eb6c36" font-weight="700">✓</text>
+          <text x="375" y="224" text-anchor="middle" fill="#eb6c36" font-weight="700">✓</text>
+          <text x="495" y="224" text-anchor="middle" fill="#eb6c36" font-size="10.5" font-weight="600">P1–P7 theorems</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- 5 · NOVELTY LANES -->
+    <div class="c5 card">
+      <h2>Novelty lanes — taken vs yours</h2>
+      <div class="gate"><span class="pill taken">taken</span><span class="gt"><b>CBF / safety filters → VLA.</b> <span>Crowded (SafeVLA, VLSA). Avoid.</span></span></div>
+      <div class="gate"><span class="pill taken">taken</span><span class="gt"><b>Constrained decoding → robotics FMs.</b> <span>Claimed 2025–26 for discrete/semantic.</span></span></div>
+      <div class="gate"><span class="pill taken">taken</span><span class="gt"><b>Optimal transport → resampling.</b> <span>Temporal-OT policy learning exists.</span></span></div>
+      <div class="gate"><span class="pill yours">open</span><span class="gt"><b>Reference Governor → VLA streams.</b> <span>40-yr control lineage, zero VLA hits. Classic RG needs a plant model — ours is <b>plant-free</b>. This is the import that reframes everything.</span></span></div>
+      <div class="gate"><span class="pill yours">yours</span><span class="gt"><b>The constraint set itself.</b> <span>Conservation-under-clipping — nobody else conserves; they all smooth.</span></span></div>
+      <div class="gate"><span class="pill yours">yours</span><span class="gt"><b>Diagnosis → gap.</b> <span>ZOH &gt; spline, k-crossover: audit says unpublished. Motivates the method.</span></span></div>
+    </div>
+
+    <!-- 6 · GATES -->
+    <div class="c6 card">
+      <h2>Solid Q1 = exactly 2 gates (cheap)</h2>
+      <div class="gate"><span class="gn">GATE 1</span><span class="gt"><b>One external arm</b> (RTC-style or FAFD low-pass, 1 task, 1 backbone). <span>Kills “compared only to yourself.” ~days.</span></span></div>
+      <div class="gate"><span class="gn">GATE 2</span><span class="gt"><b>Run PREREG_PUSHT_CL_FAIR_N400.</b> <span>Already written &amp; committed — completing your own prereg, not exploring. Kills “single-task closed-loop.”</span></span></div>
+      <div class="gate"><span class="gn">RULE</span><span class="gt"><b>Both land → submit Q1.</b> <b>Either fails → same manuscript → RA-L (Q2).</b> <span>Partial-novelty claim survives both paths. Never gamble a barely-Q1 reject on the priority date.</span></span></div>
+    </div>
+
+    <!-- 7 · TIMELINE -->
+    <div class="c6 card">
+      <h2>4-week plan</h2>
+      <div class="tl">
+        <div class="wk">
+          <div class="wn">W1</div><div class="wt">Method core</div>
+          <ul><li>THEORY.md — P1–P7 proofs</li><li>Dual solver + self-check</li><li>Streaming variant</li></ul>
+        </div>
+        <div class="wk">
+          <div class="wn">W1–2</div><div class="wt">Packaging</div>
+          <ul><li>Corner figure (above)</li><li>Property table vs RTC/NIAF</li><li>1-sentence novelty lock</li></ul>
+        </div>
+        <div class="wk">
+          <div class="wn">W2–3</div><div class="wt">2 gates</div>
+          <ul><li>PushT n=400 prereg</li><li>External arm @ PickCube</li><li>Smallest config first</li></ul>
+        </div>
+        <div class="wk">
+          <div class="wn">W4</div><div class="wt">Manuscript</div>
+          <ul><li>Diagnosis → constraint → theorems</li><li>Nulls = never-hurts</li><li>Pre-reg heads + breadth</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 · VERDICT -->
+    <div class="c12 card" style="display:flex;gap:28px;flex-wrap:wrap;align-items:center;
+      background:#ececec">
+      <div style="flex:1;min-width:260px">
+        <h2>Verdict</h2>
+        <div style="font-size:14px;line-height:1.6;color:#2d3142">
+          <b>Partial novelty: yes — sharp.</b> The constraint set (conservation + box at decode time) plus the plant-free-governor framing.
+          <span style="color:#4f5d75">Not novel (cut from claims): “QP projection is obvious,” packaging, solver alone, TAC-Fold-as-operator, absolute SOTA.</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <div style="background:#fff;border:1px solid rgba(45,49,66,0.12);border-radius:6px;padding:12px 16px;text-align:center">
+          <div style="font-family:monospace;font-size:10px;color:#7a8399;letter-spacing:.1em">GATES ✓✓</div>
+          <div style="font-family:'Instrument Serif',serif;font-size:26px;color:#eb6c36">Solid Q1</div>
+          <div style="font-size:11px;color:#4f5d75">T-RO / CoRL</div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(45,49,66,0.12);border-radius:6px;padding:12px 16px;text-align:center">
+          <div style="font-family:monospace;font-size:10px;color:#7a8399;letter-spacing:.1em">EITHER ✗</div>
+          <div style="font-family:'Instrument Serif',serif;font-size:26px">RA-L · Q2</div>
+          <div style="font-size:11px;color:#4f5d75">same manuscript</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="ok">Pre-registered Holm families ✓ · n=993 paired open-loop ✓ · 12 tasks × 2 policies ✓ · satfix 0/36 → reframed as never-hurts ✓</span>
+    <span>Re-check “reference governor + VLA” on arXiv before locking the claim.</span>
+  </div>
+
+</div>
+</body>
+</html>
+
+
+
+
+    </div>
+  </div>
+
+  <div class="grid">

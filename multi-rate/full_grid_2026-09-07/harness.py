@@ -145,14 +145,22 @@ class ManiSkillSim:
         sg = self.h5[f"traj_{int(ep['episode_id'])}"]["env_states"]
         return {g: {n: torch.as_tensor(np.asarray(sg[g][n])[0:1]) for n in sg[g]} for g in sg}
 
-    def split(self, n_train, n_eval, offset=0):  # plenty of demos -> eval from held-out demo init states
+    def split(self, n_train, n_eval, offset=0, reset_seed=None):  # plenty of demos -> eval from held-out demo init states
+        if reset_seed is not None:  # fresh env resets instead, disjoint from every demo's reset seed
+            ev = [("random", reset_seed + i) for i in range(n_eval)]
+            assert not {int(e["episode_seed"]) for e in self.meta} & {s for _, s in ev}, "eval seed collides with a demo seed"
+            return self.eligible[:n_train], ev
         a = n_train + offset; eps = self.eligible[:n_train], self.eligible[a:a + n_eval]
         assert len(eps[1]) == n_eval, f"not enough held-out demos: {len(eps[1])}"
         return eps
 
     def reset_to(self, ep):
-        self.env.reset(seed=ep["episode_seed"]); self.u.set_state_dict(self._state(ep))
+        if isinstance(ep, tuple): self.env.reset(seed=ep[1])  # ("random", seed): fresh initial state
+        else: self.env.reset(seed=ep["episode_seed"]); self.u.set_state_dict(self._state(ep))
         return to_np(self.u.get_obs()).reshape(-1).astype(np.float32)
+
+    def proprio_idx(self, D):  # agent.qpos + agent.qvel lead the flat state vector (checked for all 9 tasks)
+        return np.arange(2 * self.u.agent.robot.get_qpos().shape[-1])
 
     def step(self, a):
         obs, _, term, trunc, info = self.env.step(a[None])
@@ -188,8 +196,11 @@ class RoboMimicSim:
     _LIVE = {"object": "object-state"}  # robomimic hdf5 key -> live robosuite obs key
     def _obs_from_dict(self, od): return np.concatenate([np.asarray(od[self._LIVE.get(k, k)], np.float32).reshape(-1) for k in RM_OBS])
 
-    def split(self, n_train, n_eval):  # eval "episodes" are reset seeds, not demos
-        return self.eligible[:n_train], list(range(n_eval))
+    def split(self, n_train, n_eval, offset=0):  # eval "episodes" are reset seeds, not demos
+        return self.eligible[:n_train], list(range(offset, offset + n_eval))
+
+    def proprio_idx(self, D):  # RM_OBS = object, then robot0_eef_pos(3), robot0_eef_quat(4), robot0_gripper_qpos(2)
+        return np.arange(D - 9, D)
 
     def reset_to(self, seed):
         np.random.seed(10_000 + seed)  # robosuite placement samplers use the global np RNG
@@ -295,7 +306,7 @@ def run_episode(sim, policy, onorm, anorm, dev, ei, ep, head, K, ND, nblocks):
     out = {}
     for arm in ARMS:
         obs = sim.reset_to(ep); hist = [obs, obs]; s = False; steps = 0; sat_e = []
-        replan = 0; prev_bs = None
+        replan = 0; prev_bs = None; prev_bsp = None
         while steps < sim.max_steps and not s:
             o = torch.as_tensor(onorm.norm(np.stack(hist[-2:]))[None], device=dev)
             torch.manual_seed(1_000_003 * ei + replan)  # paired noise across arms
@@ -322,7 +333,11 @@ def run_episode(sim, policy, onorm, anorm, dev, ei, ep, head, K, ND, nblocks):
                 else:
                     exec_chunk = apply_arm(np.clip(chunk, -1, 1).astype(np.float32), arm, sim.n_hold)
             else:
-                exec_chunk = heads.decode(pred, head, ND, K, arm, nblocks)
+                if head == "bsp":  # official B-Spline Policy: rate-free, native speed, time-aligned to the last executed action
+                    import bsp_official
+                    exec_chunk = bsp_official.plan(pred, prev_bsp, ND); prev_bsp = exec_chunk[-1]
+                else:
+                    exec_chunk = heads.decode(pred, head, ND, K, arm, nblocks)
                 sat_e.append(float((np.abs(exec_chunk[:, :ND]) > 1).mean())); exec_chunk = np.clip(exec_chunk, -1, 1)
             for a in exec_chunk:
                 obs, s_t, done = sim.step(a); hist.append(obs); steps += 1; s |= s_t
@@ -402,7 +417,9 @@ def main():
     ap.add_argument("--k", type=int, default=2); ap.add_argument("--arms", default=None, help="comma list; default all")
     ap.add_argument("--suffix", default="", help="appended to the result tag (never to the checkpoint)")
     ap.add_argument("--checkpoint-suffix", default="", help="isolates checkpoint provenance")
-    ap.add_argument("--head", choices=["step", "blocksum", "bspline", "arc"], default="step"); ap.add_argument("--nblocks", type=int, default=4)
+    ap.add_argument("--head", choices=["step", "blocksum", "bspline", "arc", "bsp"], default="step"); ap.add_argument("--nblocks", type=int, default=4)
+    ap.add_argument("--gov-obs", choices=["full", "proprio"], default="full", help="observation the learned converter arms and mlp_bc see")
+    ap.add_argument("--ms-random-eval", action="store_true", help="ManiSkill: evaluate fresh resets (seeds eval_seed+i) instead of held-out demo states")
     ap.add_argument("--seed", type=int, default=0, help="training seed; eval episodes and paired noise are seed-independent")
     ap.add_argument("--fold", type=int, default=-1, help="RoboCasa: held-out fold index (n_eval demos per fold)"); ap.add_argument("--port", type=int, default=BRIDGE_PORT)
     ap.add_argument("--rc-random-eval", action="store_true", help="RoboCasa: evaluate deterministic fresh resets instead of held-out demo states")
@@ -428,7 +445,7 @@ def main():
         try:
             with open(out_target) as _fp: _d = json.load(_fp)
             _s = _d.get("success", {})
-            req_proto = "random_reset" if args.rc_random_eval else "heldout_demo_state"
+            req_proto = "random_reset" if (args.rc_random_eval or args.ms_random_eval) else "heldout_demo_state"
             if (len(_s) > 0 and all(a in _s and len(_s[a]) == args.n_eval for a in ARMS)
                     and _d.get("eval_protocol") == req_proto
                     and _d.get("eval_seed") == args.eval_seed
@@ -440,7 +457,9 @@ def main():
                 return
         except Exception:
             pass
-    train_eps, eval_eps = sim.split(args.n_train, args.n_eval, **({"offset": args.eval_offset} if args.eval_offset else {}))
+    split_kw = {"offset": args.eval_offset} if args.eval_offset else {}
+    if args.ms_random_eval: split_kw["reset_seed"] = args.eval_seed
+    train_eps, eval_eps = sim.split(args.n_train, args.n_eval, **split_kw)
 
     cache = f"{HERE}/demos_{args.task}_{args.n_train}" + (f"_f{args.fold}" if args.fold >= 0 else "") + ".npz"  # harvested demos are deterministic per (task, n_train)
     t0 = time.time()
@@ -470,6 +489,10 @@ def main():
             for rate in heads.ARC_RATES
         ])
         anorm = MinMax(AC.reshape(-1, AC.shape[-1])); AC = anorm.norm(AC)
+    elif args.head == "bsp":  # official B-Spline Policy targets: one reduced-knot fit per episode (bsp_official.py)
+        import bsp_official
+        OC, AC = bsp_official.targets([onorm.norm(o) for o in O], A)
+        anorm = MinMax(AC.reshape(-1, AC.shape[-1])); AC = anorm.norm(AC)
     else:  # head targets from RAW 16-step windows; normaliser fit on the targets themselves
         chunks = [make_chunks(onorm.norm(o), a, 2, 16) for o, a in zip(O, A)]
         OC = np.concatenate([c[0] for c in chunks])
@@ -493,17 +516,23 @@ def main():
         os.replace(checkpoint_tmp, ckpt)
         print(f"[train] saved {ckpt}")
     policy.eval()
-    if any(a in ("qp_learned", "learned_raw", "learned_tanh") for a in ARMS):  # fit on the training demos only; env var reaches spawned workers
+    # learned converter / mlp_bc: fit on the training demos only; env var reaches spawned workers. Seed = DP seed.
+    # --gov-obs proprio: the model sees sim.proprio_idx only and stores that index, so decode slices obs itself.
+    gidx = sim.proprio_idx(O[0].shape[-1]) if args.gov_obs == "proprio" else None
+    Og = O if gidx is None else [o[:, gidx] for o in O]
+    gsfx = (f"_s{args.seed}" if args.seed else "") + ("_p" if gidx is not None else "") + args.checkpoint_suffix  # "" = legacy names
+    def _fit_save(sp, fn):
+        if not os.path.exists(sp):
+            m = fn(); m["obs_idx"] = gidx; torch.save(m, sp); print(f"[shape] saved {sp}")
+    if any(a in ("qp_learned", "learned_raw", "learned_tanh") for a in ARMS):
         import shape_governor
         for env, tanh in (("SHAPE_GOV_PATH", False), ("SHAPE_TANH_PATH", True)):
-            sp = f"{HERE}/shape{'_tanh' if tanh else ''}_{args.task}_k{K}_n{args.n_train}.pt"
-            if not os.path.exists(sp): torch.save(shape_governor.fit(O, A, K, ND, tanh=tanh), sp); print(f"[shape] saved {sp}")
-            os.environ[env] = sp
+            sp = f"{HERE}/shape{'_tanh' if tanh else ''}_{args.task}_k{K}_n{args.n_train}{gsfx}.pt"
+            _fit_save(sp, lambda: shape_governor.fit(Og, A, K, ND, tanh=tanh, seed=args.seed)); os.environ[env] = sp
     if "mlp_bc" in ARMS:
         import shape_governor
-        sp = f"{HERE}/shape_bc_{args.task}_n{args.n_train}.pt"
-        if not os.path.exists(sp): torch.save(shape_governor.fit_bc(O, A, ND), sp); print(f"[shape] saved {sp}")
-        os.environ["SHAPE_BC_PATH"] = sp
+        sp = f"{HERE}/shape_bc_{args.task}_n{args.n_train}{gsfx}.pt"
+        _fit_save(sp, lambda: shape_governor.fit_bc(Og, A, ND, seed=args.seed)); os.environ["SHAPE_BC_PATH"] = sp
 
     # ---- eval
     t_eval = time.time()
@@ -522,7 +551,7 @@ def main():
     res = {"task": args.task, "policy": args.policy, "k": K, "head": args.head, "seed": args.seed, "fold": args.fold,
            "n": len(eval_eps), "eval_offset": args.eval_offset, "n_train": args.n_train, "train_steps": args.steps, "arms": ARMS,
            "checkpoint_path": os.path.abspath(ckpt), "checkpoint_sha256": sha256_file(ckpt),
-           "eval_protocol": "random_reset" if args.rc_random_eval else "heldout_demo_state", "eval_seed": args.eval_seed,
+           "eval_protocol": "random_reset" if (args.rc_random_eval or args.ms_random_eval) else "heldout_demo_state", "eval_seed": args.eval_seed,
            "success": {a: succ[a] for a in ARMS}, "policy_raw_sat_frac": {a: float(np.mean(sat[a])) for a in ARMS}, "contrasts": {}}
     if args.head == "arc": res["arc_training_rates"] = list(heads.ARC_RATES)
     for a in ARMS:

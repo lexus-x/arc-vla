@@ -1,0 +1,28 @@
+{
+  "task": "LiftPegUpright-v1",
+  "policy": "dp",
+  "k": 4,
+  "head": "step",
+  "seed": 1,
+  "fold": -1,
+  "n": 0,
+  "eval_offset": 0,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "native"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_LiftPegUpright-v1_s1_q2.pt",
+  "checkpoint_sha256": "6a25c30d7d7d11f79cdd4b7ddab47ffc446be82d5fc2bc3262b83aa10ab02dd1",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": []
+  },
+  "policy_raw_sat_frac": {
+    "native": NaN
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

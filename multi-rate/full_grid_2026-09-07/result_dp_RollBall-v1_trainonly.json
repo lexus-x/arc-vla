@@ -1,0 +1,30 @@
+{
+  "task": "RollBall-v1",
+  "policy": "dp",
+  "k": 2,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 1,
+  "eval_offset": 0,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "native"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RollBall-v1.pt",
+  "checkpoint_sha256": "7e47040b171cd708eb27043275597bc7cd11574ae6b3c5b0f53290b04b84e8bc",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": [
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.5066964285714286
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

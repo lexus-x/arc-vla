@@ -1,0 +1,31 @@
+{
+  "task": "RC-CoffeePressButton",
+  "policy": "dp",
+  "k": 2,
+  "head": "step",
+  "seed": 0,
+  "fold": 0,
+  "n": 2,
+  "eval_offset": 0,
+  "n_train": 39,
+  "train_steps": 15000,
+  "arms": [
+    "native"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_RC-CoffeePressButton_f0.pt",
+  "checkpoint_sha256": "6ec1c46fb46ed2f79d1efc3a5a66512b2a3708c58b281aaea767a2b883266530",
+  "eval_protocol": "random_reset",
+  "eval_seed": 1000000,
+  "success": {
+    "native": [
+      false,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.0
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

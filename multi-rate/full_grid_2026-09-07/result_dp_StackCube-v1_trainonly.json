@@ -1,0 +1,30 @@
+{
+  "task": "StackCube-v1",
+  "policy": "dp",
+  "k": 2,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 1,
+  "eval_offset": 0,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "native"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_StackCube-v1.pt",
+  "checkpoint_sha256": "6dcdd2eb8bcbc5212e6207e597cd6ab940b135652eee3339d9e22cdcf48342fc",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": [
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.14508928571428573
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "vector_throughput_probe_not_SR",
+  "task": "PullCube-v1",
+  "batch": 400,
+  "steps": 16,
+  "scalar_two_episodes_seconds": 19.335483765695244,
+  "batched_episodes_seconds_including_setup": 15.053532271180302,
+  "physics_max_abs_error": [
+    0.00322134792804718,
+    0.018449485301971436
+  ],
+  "physics_exact": [
+    false,
+    false
+  ],
+  "batch_sample_seconds": 0.3328354489058256,
+  "sample_max_abs_error": [
+    0.0004774928092956543,
+    0.00042444467544555664
+  ]
+}

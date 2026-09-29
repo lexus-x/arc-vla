@@ -1,0 +1,30 @@
+{
+  "task": "PushCube-v1",
+  "policy": "dp",
+  "k": 2,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 1,
+  "eval_offset": 0,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "native"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PushCube-v1.pt",
+  "checkpoint_sha256": "9fa682dbd3361b467580b3b4bfc1e30ade574e1f38499470860cea67404fc8d8",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": [
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.328125
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

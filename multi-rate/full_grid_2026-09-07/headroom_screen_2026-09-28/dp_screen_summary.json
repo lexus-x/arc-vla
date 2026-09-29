@@ -1,0 +1,107 @@
+{
+ "rule": "SCREEN_RULE.md",
+ "family": "RoboMimic (official DP)",
+ "per_k": {
+  "2": {
+   "n_tasks_pass": 0,
+   "family_pass": false
+  },
+  "4": {
+   "n_tasks_pass": 2,
+   "family_pass": true
+  }
+ },
+ "rows": [
+  {
+   "task": "can_ph",
+   "k": 2,
+   "native": 100.0,
+   "zoh": 98.0,
+   "headroom_pp": 2.0,
+   "task_pass": false,
+   "native_only": 1,
+   "zoh_only": 0,
+   "mcnemar_p": 1.0
+  },
+  {
+   "task": "square_ph",
+   "k": 2,
+   "native": 94.0,
+   "zoh": 92.0,
+   "headroom_pp": 2.0,
+   "task_pass": false,
+   "native_only": 1,
+   "zoh_only": 0,
+   "mcnemar_p": 1.0
+  },
+  {
+   "task": "transport_ph",
+   "k": 2,
+   "native": 80.0,
+   "zoh": 74.0,
+   "headroom_pp": 6.0,
+   "task_pass": false,
+   "native_only": 6,
+   "zoh_only": 3,
+   "mcnemar_p": 0.5078125
+  },
+  {
+   "task": "tool_hang_ph",
+   "k": 2,
+   "native": 90.0,
+   "zoh": 90.0,
+   "headroom_pp": 0.0,
+   "task_pass": false,
+   "native_only": 4,
+   "zoh_only": 4,
+   "mcnemar_p": 1.0
+  },
+  {
+   "task": "can_ph",
+   "k": 4,
+   "native": 100.0,
+   "zoh": 96.0,
+   "headroom_pp": 4.0,
+   "task_pass": false,
+   "native_only": 2,
+   "zoh_only": 0,
+   "mcnemar_p": 0.5
+  },
+  {
+   "task": "square_ph",
+   "k": 4,
+   "native": 94.0,
+   "zoh": 84.0,
+   "headroom_pp": 10.0,
+   "task_pass": true,
+   "native_only": 7,
+   "zoh_only": 2,
+   "mcnemar_p": 0.1796875
+  },
+  {
+   "task": "transport_ph",
+   "k": 4,
+   "native": 80.0,
+   "zoh": 86.0,
+   "headroom_pp": -6.0,
+   "task_pass": false,
+   "native_only": 5,
+   "zoh_only": 8,
+   "mcnemar_p": 0.5810546875
+  },
+  {
+   "task": "tool_hang_ph",
+   "k": 4,
+   "native": 90.0,
+   "zoh": 76.0,
+   "headroom_pp": 14.0,
+   "task_pass": true,
+   "native_only": 11,
+   "zoh_only": 4,
+   "mcnemar_p": 0.11846923828125
+  }
+ ],
+ "k8": "invalid: n_action_steps=8 < 2k=16",
+ "block_pushing": "no valid k: DP-T n_action_steps=1 < 4; screen skipped",
+ "family_verdict": "PASS at k=4"
+}

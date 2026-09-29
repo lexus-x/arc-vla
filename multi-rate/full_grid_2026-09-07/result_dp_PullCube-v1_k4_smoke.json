@@ -1,0 +1,172 @@
+{
+  "task": "PullCube-v1",
+  "policy": "dp",
+  "k": 4,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 2,
+  "eval_offset": 0,
+  "n_train": 3,
+  "train_steps": 50,
+  "arms": [
+    "native",
+    "zoh",
+    "tac_fold_satfix",
+    "qp_anchor",
+    "qp_learned",
+    "learned_raw",
+    "learned_tanh",
+    "mlp_bc"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PullCube-v1_smoke.pt",
+  "checkpoint_sha256": "37eaa53bde7b7165bb633e190b6b182f3f0827dbb049fc55250ff7bb998edfae",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": [
+      false,
+      false
+    ],
+    "zoh": [
+      false,
+      false
+    ],
+    "tac_fold_satfix": [
+      false,
+      false
+    ],
+    "qp_anchor": [
+      false,
+      false
+    ],
+    "qp_learned": [
+      false,
+      false
+    ],
+    "learned_raw": [
+      false,
+      false
+    ],
+    "learned_tanh": [
+      false,
+      false
+    ],
+    "mlp_bc": [
+      false,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.7098214285714286,
+    "zoh": 0.6997767857142857,
+    "tac_fold_satfix": 0.734375,
+    "qp_anchor": 0.7254464285714286,
+    "qp_learned": 0.7131696428571429,
+    "learned_raw": 0.7020089285714286,
+    "learned_tanh": 0.7533482142857143,
+    "mlp_bc": 0.7868303571428571
+  },
+  "contrasts": {
+    "native": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "zoh": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "tac_fold_satfix": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "qp_anchor": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "qp_learned": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "learned_raw": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "learned_tanh": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "mlp_bc": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    }
+  }
+}

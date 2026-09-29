@@ -79,6 +79,7 @@ def _load(path):
 def decode(path, obs2, chunk_nd, governed=True):
     """obs2: (2, obs_dim) raw frames the policy saw; chunk_nd: clipped (8, nd) chunk."""
     m, net = _load(path); k, nd = m["k"], m["nd"]
+    if m.get("obs_idx") is not None: obs2 = obs2[:, m["obs_idx"]]  # proprio-only model (harness --gov-obs proprio)
     bs = coarsen_delta(chunk_nd, k)
     x = np.concatenate([obs2[0], obs2[1], (bs / k).ravel()]).astype(np.float32)
     with torch.no_grad(): r = net(torch.as_tensor(((x - m["mu"]) / m["sd"])[None])).numpy()[0].reshape(T, nd)
@@ -108,7 +109,9 @@ def fit_bc(O, A, nd, steps=4000, seed=0):
 
 
 def decode_bc(path, obs2):
-    m, net = _load(path); x = np.concatenate([obs2[0], obs2[1]]).astype(np.float32)
+    m, net = _load(path)
+    if m.get("obs_idx") is not None: obs2 = obs2[:, m["obs_idx"]]
+    x = np.concatenate([obs2[0], obs2[1]]).astype(np.float32)
     with torch.no_grad(): c = net(torch.as_tensor(((x - m["mu"]) / m["sd"])[None])).numpy()[0].reshape(T, -1)
     return np.clip(c, -1, 1).astype(np.float32)
 

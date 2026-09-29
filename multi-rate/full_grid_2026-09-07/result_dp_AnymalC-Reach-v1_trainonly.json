@@ -1,0 +1,30 @@
+{
+  "task": "AnymalC-Reach-v1",
+  "policy": "dp",
+  "k": 2,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 1,
+  "eval_offset": 0,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "native"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_AnymalC-Reach-v1.pt",
+  "checkpoint_sha256": "2b228db93cd62e9c4242db14553d93b1edeaf3f5975546c923a5a30141a4899b",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": [
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.34027777777777785
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

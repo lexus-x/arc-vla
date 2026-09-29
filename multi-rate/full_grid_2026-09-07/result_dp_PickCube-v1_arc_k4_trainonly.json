@@ -1,0 +1,35 @@
+{
+  "task": "PickCube-v1",
+  "policy": "dp",
+  "k": 4,
+  "head": "arc",
+  "seed": 0,
+  "fold": -1,
+  "n": 1,
+  "eval_offset": 0,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "qp_anchor"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PickCube-v1_arc.pt",
+  "checkpoint_sha256": "13df7bce57e8c4c2cc4574126a06b8315bf5f70b1aefd42edd49675c5d9af7cd",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "qp_anchor": [
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "qp_anchor": 0.0
+  },
+  "contrasts": {
+    "qp_anchor": {}
+  },
+  "arc_training_rates": [
+    1,
+    2,
+    4
+  ]
+}

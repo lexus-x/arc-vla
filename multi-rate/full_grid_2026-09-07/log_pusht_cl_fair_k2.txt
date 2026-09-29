@@ -15,3 +15,42 @@
 [eval] [110/400] native=27 zoh=18 spline=33 bspline_eps_raw=13 tac_fold_satfix=32 qp=22 qp_anchor=29
 [eval] [120/400] native=29 zoh=19 spline=34 bspline_eps_raw=15 tac_fold_satfix=32 qp=24 qp_anchor=30
 [eval] [130/400] native=33 zoh=19 spline=36 bspline_eps_raw=17 tac_fold_satfix=34 qp=27 qp_anchor=32
+[eval] [140/400] native=36 zoh=19 spline=38 bspline_eps_raw=18 tac_fold_satfix=35 qp=29 qp_anchor=33
+[eval] [150/400] native=38 zoh=19 spline=39 bspline_eps_raw=18 tac_fold_satfix=36 qp=31 qp_anchor=33
+[eval] [160/400] native=38 zoh=20 spline=40 bspline_eps_raw=18 tac_fold_satfix=39 qp=33 qp_anchor=36
+[eval] [170/400] native=40 zoh=21 spline=42 bspline_eps_raw=18 tac_fold_satfix=41 qp=33 qp_anchor=38
+[eval] [180/400] native=43 zoh=22 spline=47 bspline_eps_raw=21 tac_fold_satfix=43 qp=36 qp_anchor=40
+[eval] [190/400] native=44 zoh=22 spline=48 bspline_eps_raw=21 tac_fold_satfix=45 qp=36 qp_anchor=43
+[eval] [200/400] native=46 zoh=23 spline=50 bspline_eps_raw=22 tac_fold_satfix=47 qp=37 qp_anchor=43
+[eval] [210/400] native=49 zoh=25 spline=51 bspline_eps_raw=22 tac_fold_satfix=49 qp=39 qp_anchor=44
+[eval] [220/400] native=55 zoh=26 spline=54 bspline_eps_raw=23 tac_fold_satfix=51 qp=42 qp_anchor=48
+[eval] [230/400] native=60 zoh=27 spline=57 bspline_eps_raw=25 tac_fold_satfix=54 qp=47 qp_anchor=51
+[eval] [240/400] native=65 zoh=27 spline=61 bspline_eps_raw=25 tac_fold_satfix=55 qp=49 qp_anchor=53
+[eval] [250/400] native=66 zoh=27 spline=62 bspline_eps_raw=26 tac_fold_satfix=56 qp=49 qp_anchor=53
+[eval] [260/400] native=67 zoh=28 spline=62 bspline_eps_raw=27 tac_fold_satfix=58 qp=50 qp_anchor=55
+[eval] [270/400] native=67 zoh=28 spline=64 bspline_eps_raw=29 tac_fold_satfix=60 qp=50 qp_anchor=56
+[eval] [280/400] native=69 zoh=28 spline=69 bspline_eps_raw=30 tac_fold_satfix=62 qp=52 qp_anchor=57
+[eval] [290/400] native=70 zoh=29 spline=71 bspline_eps_raw=30 tac_fold_satfix=66 qp=53 qp_anchor=60
+[eval] [300/400] native=71 zoh=29 spline=73 bspline_eps_raw=31 tac_fold_satfix=66 qp=53 qp_anchor=61
+[eval] [310/400] native=73 zoh=31 spline=74 bspline_eps_raw=33 tac_fold_satfix=68 qp=55 qp_anchor=65
+[eval] [320/400] native=76 zoh=32 spline=77 bspline_eps_raw=33 tac_fold_satfix=72 qp=57 qp_anchor=68
+[eval] [330/400] native=78 zoh=32 spline=81 bspline_eps_raw=34 tac_fold_satfix=75 qp=58 qp_anchor=72
+[eval] [340/400] native=81 zoh=34 spline=83 bspline_eps_raw=36 tac_fold_satfix=77 qp=62 qp_anchor=74
+[eval] [350/400] native=85 zoh=36 spline=86 bspline_eps_raw=36 tac_fold_satfix=78 qp=64 qp_anchor=75
+[eval] [360/400] native=88 zoh=38 spline=88 bspline_eps_raw=36 tac_fold_satfix=80 qp=66 qp_anchor=76
+[eval] [370/400] native=91 zoh=39 spline=91 bspline_eps_raw=37 tac_fold_satfix=81 qp=67 qp_anchor=78
+[eval] [380/400] native=93 zoh=41 spline=95 bspline_eps_raw=37 tac_fold_satfix=83 qp=69 qp_anchor=80
+[eval] [390/400] native=96 zoh=43 spline=99 bspline_eps_raw=38 tac_fold_satfix=85 qp=72 qp_anchor=83
+[eval] [400/400] native=98 zoh=45 spline=103 bspline_eps_raw=38 tac_fold_satfix=86 qp=73 qp_anchor=86
+[eval] wall 13477s for 400 eps x 7 arms
+
+=== PushT-v1 closed-loop DP, k=2, n=400 ===
+  native             24.5% (98/400)  | vs zoh:  +13.2pp p=4.25e-08
+  zoh                11.2% (45/400)  | vs native:  -13.2pp p=4.25e-08
+  spline             25.8% (103/400)  | vs zoh:  +14.5pp p=1.34e-08  | vs native:   +1.3pp p=0.712
+  bspline_eps_raw     9.5% (38/400)  | vs zoh:   -1.8pp p=0.464  | vs native:  -15.0pp p=5.49e-09
+  tac_fold_satfix    21.5% (86/400)  | vs zoh:  +10.2pp p=7.51e-06  | vs native:   -3.0pp p=0.271
+  qp                 18.2% (73/400)  | vs zoh:   +7.0pp p=0.000914  | vs native:   -6.2pp p=0.0154
+  qp_anchor          21.5% (86/400)  | vs zoh:  +10.2pp p=3.06e-06  | vs native:   -3.0pp p=0.271
+  policy raw |a|>1 frac (pre-clip): 0.073
+[saved] /home/user/Desktop/multi-rate/full_grid_2026-09-07/result_dp_PushT-v1_fair_n400.json

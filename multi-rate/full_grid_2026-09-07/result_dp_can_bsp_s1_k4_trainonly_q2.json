@@ -1,0 +1,28 @@
+{
+  "task": "can",
+  "policy": "dp",
+  "k": 4,
+  "head": "bsp",
+  "seed": 1,
+  "fold": -1,
+  "n": 0,
+  "eval_offset": 0,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "native"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_can_bsp_s1_q2.pt",
+  "checkpoint_sha256": "631d6552db47cdf17e742a6b5703c46782af1fbf2592d48c153fd3bb63f3d9e6",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": []
+  },
+  "policy_raw_sat_frac": {
+    "native": NaN
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

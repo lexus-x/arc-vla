@@ -1,0 +1,28 @@
+{
+  "task": "lift",
+  "policy": "dp",
+  "k": 4,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 0,
+  "eval_offset": 0,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "native"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_lift_q2.pt",
+  "checkpoint_sha256": "39c2772e247047842265b7fbc2b2544da25a22c706a64daac15b7d9fd28cb32c",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": []
+  },
+  "policy_raw_sat_frac": {
+    "native": NaN
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

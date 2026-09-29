@@ -1,0 +1,76 @@
+{
+  "per_task": [
+    {
+      "task_group": "insert_flower",
+      "task_id": 0,
+      "metrics": {
+        "sum_rewards": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_rewards": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "successes": [
+          false,
+          false,
+          false
+        ],
+        "video_paths": [
+          "vlabench_pilot_insert_flower_native/videos/insert_flower_0/eval_episode_0.mp4",
+          "vlabench_pilot_insert_flower_native/videos/insert_flower_0/eval_episode_1.mp4",
+          "vlabench_pilot_insert_flower_native/videos/insert_flower_0/eval_episode_2.mp4"
+        ],
+        "predicted_video_paths": []
+      },
+      "n_episodes": 3,
+      "n_success": 0,
+      "pc_success": 0.0,
+      "pc_success_ci95": [
+        0.0,
+        56.14970317550454
+      ]
+    }
+  ],
+  "per_group": {
+    "insert_flower": {
+      "avg_sum_reward": 0.0,
+      "avg_max_reward": 0.0,
+      "pc_success": 0.0,
+      "n_episodes": 3,
+      "n_success": 0,
+      "pc_success_ci95": [
+        0.0,
+        56.14970317550454
+      ],
+      "video_paths": [
+        "vlabench_pilot_insert_flower_native/videos/insert_flower_0/eval_episode_0.mp4",
+        "vlabench_pilot_insert_flower_native/videos/insert_flower_0/eval_episode_1.mp4",
+        "vlabench_pilot_insert_flower_native/videos/insert_flower_0/eval_episode_2.mp4"
+      ],
+      "predicted_video_paths": []
+    }
+  },
+  "overall": {
+    "avg_sum_reward": 0.0,
+    "avg_max_reward": 0.0,
+    "pc_success": 0.0,
+    "n_episodes": 3,
+    "n_success": 0,
+    "pc_success_ci95": [
+      0.0,
+      56.14970317550454
+    ],
+    "eval_s": 801.4224996566772,
+    "eval_ep_s": 267.1408332983653,
+    "video_paths": [
+      "vlabench_pilot_insert_flower_native/videos/insert_flower_0/eval_episode_0.mp4",
+      "vlabench_pilot_insert_flower_native/videos/insert_flower_0/eval_episode_1.mp4",
+      "vlabench_pilot_insert_flower_native/videos/insert_flower_0/eval_episode_2.mp4"
+    ],
+    "predicted_video_paths": []
+  }
+}

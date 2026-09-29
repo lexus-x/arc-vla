@@ -1,0 +1,30 @@
+{
+  "PickCube-v1, 4X": {
+    "label": "PickCube-v1, 4X",
+    "source": "result_dp_PickCube-v1_k4_n400_anchor.json",
+    "sha256": "074f5d0d87d79e098227044c7c86d66f0801b0c882cbbd811bd63b88d84e068a",
+    "task": "PickCube-v1",
+    "policy": "dp",
+    "rate_multiplier": 4,
+    "n": 400,
+    "checkpoint_sha256": null,
+    "eval_protocol": null,
+    "eval_offset": 0,
+    "n_train": null,
+    "train_steps": 30000
+  },
+  "PushT-v1, 2X": {
+    "label": "PushT-v1, 2X",
+    "source": "result_dp_PushT-v1_fair_n400.json",
+    "sha256": "39613494dd9b596b9be72c340208def009fd8f8048551219d3836dd43c8ebb01",
+    "task": "PushT-v1",
+    "policy": "dp",
+    "rate_multiplier": 2,
+    "n": 400,
+    "checkpoint_sha256": "6413dfbdf2343cb9ec4494cdbec147ec984323cf9e201bec8141364157cbf060",
+    "eval_protocol": "heldout_demo_state",
+    "eval_offset": 0,
+    "n_train": 200,
+    "train_steps": 30000
+  }
+}

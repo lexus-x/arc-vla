@@ -1,0 +1,70 @@
+{
+  "per_task": [
+    {
+      "task_group": "select_fruit",
+      "task_id": 0,
+      "metrics": {
+        "sum_rewards": [
+          0.0,
+          0.0
+        ],
+        "max_rewards": [
+          0.0,
+          0.0
+        ],
+        "successes": [
+          false,
+          false
+        ],
+        "video_paths": [
+          "vlabench_pilot_select_fruit_native/videos/select_fruit_0/eval_episode_0.mp4",
+          "vlabench_pilot_select_fruit_native/videos/select_fruit_0/eval_episode_1.mp4"
+        ],
+        "predicted_video_paths": []
+      },
+      "n_episodes": 2,
+      "n_success": 0,
+      "pc_success": 0.0,
+      "pc_success_ci95": [
+        0.0,
+        65.76197724933468
+      ]
+    }
+  ],
+  "per_group": {
+    "select_fruit": {
+      "avg_sum_reward": 0.0,
+      "avg_max_reward": 0.0,
+      "pc_success": 0.0,
+      "n_episodes": 2,
+      "n_success": 0,
+      "pc_success_ci95": [
+        0.0,
+        65.76197724933468
+      ],
+      "video_paths": [
+        "vlabench_pilot_select_fruit_native/videos/select_fruit_0/eval_episode_0.mp4",
+        "vlabench_pilot_select_fruit_native/videos/select_fruit_0/eval_episode_1.mp4"
+      ],
+      "predicted_video_paths": []
+    }
+  },
+  "overall": {
+    "avg_sum_reward": 0.0,
+    "avg_max_reward": 0.0,
+    "pc_success": 0.0,
+    "n_episodes": 2,
+    "n_success": 0,
+    "pc_success_ci95": [
+      0.0,
+      65.76197724933468
+    ],
+    "eval_s": 320.01419377326965,
+    "eval_ep_s": 160.0070971250534,
+    "video_paths": [
+      "vlabench_pilot_select_fruit_native/videos/select_fruit_0/eval_episode_0.mp4",
+      "vlabench_pilot_select_fruit_native/videos/select_fruit_0/eval_episode_1.mp4"
+    ],
+    "predicted_video_paths": []
+  }
+}

@@ -1,0 +1,98 @@
+{
+ "PickCube-v1_k4": {
+  "mse_zoh": 0.039891038089990616,
+  "mse_full": 0.0019204103155061603,
+  "mse_proprio": 0.0020689673256129026,
+  "proprio_dims": 18
+ },
+ "PickCube-v1_k2": {
+  "mse_zoh": 0.012788234278559685,
+  "mse_full": 0.000721892633009702,
+  "mse_proprio": 0.0007743882015347481,
+  "proprio_dims": 18
+ },
+ "RollBall-v1_k4": {
+  "mse_zoh": 0.0786227211356163,
+  "mse_full": 0.00917865987867117,
+  "mse_proprio": 0.009838013909757137,
+  "proprio_dims": 18
+ },
+ "RollBall-v1_k2": {
+  "mse_zoh": 0.027993177995085716,
+  "mse_full": 0.0038960466627031565,
+  "mse_proprio": 0.0038270691875368357,
+  "proprio_dims": 18
+ },
+ "PullCube-v1_k4": {
+  "mse_zoh": 0.14782942831516266,
+  "mse_full": 0.0022951506543904543,
+  "mse_proprio": 0.0022524166852235794,
+  "proprio_dims": 18
+ },
+ "PullCube-v1_k2": {
+  "mse_zoh": 0.05384010076522827,
+  "mse_full": 0.0011214003898203373,
+  "mse_proprio": 0.0010052055586129427,
+  "proprio_dims": 18
+ },
+ "LiftPegUpright-v1_k4": {
+  "mse_zoh": 0.12443216890096664,
+  "mse_full": 0.002041703788563609,
+  "mse_proprio": 0.0019209827296435833,
+  "proprio_dims": 18
+ },
+ "LiftPegUpright-v1_k2": {
+  "mse_zoh": 0.044254936277866364,
+  "mse_full": 0.0008060851250775158,
+  "mse_proprio": 0.0008217068971134722,
+  "proprio_dims": 18
+ },
+ "PushCube-v1_k4": {
+  "mse_zoh": 0.04747268930077553,
+  "mse_full": 0.002206722740083933,
+  "mse_proprio": 0.0023716981522738934,
+  "proprio_dims": 18
+ },
+ "PushCube-v1_k2": {
+  "mse_zoh": 0.018505161628127098,
+  "mse_full": 0.0010809876257553697,
+  "mse_proprio": 0.0010415527503937483,
+  "proprio_dims": 18
+ },
+ "AnymalC-Reach-v1_k4": {
+  "mse_zoh": 0.16473571956157684,
+  "mse_full": 0.05258990824222565,
+  "mse_proprio": 0.0512499175965786,
+  "proprio_dims": 24
+ },
+ "AnymalC-Reach-v1_k2": {
+  "mse_zoh": 0.06880167871713638,
+  "mse_full": 0.03267526254057884,
+  "mse_proprio": 0.03166821226477623,
+  "proprio_dims": 24
+ },
+ "PokeCube-v1_k4": {
+  "mse_zoh": 0.03773680701851845,
+  "mse_full": 0.0016646910225972533,
+  "mse_proprio": 0.0018671435536816716,
+  "proprio_dims": 18
+ },
+ "PokeCube-v1_k2": {
+  "mse_zoh": 0.012066592462360859,
+  "mse_full": 0.000840117281768471,
+  "mse_proprio": 0.0008402481325902045,
+  "proprio_dims": 18
+ },
+ "StackCube-v1_k4": {
+  "mse_zoh": 0.07400202751159668,
+  "mse_full": 0.012248190119862556,
+  "mse_proprio": 0.011808370240032673,
+  "proprio_dims": 18
+ },
+ "StackCube-v1_k2": {
+  "mse_zoh": 0.025398526340723038,
+  "mse_full": 0.005123238544911146,
+  "mse_proprio": 0.0047006323002278805,
+  "proprio_dims": 18
+ }
+}

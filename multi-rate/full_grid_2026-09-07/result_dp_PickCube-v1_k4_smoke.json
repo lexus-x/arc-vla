@@ -1,0 +1,132 @@
+{
+  "task": "PickCube-v1",
+  "policy": "dp",
+  "k": 4,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 2,
+  "eval_offset": 0,
+  "n_train": 3,
+  "train_steps": 50,
+  "arms": [
+    "native",
+    "zoh",
+    "qp_learned",
+    "learned_raw",
+    "learned_tanh",
+    "mlp_bc"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PickCube-v1_smoke.pt",
+  "checkpoint_sha256": "b74bceb563106d426dffa67a14c13523a7c99d8f3d63f760942b1aefeb14cc84",
+  "eval_protocol": "random_reset",
+  "eval_seed": 900000,
+  "success": {
+    "native": [
+      false,
+      false
+    ],
+    "zoh": [
+      false,
+      false
+    ],
+    "qp_learned": [
+      false,
+      false
+    ],
+    "learned_raw": [
+      false,
+      false
+    ],
+    "learned_tanh": [
+      false,
+      false
+    ],
+    "mlp_bc": [
+      false,
+      false
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.5927905701754386,
+    "zoh": 0.5897752192982456,
+    "qp_learned": 0.5884046052631579,
+    "learned_raw": 0.5855263157894737,
+    "learned_tanh": 0.5527686403508771,
+    "mlp_bc": 0.5945723684210527
+  },
+  "contrasts": {
+    "native": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "zoh": {
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "qp_learned": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "learned_raw": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "learned_tanh": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    },
+    "mlp_bc": {
+      "vs_zoh": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      },
+      "vs_native": {
+        "delta_pp": 0.0,
+        "p": 1.0,
+        "a_only": 0,
+        "ref_only": 0
+      }
+    }
+  }
+}

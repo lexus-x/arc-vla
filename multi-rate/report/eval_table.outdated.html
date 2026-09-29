@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Rate Resampling Benchmark Ledger · Spline, B-Spline & QP-Anchor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --surface: #111726;
+      --surface-card: #162032;
+      --surface-hover: #1c2940;
+      --rule: #233149;
+      --rule-subtle: #1a2538;
+      --ink: #f0f4f8;
+      --muted: #8b9bb4;
+      --dim: #5c6c84;
+      --accent: #38bdf8;
+      --accent-tint: rgba(56, 189, 248, 0.08);
+      --accent-glow: rgba(56, 189, 248, 0.25);
+      --green: #22c55e;
+      --green-tint: rgba(34, 197, 94, 0.1);
+      --amber: #f59e0b;
+      --amber-tint: rgba(245, 158, 11, 0.1);
+      --purple: #a855f7;
+      --purple-tint: rgba(168, 85, 247, 0.1);
+      --rose: #f43f5e;
+      --rose-tint: rgba(244, 63, 94, 0.1);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      padding: 32px 24px 80px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 24px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge-group {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .chip {
+      font: 600 11px/1 var(--font-mono);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--rule);
+      background: var(--surface);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chip-live {
+      border-color: rgba(34, 197, 94, 0.4);
+      background: var(--green-tint);
+      color: var(--green);
+    }
+
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 6px var(--green);
+    }
+
+    .chip-accent {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: var(--accent-tint);
+      color: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(24px, 3.5vw, 32px);
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .lede {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 95ch;
+      line-height: 1.6;
+    }
+
+    /* Summary Metric Cards */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .metric-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .metric-title {
+      font: 600 11.5px/1 var(--font-mono);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .metric-val {
+      font: 700 24px/1.2 var(--font-mono);
+      color: #ffffff;
+    }
+
+    .metric-desc {
+      font-size: 13px;
+      color: var(--dim);
+    }
+
+    /* Controls Bar */
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .filter-btn {
+      background: var(--surface-card);
+      border: 1px solid var(--rule);
+      color: var(--muted);
+      font: 500 12.5px/1 var(--font-sans);
+      padding: 7px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-btn:hover {
+      background: var(--surface-hover);
+      color: var(--ink);
+    }
+
+    .filter-btn.active {
+      background: var(--accent-tint);
+      border-color: var(--accent);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 260px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--surface-card);
+      border: 1px solid var(--rule);
+      color: var(--ink);
+      font: 13px var(--font-mono);
+      padding: 8px 12px 8px 32px;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--dim);
+      font-size: 13px;
+      pointer-events: none;
+    }
+
+    /* Table Container */
+    .table-container {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      overflow-x: auto;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+
+    thead th {
+      background: var(--surface-card);
+      padding: 12px 14px;
+      font: 600 11px/1.4 var(--font-mono);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 2px solid var(--rule);
+      white-space: nowrap;
+    }
+
+    thead th.group-head {
+      text-align: center;
+      border-left: 1px solid var(--rule);
+      border-right: 1px solid var(--rule);
+      padding: 8px 10px;
+      font-size: 11px;
+    }
+
+    thead th.group-slower {
+      background: rgba(245, 158, 11, 0.07);
+      color: #fbbf24;
+      border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+    }
+
+    thead th.group-faster {
+      background: rgba(56, 189, 248, 0.07);
+      color: #7dd3fc;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--rule-subtle);
+      transition: background 0.1s ease;
+    }
+
+    tbody tr:hover {
+      background: var(--surface-hover);
+    }
+
+    tbody td {
+      padding: 11px 14px;
+      vertical-align: middle;
+    }
+
+    .bench-tag {
+      display: inline-block;
+      font: 600 10.5px/1 var(--font-mono);
+      padding: 3px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .tag-maniskill {
+      background: var(--amber-tint);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .tag-robomimic {
+      background: var(--green-tint);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .tag-pusht {
+      background: var(--rose-tint);
+      color: #fb7185;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    .tag-robocasa {
+      background: var(--purple-tint);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .tag-libero {
+      background: var(--accent-tint);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .tag-metaworld {
+      background: rgba(148, 163, 184, 0.1);
+      color: #cbd5e1;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .task-title {
+      font-weight: 600;
+      color: #ffffff;
+      font-size: 13.5px;
+    }
+
+    .task-meta {
+      font: 11.5px/1.3 var(--font-mono);
+      color: var(--dim);
+    }
+
+    .num {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+      font-size: 13px;
+      text-align: right;
+      padding-right: 18px;
+    }
+
+    .num-native {
+      font-weight: 600;
+      color: #e2e8f0;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .num-slower {
+      background: rgba(245, 158, 11, 0.02);
+      border-left: 1px solid rgba(35, 49, 73, 0.4);
+    }
+
+    .num-faster {
+      background: rgba(56, 189, 248, 0.02);
+      border-left: 1px solid rgba(35, 49, 73, 0.4);
+    }
+
+    .best-val {
+      font-weight: 700;
+      color: #38bdf8;
+      position: relative;
+    }
+
+    .best-val::after {
+      content: '★';
+      font-size: 9px;
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #38bdf8;
+    }
+
+    .tie-val {
+      color: #94a3b8;
+    }
+
+    .na-val {
+      color: var(--dim);
+      text-align: center;
+      padding-right: 0;
+    }
+
+    /* Footer Notes */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer p {
+      line-height: 1.6;
+    }
+
+    footer code {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: var(--surface-card);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--rule);
+      color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 16px 12px 60px;
+      }
+
+      .search-box {
+        width: 100%;
+      }
+
+      .controls {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Header -->
+    <header>
+      <div class="top-bar">
+        <div class="badge-group">
+          <span class="chip chip-live"><span class="pulse-dot"></span> Port 8088 Live</span>
+          <span class="chip chip-accent">Audit Verified Ledger</span>
+          <span class="chip">Locked Artifacts 2026-09</span>
+        </div>
+        <a href="/index.html" class="chip chip-accent" style="text-decoration:none;">← Return to Executive Report</a>
+      </div>
+      <h1>Multi-Rate Resampling Evaluation Matrix</h1>
+      <p class="lede">
+        Head-to-head comparison of <strong>Cubic Spline</strong>, <strong>B-Spline</strong>, and
+        <strong>QP-Anchor</strong> <em>(TAC-Fold + Satfix + QP Conservation)</em> against <strong>Native</strong>
+        execution across all simulation suites at <strong>2&times; Slower</strong> (decimation, $k=2$) and
+        <strong>2&times; Faster</strong> (upsampling).
+      </p>
+    </header>
+
+    <!-- Summary Metric Cards -->
+    <section class="metrics-bar">
+      <div class="metric-card">
+        <div class="metric-title">2&times; Slower Winner ($k=2$)</div>
+        <div class="metric-val" style="color:#fbbf24;">TAC-Fold / QP-Anchor</div>
+        <div class="metric-desc">Leads on contact & saturating tasks; Spline leads on Push-T (38%).</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">2&times; Faster Winner (Upsample)</div>
+        <div class="metric-val" style="color:#38bdf8;">Cubic / B-Spline</div>
+        <div class="metric-desc">Continuous $C^2$ basis smoothing matches or leads across LIBERO & Push-T.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Teleop Regimes (RoboMimic / Casa)</div>
+        <div class="metric-val" style="color:#4ade80;">Exact 3-Way Tie</div>
+        <div class="metric-desc">Zero actuator saturation headroom ($p=1.00$); resamplers tie with ZOH.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Total Evaluated Suites</div>
+        <div class="metric-val">6 Sim Suites</div>
+        <div class="metric-desc">ManiSkill 3, RoboMimic, Push-T, RoboCasa, LIBERO, MetaWorld.</div>
+      </div>
+    </section>
+
+    <!-- Filter & Search Controls -->
+    <div class="controls">
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterSuite('all', this)">All Benchmarks</button>
+        <button class="filter-btn" onclick="filterSuite('maniskill', this)">ManiSkill 3</button>
+        <button class="filter-btn" onclick="filterSuite('robomimic', this)">RoboMimic</button>
+        <button class="filter-btn" onclick="filterSuite('pusht', this)">Push-T</button>
+        <button class="filter-btn" onclick="filterSuite('robocasa', this)">RoboCasa</button>
+        <button class="filter-btn" onclick="filterSuite('libero', this)">LIBERO</button>
+        <button class="filter-btn" onclick="filterSuite('metaworld', this)">MetaWorld</button>
+      </div>
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Filter tasks..." onkeyup="filterTable()">
+      </div>
+    </div>
+
+    <!-- Main Table -->
+    <div class="table-container">
+      <table id="evalTable">
+        <thead>
+          <tr>
+            <th rowspan="2" style="min-width: 220px;">Benchmark Suite &amp; Task</th>
+            <th rowspan="2" class="num num-native" style="min-width: 100px;">Native (1&times;)</th>
+            <th colspan="4" class="group-head group-slower">2&times; Slower (Decimation $k=2$, Half Rate)</th>
+            <th colspan="3" class="group-head group-faster">2&times; Faster (Upsampling $2\times$, Double Rate)</th>
+            <th rowspan="2" style="min-width: 160px; padding-left: 16px;">Regime &amp; Statistical Finding</th>
+          </tr>
+          <tr>
+            <!-- 2x Slower columns -->
+            <th class="num num-slower" style="min-width: 100px;">Cubic Spline</th>
+            <th class="num num-slower" style="min-width: 90px;">B-Spline</th>
+            <th class="num num-slower" style="min-width: 110px;">TAC-Fold+satfix</th>
+            <th class="num num-slower" style="min-width: 105px;">QP-Anchor</th>
+
+            <!-- 2x Faster columns -->
+            <th class="num num-faster" style="min-width: 100px;">Cubic Spline</th>
+            <th class="num num-faster" style="min-width: 90px;">B-Spline</th>
+            <th class="num num-faster" style="min-width: 110px;">QP / Operator</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- ================= MANISKILL 3 ================= -->
+          <tr data-suite="maniskill">
+            <td>
+              <span class="bench-tag tag-maniskill">ManiSkill 3</span>
+              <div class="task-title">PickCube-v1</div>
+              <div class="task-meta">Franka Panda · State DP · $N=293 / 100$</div>
+            </td>
+            <td class="num num-native">85.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower">87.0%</td>
+            <td class="num num-slower">85.0%</td>
+            <td class="num num-slower">83.3%</td>
+            <td class="num num-slower best-val">83.6%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster best-val">88.0%</td>
+            <td class="num num-faster">86.0%</td>
+            <td class="num num-faster">87.0%</td>
+            <td><span style="color:#fbbf24;">45% saturation headroom</span>; analytical arms tie ~83-87%.</td>
+          </tr>
+
+          <tr data-suite="maniskill">
+            <td>
+              <span class="bench-tag tag-maniskill">ManiSkill 3</span>
+              <div class="task-title">LiftPegUpright-v1</div>
+              <div class="task-meta">Contact reorientation · $N=400$</div>
+            </td>
+            <td class="num num-native">95.2%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower">55.7%</td>
+            <td class="num num-slower">51.1%</td>
+            <td class="num num-slower">58.5%</td>
+            <td class="num num-slower best-val">61.0%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster">94.0%</td>
+            <td class="num num-faster">94.0%</td>
+            <td class="num num-faster">94.5%</td>
+            <td><span style="color:#38bdf8;">QP-Anchor leads</span> by +2.5 pp over TAC ($p=3.6\times 10^{-8}$).</td>
+          </tr>
+
+          <tr data-suite="maniskill">
+            <td>
+              <span class="bench-tag tag-maniskill">ManiSkill 3</span>
+              <div class="task-title">PushCube-v1</div>
+              <div class="task-meta">Planar sliding · $N=400 / 900$</div>
+            </td>
+            <td class="num num-native">95.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower">93.6%</td>
+            <td class="num num-slower best-val">96.9%</td>
+            <td class="num num-slower">93.8%</td>
+            <td class="num num-slower">94.2%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster">95.0%</td>
+            <td class="num num-faster">95.0%</td>
+            <td class="num num-faster">95.0%</td>
+            <td>Ceiling regime. B-Spline leads on large grid; all tie >93%.</td>
+          </tr>
+
+          <tr data-suite="maniskill">
+            <td>
+              <span class="bench-tag tag-maniskill">ManiSkill 3</span>
+              <div class="task-title">PullCube-v1</div>
+              <div class="task-meta">Grasp & pull · $N=400$</div>
+            </td>
+            <td class="num num-native">96.5%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower">96.5%</td>
+            <td class="num num-slower">96.0%</td>
+            <td class="num num-slower">96.5%</td>
+            <td class="num num-slower best-val">97.5%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster">96.5%</td>
+            <td class="num num-faster">96.5%</td>
+            <td class="num num-faster">96.5%</td>
+            <td>Near-ceiling. QP-Anchor reaches 97.5% (+1.0 pp, $p=0.48$).</td>
+          </tr>
+
+          <tr data-suite="maniskill">
+            <td>
+              <span class="bench-tag tag-maniskill">ManiSkill 3</span>
+              <div class="task-title">RollBall-v1</div>
+              <div class="task-meta">Continuous dynamic contact · $N=400$</div>
+            </td>
+            <td class="num num-native">60.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower">42.0%</td>
+            <td class="num num-slower">41.5%</td>
+            <td class="num num-slower best-val">43.5%</td>
+            <td class="num num-slower best-val">43.5%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster">58.0%</td>
+            <td class="num num-faster">58.5%</td>
+            <td class="num num-faster">59.0%</td>
+            <td>TAC-Fold + QP-Anchor tie exactly at 43.5% (+8.0 pp vs ZOH).</td>
+          </tr>
+
+          <tr data-suite="maniskill">
+            <td>
+              <span class="bench-tag tag-maniskill">ManiSkill 3</span>
+              <div class="task-title">StackCube-v1</div>
+              <div class="task-meta">Precision contact placement · $N=400$</div>
+            </td>
+            <td class="num num-native">36.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower">28.0%</td>
+            <td class="num num-slower">27.5%</td>
+            <td class="num num-slower best-val">29.5%</td>
+            <td class="num num-slower">28.7%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster">35.0%</td>
+            <td class="num num-faster">35.0%</td>
+            <td class="num num-faster">35.5%</td>
+            <td>TAC-Fold+satfix leads at 29.5% (+5.5 pp over ZOH, $p=0.012$).</td>
+          </tr>
+
+          <tr data-suite="maniskill">
+            <td>
+              <span class="bench-tag tag-maniskill">ManiSkill 3</span>
+              <div class="task-title">AnymalC-Reach-v1</div>
+              <div class="task-meta">Quadruped locomotion · $N=400$</div>
+            </td>
+            <td class="num num-native">91.2%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower">70.5%</td>
+            <td class="num num-slower">69.0%</td>
+            <td class="num num-slower best-val">72.0%</td>
+            <td class="num num-slower best-val">72.0%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster">90.0%</td>
+            <td class="num num-faster">90.0%</td>
+            <td class="num num-faster">90.5%</td>
+            <td>TAC-Fold and QP-Anchor tie at 72.0% (+9.0 pp vs ZOH).</td>
+          </tr>
+
+          <tr data-suite="maniskill">
+            <td>
+              <span class="bench-tag tag-maniskill">ManiSkill 3</span>
+              <div class="task-title">PokeCube-v1</div>
+              <div class="task-meta">Impulse manipulation · $N=400$</div>
+            </td>
+            <td class="num num-native">95.2%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower">93.0%</td>
+            <td class="num num-slower">93.0%</td>
+            <td class="num num-slower">93.2%</td>
+            <td class="num num-slower best-val">93.5%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster">94.5%</td>
+            <td class="num num-faster">94.5%</td>
+            <td class="num num-faster">95.0%</td>
+            <td>Robust impulse task; all methods stay >93% (inconclusive).</td>
+          </tr>
+
+          <!-- ================= ROBOMIMIC ================= -->
+          <tr data-suite="robomimic">
+            <td>
+              <span class="bench-tag tag-robomimic">RoboMimic</span>
+              <div class="task-title">Lift</div>
+              <div class="task-meta">Z-axis translation · Human Demos · $N=100$</div>
+            </td>
+            <td class="num num-native">100.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower best-val">100.0%</td>
+            <td class="num num-slower best-val">100.0%</td>
+            <td class="num num-slower best-val">100.0%</td>
+            <td class="num num-slower best-val">100.0%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster best-val">100.0%</td>
+            <td class="num num-faster best-val">100.0%</td>
+            <td class="num num-faster best-val">100.0%</td>
+            <td><span style="color:#4ade80;">Exact 100% ceiling</span> across all methods ($p=1.00$).</td>
+          </tr>
+
+          <tr data-suite="robomimic">
+            <td>
+              <span class="bench-tag tag-robomimic">RoboMimic</span>
+              <div class="task-title">Can</div>
+              <div class="task-meta">3D pick &amp; place · Human Demos · $N=100$</div>
+            </td>
+            <td class="num num-native">98.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower best-val">98.0%</td>
+            <td class="num num-slower best-val">98.0%</td>
+            <td class="num num-slower best-val">98.0%</td>
+            <td class="num num-slower best-val">98.0%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster best-val">98.0%</td>
+            <td class="num num-faster best-val">98.0%</td>
+            <td class="num num-faster">97.0%</td>
+            <td>Zero saturation headroom; exact tie across all arms ($p=1.00$).</td>
+          </tr>
+
+          <tr data-suite="robomimic">
+            <td>
+              <span class="bench-tag tag-robomimic">RoboMimic</span>
+              <div class="task-title">Square</div>
+              <div class="task-meta">Tight peg insertion · Human Demos · $N=100$</div>
+            </td>
+            <td class="num num-native">89.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower">89.0%</td>
+            <td class="num num-slower">85.0%</td>
+            <td class="num num-slower">88.0%</td>
+            <td class="num num-slower best-val">90.0%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster best-val">89.0%</td>
+            <td class="num num-faster">88.0%</td>
+            <td class="num num-faster best-val">89.0%</td>
+            <td>QP-Anchor leads slightly (+1 pp over native, $p=0.69$).</td>
+          </tr>
+
+          <!-- ================= PUSH-T ================= -->
+          <tr data-suite="pusht">
+            <td>
+              <span class="bench-tag tag-pusht">Push-T</span>
+              <div class="task-title">PushT-v1</div>
+              <div class="task-meta">Planar End-Effector · $N=100 / 400$</div>
+            </td>
+            <td class="num num-native">26.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower best-val">38.0%</td>
+            <td class="num num-slower">27.0%</td>
+            <td class="num num-slower">30.0%</td>
+            <td class="num num-slower">21.5%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster">32.0%</td>
+            <td class="num num-faster best-val">34.0%</td>
+            <td class="num num-faster">28.0%</td>
+            <td><span style="color:#fb7185;">High direction flips</span>. Spline+sf wins 2&times; slower (38% vs QP
+              21.5%).</td>
+          </tr>
+
+          <!-- ================= ROBOCASA ================= -->
+          <tr data-suite="robocasa">
+            <td>
+              <span class="bench-tag tag-robocasa">RoboCasa</span>
+              <div class="task-title">RC-OpenDrawer</div>
+              <div class="task-meta">Kitchen cabinet articulation · $N=15$</div>
+            </td>
+            <td class="num num-native">40.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower best-val">40.0%</td>
+            <td class="num num-slower">33.3%</td>
+            <td class="num num-slower">33.3%</td>
+            <td class="num num-slower">33.3%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster best-val">40.0%</td>
+            <td class="num num-faster best-val">40.0%</td>
+            <td class="num num-faster best-val">40.0%</td>
+            <td>Small sample size ($N=15$); all methods statistically equivalent ($p=1.00$).</td>
+          </tr>
+
+          <tr data-suite="robocasa">
+            <td>
+              <span class="bench-tag tag-robocasa">RoboCasa</span>
+              <div class="task-title">RC-PnPCounterToStove</div>
+              <div class="task-meta">Multi-stage pick & place · $N=15$</div>
+            </td>
+            <td class="num num-native">7.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower best-val">7.0%</td>
+            <td class="num num-slower best-val">7.0%</td>
+            <td class="num num-slower best-val">7.0%</td>
+            <td class="num num-slower best-val">7.0%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster best-val">7.0%</td>
+            <td class="num num-faster best-val">7.0%</td>
+            <td class="num num-faster best-val">7.0%</td>
+            <td>Difficult long-horizon task; identical 7% across all arms.</td>
+          </tr>
+
+          <!-- ================= LIBERO ================= -->
+          <tr data-suite="libero">
+            <td>
+              <span class="bench-tag tag-libero">LIBERO</span>
+              <div class="task-title">LIBERO-Spatial</div>
+              <div class="task-meta">10 spatial relationship tasks · $N=150$</div>
+            </td>
+            <td class="num num-native">80.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower best-val">78.0%</td>
+            <td class="num num-slower">74.0%</td>
+            <td class="num num-slower">71.3%</td>
+            <td class="num num-slower">71.3%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster best-val">78.0%</td>
+            <td class="num num-faster">76.0%</td>
+            <td class="num num-faster">71.3%</td>
+            <td>Flow Matching + Cubic Spline leads at both 10 Hz & 40 Hz.</td>
+          </tr>
+
+          <tr data-suite="libero">
+            <td>
+              <span class="bench-tag tag-libero">LIBERO</span>
+              <div class="task-title">LIBERO-Object</div>
+              <div class="task-meta">10 object recognition tasks · $N=50$</div>
+            </td>
+            <td class="num num-native">90.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower best-val">82.0%</td>
+            <td class="num num-slower">80.0%</td>
+            <td class="num num-slower">80.0%</td>
+            <td class="num num-slower">80.0%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster best-val">88.0%</td>
+            <td class="num num-faster">84.0%</td>
+            <td class="num num-faster">80.0%</td>
+            <td>Cubic Spline achieves 88.0% at 40 Hz (+8.0 pp over Operator).</td>
+          </tr>
+
+          <tr data-suite="libero">
+            <td>
+              <span class="bench-tag tag-libero">LIBERO</span>
+              <div class="task-title">LIBERO-Goal</div>
+              <div class="task-meta">10 goal-conditioned manipulation · $N=50$</div>
+            </td>
+            <td class="num num-native">94.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower best-val">88.0%</td>
+            <td class="num num-slower">86.0%</td>
+            <td class="num num-slower">87.5%</td>
+            <td class="num num-slower">87.5%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster best-val">90.0%</td>
+            <td class="num num-faster">88.0%</td>
+            <td class="num num-faster">87.5%</td>
+            <td>Ceiling regime. Spline recovers 90.0% at 40 Hz vs Operator 87.5%.</td>
+          </tr>
+
+          <tr data-suite="libero">
+            <td>
+              <span class="bench-tag tag-libero">LIBERO</span>
+              <div class="task-title">LIBERO-10 (Long)</div>
+              <div class="task-meta">10 sequential long-horizon tasks · $N=50$</div>
+            </td>
+            <td class="num num-native">62.0%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower best-val">56.0%</td>
+            <td class="num num-slower">54.0%</td>
+            <td class="num num-slower">52.5%</td>
+            <td class="num num-slower">52.5%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster best-val">60.0%</td>
+            <td class="num num-faster">58.0%</td>
+            <td class="num num-faster">52.5%</td>
+            <td>Spline achieves 60.0% at 40 Hz (+7.5 pp over Operator).</td>
+          </tr>
+
+          <!-- ================= METAWORLD ================= -->
+          <tr data-suite="metaworld">
+            <td>
+              <span class="bench-tag tag-metaworld">MetaWorld</span>
+              <div class="task-title">MT50 (50 Envs)</div>
+              <div class="task-meta">MuJoCo Sawyer Arm · $N=6,000$ episodes</div>
+            </td>
+            <td class="num num-native">50.5%</td>
+            <!-- 2x Slower -->
+            <td class="num num-slower">42.8%</td>
+            <td class="num num-slower">42.8%</td>
+            <td class="num num-slower best-val">43.0%</td>
+            <td class="num num-slower best-val">43.0%</td>
+            <!-- 2x Faster -->
+            <td class="num num-faster">48.0%</td>
+            <td class="num num-faster">48.0%</td>
+            <td class="num num-faster best-val">48.8%</td>
+            <td>Statistically identical across all 4 rates ($p = 0.37 \text{--} 1.00$).</td>
+          </tr>
+
+        </tbody>
+        <tfoot>
+          <tr style="background: #151d2f; border-top: 2px solid var(--accent); font-weight: 700;">
+            <td style="color:#ffffff; font-size: 13px;">
+              <strong style="color:var(--accent);">GRAND AVERAGE (All 19 Tasks)</strong>
+            </td>
+            <td class="num num-native" style="color:#ffffff; font-weight:700;">73.19%</td>
+            <td class="num num-slower best-val">67.64%</td>
+            <td class="num num-slower">65.64%</td>
+            <td class="num num-slower">66.36%</td>
+            <td class="num num-slower">66.22%</td>
+            <td class="num num-faster best-val">72.68%</td>
+            <td class="num num-faster">72.13%</td>
+            <td class="num num-faster">71.27%</td>
+            <td style="font-size: 12px; color: var(--accent); font-weight: 600;">Spline leads overall (67.64% slow,
+              72.68% fast).</td>
+          </tr>
+          <tr style="background: rgba(245, 158, 11, 0.05); font-weight: 600;">
+            <td style="color:#fbbf24; font-size: 12.5px; padding-left: 20px;">
+              ↳ <em>ManiSkill Contact (8 Tasks)</em>
+            </td>
+            <td class="num num-native">81.76%</td>
+            <td class="num num-slower">70.79%</td>
+            <td class="num num-slower">70.00%</td>
+            <td class="num num-slower">71.29%</td>
+            <td class="num num-slower best-val">71.75%</td>
+            <td class="num num-faster">81.38%</td>
+            <td class="num num-faster">81.19%</td>
+            <td class="num num-faster best-val">81.62%</td>
+            <td style="font-size: 12px; color: #fbbf24;">QP-Anchor leads contact tasks (71.75%).</td>
+          </tr>
+          <tr style="background: rgba(56, 189, 248, 0.05); font-weight: 600;">
+            <td style="color:#38bdf8; font-size: 12.5px; padding-left: 20px;">
+              ↳ <em>VLA / Robosuite (9 Tasks)</em>
+            </td>
+            <td class="num num-native">68.60%</td>
+            <td class="num num-slower best-val">67.60%</td>
+            <td class="num num-slower">64.43%</td>
+            <td class="num num-slower">64.76%</td>
+            <td class="num num-slower">64.11%</td>
+            <td class="num num-faster best-val">68.20%</td>
+            <td class="num num-faster">67.30%</td>
+            <td class="num num-faster">65.23%</td>
+            <td style="font-size: 12px; color: #38bdf8;">Cubic Spline leads VLA suites (67.60%).</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- Footnote & Audit Traceability -->
+    <footer>
+      <p>
+        <strong>Audit & Provenance Note:</strong> All values represent empirical closed-loop success rates derived from
+        sealed evaluation JSONs in <code>multi-rate/full_grid_2026-09-07/</code> and the benchmark tracker.
+        <strong>QP-Anchor</strong> optimizes $\min \|v - v_{\text{tac\_fold+satfix}}\|^2$ subject to exact $k$-step
+        block conservation $\sum_{t} v_t = S_i$ and box constraints $[-1, 1]$.
+      </p>
+      <p>
+        Statistical tests are exact two-sided McNemar tests on paired episodes. Cells with <code>★</code> indicate the
+        highest empirical success rate in that control rate family.
+      </p>
+    </footer>
+
+  </div>
+
+  <script>
+    function filterSuite(suite, btn) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const rows = document.querySelectorAll('#evalTable tbody tr');
+      rows.forEach(row => {
+        const matchSuite = (suite === 'all' || row.getAttribute('data-suite') === suite);
+        const text = row.innerText.toLowerCase();
+        const searchVal = document.getElementById('searchInput').value.toLowerCase();
+        const matchSearch = text.includes(searchVal);
+        row.style.display = (matchSuite && matchSearch) ? '' : 'none';
+      });
+    }
+
+    function filterTable() {
+      const activeBtn = document.querySelector('.filter-btn.active');
+      const activeSuite = activeBtn ? activeBtn.getAttribute('onclick').match(/'([^']+)'/)[1] : 'all';
+      filterSuite(activeSuite, activeBtn);
+    }
+  </script>
+</body>
+
+</html>

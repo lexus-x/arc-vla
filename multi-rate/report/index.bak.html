@@ -1,0 +1,554 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Rate Governor Progress</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,750&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#F1F4F2; --surface:#FFFFFF; --ink:#16201C; --muted:#56645E; --rule:#D5DDD9;
+  --accent:#0B7A67; --accent-tint:rgba(11,122,103,.09); --limit:#B8621B; --limit-tint:rgba(184,98,27,.12);
+  --good:#2E7D4F; --warn:#9A6210; --bad:#B23A2E; --ghost:#C9D3CE;
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,sans-serif;
+  --body:'Atkinson Hyperlegible',ui-sans-serif,system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0F1513; --surface:#161E1B; --ink:#E3EBE7; --muted:#9AA9A2; --rule:#2A3531;
+    --accent:#45C2A8; --accent-tint:rgba(69,194,168,.12); --limit:#E39A55; --limit-tint:rgba(227,154,85,.14);
+    --good:#5CC08A; --warn:#E0B050; --bad:#EE7B6E; --ghost:#34423D;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0F1513; --surface:#161E1B; --ink:#E3EBE7; --muted:#9AA9A2; --rule:#2A3531;
+  --accent:#45C2A8; --accent-tint:rgba(69,194,168,.12); --limit:#E39A55; --limit-tint:rgba(227,154,85,.14);
+  --good:#5CC08A; --warn:#E0B050; --bad:#EE7B6E; --ghost:#34423D;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--body);padding-inline:20px;padding-block:40px 72px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(30px,5vw,44px);font-weight:750;letter-spacing:-.015em}
+h2{font-size:clamp(22px,3.2vw,27px);font-weight:750}
+h3{font-size:18px;font-weight:600}
+p{margin:0;max-width:66ch}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.lede{font-size:19px;color:var(--muted)}
+.mono,.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+header{display:flex;flex-direction:column;gap:14px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font:13px/1.4 var(--mono);color:var(--muted)}
+
+/* the flow spine */
+.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.step{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px}
+.spine{position:relative;display:flex;justify-content:center}
+.spine::after{content:"";position:absolute;top:44px;bottom:0;left:50%;width:2px;margin-left:-1px;background:var(--rule)}
+.step:last-child .spine::after{display:none}
+.node{position:relative;z-index:1;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
+  font:600 14px/1 var(--mono);background:var(--surface);border:2px solid var(--accent);color:var(--accent)}
+.step.today .node{background:var(--accent);color:var(--surface)}
+.body{display:flex;flex-direction:column;gap:14px;padding-bottom:44px;min-width:0}
+.phase{font:600 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.divider{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;padding-bottom:28px}
+.divider span{grid-column:2;font:600 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);padding:10px 0;border-top:2px solid var(--accent)}
+
+/* figures */
+.fig{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:18px;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:520px;height:auto}
+.fig figcaption{font-size:14px;color:var(--muted);margin-top:10px;max-width:66ch}
+figure{margin:0}
+svg text{font-family:var(--body);fill:var(--muted)}
+svg .t-ink{fill:var(--ink)} svg .t-acc{fill:var(--accent)} svg .t-lim{fill:var(--limit)}
+svg .mono{font-family:var(--mono)}
+
+/* rules, chips, tables */
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.rule{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.rule b{font-family:var(--display);font-weight:600;font-size:17px}
+.rule span{font-size:15px;color:var(--muted)}
+.chip{display:inline-block;font:600 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;
+  padding:5px 8px;border-radius:5px;white-space:nowrap;border:1px solid currentColor}
+.c-good{color:var(--good)} .c-warn{color:var(--warn)} .c-bad{color:var(--bad)} .c-acc{color:var(--accent)} .c-mut{color:var(--muted)}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font:600 11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:none}
+td.num{white-space:nowrap}
+.bar{display:inline-block;height:8px;border-radius:4px;background:var(--accent);vertical-align:middle;margin-right:8px;width:calc(var(--v) * 1.1px)}
+.bar.ref{background:var(--ghost)}
+.rank{font:600 15px/1 var(--mono);color:var(--accent)}
+td.def{min-width:260px}
+.code{font:12px/1.4 var(--mono);color:var(--muted)}
+.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;max-width:66ch}
+.note{font-size:15px;color:var(--muted);border-left:3px solid var(--limit);padding:4px 0 4px 12px;max-width:66ch}
+.callout{background:var(--accent-tint);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.callout b{font-family:var(--display);font-weight:600;font-size:18px}
+@media (max-width:520px){
+  body{font-size:16px}
+  .step,.divider{grid-template-columns:32px minmax(0,1fr);column-gap:12px}
+  .node{width:30px;height:30px;font-size:12px}
+  .spine::after{top:36px}
+}
+@media (prefers-reduced-motion:no-preference){ .node{transition:transform .2s} .step:hover .node{transform:scale(1.08)} }
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Multi-rate action resampling · progress report</div>
+  <h1>Running a robot policy at a new speed without losing its motion</h1>
+  <p class="lede">What we are building, what the evidence says so far, and what was done today to turn it into a strong positive paper. Written in plain English; every number comes from a result file.</p>
+  <div class="meta">
+    <span>23 Sep 2026 · 17:05 KST</span>
+    <span>Policies: Diffusion Policy, Flow Matching</span>
+    <span>Sims: ManiSkill, RoboMimic, RoboCasa</span>
+    <a href="/eval_table.html" style="color:var(--accent);font-weight:600;text-decoration:underline;">→ View Clean Eval Table (Spline / B-Spline / QP-Anchor)</a>
+  </div>
+</header>
+
+<ol class="flow">
+<li class="divider" aria-hidden="true"><span>Part A · Our work</span></li>
+
+<li class="step"><div class="spine"><div class="node">1</div></div><div class="body">
+  <div class="phase">The problem</div>
+  <h2>A robot policy is trained at one speed but has to run at another</h2>
+  <p>A policy plans small movement steps at a fixed rate. If it must run slower (every <span class="mono">k</span> steps), it only sends one <b>total</b> per block of <span class="mono">k</span> steps. The robot's controller still needs every small step, so we have to <b>rebuild</b> them from the totals.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 200" role="img" aria-label="Eight planned steps become two block totals at k equals 4, then must be rebuilt into eight steps">
+      <text x="105" y="22" text-anchor="middle" class="t-ink" font-size="14" font-weight="700">1 · Policy's plan</text>
+      <line x1="18" y1="130" x2="184" y2="130" stroke="var(--rule)" stroke-width="2"/>
+      <g fill="var(--accent)">
+        <rect x="24" y="103" width="14" height="27" rx="2"/><rect x="44" y="85" width="14" height="45" rx="2"/>
+        <rect x="64" y="58" width="14" height="72" rx="2"/><rect x="84" y="40" width="14" height="90" rx="2"/>
+        <rect x="104" y="49" width="14" height="81" rx="2"/><rect x="124" y="76" width="14" height="54" rx="2"/>
+        <rect x="144" y="94" width="14" height="36" rx="2"/><rect x="164" y="112" width="14" height="18" rx="2"/>
+      </g>
+      <text x="101" y="152" text-anchor="middle" font-size="13">8 small steps</text>
+      <line x1="192" y1="92" x2="220" y2="92" stroke="var(--muted)" stroke-width="2"/>
+      <path d="M220 86 L228 92 L220 98 Z" fill="var(--muted)"/>
+      <text x="210" y="80" text-anchor="middle" class="mono" font-size="12">k=4</text>
+
+      <text x="314" y="22" text-anchor="middle" class="t-ink" font-size="14" font-weight="700">2 · Slow rate sends totals</text>
+      <line x1="232" y1="130" x2="396" y2="130" stroke="var(--rule)" stroke-width="2"/>
+      <rect x="236" y="71" width="76" height="59" rx="3" fill="var(--accent)" opacity=".55"/>
+      <rect x="318" y="83" width="76" height="47" rx="3" fill="var(--accent)" opacity=".55"/>
+      <text x="274" y="63" text-anchor="middle" class="mono t-ink" font-size="12">total 2.6</text>
+      <text x="356" y="75" text-anchor="middle" class="mono t-ink" font-size="12">total 2.1</text>
+      <text x="314" y="152" text-anchor="middle" font-size="13">2 numbers instead of 8</text>
+      <line x1="402" y1="92" x2="430" y2="92" stroke="var(--muted)" stroke-width="2"/>
+      <path d="M430 86 L438 92 L430 98 Z" fill="var(--muted)"/>
+
+      <text x="526" y="22" text-anchor="middle" class="t-ink" font-size="14" font-weight="700">3 · We rebuild 8 steps</text>
+      <line x1="442" y1="130" x2="610" y2="130" stroke="var(--rule)" stroke-width="2"/>
+      <g fill="none" stroke="var(--muted)" stroke-dasharray="3 3">
+        <rect x="446" y="103" width="14" height="27"/><rect x="466" y="85" width="14" height="45"/>
+        <rect x="486" y="58" width="14" height="72"/><rect x="506" y="40" width="14" height="90"/>
+        <rect x="526" y="49" width="14" height="81"/><rect x="546" y="76" width="14" height="54"/>
+        <rect x="566" y="94" width="14" height="36"/><rect x="586" y="112" width="14" height="18"/>
+      </g>
+      <g fill="var(--accent)" opacity=".8">
+        <rect x="446" y="89.5" width="14" height="40.5" rx="2"/><rect x="466" y="76" width="14" height="54" rx="2"/>
+        <rect x="486" y="62.5" width="14" height="67.5" rx="2"/><rect x="506" y="58" width="14" height="72" rx="2"/>
+        <rect x="526" y="62.5" width="14" height="67.5" rx="2"/><rect x="546" y="76" width="14" height="54" rx="2"/>
+        <rect x="566" y="89.5" width="14" height="40.5" rx="2"/><rect x="586" y="103" width="14" height="27" rx="2"/>
+      </g>
+      <text x="526" y="152" text-anchor="middle" font-size="13">dashed = true plan</text>
+      <text x="320" y="188" text-anchor="middle" class="t-ink" font-size="14">Every method we compare is a different way of doing step 3.</text>
+    </svg>
+    <figcaption>At k=4 the policy only tells us the two totals. Methods differ in the shape they guess inside each block: hold flat (ZOH), smooth curve (spline, B-spline), damped curve (TAC-Fold), or ours.</figcaption>
+  </figure>
+</div></li>
+
+<li class="step"><div class="spine"><div class="node">2</div></div><div class="body">
+  <div class="phase">The hidden trap</div>
+  <h2>Smooth curves overshoot the controller's limit, and the extra motion is thrown away</h2>
+  <p>The robot's controller only accepts commands between <span class="mono">−1</span> and <span class="mono">+1</span>. Anything past that is silently cut. A smooth curve often bulges past the limit, so part of the motion the policy asked for never happens, and the robot drifts off its plan.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 215" role="img" aria-label="A smooth curve rises above the controller limit of plus one; the part above the limit is cut off">
+      <defs><clipPath id="above"><rect x="0" y="0" width="640" height="60"/></clipPath></defs>
+      <line x1="40" y1="150" x2="610" y2="150" stroke="var(--rule)" stroke-width="2"/>
+      <text x="30" y="154" text-anchor="end" class="mono" font-size="12">0</text>
+      <path d="M40 140 C150 130,200 20,310 30 S470 130,600 120 L600 60 L40 60 Z" fill="var(--limit-tint)" clip-path="url(#above)"/>
+      <path d="M40 140 C150 130,200 20,310 30 S470 130,600 120" fill="none" stroke="var(--accent)" stroke-width="3"/>
+      <line x1="40" y1="60" x2="610" y2="60" stroke="var(--limit)" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="30" y="64" text-anchor="end" class="mono t-lim" font-size="12">+1</text>
+      <text x="606" y="52" text-anchor="end" class="t-lim" font-size="13" font-weight="700">controller limit</text>
+      <text x="290" y="15" text-anchor="middle" class="t-lim" font-size="13" font-weight="700">cut off → this motion is lost</text>
+      <line x1="90" y1="192" x2="120" y2="192" stroke="var(--accent)" stroke-width="3"/>
+      <text x="128" y="196" font-size="13">smooth guess (spline)</text>
+      <rect x="300" y="184" width="30" height="16" fill="var(--limit-tint)" stroke="var(--limit)"/>
+      <text x="338" y="196" font-size="13">part the controller cuts</text>
+    </svg>
+    <figcaption>Holding flat (ZOH) never crosses the limit. Smooth curves did on 1–20% of values in RL demos. "Satfix" repairs this afterwards, one block at a time.</figcaption>
+  </figure>
+</div></li>
+
+<li class="step"><div class="spine"><div class="node">3</div></div><div class="body">
+  <div class="phase">Our method</div>
+  <h2>A "governor" that keeps the motion and respects the limit</h2>
+  <p>Instead of guessing a curve and fixing it later, we solve one small optimisation that follows three rules at once. It needs no training and no robot model, and runs in under a second per episode.</p>
+  <div class="rules">
+    <div class="rule"><b>Keep every block total</b><span>The robot moves exactly as far as the policy asked. Nothing is lost.</span></div>
+    <div class="rule"><b>Never pass ±1</b><span>The limit is part of the solution, so the controller has nothing to cut.</span></div>
+    <div class="rule"><b>Stay close to TAC-Fold's shape</b><span>If TAC-Fold's own answer is already inside the limit, the result is identical to it.</span></div>
+  </div>
+  <p class="note">Name in code: <span class="mono">qp_anchor</span>. Where there is room, a block over the limit can borrow slack from its neighbour, which a one-block-at-a-time fix cannot do.</p>
+</div></li>
+
+<li class="step"><div class="spine"><div class="node">4</div></div><div class="body">
+  <div class="phase">Every method, ranked</div>
+  <h2>What each name means, and how it scores</h2>
+  <p>Ranked by live success on PickCube at k=4 with Diffusion Policy (400 episodes), the only setting where every method was tested head-to-head. Equal scores share a rank.</p>
+  <div class="rules">
+    <div class="rule"><b>TAC-Fold</b><span>A smooth curve that hits every block total exactly, with damped slopes so it overshoots less than a plain spline.</span></div>
+    <div class="rule"><b>Satfix</b><span>An add-on repair, not a method. After any curve is built, each block is pushed back inside ±1 while keeping its total, one block at a time.</span></div>
+    <div class="rule"><b>QP and qp_anchor</b><span>Our governor. It solves the whole chunk at once with the limit built in, so blocks can share room. qp_anchor aims for TAC-Fold’s shape; qp aims for flat motion.</span></div>
+    <div class="rule"><b>ARC</b><span>A learned route: retrain the policy so it knows the rate and outputs block averages itself. Costs a new training run per task.</span></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Rank</th><th>Method</th><th>What it does</th><th>Type</th><th>Live · k=4 · n=400</th><th>Replay · k=4 · n=993</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td class="rank">—</td><td><b>Native (no rate change)</b><br><span class="code">native</span></td><td class="def">The policy’s own 8 steps, exactly as planned. Not a method: it shows the ceiling.</td><td>reference</td><td class="num"><span class="bar ref" style="--v:88"></span>88.0%</td><td class="num">92.5%</td><td>Ceiling</td></tr>
+      <tr><td class="rank">1</td><td><b>Ours: anchored governor</b><br><span class="code">qp_anchor</span></td><td class="def">Keeps every block total, never passes ±1, and stays as close as possible to TAC-Fold’s shape. Identical to TAC-Fold when TAC-Fold is already valid.</td><td>post-hoc · ours</td><td class="num"><span class="bar" style="--v:53.5"></span>53.5%</td><td class="num">33.3%</td><td>Only significant live win (+3.3 pts, p=0.011)</td></tr>
+      <tr><td class="rank">2</td><td><b>Ours: plain governor</b><br><span class="code">qp</span></td><td class="def">Same rules, but aims for the flattest motion instead of TAC-Fold’s shape. Blocks can lend each other room under the limit.</td><td>post-hoc · ours</td><td class="num"><span class="bar" style="--v:52.25"></span>52.3%</td><td class="num">34.8%</td><td>Best in replay; live, 1.3 pts behind qp_anchor (not significant)</td></tr>
+      <tr><td class="rank">3</td><td><b>TAC-Fold + satfix</b><br><span class="code">tac_fold_satfix</span></td><td class="def">TAC-Fold’s curve, then satfix pushes each block back inside ±1.</td><td>post-hoc · baseline</td><td class="num"><span class="bar" style="--v:50.25"></span>50.2%</td><td class="num">29.9%</td><td>Strongest baseline; best of all at k=2</td></tr>
+      <tr><td class="rank">3</td><td><b>Cubic spline + satfix</b><br><span class="code">spline_satfix</span></td><td class="def">A smooth cubic curve through the block totals, then satfix.</td><td>post-hoc · baseline</td><td class="num"><span class="bar" style="--v:50.25"></span>50.2%</td><td class="num">30.8%</td><td>Identical to TAC-Fold + satfix at k=4 (only 2 blocks)</td></tr>
+      <tr><td class="rank">5</td><td><b>B-spline + satfix</b><br><span class="code">bspline_eps_satfix</span></td><td class="def">Smoothing curve from the B-spline Policy paper (Alg. 1), then satfix.</td><td>post-hoc · baseline</td><td class="num"><span class="bar" style="--v:40.5"></span>40.5%</td><td class="num">29.6%</td><td>Identical to ZOH live at k=4</td></tr>
+      <tr><td class="rank">5</td><td><b>Hold flat (ZOH)</b><br><span class="code">zoh</span></td><td class="def">Repeat the block average k times. Never overshoots, but jerky.</td><td>post-hoc · baseline</td><td class="num"><span class="bar" style="--v:40.5"></span>40.5%</td><td class="num">21.1%</td><td>Simplest; the floor</td></tr>
+      <tr><td class="rank">?</td><td><b>ARC</b><br><span class="code">--head arc</span></td><td class="def">Retrains the policy itself: it is told the rate (k = 1, 2 or 4) and predicts block averages directly, then TAC-Fold (or our governor) rebuilds the steps.</td><td>learned · ours</td><td><span class="chip c-warn">not yet run on PickCube</span></td><td class="num">—</td><td>Training: 24k of 30k steps</td></tr>
+      <tr><td class="rank">?</td><td><b>Learned governor</b><br><span class="code">qp_learned</span></td><td class="def">A small network guesses the shape inside each block from the robot’s state; the governor then enforces exact totals and ±1.</td><td>learned · new today</td><td><span class="chip c-warn">live test running</span></td><td class="num">—</td><td>15× lower error offline at k=4</td></tr>
+      <tr><td class="rank">?</td><td><b>Context versions</b><br><span class="code">*_ctx</span></td><td class="def">Any method above, also given the previous chunk and the planned-but-unrun steps.</td><td>post-hoc · new today</td><td><span class="chip c-warn">live test running</span></td><td class="num">—</td><td>Dev window only</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">This ranking holds for deep rate cuts (k=4). At k=2 the order changes: TAC-Fold + satfix is best in replay, and ties ours live on PushT. Live and replay numbers are never compared with each other.</p>
+</div></li>
+
+<li class="step"><div class="spine"><div class="node">5</div></div><div class="body">
+  <div class="phase">What we have proven</div>
+  <h2>One clean, pre-registered win on a live robot task</h2>
+  <p>PickCube, rate cut by 4 (k=4), Diffusion Policy, 400 live episodes. Every method saw the same starting states and the same policy noise, so the comparison is fair and paired.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 238" role="img" aria-label="Success rate on PickCube at k equals 4: ours 53.5 percent, spline plus fix 50.2, TAC-Fold plus fix 50.2, B-spline plus fix 40.5, ZOH 40.5">
+      <g stroke="var(--rule)" stroke-width="1">
+        <line x1="180" y1="16" x2="180" y2="214"/><line x1="313.3" y1="16" x2="313.3" y2="214"/>
+        <line x1="446.7" y1="16" x2="446.7" y2="214"/><line x1="580" y1="16" x2="580" y2="214"/>
+      </g>
+      <g class="mono" font-size="12" text-anchor="middle">
+        <text x="180" y="232">0%</text><text x="313.3" y="232">20%</text><text x="446.7" y="232">40%</text><text x="580" y="232">60%</text>
+      </g>
+      <g font-size="14" text-anchor="end">
+        <text x="170" y="42" class="t-ink" font-weight="700">Ours (qp_anchor)</text>
+        <text x="170" y="82">Spline + fix</text>
+        <text x="170" y="122">TAC-Fold + fix</text>
+        <text x="170" y="162">B-spline + fix</text>
+        <text x="170" y="202">Hold flat (ZOH)</text>
+      </g>
+      <rect x="180" y="24" width="356.7" height="26" rx="3" fill="var(--accent)"/>
+      <rect x="180" y="64" width="335" height="26" rx="3" fill="var(--ghost)"/>
+      <rect x="180" y="104" width="335" height="26" rx="3" fill="var(--ghost)"/>
+      <rect x="180" y="144" width="270" height="26" rx="3" fill="var(--ghost)"/>
+      <rect x="180" y="184" width="270" height="26" rx="3" fill="var(--ghost)"/>
+      <g class="mono" font-size="13">
+        <text x="544.7" y="42" class="t-acc" font-weight="600">53.5%</text>
+        <text x="523" y="82">50.2%</text><text x="523" y="122">50.2%</text>
+        <text x="458" y="162">40.5%</text><text x="458" y="202">40.5%</text>
+      </g>
+    </svg>
+    <figcaption>+3.3 points over the best rival (18 vs 5 episodes that differ, exact McNemar p = 0.011); passes the pre-registered Holm correction and holds in both halves. Caution: at k=4 spline and TAC-Fold give identical output episode for episode, and so do B-spline and ZOH, so this is really one rival beaten, not two. At k=2, ours and TAC-Fold + fix tie. Closed-loop (live rollout).</figcaption>
+  </figure>
+  <div class="tbl"><table>
+    <thead><tr><th>Where</th><th>Test type</th><th>Result</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>PickCube k=4, n=400</td><td>live</td><td class="num">+3.3 pts, p=0.011</td><td><span class="chip c-good">win</span></td></tr>
+      <tr><td>PickCube k=3 and k=4, n=993</td><td>replay</td><td class="num">7 of 9 tests pass</td><td><span class="chip c-good">win</span></td></tr>
+      <tr><td>PickCube k=2, n=993</td><td>replay</td><td class="num">+0.2 pts vs TAC-Fold</td><td><span class="chip c-mut">tie</span></td></tr>
+      <tr><td>PickCube k=4, Flow Matching, n=100</td><td>live</td><td class="num">+2.0 pts, p=0.50</td><td><span class="chip c-warn">too few runs</span></td></tr>
+      <tr><td>PushT k=2, n=400 (Gate 2)</td><td>live</td><td class="num">21.5% vs spline 25.8%, p=0.11</td><td><span class="chip c-warn">not significant</span></td></tr>
+      <tr><td>PushCube k=4, n=1019 (plain QP)</td><td>replay</td><td class="num">−3.2 pts vs TAC-Fold</td><td><span class="chip c-bad">loss</span></td></tr>
+      <tr><td>RoboMimic, RoboCasa</td><td>live</td><td class="num">all methods at 0% or ~100%</td><td><span class="chip c-mut">no signal</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">"Live" means the robot runs in closed loop; "replay" means recorded demos replayed open-loop. The two are never mixed or compared.</p>
+</div></li>
+
+<li class="step"><div class="spine"><div class="node">6</div></div><div class="body">
+  <div class="phase">Honest gaps</div>
+  <h2>Why it is not yet a strong positive paper</h2>
+  <ul class="list">
+    <li><b>One task.</b> Only PickCube has a significant live win, and the margin is small (+3.3 points).</li>
+    <li><b>Only compared with our own family.</b> No outside method (such as RTC or low-pass filtering) has been run yet.</li>
+    <li><b>Rebuilding still costs a lot.</b> The same policy at its original rate reaches about 90% on PickCube (n=100 run); every rebuilt version sits near 50%.</li>
+    <li><b>Not a real VLA test.</b> The policies read robot state, not camera plus language. On teleop VLA benchmarks, actions rarely hit the limit, so no method shows an effect.</li>
+    <li><b>No written proofs yet.</b> The "never makes a valid plan worse" property is argued, not proven on paper.</li>
+  </ul>
+</div></li>
+
+<li class="divider" aria-hidden="true"><span>Part B · What I did today</span></li>
+
+<li class="step today"><div class="spine"><div class="node">7</div></div><div class="body">
+  <div class="phase">Finding · by reading the code</div>
+  <h2>At k=4 every method rebuilds from only 2 numbers, and useful information is thrown away</h2>
+  <p>The policy predicts 16 steps but runs only the first 8. At k=4 that is just 2 totals, so all the rebuild methods end up almost the same, which explains why their live results barely differ. The policy's other predicted steps, and the chunk that just ran, are never used.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 202" role="img" aria-label="Before: only the 2 executed blocks are used. After: the resampler sees the previous 2, the executed 2 and the predicted 2 blocks, and runs only the middle">
+      <text x="40" y="22" class="t-ink" font-size="14" font-weight="700">Before: each chunk rebuilt alone</text>
+      <g stroke-width="2">
+        <rect x="40" y="32" width="90" height="36" rx="4" fill="var(--ghost)" stroke="none"/>
+        <rect x="136" y="32" width="90" height="36" rx="4" fill="var(--ghost)" stroke="none"/>
+        <rect x="232" y="32" width="90" height="36" rx="4" fill="var(--accent)" stroke="none"/>
+        <rect x="328" y="32" width="90" height="36" rx="4" fill="var(--accent)" stroke="none"/>
+        <rect x="424" y="32" width="90" height="36" rx="4" fill="none" stroke="var(--muted)" stroke-dasharray="5 4"/>
+        <rect x="520" y="32" width="90" height="36" rx="4" fill="none" stroke="var(--muted)" stroke-dasharray="5 4"/>
+      </g>
+      <g font-size="13" text-anchor="middle">
+        <text x="133" y="88">previous chunk: ignored</text>
+        <text x="325" y="88" class="t-acc" font-weight="700">runs now: the only input</text>
+        <text x="517" y="88">predicted, then discarded</text>
+      </g>
+      <text x="40" y="124" class="t-ink" font-size="14" font-weight="700">After: new "_ctx" versions use all 6 totals</text>
+      <rect x="40" y="134" width="90" height="36" rx="4" fill="var(--accent-tint)" stroke="var(--accent)"/>
+      <rect x="136" y="134" width="90" height="36" rx="4" fill="var(--accent-tint)" stroke="var(--accent)"/>
+      <rect x="232" y="134" width="90" height="36" rx="4" fill="var(--accent)"/>
+      <rect x="328" y="134" width="90" height="36" rx="4" fill="var(--accent)"/>
+      <rect x="424" y="134" width="90" height="36" rx="4" fill="var(--accent-tint)" stroke="var(--accent)"/>
+      <rect x="520" y="134" width="90" height="36" rx="4" fill="var(--accent-tint)" stroke="var(--accent)"/>
+      <text x="325" y="192" text-anchor="middle" font-size="13">Shape guessed from all 6 totals; only the middle 8 steps run.</text>
+    </svg>
+    <figcaption>Block totals and the ±1 limit still hold exactly. The same idea is already built into the ARC decoder, which sees 8 blocks ahead. The standard policy never got that context.</figcaption>
+  </figure>
+</div></li>
+
+<li class="step today"><div class="spine"><div class="node">8</div></div><div class="body">
+  <div class="phase">Built · small, tested changes</div>
+  <h2>Added context versions of each method, plus 7 new tasks</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Change</th><th>Why</th><th>State</th></tr></thead>
+    <tbody>
+      <tr><td><span class="mono">*_ctx</span> versions of spline, TAC-Fold and ours</td><td>Test whether context helps, and whether it helps ours more than the rivals</td><td><span class="chip c-good">done</span></td></tr>
+      <tr><td><span class="mono">--eval-offset</span> option</td><td>Keep test episodes separate from anything seen before</td><td><span class="chip c-good">done</span></td></tr>
+      <tr><td>7 ManiSkill tasks added</td><td>More benchmarks, chosen by a rule decided in advance</td><td><span class="chip c-good">done</span></td></tr>
+      <tr><td>Self-check <span class="mono">test_ctx_arm.py</span></td><td>Proves totals are kept and ±1 is never passed</td><td><span class="chip c-good">passes</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Existing methods and defaults behave exactly as before, so the running Gate 2 job is unaffected.</p>
+</div></li>
+
+<li class="step today"><div class="spine"><div class="node">9</div></div><div class="body">
+  <div class="phase">Keeping it fair</div>
+  <h2>Tuning and proving happen on different episodes</h2>
+  <p>Trying many ideas and reporting only the one that won would be cheating. So each set of PickCube starting states has exactly one job:</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 118" role="img" aria-label="PickCube episodes: 0 to 200 train, 200 to 600 already used, 600 to 700 dev today, 700 to 993 fresh for confirmation">
+      <rect x="20" y="20" width="120" height="30" fill="var(--ghost)"/>
+      <rect x="140" y="20" width="240" height="30" fill="var(--rule)"/>
+      <rect x="380" y="20" width="60" height="30" fill="var(--limit)"/>
+      <rect x="440" y="20" width="176" height="30" fill="var(--accent)"/>
+      <g stroke="var(--bg)" stroke-width="2"><line x1="140" y1="20" x2="140" y2="50"/><line x1="380" y1="20" x2="380" y2="50"/><line x1="440" y1="20" x2="440" y2="50"/></g>
+      <g font-size="13" text-anchor="middle">
+        <text x="80" y="72">train · 0–200</text>
+        <text x="260" y="72">already used · 200–600</text>
+        <text x="528" y="72" class="t-acc" font-weight="700">fresh, to confirm · 700–993</text>
+      </g>
+      <line x1="410" y1="52" x2="410" y2="86" stroke="var(--limit)" stroke-width="1.5"/>
+      <text x="410" y="104" text-anchor="middle" font-size="13" class="t-lim" font-weight="700">dev, today · 600–700</text>
+    </svg>
+  </figure>
+  <ul class="list">
+    <li><b>Dev episodes pick the design.</b> They decide which variant goes forward (context or not, ARC or not). They are never cited.</li>
+    <li><b>The plan is written before the test.</b> A pre-registration fixes the tasks, methods and pass rule before confirmation runs start.</li>
+    <li><b>Confirmation is large and corrected.</b> 400 episodes per task, exact McNemar, Holm correction.</li>
+    <li><b>Credit goes where it belongs.</b> If context helps every method equally, the gain is reported as coming from context, not from our method.</li>
+  </ul>
+</div></li>
+
+<li class="step today"><div class="spine"><div class="node">10</div></div><div class="body">
+  <div class="phase">More benchmarks · chosen before seeing results</div>
+  <h2>Seven new tasks, sorted by how often actions hit the limit</h2>
+  <p>Our method can only help when actions push against the ±1 limit. So we measured this from the demos alone, with no success numbers involved. This gives the paper a clear prediction: <b>wins where actions saturate, ties where they don't</b>.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 300" role="img" aria-label="Share of arm actions beyond the limit: RollBall 0.66, PullCube 0.55, LiftPegUpright 0.48, PushCube 0.33, AnymalC-Reach 0.29, PokeCube 0.16, StackCube 0.12, PickCube 0.08">
+      <g stroke="var(--rule)" stroke-width="1">
+        <line x1="180" y1="12" x2="180" y2="274"/><line x1="294.3" y1="12" x2="294.3" y2="274"/>
+        <line x1="408.6" y1="12" x2="408.6" y2="274"/><line x1="522.9" y1="12" x2="522.9" y2="274"/>
+      </g>
+      <g class="mono" font-size="12" text-anchor="middle">
+        <text x="180" y="292">0%</text><text x="294.3" y="292">20%</text><text x="408.6" y="292">40%</text><text x="522.9" y="292">60%</text>
+      </g>
+      <g font-size="14" text-anchor="end">
+        <text x="170" y="38" class="t-ink">RollBall</text><text x="170" y="70" class="t-ink">PullCube</text>
+        <text x="170" y="102" class="t-ink">LiftPegUpright</text><text x="170" y="134" class="t-ink">PushCube</text>
+        <text x="170" y="166" class="t-ink">AnymalC-Reach</text><text x="170" y="198">PokeCube</text>
+        <text x="170" y="230">StackCube</text><text x="170" y="262">PickCube (current)</text>
+      </g>
+      <g fill="var(--accent)">
+        <rect x="180" y="20" width="379" height="24" rx="3"/><rect x="180" y="52" width="314" height="24" rx="3"/>
+        <rect x="180" y="84" width="273" height="24" rx="3"/><rect x="180" y="116" width="189" height="24" rx="3"/>
+        <rect x="180" y="148" width="163" height="24" rx="3"/>
+      </g>
+      <rect x="180" y="180" width="90" height="24" rx="3" fill="var(--ghost)"/>
+      <rect x="180" y="212" width="68" height="24" rx="3" fill="var(--ghost)"/>
+      <rect x="180" y="244" width="47" height="24" rx="3" fill="none" stroke="var(--muted)" stroke-dasharray="4 3"/>
+      <g class="mono" font-size="13">
+        <text x="567" y="37">66%</text><text x="502" y="69">55%</text><text x="461" y="101">48%</text>
+        <text x="377" y="133">33%</text><text x="351" y="165">29%</text><text x="278" y="197">16%</text>
+        <text x="256" y="229">12%</text><text x="235" y="261">8%</text>
+      </g>
+    </svg>
+    <figcaption>Share of arm-joint actions beyond ±1 in the official ManiSkill RL demos (gripper excluded). Teal: 5 high-saturation tasks where we predict a win. Grey: 2 low-saturation controls where we predict a tie. PickCube, our only live win so far, is at just 8%, so the new tasks should show the effect more strongly.</figcaption>
+  </figure>
+</div></li>
+
+<li class="step today"><div class="spine"><div class="node">11</div></div><div class="body">
+  <div class="phase">Running now · snapshot 17:05 KST</div>
+  <h2>Everything is in progress and checked every 10 minutes</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Job</th><th>Purpose</th><th>Progress</th></tr></thead>
+    <tbody>
+      <tr><td>PickCube dev, k=2 and k=4</td><td>Does context help? Does ours gain more than rivals?</td><td class="num"><span class="chip c-acc">20/100 · 10/100</span></td></tr>
+      <tr><td>Train 7 new tasks</td><td>Diffusion Policy, 200 demos, 30k steps each</td><td class="num"><span class="chip c-acc">replaying demos</span></td></tr>
+      <tr><td>ARC on PickCube</td><td>ARC + satfix + anchor: learned rate + our governor</td><td class="num"><span class="chip c-acc">step 2k / 30k</span></td></tr>
+      <tr><td>Gate 2 · PushT k=3</td><td>Pre-registered, n=400</td><td class="num"><span class="chip c-acc">90/400</span></td></tr>
+    </tbody>
+  </table></div>
+</div></li>
+
+<li class="step"><div class="spine"><div class="node">12</div></div><div class="body">
+  <div class="phase">Next</div>
+  <h2>From dev result to a paper-grade claim</h2>
+  <div class="rules">
+    <div class="rule"><b>Pick the design</b><span>Dev results choose among plain, context and ARC versions. Nothing from this step is cited.</span></div>
+    <div class="rule"><b>Write the pre-registration</b><span>Fix tasks, methods, episode windows, pass rule and Holm family before any confirmation run.</span></div>
+    <div class="rule"><b>Confirm at scale</b><span>400 fresh episodes on each of the 5 high and 2 low tasks, plus one outside baseline.</span></div>
+    <div class="rule"><b>Write it up</b><span>Theory (the "never hurts" proofs), wins where predicted, ties where predicted.</span></div>
+  </div>
+  <div class="callout">
+    <b>What a strong positive paper looks like</b>
+    <p>Significant live wins on several high-saturation tasks, ties on the low-saturation controls exactly as predicted, and a proof that the method never harms a plan that was already valid. The results decide whether we get there; we won't rearrange them to fit.</p>
+  </div>
+</div></li>
+
+<li class="divider" aria-hidden="true"><span>Part C · How the methods work</span></li>
+<li class="step"><div class="spine"><div class="node">13</div></div><div class="body">
+  <div class="phase">Example · real numbers</div>
+  <h2>One example, run through every method</h2>
+  <p>The slow policy sends 4 block totals, k=4 steps each: <span class="mono">3.6, 0.4, 0.4, 3.6</span> (average 0.9, 0.1, 0.1, 0.9 per step). Every chart below is the actual output of our code on these numbers.</p>
+<p class="note">How to read the bar charts: each bar is one small step (1–16); taller = moves further in that step. Shaded bands are blocks 1 and 3. Dashed orange line = the controller limit +1; orange bar tops = the part past the limit.</p>
+  <figure class="fig"><svg viewBox="0 0 640 204" role="img"><rect x="56.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><rect x="340.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><text x="127.0" y="18" text-anchor="middle" font-size="12">block 1 · total 3.6</text><text x="269.0" y="18" text-anchor="middle" font-size="12">block 2 · total 0.4</text><text x="411.0" y="18" text-anchor="middle" font-size="12">block 3 · total 0.4</text><text x="553.0" y="18" text-anchor="middle" font-size="12">block 4 · total 3.6</text><line x1="56" y1="155.3" x2="624.0" y2="155.3" stroke="var(--muted)" stroke-width="1"/><line x1="56" y1="64.4" x2="624.0" y2="64.4" stroke="var(--limit)" stroke-width="1.5" stroke-dasharray="6 4"/><text x="48" y="68.4" text-anchor="end" class="mono t-lim" font-size="11">+1</text><text x="48" y="159.3" text-anchor="end" class="mono" font-size="11">0</text><text x="73.8" y="196" text-anchor="middle" class="mono" font-size="10">1</text><text x="109.2" y="196" text-anchor="middle" class="mono" font-size="10">2</text><text x="144.8" y="196" text-anchor="middle" class="mono" font-size="10">3</text><text x="180.2" y="196" text-anchor="middle" class="mono" font-size="10">4</text><text x="215.8" y="196" text-anchor="middle" class="mono" font-size="10">5</text><text x="251.2" y="196" text-anchor="middle" class="mono" font-size="10">6</text><text x="286.8" y="196" text-anchor="middle" class="mono" font-size="10">7</text><text x="322.2" y="196" text-anchor="middle" class="mono" font-size="10">8</text><text x="357.8" y="196" text-anchor="middle" class="mono" font-size="10">9</text><text x="393.2" y="196" text-anchor="middle" class="mono" font-size="10">10</text><text x="428.8" y="196" text-anchor="middle" class="mono" font-size="10">11</text><text x="464.2" y="196" text-anchor="middle" class="mono" font-size="10">12</text><text x="499.8" y="196" text-anchor="middle" class="mono" font-size="10">13</text><text x="535.2" y="196" text-anchor="middle" class="mono" font-size="10">14</text><text x="570.8" y="196" text-anchor="middle" class="mono" font-size="10">15</text><text x="606.2" y="196" text-anchor="middle" class="mono" font-size="10">16</text><rect x="61.0" y="73.5" width="25.5" height="81.8" fill="var(--accent)" rx="2"/><text x="73.8" y="68.5" text-anchor="middle" class="mono t-ink" font-size="10">0.90</text><rect x="96.5" y="73.5" width="25.5" height="81.8" fill="var(--accent)" rx="2"/><text x="109.2" y="68.5" text-anchor="middle" class="mono t-ink" font-size="10">0.90</text><rect x="132.0" y="73.5" width="25.5" height="81.8" fill="var(--accent)" rx="2"/><text x="144.8" y="68.5" text-anchor="middle" class="mono t-ink" font-size="10">0.90</text><rect x="167.5" y="73.5" width="25.5" height="81.8" fill="var(--accent)" rx="2"/><text x="180.2" y="68.5" text-anchor="middle" class="mono t-ink" font-size="10">0.90</text><rect x="203.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="215.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="238.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="251.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="274.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="286.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="309.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="322.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="345.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="357.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="380.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="393.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="416.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="428.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="451.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="464.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="487.0" y="73.5" width="25.5" height="81.8" fill="var(--accent)" rx="2"/><text x="499.8" y="68.5" text-anchor="middle" class="mono t-ink" font-size="10">0.90</text><rect x="522.5" y="73.5" width="25.5" height="81.8" fill="var(--accent)" rx="2"/><text x="535.2" y="68.5" text-anchor="middle" class="mono t-ink" font-size="10">0.90</text><rect x="558.0" y="73.5" width="25.5" height="81.8" fill="var(--accent)" rx="2"/><text x="570.8" y="68.5" text-anchor="middle" class="mono t-ink" font-size="10">0.90</text><rect x="593.5" y="73.5" width="25.5" height="81.8" fill="var(--accent)" rx="2"/><text x="606.2" y="68.5" text-anchor="middle" class="mono t-ink" font-size="10">0.90</text></svg><figcaption>What the policy sent, drawn as flat blocks. This is exactly what ZOH executes: correct totals, but a jump of 0.8 at each block edge.</figcaption></figure>
+</div></li>
+<li class="step"><div class="spine"><div class="node">14</div></div><div class="body">
+  <div class="phase">TAC-Fold · a formula</div>
+  <h2>TAC-Fold draws one smooth curve through the block edges</h2>
+  <ol class="list">
+    <li><b>Mark where the robot must be at each block edge.</b> Add up the totals: 0 → 3.6 → 4.0 → 4.4 → 8.0 (black circles).</li>
+    <li><b>Pick a slope at each edge.</b> Akima's rule averages the two neighbouring blocks, giving less weight to the one that changes more. Middle edges get 0.1 per step. The two chunk ends have no neighbour, so the slope is extrapolated: <b>1.3 per step, already past the limit</b> (orange ticks).</li>
+    <li><b>Draw a smooth cubic through the edges with those slopes</b> (teal curve). The dashed line is ZOH, straight between edges.</li>
+    <li><b>Read the step sizes off the curve</b>: each step = how far the curve rises in that step. Because the curve hits every edge exactly, every block total is exact.</li>
+  </ol>
+  <figure class="fig"><svg viewBox="0 0 640 204" role="img"><rect x="56.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><rect x="340.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><line x1="56" y1="178.0" x2="624.0" y2="178.0" stroke="var(--rule)"/><text x="48" y="182.0" text-anchor="end" class="mono" font-size="11">0</text><line x1="56" y1="106.6" x2="624.0" y2="106.6" stroke="var(--rule)"/><text x="48" y="110.6" text-anchor="end" class="mono" font-size="11">4</text><line x1="56" y1="35.1" x2="624.0" y2="35.1" stroke="var(--rule)"/><text x="48" y="39.1" text-anchor="end" class="mono" font-size="11">8</text><polyline fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4" points="56.0,178.0 198.0,113.7 340.0,106.6 482.0,99.4 624.0,35.1"/><polyline fill="none" stroke="var(--accent)" stroke-width="3" points="56.0,178.0 91.5,155.2 127.0,135.1 162.5,120.4 198.0,113.7 233.5,111.9 269.0,110.1 304.5,108.4 340.0,106.6 375.5,104.8 411.0,103.0 446.5,101.2 482.0,99.4 517.5,92.7 553.0,78.0 588.5,57.9 624.0,35.1"/><line x1="9.9" y1="208.2" x2="102.2" y2="147.8" stroke="var(--limit)" stroke-width="2"/><circle cx="56.0" cy="178.0" r="5" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><text x="66.0" y="168.0" text-anchor="start" class="mono t-ink" font-size="11">0.0</text><line x1="151.9" y1="116.0" x2="244.2" y2="111.4" stroke="var(--limit)" stroke-width="2"/><circle cx="198.0" cy="113.7" r="5" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><text x="208.0" y="129.7" text-anchor="start" class="mono t-ink" font-size="11">3.6</text><line x1="293.9" y1="108.9" x2="386.2" y2="104.2" stroke="var(--limit)" stroke-width="2"/><circle cx="340.0" cy="106.6" r="5" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><text x="350.0" y="122.6" text-anchor="start" class="mono t-ink" font-size="11">4.0</text><line x1="435.8" y1="101.7" x2="528.2" y2="97.1" stroke="var(--limit)" stroke-width="2"/><circle cx="482.0" cy="99.4" r="5" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><text x="492.0" y="89.4" text-anchor="start" class="mono t-ink" font-size="11">4.4</text><line x1="577.9" y1="65.3" x2="670.1" y2="5.0" stroke="var(--limit)" stroke-width="2"/><circle cx="624.0" cy="35.1" r="5" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><text x="614.0" y="25.1" text-anchor="end" class="mono t-ink" font-size="11">8.0</text><text x="73.8" y="196" text-anchor="middle" class="mono" font-size="10">0</text><text x="215.8" y="196" text-anchor="middle" class="mono" font-size="10">4</text><text x="357.8" y="196" text-anchor="middle" class="mono" font-size="10">8</text><text x="499.8" y="196" text-anchor="middle" class="mono" font-size="10">12</text><text x="641.8" y="196" text-anchor="middle" class="mono" font-size="10">16</text></svg><figcaption>Position over the 16 steps. TAC-Fold (teal) passes through every edge (circles), so totals are kept. Its steep start and end come from the extrapolated end slopes.</figcaption></figure>
+  <figure class="fig"><svg viewBox="0 0 640 204" role="img"><rect x="56.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><rect x="340.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><text x="127.0" y="18" text-anchor="middle" font-size="12">block 1 · total 3.6</text><text x="269.0" y="18" text-anchor="middle" font-size="12">block 2 · total 0.4</text><text x="411.0" y="18" text-anchor="middle" font-size="12">block 3 · total 0.4</text><text x="553.0" y="18" text-anchor="middle" font-size="12">block 4 · total 3.6</text><line x1="56" y1="155.3" x2="624.0" y2="155.3" stroke="var(--muted)" stroke-width="1"/><line x1="56" y1="64.4" x2="624.0" y2="64.4" stroke="var(--limit)" stroke-width="1.5" stroke-dasharray="6 4"/><text x="48" y="68.4" text-anchor="end" class="mono t-lim" font-size="11">+1</text><text x="48" y="159.3" text-anchor="end" class="mono" font-size="11">0</text><text x="73.8" y="196" text-anchor="middle" class="mono" font-size="10">1</text><text x="109.2" y="196" text-anchor="middle" class="mono" font-size="10">2</text><text x="144.8" y="196" text-anchor="middle" class="mono" font-size="10">3</text><text x="180.2" y="196" text-anchor="middle" class="mono" font-size="10">4</text><text x="215.8" y="196" text-anchor="middle" class="mono" font-size="10">5</text><text x="251.2" y="196" text-anchor="middle" class="mono" font-size="10">6</text><text x="286.8" y="196" text-anchor="middle" class="mono" font-size="10">7</text><text x="322.2" y="196" text-anchor="middle" class="mono" font-size="10">8</text><text x="357.8" y="196" text-anchor="middle" class="mono" font-size="10">9</text><text x="393.2" y="196" text-anchor="middle" class="mono" font-size="10">10</text><text x="428.8" y="196" text-anchor="middle" class="mono" font-size="10">11</text><text x="464.2" y="196" text-anchor="middle" class="mono" font-size="10">12</text><text x="499.8" y="196" text-anchor="middle" class="mono" font-size="10">13</text><text x="535.2" y="196" text-anchor="middle" class="mono" font-size="10">14</text><text x="570.8" y="196" text-anchor="middle" class="mono" font-size="10">15</text><text x="606.2" y="196" text-anchor="middle" class="mono" font-size="10">16</text><rect x="61.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><rect x="61.0" y="39.4" width="25.5" height="25.0" fill="var(--limit)" rx="2"/><text x="73.8" y="34.4" text-anchor="middle" class="mono t-ink" font-size="10">1.27</text><rect x="96.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><rect x="96.5" y="53.0" width="25.5" height="11.4" fill="var(--limit)" rx="2"/><text x="109.2" y="48.0" text-anchor="middle" class="mono t-ink" font-size="10">1.12</text><rect x="132.0" y="80.3" width="25.5" height="75.0" fill="var(--accent)" rx="2"/><text x="144.8" y="75.3" text-anchor="middle" class="mono t-ink" font-size="10">0.82</text><rect x="167.5" y="121.2" width="25.5" height="34.1" fill="var(--accent)" rx="2"/><text x="180.2" y="116.2" text-anchor="middle" class="mono t-ink" font-size="10">0.38</text><rect x="203.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="215.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="238.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="251.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="274.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="286.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="309.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="322.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="345.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="357.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="380.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="393.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="416.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="428.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="451.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="464.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="487.0" y="121.2" width="25.5" height="34.1" fill="var(--accent)" rx="2"/><text x="499.8" y="116.2" text-anchor="middle" class="mono t-ink" font-size="10">0.38</text><rect x="522.5" y="80.3" width="25.5" height="75.0" fill="var(--accent)" rx="2"/><text x="535.2" y="75.3" text-anchor="middle" class="mono t-ink" font-size="10">0.82</text><rect x="558.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><rect x="558.0" y="53.0" width="25.5" height="11.4" fill="var(--limit)" rx="2"/><text x="570.8" y="48.0" text-anchor="middle" class="mono t-ink" font-size="10">1.12</text><rect x="593.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><rect x="593.5" y="39.4" width="25.5" height="25.0" fill="var(--limit)" rx="2"/><text x="606.2" y="34.4" text-anchor="middle" class="mono t-ink" font-size="10">1.27</text></svg><figcaption>TAC-Fold's step sizes. 4 steps go past +1 (1.27 and 1.12 at each end). TAC-Fold never looks at the limit: it is a fixed formula.</figcaption></figure>
+</div></li>
+<li class="step"><div class="spine"><div class="node">15</div></div><div class="body">
+  <div class="phase">What the robot actually does</div>
+  <h2>The controller cuts everything past +1, and that motion is gone</h2>
+  <figure class="fig"><svg viewBox="0 0 640 204" role="img"><rect x="56.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><rect x="340.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><text x="127.0" y="18" text-anchor="middle" font-size="12">block 1 · total 3.6</text><text x="269.0" y="18" text-anchor="middle" font-size="12">block 2 · total 0.4</text><text x="411.0" y="18" text-anchor="middle" font-size="12">block 3 · total 0.4</text><text x="553.0" y="18" text-anchor="middle" font-size="12">block 4 · total 3.6</text><line x1="56" y1="155.3" x2="624.0" y2="155.3" stroke="var(--muted)" stroke-width="1"/><line x1="56" y1="64.4" x2="624.0" y2="64.4" stroke="var(--limit)" stroke-width="1.5" stroke-dasharray="6 4"/><text x="48" y="68.4" text-anchor="end" class="mono t-lim" font-size="11">+1</text><text x="48" y="159.3" text-anchor="end" class="mono" font-size="11">0</text><text x="73.8" y="196" text-anchor="middle" class="mono" font-size="10">1</text><text x="109.2" y="196" text-anchor="middle" class="mono" font-size="10">2</text><text x="144.8" y="196" text-anchor="middle" class="mono" font-size="10">3</text><text x="180.2" y="196" text-anchor="middle" class="mono" font-size="10">4</text><text x="215.8" y="196" text-anchor="middle" class="mono" font-size="10">5</text><text x="251.2" y="196" text-anchor="middle" class="mono" font-size="10">6</text><text x="286.8" y="196" text-anchor="middle" class="mono" font-size="10">7</text><text x="322.2" y="196" text-anchor="middle" class="mono" font-size="10">8</text><text x="357.8" y="196" text-anchor="middle" class="mono" font-size="10">9</text><text x="393.2" y="196" text-anchor="middle" class="mono" font-size="10">10</text><text x="428.8" y="196" text-anchor="middle" class="mono" font-size="10">11</text><text x="464.2" y="196" text-anchor="middle" class="mono" font-size="10">12</text><text x="499.8" y="196" text-anchor="middle" class="mono" font-size="10">13</text><text x="535.2" y="196" text-anchor="middle" class="mono" font-size="10">14</text><text x="570.8" y="196" text-anchor="middle" class="mono" font-size="10">15</text><text x="606.2" y="196" text-anchor="middle" class="mono" font-size="10">16</text><rect x="61.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><rect x="61.0" y="39.4" width="25.5" height="25.0" fill="none" stroke="var(--limit)" stroke-dasharray="3 2"/><text x="73.8" y="34.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="96.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><rect x="96.5" y="53.0" width="25.5" height="11.4" fill="none" stroke="var(--limit)" stroke-dasharray="3 2"/><text x="109.2" y="48.0" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="132.0" y="80.3" width="25.5" height="75.0" fill="var(--accent)" rx="2"/><text x="144.8" y="75.3" text-anchor="middle" class="mono t-ink" font-size="10">0.82</text><rect x="167.5" y="121.2" width="25.5" height="34.1" fill="var(--accent)" rx="2"/><text x="180.2" y="116.2" text-anchor="middle" class="mono t-ink" font-size="10">0.38</text><rect x="203.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="215.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="238.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="251.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="274.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="286.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="309.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="322.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="345.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="357.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="380.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="393.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="416.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="428.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="451.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="464.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="487.0" y="121.2" width="25.5" height="34.1" fill="var(--accent)" rx="2"/><text x="499.8" y="116.2" text-anchor="middle" class="mono t-ink" font-size="10">0.38</text><rect x="522.5" y="80.3" width="25.5" height="75.0" fill="var(--accent)" rx="2"/><text x="535.2" y="75.3" text-anchor="middle" class="mono t-ink" font-size="10">0.82</text><rect x="558.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><rect x="558.0" y="53.0" width="25.5" height="11.4" fill="none" stroke="var(--limit)" stroke-dasharray="3 2"/><text x="570.8" y="48.0" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="593.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><rect x="593.5" y="39.4" width="25.5" height="25.0" fill="none" stroke="var(--limit)" stroke-dasharray="3 2"/><text x="606.2" y="34.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text></svg><figcaption>After the controller's cut (dashed outlines = the part thrown away). Block 1 now moves 3.2 instead of 3.6: 11% of the commanded motion is lost, and the same again in block 4. The robot ends the chunk 0.8 short of where the policy asked.</figcaption></figure>
+</div></li>
+<li class="step"><div class="spine"><div class="node">16</div></div><div class="body">
+  <div class="phase">Satfix · a repair after the fact</div>
+  <h2>Satfix fixes each block on its own</h2>
+  <ol class="list">
+    <li>Clip every step past ±1.</li>
+    <li>Hand the missing amount (0.4) to the steps in the <b>same block</b> that still have room.</li>
+    <li>Repeat until the block total is exact again.</li>
+  </ol>
+  <figure class="fig"><svg viewBox="0 0 640 204" role="img"><rect x="56.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><rect x="340.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><text x="127.0" y="18" text-anchor="middle" font-size="12">block 1 · total 3.6</text><text x="269.0" y="18" text-anchor="middle" font-size="12">block 2 · total 0.4</text><text x="411.0" y="18" text-anchor="middle" font-size="12">block 3 · total 0.4</text><text x="553.0" y="18" text-anchor="middle" font-size="12">block 4 · total 3.6</text><line x1="56" y1="155.3" x2="624.0" y2="155.3" stroke="var(--muted)" stroke-width="1"/><line x1="56" y1="64.4" x2="624.0" y2="64.4" stroke="var(--limit)" stroke-width="1.5" stroke-dasharray="6 4"/><text x="48" y="68.4" text-anchor="end" class="mono t-lim" font-size="11">+1</text><text x="48" y="159.3" text-anchor="end" class="mono" font-size="11">0</text><text x="73.8" y="196" text-anchor="middle" class="mono" font-size="10">1</text><text x="109.2" y="196" text-anchor="middle" class="mono" font-size="10">2</text><text x="144.8" y="196" text-anchor="middle" class="mono" font-size="10">3</text><text x="180.2" y="196" text-anchor="middle" class="mono" font-size="10">4</text><text x="215.8" y="196" text-anchor="middle" class="mono" font-size="10">5</text><text x="251.2" y="196" text-anchor="middle" class="mono" font-size="10">6</text><text x="286.8" y="196" text-anchor="middle" class="mono" font-size="10">7</text><text x="322.2" y="196" text-anchor="middle" class="mono" font-size="10">8</text><text x="357.8" y="196" text-anchor="middle" class="mono" font-size="10">9</text><text x="393.2" y="196" text-anchor="middle" class="mono" font-size="10">10</text><text x="428.8" y="196" text-anchor="middle" class="mono" font-size="10">11</text><text x="464.2" y="196" text-anchor="middle" class="mono" font-size="10">12</text><text x="499.8" y="196" text-anchor="middle" class="mono" font-size="10">13</text><text x="535.2" y="196" text-anchor="middle" class="mono" font-size="10">14</text><text x="570.8" y="196" text-anchor="middle" class="mono" font-size="10">15</text><text x="606.2" y="196" text-anchor="middle" class="mono" font-size="10">16</text><rect x="61.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="73.8" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="96.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="109.2" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="132.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="144.8" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="167.5" y="100.7" width="25.5" height="54.5" fill="var(--accent)" rx="2"/><text x="180.2" y="95.7" text-anchor="middle" class="mono t-ink" font-size="10">0.60</text><rect x="203.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="215.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="238.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="251.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="274.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="286.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="309.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="322.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="345.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="357.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="380.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="393.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="416.0" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="428.8" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="451.5" y="146.2" width="25.5" height="9.1" fill="var(--accent)" rx="2"/><text x="464.2" y="141.2" text-anchor="middle" class="mono t-ink" font-size="10">0.10</text><rect x="487.0" y="100.7" width="25.5" height="54.5" fill="var(--accent)" rx="2"/><text x="499.8" y="95.7" text-anchor="middle" class="mono t-ink" font-size="10">0.60</text><rect x="522.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="535.2" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="558.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="570.8" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="593.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="606.2" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text></svg><figcaption>TAC-Fold + satfix. Totals exact again, nothing past +1. But block 1 becomes a flat 1, 1, 1 followed by a drop of 0.50 at the block edge. Satfix cannot see block 2, so it cannot smooth across the edge.</figcaption></figure>
+</div></li>
+<li class="step"><div class="spine"><div class="node">17</div></div><div class="body">
+  <div class="phase">The QP governor · an optimisation</div>
+  <h2>The QP solves all 16 steps at once, with the limit built in</h2>
+  <ol class="list">
+    <li><b>Unknowns:</b> all 16 step sizes together, not one block at a time.</li>
+    <li><b>Hard rule 1:</b> each block adds up to its total exactly (3.6, 0.4, 0.4, 3.6).</li>
+    <li><b>Hard rule 2:</b> every step stays within −1 and +1.</li>
+    <li><b>Preference:</b> among all sequences that obey both rules, pick the one whose step-to-step changes are smallest (<span class="mono">qp</span>), or closest to TAC-Fold's changes (<span class="mono">qp_anchor</span>), or closest to the learned network's shape (<span class="mono">qp_learned</span>).</li>
+    <li>A solver finds the best such sequence in about a millisecond.</li>
+  </ol>
+  <figure class="fig"><svg viewBox="0 0 640 204" role="img"><rect x="56.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><rect x="340.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><text x="127.0" y="18" text-anchor="middle" font-size="12">block 1 · total 3.6</text><text x="269.0" y="18" text-anchor="middle" font-size="12">block 2 · total 0.4</text><text x="411.0" y="18" text-anchor="middle" font-size="12">block 3 · total 0.4</text><text x="553.0" y="18" text-anchor="middle" font-size="12">block 4 · total 3.6</text><line x1="56" y1="155.3" x2="624.0" y2="155.3" stroke="var(--muted)" stroke-width="1"/><line x1="56" y1="64.4" x2="624.0" y2="64.4" stroke="var(--limit)" stroke-width="1.5" stroke-dasharray="6 4"/><text x="48" y="68.4" text-anchor="end" class="mono t-lim" font-size="11">+1</text><text x="48" y="159.3" text-anchor="end" class="mono" font-size="11">0</text><text x="73.8" y="196" text-anchor="middle" class="mono" font-size="10">1</text><text x="109.2" y="196" text-anchor="middle" class="mono" font-size="10">2</text><text x="144.8" y="196" text-anchor="middle" class="mono" font-size="10">3</text><text x="180.2" y="196" text-anchor="middle" class="mono" font-size="10">4</text><text x="215.8" y="196" text-anchor="middle" class="mono" font-size="10">5</text><text x="251.2" y="196" text-anchor="middle" class="mono" font-size="10">6</text><text x="286.8" y="196" text-anchor="middle" class="mono" font-size="10">7</text><text x="322.2" y="196" text-anchor="middle" class="mono" font-size="10">8</text><text x="357.8" y="196" text-anchor="middle" class="mono" font-size="10">9</text><text x="393.2" y="196" text-anchor="middle" class="mono" font-size="10">10</text><text x="428.8" y="196" text-anchor="middle" class="mono" font-size="10">11</text><text x="464.2" y="196" text-anchor="middle" class="mono" font-size="10">12</text><text x="499.8" y="196" text-anchor="middle" class="mono" font-size="10">13</text><text x="535.2" y="196" text-anchor="middle" class="mono" font-size="10">14</text><text x="570.8" y="196" text-anchor="middle" class="mono" font-size="10">15</text><text x="606.2" y="196" text-anchor="middle" class="mono" font-size="10">16</text><rect x="61.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="73.8" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="96.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="109.2" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="132.0" y="73.1" width="25.5" height="82.1" fill="var(--accent)" rx="2"/><text x="144.8" y="68.1" text-anchor="middle" class="mono t-ink" font-size="10">0.90</text><rect x="167.5" y="92.0" width="25.5" height="63.3" fill="var(--accent)" rx="2"/><text x="180.2" y="87.0" text-anchor="middle" class="mono t-ink" font-size="10">0.70</text><rect x="203.0" y="120.9" width="25.5" height="34.4" fill="var(--accent)" rx="2"/><text x="215.8" y="115.9" text-anchor="middle" class="mono t-ink" font-size="10">0.38</text><rect x="238.5" y="142.6" width="25.5" height="12.7" fill="var(--accent)" rx="2"/><text x="251.2" y="137.6" text-anchor="middle" class="mono t-ink" font-size="10">0.14</text><rect x="274.0" y="155.3" width="25.5" height="1.8" fill="var(--accent)" rx="2"/><text x="286.8" y="169.0" text-anchor="middle" class="mono t-ink" font-size="10">-0.02</text><rect x="309.5" y="155.3" width="25.5" height="9.0" fill="var(--accent)" rx="2"/><text x="322.2" y="176.3" text-anchor="middle" class="mono t-ink" font-size="10">-0.10</text><rect x="345.0" y="155.3" width="25.5" height="9.0" fill="var(--accent)" rx="2"/><text x="357.8" y="176.3" text-anchor="middle" class="mono t-ink" font-size="10">-0.10</text><rect x="380.5" y="155.3" width="25.5" height="1.8" fill="var(--accent)" rx="2"/><text x="393.2" y="169.0" text-anchor="middle" class="mono t-ink" font-size="10">-0.02</text><rect x="416.0" y="142.6" width="25.5" height="12.7" fill="var(--accent)" rx="2"/><text x="428.8" y="137.6" text-anchor="middle" class="mono t-ink" font-size="10">0.14</text><rect x="451.5" y="120.9" width="25.5" height="34.4" fill="var(--accent)" rx="2"/><text x="464.2" y="115.9" text-anchor="middle" class="mono t-ink" font-size="10">0.38</text><rect x="487.0" y="92.0" width="25.5" height="63.3" fill="var(--accent)" rx="2"/><text x="499.8" y="87.0" text-anchor="middle" class="mono t-ink" font-size="10">0.70</text><rect x="522.5" y="73.1" width="25.5" height="82.1" fill="var(--accent)" rx="2"/><text x="535.2" y="68.1" text-anchor="middle" class="mono t-ink" font-size="10">0.90</text><rect x="558.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="570.8" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="593.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="606.2" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text></svg><figcaption>Plain QP. Block 1 ramps 1, 1, 0.9, 0.7 and block 2 continues the ramp down, even dipping slightly below 0 while still totalling exactly 0.4. Largest jump 0.32. Because it sees both blocks, it spreads the change across the edge.</figcaption></figure>
+  <figure class="fig"><svg viewBox="0 0 640 204" role="img"><rect x="56.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><rect x="340.0" y="28" width="142.0" height="150" fill="var(--accent-tint)"/><text x="127.0" y="18" text-anchor="middle" font-size="12">block 1 · total 3.6</text><text x="269.0" y="18" text-anchor="middle" font-size="12">block 2 · total 0.4</text><text x="411.0" y="18" text-anchor="middle" font-size="12">block 3 · total 0.4</text><text x="553.0" y="18" text-anchor="middle" font-size="12">block 4 · total 3.6</text><line x1="56" y1="155.3" x2="624.0" y2="155.3" stroke="var(--muted)" stroke-width="1"/><line x1="56" y1="64.4" x2="624.0" y2="64.4" stroke="var(--limit)" stroke-width="1.5" stroke-dasharray="6 4"/><text x="48" y="68.4" text-anchor="end" class="mono t-lim" font-size="11">+1</text><text x="48" y="159.3" text-anchor="end" class="mono" font-size="11">0</text><text x="73.8" y="196" text-anchor="middle" class="mono" font-size="10">1</text><text x="109.2" y="196" text-anchor="middle" class="mono" font-size="10">2</text><text x="144.8" y="196" text-anchor="middle" class="mono" font-size="10">3</text><text x="180.2" y="196" text-anchor="middle" class="mono" font-size="10">4</text><text x="215.8" y="196" text-anchor="middle" class="mono" font-size="10">5</text><text x="251.2" y="196" text-anchor="middle" class="mono" font-size="10">6</text><text x="286.8" y="196" text-anchor="middle" class="mono" font-size="10">7</text><text x="322.2" y="196" text-anchor="middle" class="mono" font-size="10">8</text><text x="357.8" y="196" text-anchor="middle" class="mono" font-size="10">9</text><text x="393.2" y="196" text-anchor="middle" class="mono" font-size="10">10</text><text x="428.8" y="196" text-anchor="middle" class="mono" font-size="10">11</text><text x="464.2" y="196" text-anchor="middle" class="mono" font-size="10">12</text><text x="499.8" y="196" text-anchor="middle" class="mono" font-size="10">13</text><text x="535.2" y="196" text-anchor="middle" class="mono" font-size="10">14</text><text x="570.8" y="196" text-anchor="middle" class="mono" font-size="10">15</text><text x="606.2" y="196" text-anchor="middle" class="mono" font-size="10">16</text><rect x="61.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="73.8" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="96.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="109.2" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="132.0" y="65.7" width="25.5" height="89.6" fill="var(--accent)" rx="2"/><text x="144.8" y="60.7" text-anchor="middle" class="mono t-ink" font-size="10">0.99</text><rect x="167.5" y="99.4" width="25.5" height="55.9" fill="var(--accent)" rx="2"/><text x="180.2" y="94.4" text-anchor="middle" class="mono t-ink" font-size="10">0.61</text><rect x="203.0" y="136.0" width="25.5" height="19.2" fill="var(--accent)" rx="2"/><text x="215.8" y="131.0" text-anchor="middle" class="mono t-ink" font-size="10">0.21</text><rect x="238.5" y="144.7" width="25.5" height="10.5" fill="var(--accent)" rx="2"/><text x="251.2" y="139.7" text-anchor="middle" class="mono t-ink" font-size="10">0.12</text><rect x="274.0" y="150.5" width="25.5" height="4.7" fill="var(--accent)" rx="2"/><text x="286.8" y="145.5" text-anchor="middle" class="mono t-ink" font-size="10">0.05</text><rect x="309.5" y="153.4" width="25.5" height="1.8" fill="var(--accent)" rx="2"/><text x="322.2" y="148.4" text-anchor="middle" class="mono t-ink" font-size="10">0.02</text><rect x="345.0" y="153.4" width="25.5" height="1.8" fill="var(--accent)" rx="2"/><text x="357.8" y="148.4" text-anchor="middle" class="mono t-ink" font-size="10">0.02</text><rect x="380.5" y="150.5" width="25.5" height="4.7" fill="var(--accent)" rx="2"/><text x="393.2" y="145.5" text-anchor="middle" class="mono t-ink" font-size="10">0.05</text><rect x="416.0" y="144.7" width="25.5" height="10.5" fill="var(--accent)" rx="2"/><text x="428.8" y="139.7" text-anchor="middle" class="mono t-ink" font-size="10">0.12</text><rect x="451.5" y="136.0" width="25.5" height="19.2" fill="var(--accent)" rx="2"/><text x="464.2" y="131.0" text-anchor="middle" class="mono t-ink" font-size="10">0.21</text><rect x="487.0" y="99.4" width="25.5" height="55.9" fill="var(--accent)" rx="2"/><text x="499.8" y="94.4" text-anchor="middle" class="mono t-ink" font-size="10">0.61</text><rect x="522.5" y="65.7" width="25.5" height="89.6" fill="var(--accent)" rx="2"/><text x="535.2" y="60.7" text-anchor="middle" class="mono t-ink" font-size="10">0.99</text><rect x="558.0" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="570.8" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text><rect x="593.5" y="64.4" width="25.5" height="90.9" fill="var(--accent)" rx="2"/><text x="606.2" y="59.4" text-anchor="middle" class="mono t-ink" font-size="10">1.00</text></svg><figcaption>qp_anchor: same rules, but it stays as close as possible to TAC-Fold's shape. Largest jump 0.40. Wherever TAC-Fold is already inside the limit, the output is identical to TAC-Fold.</figcaption></figure>
+</div></li>
+<li class="step"><div class="spine"><div class="node">18</div></div><div class="body">
+  <div class="phase">Side by side</div>
+  <h2>TAC-Fold vs QP in one table</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>On this example</th><th>Steps past +1</th><th>Block totals</th><th>Totals</th><th>Largest jump</th></tr></thead>
+    <tbody>
+      <tr><td>TAC-Fold (as sent)</td><td class="num">4</td><td class="num">3.6 · 0.4 · 0.4 · 3.6</td><td>kept, but the controller then cuts them</td><td class="num">0.45</td></tr>
+      <tr><td>TAC-Fold after controller cut</td><td class="num">0</td><td class="num">3.2 · 0.4 · 0.4 · 3.2</td><td>lost 0.4 in blocks 1 and 4</td><td class="num">0.45</td></tr>
+      <tr><td>TAC-Fold + satfix</td><td class="num">0</td><td class="num">3.6 · 0.4 · 0.4 · 3.6</td><td>kept</td><td class="num">0.50</td></tr>
+      <tr><td>QP</td><td class="num">0</td><td class="num">3.6 · 0.4 · 0.4 · 3.6</td><td>kept</td><td class="num">0.32</td></tr>
+      <tr><td>qp_anchor</td><td class="num">0</td><td class="num">3.6 · 0.4 · 0.4 · 3.6</td><td>kept</td><td class="num">0.40</td></tr>
+    </tbody></table></div>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>TAC-Fold (+ satfix)</th><th>QP governor</th></tr></thead>
+    <tbody>
+      <tr><td>What it is</td><td>A fixed formula: a smooth curve through the block edges</td><td>An optimisation: the best sequence that obeys the rules</td></tr>
+      <tr><td>The ±1 limit</td><td>Ignored; satfix repairs it afterwards</td><td>A hard rule inside the solve</td></tr>
+      <tr><td>Looks at neighbouring blocks</td><td>Only for slopes; satfix never does</td><td>Yes, all blocks at once</td></tr>
+      <tr><td>Block totals</td><td>Exact (satfix restores them)</td><td>Exact by rule</td></tr>
+      <tr><td>Shape it aims for</td><td>Akima curve only</td><td>Any target: flat, TAC-Fold, or a learned shape</td></tr>
+      <tr><td>Cost</td><td>Instant</td><td>About a millisecond per chunk</td></tr>
+    </tbody></table></div>
+</div></li>
+<li class="step"><div class="spine"><div class="node">19</div></div><div class="body">
+  <div class="phase">The identity question</div>
+  <h2>If the network alone scores the same, why keep the QP?</h2>
+  <p class="callout"><b>The reviewer's question</b>The learned network alone scored 66%; with the QP, 65%. Why not train the network to stay inside ±1 (for example with <span class="mono">tanh</span>) and drop the QP?</p>
+  <ol class="list">
+    <li><b>Staying inside ±1 is not the same as delivering the commanded motion.</b> <span class="mono">tanh</span> keeps every step under the limit, but nothing makes a block add up to what the slow policy commanded. The QP is the smallest change to the network's guess that achieves both at once.</li>
+    <li><b>The QP only acts when the network overshoots.</b> On PickCube the network's guess goes past ±1 on just 6.6% of values, so there is almost nothing to fix. That explains the 65 vs 66 tie. On RollBall it is 30%.</li>
+    <li><b>It is a guarantee, not a hope.</b> The true motion always obeys both rules. So the QP can never move the network's guess further from the truth, measured in step-to-step changes. When the network is wrong, the QP pulls it back toward what the policy asked for.</li>
+  </ol>
+  <div class="tbl"><table>
+    <thead><tr><th>Task (held-out training demos, k=4)</th><th>Network past ±1</th><th>Lost motion per block: tanh net</th><th>… clip</th><th>… QP</th><th>Error when the network is wrong: clip → QP</th></tr></thead>
+    <tbody>
+      <tr><td>RollBall</td><td class="num">30.3%</td>
+        <td class="num"><span class="bar" style="--v:45.8;background:var(--bad)"></span>0.097</td><td class="num"><span class="bar" style="--v:22.1;background:var(--limit)"></span>0.047</td><td class="num"><b>0.000</b></td>
+        <td class="num">0.0177 → 0.0135 <span class="chip c-good">−23%</span></td></tr>
+      <tr><td>LiftPegUpright</td><td class="num">23.0%</td>
+        <td class="num"><span class="bar" style="--v:33.5;background:var(--bad)"></span>0.071</td><td class="num"><span class="bar" style="--v:10.6;background:var(--limit)"></span>0.022</td><td class="num"><b>0.000</b></td>
+        <td class="num">0.0189 → 0.0159 <span class="chip c-good">−16%</span></td></tr>
+      <tr><td>PullCube</td><td class="num">20.3%</td>
+        <td class="num"><span class="bar" style="--v:26.9;background:var(--bad)"></span>0.057</td><td class="num"><span class="bar" style="--v:8.3;background:var(--limit)"></span>0.017</td><td class="num"><b>0.000</b></td>
+        <td class="num">0.0232 → 0.0212 <span class="chip c-good">−8%</span></td></tr>
+      <tr><td>AnymalC-Reach</td><td class="num">16.9%</td>
+        <td class="num"><span class="bar" style="--v:85.6;background:var(--bad)"></span>0.181</td><td class="num"><span class="bar" style="--v:23.8;background:var(--limit)"></span>0.050</td><td class="num"><b>0.000</b></td>
+        <td class="num">0.0735 → 0.0694 <span class="chip c-good">−6%</span></td></tr>
+      <tr><td>PushCube</td><td class="num">13.4%</td>
+        <td class="num"><span class="bar" style="--v:16.0;background:var(--bad)"></span>0.034</td><td class="num"><span class="bar" style="--v:3.6;background:var(--limit)"></span>0.008</td><td class="num"><b>0.000</b></td>
+        <td class="num">0.0096 → 0.0087 <span class="chip c-good">−10%</span></td></tr>
+      <tr><td>PokeCube</td><td class="num">12.8%</td>
+        <td class="num"><span class="bar" style="--v:23.0;background:var(--bad)"></span>0.049</td><td class="num"><span class="bar" style="--v:4.7;background:var(--limit)"></span>0.010</td><td class="num"><b>0.000</b></td>
+        <td class="num">0.0076 → 0.0069 <span class="chip c-good">−9%</span></td></tr>
+      <tr><td>StackCube</td><td class="num">10.2%</td>
+        <td class="num"><span class="bar" style="--v:59.7;background:var(--bad)"></span>0.126</td><td class="num"><span class="bar" style="--v:12.4;background:var(--limit)"></span>0.026</td><td class="num"><b>0.000</b></td>
+        <td class="num">0.0229 → 0.0219 <span class="chip c-good">−4%</span></td></tr>
+      <tr><td>PickCube</td><td class="num">6.6%</td>
+        <td class="num"><span class="bar" style="--v:31.5;background:var(--bad)"></span>0.067</td><td class="num"><span class="bar" style="--v:3.8;background:var(--limit)"></span>0.008</td><td class="num"><b>0.000</b></td>
+        <td class="num">0.0086 → 0.0083 <span class="chip c-good">−3%</span></td></tr>
+    </tbody></table></div>
+  <p class="note">Offline measurements on held-out training demos, not success rates. "Network is wrong" = noise added to its prediction (half the size of a typical within-block shape). The tanh net loses 4–13× more commanded motion than clipping and has the highest error on every task.</p>
+  <div class="callout"><b>One-line answer for the paper</b><p>The network decides <i>how</i> to move inside a block; the QP guarantees <i>how far</i>. Bounding the network cannot give that guarantee.</p></div>
+  <div class="tbl"><table>
+    <thead><tr><th>What decides it live</th><th>Pre-registered test (draft)</th><th>If it fails</th></tr></thead>
+    <tbody>
+      <tr><td>Does the QP raise success where the network overshoots?</td><td>H4: qp_learned &gt; learned_raw on RollBall, LiftPegUpright, PullCube, AnymalC</td><td>The paper states the QP is a safety guarantee, not a success gain</td></tr>
+      <tr><td>Is bounding the network enough?</td><td>H6: qp_learned &gt; tanh net on all 8 tasks</td><td>Reported as measured; the tanh alternative is kept in the paper</td></tr>
+    </tbody></table></div>
+</div></li>
+</ol>
+
+<footer class="meta" style="border-top:1px solid var(--rule);padding-top:16px">
+  <span>Source files: RESULTS_QP_ANCHOR_CITABLE.md · RESULTS_QP_DRAFT.md · result_dp_PushT-v1_fair_n400.json · harness.py</span>
+  <span>Folder: multi-rate/full_grid_2026-09-07</span>
+</footer>
+</div>

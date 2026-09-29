@@ -1,0 +1,30 @@
+{
+  "task": "PokeCube-v1",
+  "policy": "dp",
+  "k": 2,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 1,
+  "eval_offset": 0,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "native"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PokeCube-v1.pt",
+  "checkpoint_sha256": "3723924a3fd35c88108425b7ca72c5938a24e267b1993a69f62ef02c7d24523e",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": [
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.3854166666666667
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

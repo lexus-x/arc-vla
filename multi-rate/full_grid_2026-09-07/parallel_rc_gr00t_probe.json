@@ -1,0 +1,32 @@
+{
+  "kind": "parallel_correctness_probe_not_SR",
+  "runs": {
+    "1": {
+      "wall_seconds": 45.70949079003185,
+      "success": {
+        "native": [
+          false,
+          false
+        ]
+      },
+      "saturation": {
+        "native": 0.0
+      },
+      "checkpoint_sha256": "6ec1c46fb46ed2f79d1efc3a5a66512b2a3708c58b281aaea767a2b883266530"
+    },
+    "2": {
+      "wall_seconds": 40.35180002218112,
+      "success": {
+        "native": [
+          false,
+          false
+        ]
+      },
+      "saturation": {
+        "native": 0.0
+      },
+      "checkpoint_sha256": "6ec1c46fb46ed2f79d1efc3a5a66512b2a3708c58b281aaea767a2b883266530"
+    }
+  },
+  "same_outputs": true
+}

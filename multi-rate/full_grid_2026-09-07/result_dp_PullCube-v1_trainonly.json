@@ -1,0 +1,30 @@
+{
+  "task": "PullCube-v1",
+  "policy": "dp",
+  "k": 2,
+  "head": "step",
+  "seed": 0,
+  "fold": -1,
+  "n": 1,
+  "eval_offset": 0,
+  "n_train": 200,
+  "train_steps": 30000,
+  "arms": [
+    "native"
+  ],
+  "checkpoint_path": "/home/user/Desktop/multi-rate/full_grid_2026-09-07/dp_PullCube-v1.pt",
+  "checkpoint_sha256": "7f65836175601db8501bee73b6f1cfd8a0faece0a04291c85c98ca0907d5a613",
+  "eval_protocol": "heldout_demo_state",
+  "eval_seed": 0,
+  "success": {
+    "native": [
+      true
+    ]
+  },
+  "policy_raw_sat_frac": {
+    "native": 0.5625
+  },
+  "contrasts": {
+    "native": {}
+  }
+}

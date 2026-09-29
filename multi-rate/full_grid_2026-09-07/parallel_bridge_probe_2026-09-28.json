@@ -1,0 +1,4 @@
+{
+  "two_live_clients_ping": true,
+  "scope": "transport only; rollout equivalence not established"
+}

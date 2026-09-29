@@ -23,6 +23,8 @@ from resample_math import decimate_and_resample, RESAMPLERS
 from resample_bspline2 import resample_bspline_eps
 
 RESAMPLERS['bspline_eps_raw'] = lambda b, k: resample_bspline_eps(b, k, eps=0.005)
+from resample_qp import resample_qp_anchor
+RESAMPLERS['qp_anchor'] = resample_qp_anchor  # prereg comparator (as harness.py registers it)
 
 
 def resample_ctac_position(deltas: np.ndarray, anchor: np.ndarray, k: int) -> np.ndarray:

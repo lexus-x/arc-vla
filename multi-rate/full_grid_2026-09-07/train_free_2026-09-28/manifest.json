@@ -1,0 +1,30 @@
+{
+  "sources": {
+    "eval_maniskill_batched.py": "67496e38802efe2ca3a8c2afcb97713f93e5d2eee32bde07cb85844b304a8f1a",
+    "harness.py": "20cca670c5209f103cd547133e040306ea2f8457990e1a4d6df2614996152042",
+    "dp_min.py": "a35dde3bedb7fa3b96d1bad847c5ed6d8deb839893216465324e89382bca54d3",
+    "resample_math.py": "d8cdc067c265f6797e06ec076dc671eb8e2063a9028b63239cc5a4548d5e1faa",
+    "resample_bspline2.py": "521134cc0cb4d2d3b301105d6af7735e30866a1653e5b91e2111b43f4444c3e2",
+    "resample_qp.py": "0dbd49da4943a2631a44457d8e9e0e161bff7a4156488b479dc93ab5f6cc37a5",
+    "PREREG_TRAIN_FREE_2026-09-28.md": "98764bc3f04813e9c692f3aa3163ce8e7c9a8b68a81707fc6968939f3dad3c4a",
+    "run_train_free_comparison.py": "f7e9ebc0338b5a759c77b4e3ff23d96bad99ecb96df63f5824cec018cc5abd5d"
+  },
+  "references": {
+    "result_dp_PullCube-v1_k2_confirm.json": "8f56e3843a3e78bbd2f4955867aafde2c065a195d1f2be18d8422eaf6afbfc07",
+    "result_dp_PullCube-v1_k4_confirm.json": "5f6eef5413e22bd487fe66dece14afe8709985958b89fe139c0449ada4980a1b",
+    "result_dp_PickCube-v1_k2_confirm.json": "bef0a3f82d99aa61d601c4e596c764ad1a069114d25d4ad6ebd4049dadb45f39",
+    "result_dp_PickCube-v1_k4_confirm.json": "b739b3be946488cd3ed38a44e87f7a520581c8a8b49765e0292bd6545914bab8",
+    "result_dp_PushCube-v1_k2_confirm.json": "0289c77650283ecda1711b0a0381ab227a20797a893cd307aab3bb0a19851bc9",
+    "result_dp_PushCube-v1_k4_confirm.json": "f20e5173f22384604924cb00dd7dc1b104a66bc7b4e16de7d8a1cb38bf6ecf85",
+    "result_dp_PokeCube-v1_k2_confirm.json": "c15b617a3f83e26f96bd18aebf998ba209903a78ff9ba90d5b50c9f7829b3453",
+    "result_dp_PokeCube-v1_k4_confirm.json": "a711f8eca56d81c118d87a621ec9dfd058eca31c36a93d7dfceab0ec24069c4b",
+    "result_dp_LiftPegUpright-v1_k2_confirm.json": "a92c23123bbb4a6526c4b95698a2e141cb3ec6a0c6a09172ab96cb1149937c23",
+    "result_dp_LiftPegUpright-v1_k4_confirm.json": "ae8a059721987f154a2a5efdaee1a6035d7745a0d8bb6f60490458fcc1fcef12",
+    "result_dp_StackCube-v1_k2_confirm.json": "f5b6b5cfa19a60fb301ec976635d516660dd60dc743fd82dce20f9190eaad2d2",
+    "result_dp_StackCube-v1_k4_confirm.json": "1211032c270593fd3c8debd90a0218b7daa08d0071298eae40fcc99d11bb6d3a",
+    "result_dp_RollBall-v1_k2_confirm.json": "2c0315ecea0f823ec40ae19e2d467ad9c9772e3d7bac2754d3c83650887c1393",
+    "result_dp_RollBall-v1_k4_confirm.json": "b7c74b2024037d3a4a58293fd4651f55d69365bfa243c0598f44ea5f808966f5",
+    "result_dp_AnymalC-Reach-v1_k2_confirm.json": "76eb42338dfdd01ae159f662cc8cc81685d0c0df1c7341294950b0ad9c1b57c8",
+    "result_dp_AnymalC-Reach-v1_k4_confirm.json": "c34c4dbc4e42d4403691c3d4fdd5222594ae9e00cab3c1c9ae0a3a3e407e2f8d"
+  }
+}

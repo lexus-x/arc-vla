@@ -1,0 +1,142 @@
+{
+  "kind": "throughput_probe_not_SR",
+  "task": "PullCube-v1",
+  "checkpoint_sha256": "7f65836175601db8501bee73b6f1cfd8a0faece0a04291c85c98ca0907d5a613",
+  "episodes": 2,
+  "torch": "2.13.0+cu130",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+  "inference_checks": [
+    {
+      "seed": 3,
+      "equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "seed": 1000006,
+      "equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "seed": 2000009,
+      "equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "seed": 3000012,
+      "equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "seed": 4000015,
+      "equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "seed": 5000018,
+      "equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "seed": 6000021,
+      "equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "seed": 7000024,
+      "equal": true,
+      "max_abs_error": 0.0
+    }
+  ],
+  "rollouts": {
+    "eager": {
+      "seconds": 129.16437110304832,
+      "steps": 241,
+      "trace_sha256": "8dc4e9d2355aab351c2d2b73e48b2cd5ec75def5465f1aad093a6a7013d2e029",
+      "outcomes": [
+        {
+          "qp": [
+            true,
+            0.5625
+          ],
+          "tac_fold": [
+            true,
+            0.53125
+          ],
+          "spline": [
+            true,
+            0.53125
+          ],
+          "bspline_eps_raw": [
+            false,
+            0.36160714285714285
+          ]
+        },
+        {
+          "qp": [
+            false,
+            0.40625
+          ],
+          "tac_fold": [
+            false,
+            0.4107142857142857
+          ],
+          "spline": [
+            false,
+            0.4107142857142857
+          ],
+          "bspline_eps_raw": [
+            true,
+            0.5859375
+          ]
+        }
+      ]
+    },
+    "graph": {
+      "seconds": 129.52922805724666,
+      "steps": 241,
+      "trace_sha256": "8dc4e9d2355aab351c2d2b73e48b2cd5ec75def5465f1aad093a6a7013d2e029",
+      "outcomes": [
+        {
+          "qp": [
+            true,
+            0.5625
+          ],
+          "tac_fold": [
+            true,
+            0.53125
+          ],
+          "spline": [
+            true,
+            0.53125
+          ],
+          "bspline_eps_raw": [
+            false,
+            0.36160714285714285
+          ]
+        },
+        {
+          "qp": [
+            false,
+            0.40625
+          ],
+          "tac_fold": [
+            false,
+            0.4107142857142857
+          ],
+          "spline": [
+            false,
+            0.4107142857142857
+          ],
+          "bspline_eps_raw": [
+            true,
+            0.5859375
+          ]
+        }
+      ]
+    }
+  },
+  "eager_sample_seconds": 0.11128719293046743,
+  "graph_sample_seconds": 0.08753176839090884,
+  "exact_rollout_match": true,
+  "rollout_speedup": 0.9971832075302952
+}

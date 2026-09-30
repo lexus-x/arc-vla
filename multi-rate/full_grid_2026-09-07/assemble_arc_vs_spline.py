@@ -233,7 +233,10 @@ def main():
 
     out = os.path.join(HERE, "arc_benchmark_report.html")
     write_report(cells, suites, out)
-    print(f"\n[report] wrote {out}")
+    # index.html is the legacy dashboard name (it carried fabricated numbers, e.g. an 8-task
+    # spline comparison that never ran). It is now simply the same honest generated report.
+    write_report(cells, suites, os.path.join(HERE, "index.html"))
+    print(f"\n[report] wrote {out} and index.html")
 
 
 if __name__ == "__main__":

@@ -1,756 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARC: Multi-Rate Evaluation Report</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f8fafc;
-      --surface: #ffffff;
-      --border: #e2e8f0;
-      --border-subtle: #cbd5e1;
-      --text-main: #0f172a;
-      --text-muted: #334155;
-      --text-secondary: #64748b;
-      --accent: #2563eb;
-      --accent-bg: #eff6ff;
-      --highlight-bg: #ecfdf5;
-      --highlight-text: #047857;
-      --highlight-border: #a7f3d0;
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-      --radius: 8px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text-main);
-      font-family: var(--font-sans);
-      line-height: 1.55;
-      padding: 36px 20px;
-    }
-
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
-      padding: 44px 48px;
-    }
-
-    @media (max-width: 768px) {
-      body { padding: 12px; }
-      .container { padding: 24px 18px; }
-    }
-
-    /* Header */
-    .header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 24px;
-      margin-bottom: 28px;
-    }
-
-    .badge-label {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: var(--accent-bg);
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-bottom: 12px;
-      border: 1px solid #bfdbfe;
-    }
-
-    h1 {
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--text-main);
-      letter-spacing: -0.4px;
-      line-height: 1.3;
-      margin-bottom: 8px;
-    }
-
-    .meta-row {
-      font-size: 13.5px;
-      color: var(--text-secondary);
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 8px;
-    }
-
-    .meta-row span strong {
-      color: var(--text-main);
-    }
-
-    /* Highlight Cards */
-    .highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin: 24px 0 32px 0;
-    }
-
-    .highlight-card {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-    }
-
-    .highlight-card.lead {
-      background: var(--accent-bg);
-      border-color: #bfdbfe;
-    }
-
-    .highlight-card .card-title {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--text-secondary);
-      margin-bottom: 6px;
-    }
-
-    .highlight-card.lead .card-title {
-      color: var(--accent);
-    }
-
-    .highlight-card .card-val {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--text-main);
-      font-family: var(--font-mono);
-    }
-
-    .highlight-card.lead .card-val {
-      color: var(--accent);
-    }
-
-    .highlight-card .card-sub {
-      font-size: 12px;
-      color: var(--text-secondary);
-      margin-top: 4px;
-    }
-
-    /* Section & Content */
-    .section {
-      margin-top: 36px;
-    }
-
-    h2 {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    p {
-      color: var(--text-muted);
-      font-size: 14px;
-      margin-bottom: 12px;
-    }
-
-    .bullet-list {
-      list-style-type: none;
-      padding-left: 0;
-      margin-bottom: 16px;
-    }
-
-    .bullet-list li {
-      position: relative;
-      padding-left: 20px;
-      margin-bottom: 8px;
-      font-size: 13.5px;
-      color: var(--text-muted);
-    }
-
-    .bullet-list li::before {
-      content: "•";
-      position: absolute;
-      left: 6px;
-      color: var(--accent);
-      font-weight: bold;
-    }
-
-    /* Table Styling */
-    .table-box {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow-x: auto;
-      margin: 16px 0;
-      background: #ffffff;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13.5px;
-      text-align: left;
-    }
-
-    th {
-      background: #f1f5f9;
-      color: var(--text-main);
-      font-weight: 600;
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--border);
-      white-space: nowrap;
-    }
-
-    td {
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--border);
-      color: var(--text-muted);
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    tr.summary-row td {
-      background: #f8fafc;
-      font-weight: 600;
-      color: var(--text-main);
-      border-top: 2px solid var(--border);
-    }
-
-    .mono {
-      font-family: var(--font-mono);
-      font-size: 13px;
-    }
-
-    .best-pill {
-      display: inline-block;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: var(--highlight-text);
-      background: var(--highlight-bg);
-      border: 1px solid var(--highlight-border);
-      padding: 2px 8px;
-      border-radius: 4px;
-    }
-
-    /* Code / Log / Verification Block */
-    .code-panel {
-      background: #0f172a;
-      border-radius: var(--radius);
-      padding: 18px 22px;
-      font-family: var(--font-mono);
-      font-size: 12.5px;
-      color: #e2e8f0;
-      line-height: 1.6;
-      overflow-x: auto;
-      margin: 14px 0;
-    }
-
-    .code-comment { color: #64748b; }
-    .code-cmd { color: #38bdf8; }
-    .code-hash { color: #fbbf24; font-weight: 600; }
-
-    /* Footer */
-    .footer {
-      border-top: 1px solid var(--border);
-      padding-top: 18px;
-      margin-top: 36px;
-      font-size: 12.5px;
-      color: var(--text-secondary);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-  </style>
-</head>
-<body>
-
-<div class="container">
-
-  <!-- Header -->
-  <header class="header">
-    <div class="badge-label">Benchmark Report</div>
-    <h1>ARC: Multi-Rate Robot Execution Evaluation</h1>
-    <div class="meta-row">
-      <span><strong>Suites:</strong> RoboMimic, Push-T, &amp; ManiSkill v1</span>
-      <span><strong>Sample Size:</strong> n = 50–400 episodes per cell (Total &gt;3,500 episodes)</span>
-      <span><strong>Evaluation Protocol:</strong> Synchronized seed rollouts</span>
-      <span><strong>Scope:</strong> Action Decimation (2×, 4× downsampling)</span>
-    </div>
-  </header>
-
-  <!-- Executive Performance Grid -->
-  <div class="highlight-grid">
-    <div class="highlight-card lead">
-      <div class="card-title">ManiSkill Mean (n=3,093)</div>
-      <div class="card-val">71.76%</div>
-      <div class="card-sub">QP-Anchor @ k=2 (+4.95% vs ZOH)</div>
-    </div>
-    <div class="highlight-card lead">
-      <div class="card-title">RoboMimic Average</div>
-      <div class="card-val">97.33%</div>
-      <div class="card-sub">Ours • Top Result</div>
-    </div>
-    <div class="highlight-card lead">
-      <div class="card-title">Push-T Average</div>
-      <div class="card-val">64.67%</div>
-      <div class="card-sub">+6.00% over Splines</div>
-    </div>
-    <div class="highlight-card">
-      <div class="card-title">Decimation Win (4×)</div>
-      <div class="card-val">36.73%</div>
-      <div class="card-sub">QP-Anchor vs ZOH 30.94% (+5.79%)</div>
-    </div>
-  </div>
-
-  <!-- Section 1: Executive Summary -->
-  <section class="section">
-    <h2>Executive Summary</h2>
-    <ul class="bullet-list">
-      <li><strong>Consistent Lead Across Suites:</strong> Our formulations (ARC, QP-Anchor, TAC-Fold+Satfix) outperform naive ZOH, Cubic Spline, and B-Spline across all three robot benchmarks.</li>
-      <li><strong>Robustness at Reduced Rates:</strong> Under large action decimation (factor 4× down), QP-Anchor preserves task completion where unconstrained baselines degrade due to actuator saturation and boundary violations.</li>
-      <li><strong>Zero Degradation on Simple Tasks:</strong> Across Lift and Can at 2× and 4× decimation, our methods maintain <strong>100.0%</strong> task completion.</li>
-      <li><strong>ManiSkill v1 Suite Validation:</strong> Across 8 diverse manipulation and locomotion tasks ($n=3,093$ paired trials), QP-Anchor leads at both $k=2$ (71.76% vs 66.81% ZOH) and $k=4$ (36.73% vs 30.94% ZOH).</li>
-    </ul>
-  </section>
-
-  <!-- Section 2: Why Decimation / Slowing Down is Standard -->
-  <section class="section">
-    <h2>Why Slower Execution Frequencies are Evaluated</h2>
-    <ul class="bullet-list">
-      <li><strong>VLA and Diffusion Inference Latency:</strong> High-capacity visual policies (e.g. Diffusion Policy, OpenVLA) require 100–300 ms per inference pass. Deploying policies at 5 Hz or 2.5 Hz (downsampling from 10 Hz or 20 Hz) is the standard method to match available compute budgets.</li>
-      <li><strong>Standard Literature Convention:</strong> RoboMimic, Push-T, and ManiSkill benchmark downsampling factors (k = 2 and k = 4) as the canonical testbed for multi-rate controller execution.</li>
-      <li><strong>Actuator Limits and Overshoot:</strong> Standard polynomial splines lack saturation projection; when control rates drop, unconstrained polynomial peaks exceed physical robot limits. ARC and QP-Anchor resolve this through area-preserving folding and box-constrained quadratic programming.</li>
-    </ul>
-  </section>
-
-  <!-- Section 3: Table 1 - RoboMimic -->
-  <section class="section">
-    <h2>Table 1: RoboMimic Evaluation (2× and 4× Decimation)</h2>
-    <div class="table-box">
-      <table>
-        <thead>
-          <tr>
-            <th>Task</th>
-            <th>Decimation Factor</th>
-            <th>ARC / Ours</th>
-            <th>Cubic Spline</th>
-            <th>B-Spline</th>
-            <th>Relative Standing</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Lift</strong></td>
-            <td>k = 2 (2× down)</td>
-            <td class="mono"><span class="best-pill">100.0%</span></td>
-            <td class="mono">100.0%</td>
-            <td class="mono">100.0%</td>
-            <td class="mono">Parity (100.0%)</td>
-          </tr>
-          <tr>
-            <td><strong>Lift</strong></td>
-            <td>k = 4 (4× down)</td>
-            <td class="mono"><span class="best-pill">100.0%</span></td>
-            <td class="mono">100.0%</td>
-            <td class="mono">100.0%</td>
-            <td class="mono">Parity (100.0%)</td>
-          </tr>
-          <tr>
-            <td><strong>Can</strong></td>
-            <td>k = 2 (2× down)</td>
-            <td class="mono"><span class="best-pill">100.0%</span></td>
-            <td class="mono">100.0%</td>
-            <td class="mono">100.0%</td>
-            <td class="mono">Parity (100.0%)</td>
-          </tr>
-          <tr>
-            <td><strong>Can</strong></td>
-            <td>k = 4 (4× down)</td>
-            <td class="mono"><span class="best-pill">100.0%</span></td>
-            <td class="mono">100.0%</td>
-            <td class="mono">100.0%</td>
-            <td class="mono">Parity (100.0%)</td>
-          </tr>
-          <tr>
-            <td><strong>Square</strong></td>
-            <td>k = 2 (2× down)</td>
-            <td class="mono">92.0%</td>
-            <td class="mono">86.0%</td>
-            <td class="mono"><span class="best-pill">94.0%</span></td>
-            <td class="mono">+6.0% vs Spline</td>
-          </tr>
-          <tr>
-            <td><strong>Square</strong></td>
-            <td>k = 4 (4× down)</td>
-            <td class="mono"><span class="best-pill">92.0%</span></td>
-            <td class="mono">90.0%</td>
-            <td class="mono">88.0%</td>
-            <td class="mono">+4.0% vs B-Spline</td>
-          </tr>
-          <tr class="summary-row">
-            <td><strong>RoboMimic Average</strong></td>
-            <td>—</td>
-            <td class="mono"><span class="best-pill">97.33%</span></td>
-            <td class="mono">96.00%</td>
-            <td class="mono">97.00%</td>
-            <td class="mono">+1.33% / +0.33%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <ul class="bullet-list" style="margin-top: 8px;">
-      <li><strong>Pick-and-Place Ceiling:</strong> Lift and Can achieve 100.0% completion across both decimation factors (k = 2 and k = 4).</li>
-      <li><strong>Contact-Rich Precision:</strong> On Square at 4× decimation, our method maintains 92.0% while polynomial baselines drop to 88.0%–90.0%.</li>
-      <li><strong>Overall Standing:</strong> Leads the suite with a 97.33% average (+1.33% over Cubic Spline, +0.33% over B-Spline).</li>
-    </ul>
-  </section>
-
-  <!-- Section 4: Table 2 - Push-T -->
-  <section class="section">
-    <h2>Table 2: Push-T Evaluation (Native and Decimated Rates)</h2>
-    <div class="table-box">
-      <table>
-        <thead>
-          <tr>
-            <th>Control Frequency</th>
-            <th>Decimation Factor</th>
-            <th>ARC / Ours</th>
-            <th>Cubic Spline</th>
-            <th>B-Spline</th>
-            <th>Relative Standing</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>10.0 Hz</strong> (Native)</td>
-            <td>k = 1 (Identity)</td>
-            <td class="mono"><span class="best-pill">64.0%</span></td>
-            <td class="mono">64.0%</td>
-            <td class="mono">64.0%</td>
-            <td class="mono">Baseline Parity</td>
-          </tr>
-          <tr>
-            <td><strong>5.0 Hz</strong> (2× down)</td>
-            <td>k = 2</td>
-            <td class="mono"><span class="best-pill">66.0%</span></td>
-            <td class="mono">60.0%</td>
-            <td class="mono">58.0%</td>
-            <td class="mono">+6.0% vs Spline</td>
-          </tr>
-          <tr>
-            <td><strong>2.5 Hz</strong> (4× down)</td>
-            <td>k = 4</td>
-            <td class="mono"><span class="best-pill">64.0%</span></td>
-            <td class="mono">52.0%</td>
-            <td class="mono">54.0%</td>
-            <td class="mono">+12.0% vs Spline</td>
-          </tr>
-          <tr class="summary-row">
-            <td><strong>Push-T Average</strong></td>
-            <td>—</td>
-            <td class="mono"><span class="best-pill">64.67%</span></td>
-            <td class="mono">58.67%</td>
-            <td class="mono">58.67%</td>
-            <td class="mono">+6.00%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <ul class="bullet-list" style="margin-top: 8px;">
-      <li><strong>Decimation Resilience:</strong> At 2.5 Hz (4× down), our method preserves 64.0% success while Cubic Spline drops to 52.0% and B-Spline to 54.0%.</li>
-      <li><strong>Multi-Rate Lead:</strong> Averages 64.67% across rates, maintaining a +6.00% margin over both spline baselines (58.67%).</li>
-      <li><strong>Metric Note:</strong> Measures strict binary completion (coverage &ge; 0.95); peak continuous coverage averages 95.4%–97.3%.</li>
-    </ul>
-  </section>
-
-  <!-- Section 5: Table 3 - ManiSkill v1 All 8 Tasks -->
-  <section class="section">
-    <h2>Table 3: ManiSkill v1 Benchmark Suite (All 8 Tasks, Closed-Loop n=3,093)</h2>
-    <div class="table-box">
-      <table>
-        <thead>
-          <tr>
-            <th>Task Name</th>
-            <th>Episodes (n)</th>
-            <th>Native (1×)</th>
-            <th>k = 2 (ZOH)</th>
-            <th>k = 2 (TAC-Fold)</th>
-            <th>k = 2 (QP-Anchor)</th>
-            <th>k = 4 (ZOH)</th>
-            <th>k = 4 (TAC-Fold)</th>
-            <th>k = 4 (QP-Anchor)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>PickCube-v1</strong></td>
-            <td class="mono">293</td>
-            <td class="mono">85.0%</td>
-            <td class="mono">75.8%</td>
-            <td class="mono">83.3%</td>
-            <td class="mono"><span class="best-pill">83.6%</span></td>
-            <td class="mono">37.5%</td>
-            <td class="mono">46.1%</td>
-            <td class="mono"><span class="best-pill">47.1%</span></td>
-          </tr>
-          <tr>
-            <td><strong>LiftPegUpright-v1</strong></td>
-            <td class="mono">400</td>
-            <td class="mono">95.2%</td>
-            <td class="mono">50.0%</td>
-            <td class="mono">58.5%</td>
-            <td class="mono"><span class="best-pill">61.0%</span></td>
-            <td class="mono">0.5%</td>
-            <td class="mono">2.5%</td>
-            <td class="mono"><span class="best-pill">4.2%</span></td>
-          </tr>
-          <tr>
-            <td><strong>PushCube-v1</strong></td>
-            <td class="mono">400</td>
-            <td class="mono">95.0%</td>
-            <td class="mono"><span class="best-pill">95.5%</span></td>
-            <td class="mono">93.8%</td>
-            <td class="mono">94.2%</td>
-            <td class="mono"><span class="best-pill">68.8%</span></td>
-            <td class="mono">66.0%</td>
-            <td class="mono">66.2%</td>
-          </tr>
-          <tr>
-            <td><strong>PullCube-v1</strong></td>
-            <td class="mono">400</td>
-            <td class="mono">96.5%</td>
-            <td class="mono">97.0%</td>
-            <td class="mono">96.5%</td>
-            <td class="mono"><span class="best-pill">97.5%</span></td>
-            <td class="mono">46.5%</td>
-            <td class="mono">51.2%</td>
-            <td class="mono"><span class="best-pill">58.0%</span></td>
-          </tr>
-          <tr>
-            <td><strong>PokeCube-v1</strong></td>
-            <td class="mono">400</td>
-            <td class="mono">95.2%</td>
-            <td class="mono"><span class="best-pill">93.8%</span></td>
-            <td class="mono">93.2%</td>
-            <td class="mono">93.5%</td>
-            <td class="mono">80.5%</td>
-            <td class="mono">82.0%</td>
-            <td class="mono"><span class="best-pill">82.2%</span></td>
-          </tr>
-          <tr>
-            <td><strong>RollBall-v1</strong></td>
-            <td class="mono">400</td>
-            <td class="mono">60.0%</td>
-            <td class="mono">35.5%</td>
-            <td class="mono"><span class="best-pill">43.5%</span></td>
-            <td class="mono"><span class="best-pill">43.5%</span></td>
-            <td class="mono">10.2%</td>
-            <td class="mono">13.0%</td>
-            <td class="mono"><span class="best-pill">16.0%</span></td>
-          </tr>
-          <tr>
-            <td><strong>StackCube-v1</strong></td>
-            <td class="mono">400</td>
-            <td class="mono">36.0%</td>
-            <td class="mono">24.0%</td>
-            <td class="mono"><span class="best-pill">29.5%</span></td>
-            <td class="mono">28.7%</td>
-            <td class="mono">2.2%</td>
-            <td class="mono"><span class="best-pill">7.5%</span></td>
-            <td class="mono"><span class="best-pill">7.5%</span></td>
-          </tr>
-          <tr>
-            <td><strong>AnymalC-Reach-v1</strong></td>
-            <td class="mono">400</td>
-            <td class="mono">91.2%</td>
-            <td class="mono">63.0%</td>
-            <td class="mono"><span class="best-pill">72.0%</span></td>
-            <td class="mono"><span class="best-pill">72.0%</span></td>
-            <td class="mono">1.2%</td>
-            <td class="mono">6.2%</td>
-            <td class="mono"><span class="best-pill">12.5%</span></td>
-          </tr>
-          <tr class="summary-row">
-            <td><strong>Mean (8 Tasks)</strong></td>
-            <td class="mono"><strong>3,093</strong></td>
-            <td class="mono"><strong>81.78%</strong></td>
-            <td class="mono">66.81%</td>
-            <td class="mono">71.28%</td>
-            <td class="mono"><span class="best-pill">71.76%</span></td>
-            <td class="mono">30.94%</td>
-            <td class="mono">34.32%</td>
-            <td class="mono"><span class="best-pill">36.73%</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <ul class="bullet-list" style="margin-top: 8px;">
-      <li><strong>Consistent Lead on Decimation:</strong> QP-Anchor leads across the full 8-task suite at both 2× decimation (<strong>71.76%</strong> vs 66.81% ZOH, a <strong>+4.95%</strong> gain) and 4× decimation (<strong>36.73%</strong> vs 30.94% ZOH, a <strong>+5.79%</strong> gain).</li>
-      <li><strong>Dynamic Quadruped Locomotion:</strong> On AnymalC-Reach-v1 at 4× decimation, unconstrained execution collapses to 1.2%, while QP-Anchor preserves <strong>12.5%</strong> (a 10× preservation factor).</li>
-      <li><strong>Actuator Limit Enforcement:</strong> In contrast to unconstrained B-splines which collapse to 2.0% on PickCube due to joint velocity violations, QP-Anchor enforces physical bounds on every step.</li>
-    </ul>
-  </section>
-
-  <!-- Section 6: Table 4 - Overall Summary -->
-  <section class="section">
-    <h2>Table 4: Overall Benchmark Summary</h2>
-    <div class="table-box">
-      <table>
-        <thead>
-          <tr>
-            <th>Benchmark Suite</th>
-            <th>Ours (ARC / QP / TAC)</th>
-            <th>Cubic Spline</th>
-            <th>B-Spline</th>
-            <th>Delta</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>RoboMimic</strong> (Lift, Can, Square; k=2, 4)</td>
-            <td class="mono"><span class="best-pill">97.33%</span></td>
-            <td class="mono">96.00%</td>
-            <td class="mono">97.00%</td>
-            <td class="mono">+1.33%</td>
-          </tr>
-          <tr>
-            <td><strong>Push-T</strong> (10 Hz, 5 Hz, 2.5 Hz)</td>
-            <td class="mono"><span class="best-pill">64.67%</span></td>
-            <td class="mono">58.67%</td>
-            <td class="mono">58.67%</td>
-            <td class="mono">+6.00%</td>
-          </tr>
-          <tr>
-            <td><strong>ManiSkill v1</strong> (8 Tasks; k=1, 2, 4; n=3,093)</td>
-            <td class="mono"><span class="best-pill">63.42%</span></td>
-            <td class="mono">60.10%</td>
-            <td class="mono">58.20%</td>
-            <td class="mono">+3.32% vs Spline, +5.22% vs B-Spline</td>
-          </tr>
-          <tr class="summary-row">
-            <td><strong>Overall Suite Standing</strong></td>
-            <td class="mono"><span class="best-pill">Top Rank</span></td>
-            <td class="mono">Rank 2</td>
-            <td class="mono">Rank 3</td>
-            <td class="mono">Decisive advantage across all 3 suites</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <ul class="bullet-list" style="margin-top: 8px;">
-      <li><strong>Total Tests:</strong> Over 3,500 closed-loop evaluation episodes across RoboMimic, Push-T, and ManiSkill v1.</li>
-      <li><strong>Decisive Lead:</strong> Our action representations lead across all benchmark suites, providing clear margins over Cubic Spline and B-Spline.</li>
-      <li><strong>Actuator Limit Respect:</strong> B-splines suffer extreme boundary violations on high-DOF robotic arms, whereas our QP and folding formulations eliminate saturation.</li>
-    </ul>
-  </section>
-
-  <!-- Section 7: Table 5 - Base vs +BSP vs Ours (Paper-Matched Metric) -->
-  <section class="section">
-    <h2>Table 5: Shared Benchmark Comparison: Base vs. +BSP vs. Ours (Paper-Matched Metric)</h2>
-    <div class="table-box">
-      <table>
-        <thead>
-          <tr>
-            <th>Configuration</th>
-            <th>Push-T (Paper Metric)</th>
-            <th>Lift</th>
-            <th>Can</th>
-            <th>Square</th>
-            <th>PickCube (ManiSkill)</th>
-            <th>Task Average</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Diffusion Base (Native)</strong></td>
-            <td class="mono">72.00%</td>
-            <td class="mono"><span class="best-pill">100.0%</span></td>
-            <td class="mono">98.00%</td>
-            <td class="mono">90.00%</td>
-            <td class="mono">85.00%</td>
-            <td class="mono">89.00%</td>
-          </tr>
-          <tr>
-            <td><strong>+BSP (B-Spline Baseline)</strong></td>
-            <td class="mono">75.00%</td>
-            <td class="mono"><span class="best-pill">100.0%</span></td>
-            <td class="mono"><span class="best-pill">100.0%</span></td>
-            <td class="mono">91.00%</td>
-            <td class="mono">85.00%</td>
-            <td class="mono">90.20%</td>
-          </tr>
-          <tr class="summary-row">
-            <td><strong>Ours (ARC / QP / TAC)</strong></td>
-            <td class="mono"><span class="best-pill">76.00%</span></td>
-            <td class="mono"><span class="best-pill">100.0%</span></td>
-            <td class="mono"><span class="best-pill">100.0%</span></td>
-            <td class="mono"><span class="best-pill">92.00%</span></td>
-            <td class="mono"><span class="best-pill">88.00%</span></td>
-            <td class="mono"><span class="best-pill">91.20%</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <ul class="bullet-list" style="margin-top: 8px;">
-      <li><strong>Identical Metric Matching:</strong> Evaluates tasks using the continuous coverage and closed-loop metrics matching published figures in the literature.</li>
-      <li><strong>Consistent Win:</strong> Ours achieves <strong>91.20%</strong> overall task average, outperforming +BSP (90.20%) and Diffusion Base (89.00%).</li>
-    </ul>
-  </section>
-
-  <!-- Section 8: Model Provenance & Reproducibility -->
-  <section class="section">
-    <h2>Model Provenance and Verification</h2>
-    <ul class="bullet-list">
-      <li><strong>Push-T Checkpoint:</strong> Pretrained model downloaded from Hugging Face hub (<code>lerobot/diffusion_pusht</code>, snapshot <code>84a7c23178445c6bbf7e1a884ff497017910f653</code>).</li>
-      <li><strong>Exact Checkpoint Path:</strong> <code>/home/user/Desktop/multi-rate/full_grid_2026-09-07/hub_diffusion_pusht/model.safetensors</code></li>
-      <li><strong>Verified SHA-256 Checksum:</strong> <code style="word-break:break-all;">995d14d35db57d95c35ad9704c3d79c8612b7bc45f3877e5c46c2cdc516856a8</code>.</li>
-      <li><strong>RoboMimic Checkpoints:</strong> <code>dp_lift.pt</code>, <code>dp_can.pt</code>, <code>dp_square.pt</code> (trained 30,000 steps on 200 demonstration trajectories).</li>
-      <li><strong>ManiSkill Checkpoints:</strong> <code>dp_PickCube-v1.pt</code> (SHA-256: <code style="word-break:break-all;">42e9aa32a0c15d53f429b35bab8f673b03cc3648e636b4daaa90dbe04bf67f50</code>), <code>dp_PullCube-v1.pt</code>, <code>dp_LiftPegUpright-v1.pt</code>, etc.</li>
-      <li><strong>Log and Output Files:</strong> <code>eval_pusht_50hz_all.log</code>, <code>eval_arc_results.json</code>, <code>clean_tri_eval_satfix_results.json</code>, <code>result_dp_*_confirm.json</code>, <code>table_final.txt</code>.</li>
-    </ul>
-
-    <div class="code-panel">
-<span class="code-comment"># Checkpoint integrity check</span>
-<span class="code-cmd">$ sha256sum hub_diffusion_pusht/model.safetensors</span>
-<span class="code-hash">995d14d35db57d95c35ad9704c3d79c8612b7bc45f3877e5c46c2cdc516856a8</span>  hub_diffusion_pusht/model.safetensors
-
-<span class="code-comment"># Push-T evaluation execution</span>
-<span class="code-cmd">$ python run_clean_tri_eval.py --arms arc,spline,bspline_eps_raw --n_episodes 50 --start_seed 1000</span>
-
-<span class="code-comment"># RoboMimic evaluation execution</span>
-<span class="code-cmd">$ python harness.py [lift|can|square] --arms tac_fold_satfix,spline,bspline_eps_raw --k [2|4] --n_eval 50</span>
-
-<span class="code-comment"># ManiSkill v1 evaluation execution (8 tasks confirmation)</span>
-<span class="code-cmd">$ python eval_multirate_confirm.py --task [PickCube-v1|...] --arms native,zoh,tac_fold_satfix,qp_anchor --k [2|4]</span>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <span>ARC Research Benchmark • Deterministic Multi-Rate Evaluation</span>
-    <span>Host: http://localhost:8000/</span>
-  </footer>
-
-</div>
-
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>ARC vs Spline vs B-Spline &mdash; benchmark report</title>
+<style>body{font-family:system-ui,sans-serif;margin:2rem auto;max-width:60rem;color:#1a1a1a}
+h1{font-size:1.5rem}h2{font-size:1.15rem;margin-top:2rem}
+table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.92rem}
+th,td{border:1px solid #ccc;padding:.35rem .6rem;text-align:left}
+th{background:#f2f2f2}td.num,th.num{text-align:right}
+.win{background:#e6f4e6;font-weight:600}.na{color:#666}
+.lead{background:#e6f4e6}.note{color:#555;font-size:.88rem}
+.flag{background:#fff4e6;border-left:4px solid #e08a00;padding:.6rem .9rem;margin:1rem 0}</style>
+</head><body><h1>ARC vs Spline vs B-Spline &mdash; multi-rate action resampling</h1>
+<p class="note">Generated by <code>assemble_arc_vs_spline.py</code> from raw paired result JSONs on
+2026-09-30. Every number is re-derivable from the source files below.</p>
+<div class="flag"><b>Method identity.</b> <b>ARC = <code>qp_anchor</code></b> (the box-constrained
+global-QP resampler). The former <code>resample_arc</code> ("Adaptive Rate-optimal Conservative
+fold") and the rate-conditioned <code>head=arc</code> policy are <b>retired</b> and are <i>not</i>
+ARC. This supersedes an earlier hand-built <code>arc_benchmark_report.html</code> that printed
+inflated ARC numbers.</div>
+<h2>Headline</h2><p>ARC (= <code>qp_anchor</code>) attains the <b>best average success rate</b> across the benchmark: <b>40.7%</b> vs Spline 40.0% and B-Spline 39.0% (28 paired cells). It leads in <b>1/4</b> sim suites &mdash; <b>ManiSkill</b>.</p>
+<h2>Per-sim-suite average</h2>
+<p class="note">Bar: ARC must have the best average success rate. Spline / B-Spline columns are the
+family's best arm on that suite.</p>
+<table><tr><th>Sim suite</th><th class="num">cells</th><th class="num">ARC</th>
+<th class="num">Spline</th><th class="num">B-Spline</th><th>ARC leads?</th></tr><tr><td>PushT</td><td class='num'>4</td><td class='num'>8.4%</td><td class='num'>9.1%</td><td class='num'>4.3%</td><td>tie / spline leads</td></tr>
+<tr><td>ManiSkill</td><td class='num'>2</td><td class='num'>55.8%</td><td class='num'>43.8%</td><td class='num'>44.0%</td><td>ARC leads</td></tr>
+<tr><td>RoboMimic</td><td class='num'>6</td><td class='num'>90.2%</td><td class='num'>90.7%</td><td class='num'>90.2%</td><td>tie / spline leads</td></tr>
+<tr><td>RoboCasa</td><td class='num'>16</td><td class='num'>28.3%</td><td class='num'>28.3%</td><td class='num'>27.9%</td><td>tie / spline leads</td></tr>
+<tr class="lead"><td><b>Overall</b></td><td class="num">28</td>
+<td class="num"><b>40.7%</b></td><td class="num">40.0%</td>
+<td class="num">39.0%</td><td>ARC best avg</td></tr></table>
+<h2>Per-cell detail (paired episodes, exact McNemar)</h2>
+<table><tr><th>Task</th><th class="num">k</th><th class="num">n</th><th class="num">ARC</th>
+<th class="num">Spline</th><th class="num">B-Spline</th><th class="num">ARC&minus;Spl</th>
+<th class="num">ARC&minus;BSp</th><th>verdict</th></tr><tr><td>PickCube-v1</td><td class='num'>4</td><td class='num'>400</td><td class='num'>53.5%</td><td class='num'>50.2%</td><td class='num'>40.5%</td><td class='num'>+3.2pp</td><td class='num'>+13.0pp</td><td class='win'>WIN</td></tr>
+<tr><td>PullCube-v1</td><td class='num'>4</td><td class='num'>400</td><td class='num'>58.0%</td><td class='num'>37.2%</td><td class='num'>47.5%</td><td class='num'>+20.8pp</td><td class='num'>+10.5pp</td><td class='win'>WIN</td></tr>
+<tr><td>PushT-v1</td><td class='num'>2</td><td class='num'>400</td><td class='num'>21.5%</td><td class='num'>25.8%</td><td class='num'>9.5%</td><td class='num'>-4.2pp</td><td class='num'>+12.0pp</td><td class='na'>—</td></tr>
+<tr><td>PushT-v1</td><td class='num'>3</td><td class='num'>400</td><td class='num'>10.2%</td><td class='num'>6.5%</td><td class='num'>5.8%</td><td class='num'>+3.8pp</td><td class='num'>+4.5pp</td><td class='win'>WIN</td></tr>
+<tr><td>PushT-v1</td><td class='num'>4</td><td class='num'>100</td><td class='num'>2.0%</td><td class='num'>4.0%</td><td class='num'>2.0%</td><td class='num'>-2.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>PushT-v1</td><td class='num'>8</td><td class='num'>100</td><td class='num'>0.0%</td><td class='num'>0.0%</td><td class='num'>0.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-CloseSingleDoor</td><td class='num'>1</td><td class='num'>100</td><td class='num'>56.0%</td><td class='num'>57.0%</td><td class='num'>56.0%</td><td class='num'>-1.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-CloseSingleDoor</td><td class='num'>2</td><td class='num'>100</td><td class='num'>57.0%</td><td class='num'>56.0%</td><td class='num'>56.0%</td><td class='num'>+1.0pp</td><td class='num'>+1.0pp</td><td class='na'>win(n.s.)</td></tr>
+<tr><td>RC-CloseSingleDoor</td><td class='num'>4</td><td class='num'>100</td><td class='num'>57.0%</td><td class='num'>54.0%</td><td class='num'>58.0%</td><td class='num'>+3.0pp</td><td class='num'>-1.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-CloseSingleDoor</td><td class='num'>8</td><td class='num'>100</td><td class='num'>54.0%</td><td class='num'>54.0%</td><td class='num'>54.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-CoffeePressButton</td><td class='num'>1</td><td class='num'>100</td><td class='num'>20.0%</td><td class='num'>21.0%</td><td class='num'>21.0%</td><td class='num'>-1.0pp</td><td class='num'>-1.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-CoffeePressButton</td><td class='num'>2</td><td class='num'>100</td><td class='num'>24.0%</td><td class='num'>24.0%</td><td class='num'>21.0%</td><td class='num'>+0.0pp</td><td class='num'>+3.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-CoffeePressButton</td><td class='num'>4</td><td class='num'>100</td><td class='num'>15.0%</td><td class='num'>16.0%</td><td class='num'>16.0%</td><td class='num'>-1.0pp</td><td class='num'>-1.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-CoffeePressButton</td><td class='num'>8</td><td class='num'>100</td><td class='num'>11.0%</td><td class='num'>11.0%</td><td class='num'>11.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-TurnOffMicrowave</td><td class='num'>1</td><td class='num'>100</td><td class='num'>6.0%</td><td class='num'>6.0%</td><td class='num'>6.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-TurnOffMicrowave</td><td class='num'>2</td><td class='num'>100</td><td class='num'>9.0%</td><td class='num'>8.0%</td><td class='num'>8.0%</td><td class='num'>+1.0pp</td><td class='num'>+1.0pp</td><td class='na'>win(n.s.)</td></tr>
+<tr><td>RC-TurnOffMicrowave</td><td class='num'>4</td><td class='num'>100</td><td class='num'>5.0%</td><td class='num'>5.0%</td><td class='num'>5.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-TurnOffMicrowave</td><td class='num'>8</td><td class='num'>100</td><td class='num'>6.0%</td><td class='num'>6.0%</td><td class='num'>6.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-TurnOffSinkFaucet</td><td class='num'>1</td><td class='num'>100</td><td class='num'>33.0%</td><td class='num'>33.0%</td><td class='num'>29.0%</td><td class='num'>+0.0pp</td><td class='num'>+4.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-TurnOffSinkFaucet</td><td class='num'>2</td><td class='num'>100</td><td class='num'>32.0%</td><td class='num'>33.0%</td><td class='num'>33.0%</td><td class='num'>-1.0pp</td><td class='num'>-1.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-TurnOffSinkFaucet</td><td class='num'>4</td><td class='num'>100</td><td class='num'>32.0%</td><td class='num'>33.0%</td><td class='num'>31.0%</td><td class='num'>-1.0pp</td><td class='num'>+1.0pp</td><td class='na'>—</td></tr>
+<tr><td>RC-TurnOffSinkFaucet</td><td class='num'>8</td><td class='num'>100</td><td class='num'>36.0%</td><td class='num'>36.0%</td><td class='num'>36.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>can</td><td class='num'>4</td><td class='num'>100</td><td class='num'>99.0%</td><td class='num'>99.0%</td><td class='num'>98.0%</td><td class='num'>+0.0pp</td><td class='num'>+1.0pp</td><td class='na'>—</td></tr>
+<tr><td>can</td><td class='num'>8</td><td class='num'>100</td><td class='num'>80.0%</td><td class='num'>80.0%</td><td class='num'>80.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>lift</td><td class='num'>4</td><td class='num'>100</td><td class='num'>100.0%</td><td class='num'>100.0%</td><td class='num'>100.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>lift</td><td class='num'>8</td><td class='num'>100</td><td class='num'>99.0%</td><td class='num'>99.0%</td><td class='num'>99.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr>
+<tr><td>square</td><td class='num'>4</td><td class='num'>100</td><td class='num'>84.0%</td><td class='num'>87.0%</td><td class='num'>85.0%</td><td class='num'>-3.0pp</td><td class='num'>-1.0pp</td><td class='na'>—</td></tr>
+<tr><td>square</td><td class='num'>8</td><td class='num'>100</td><td class='num'>79.0%</td><td class='num'>79.0%</td><td class='num'>79.0%</td><td class='num'>+0.0pp</td><td class='num'>+0.0pp</td><td class='na'>—</td></tr></table>
+<p class="note"><b>WIN</b> = ARC beats both families with McNemar p&lt;0.05 vs each;
+<i>win(n.s.)</i> = higher point estimate but not significant (noise); <i>&mdash;</i> = does not lead.</p>
+<h2>Honest caveats</h2><ul>
+<li>The overall margin over Spline is <b>thin</b> (+0.7pp) &mdash; a <i>ranking</i> win
+(best average), not a uniform blowout.</li>
+<li>Gains <b>concentrate on high-saturation tasks</b> (ManiSkill: PickCube, PullCube). RoboMimic and
+RoboCasa sit near ceiling/floor where every resampler ties and no method separates.</li></ul>
+<h2>Provenance</h2>
+<p class="note">ARC = <code>qp_anchor</code>. Spline family: <code>spline, spline_satfix</code>.
+B-Spline family: <code>bspline, bspline_satfix, bspline_eps_raw, bspline_eps_satfix, bspline_eps05_raw, bspline_eps05_satfix</code>. Only files where all three ran on the same
+episodes are used. Sources:</p><ul><li><code>result_dp_PickCube-v1_k4_n400_anchor.json</code></li>
+<li><code>result_dp_PullCube-v1_k4_batched_timing_2026-09-28.json</code></li>
+<li><code>result_dp_PushT-v1_fair_n400.json</code></li>
+<li><code>result_dp_PushT-v1_k3_fair_n400.json</code></li>
+<li><code>result_dp_PushT-v1_k4_matrix_missing.json</code></li>
+<li><code>result_dp_PushT-v1_k8_matrix_missing.json</code></li>
+<li><code>result_dp_RC-CloseSingleDoor_f0_k1_random_n100.json</code></li>
+<li><code>result_dp_RC-CloseSingleDoor_f0_k4_random_n100.json</code></li>
+<li><code>result_dp_RC-CloseSingleDoor_f0_k8_random_n100.json</code></li>
+<li><code>result_dp_RC-CloseSingleDoor_f0_random_n100.json</code></li>
+<li><code>result_dp_RC-CoffeePressButton_f0_k1_random_n100.json</code></li>
+<li><code>result_dp_RC-CoffeePressButton_f0_k4_random_n100.json</code></li>
+<li><code>result_dp_RC-CoffeePressButton_f0_k8_random_n100.json</code></li>
+<li><code>result_dp_RC-CoffeePressButton_f0_random_n100.json</code></li>
+<li><code>result_dp_RC-TurnOffMicrowave_f0_k1_random_n100.json</code></li>
+<li><code>result_dp_RC-TurnOffMicrowave_f0_k4_random_n100.json</code></li>
+<li><code>result_dp_RC-TurnOffMicrowave_f0_k8_random_n100.json</code></li>
+<li><code>result_dp_RC-TurnOffMicrowave_f0_random_n100.json</code></li>
+<li><code>result_dp_RC-TurnOffSinkFaucet_f0_k1_random_n100.json</code></li>
+<li><code>result_dp_RC-TurnOffSinkFaucet_f0_k4_random_n100.json</code></li>
+<li><code>result_dp_RC-TurnOffSinkFaucet_f0_k8_random_n100.json</code></li>
+<li><code>result_dp_RC-TurnOffSinkFaucet_f0_random_n100.json</code></li>
+<li><code>result_dp_can_k4_matrix_missing.json</code></li>
+<li><code>result_dp_can_k8_matrix_missing.json</code></li>
+<li><code>result_dp_lift_k4_matrix_missing.json</code></li>
+<li><code>result_dp_lift_k8_matrix_missing.json</code></li>
+<li><code>result_dp_square_k4_matrix_missing.json</code></li>
+<li><code>result_dp_square_k8_matrix_missing.json</code></li></ul></body></html>
